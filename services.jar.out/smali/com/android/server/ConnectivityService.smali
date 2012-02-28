@@ -408,6 +408,8 @@
 
     invoke-direct {v0, v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
+    invoke-static/range {p1 .. p1}, Lcom/miui/server/FirewallService;->setupService(Landroid/content/Context;)V
+
     .line 373
     new-instance v14, Landroid/os/HandlerThread;
 
@@ -13207,6 +13209,20 @@
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lmiui/net/FirewallManager;->getInstance()Lmiui/net/FirewallManager;
+
+    move-result-object v15
+
+    invoke-static {}, Lcom/android/server/ConnectivityService;->getCallingUid()I
+
+    move-result v0
+
+    invoke-static {}, Lcom/android/server/ConnectivityService;->getCallingPid()I
+
+    move-result v1
+
+    invoke-virtual {v15, v0, v1, v14}, Lmiui/net/FirewallManager;->onStartUsingNetworkFeature(III)V
 
     .line 1108
     if-ltz v11, :cond_a
