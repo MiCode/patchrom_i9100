@@ -1,0 +1,7 @@
+version: 1.4.3
+apkFileName: framework-miui-res.apk
+isFrameworkApk: true
+usesFramework:
+  ids:
+  - 1
+  - 2
