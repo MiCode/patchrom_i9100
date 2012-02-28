@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="preference_fragment_padding_side">32.0dip</dimen>
+    <dimen name="preference_breadcrumb_paddingLeft">32.0dip</dimen>
+    <dimen name="preference_breadcrumb_paddingRight">32.0dip</dimen>
+    <dimen name="preference_icon_minWidth">56.0dip</dimen>
+    <dimen name="preference_screen_header_padding_side">0.0dip</dimen>
+</resources>

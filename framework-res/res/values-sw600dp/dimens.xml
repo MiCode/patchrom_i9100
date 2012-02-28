@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="config_prefDialogWidth">580.0dip</dimen>
+    <dimen name="status_bar_height">48.0dip</dimen>
+    <dimen name="status_bar_icon_size">24.0dip</dimen>
+    <dimen name="status_bar_content_number_size">48.0sp</dimen>
+    <dimen name="keyguard_lockscreen_outerring_diameter">364.0dip</dimen>
+    <dimen name="multiwaveview_target_placement_radius">182.0dip</dimen>
+    <dimen name="preference_screen_side_margin">0.0dip</dimen>
+    <dimen name="preference_screen_side_margin_negative">-4.0dip</dimen>
+    <dimen name="preference_screen_header_vertical_padding">32.0dip</dimen>
+    <dimen name="action_bar_default_height">56.0dip</dimen>
+    <dimen name="action_bar_icon_vertical_padding">4.0dip</dimen>
+    <dimen name="action_bar_title_text_size">18.0dip</dimen>
+    <dimen name="action_bar_subtitle_text_size">14.0dip</dimen>
+    <dimen name="action_bar_subtitle_top_margin">-3.0dip</dimen>
+    <dimen name="action_bar_subtitle_bottom_margin">9.0dip</dimen>
+    <dimen name="default_app_widget_padding_left">12.0dip</dimen>
+    <dimen name="default_app_widget_padding_top">4.0dip</dimen>
+    <dimen name="default_app_widget_padding_right">12.0dip</dimen>
+    <dimen name="default_app_widget_padding_bottom">20.0dip</dimen>
+    <dimen name="action_button_min_width">64.0dip</dimen>
+    <dimen name="keyguard_pattern_unlock_clock_font_size">112.0sp</dimen>
+    <dimen name="keyguard_pattern_unlock_status_line_font_size">14.0sp</dimen>
+</resources>

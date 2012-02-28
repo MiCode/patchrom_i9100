@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Holo.TabWidget" parent="@style/Widget.TabWidget">
+        <item name="divider">?dividerVertical</item>
+        <item name="tabStripLeft">@null</item>
+        <item name="tabStripRight">@null</item>
+        <item name="tabStripEnabled">false</item>
+        <item name="measureWithLargestChild">true</item>
+        <item name="showDividers">middle</item>
+        <item name="dividerPadding">8.0dip</item>
+        <item name="tabLayout">@layout/tab_indicator_holo</item>
+    </style>
+    <style name="PreferencePanel">
+        <item name="background">?detailsElementBackground</item>
+        <item name="layout_marginLeft">@dimen/preference_screen_side_margin</item>
+        <item name="layout_marginTop">@dimen/preference_screen_top_margin</item>
+        <item name="layout_marginRight">@dimen/preference_screen_side_margin</item>
+        <item name="layout_marginBottom">@dimen/preference_screen_bottom_margin</item>
+    </style>
+</resources>

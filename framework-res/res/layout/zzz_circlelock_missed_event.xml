@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/missed_event_call_msg_layout" android:background="@drawable/unlock_circle_missed_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/missed_event_call_layout" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unlock_circle_missed_call_icon" />
+                <TextView android:textSize="18.599976dip" android:textColor="#ffebebeb" android:layout_gravity="center" android:id="@id/missed_event_call_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.2" />
+            </LinearLayout>
+            <LinearLayout android:gravity="top" android:orientation="vertical" android:id="@id/missed_event_msg_layout" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/unlock_circle_missed_msg_icon" />
+                <TextView android:textSize="18.599976dip" android:textColor="#ffebebeb" android:layout_gravity="center" android:id="@id/missed_event_msg_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.2" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

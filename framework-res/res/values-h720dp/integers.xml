@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="preference_screen_header_scrollbarStyle">0</integer>
+    <integer name="preference_fragment_scrollbarStyle">0</integer>
+</resources>
