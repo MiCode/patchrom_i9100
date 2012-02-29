@@ -1667,6 +1667,7 @@
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/SMSDispatcher;->dispatch(Landroid/content/Intent;Ljava/lang/String;)V
 
     .line 1529
+    :goto_0
     return-void
 .end method
 

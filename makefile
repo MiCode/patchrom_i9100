@@ -9,17 +9,17 @@ local-zip-file     := A4-adb-i9100.zip
 local-out-zip-file := MIUI_i9100.zip
 
 # All apps from original ZIP, but has smali files chanded
-#local-modified-apps := LogsProvider Phone MediaProvider Settings
+#local-modified-apps := LogsProvider Phone
 
 # All apks from MIUI
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
 	MiuiHome MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
 	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider \
-	Music Provision
+	Music Provision Settings Torch
 
 # All apps need to be removed from original ZIP file
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
-	SystemUI RootExplorer SetupWizard MyFiles
+	SystemUI RootExplorer SetupWizard MyFiles RebootTool
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
