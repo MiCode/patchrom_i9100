@@ -2238,7 +2238,34 @@
 
     invoke-static {v0, v1, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    goto :goto_5
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/internal/telephony/WapPushOverSms;->mContext:Landroid/content/Context;
+
+    move-object/from16 v31, v0
+
+    move-object/from16 v0, v31
+
+    invoke-static {v0, v2}, Lmiui/provider/ExtraTelephony;->checkFirewallForWapPush(Landroid/content/Context;[B)Z
+
+    move-result v31
+
+    if-eqz v31, :goto_5
+
+    iget-object v0, v0, Lcom/android/internal/telephony/WapPushOverSms;->mSmsDispatcher:Lcom/android/internal/telephony/SMSDispatcher;
+
+    move-object/from16 v31, v0
+
+    const/16 v32, 0x1
+
+    const/16 v33, -0x1
+
+    const/16 v34, 0x0
+
+    invoke-virtual/range {v31 .. v34}, Lcom/android/internal/telephony/SMSDispatcher;->acknowledgeLastIncomingSms(ZILandroid/os/Message;)V
+
+    goto :goto_0
 
     .end local v31           #dataIndex:I
     .restart local v51       #wapAppId:Ljava/lang/String;

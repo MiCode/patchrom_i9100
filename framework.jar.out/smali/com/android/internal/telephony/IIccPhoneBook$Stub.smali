@@ -46,9 +46,9 @@
 
 .field static final TRANSACTION_updateAdnRecordsInEfBySearchUsingAR:I = 0x4
 
-.field static final TRANSACTION_getFreeAdn:I = 0x5
+.field static final TRANSACTION_getFreeAdn:I = 0xb
 
-.field static final TRANSACTION_getAdnCapacity:I = 0x6
+.field static final TRANSACTION_getAdnCapacity:I = 0xc
 
 # direct methods
 .method public constructor <init>()V
@@ -678,6 +678,8 @@
         0x8 -> :sswitch_8
         0x9 -> :sswitch_9
         0xa -> :sswitch_a
+        0xb -> :sswitch_b
+        0xc -> :sswitch_c
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method
