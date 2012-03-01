@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="other">%s분 동안 데이터 연결이 없습니다</item>
+        <item quantity="one">%s분 동안 데이터 연결이 없습니다</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="other">%s분 동안 긴급 회신 모드로 전환됩니다. 이 모드에서는 데이터 연결을 사용하는 애플리케이션을 사용할 수 없습니다. 지금 종료할까요?</item>
+        <item quantity="one">휴대폰이 %s분 동안 긴급 회신 모드로 전환됩니다. 이 모드에서는 데이터 연결을 사용하는 애플리케이션을 사용할 수 없습니다. 지금 종료할까요?</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="other">선택한 작업은 긴급 회신 모드에서는 실행할 수 없습니다. 이 모드는 %s분 동안 지속됩니다. 지금 종료할까요?</item>
+        <item quantity="one">선택한 작업은 긴급 회신 모드에서는 실행할 수 없습니다. 긴급 회신 모드는 1분 동안 지속됩니다. 지금 종료할까요?</item>
+    </plurals>
+</resources>

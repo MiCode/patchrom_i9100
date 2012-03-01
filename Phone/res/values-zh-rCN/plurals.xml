@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="other">在%s分钟内无数据连接</item>
+        <item quantity="one">在%s分钟内无数据连接</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="other">手机将在%s分钟内处于紧急呼叫模式。在此模式下，使用数据连接的应用程序无法使用。现在退出？</item>
+        <item quantity="one">手机将在%s分钟内保持紧急回拨模式。在此模式下，使用数据连接的应用程序将不能使用。现在退出？</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="other">选择的活动在紧急呼叫模式下不可用。手机将在%s分钟内保持此模式。现在退出？</item>
+        <item quantity="one">选择的操作在紧急重拨模式下不可用。手机将在这种模式下保持1分钟。现在退出吗？</item>
+    </plurals>
+</resources>

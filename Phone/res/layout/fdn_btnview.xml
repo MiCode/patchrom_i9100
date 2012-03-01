@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="?android:listPreferredItemHeight" android:mode="twoLine" android:layout_weight="0.8">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/fdn_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="6.0dip" />
+        <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListTwoLineSecondary" android:ellipsize="marquee" android:id="@id/fdn_num" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@android:id/text1" android:layout_alignLeft="@android:id/text1" />
+    </LinearLayout>
+    <View android:id="@id/divider1" android:background="@drawable/divider_vertical_dark" android:visibility="gone" android:layout_width="1.3299866dip" android:layout_height="65.32999dip" android:layout_marginRight="8.0sp" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/fdn_button_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="8.0sp">
+        <Button android:id="@id/fdn_button" android:background="@drawable/badge_action_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_vm_number">Fehlende Mobilboxnummer</string>
+    <string name="no_vm_number_msg">Auf der SIM-Karte ist keine Mobilboxnummer gespeichert</string>
+    <string name="voicemail">Mobilbox</string>
+    <string name="disable">Deaktiv.</string>
+    <string name="change_num">Aktual.</string>
+    <string name="vm_save_number">Mobilboxnummer speichern</string>
+    <string name="vm_changed">Mobilboxnummer wurde geändert</string>
+    <string name="vm_change_failed">Mobilboxnummer konnte nicht geändert werden</string>
+    <string name="sum_voicemail_choose_provider">Mobilboxnummer festlegen</string>
+    <string name="voicemail_settings_number_label">Mobilbox-Nummer</string>
+    <string name="notification_voicemail_title">Mobilbox</string>
+    <string name="notification_voicemail_title_count">Neue Mobilbox-Nachricht</string>
+    <string name="notification_voicemail_no_vm_number">Mobilbox-Nummer unbekannt</string>
+    <string name="voicemail_settings">Mobilbox</string>
+    <string name="voicemail_provider">Mobilbox</string>
+</resources>

@@ -9,7 +9,7 @@ local-zip-file     := A4-adb-i9100.zip
 local-out-zip-file := MIUI_i9100.zip
 
 # All apps from original ZIP, but has smali files chanded
-#local-modified-apps := LogsProvider Phone
+local-modified-apps := Phone
 
 # All apks from MIUI
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
@@ -38,7 +38,7 @@ local-zip-misc:
 
 local-put-to-phone:
 	adb shell rm /sdcard/MIUI_i9100.zip
-	adb push .build/MIUI_i9100.zip /sdcard/
+	adb push out/MIUI_i9100.zip /sdcard/
 	adb reboot recovery
 	@echo press ener after flash the image
 	@read

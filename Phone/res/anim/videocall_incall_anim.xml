@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false" id="selected"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_00" />
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_01" />
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_02" />
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_03" />
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_04" />
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_05" />
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_06" />
+    <item android:duration="100" android:drawable="@drawable/videocall_animation_wait_07" />
+</animation-list>

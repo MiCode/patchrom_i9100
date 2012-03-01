@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listCameraEffectMenuArray">
+        <item>None</item>
+        <item>Grey</item>
+        <item>Sepia</item>
+        <item>Green</item>
+        <item>Aqua</item>
+        <item>Negative</item>
+    </string-array>
+    <string-array name="select_dialog_items">
+        <item>Delete</item>
+    </string-array>
+    <string-array name="pref_roaming_options_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="default_setup_choices">
+        <item>Automatic</item>
+        <item>Manual</item>
+    </string-array>
+    <string-array name="default_setup_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="clir_display_values">
+        <item>Network default</item>
+        <item>Hide number</item>
+        <item>Show number</item>
+    </string-array>
+    <string-array name="clir_values">
+        <item>Default</item>
+        <item>Hide</item>
+        <item>Show</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices">
+        <item>Global</item>
+        <item>EVDO only</item>
+        <item>CDMA w/o EVDO</item>
+        <item>CDMA/EVDO auto</item>
+        <item>Auto GSM/WCDMA</item>
+        <item>WCDMA only</item>
+        <item>GSM only</item>
+        <item>Preferred GSM/WCDMA</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values">
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="list_language_entries">
+        <item>English</item>
+        <item>French</item>
+        <item>Spanish</item>
+        <item>Japanese</item>
+        <item>Korean</item>
+        <item>Chinese</item>
+        <item>Hebrew</item>
+    </string-array>
+    <string-array name="list_language_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="cdma_system_select_choices">
+        <item>Home only</item>
+        <item>Automatic</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_choices">
+        <item>Home network only</item>
+        <item>Affiliated networks</item>
+        <item>Any network</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_choices">
+        <item>CDMA/EVDO</item>
+        <item>CDMA only</item>
+        <item>EVDO only</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_subscription_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="tty_mode_entries">
+        <item>TTY mode off</item>
+        <item>Full TTY</item>
+    </string-array>
+    <string-array name="dtmf_tone_entries">
+        <item>Normal</item>
+        <item>Long</item>
+    </string-array>
+    <string-array name="dtmf_tone_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>

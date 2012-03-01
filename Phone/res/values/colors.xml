@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="incall_textConnected">#ff99ce3f</color>
+    <color name="incall_textConnectedBluetooth">#ff54c1ff</color>
+    <color name="incall_textEnded">#ffff6072</color>
+    <color name="incall_textOnHold">#ffff9524</color>
+    <color name="incall_phoneNumber">@color/twcolor005</color>
+    <color name="incall_textDisable">#ff787878</color>
+    <color name="dtmf_dialer_background">#ff333333</color>
+    <color name="dtmf_dialer_display_text">#ffffffff</color>
+    <color name="people_app_theme_color">#ff33b5e5</color>
+    <color name="phone_number">@touchwiz:color/tw_color005</color>
+    <color name="twcolor001">@touchwiz:color/tw_color001</color>
+    <color name="twcolor002">@touchwiz:color/tw_color002</color>
+    <color name="twcolor003">@touchwiz:color/tw_color003</color>
+    <color name="twcolor005">@touchwiz:color/tw_color005</color>
+    <color name="twcolor011">@touchwiz:color/tw_color011</color>
+    <color name="twcolor030">@touchwiz:color/tw_color030</color>
+    <color name="twcolor048">@touchwiz:color/tw_color048</color>
+    <color name="shadow_color">#ff101010</color>
+    <color name="videocall_orange">#ffffae00</color>
+    <color name="videocall_grey">#ff666666</color>
+</resources>

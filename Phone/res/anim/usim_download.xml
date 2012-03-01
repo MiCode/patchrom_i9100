@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="200" android:drawable="@drawable/usim_download_01" />
+    <item android:duration="200" android:drawable="@drawable/usim_download_02" />
+    <item android:duration="200" android:drawable="@drawable/usim_download_03" />
+    <item android:duration="200" android:drawable="@drawable/usim_download_04" />
+    <item android:duration="200" android:drawable="@drawable/usim_download_05" />
+    <item android:duration="200" android:drawable="@drawable/usim_download_06" />
+</animation-list>

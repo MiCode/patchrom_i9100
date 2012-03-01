@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/overturn_main_screen" android:background="@drawable/overturn_incallscreen" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="43.639984dip">
+        <TextView android:textSize="18.0sp" android:id="@id/voiceCall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/overturn_voicecall" android:layout_centerInParent="true" />
+        <ImageButton android:id="@id/info_btn" android:background="@drawable/info_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="27.0sp" android:gravity="center" android:id="@id/unknown" android:paddingTop="135.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/overturn_callername" />
+</LinearLayout>

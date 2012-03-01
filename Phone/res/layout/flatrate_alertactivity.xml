@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textColor="#ffffffff" android:id="@id/message_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <CheckBox android:id="@id/org_checkbox" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/enable_flat_rate_org" />
+        <RadioGroup android:orientation="vertical" android:id="@id/xec_radiobuttton" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RadioButton android:id="@id/xec_radiobuttton_option1" android:checked="false" android:text="@string/alert_dialog_yes" />
+            <RadioButton android:id="@id/xec_radiobuttton_option2" android:checked="true" android:text="@string/alert_dialog_no" />
+        </RadioGroup>
+        <Button android:layout_gravity="center" android:id="@id/OK" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/alert_dialog_ok" />
+    </LinearLayout>
+</ScrollView>
