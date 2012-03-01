@@ -1,5 +1,5 @@
 .class public Lcom/android/phone/IccProvider;
-.super Lcom/android/internal/telephony/IccProvider;
+.super Lcom/android/internal/telephony/MiuiIccProvider;
 .source "IccProvider.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 24
-    invoke-direct {p0}, Lcom/android/internal/telephony/IccProvider;-><init>()V
+    invoke-direct {p0}, Lcom/android/internal/telephony/MiuiIccProvider;-><init>()V
 
     .line 25
     return-void

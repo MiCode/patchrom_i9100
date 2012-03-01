@@ -11,6 +11,8 @@ local-out-zip-file := MIUI_i9100.zip
 # All apps from original ZIP, but has smali files chanded
 local-modified-apps := Phone
 
+local-modified-jars := framework2
+
 # All apks from MIUI
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
 	MiuiHome MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
