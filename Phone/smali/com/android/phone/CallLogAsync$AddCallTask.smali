@@ -264,7 +264,9 @@
     :cond_3
     iget-object v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->dbUri:Landroid/net/Uri;
 
-    if-eqz v0, :cond_7
+    # if no dbUri presented(our case), just do as following (i.e, not to cond_7).
+    if-nez v0, :cond_7
+    :goto_2
 
     .line 224
     iget-object v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->context:Landroid/content/Context;
@@ -282,7 +284,6 @@
     aput-object v0, v12, v10
 
     .line 187
-    :goto_2
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_0
