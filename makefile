@@ -27,7 +27,7 @@ local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalenda
 # and the local-targets should:
 # (1) be defined after including porting.mk if using any global variable(see porting.mk)
 # (2) the name should be leaded with local- to prevent any conflict with global targets
-local-pre-zip := local-zip-misc
+local-pre-zip := add-lbesec-miui local-fix-updater-script
 local-after-zip:= local-put-to-phone
 
 # The local targets after the zip file is generated, could include 'zip2sd' to 
@@ -36,7 +36,10 @@ local-after-zip:= local-put-to-phone
 include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
-local-zip-misc:
+updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
+local-fix-updater-script:
+	more $(updater) | sed  -e "/\/su\"/a\set_perm(0, 0, 06755, \"/system/xbin/invoke-as\");" > $(updater).new
+	mv $(updater).new $(updater)
 
 local-put-to-phone:
 	adb shell rm /sdcard/MIUI_i9100.zip
