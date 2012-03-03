@@ -17,13 +17,14 @@ local-modified-jars := framework2
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
 	MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
 	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider \
-	Music Provision Torch
+	Music Provision Torch Gallery2
 
 local-miui-modified-apps := MiuiHome Settings
 
 # All apps need to be removed from original ZIP file
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
-	SystemUI RootExplorer SetupWizard MyFiles RebootTool
+	SystemUI RootExplorer SetupWizard MyFiles RebootTool Superuser CWMManager GoogleQuickSearchBox \
+	DioPenChineseIME Gallery3D
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
