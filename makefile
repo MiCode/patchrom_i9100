@@ -17,9 +17,9 @@ local-modified-jars := framework2
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
 	MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
 	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider \
-	Music Provision Settings Torch
+	Music Provision Torch
 
-local-miui-modified-apps := MiuiHome
+local-miui-modified-apps := MiuiHome Settings
 
 # All apps need to be removed from original ZIP file
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
