@@ -15,9 +15,11 @@ local-modified-jars := framework2
 
 # All apks from MIUI
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
-	MiuiHome MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
+	MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
 	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider \
 	Music Provision Settings Torch
+
+local-miui-modified-apps := MiuiHome
 
 # All apps need to be removed from original ZIP file
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
@@ -38,6 +40,7 @@ include $(PORT_BUILD)/porting.mk
 # To define any local-target
 updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 local-fix-updater-script:
+	cp other/boot.img $(ZIP_DIR)
 	more $(updater) | sed  -e "/\/su\"/a\set_perm(0, 0, 06755, \"/system/xbin/invoke-as\");" > $(updater).new
 	mv $(updater).new $(updater)
 
