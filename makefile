@@ -24,7 +24,9 @@ local-miui-modified-apps := MiuiHome Settings
 # All apps need to be removed from original ZIP file
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
 	SystemUI RootExplorer SetupWizard MyFiles RebootTool Superuser CWMManager GoogleQuickSearchBox \
-	DioPenChineseIME Gallery3D
+	DioPenChineseIME Gallery3D SecDownloadProviderUi SecDownloadProvider VoiceRecorder ClockPackage \
+	JobManager VideoPlayer
+
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
@@ -54,3 +56,7 @@ local-put-to-phone:
 	adb logcat -c
 	adb push ../wpa_supplicant.conf /data/misc/wifi
 
+local-ota-update:
+	rm $(ZIP_DIR)/system/app/Torch.apk
+	rm $(ZIP_DIR)/system/app/Gallery2.apk
+	
