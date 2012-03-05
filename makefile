@@ -44,6 +44,7 @@ include $(PORT_BUILD)/porting.mk
 updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 local-fix-updater-script:
 	cp other/boot.img $(ZIP_DIR)
+	cp other/AxT9IME.apk $(ZIP_DIR)/system/app
 	more $(updater) | sed  -e "/\/su\"/a\set_perm(0, 0, 06755, \"/system/xbin/invoke-as\");" > $(updater).new
 	mv $(updater).new $(updater)
 
