@@ -17,7 +17,7 @@ local-modified-jars := framework2
 local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
 	MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
 	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider \
-	Music Provision Torch Gallery2
+	Music Provision Gallery2
 
 local-miui-modified-apps := MiuiHome Settings
 
