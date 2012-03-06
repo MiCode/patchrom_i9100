@@ -58,6 +58,6 @@ local-put-to-phone:
 	adb push ../wpa_supplicant.conf /data/misc/wifi
 
 local-ota-update:
-	rm $(ZIP_DIR)/system/app/Torch.apk
+	rm $(ZIP_DIR)/system/app/SuperMarket.apk
 	rm $(ZIP_DIR)/system/app/Gallery2.apk
 	
