@@ -22,7 +22,7 @@ local-miui-modified-apps := MiuiHome Settings
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
 	SystemUI RootExplorer SetupWizard MyFiles RebootTool Superuser CWMManager GoogleQuickSearchBox \
 	DioPenChineseIME Gallery3D SecDownloadProviderUi SecDownloadProvider VoiceRecorder ClockPackage \
-	JobManager VideoPlayer TouchWizCalculator
+	JobManager VideoPlayer TouchWizCalculator SecCalendarProvider
 
 
 # To include the local targets before and after zip the final ZIP file, 
