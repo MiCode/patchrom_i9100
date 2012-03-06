@@ -54,7 +54,7 @@
 <favorite launcher:className="com.android.quicksearchbox.SearchActivity" launcher:packageName="com.android.quicksearchbox" launcher:screen="2" launcher:x="3" launcher:y="1" />
 
 <favorite launcher:className="com.android.calendar.LaunchActivity" launcher:packageName="com.android.calendar" launcher:screen="2" launcher:x="0" launcher:y="2" />
-<favorite launcher:className="com.sec.android.app.calculator.Calculator" launcher:packageName="com.sec.android.app.calculator" launcher:screen="2" launcher:x="1" launcher:y="2" />
+<favorite launcher:className="com.android.calculator2.Calculator" launcher:packageName="com.android.calculator2" launcher:screen="2" launcher:x="1" launcher:y="2" />
 <favorite launcher:className="com.android.deskclock.DeskClock" launcher:packageName="com.android.deskclock" launcher:screen="2" launcher:x="2" launcher:y="2" />
 <favorite launcher:className="com.miui.notes.ui.NotesListActivity" launcher:packageName="com.miui.notes" launcher:screen="2" launcher:x="3" launcher:y="2" />
 

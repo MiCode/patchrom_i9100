@@ -14,10 +14,7 @@ local-modified-apps := Phone
 local-modified-jars := framework2
 
 # All apks from MIUI
-local-miui-apps     := AntiSpam Backup BugReport CloudService MiuiCompass Contacts DeskClock FileExplorer \
-	MiuiSystemUI Mms Monitor Notes PackageInstaller QuickSearchBox SoundRecorder SuperMarket \
-	ThemeManager Updater ContactsProvider DownloadProvider DownloadProviderUi TelephonyProvider TelocationProvider \
-	Music Provision Gallery2
+local-miui-removed-apps := Phone MediaProvider
 
 local-miui-modified-apps := MiuiHome Settings
 
@@ -25,7 +22,7 @@ local-miui-modified-apps := MiuiHome Settings
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
 	SystemUI RootExplorer SetupWizard MyFiles RebootTool Superuser CWMManager GoogleQuickSearchBox \
 	DioPenChineseIME Gallery3D SecDownloadProviderUi SecDownloadProvider VoiceRecorder ClockPackage \
-	JobManager VideoPlayer
+	JobManager VideoPlayer TouchWizCalculator
 
 
 # To include the local targets before and after zip the final ZIP file, 
@@ -45,8 +42,6 @@ updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 local-fix-updater-script:
 	cp other/boot.img $(ZIP_DIR)
 	cp other/AxT9IME.apk $(ZIP_DIR)/system/app
-	more $(updater) | sed  -e "/\/su\"/a\set_perm(0, 0, 06755, \"/system/xbin/invoke-as\");" > $(updater).new
-	mv $(updater).new $(updater)
 
 local-put-to-phone:
 	adb shell rm /sdcard/MIUI_i9100.zip
