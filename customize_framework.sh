@@ -2,7 +2,7 @@
 # $1: dir for miui
 # $2: dir for original
 
-APKTOOL=$PORT_ROOT/tools/apktool
+APKTOOL="$PORT_ROOT/tools/apktool --quiet"
 BUILD_OUT=out
 
 if [ $2 = "$BUILD_OUT/framework" ]
@@ -20,7 +20,7 @@ then
 	mv "$BUILD_OUT/framework/smali/miui" "$BUILD_OUT/framework-miui/smali"
 
         cd $BUILD_OUT/framework/smali && cat ../../../other/framework.jar_file_not_exist | cpio -o > ../../cpio.nofile
-        cd ../../framework-miui/smali && cpio -idv < ../../cpio.nofile
+        cd ../../framework-miui/smali && cpio -id < ../../cpio.nofile
         cd ../../../
         for file in `more other/framework.jar_file_not_exist`; do
                 rm -rf $BUILD_OUT/framework/smali/$file
