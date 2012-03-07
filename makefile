@@ -14,14 +14,14 @@ local-modified-apps := Phone
 local-modified-jars := framework2
 
 # All apks from MIUI
-local-miui-removed-apps := Phone MediaProvider
+local-miui-removed-apps := Phone MediaProvider Gallery
 
 local-miui-modified-apps := MiuiHome Settings
 
 # All apps need to be removed from original ZIP file
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
 	SystemUI RootExplorer SetupWizard MyFiles RebootTool Superuser CWMManager GoogleQuickSearchBox \
-	DioPenChineseIME Gallery3D SecDownloadProviderUi SecDownloadProvider VoiceRecorder ClockPackage \
+	DioPenChineseIME SecDownloadProviderUi SecDownloadProvider VoiceRecorder ClockPackage \
 	JobManager VideoPlayer TouchWizCalculator SecCalendarProvider
 
 

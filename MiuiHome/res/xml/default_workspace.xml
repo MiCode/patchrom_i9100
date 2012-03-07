@@ -34,7 +34,8 @@
         launcher:x="0"
         launcher:y="0" />
 <favorite launcher:className="com.sec.android.app.camera.Camera" launcher:packageName="com.sec.android.app.camera" launcher:screen="1" launcher:x="0" launcher:y="2" />
-<favorite launcher:className="com.android.gallery3d.app.Gallery" launcher:packageName="com.android.gallery3d" launcher:screen="1" launcher:x="1" launcher:y="2" />
+<!--favorite launcher:className="com.android.gallery3d.app.Gallery" launcher:packageName="com.android.gallery3d" launcher:screen="1" launcher:x="1" launcher:y="2" /-->
+<favorite launcher:className="com.cooliris.media.Gallery" launcher:packageName="com.cooliris.media" launcher:screen="1" launcher:x="1" launcher:y="2" />
 <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="1" launcher:x="2" launcher:y="2" />
 <favorite launcher:className="com.android.thememanager.ThemeResourceTabActivity" launcher:packageName="com.android.thememanager" launcher:screen="1" launcher:x="3" launcher:y="2" />
 
