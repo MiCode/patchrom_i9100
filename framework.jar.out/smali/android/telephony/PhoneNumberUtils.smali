@@ -4886,12 +4886,14 @@
     .parameter "defaultCountryIso"
 
     .prologue
-    .line 1903
+    invoke-static {p0}, Lmiui/telephony/PhoneNumberUtils;->removeDashesAndBlanks(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 1904
     .local v1, len:I
     const/4 v0, 0x0
 

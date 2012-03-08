@@ -65,16 +65,17 @@
     #setter for: Landroid/widget/TimePicker;->mIsAm:Z
     invoke-static {v1, v0}, Landroid/widget/TimePicker;->access$002(Landroid/widget/TimePicker;Z)Z
 
-    .line 259
     iget-object v0, p0, Landroid/widget/TimePicker$5;->this$0:Landroid/widget/TimePicker;
 
     #calls: Landroid/widget/TimePicker;->updateAmPmControl()V
     invoke-static {v0}, Landroid/widget/TimePicker;->access$100(Landroid/widget/TimePicker;)V
 
-    .line 260
+    iget-object v0, p0, Landroid/widget/TimePicker$5;->this$0:Landroid/widget/TimePicker;
+
+    invoke-virtual {v0}, Landroid/widget/TimePicker;->onTimeChanged()V
+
     return-void
 
-    .line 258
     :cond_0
     const/4 v0, 0x0
 

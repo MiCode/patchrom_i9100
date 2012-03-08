@@ -26,9 +26,9 @@
 
 .field private static mContext:Landroid/content/Context;
 
-.field private static mReboot:Z
+.field static mReboot:Z
 
-.field private static mRebootReason:Ljava/lang/String;
+.field static mRebootReason:Ljava/lang/String;
 
 .field private static mRebootResult:Z
 
@@ -44,9 +44,9 @@
 
 .field private static sIsSamsungAnimation:Z
 
-.field private static sIsStarted:Z
+.field static sIsStarted:Z
 
-.field private static sIsStartedGuard:Ljava/lang/Object;
+.field static sIsStartedGuard:Ljava/lang/Object;
 
 
 # instance fields
@@ -2884,4 +2884,81 @@
     .end local v26           #out:Ljava/io/FileWriter;
     .restart local v25       #out:Ljava/io/FileWriter;
     goto/16 :goto_e
+.end method
+
+.method private static getResourceId(I)I
+    .locals 1
+    .parameter "id"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    sget-boolean v0, Lcom/android/internal/app/ShutdownThread;->mReboot:Z
+
+    if-eqz v0, :cond_0
+
+    const/high16 p0, 0x30c
+
+    .end local p0
+    :cond_0
+    return p0
+.end method
+
+.method private static getTitleResourceId()I
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    sget-boolean v0, Lcom/android/internal/app/ShutdownThread;->mReboot:Z
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x1040318
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const v0, 0x1040124
+
+    goto :goto_0
+.end method
+
+.method private static setMessage(Landroid/app/ProgressDialog;Landroid/content/Context;)V
+    .locals 1
+    .parameter "pd"
+    .parameter "context"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    sget-boolean v0, Lcom/android/internal/app/ShutdownThread;->mReboot:Z
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x30c0001
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const v0, 0x1040128
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
 .end method
