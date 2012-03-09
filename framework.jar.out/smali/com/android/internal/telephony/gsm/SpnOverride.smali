@@ -884,3 +884,22 @@
 
     goto :goto_0
 .end method
+
+# copy from miui-framework to overload the above getSpn
+.method getSpn(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .parameter "carrier"
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SpnOverride;->CarrierSpnMap:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    return-object v0
+.end method
+

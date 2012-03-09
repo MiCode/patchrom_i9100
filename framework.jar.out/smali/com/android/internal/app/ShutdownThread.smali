@@ -909,28 +909,15 @@
     invoke-virtual {v0, v3, v4}, Landroid/media/AudioManager;->setParameter(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 468
+    # it is a Landroid/app/ProgressDialog object in android.
     new-instance v2, Lcom/android/internal/app/ShutdownThread$8;
 
-    invoke-direct {v2, p0}, Lcom/android/internal/app/ShutdownThread$8;-><init>(Landroid/content/Context;)V
+    const/4 v3, 0x3
 
-    .line 487
+    invoke-direct {v2, p0, v3}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;I)V
     .local v2, pd:Landroid/app/ProgressDialog;
-    const v3, 0x1040157
 
-    invoke-virtual {p0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 488
-    const v3, 0x104015b
-
-    invoke-virtual {p0, v3}, Landroid/content/Context;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
+    invoke-static {v2, p0}, Lcom/android/internal/app/ShutdownThread;->setMessage(Landroid/app/ProgressDialog;Landroid/content/Context;)V
 
     .line 489
     invoke-virtual {v2, v6}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
@@ -1469,6 +1456,10 @@
     .line 172
     .local v3, resourceId:I
     :goto_1
+    invoke-static {v3}, Lcom/android/internal/app/ShutdownThread;->getResourceId(I)I
+
+    move-result v3
+
     sget-object v6, Lcom/android/internal/app/ShutdownThread;->sInstance:Lcom/android/internal/app/ShutdownThread;
 
     sput-object p0, Lcom/android/internal/app/ShutdownThread;->mContext:Landroid/content/Context;
@@ -1536,7 +1527,9 @@
 
     if-eqz v6, :cond_4
 
-    const v6, 0x1040165
+    invoke-static {}, Lcom/android/internal/app/ShutdownThread;->getTitleResourceId()I
+
+    move-result v6
 
     :goto_2
     invoke-virtual {v7, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;

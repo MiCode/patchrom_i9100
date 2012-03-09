@@ -9499,9 +9499,8 @@
 
     .line 654
     .local v5, spn:Ljava/lang/String;
-    iget-object v8, p0, Lcom/android/internal/telephony/ServiceStateTracker;->ss:Landroid/telephony/ServiceState;
-
-    invoke-virtual {v8}, Landroid/telephony/ServiceState;->getOperatorAlphaLong()Ljava/lang/String;
+    # ServiceStateTracker used in original code instead of gsm/GsmServiceStateTracker
+    invoke-direct {p0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->getPlmn()Ljava/lang/String;
 
     move-result-object v1
 
