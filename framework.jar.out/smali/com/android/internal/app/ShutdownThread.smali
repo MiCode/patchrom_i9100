@@ -910,7 +910,7 @@
 
     .line 468
     # it is a Landroid/app/ProgressDialog object in android.
-    new-instance v2, Lcom/android/internal/app/ShutdownThread$8;
+    new-instance v2, Lcom/android/internal/app/ProgressDialog;
 
     const/4 v3, 0x3
 
