@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status_bar_toggle_network_type_action">com.android.phone/.Settings</string>
+</resources>
