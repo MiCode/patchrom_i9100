@@ -16,7 +16,7 @@ local-modified-jars := framework2
 # All apks from MIUI
 local-miui-removed-apps := Phone MediaProvider Gallery
 
-local-miui-modified-apps := MiuiHome Settings MiuiSystemUI
+local-miui-modified-apps := MiuiHome Settings MiuiSystemUI Mms
 
 # All apps need to be removed from original ZIP file
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
