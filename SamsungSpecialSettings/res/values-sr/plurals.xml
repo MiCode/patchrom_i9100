@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d slova</item>
+        <item quantity="one">Lozinka mora da sadrži bar 1 slovo</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d malih slova</item>
+        <item quantity="one">Lozinka mora da sadrži bar jedno malo slovo</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d velikih slova</item>
+        <item quantity="one">Lozinka mora da sadrži bar 1 veliko slovo</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d brojeva</item>
+        <item quantity="one">Lozinka mora da sadrži bar jedan broj</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d simbola</item>
+        <item quantity="one">Lozinka mora da sadrži bar jedan simbol</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Lozinka mora da sadrži najmanje %d brojeva ili simbola</item>
+        <item quantity="one">Lozinka mora da sadrži najmanje jedan broj ili simbol</item>
+    </plurals>
+</resources>

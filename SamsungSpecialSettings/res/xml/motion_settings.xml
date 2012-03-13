@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/motion_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="@string/motion_activation" android:key="motion_activation" />
+    <PreferenceScreen android:title="@string/tilt_title" android:key="tilt" android:summary="@string/tilt_summary" android:dependency="motion_activation" android:fragment="com.android.settings.motion.TiltSettings" />
+    <PreferenceScreen android:title="@string/pan_title" android:key="pan" android:summary="@string/pan_summary" android:dependency="motion_activation" android:fragment="com.android.settings.motion.PanSettings" />
+    <PreferenceScreen android:title="@string/shake_title" android:key="shake" android:summary="@string/shake_summary" android:dependency="motion_activation" android:fragment="com.android.settings.motion.ShakeSettings" />
+    <PreferenceScreen android:title="@string/double_tap_title" android:key="double_tap" android:summary="@string/double_tap_summary" android:dependency="motion_activation" android:fragment="com.android.settings.motion.DoubleTapSettings" />
+    <PreferenceScreen android:title="@string/pick_up_title" android:key="pick_up" android:summary="@string/pick_up_summary" android:dependency="motion_activation" android:fragment="com.android.settings.motion.PickUpSettings" />
+    <PreferenceScreen android:title="@string/turn_over_title" android:key="turn_over" android:summary="@string/turn_over_summary" android:dependency="motion_activation" android:fragment="com.android.settings.motion.TurnOverSettings" />
+</PreferenceScreen>

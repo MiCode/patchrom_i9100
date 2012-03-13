@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/sdcard_encrypt_title" android:key="sdEncpref" android:summary="@string/sdcard_encrypt_password_needed" android:fragment="com.android.settings.encryption.CryptSDCardSettings" />
+</PreferenceScreen>

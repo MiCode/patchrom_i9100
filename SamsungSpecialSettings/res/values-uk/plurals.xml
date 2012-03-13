@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Пароль має містити принаймні таку кількість літер: %d</item>
+        <item quantity="one">Пароль має містити принаймні таку кількість літер: 1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Пароль має містити принаймні таку кількість літер нижнього регістру: %d</item>
+        <item quantity="one">Пароль має містити принаймні таку кількість літер нижнього регістру: 1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Пароль має містити принаймні таку кількість літер верхнього регістру: %d</item>
+        <item quantity="one">Пароль має містити принаймні таку кількість літер верхнього регістру: 1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Пароль має містити принаймні таку кількість цифр: %d</item>
+        <item quantity="one">Пароль має містити принаймні таку кількість цифр: 1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Пароль має містити принаймні таку кількість символів: %d</item>
+        <item quantity="one">Пароль має містити принаймні таку кількість символів: 1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Пароль має містити принаймні таку кількість цифр чи символів: %d</item>
+        <item quantity="one">Пароль має містити принаймні таку кількість цифр чи символів: 1</item>
+    </plurals>
+</resources>

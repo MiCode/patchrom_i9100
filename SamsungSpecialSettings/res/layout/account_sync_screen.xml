@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/title" />
+    <ListView android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:layout_gravity="center" android:id="@id/sync_setting_error_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="4.0dip" />
+        <View android:layout_width="1.0dip" android:layout_height="0.0dip" />
+        <TextView android:id="@id/sync_settings_error_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/sync_is_failing" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/remove_account_area" android:background="@android:drawable/bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <View android:layout_width="4.0dip" android:layout_height="49.0dip" />
+        <Button android:textSize="16.0dip" android:id="@id/sync_now_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_weight="1.0" />
+        <Button android:textSize="16.0dip" android:id="@id/remove_account_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:text="@string/remove_account_label" android:layout_weight="1.0" />
+        <View android:layout_width="4.0dip" android:layout_height="49.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/finish_button_area" android:background="@android:drawable/bottom_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/finish_button" android:layout_width="150.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/finish_button_label" android:drawableRight="@drawable/ic_btn_next" android:drawablePadding="3.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</LinearLayout>

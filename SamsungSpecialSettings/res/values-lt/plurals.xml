@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Slaptažodis turi būti sudarytas bent iš %d raidės (-ių)</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 raidė</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Slaptažodis turi būti sudarytas bent iš %d mažosios (-ųjų) raidės (-ių)</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 mažoji raidė</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Slaptažodis turi būti sudarytas bent iš %d didžiosios (-ųjų) raidės (-ių)</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 didžioji raidė</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Slaptažodis turi būti sudarytas bent iš %d skaičiaus (-ių)</item>
+        <item quantity="one">Slaptažodyje turi būti bent 1 skaičius</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Slaptažodį turi sudaryti bent %d simboliai (-ių)</item>
+        <item quantity="one">Slaptažodį turi sudaryti bent 1 simbolis</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Slaptažodį turi sudaryti bent %d skaitmenys (-ų) ar simboliai (-ių)</item>
+        <item quantity="one">Slaptažodį turi sudaryti bent 1 skaitmuo ar simbolis</item>
+    </plurals>
+</resources>

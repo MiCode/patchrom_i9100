@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Parol tarkibida kamida %d harf bo‘lishi lozim</item>
+        <item quantity="one">Parol tarkibida kamida 1 harf bo‘lishi lozim</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Parol tarkibida kamida %d kichik harf bo‘lishi lozim</item>
+        <item quantity="one">Parol tarkibida kamida 1 kichik harf bo‘lishi lozim</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Parol tarkibida kamida %d bosh harf bo‘lishi lozim</item>
+        <item quantity="one">Parol tarkibida kamida 1 bosh harf bo‘lishi lozim</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Parol tarkibida kamida %d raqam bo‘lishi lozim</item>
+        <item quantity="one">Parol tarkibida kamida 1 raqam bo‘lishi lozim</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Parol eng kamida %d belgidan tashkil topishi lozim</item>
+        <item quantity="one">Parol eng kamida 1 belgidan tashkil topishi lozim</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Parol eng kamida %d raqam yoki belgidan tashkil topishi lozim</item>
+        <item quantity="one">Parol eng kamida 1 raqam yoki belgidan tashkil topishi lozim</item>
+    </plurals>
+</resources>

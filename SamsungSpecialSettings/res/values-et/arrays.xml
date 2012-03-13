@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>KK/PP/AAAA</item>
+        <item>PP/KK/AAAA</item>
+        <item>AAAA/KK/PP</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sekundit</item>
+        <item>30 sekundit</item>
+        <item>1 minut</item>
+        <item>2 minutit</item>
+        <item>5 minutit</item>
+        <item>10 minutit</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Mitte kunagi</item>
+        <item>15 sekundit</item>
+        <item>30 sekundit</item>
+        <item>1 minut</item>
+        <item>2 minutit</item>
+        <item>5 minutit</item>
+        <item>10 minutit</item>
+        <item>30 minutit</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Kohe</item>
+        <item>5 sekundit</item>
+        <item>15 sekundit</item>
+        <item>30 sekundit</item>
+        <item>1 minut</item>
+        <item>2 minutit</item>
+        <item>5 minutit</item>
+        <item>10 minutit</item>
+        <item>30 minutit</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Tiny</item>
+        <item>Väike</item>
+        <item>Tavaline</item>
+        <item>Suur</item>
+        <item>Ülisuur</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Väga aeglane</item>
+        <item>Aeglane</item>
+        <item>Tavaline</item>
+        <item>Kiire</item>
+        <item>Väga kiire</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Skaneerimine...</item>
+        <item>Ühendamine...</item>
+        <item>Autentimine...</item>
+        <item>IP-aadressi hankimine...</item>
+        <item>Ühendatud</item>
+        <item>Peatatud</item>
+        <item>Ühenduse katkestamine...</item>
+        <item>Ühendus on katkestatud</item>
+        <item>Nurjunud</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Skaneerimine...</item>
+        <item>Ühenduse loomine seadmega %s...</item>
+        <item>Võrguga %s autentimine...</item>
+        <item>IP-aadressi hankimine võrgust %s...</item>
+        <item>Ühendatud üksusega %1$s</item>
+        <item>Peatatud</item>
+        <item>Ühenduse katkestamine seadmega %s...</item>
+        <item>Ühendus on katkestatud</item>
+        <item>Nurjunud</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Vajutage nuppu</item>
+        <item>PIN-kood partnerseadmest</item>
+        <item>PIN-kood sellest seadmest</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Ühendatud</item>
+        <item>Kutsutud</item>
+        <item>Ühendamine ebaõnnestus</item>
+        <item>Toksake ühendamiseks</item>
+        <item>Levist väljas</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 min.</item>
+        <item>5 min.</item>
+        <item>1 tund</item>
+        <item>Energiasäästurežiimita</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Kehv</item>
+        <item>Rahuldav</item>
+        <item>Hea</item>
+        <item>Võrratu</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Alati</item>
+        <item>Ainult juhul, kui ühendatud</item>
+        <item>Mitte kunagi (suurendab andmekasutust)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Alati</item>
+        <item>Ainult juhul, kui ühendatud</item>
+        <item>Mitte kunagi</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Automaatne</item>
+        <item>Ainult 5 GHz</item>
+        <item>Ainult 2.4 GHz</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Kasutusaeg</item>
+        <item>Käivituste arv</item>
+        <item>Rakenduse nimi</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Puudub</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Väljas</item>
+        <item>Vajutage nuppu</item>
+        <item>PIN-kood pääsupunktist</item>
+        <item>PIN-kood sellest seadmest</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Staatiline</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Puudub</item>
+        <item>Käsitsi</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Väljas</item>
+        <item>Märguanne</item>
+        <item>Värin</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Puudub</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP või CHAP</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Määramata</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Seadme sisemälu</item>
+        <item>Eemaldatav SD-kaart</item>
+        <item>Vaikimisi</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Väljas</item>
+        <item>Värin</item>
+        <item>Vaigista</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Lühike</item>
+        <item>Keskmine</item>
+        <item>Keela</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Ära kontrolli kunagi</item>
+        <item>Kontrollida ainult DRM-i sisu</item>
+        <item>Kontrolli alati</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Ärge kunagi kasutage HDCP kontrollimist</item>
+        <item>Kasutage HDCP kontrollimist ainult DRM-i sisu puhul</item>
+        <item>Kasutage alati HDCP kontrollimist</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animatsioon on välja lülitatud</item>
+        <item>Animatsiooni skaala 0.5x</item>
+        <item>Animatsiooni skaala 1x</item>
+        <item>Animatsiooni skaala 1.5x</item>
+        <item>Animatsiooni skaala 2x</item>
+        <item>Animatsiooni skaala 5x</item>
+        <item>Animatsiooni skaala 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animatsioon on välja lülitatud</item>
+        <item>Animatsiooni skaala 0.5x</item>
+        <item>Animatsiooni skaala 1x</item>
+        <item>Animatsiooni skaala 1.5x</item>
+        <item>Animatsiooni skaala 2x</item>
+        <item>Animatsiooni skaala 5x</item>
+        <item>Animatsiooni skaala 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Standardne piirang</item>
+        <item>Ei ole taustal töötavaid toiminguid</item>
+        <item>Kõige enam 1 toiming</item>
+        <item>Kõige enam 2 toimingut</item>
+        <item>Kõige enam 3 toimingut</item>
+        <item>Kõige enam 4 toimingut</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>L2TP/IPSec VPN eeljagatud võtmetega</item>
+        <item>L2TP/IPSec VPN sertifikaatidega</item>
+        <item>IPSec VPN eeljagatud võtmetega ja XAuth autentimisega</item>
+        <item>IPSec VPN sertifikaatidega ja XAuth autentimisega</item>
+        <item>IPSec VPN sertifikaatidega ja hübriidautentimisega</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Ühendus on katkestatud</item>
+        <item>Lähtestamine...</item>
+        <item>Ühendamine...</item>
+        <item>Ühendatud</item>
+        <item>Aegumine</item>
+        <item>Nurjunud</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 sekundit</item>
+        <item>6 sekundit</item>
+        <item>Alati väljas</item>
+        <item>Alati sees</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% akutoidet</item>
+        <item>20% akutoidet</item>
+        <item>30% akutoidet</item>
+        <item>40% akutoidet</item>
+        <item>50% akutoidet</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Üleval</item>
+        <item>Keskmine</item>
+        <item>All</item>
+    </string-array>
+</resources>

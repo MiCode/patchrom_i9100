@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Lykilorð verður að innihalda minnst %d stafi</item>
+        <item quantity="one">Lykilorð verður að innihalda minnst 1 staf</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Lykilorð verður að innihalda minnst %d lágstafi</item>
+        <item quantity="one">Lykilorð verður að innihalda minnst 1 lágstaf</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Lykilorð verður að innihalda minnst %d hástafi</item>
+        <item quantity="one">Lykilorð verður að innihalda minnst 1 hástaf</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Lykilorð verður að innihalda minnst %d tölustafi</item>
+        <item quantity="one">Lykilorð verður að innihalda minnst 1 tölustaf</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Lykilorð verður að innihalda minnst %d tákn</item>
+        <item quantity="one">Lykilorð verður að innihalda minnst eitt tákn</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Lykilorð verður að innihalda minnst %d tölur eða tákn</item>
+        <item quantity="one">Lykilorð verður að innihalda minnst eina tölu eða tákn</item>
+    </plurals>
+</resources>

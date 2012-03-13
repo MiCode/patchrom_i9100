@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">A senha deve conter pelo menos %d letras</item>
+        <item quantity="one">A senha deve conter pelo menos uma letra</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">A senha deve conter pelo menos %d letras minúsculas</item>
+        <item quantity="one">A senha deve conter pelo menos uma letra minúscula</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">A senha deve conter pelo menos %d letras maiúsculas</item>
+        <item quantity="one">A senha deve conter pelo menos uma letra maiúscula</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">A senha deve conter pelo menos %d dígitos numéricos</item>
+        <item quantity="one">A senha deve conter pelo menos um dígito numérico</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">A senha deve conter pelo menos %d símbolos especiais</item>
+        <item quantity="one">A senha deve conter pelo menos um símbolo especial</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">A senha deve conter pelo menos %d caracteres que não sejam letras</item>
+        <item quantity="one">A senha deve conter pelo menos um caractere que não seja letra</item>
+    </plurals>
+</resources>

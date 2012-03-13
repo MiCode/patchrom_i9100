@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Hasło musi zawierać co najmniej następującą liczbę liter: %d</item>
+        <item quantity="one">Hasło musi zawierać co najmniej 1 literę</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Hasło musi zawierać co najmniej następującą liczbę małych liter: %d</item>
+        <item quantity="one">Hasło musi zawierać co najmniej 1 małą literę</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Hasło musi zawierać co najmniej następującą liczbę wielkich liter: %d</item>
+        <item quantity="one">Hasło musi zawierać co najmniej 1 wielką literę</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Hasło musi zawierać co najmniej następującą liczbę cyfr: %d</item>
+        <item quantity="one">Hasło musi zawierać co najmniej 1 cyfrę</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Hasło musi zawierać co najmniej następującą liczbę symboli: %d</item>
+        <item quantity="one">Hasło musi zawierać co najmniej następującą liczbę symboli: 1</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Hasło musi zawierać co najmniej następującą liczbę cyfr lub symboli: %d</item>
+        <item quantity="one">Hasło musi zawierać co najmniej następującą liczbę cyfr lub symboli: 1</item>
+    </plurals>
+</resources>

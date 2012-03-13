@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/accessibility_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/accessibility_services_title" android:key="services_category" />
+    <PreferenceCategory android:title="@string/accessibility_system_title" android:key="system_category">
+        <CheckBoxPreference android:persistent="false" android:title="@string/accessibility_toggle_large_text_title" android:key="toggle_large_text_preference" android:order="1" />
+        <ListPreference android:entries="@array/entries_font_size" android:title="@string/title_font_size" android:key="font_size" android:summary="@string/summary_font_size" android:dialogTitle="@string/dialog_title_font_size" android:entryValues="@array/entryvalues_font_size" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/accessibility_power_button_ends_call_title" android:key="toggle_power_button_ends_call_preference" android:order="2" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/accelerometer_title" android:key="toggle_auto_rotate_screen_preference" android:order="3" />
+        <PreferenceScreen android:title="@string/accessibility_touch_exploration_title" android:key="toggle_touch_exploration_preference" android:order="4" android:fragment="com.android.settings.AccessibilitySettings$ToggleTouchExplorationFragment">
+            <extra android:name="title" android:value="@string/accessibility_touch_exploration_title" />
+            <extra android:name="summary" android:value="@string/accessibility_touch_exploration_summary" />
+            <extra android:name="enable_warning_title" android:value="@android:string/dialog_alert_title" />
+            <extra android:name="enable_warning_message" android:value="@string/accessibility_touch_exploration_warning" />
+            <extra android:name="settings_title" android:value="@string/accessibility_menu_item_tutorial" />
+            <extra android:name="settings_component_name" android:value="com.android.settings/com.android.settings.AccessibilityTutorialActivity" />
+        </PreferenceScreen>
+        <ListPreference android:persistent="false" android:entries="@array/long_press_timeout_selector_titles" android:title="@string/accessibility_long_press_timeout_title" android:key="select_long_press_timeout_preference" android:order="5" android:entryValues="@array/long_press_timeout_selector_values" />
+        <com.android.settings.AccessibilityEnableScriptInjectionPreference android:persistent="false" android:title="@string/accessibility_script_injection_title" android:key="toggle_script_injection_preference" android:order="6" android:dialogTitle="@string/accessibility_script_injection_security_warning_title" android:dialogMessage="@string/accessibility_script_injection_security_warning_summary" android:dialogIcon="@android:drawable/ic_dialog_alert" android:positiveButtonText="@string/accessibility_script_injection_button_allow" android:negativeButtonText="@string/accessibility_script_injection_button_disallow" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/accessibility_vision_category" android:key="vision_category" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/high_contrast_title" android:key="high_contrast" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/screen_zoom_title" android:key="screen_zoom" />
+    <com.android.settings.flipfont.FontListPreference android:title="@string/monotype_preference_title" android:key="MONOTYPE" android:summary="@string/monotype_preference_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/torch_light" android:key="torch_light" android:summary="@string/torch_light_summary" />
+    <PreferenceCategory android:title="@string/audio_preference_title" android:key="audio_preference_key" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/mono_audio_title" android:key="mono_audio_key" android:summary="@string/mono_audio_summary" />
+    <PreferenceCategory android:title="@string/easy_access_category" android:key="easy_access" />
+    <PreferenceScreen android:title="@string/answering_end_call_title" android:key="call_answering_ending" android:summary="@string/answering_end_call_summary">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.allcalls.AnsweringCall" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:persistent="false" android:title="@string/power_key_hold_title" android:key="power_key_hold" android:summary="@string/power_key_hold_summary" />
+</PreferenceScreen>

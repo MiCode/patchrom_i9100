@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin_sides">128.0dip</dimen>
+    <dimen name="screen_margin_top">72.0dip</dimen>
+    <dimen name="screen_margin_bottom">48.0dip</dimen>
+</resources>

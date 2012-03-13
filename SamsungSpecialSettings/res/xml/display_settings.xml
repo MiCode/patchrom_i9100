@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/display_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/screen_display" />
+    <PreferenceScreen android:title="@string/home_screen_wallpaper" android:key="homescreen_wallpaper" android:summary="" />
+    <PreferenceScreen android:title="@string/lockscreen_wallpaper" android:key="lockscreen_wallpaper" android:summary="">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.LockScreenWallpaper" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:title="@string/clock" android:key="clock" android:summary="@string/clock_summary" />
+    <CheckBoxPreference android:title="@string/weather" android:key="weather" android:summary="@string/weather_summary" />
+    <PreferenceScreen android:title="@string/weather_settings" android:key="weather_settings" android:summary="@string/weather_settings_summary" android:dependency="weather" />
+    <ListPreference android:persistent="false" android:entries="@array/clock_position_entries" android:title="@string/clock_weather_position" android:key="clock_position" android:entryValues="@array/clock_position_values" />
+    <PreferenceCategory android:title="@string/tts_general_section_title" />
+    <com.android.settings.BrightnessPreference android:title="@string/brightness" android:key="brightness" android:dialogTitle="@string/brightness" />
+    <PreferenceScreen android:title="@string/screen_mode_setting" android:key="mode" android:summary="@string/screen_mode_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.ModePreview" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:title="@string/accelerometer_title" android:key="accelerometer" />
+    <ListPreference android:persistent="false" android:entries="@array/screen_timeout_entries" android:title="@string/screen_timeout" android:key="screen_timeout" android:summary="@string/screen_timeout_summary" android:entryValues="@array/screen_timeout_values" />
+    <com.android.settings.flipfont.FontListPreference android:title="@string/monotype_preference_title" android:key="MONOTYPE" android:summary="@string/monotype_preference_summary" />
+    <ListPreference android:entries="@array/entries_font_size" android:title="@string/title_font_size" android:key="font_size" android:summary="@string/summary_font_size" android:dialogTitle="@string/dialog_title_font_size" android:entryValues="@array/entryvalues_font_size" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/notification_pulse_title" android:key="notification_pulse" />
+    <ListPreference android:persistent="false" android:entries="@array/touch_key_light_entries" android:title="@string/touch_key_light" android:key="touch_key_light" android:summary="@string/touch_key_light_summary" android:entryValues="@array/touch_key_light_values" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/display_saving" android:key="power_saving_mode" android:summary="@string/display_saving_mode_summary" />
+    <PreferenceScreen android:title="@string/a_sensor_title" android:key="a_sensor" android:summary="@string/a_sensor_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.ASensorSettings" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/g_sensor_title" android:key="g_sensor" android:summary="@string/g_sensor_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.GSensorSettings" />
+    </PreferenceScreen>
+</PreferenceScreen>

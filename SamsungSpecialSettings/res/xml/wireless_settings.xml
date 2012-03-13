@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wireless_networks_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="@string/airplane_mode" android:key="toggle_airplane" android:disableDependentsState="true" />
+    <PreferenceScreen android:title="@string/kies_via_wifi" android:key="kies_via_wifi" android:summary="@string/kies_via_wifi_summary">
+        <intent android:targetPackage="com.sec.android.app.kieswifi" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.kieswifi.ui.KiesLauncher" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/usb_utility_title" android:key="usb_settings" android:summary="@string/usb_utility_summary" android:fragment="com.android.settings.UsbSettings" />
+    <PreferenceScreen android:title="@string/vpn_settings_title" android:key="vpn_settings" android:fragment="com.android.settings.vpn2.VpnSettings" />
+    <PreferenceScreen android:title="@string/tether_settings_title_all" android:key="tether_settings" android:fragment="com.android.settings.TetherSettings" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/nfc_quick_toggle_title" android:key="toggle_nfc" android:summary="@string/nfc_quick_toggle_summary" />
+    <PreferenceScreen android:title="@string/android_beam_settings_title" android:key="android_beam_settings" android:fragment="com.android.settings.nfc.AndroidBeam" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/wifi_p2p_settings_title" android:key="toggle_wifi_p2p" />
+    <com.android.settings.SettingsSwitchPreference android:title="@string/wifi_p2p_settings_title" android:key="wifi_p2p_settings_switch" android:summary="@string/wifi_p2p_settings_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.Settings$WifiP2pSettingsActivity" />
+    </com.android.settings.SettingsSwitchPreference>
+    <PreferenceScreen android:title="@string/network_settings_title" android:key="mobile_network_settings" android:dependency="toggle_airplane">
+        <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.Settings" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/proxy_settings_title" android:key="proxy_settings" android:fragment="com.android.settings.ProxySelector" />
+</PreferenceScreen>

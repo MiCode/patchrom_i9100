@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/language_keyboard_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceScreen android:title="@string/phone_language" android:key="phone_language" android:fragment="com.android.settings.LocalePicker" />
+    <PreferenceCategory android:title="@string/keyboard_settings_category" android:key="keyboard_settings_category">
+        <PreferenceScreen android:title="@string/current_input_method" android:key="current_input_method" />
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/builtin_keyboard_settings_title" android:key="hard_keyboard">
+        <CheckBoxPreference android:persistent="false" android:title="@string/auto_replace" android:key="auto_replace" android:summaryOn="@string/auto_replace_summary" android:summaryOff="@string/auto_replace_summary" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/auto_caps" android:key="auto_caps" android:summaryOn="@string/auto_caps_summary" android:summaryOff="@string/auto_caps_summary" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/auto_punctuate" android:key="auto_punctuate" android:summaryOn="@string/auto_punctuate_summary" android:summaryOff="@string/auto_punctuate_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/voice_category" android:key="voice_category">
+        <ListPreference android:title="@string/recognizer_title" android:key="recognizer" android:dialogTitle="@string/recognizer_title" />
+        <PreferenceScreen android:title="@string/recognizer_settings_title" android:key="recognizer_settings" />
+        <PreferenceScreen android:title="@string/tts_settings_title" android:key="tts_settings" android:fragment="com.android.settings.tts.TextToSpeechSettings" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pointer_settings_category" android:key="pointer_settings_category">
+        <com.android.settings.PointerSpeedPreference android:title="@string/pointer_speed" android:key="pointer_speed" android:dialogTitle="@string/pointer_speed" />
+    </PreferenceCategory>
+</PreferenceScreen>

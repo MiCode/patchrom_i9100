@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>MM/DD/ÁÁÁÁ</item>
+        <item>DD/MM/ÁÁÁÁ</item>
+        <item>ÁÁÁÁ/MM/DD</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sekúndur</item>
+        <item>30 sekúndur</item>
+        <item>1 mínúta</item>
+        <item>2 mínútur</item>
+        <item>5 mínútur</item>
+        <item>10 mínútur</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Aldrei</item>
+        <item>15 sekúndur</item>
+        <item>30 sekúndur</item>
+        <item>1 mínúta</item>
+        <item>2 mínútur</item>
+        <item>5 mínútur</item>
+        <item>10 mínútur</item>
+        <item>30 mínútur</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Tafarlaust</item>
+        <item>5 sekúndur</item>
+        <item>15 sekúndur</item>
+        <item>30 sekúndur</item>
+        <item>1 mínúta</item>
+        <item>2 mínútur</item>
+        <item>5 mínútur</item>
+        <item>10 mínútur</item>
+        <item>30 mínútur</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Tiny</item>
+        <item>Lítið</item>
+        <item>Venjulegt</item>
+        <item>Stórt</item>
+        <item>Risastórt</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Mjög hægt</item>
+        <item>Hægt</item>
+        <item>Venjulegt</item>
+        <item>Hratt</item>
+        <item>Mjög hratt</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Verið er að skrá...</item>
+        <item>Tengist...</item>
+        <item>Sannprófa...</item>
+        <item>Sæki IP-tölu...</item>
+        <item>Tengt</item>
+        <item>Stöðvað</item>
+        <item>Verið er að aftengja...</item>
+        <item>Aftengt</item>
+        <item>Mistókst</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Verið er að skrá...</item>
+        <item>Er að tengjast %s...</item>
+        <item>Sannprófa með %s…</item>
+        <item>Sæki IP-tölu frá %s...</item>
+        <item>Tengt við %1$s</item>
+        <item>Stöðvað</item>
+        <item>Verið er að aftengja %s...</item>
+        <item>Aftengt</item>
+        <item>Mistókst</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Ýttu á hnapp</item>
+        <item>PIN-númer frá pörunartæki</item>
+        <item>PIN-númer frá þessu tæki</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Tengt</item>
+        <item>Boðið</item>
+        <item>Tenging brást</item>
+        <item>Pikkaðu til að tengja</item>
+        <item>Síminn er utan svæðis</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 mín.</item>
+        <item>5 mín.</item>
+        <item>1 klst.</item>
+        <item>Slökkva aldrei</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Léleg</item>
+        <item>Nokkuð góður</item>
+        <item>Gott</item>
+        <item>Frábært</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Alltaf</item>
+        <item>Aðeins þegar tækið er í sambandi</item>
+        <item>Aldrei (eykur gagnanýtingu)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Alltaf</item>
+        <item>Aðeins þegar tækið er í sambandi</item>
+        <item>Aldrei</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Sjálfvirkt</item>
+        <item>Aðeins 5 GHz</item>
+        <item>Aðeins 2,4 GHz</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Notkunartími</item>
+        <item>Fjöldi ræsinga</item>
+        <item>Heiti forrits</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Ekkert</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Slökkt</item>
+        <item>Ýttu á hnapp</item>
+        <item>PIN-númer frá aðgangsstað</item>
+        <item>PIN-númer frá þessu tæki</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Kyrrstaða</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Ekkert</item>
+        <item>Handvirkt</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Slökkt</item>
+        <item>Áminning</item>
+        <item>Titringur</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Ekkert</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP eða CHAP</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Ótilgreint</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Innra geymslupláss tækis</item>
+        <item>Laust SD-kort</item>
+        <item>Sjálfgefið</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Slökkt</item>
+        <item>Titringur</item>
+        <item>Þögn</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Stutt</item>
+        <item>Miðlungs</item>
+        <item>Langt</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Athuga aldrei</item>
+        <item>Leita eingöngu að DRM efni</item>
+        <item>Athuga alltaf</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Aldrei nota HDCP leit</item>
+        <item>Aðeins nota HDCP leit fyrir DRM efni</item>
+        <item>Nota alltaf HDCP leit</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Slökkt á hreyfimynd</item>
+        <item>Skali hreyfimyndar 0,5x</item>
+        <item>Skali hreyfimyndar 1x</item>
+        <item>Skali hreyfimyndar 1,5x</item>
+        <item>Skali hreyfimyndar 2x</item>
+        <item>Skali hreyfimyndar 5x</item>
+        <item>Skali hreyfimyndar 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Slökkt á hreyfimynd</item>
+        <item>Skali hreyfimyndar 0,5x</item>
+        <item>Skali hreyfimyndar 1x</item>
+        <item>Skali hreyfimyndar 1,5x</item>
+        <item>Skali hreyfimyndar 2x</item>
+        <item>Skali hreyfimyndar 5x</item>
+        <item>Skali hreyfimyndar 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Venjuleg mörk</item>
+        <item>Engin vinnsla í bakgrunni</item>
+        <item>Mest 1 vinnsla</item>
+        <item>Mest 2 vinnslur</item>
+        <item>Mest 3 vinnslur</item>
+        <item>Mest 4 vinnslur</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>L2TP/IPSec VPN með samnýttum lyklum</item>
+        <item>L2TP/IPSec VPN með vottorðum</item>
+        <item>IPSec VPN samnýttum lyklum og XAuth sannprófun</item>
+        <item>IPSec VPN vottorðum og XAuth sannprófun</item>
+        <item>IPSec VPN vottorðum og blandaðri sannprófun</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Aftengt</item>
+        <item>Verið er að frumstilla...</item>
+        <item>Tengist...</item>
+        <item>Tengt</item>
+        <item>Útrunnið</item>
+        <item>Mistókst</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 sekúndur</item>
+        <item>6 sekúndur</item>
+        <item>Alltaf slökkt</item>
+        <item>Alltaf kveikt</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% hleðsla rafhlöðu</item>
+        <item>20% hleðsla rafhlöðu</item>
+        <item>30% hleðsla rafhlöðu</item>
+        <item>40% hleðsla rafhlöðu</item>
+        <item>50% hleðsla rafhlöðu</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Efst</item>
+        <item>Miðja</item>
+        <item>Neðst</item>
+    </string-array>
+</resources>

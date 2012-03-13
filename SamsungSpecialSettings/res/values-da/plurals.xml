@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Adgangskode skal indeholde mindst %d bogstaver</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst 1 bogstav</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Adgangskode skal indeholde mindst %d små bogstaver</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst 1 lille bogstav</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Adgangskode skal indeholde mindst %d store bogstaver</item>
+        <item quantity="one">Adgangskode skal indeholde mindst 1 stort bogstav</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Adgangskode skal indeholde mindst %d tal</item>
+        <item quantity="one">Adgangskode skal indeholde mindst 1 tal</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d symboler</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst 1 symbol</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Adgangskoden skal indeholde mindst %d tal eller symboler</item>
+        <item quantity="one">Adgangskoden skal indeholde mindst 1 tal eller symbol</item>
+    </plurals>
+</resources>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>ММ/ДД/РРРР</item>
+        <item>ДД/ММ/РРРР</item>
+        <item>РРРР/ММ/ДД</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 хвилина</item>
+        <item>2 хвилин</item>
+        <item>5 хвилин</item>
+        <item>10 хвилин</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Ніколи</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 хвилина</item>
+        <item>2 хвилин</item>
+        <item>5 хвилин</item>
+        <item>10 хвилин</item>
+        <item>30 хвилин</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Негайно</item>
+        <item>5 секунд</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 хвилина</item>
+        <item>2 хвилин</item>
+        <item>5 хвилин</item>
+        <item>10 хвилин</item>
+        <item>30 хвилин</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Tiny</item>
+        <item>Малий</item>
+        <item>Звичайний</item>
+        <item>Великий</item>
+        <item>Великий</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Дуже повільно</item>
+        <item>Повільно</item>
+        <item>Звичайний</item>
+        <item>Швидко</item>
+        <item>Дуже швидко</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Сканування...</item>
+        <item>"З'єднання..."</item>
+        <item>Аутентифікація...</item>
+        <item>Отримання IP-адреси...</item>
+        <item>"З'єднано"</item>
+        <item>Призупинено</item>
+        <item>"Роз'єднання..."</item>
+        <item>"Роз'єднано"</item>
+        <item>Невдалий</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Сканування...</item>
+        <item>З’єднання з %s...</item>
+        <item>Автентифікація в %s...</item>
+        <item>Отримання IP-адреси від %s...</item>
+        <item>Підключено до %1$s</item>
+        <item>Призупинено</item>
+        <item>Роз’єднання з %s...</item>
+        <item>"Роз'єднано"</item>
+        <item>Невдалий</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Кнопка точки доступу</item>
+        <item>PIN-код із однорангового пристрою</item>
+        <item>PIN-код із цього пристрою</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>"З'єднано"</item>
+        <item>Запрошено</item>
+        <item>"Збій з'єднання"</item>
+        <item>Натисніть, щоб підключитися</item>
+        <item>Поза мережею</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 хв.</item>
+        <item>5 хв.</item>
+        <item>1 година</item>
+        <item>Ніколи не рахувати час очікування</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Скорочений</item>
+        <item>Детальний</item>
+        <item>Хороший</item>
+        <item>Відмінно</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Завжди</item>
+        <item>Лише в разі під’єднання</item>
+        <item>Ніколи (збільшується використання даних)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Завжди</item>
+        <item>Лише в разі під’єднання</item>
+        <item>Ніколи</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Автоматичний</item>
+        <item>Лише 5 ГГц</item>
+        <item>Лише 2.4 ГГц</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Час використання</item>
+        <item>Запустити лічильник</item>
+        <item>Назва програми</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Немає</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Вимкнено</item>
+        <item>Кнопка точки доступу</item>
+        <item>PIN-код із точки доступу</item>
+        <item>PIN-код із цього пристрою</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Статичний</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Немає</item>
+        <item>Вручну</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Вимкнено</item>
+        <item>Попередження</item>
+        <item>Вібрація</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Немає</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP або CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Не визначено</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Внутрішнє місце збереження на пристрої</item>
+        <item>Знімна карта пам’яті</item>
+        <item>За замовчуванням</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Вимкнено</item>
+        <item>Вібрація</item>
+        <item>Вимк. звук</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Короткий</item>
+        <item>Cередній</item>
+        <item>Довгий</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Ніколи не перевіряти</item>
+        <item>Перевір. наявності лише DRM-вмісту</item>
+        <item>Завжди перевіряти</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Ніколи не використовувати перевірку HDCP</item>
+        <item>Використовувати перевірку HDCP лише для DRM-вмісту</item>
+        <item>Завжди використовувати перевірку HDCP</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Анімацію вимкнено</item>
+        <item>0.5-кратне збільш. розміру анімації</item>
+        <item>1-кратне збільш. розміру анімації</item>
+        <item>1.5-кратне збільш. розміру анімації</item>
+        <item>2-кратне збільш. розміру анімації</item>
+        <item>5-кратне збільш. розміру анімації</item>
+        <item>10-кратне збільш. розміру анімації</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Анімацію вимкнено</item>
+        <item>0.5-кратне збільш. розміру анімації</item>
+        <item>1-кратне збільш. розміру анімації</item>
+        <item>1.5-кратне збільш. розміру анімації</item>
+        <item>2-кратне збільш. розміру анімації</item>
+        <item>5-кратне збільш. розміру анімації</item>
+        <item>10-кратне збільш. розміру анімації</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Стандартне обмеження</item>
+        <item>Немає фонових процесів</item>
+        <item>Не більше 1 процесу</item>
+        <item>Не більше 2 процесів</item>
+        <item>Не більше 3 процесів</item>
+        <item>Не більше 4 процесів</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>VPN PPTP</item>
+        <item>L2TP/мережа VPN IPSec із попередніми загальними ключами</item>
+        <item>L2TP/мережа VPN IPSec із сертифікатами</item>
+        <item>Мережа VPN IPSec із попередніми загальними ключами та аутентифікацією XAuth</item>
+        <item>Мережа VPN IPSec із сертифікатами та аутентифікацією XAuth</item>
+        <item>Мережа VPN IPSec із сертифікатами та комбінованою аутентифікацією</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>"Роз'єднано"</item>
+        <item>Ініціалізація...</item>
+        <item>"З'єднання..."</item>
+        <item>"З'єднано"</item>
+        <item>Час вичерпано</item>
+        <item>Невдалий</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 секунд</item>
+        <item>6 секунд</item>
+        <item>Завжди вимкнено</item>
+        <item>Завжди увімкнено</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>Заряд акумулятора: 10%</item>
+        <item>Заряд акумулятора: 20%</item>
+        <item>Заряд акумулятора: 30%</item>
+        <item>Заряд акумулятора: 40%</item>
+        <item>Заряд акумулятора: 50%</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Вгорі</item>
+        <item>Середня</item>
+        <item>Внизу</item>
+    </string-array>
+</resources>

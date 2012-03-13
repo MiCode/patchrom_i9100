@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Ní mór %d litir ar a laghad a bheith sa phasfhocal</item>
+        <item quantity="one">Ní mór litir amháin ar a laghad a bheith sa phasfhocal</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Ní mór %d litir chás íochtair ar a laghad a bheith sa phasfhocal</item>
+        <item quantity="one">Ní mór litir chás íochtair amháin ar a laghad a bheith sa phasfhocal</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Ní mór %d litir chás uachtair ar a laghad a bheith sa phasfhocal</item>
+        <item quantity="one">Ní mór litir chás uachtair amháin ar a laghad a bheith sa phasfhocal</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Ní mór %d uimhir ar a laghad a bheith sa phasfhocal</item>
+        <item quantity="one">Ní mór uimhir amháin ar a laghad a bheith sa phasfhocal</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Ní mór %d siombail ar a laghad a bheith sa phasfhocal</item>
+        <item quantity="one">Ní mór siombail amháin ar a laghad a bheith sa phasfhocal</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Ní mór %d uimhir nó siombail ar a laghad a bheith sa phasfhocal</item>
+        <item quantity="one">Ní mór uimhir nó siombail amháin ar a laghad a bheith sa phasfhocal</item>
+    </plurals>
+</resources>

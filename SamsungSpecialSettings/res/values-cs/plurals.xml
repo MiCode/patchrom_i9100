@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Heslo musí obsahovat alespoň %d písmen</item>
+        <item quantity="one">Heslo musí obsahovat alespoň jedno písmeno</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Heslo musí obsahovat alespoň %d malých písmen</item>
+        <item quantity="one">Heslo musí obsahovat alespoň jedno malé písmeno</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Heslo musí obsahovat alespoň %d velkých písmen</item>
+        <item quantity="one">Heslo musí obsahovat alespoň jedno velké písmeno</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Heslo musí obsahovat alespoň %d číslic</item>
+        <item quantity="one">Heslo musí obsahovat alespoň jednu číslici</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Heslo musí obsahovat alespoň %d symbolů</item>
+        <item quantity="one">Heslo musí obsahovat alespoň 1 symbol</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Heslo musí obsahovat alespoň %d číslic nebo symbolů</item>
+        <item quantity="one">Heslo musí obsahovat alespoň 1 číslici nebo symbol</item>
+    </plurals>
+</resources>

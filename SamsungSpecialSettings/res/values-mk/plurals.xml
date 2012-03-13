@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Лозинката мора да содржи барем %d букви</item>
+        <item quantity="one">Лозинката мора да содржи барем 1 буква</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Лозинката мора да содржи барем %d мали букви</item>
+        <item quantity="one">Лозинката мора да содржи барем 1 мала буква</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Лозинката мора да содржи барем %d големи букви</item>
+        <item quantity="one">Лозинката мора да содржи барем 1 голема буква</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Лозинката мора да содржи барем %d бројки</item>
+        <item quantity="one">Лозинката мора да содржи барем 1 бројка</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Лозинката мора да содржи барем %d симболи</item>
+        <item quantity="one">Лозинката мора да содржи барем 1 симбол</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Лозинката мора да содржи барем %d бројки или симболи</item>
+        <item quantity="one">Лозинката мора да содржи барем 1 бројка или симбол</item>
+    </plurals>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/pan_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sensitivity_settings_title" />
+    <com.android.settings.motion.PanSensitivityPreference android:title="@string/sensitivity_title" android:key="sensitivity" android:dialogTitle="@string/sensitivity_title" />
+    <PreferenceCategory android:title="@string/motion_tutorial_title" />
+    <Preference android:title="@string/learn_about_pan_title" android:key="tutorial" />
+</PreferenceScreen>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Құпиясөзде кемінде %d әріп болуға тиісті</item>
+        <item quantity="one">Құпиясөзде кемінде 1 әріп болуға тиісті</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Құпиясөзде кемінде %d кіші әріп болуға тиісті</item>
+        <item quantity="one">Құпиясөзде кемінде 1 кіші әріп болуға тиісті</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Құпиясөзде кемінде %d үлкен әріп болуға тиісті</item>
+        <item quantity="one">Құпиясөзде кемінде 1 үлкен әріп болуға тиісті</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Құпиясөзде кемінде %d сан болуға тиісті</item>
+        <item quantity="one">Құпиясөзде кемінде 1 сан болуға тиісті</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Құпиясөзде кемінде %d таңба болуы керек</item>
+        <item quantity="one">Құпиясөзде кемінде 1 таңба болуы керек</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Құпиясөзде кемінде %d сан немесе таңба болуы керек</item>
+        <item quantity="one">Құпиясөзде кемінде 1 сан немесе таңба болуы керек</item>
+    </plurals>
+</resources>

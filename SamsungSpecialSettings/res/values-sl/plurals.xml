@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Geslo mora vsebovati vsaj %d črk</item>
+        <item quantity="one">Geslo mora vsebovati vsaj eno črko</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Geslo mora vsebovati vsaj %d malih črk</item>
+        <item quantity="one">Geslo mora vsebovati vsaj eno malo črko</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Geslo mora vsebovati vsaj %d velikih črk</item>
+        <item quantity="one">Geslo mora vsebovati vsaj eno veliko črko</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Geslo mora vsebovati vsaj %d številk</item>
+        <item quantity="one">Geslo mora vsebovati vsaj eno številko</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Geslo mora vsebovati vsaj %d simbolov</item>
+        <item quantity="one">Geslo mora vsebovati vsaj 1 simbol</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Geslo mora vsebovati vsaj %d številk ali simbolov</item>
+        <item quantity="one">Geslo mora vsebovati vsaj 1 številko ali simbol</item>
+    </plurals>
+</resources>

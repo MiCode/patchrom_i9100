@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Parola trebuie să conţină cel puţin %d (de) litere</item>
+        <item quantity="one">Parola trebuie să conţină cel puţin o literă</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Parola trebuie să conţină cel puţin %d (de) litere mici</item>
+        <item quantity="one">Parola trebuie să conţină cel puţin o literă mică</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Parola trebuie să conţină cel puţin %d majuscule</item>
+        <item quantity="one">Parola trebuie să conţină cel puţin o literă mare</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Parola trebuie să conţină cel puţin %d numere</item>
+        <item quantity="one">Parola trebuie să conţină cel puţin un număr</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Parola trebuie să conţină cel puţin %d simboluri</item>
+        <item quantity="one">Parola trebuie să conţină cel puţin 1 simbol</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Parola trebuie să conţină cel puţin %d numere sau simboluri</item>
+        <item quantity="one">Parola trebuie să conţină cel puţin 1 număr sau simbol</item>
+    </plurals>
+</resources>

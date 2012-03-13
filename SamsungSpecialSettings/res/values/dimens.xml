@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="device_memory_usage_button_width">16.0dip</dimen>
+    <dimen name="device_memory_usage_button_height">32.0dip</dimen>
+    <dimen name="action_bar_switch_padding">16.0dip</dimen>
+    <dimen name="app_icon_size">56.0dip</dimen>
+    <dimen name="screen_margin_sides">64.0dip</dimen>
+    <dimen name="screen_margin_top">72.0dip</dimen>
+    <dimen name="screen_margin_bottom">48.0dip</dimen>
+    <dimen name="title_height">48.0dip</dimen>
+    <dimen name="content_margin_left">16.0dip</dimen>
+    <dimen name="description_margin_top">26.0dip</dimen>
+    <dimen name="description_margin_sides">40.0dip</dimen>
+    <dimen name="data_usage_chart_height">252.0dip</dimen>
+    <dimen name="data_usage_chart_optimalWidth">440.0dip</dimen>
+    <dimen name="volume_seekbar_side_margin">8.0dip</dimen>
+    <dimen name="crypt_clock_size">100.0sp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:drawSelectorOnTop="false" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:id="@id/two_buttons_layout" android:background="@android:drawable/bottom_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <View android:layout_width="4.0dip" android:layout_height="49.0dip" />
+            <Button android:textSize="16.0dip" android:id="@id/ok_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:text="@string/message_Ok" android:layout_weight="1.0" />
+            <Button android:textSize="16.0dip" android:id="@id/cancel_button" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:text="@string/cancel" android:layout_weight="1.0" />
+            <View android:layout_width="4.0dip" android:layout_height="49.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

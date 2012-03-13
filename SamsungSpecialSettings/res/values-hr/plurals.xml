@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Šifra mora sadržavati min. %d slova</item>
+        <item quantity="one">Šifra mora sadržavati min. 1 slovo</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Šifra mora sadržavati min. %d malih slova</item>
+        <item quantity="one">Šifra mora sadržavati min. 1 malo slovo</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Šifra mora sadržavati min. %d velikih slova</item>
+        <item quantity="one">Šifra mora sadržavati min. 1 veliko slovo</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Šifra mora sadržavati min. %d brojeva</item>
+        <item quantity="one">Šifra mora sadržavati min. 1 broj</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Šifra mora sadržavati min. %d simbola</item>
+        <item quantity="one">Šifra mora sadržavati min. 1 simbol</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Šifra mora sadržavati min. %d brojeva ili simbola</item>
+        <item quantity="one">Šifra mora sadržavati min. 1 broj ili simbol</item>
+    </plurals>
+</resources>

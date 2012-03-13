@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.settings.fmm.RecipientsMinusView android:orientation="vertical" android:id="@id/row" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/linked_contacts_name_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="9.329987dip" android:layout_weight="1.0">
+            <EditText android:id="@id/account" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/hint_recipient" android:singleLine="true" android:inputType="phone" />
+        </LinearLayout>
+        <FrameLayout android:layout_gravity="right" android:id="@id/contact_presence_layout" android:paddingRight="6.669983dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/linked_contact_minus_imageView" android:background="@drawable/btn_circle" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_minus" />
+        </FrameLayout>
+    </LinearLayout>
+</com.android.settings.fmm.RecipientsMinusView>

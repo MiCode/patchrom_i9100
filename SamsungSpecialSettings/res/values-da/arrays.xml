@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>MM/DD/ÅÅÅÅ</item>
+        <item>DD/MM/ÅÅÅÅ</item>
+        <item>ÅÅÅÅ/MM/DD</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sekunder</item>
+        <item>30 sekunder</item>
+        <item>1 minut</item>
+        <item>2 Minutter</item>
+        <item>5 Minutter</item>
+        <item>10 minutter</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Aldrig</item>
+        <item>15 sekunder</item>
+        <item>30 sekunder</item>
+        <item>1 minut</item>
+        <item>2 Minutter</item>
+        <item>5 Minutter</item>
+        <item>10 minutter</item>
+        <item>30 Minutter</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Med det samme</item>
+        <item>5 sekunder</item>
+        <item>15 sekunder</item>
+        <item>30 sekunder</item>
+        <item>1 minut</item>
+        <item>2 Minutter</item>
+        <item>5 Minutter</item>
+        <item>10 minutter</item>
+        <item>30 Minutter</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Tiny</item>
+        <item>Lille</item>
+        <item>Normal</item>
+        <item>Stor</item>
+        <item>Meget stor</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Meget langsom</item>
+        <item>Langsom</item>
+        <item>Normal</item>
+        <item>Hurtig</item>
+        <item>Meget hurtigt</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Scanner...</item>
+        <item>Forbinder...</item>
+        <item>Godkender...</item>
+        <item>Henter IP-adresse ...</item>
+        <item>Forbundet</item>
+        <item>Afbrudt</item>
+        <item>Afbryder...</item>
+        <item>Afbrudt</item>
+        <item>Mislykkedes</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Scanner...</item>
+        <item>Forbinder til %s</item>
+        <item>Godkender med %s...</item>
+        <item>Henter IP-adresse fra %s...</item>
+        <item>Tilslutet til %1$s</item>
+        <item>Afbrudt</item>
+        <item>Afbryder fra %s...</item>
+        <item>Afbrudt</item>
+        <item>Mislykkedes</item>
+    </string-array>
+    <string-array name="wifi_ap_security">
+        <item>Åbent</item>
+        <item>WPA PSK</item>
+        <item>WPA2 PSK</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Trykknap</item>
+        <item>PIN-kode fra peer-enhed</item>
+        <item>PIN-kode fra denne enhed</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Forbundet</item>
+        <item>Inviteret</item>
+        <item>"Forbindelsen
+mislykkedes"</item>
+        <item>Tryk for at tilslutte</item>
+        <item>Uden for rækkevidde</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 min.</item>
+        <item>5 min.</item>
+        <item>1 time</item>
+        <item>Aldrig timeout</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Dårlig</item>
+        <item>God</item>
+        <item>God</item>
+        <item>Fremragende</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Altid</item>
+        <item>Kun når tilsluttet</item>
+        <item>Aldrig (forøger databrug)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Altid</item>
+        <item>Kun når tilsluttet</item>
+        <item>Aldrig</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Auto</item>
+        <item>Kun 5 GHz</item>
+        <item>Kun 2,4 GHz</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Anvendelsestid</item>
+        <item>Start optælling</item>
+        <item>App-navn</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Ingen</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Fra</item>
+        <item>Trykknap</item>
+        <item>PIN-kode fra adgangspunkt</item>
+        <item>PIN-kode fra denne enhed</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Statisk</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Ingen</item>
+        <item>Manuelt</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Fra</item>
+        <item>Alarm</item>
+        <item>Vibration</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Ingen</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP eller CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Ikke specificeret</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Intern enhedshukommelse</item>
+        <item>Flytbart SD-kort</item>
+        <item>Standard</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Fra</item>
+        <item>Vibration</item>
+        <item>Lydløs</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Kort</item>
+        <item>Mellem</item>
+        <item>Lang</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Kontroller aldrig</item>
+        <item>Tjek kun for DRM-indhold</item>
+        <item>Kontroller altid</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Brug aldrig HDCP-kontrol</item>
+        <item>Brug kun HDCP-kontrol til DRM-indhold</item>
+        <item>Brug altid HDCP-kontrol</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animation deaktiveret</item>
+        <item>Animationsskala 0,5x</item>
+        <item>Animationsskala 1x</item>
+        <item>Animationsskala 1,5x</item>
+        <item>Animationsskala 2x</item>
+        <item>Animationsskala 5x</item>
+        <item>Animationsskala 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animation deaktiveret</item>
+        <item>Animationsskala 0,5x</item>
+        <item>Animationsskala 1x</item>
+        <item>Animationsskala 1,5x</item>
+        <item>Animationsskala 2x</item>
+        <item>Animationsskala 5x</item>
+        <item>Animationsskala 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Standardgrænse</item>
+        <item>Ingen baggrundsprocesser</item>
+        <item>Højst 1 proces</item>
+        <item>Højst 2 processer</item>
+        <item>Højst 3 processer</item>
+        <item>Højst 4 processer</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>L2TP/IPSec-VPN med forhåndsdelte nøgler</item>
+        <item>L2TP/IPSec-VPN med certifikater</item>
+        <item>IPSec-VPN med forhåndsdelte nøgler og XAuth-autentificering</item>
+        <item>IPSec-VPN med certifikater og XAuth-autentificering</item>
+        <item>IPSec-VPN med certifikater og hybrid autentificering</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Afbrudt</item>
+        <item>Initialiserer...</item>
+        <item>Forbinder...</item>
+        <item>Forbundet</item>
+        <item>Timeout</item>
+        <item>Mislykkedes</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 Sekunder</item>
+        <item>6 Sekunder</item>
+        <item>Altid fra</item>
+        <item>Altid tændt</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% batteristrøm</item>
+        <item>20% batteristrøm</item>
+        <item>30% batteristrøm</item>
+        <item>40% batteristrøm</item>
+        <item>50% batteristrøm</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Top</item>
+        <item>Midterste</item>
+        <item>Bund</item>
+    </string-array>
+</resources>

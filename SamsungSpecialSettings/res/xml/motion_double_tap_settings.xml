@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/double_tap_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/motion_tutorial_title" />
+    <Preference android:title="@string/learn_about_double_tap_title" android:key="tutorial" />
+</PreferenceScreen>

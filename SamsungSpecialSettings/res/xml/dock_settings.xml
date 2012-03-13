@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/dock_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceScreen android:title="@string/dock_audio_settings_title" android:key="dock_audio" android:summary="@string/dock_settings_summary" />
+    <CheckBoxPreference android:title="@string/dock_sounds_enable_title" android:key="dock_sounds" android:defaultValue="false" android:summaryOn="@string/dock_sounds_enable_summary_on" android:summaryOff="@string/dock_sounds_enable_summary_off" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/desk_cradle_title" android:key="cradle_enable" android:summary="@string/desk_cradle_summary" />
+</PreferenceScreen>

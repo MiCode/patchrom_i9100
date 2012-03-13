@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Salasanassa on oltava ainakin %d kirjainta</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 kirjain</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Salasanassa on oltava ainakin %d pientä kirjainta</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 pieni kirjain</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Salasanassa on oltava ainakin %d suurta kirjainta</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 suuri kirjain</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Salasanassa on oltava ainakin %d numeroa</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 numero</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Salasanassa on oltava ainakin %d symbolia</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 symboli</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Salasanassa on oltava ainakin %d numeroa tai symbolia</item>
+        <item quantity="one">Salasanassa on oltava ainakin 1 numero tai symboli</item>
+    </plurals>
+</resources>

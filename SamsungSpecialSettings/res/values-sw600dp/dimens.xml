@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_icon_size">72.0dip</dimen>
+    <dimen name="screen_margin_sides">40.0dip</dimen>
+    <dimen name="screen_margin_top">48.0dip</dimen>
+    <dimen name="screen_margin_bottom">48.0dip</dimen>
+    <dimen name="title_height">48.0dip</dimen>
+    <dimen name="content_margin_left">16.0dip</dimen>
+    <dimen name="description_margin_top">26.0dip</dimen>
+    <dimen name="crypt_clock_size">120.0sp</dimen>
+    <dimen name="datetime_margin_top">40.0dip</dimen>
+    <dimen name="datetime_margin_bottom">40.0dip</dimen>
+</resources>

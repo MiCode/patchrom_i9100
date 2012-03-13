@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/system_powersaving_setting_tips_category" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/system_powersaving_setting_tips" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/power_saving_tips_system_summary" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_saving_tips_system" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_quick_toggle_title" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/power_saving_tips_wifi" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bluetooth" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_saving_tips_bluetooth" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/usage_type_gps" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/power_saving_tips_gps" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/power_saving_tips_sync_title" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/power_saving_tips_sync" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/brightness" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_saving_tips_brightness" />
+        <TextView android:id="@id/power_saving_tips_etc_category" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/etc_tips" style="?android:attr/listSeparatorTextViewStyle" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:id="@id/power_saving_tips_etc" android:paddingLeft="5.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_saving_tips_etc" />
+    </LinearLayout>
+</ScrollView>

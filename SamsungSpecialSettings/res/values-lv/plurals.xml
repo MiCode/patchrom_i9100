@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Parolē ir jābūt vismaz %d burtiem</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 burtam</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Parolē ir jābūt vismaz %d mazajiem burtiem</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 mazajam burtam</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Parolē ir jābūt vismaz %d lielajiem burtiem</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 lielajam burtam</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Parolē ir jābūt vismaz %d cipariem</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 ciparam</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Parolē ir jābūt vismaz %d simboliem</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 simbolam</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Parolē ir jābūt vismaz %d cipariem vai simboliem</item>
+        <item quantity="one">Parolē ir jābūt vismaz 1 ciparam vai simbolam</item>
+    </plurals>
+</resources>

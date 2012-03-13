@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>MM/DD/RRRR</item>
+        <item>DD/MM/RRRR</item>
+        <item>RRRR/MM/DD</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sekund</item>
+        <item>30 sekund</item>
+        <item>1 minuta</item>
+        <item>2 minuty</item>
+        <item>5 minut</item>
+        <item>10 minut</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Nikdy</item>
+        <item>15 sekund</item>
+        <item>30 sekund</item>
+        <item>1 minuta</item>
+        <item>2 minuty</item>
+        <item>5 minut</item>
+        <item>10 minut</item>
+        <item>30 minut</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Okamžitě</item>
+        <item>5 sekund</item>
+        <item>15 sekund</item>
+        <item>30 sekund</item>
+        <item>1 minuta</item>
+        <item>2 minuty</item>
+        <item>5 minut</item>
+        <item>10 minut</item>
+        <item>30 minut</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Tiny</item>
+        <item>Malé</item>
+        <item>Normální</item>
+        <item>Velké</item>
+        <item>Velmi velké</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Velmi pomalu</item>
+        <item>Pomalé</item>
+        <item>Normální</item>
+        <item>Rychle</item>
+        <item>Velmi rychle</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Hledám...</item>
+        <item>Připojování...</item>
+        <item>Ověřování...</item>
+        <item>Získávání adresy IP...</item>
+        <item>Připojeno</item>
+        <item>Pozastaveno</item>
+        <item>Odpojování...</item>
+        <item>Odpojeno</item>
+        <item>Neúspěšně</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Hledám...</item>
+        <item>Připojování k %s...</item>
+        <item>Ověřování pomocí %s...</item>
+        <item>Získávání IP adresy z %s...</item>
+        <item>Připojeno k %1$s</item>
+        <item>Pozastaveno</item>
+        <item>Odpojování od %s...</item>
+        <item>Odpojeno</item>
+        <item>Neúspěšně</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Tlačítko</item>
+        <item>PIN kód z rovnocenného zařízení</item>
+        <item>PIN kód z tohoto zařízení</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Připojeno</item>
+        <item>Pozván</item>
+        <item>Připojení se nezdařilo</item>
+        <item>Klepnutím připojte</item>
+        <item>Mimo rozsah</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 min.</item>
+        <item>5 min.</item>
+        <item>1 hodina</item>
+        <item>Žádný časový limit</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Slabé</item>
+        <item>Vysoká</item>
+        <item>Dobrý</item>
+        <item>Výtečně</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Vždy</item>
+        <item>Pouze při napájení ze sítě</item>
+        <item>Nikdy (zvyšuje využití dat)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Vždy</item>
+        <item>Pouze při napájení ze sítě</item>
+        <item>Nikdy</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Automaticky</item>
+        <item>Pouze 5 GHz</item>
+        <item>Pouze 2,4 GHz</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Doba použití</item>
+        <item>Počet spuštění</item>
+        <item>Název aplikace</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Žádný</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Vypnout</item>
+        <item>Tlačítko</item>
+        <item>PIN kód z přístupového bodu</item>
+        <item>PIN kód z tohoto zařízení</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Statická</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Žádný</item>
+        <item>Ručně</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Vypnout</item>
+        <item>Upozornění</item>
+        <item>Vibrace</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Žádný</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP nebo CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Nespecifikováno</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Interní úložiště v zařízení</item>
+        <item>Vyjímatelná SD karta</item>
+        <item>Výchozí</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Vypnout</item>
+        <item>Vibrace</item>
+        <item>Ztlumit</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Krátký</item>
+        <item>Střední</item>
+        <item>Dlouhé</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Nikdy nekontrolovat</item>
+        <item>Kontrolovat pouze obsah DRM</item>
+        <item>Vždy kontrolovat</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Nikdy nepoužívat kontrolu HDCP</item>
+        <item>Používat kontrolu HDCP pouze pro obsah DRM</item>
+        <item>Vždy používat kontrolu HDCP</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animace je vypnutá</item>
+        <item>Měřítko animace 0,5x</item>
+        <item>Měřítko animace 1x</item>
+        <item>Měřítko animace 1,5x</item>
+        <item>Měřítko animace 2x</item>
+        <item>Měřítko animace 5x</item>
+        <item>Měřítko animace 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animace je vypnutá</item>
+        <item>Měřítko animace 0,5x</item>
+        <item>Měřítko animace 1x</item>
+        <item>Měřítko animace 1,5x</item>
+        <item>Měřítko animace 2x</item>
+        <item>Měřítko animace 5x</item>
+        <item>Měřítko animace 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Standardní limit</item>
+        <item>Žádné procesy na pozadí</item>
+        <item>Max. 1 proces</item>
+        <item>Max. 2 procesy</item>
+        <item>Max. 3 procesy</item>
+        <item>Max. 4 procesy</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>Síť L2TP/IPSec VPN se sdílenými klíči</item>
+        <item>Síť L2TP/IPSec VPN s certifikáty</item>
+        <item>Síť IPSec VPN se sdílenými klíči a ověřením XAuth</item>
+        <item>Síť IPSec VPN s certifikáty a ověřením XAuth</item>
+        <item>Síť IPSec VPN s certifikáty a hybridním ověřením</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Odpojeno</item>
+        <item>Probíhá inicializace...</item>
+        <item>Připojování...</item>
+        <item>Připojeno</item>
+        <item>Časový limit</item>
+        <item>Neúspěšně</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>Počet sekund: 1.5</item>
+        <item>Počet sekund: 6</item>
+        <item>Vždy vypnuto</item>
+        <item>Vždy zapnuto</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% kapacity baterie</item>
+        <item>20% kapacity baterie</item>
+        <item>30% kapacity baterie</item>
+        <item>40% kapacity baterie</item>
+        <item>50% kapacity baterie</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Nahoře</item>
+        <item>Střední</item>
+        <item>Dole</item>
+    </string-array>
+</resources>

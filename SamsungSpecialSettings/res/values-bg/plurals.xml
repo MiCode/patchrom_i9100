@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Паролата трябва да съдържа поне %d букви</item>
+        <item quantity="one">Паролата трябва да съдържа поне една буква</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Паролата трябва да съдържа поне %d малки букви</item>
+        <item quantity="one">Паролата трябва да съдържа поне 1 малка буква</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Паролата трябва да съдържа поне %d главни букви</item>
+        <item quantity="one">Паролата трябва да съдържа поне 1 главна буква</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Паролата трябва да съдържа поне %d цифри</item>
+        <item quantity="one">Паролата трябва да съдържа поне една цифра</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Паролата трябва да съдържа поне %d символа</item>
+        <item quantity="one">Паролата трябва да съдържа поне 1 символ</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Паролата трябва да съдържа поне %d цифри или символи</item>
+        <item quantity="one">Паролата трябва да съдържа поне 1 цифра или символ</item>
+    </plurals>
+</resources>

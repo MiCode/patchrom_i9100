@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>MM/DD/RRRR</item>
+        <item>DD/MM/RRRR</item>
+        <item>RRRR/MM/DD</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 sek.</item>
+        <item>30 sek.</item>
+        <item>1 min.</item>
+        <item>2 min.</item>
+        <item>5 min.</item>
+        <item>10 min.</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Nigdy</item>
+        <item>15 sek.</item>
+        <item>30 sek.</item>
+        <item>1 min.</item>
+        <item>2 min.</item>
+        <item>5 min.</item>
+        <item>10 min.</item>
+        <item>30 min.</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Brak</item>
+        <item>5 sek.</item>
+        <item>15 sek.</item>
+        <item>30 sek.</item>
+        <item>1 min.</item>
+        <item>2 min.</item>
+        <item>5 min.</item>
+        <item>10 min.</item>
+        <item>30 min.</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Mała</item>
+        <item>Pomniejsz</item>
+        <item>Normalny</item>
+        <item>Duży</item>
+        <item>Bardzo duża</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Bardzo wolno</item>
+        <item>Wolno</item>
+        <item>Normalny</item>
+        <item>Szybko</item>
+        <item>Bardzo szybko</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Skanowanie..</item>
+        <item>Łączenie...</item>
+        <item>Uwierzytelnianie...</item>
+        <item>Uzyskiwanie adresu IP...</item>
+        <item>Połączono</item>
+        <item>Zawieszono</item>
+        <item>Rozłączanie...</item>
+        <item>Rozłączono</item>
+        <item>Niepowodzenie</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Skanowanie..</item>
+        <item>Łączenie z %s...</item>
+        <item>Uwierzytelniane w sieci %s...</item>
+        <item>Otrzymywanie adresu IP z sieci %s...</item>
+        <item>Połączono z urządzeniem %1$s</item>
+        <item>Zawieszono</item>
+        <item>Trwa odłączanie od %s...</item>
+        <item>Rozłączono</item>
+        <item>Niepowodzenie</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Przycisk punktu dostępu</item>
+        <item>Kod PIN z urządzenia równorzędnego</item>
+        <item>Kod PIN z tego urządzenia</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Połączono</item>
+        <item>Zaproszono</item>
+        <item>Błąd łączenia</item>
+        <item>Dotknij, aby połączyć</item>
+        <item>Poza zakresem</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 min.</item>
+        <item>5 min.</item>
+        <item>1 godz.</item>
+        <item>Nie uwzględniaj limitu czasu</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Słabe</item>
+        <item>Dobry</item>
+        <item>Dobry</item>
+        <item>Doskonale</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Tak, zawsze</item>
+        <item>Tylko gdy podłączony</item>
+        <item>Nigdy (zwiększa wykorzystanie danych)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Tak, zawsze</item>
+        <item>Tylko gdy podłączony</item>
+        <item>Nigdy</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>Jeden</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Automatyczna</item>
+        <item>Tylko 5 GHz</item>
+        <item>Tylko 2,4 GHz</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>Jeden</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Czas użytkowania</item>
+        <item>Licznik uruchomień</item>
+        <item>Nazwa aplikacji</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Brak</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Wył.</item>
+        <item>Przycisk punktu dostępu</item>
+        <item>Kod PIN z punktu dostępu</item>
+        <item>Kod PIN z tego urządzenia</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Statyczny</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Brak</item>
+        <item>Wył.</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Wył.</item>
+        <item>Alarm</item>
+        <item>Wibracja</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>Jeden</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Brak</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP lub CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Nieokreślony</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Wewnętrzna pamięć masowa urządzenia</item>
+        <item>Przenośna karta pamięci</item>
+        <item>Domyślnie</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Wył.</item>
+        <item>Wibracja</item>
+        <item>Wyciszenie</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Krótki</item>
+        <item>Normalny</item>
+        <item>Długi</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Nigdy nie sprawdzaj</item>
+        <item>Sprawdzaj tylko zawartość DRM</item>
+        <item>Zawsze sprawdzaj</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Nigdy nie używaj sprawdzania HDCP</item>
+        <item>Sprawdzania HDCP używaj tylko do zawartości DRM</item>
+        <item>Zawsze używaj sprawdzania HDCP</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Animacja jest wyłączona</item>
+        <item>Skala animacji 0,5x</item>
+        <item>Skala animacji 1x</item>
+        <item>Skala animacji 1,5x</item>
+        <item>Skala animacji 2x</item>
+        <item>Skala animacji 5x</item>
+        <item>Skala animacji 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Animacja jest wyłączona</item>
+        <item>Skala animacji 0,5x</item>
+        <item>Skala animacji 1x</item>
+        <item>Skala animacji 1,5x</item>
+        <item>Skala animacji 2x</item>
+        <item>Skala animacji 5x</item>
+        <item>Skala animacji 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Limit standardowy</item>
+        <item>Bez procesów w tle</item>
+        <item>Najwyżej 1 proces</item>
+        <item>Najwyżej 2 procesy</item>
+        <item>Najwyżej 3 procesy</item>
+        <item>Najwyżej 4 procesy</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>Sieć VPN L2TP/IPSec korzystająca z wstępnie udostępnionych kluczy</item>
+        <item>Sieć VPN L2TP/IPSec korzystająca z certyfikatów</item>
+        <item>Sieć VPN IPSec korzystająca z wstępnie udostępnionych kluczy i uwierzytelniania XAuth</item>
+        <item>Sieć VPN IPSec korzystająca z certyfikatów i uwierzytelniania XAuth</item>
+        <item>Sieć VPN IPSec korzystająca z certyfikatów i uwierzytelniania hybrydowego</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Rozłączono</item>
+        <item>Inicjowanie...</item>
+        <item>Łączenie...</item>
+        <item>Połączono</item>
+        <item>Limit czasu</item>
+        <item>Niepowodzenie</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 sek.</item>
+        <item>6 sek.</item>
+        <item>Zawsze wyłączone</item>
+        <item>Zawsze włączone</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% naładowania baterii</item>
+        <item>20% naładowania baterii</item>
+        <item>30% naładowania baterii</item>
+        <item>40% naładowania baterii</item>
+        <item>50% naładowania baterii</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Góra</item>
+        <item>Środek</item>
+        <item>Dół</item>
+    </string-array>
+</resources>

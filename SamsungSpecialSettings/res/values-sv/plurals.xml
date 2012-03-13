@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">Lösenordet måste innehålla minst %d bokstäver</item>
+        <item quantity="one">Lösenordet måste innehålla minst 1 bokstav</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">Lösenordet måste innehålla minst %d små bokstäver</item>
+        <item quantity="one">Lösenordet måste innehålla minst 1 liten bokstav</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">Lösenordet måste innehålla minst %d stora bokstäver</item>
+        <item quantity="one">Lösenordet måste innehålla minst 1 stor bokstav</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">Lösenordet måste innehålla minst %d siffror</item>
+        <item quantity="one">Lösenordet måste innehålla minst 1 siffra</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">Lösenordet måste innehålla minst %d symboler</item>
+        <item quantity="one">Lösenordet måste innehålla minst 1 symbol</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">Lösenordet måste innehålla minst %d siffror eller symboler</item>
+        <item quantity="one">Lösenordet måste innehålla minst 1 siffra eller symbol</item>
+    </plurals>
+</resources>

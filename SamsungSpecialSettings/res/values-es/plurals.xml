@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">La contraseña debe tener al menos %d letras.</item>
+        <item quantity="one">La contraseña debe tener al menos una letra.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">La contraseña debe tener al menos %d letras minúsculas.</item>
+        <item quantity="one">La contraseña debe tener al menos una letra minúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">La contraseña debe tener al menos %d letras mayúsculas.</item>
+        <item quantity="one">La contraseña debe tener al menos una letra mayúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">La contraseña debe tener al menos %d dígitos.</item>
+        <item quantity="one">La contraseña debe tener al menos un dígito.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">La contraseña debe tener al menos %d símbolos especiales.</item>
+        <item quantity="one">La contraseña debe tener al menos un símbolo especial.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">La contraseña debe tener al menos %d caracteres no alfabéticos.</item>
+        <item quantity="one">La contraseña debe tener al menos un carácter no alfabético.</item>
+    </plurals>
+</resources>

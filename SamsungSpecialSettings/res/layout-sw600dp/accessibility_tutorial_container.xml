@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/screen_margin_sides" android:paddingTop="@dimen/screen_margin_top" android:paddingRight="@dimen/screen_margin_sides" android:paddingBottom="@dimen/screen_margin_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/AccessibilityTutorialTitle" android:gravity="bottom" android:id="@id/title" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/content_margin_left" android:minHeight="@dimen/title_height" />
+    <View android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/title" style="@style/AccessibilityTutorialDivider" />
+    <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View style="@style/AccessibilityTutorialDivider" />
+        <view android:textAppearance="?android:textAppearanceMedium" android:id="@id/instructions" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/description_margin_sides" android:layout_marginTop="@dimen/description_margin_top" android:layout_marginRight="@dimen/description_margin_sides" android:layout_marginBottom="16.0dip" android:lineSpacingExtra="5.0sp" class="com.android.settings.AccessibilityTutorialActivity$TutorialTextView" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:layout_marginBottom="16.0dip" style="@style/AccessibilityTutorialDivider" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/skip_button" android:visibility="gone" android:text="@string/accessibility_tutorial_skip" style="@style/AccessibilityTutorialButton" />
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:id="@id/back_button" android:visibility="gone" android:text="@string/accessibility_tutorial_back" style="@style/AccessibilityTutorialButton" />
+                <Button android:id="@id/next_button" android:visibility="gone" android:text="@string/accessibility_tutorial_next" style="@style/AccessibilityTutorialButton" />
+                <Button android:id="@id/finish_button" android:visibility="gone" android:text="@string/accessibility_tutorial_finish" style="@style/AccessibilityTutorialButton" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

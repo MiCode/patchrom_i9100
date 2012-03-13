@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>АА/КК/ЖЖЖЖ</item>
+        <item>КК/АА/ЖЖЖЖ</item>
+        <item>ЖЖЖЖ/АА/КК</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 минут</item>
+        <item>2 минут</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Ешқашан</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 минут</item>
+        <item>2 минут</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+        <item>30 минут</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Дереу</item>
+        <item>5 секунд</item>
+        <item>15 секунд</item>
+        <item>30 секунд</item>
+        <item>1 минут</item>
+        <item>2 минут</item>
+        <item>5 минут</item>
+        <item>10 минут</item>
+        <item>30 минут</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Tiny</item>
+        <item>Ұсақ</item>
+        <item>Қалыпты</item>
+        <item>Ірі</item>
+        <item>Ірі</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Өте баяу</item>
+        <item>Баяу</item>
+        <item>Қалыпты</item>
+        <item>Жылдам</item>
+        <item>Өте жылдам</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Көшірілуде...</item>
+        <item>Байланысуда...</item>
+        <item>Расталуда...</item>
+        <item>IP мекенжайы алынуда...</item>
+        <item>Қосылды</item>
+        <item>Ұстаулы</item>
+        <item>Ажырату</item>
+        <item>Ажыратылды</item>
+        <item>Сәтсіз</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Көшірілуде...</item>
+        <item>%s-ге қосылуда...</item>
+        <item>%s арқылы расталуда...</item>
+        <item>IP мекенжайы %s құрамынан алынуда...</item>
+        <item>%1$s қосылған</item>
+        <item>Ұстаулы</item>
+        <item>%s... ажырату</item>
+        <item>Ажыратылды</item>
+        <item>Сәтсіз</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Баспалы түйме</item>
+        <item>Тең құрылғыдан алынған PIN</item>
+        <item>Осы құрылғыдан алынған PIN</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Қосылды</item>
+        <item>Шақырылған</item>
+        <item>Қосылу үзіліп кетті</item>
+        <item>Қосылу үшін түртіңіз</item>
+        <item>Диапазоннан тыс</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 мин</item>
+        <item>5 мин</item>
+        <item>1 сағат</item>
+        <item>Ешқашан уақытын өткізбеңіз</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Нашар</item>
+        <item>Ашық</item>
+        <item>Жақсы</item>
+        <item>Өте жақсы</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Әрқашан</item>
+        <item>Тек қосылғанда</item>
+        <item>Ешқашан (деректер пайдалануды арттырады)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Әрқашан</item>
+        <item>Тек қосылғанда</item>
+        <item>Ешқашан</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Авто</item>
+        <item>Тек 5 ГГц</item>
+        <item>Тек 2.4 ГГц</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Пайдалану уақыты</item>
+        <item>Іске қосуды санау</item>
+        <item>Бағдарлама атауы</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Жоқ</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Өшірілген</item>
+        <item>Баспалы түйме</item>
+        <item>Кіру нүктесінен алынған PIN</item>
+        <item>Осы құрылғыдан алынған PIN</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Статикалық</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Жоқ</item>
+        <item>Қолмен</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Өшірілген</item>
+        <item>Қоңырау</item>
+        <item>Дірілдеу</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Жоқ</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP немесе CHAP</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Анықталмаған</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Ішкі құрылғыға сақтау</item>
+        <item>Алынбалы SD картасы</item>
+        <item>Әдепкі</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Өшірілген</item>
+        <item>Дірілдеу</item>
+        <item>Дыбысын өшіру</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Қысқа</item>
+        <item>Орташа</item>
+        <item>Ұзын</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Ешқашан тесермеңіз</item>
+        <item>Тек DRM мазмұнын тексеріңіз</item>
+        <item>Әрқашан тексеріңіз</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Ешқашан HDCP тексеруді пайдаланбаңыз</item>
+        <item>Тек DRM мазмұны үшін HDCP тексеруін пайдаланыңыз</item>
+        <item>Әрдайым HDCP тексеруін пайдалану</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Анимация өшірулі</item>
+        <item>Анимациялық шкала 0.5x</item>
+        <item>Анимациялық шкала 1x</item>
+        <item>Анимациялық шкала 1.5x</item>
+        <item>Анимациялық шкала 2x</item>
+        <item>Анимациялық шкала 5x</item>
+        <item>Анимациялық шкала 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Анимация өшірулі</item>
+        <item>Анимациялық шкала 0.5x</item>
+        <item>Анимациялық шкала 1x</item>
+        <item>Анимациялық шкала 1.5x</item>
+        <item>Анимациялық шкала 2x</item>
+        <item>Анимациялық шкала 5x</item>
+        <item>Анимациялық шкала 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Стандартты шек</item>
+        <item>Фондық процестер жоқ</item>
+        <item>Көбінде 1 процесс</item>
+        <item>Көбінде 2 процесс</item>
+        <item>Көбінде 3 процесс</item>
+        <item>Көбінде 4 процесс</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>Ортақ кілттері бар L2TP/IPSec VPN</item>
+        <item>Сертификаттары бар L2TP/IPSec VPN</item>
+        <item>Ортақ кілттері және XAuth аутентификациясы бар IPSec VPN</item>
+        <item>Сертификаттары және XAuth аутентификациясы бар IPSec VPN</item>
+        <item>Сертификаттары және аралас аутентификациясы бар IPSec VPN</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Ажыратылды</item>
+        <item>Инизиализациалу</item>
+        <item>Байланысуда...</item>
+        <item>Қосылды</item>
+        <item>Уақыты аяқталды</item>
+        <item>Сәтсіз</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 секунд</item>
+        <item>6 секунд</item>
+        <item>Әрқашан өшірілген</item>
+        <item>Әрқашан қосулы</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% батарея қуаты</item>
+        <item>20% батарея қуаты</item>
+        <item>30% батарея қуаты</item>
+        <item>40% батарея қуаты</item>
+        <item>50% батарея қуаты</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Жоғарғы</item>
+        <item>Орташа</item>
+        <item>Төменгі</item>
+    </string-array>
+</resources>

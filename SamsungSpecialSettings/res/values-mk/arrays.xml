@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>ММ/ДД/ГГГГ</item>
+        <item>ДД/ММ/ГГГГ</item>
+        <item>ГГГГ/ММ/ДД</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 секунди</item>
+        <item>30 секунди</item>
+        <item>1 минута</item>
+        <item>2 минути</item>
+        <item>5 минути</item>
+        <item>10 минути</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>Никогаш</item>
+        <item>15 секунди</item>
+        <item>30 секунди</item>
+        <item>1 минута</item>
+        <item>2 минути</item>
+        <item>5 минути</item>
+        <item>10 минути</item>
+        <item>30 минути</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>Веднаш</item>
+        <item>5 секунди</item>
+        <item>15 секунди</item>
+        <item>30 секунди</item>
+        <item>1 минута</item>
+        <item>2 минути</item>
+        <item>5 минути</item>
+        <item>10 минути</item>
+        <item>30 минути</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>Tiny</item>
+        <item>Мала</item>
+        <item>Нормално</item>
+        <item>Големи</item>
+        <item>Огромни</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>Многу бавно</item>
+        <item>Бавно</item>
+        <item>Нормално</item>
+        <item>Брзо</item>
+        <item>Многу брзо</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>Пребарување...</item>
+        <item>Поврзување...</item>
+        <item>Се потврдува...</item>
+        <item>Се добива IP-адреса...</item>
+        <item>Поврзано</item>
+        <item>Суспендирано</item>
+        <item>Врската се прекинува...</item>
+        <item>Врската е прекината</item>
+        <item>Неуспешно</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>Пребарување...</item>
+        <item>Поврзување со %s...</item>
+        <item>Се потврдува со %s...</item>
+        <item>Се добива IP-адреса од %s...</item>
+        <item>Поврзано со %1$s</item>
+        <item>Суспендирано</item>
+        <item>Прекинување на врската со %s...</item>
+        <item>Врската е прекината</item>
+        <item>Неуспешно</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>Притиснете копче</item>
+        <item>PIN од поврзаниот уред</item>
+        <item>PIN од овој уред</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>Поврзано</item>
+        <item>Поканет</item>
+        <item>Неуспешно поврзување</item>
+        <item>Допрете за поврзување</item>
+        <item>Надвор од опсег</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 мин.</item>
+        <item>5 мин.</item>
+        <item>1 час</item>
+        <item>Никогаш не исклучувај</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>Слабо</item>
+        <item>Пристојна</item>
+        <item>Добро</item>
+        <item>Одлично</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>Секогаш</item>
+        <item>Само кога е приклучено</item>
+        <item>Никогаш (го зголемува користењето податоци)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>Секогаш</item>
+        <item>Само кога е приклучено</item>
+        <item>Никогаш</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>Автоматски</item>
+        <item>Само 5 GHz</item>
+        <item>Само 2,4 GHz</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>Време на користење</item>
+        <item>Број активирања</item>
+        <item>Име на апликацијата</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>Ништо</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>Исклучено</item>
+        <item>Притиснете копче</item>
+        <item>PIN од пристапна точка</item>
+        <item>PIN од овој уред</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>Статично</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>Ништо</item>
+        <item>Рачно</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>Исклучено</item>
+        <item>Известување</item>
+        <item>Вибрации</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>Ништо</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP или CHAP</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>Неодредено</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>Внатрешна меморија на уредот</item>
+        <item>Надворешна SD-картичка</item>
+        <item>Основно</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>Исклучено</item>
+        <item>Вибрации</item>
+        <item>Искл.ѕвонење</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>Кратко</item>
+        <item>Средна</item>
+        <item>Долго</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>Никогаш не проверувај</item>
+        <item>Проверувај само содржини DRM</item>
+        <item>Секогаш проверувај</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>Никогаш не користи проверка HDCP</item>
+        <item>Користи проверка HDCP само за содржини DRM</item>
+        <item>Секогаш користи проверка HDCP</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>Искл. анимација</item>
+        <item>Размер на анимација 0,5x</item>
+        <item>Размер на анимација 1x</item>
+        <item>Размер на анимација 1,5x</item>
+        <item>Размер на анимација 2x</item>
+        <item>Размер на анимација 5x</item>
+        <item>Размер на анимација 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>Искл. анимација</item>
+        <item>Размер на анимација 0,5x</item>
+        <item>Размер на анимација 1x</item>
+        <item>Размер на анимација 1,5x</item>
+        <item>Размер на анимација 2x</item>
+        <item>Размер на анимација 5x</item>
+        <item>Размер на анимација 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>Стандарден лимит</item>
+        <item>Нема процес во заднина</item>
+        <item>1 процес најмногу</item>
+        <item>2 процеси најмногу</item>
+        <item>3 процеси најмногу</item>
+        <item>4 процеси најмногу</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>L2TP/IPSec VPN со претходно делени клучеви</item>
+        <item>L2TP/IPSec VPN со сертификати</item>
+        <item>IPSec VPN со претходно делени клучеви и потврдување XAuth</item>
+        <item>IPSec VPN со сертификати и потврдување XAuth</item>
+        <item>IPSec VPN со сертификати и хибридно потврдување</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>Врската е прекината</item>
+        <item>Започнување...</item>
+        <item>Поврзување...</item>
+        <item>Поврзано</item>
+        <item>Времето истече</item>
+        <item>Неуспешно</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 секунди</item>
+        <item>6 секунди</item>
+        <item>Секогаш исклучено</item>
+        <item>Секогаш вклучен</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% полна батерија</item>
+        <item>20% полна батерија</item>
+        <item>30% полна батерија</item>
+        <item>40% полна батерија</item>
+        <item>50% полна батерија</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>Горе</item>
+        <item>Нормално</item>
+        <item>Долу</item>
+    </string-array>
+</resources>
