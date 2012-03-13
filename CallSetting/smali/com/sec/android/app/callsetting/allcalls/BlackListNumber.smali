@@ -1836,6 +1836,7 @@
 
     .line 147
     invoke-virtual {v0, v6}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
+    invoke-virtual {v0, v6}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
     .line 149
     :cond_0

@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <application android:theme="@touchwiz:style/TwTheme" android:label="@string/app_name" android:icon="@drawable/mainmenu_icon_dial">
+    <application android:theme="@miui:style/Theme.Light" android:label="@string/app_name" android:icon="@drawable/mainmenu_icon_dial">
         <activity android:label="@string/app_name" android:name="CallSetting" android:configChanges="keyboardHidden|orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

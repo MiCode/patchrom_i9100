@@ -93,7 +93,7 @@
                 <data android:mimeType="vnd.android.cursor.item/sim-contact" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/fdnListLabel" android:name="FdnList">
+        <activity android:label="@string/fdnListLabel" android:name="FdnList" android:theme="@miui:style/Theme.Light">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -190,7 +190,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-        <activity android:theme="@android:style/Theme.NoTitleBar" android:name="PickImageFromGallery" android:configChanges="locale|keyboardHidden|orientation|uiMode|screenSize">
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar" android:name="PickImageFromGallery" android:configChanges="locale|keyboardHidden|orientation|uiMode|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -202,7 +202,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/settings_label" android:name="Settings" android:configChanges="keyboardHidden|orientation" android:windowCloseOnTouchOutside="true">
+        <activity android:label="@string/settings_label" android:name="Settings" android:configChanges="keyboardHidden|orientation" android:windowCloseOnTouchOutside="true" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
@@ -212,7 +212,7 @@
         </activity>
         <service android:name="NetworkQueryService" />
         <service android:name="ClearMissedCallsService" />
-        <activity android:label="@string/networks" android:name="NetworkSetting" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="@string/networks" android:name="NetworkSetting" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.NETWORK_OPERATOR_SETTINGS" />
@@ -224,12 +224,12 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/gsm_umts_options" android:name="GsmUmtsOptions" android:configChanges="keyboardHidden|orientation">
+        <activity android:label="@string/gsm_umts_options" android:name="GsmUmtsOptions" android:configChanges="keyboardHidden|orientation" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/cdma_options" android:name="CdmaOptions">
+        <activity android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge" android:label="@string/cdma_options" android:name="CdmaOptions">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -239,32 +239,32 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/cdma_options" android:name="CdmaCallOptions">
+        <activity android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge" android:label="@string/cdma_options" android:name="CdmaCallOptions">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/labelCF" android:name="GsmUmtsCallForwardOptions" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="@string/labelCF" android:name="GsmUmtsCallForwardOptions" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/labelCF" android:name="GsmUmtsVideoCallForwardOptions" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="@string/labelCF" android:name="GsmUmtsVideoCallForwardOptions" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/labelGSMMore" android:name="GsmUmtsAdditionalCallOptions" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="@string/labelGSMMore" android:name="GsmUmtsAdditionalCallOptions" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:theme="@android:style/Theme.Holo.DialogWhenLarge" android:label="@string/cell_broadcast_sms" android:name="CellBroadcastSms">
+        <activity android:theme="@android:style/Theme.Holo.Light.DialogWhenLarge" android:label="@string/cell_broadcast_sms" android:name="CellBroadcastSms">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/fdn" android:name="FdnSetting" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="@string/fdn" android:name="FdnSetting" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -300,7 +300,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:label="@string/call_settings" android:name="CallFeaturesSetting" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="@string/call_settings" android:name="CallFeaturesSetting" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Holo.Light">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <action android:name="android.intent.action.MAIN" />
@@ -334,15 +334,15 @@
                 <action android:name="android.net.sip.SIP_SERVICE_UP" />
             </intent-filter>
         </receiver>
-        <activity android:label="Sip Settings" android:name=".sip.SipSettings" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="Sip Settings" android:name=".sip.SipSettings" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.net.sip.NOTIFY" />
             </intent-filter>
         </activity>
-        <activity android:name=".sip.SipEditor" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:theme="@android:style/Theme.Holo.NoActionBar" android:name=".SipCallOptionHandler" android:launchMode="singleInstance" android:configChanges="keyboardHidden|orientation|screenSize" />
-        <activity android:label="@string/respond_via_sms_setting_title" android:name="RespondViaSmsManager$Settings" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:name=".sip.SipEditor" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings"/>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name=".SipCallOptionHandler" android:launchMode="singleInstance" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/respond_via_sms_setting_title" android:name="RespondViaSmsManager$Settings" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -359,7 +359,7 @@
                 <action android:name="com.android.phone.MINUTE_MINDER_ALARM" />
             </intent-filter>
         </receiver>
-        <activity android:label="@string/labelCF" android:name="CallTypeSelect" android:excludeFromRecents="true" android:configChanges="keyboardHidden|orientation|screenSize">
+        <activity android:label="@string/labelCF" android:name="CallTypeSelect" android:excludeFromRecents="true" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@style/Theme.Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -370,7 +370,7 @@
             </intent-filter>
         </receiver>
         <activity android:theme="@android:style/Theme.Translucent" android:label="Flat Rate scheme" android:name="FlatRateAlertActivity" />
-        <activity android:theme="@android:style/Theme.NoTitleBar" android:label="@string/overturn_title" android:name="OverturnTutorialIncallScreen" android:screenOrientation="portrait" android:configChanges="keyboardHidden">
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar" android:label="@string/overturn_title" android:name="OverturnTutorialIncallScreen" android:screenOrientation="portrait" android:configChanges="keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />

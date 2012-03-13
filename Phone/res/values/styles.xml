@@ -422,13 +422,14 @@
         <item name="android:shadowRadius">0.3</item>
         <item name="android:layout_weight">1.0</item>
     </style>
-    <style name="Theme.Settings" parent="@android:style/Theme.Holo.DialogWhenLarge">
+    <!--style name="Theme.Settings" parent="@android:style/Theme.Holo.Light.DialogWhenLarge"-->
+    <style name="Theme.Settings" parent="@miui:style/Theme.Light">
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
-    <style name="Theme.InCallScreen" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+    <style name="Theme.InCallScreen" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
         <item name="android:windowBackground">@android:color/black</item>
     </style>
-    <style name="Theme.InVTCallScreen" parent="@android:style/Theme.DeviceDefault.NoActionBar" />
+    <style name="Theme.InVTCallScreen" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar" />
     <style name="DialpadButtonStyle">
         <item name="android:background">?android:selectableItemBackground</item>
         <item name="android:layout_width">0.0dip</item>
@@ -440,10 +441,10 @@
         <item name="android:background">@color/people_app_theme_color</item>
         <item name="android:backgroundStacked">@color/people_app_theme_color</item>
     </style>
-    <style name="SimImportTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+    <style name="SimImportTheme" parent="@miui:style/Theme.Light">
         <item name="android:actionBarStyle">@style/ContactsActionBarStyle</item>
     </style>
-    <style name="EmergencyDialerTheme" parent="@android:style/Theme.Holo">
+    <style name="EmergencyDialerTheme" parent="@android:style/Theme.Holo.Light">
         <item name="android:windowBackground">@android:color/black</item>
     </style>
 </resources>
