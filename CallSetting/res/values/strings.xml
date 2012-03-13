@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_setRejectCall">Call rejection</string>
+    <string name="menu_rejectMessages">Reject messages</string>
+    <string name="menu_callAlert">Call alert</string>
+    <string name="menu_answeringEndCall">Call answering/ending</string>
+    <string name="menu_activateProximitySensor">Turn on proximity sensor</string>
+    <string name="summary_activateProximitySensor">LCD turns off during calls</string>
+    <string name="menu_additionalSettings">Additional settings</string>
+    <string name="subtitle_internetCallSettings">Internet call settings</string>
+    <string name="menu_manageAccounts">Manage accounts</string>
+    <string name="menu_recieveIncomingCalls">Receive incoming calls</string>
+    <string name="menu_sipCallingOptions">SIP calling options</string>
+    <string name="summary_setRejectCall">Manage Auto reject/accept mode</string>
+    <string name="summary_editRejectMessages">Edit reject messages</string>
+    <string name="summary_callAlert">Set call alerts</string>
+    <string name="menu_videocallImage">Video call image</string>
+    <string name="menu_useCallFailOption">Use call fail options</string>
+    <string name="summary_manageAccounts">Manage SIP accounts and status</string>
+    <string name="summary_receiveIncomingCalls">Uses more battery power</string>
+    <string name="summary_sipCallingOption">Only if destination is SIP address</string>
+    <string name="menu_callerID">Caller ID</string>
+    <string name="summary_callserID">Use default operator settings to display my number in outgoing calls</string>
+    <string name="summary_FDN">Manage Fixed Dialling Numbers</string>
+    <string name="menu_AutoRejectNumbers">Auto reject number</string>
+    <string name="menu_AutoRejectMessage">Auto reject message</string>
+    <string name="list_DontSendaMessage">"Don't send a message"</string>
+    <string name="menu_WhiteList">White list</string>
+    <string name="menu_BlackList">Black list</string>
+    <string name="summary_WhiteList">Set numbers you will accept when Auto reject mode is on</string>
+    <string name="summary_BlackList">Manage auto reject number list</string>
+    <string name="subtitle_BlackList">Black list numbers</string>
+    <string name="subtitle_WhiteList">White list numbers</string>
+    <string name="menu_MatchCriteia">Match criteria</string>
+    <string name="Dialog_ExactlyTheSameAs">Exactly the same as</string>
+    <string name="Dialog_StartWith">Start with</string>
+    <string name="Dialog_EndsWith">Ends with</string>
+    <string name="Dialog_Includes">Includes</string>
+    <string name="menu_PowerkeyEndsCalls">The power key ends calls</string>
+    <string name="summary_PowerkeyEndsCalls">Press the power key to end calls. This will not turn off the screen</string>
+    <string name="Dialog_PowerkeyEndsCalls">Unable to set the power key to end calls while proximity sensor is off. Proximity sensor will be turned on</string>
+    <string name="Dialog_ProximitySensor">Unable to turn off proximity sensor while the power key is set to end calls. The power key will no longer end calls</string>
+    <string name="alert_dialog_yes">Yes</string>
+    <string name="alert_dialog_no">No</string>
+    <string name="callsettings_number">Number</string>
+    <string name="callsettings_allcalls_autorejectnumber">Auto reject number</string>
+    <string name="callsettings_allcalls_autorejectnumbers">Auto reject numbers</string>
+    <string name="callsettings_allcalls_autoreject_allnumbers">All numbers</string>
+    <string name="app_name">Call settings</string>
+    <string name="callsettings_title_allcalls">All calls</string>
+    <string name="callsettings_title_voicecall">Voice call</string>
+    <string name="callsettings_title_videocall">Video call</string>
+    <string name="callsettings_title_fdn">Fixed Dialling Numbers</string>
+    <string name="callsettings_title_voicemail">Voicemail</string>
+    <string name="callsettings_title_fakecall">Fake call</string>
+    <string name="rejectmsg_over">Rejection message must not exceed 80 bytes</string>
+    <string name="rejectmsg_line_over">Rejection message must not exceed 3 lines</string>
+    <string name="auto_reject_calls">Auto reject mode</string>
+    <string name="callsettings_preset_title">Select</string>
+    <string name="callsettings_change_preset">Change</string>
+    <string name="callsettings_message_not_enough_space">Not enough space</string>
+    <string name="callsettings_play_video">Play</string>
+    <string name="callsettings_video_err">Unable to play video</string>
+    <string name="callsettings_invalid_video_err">File not supported</string>
+    <string name="delete_title_num">Delete number</string>
+    <string name="delete_title_msg">Delete message</string>
+    <string name="delete_message_num">Number will be deleted</string>
+    <string name="delete_message_msg">This message will be deleted</string>
+    <string name="callsettings_sfk_add">Add</string>
+    <string name="callsettings_body_whitelist_empty">White list number empty</string>
+    <string name="callsettings_body_blacklist_empty">Black list number empty</string>
+    <string name="callsettings_body_whitelist_wrong">Wrong white list number</string>
+    <string name="callsettings_body_blacklist_wrong">Wrong black list number</string>
+    <string name="callsettings_allcalls_selectall">Select all</string>
+    <string name="callsettings_allcalls_noitem">No items</string>
+    <string name="callsettings_allcalls_showmynum">Show my number</string>
+    <string name="callsettings_allcalls_bynetwork">By network</string>
+    <string name="callsettings_allcalls_send">Send</string>
+    <string name="callsettings_allcalls_hide">Hide</string>
+    <string name="callsettings_allcalls_search">Search</string>
+    <string name="callsettings_allcalls_autoreject">Auto reject</string>
+    <string name="callsettings_allcalls_autorejectlist">Auto reject list</string>
+    <string name="callsettings_allcalls_prefixoff">Off</string>
+    <string name="callsettings_allcalls_prefixdialing">Prefix dialling</string>
+    <string name="callsettings_allcalls_prefixdialinglist">Prefix dialling list</string>
+    <string name="callsettings_allcalls_rejectmessage">Reject messages</string>
+    <string name="callsettings_allcalls_answeringcall">Answering call</string>
+    <string name="callsettings_allcalls_answeringmode">Answering mode</string>
+    <string name="callsettings_answeringmode_sub1_enabled">Answering mode enabled</string>
+    <string name="callsettings_answeringmode_sub1_disabled">Answering mode disabled</string>
+    <string name="callsettings_allcalls_answering_homekey">Answering key</string>
+    <string name="callsettings_answeringmode_list2_subtext">Accept incoming calls by pressing the home key</string>
+    <string name="callsettings_allcalls_answering_auto">Automatic answering</string>
+    <string name="callsettings_autoanswer_summary">Automatic answering will operate only with headset connected</string>
+    <string name="callsettings_allcalls_answering_auto_1s">After 1 second</string>
+    <string name="callsettings_allcalls_answering_auto_2s">After 2 seconds</string>
+    <string name="callsettings_allcalls_answering_auto_3s">After 3 seconds</string>
+    <string name="callsettings_allcalls_answering_auto_4s">After 4 seconds</string>
+    <string name="callsettings_allcalls_answering_auto_5s">After 5 seconds</string>
+    <string name="callsettings_allcalls_autoreject_unknown">Unknown</string>
+    <string name="callsettings_allcalls_call_conn_tone">Call connect tone</string>
+    <string name="callsettings_allcalls_minute_minder">Minute minder</string>
+    <string name="callsettings_allcalls_call_end_tone">Call end tone</string>
+    <string name="callsettings_allcalls_outgoing_call_vibration">Answer vibration</string>
+    <string name="callsettings_callcals_outgoing_call_sub">"The caller's phone vibrates when the called party answers the call"</string>
+    <string name="callsettings_allcalls_alertoncall_off">Off</string>
+    <string name="callsettings_allcalls_alertoncall_sound">Sound</string>
+    <string name="callsettings_allcalls_alertoncall_voice">Voice</string>
+    <string name="callsettings_allcalls_alertoncall_vibration">Vibration</string>
+    <string name="callsettings_list1_sub_text">Manage Auto reject mode</string>
+    <string name="callsettings_list2_sub_text">Manage answering call mode</string>
+    <string name="callsettings_list3_sub_text">Manage prefix dialling</string>
+    <string name="callsettings_list4_sub_text">Send message immediately after rejecting call</string>
+    <string name="callsettings_list5_sub_text">Sound settings during call</string>
+    <string name="callsettings_autoreject_list1">Enable auto reject</string>
+    <string name="callsettings_autoreject_list2">Auto reject list</string>
+    <string name="callsettings_autoreject_sub1_enabled">Auto reject mode enabled</string>
+    <string name="callsettings_autoreject_sub1_disabled">Enable Auto reject mode</string>
+    <string name="callsettings_autoreject_sub2">Manage auto reject number list</string>
+    <string name="callsettings_prefixdialing_list1">Enable prefix dialling</string>
+    <string name="callsettings_prefixdialing_list2">Prefix dialling list</string>
+    <string name="callsettings_prefixdialing_sub1_enabled">Prefix dialling mode enabled</string>
+    <string name="callsettings_prefixdialing_sub1_disabled">Prefix dialling mode disabled</string>
+    <string name="callsettings_rejectmessage_list1">Sorry, I am busy. Call back later</string>
+    <string name="callsettings_rejectmessage_list2">I am in meeting</string>
+    <string name="callsettings_rejectmessage_list3">I am in class now</string>
+    <string name="callsettings_rejectmessage_list4">I am at the cinema</string>
+    <string name="callsettings_rejectmessage_list5">I am driving</string>
+    <string name="callsettings_allcalls_callstatustones">Call status tones</string>
+    <string name="callsettings_allcalls_phonevibrate">Outgoing call vibration</string>
+    <string name="callsettings_allcalls_phonevibrate_summary">Vibrate phone when you make a call</string>
+    <string name="callsettings_allcalls_alertsoncall">Alerts on call</string>
+    <string name="callsettings_allcalls_alertsoncall_summary">Alarm and message notification will go off during call</string>
+    <string name="callsettings_allcalls_alertsoff">Off</string>
+    <string name="callsettings_allcalls_alertssound">Sound</string>
+    <string name="callsettings_allcalls_alertsvoice">Voice</string>
+    <string name="callsettings_voicecall_forwarding">Call forwarding</string>
+    <string name="callsettings_voicecall_barring">Voice call barring</string>
+    <string name="callsettings_voicecall_waiting">Call waiting</string>
+    <string name="callsettings_voicecall_autoredial">Auto redial</string>
+    <string name="callsettings_callwaiting_activate">Call waiting activated</string>
+    <string name="callsettings_callwaiting_deactivate">Call waiting deactivated</string>
+    <string name="callsettings_voicecall_barring_status">Call barring status</string>
+    <string name="callsettings_call_barring_list1">All outgoing calls</string>
+    <string name="callsettings_call_barring_list2">"Int'l calls"</string>
+    <string name="callsettings_call_barring_list3">"Int'l calls except home"</string>
+    <string name="callsettings_call_barring_list4">All incoming calls</string>
+    <string name="callsettings_call_barring_list5">Incoming when roaming</string>
+    <string name="callsettings_call_barring_list6">Cancel all</string>
+    <string name="callsettings_auto_redial_sub">Enable auto redial if call is unable to connect or cut off</string>
+    <string name="callsettings_text_on">On</string>
+    <string name="callsettings_text_off">Off</string>
+    <string name="fdn_mode_activated">FDN mode activated</string>
+    <string name="callsettings_body_enabled">Enabled</string>
+    <string name="callsettings_body_disabled">Disabled</string>
+    <string name="callsettings_body_activate">Activated</string>
+    <string name="callsettings_body_deactivate">Deactivated</string>
+    <string name="callsettings_body_delete">Deleted</string>
+    <string name="callsettings_body_already_in_use">Already in use</string>
+    <string name="callsettings_body_autoreject_empty">Auto reject number empty</string>
+    <string name="callsettings_body_autoreject_wrong">Wrong auto reject number</string>
+    <string name="callsettings_body_prefix_empty">Prefix number empty</string>
+    <string name="callsettings_body_prefix_wrong">Incorrect prefix number</string>
+    <string name="callsettings_body_reject_msg_empty">Message is empty</string>
+    <string name="callsettings_body_diverting_wrong">Wrong diverting number</string>
+    <string name="callsettings_body_invalid_password">Invalid password</string>
+    <string name="callsettings_body_pwd_reject">Unable to change password</string>
+    <string name="callsettings_body_cb_reject">Call barring rejected</string>
+    <string name="callsettings_body_check_old_password">Check old password</string>
+    <string name="callsettings_body_check_new_password">Check new password</string>
+    <string name="callsettings_body_check_confirm_password">Check confirm password</string>
+    <string name="callsettings_body_changed">Changed</string>
+    <string name="callsettings_body_not_matched_confirm_password">Invalid confirm password</string>
+    <string name="callsettings_body_no_item">No items</string>
+    <string name="callsettings_body_install_tts">Install voice data to use this function. It may not support your local language. After installing set the language in text-to-speech setting</string>
+    <string name="callsettings_sfk_ok">OK</string>
+    <string name="callsettings_sfk_cancel">Cancel</string>
+    <string name="callsettings_sfk_edit">Edit</string>
+    <string name="callsettings_sfk_create">Create</string>
+    <string name="callsettings_sfk_create_message">Create new message</string>
+    <string name="callsettings_sfk_delete">Delete</string>
+    <string name="callsettings_sfk_save">Save</string>
+    <string name="callsettings_prefix_dialog_title">Prefix number</string>
+    <string name="callsettings_rejectmsg_dialog_title">Reject message</string>
+    <string name="callsettings_whitelist_dialog_title">White list number</string>
+    <string name="callsettings_blacklist_dialog_title">Black list number</string>
+    <string name="updating_title">Call settings</string>
+    <string name="error_updating_title">Error</string>
+    <string name="reading_settings">Reading settings…</string>
+    <string name="updating_settings">Updating settings…</string>
+    <string name="response_error">Unexpected response from network</string>
+    <string name="exception_error">Network or SIM card error</string>
+    <string name="radio_off_error">Please turn on the radio before viewing these settings</string>
+    <string name="callbarring_new">New</string>
+    <string name="callbarring_new_password">New password</string>
+    <string name="callbarring_old">Old</string>
+    <string name="callbarring_old_password">Old password</string>
+    <string name="callbarring_confirm_colon">Confirm</string>
+    <string name="callbarring_confirm">Confirm</string>
+    <string name="callbarring_confirm_password">Confirm password</string>
+    <string name="callbarring_input_password">Input password</string>
+    <string name="callbarring_password">Password</string>
+    <string name="callbarring_change_password">Change password</string>
+    <string name="videocall_title_videocall">Video call</string>
+    <string name="videocall_list_1">Preset image</string>
+    <string name="videocall_list_2">Own video in received call</string>
+    <string name="videocall_list_3">Use call fail options</string>
+    <string name="videocall_list_4">Video call forwarding</string>
+    <string name="videocall_list_5">Video call barring</string>
+    <string name="videocall_summary_1">Set default Hide me image</string>
+    <string name="videocall_summary_2">Show live image to caller when user accepts video call</string>
+    <string name="videocall_summary_3">Use alternative methods to reattempt failed call</string>
+    <string name="callsettings_videocall_barring">Video call barring</string>
+    <string name="menukey_Change">Change</string>
+    <string name="preset_title">My image</string>
+    <string name="preset_defaultname">Default</string>
+    <string name="caller_defaultname">Default</string>
+    <string name="caller_nameornumber">Unknown</string>
+    <string name="fdn_error_title">Error</string>
+    <string name="fdn_error_message">Network or SIM card error</string>
+    <string name="fdn_error_button">OK</string>
+    <string name="no_name">No name</string>
+    <string name="callsettings_autoreject_noti_all">All numbers will be rejected</string>
+    <string name="callsettings_autoreject_noti_blacklist">Black list numbers will be rejected</string>
+    <string name="callsettings_autoreject_noti_ticker_all">All calls will be rejected</string>
+    <string name="callsettings_autoreject_noti_ticker_rejectlist">All calls from auto reject numbers will be rejected</string>
+    <item type="string" name="APKTOOL_DUMMY_00e3">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00e4">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00e5">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00e6">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00e7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00e8">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00e9">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00ea">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00eb">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00ec">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00ed">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00ee">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00ef">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f0">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f1">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f2">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f3">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f4">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f5">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f6">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f7">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f8">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00f9">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00fa">false</item>
+    <item type="string" name="APKTOOL_DUMMY_00fb">false</item>
+</resources>

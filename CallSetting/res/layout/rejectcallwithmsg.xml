@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/rejectcallwithmsg_empty" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@id/list_create" android:background="@drawable/linearlayout_select_all_item_bg" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="65.32999dip">
+            <ImageView android:layout_gravity="center" android:layout_width="38.0dip" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/btn_create_ss" android:scaleType="fitXY" />
+            <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListOneLine" android:textSize="22.0sp" android:gravity="center_vertical" android:id="@id/rejectcallwithmsg_create_text" android:paddingLeft="12.0dip" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/callsettings_sfk_create" android:layout_weight="0.9" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@id/empty" android:paddingTop="65.32999dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_gravity="center" android:layout_width="116.0dip" android:layout_height="116.0dip" android:src="@drawable/noitems_text_based" android:scaleType="fitXY" />
+            <TextView android:textSize="22.0dip" android:textColor="@touchwiz:color/tw_color145" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/callsettings_allcalls_noitem" />
+        </LinearLayout>
+    </FrameLayout>
+    <ListView android:id="@id/rejectcallwithmsg_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <com.sec.android.touchwiz.widget.TwSoftkeyView android:id="@id/softkeyview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true"
+      xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz">
+        <com.sec.android.touchwiz.widget.TwSoftkeyItem android:id="@id/softkeyleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="softkeyLeftRun" touchwiz:twSoftkeyItemType="text" touchwiz:twSoftkeyItemText="@string/callsettings_sfk_delete" />
+        <com.sec.android.touchwiz.widget.TwSoftkeyItem android:id="@id/softkeyright" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="softkeyRightRun" touchwiz:twSoftkeyItemType="text" touchwiz:twSoftkeyItemText="@string/callsettings_sfk_cancel" />
+    </com.sec.android.touchwiz.widget.TwSoftkeyView>
+</LinearLayout>

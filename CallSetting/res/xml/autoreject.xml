@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.android.app.callsetting.allcalls.AutoRejectModeListPreference android:entries="@array/auto_reject_mode" android:title="@string/auto_reject_calls" android:key="autoreject_mode_list_preference" android:entryValues="@array/auto_reject_mode_values" />
+    <PreferenceScreen android:title="@string/callsettings_allcalls_autorejectlist" android:key="black_list_preference" android:summary="@string/summary_BlackList">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.allcalls.BlackList" />
+    </PreferenceScreen>
+</PreferenceScreen>

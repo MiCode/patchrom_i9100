@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:enabled="true" android:title="@string/videocall_list_1" android:key="preset_image" android:summary="@string/videocall_summary_1">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:title="@string/videocall_list_2" android:key="showme_preference" android:summary="@string/videocall_summary_2" />
+    <CheckBoxPreference android:title="@string/videocall_list_3" android:key="failoption_preference" android:summary="@string/videocall_summary_3" />
+    <PreferenceScreen android:enabled="true" android:title="@string/videocall_list_4" android:key="video_forwarding">
+        <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.GsmUmtsVideoCallForwardOptions" />
+    </PreferenceScreen>
+    <PreferenceScreen android:enabled="true" android:title="@string/videocall_list_5" android:key="video_barring">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.videocall.VideoCallBarring" />
+    </PreferenceScreen>
+</PreferenceScreen>

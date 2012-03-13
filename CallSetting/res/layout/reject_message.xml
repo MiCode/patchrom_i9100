@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:gravity="top" android:id="@id/create_edit" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:capitalize="sentences" android:layout_weight="1.0" />
+    <com.sec.android.touchwiz.widget.TwSoftkeyView android:id="@id/softkeyview" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true"
+      xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz">
+        <com.sec.android.touchwiz.widget.TwSoftkeyItem android:id="@id/softkeyleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="softkeyLeftRun" touchwiz:twSoftkeyItemType="text" touchwiz:twSoftkeyItemText="@string/callsettings_sfk_save" />
+        <com.sec.android.touchwiz.widget.TwSoftkeyItem android:id="@id/softkeyright" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="softkeyRightRun" touchwiz:twSoftkeyItemType="text" touchwiz:twSoftkeyItemText="@string/callsettings_sfk_cancel" />
+    </com.sec.android.touchwiz.widget.TwSoftkeyView>
+</LinearLayout>

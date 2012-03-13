@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/callsettings_prefixdialing_list1" android:key="prefixdialling_preference" android:summaryOn="@string/callsettings_prefixdialing_sub1_enabled" android:summaryOff="@string/callsettings_prefixdialing_sub1_disabled" />
+    <PreferenceScreen android:title="@string/callsettings_allcalls_prefixdialinglist" android:key="prefixdialling_list_preference" android:summary="@string/callsettings_body_no_item" android:dependency="prefixdialling_preference">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.allcalls.PrefixDialingList" />
+    </PreferenceScreen>
+</PreferenceScreen>

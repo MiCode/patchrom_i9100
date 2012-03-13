@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="65.32999dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/prefixnum_text_layout" android:background="@drawable/linearlayout_list_item_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="0.9">
+        <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListOneLine" android:gravity="center_vertical" android:id="@id/prefixnum_item_text" android:paddingLeft="13.329987dip" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" />
+    </LinearLayout>
+    <View android:id="@id/divider1" android:background="@drawable/divider_vertical_2line" android:layout_width="1.3299866dip" android:layout_height="65.32999dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/prefixnum_radio_layout" android:background="@drawable/linearlayout_selection_item_bg" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <RadioButton android:id="@id/prefixnum_item_radio" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:checked="false" />
+    </LinearLayout>
+</LinearLayout>

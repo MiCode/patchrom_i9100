@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="calldiverting_list">
+        <item>항상</item>
+        <item>통화 중일 때</item>
+        <item>응답이 없을 때</item>
+        <item>통화권을 벗어났을 때</item>
+        <item>모두 취소</item>
+    </string-array>
+    <string-array name="callbarring_list">
+        <item>모든 발신 전화</item>
+        <item>국제전화 발신</item>
+        <item>국제전화 발신(자국 제외)</item>
+        <item>모든 수신 전화</item>
+        <item>로밍 중 전화 수신</item>
+        <item>모두 취소</item>
+    </string-array>
+    <string-array name="waiting_time">
+        <item>5초</item>
+        <item>10초</item>
+        <item>15초</item>
+        <item>20초</item>
+        <item>25초</item>
+        <item>30초</item>
+    </string-array>
+    <string-array name="automatic_time">
+        <item>1초</item>
+        <item>2초</item>
+        <item>3초</item>
+        <item>4초</item>
+        <item>5초</item>
+    </string-array>
+    <string-array name="autoreject_alert">
+        <item>최근기록</item>
+        <item>연락처</item>
+    </string-array>
+    <string-array name="fakecallerimage_alert">
+        <item>이미지</item>
+        <item>사진 촬영</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_default">
+        <item>사진</item>
+        <item>동영상</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_changed">
+        <item>기본 이미지</item>
+        <item>사진</item>
+        <item>동영상</item>
+    </string-array>
+    <string-array name="callerimage_alert_default">
+        <item>사진</item>
+        <item>동영상</item>
+        <item>사진 촬영</item>
+        <item>동영상 촬영</item>
+    </string-array>
+    <string-array name="callerimage_alert_changed">
+        <item>기본 이미지</item>
+        <item>사진</item>
+        <item>동영상</item>
+        <item>사진 촬영</item>
+        <item>동영상 촬영</item>
+    </string-array>
+    <string-array name="entries_list_preference">
+        <item>끄기</item>
+        <item>1초 후</item>
+        <item>2초 후</item>
+        <item>3초 후</item>
+        <item>4초 후</item>
+        <item>5초 후</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="match_criteria_entries">
+        <item>입력 번호와 일치</item>
+        <item>입력 번호로 시작</item>
+        <item>입력 번호로 끝남</item>
+        <item>입력 번호를 포함</item>
+    </string-array>
+    <string-array name="match_criteria_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="auto_reject_mode">
+        <item>끄기</item>
+        <item>모든 번호</item>
+        <item>자동 수신 거부 번호</item>
+    </string-array>
+    <string-array name="auto_reject_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

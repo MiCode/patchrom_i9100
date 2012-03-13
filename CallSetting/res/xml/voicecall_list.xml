@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/callsettings_voicecall_forwarding">
+        <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.GsmUmtsCallForwardOptions" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/callsettings_voicecall_barring">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.voicecall.CallBarring" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:title="@string/callsettings_voicecall_waiting" android:key="waitingcall_preference" />
+    <CheckBoxPreference android:title="@string/callsettings_voicecall_autoredial" android:key="autoredial_preference" android:summary="@string/callsettings_auto_redial_sub" />
+</PreferenceScreen>

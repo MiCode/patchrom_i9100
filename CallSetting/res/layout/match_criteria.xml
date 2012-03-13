@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/match_criteria_layout" android:background="@drawable/linearlayout_list_item_bg" android:focusable="true" android:nextFocusUp="@id/edit_text" android:clickable="true" android:layout_width="fill_parent" android:layout_height="65.32999dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="12.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="65.32999dip" android:layout_weight="0.9">
+        <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListTwoLinePrimary" android:id="@id/text_main" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_MatchCriteia" android:singleLine="true" />
+        <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListTwoLineSecondary" android:textColor="@android:color/zzz_tw_secondary_text_sub" android:id="@id/text_sub" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:background="@android:drawable/btn_circle" android:layout_width="38.0dip" android:layout_height="48.0dip" android:layout_marginRight="10.0dip" android:src="@android:drawable/ic_btn_round_more" android:scaleType="fitXY" />
+</LinearLayout>

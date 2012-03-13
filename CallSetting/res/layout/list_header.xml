@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/create_list" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/list_create" android:background="@drawable/linearlayout_select_all_item_bg" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="65.32999dip">
+        <ImageView android:layout_gravity="center" android:layout_width="38.0dip" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/btn_create_ss" android:scaleType="fitXY" />
+        <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListOneLine" android:textSize="22.0sp" android:gravity="center_vertical" android:id="@id/rejectcallwithmsg_create_text" android:paddingLeft="12.0dip" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/callsettings_sfk_create" android:layout_weight="0.9" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/list_selectall" android:background="@drawable/linearlayout_select_all_item_bg" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="65.32999dip">
+        <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListOneLine" android:textSize="22.0sp" android:gravity="center_vertical" android:id="@id/rejectcallwithmsg_selectall_text" android:paddingLeft="12.0dip" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/callsettings_allcalls_selectall" android:layout_weight="0.9" />
+        <CheckBox android:id="@id/selectall_checkbox" android:paddingRight="16.0dip" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View android:id="@id/divider1" android:background="@android:drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="0.6700001dip" />
+</LinearLayout>

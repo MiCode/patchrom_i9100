@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/callsettings_call_barring_list1" android:key="callbarring_baoc_pref" android:summaryOn="@string/callsettings_body_enabled" android:summaryOff="@string/callsettings_body_disabled" />
+    <CheckBoxPreference android:title="@string/callsettings_call_barring_list2" android:key="callbarring_baoic_pref" android:summaryOn="@string/callsettings_body_enabled" android:summaryOff="@string/callsettings_body_disabled" />
+    <CheckBoxPreference android:title="@string/callsettings_call_barring_list3" android:key="callbarring_baoicxh_pref" android:summaryOn="@string/callsettings_body_enabled" android:summaryOff="@string/callsettings_body_disabled" />
+    <CheckBoxPreference android:title="@string/callsettings_call_barring_list4" android:key="callbarring_baic_pref" android:summaryOn="@string/callsettings_body_enabled" android:summaryOff="@string/callsettings_body_disabled" />
+    <CheckBoxPreference android:title="@string/callsettings_call_barring_list5" android:key="callbarring_baicr_pref" android:summaryOn="@string/callsettings_body_enabled" android:summaryOff="@string/callsettings_body_disabled" />
+</PreferenceScreen>

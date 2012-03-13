@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/create_list" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="73.32999dip">
+        <TextView android:textSize="17.329987dip" android:id="@id/autoreject_item_text" android:paddingLeft="12.0dip" android:paddingRight="7.3299866dip" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/callsettings_number" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/list_create" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <EditText android:id="@id/edit_text" android:layout_width="0.0dip" android:layout_height="50.0dip" android:maxLength="100" android:layout_weight="1.0" android:inputType="phone" />
+            <ImageButton android:layout_gravity="center_vertical" android:id="@id/search_button" android:padding="0.0dip" android:layout_width="51.5dip" android:layout_height="45.5dip" android:src="@drawable/ic_button_contacts" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/divider1" android:background="@android:drawable/divider_horizontal_dark" android:focusable="false" android:layout_width="fill_parent" android:layout_height="0.6700001dip" />
+</LinearLayout>

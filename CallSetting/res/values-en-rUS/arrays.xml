@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="calldiverting_list">
+        <item>Always</item>
+        <item>If busy</item>
+        <item>If no reply</item>
+        <item>If out of reach</item>
+        <item>Cancel all</item>
+    </string-array>
+    <string-array name="callbarring_list">
+        <item>All outgoing calls</item>
+        <item>Outgoing international calls</item>
+        <item>International calls except home</item>
+        <item>All incoming calls</item>
+        <item>Incoming when roaming</item>
+        <item>Cancel all</item>
+    </string-array>
+    <string-array name="waiting_time">
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>20 seconds</item>
+        <item>25 seconds</item>
+        <item>30 seconds</item>
+    </string-array>
+    <string-array name="automatic_time">
+        <item>1 second</item>
+        <item>2 seconds</item>
+        <item>3 seconds</item>
+        <item>4 seconds</item>
+        <item>5 seconds</item>
+    </string-array>
+    <string-array name="autoreject_alert">
+        <item>Logs</item>
+        <item>Contacts</item>
+    </string-array>
+    <string-array name="fakecallerimage_alert">
+        <item>Image</item>
+        <item>Take photo</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_default">
+        <item>Pictures</item>
+        <item>Videos</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_changed">
+        <item>Default image</item>
+        <item>Pictures</item>
+        <item>Videos</item>
+    </string-array>
+    <string-array name="callerimage_alert_default">
+        <item>Pictures</item>
+        <item>Videos</item>
+        <item>Take picture</item>
+        <item>Record video</item>
+    </string-array>
+    <string-array name="callerimage_alert_changed">
+        <item>Default image</item>
+        <item>Pictures</item>
+        <item>Videos</item>
+        <item>Take picture</item>
+        <item>Record video</item>
+    </string-array>
+    <string-array name="entries_list_preference">
+        <item>Off</item>
+        <item>After 1 second</item>
+        <item>After 2 seconds</item>
+        <item>After 3 seconds</item>
+        <item>After 4 seconds</item>
+        <item>After 5 seconds</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="match_criteria_entries">
+        <item>Exactly the same as</item>
+        <item>Start with</item>
+        <item>Ends with</item>
+        <item>Includes</item>
+    </string-array>
+    <string-array name="match_criteria_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="auto_reject_mode">
+        <item>Off</item>
+        <item>All numbers</item>
+        <item>Auto reject numbers</item>
+    </string-array>
+    <string-array name="auto_reject_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

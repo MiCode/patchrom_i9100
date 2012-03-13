@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/autoreject_create_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/autoreject_create" android:background="@drawable/linearlayout_select_all_item_bg" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="65.32999dip">
+                <ImageView android:layout_width="38.0dip" android:layout_height="48.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/btn_create_ss" android:scaleType="fitXY" />
+                <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListOneLine" android:gravity="center_vertical" android:id="@id/autoreject_create_text" android:paddingLeft="12.0dip" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/callsettings_sfk_create" android:layout_weight="0.9" />
+            </LinearLayout>
+            <View android:id="@id/divider1" android:background="@android:drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="0.6700001dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/autoreject_selectall_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:id="@id/autoreject_selectall" android:background="@drawable/linearlayout_select_all_item_bg" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="65.32999dip">
+                <TextView android:textAppearance="@touchwiz:style/TwTextAppearanceListOneLine" android:gravity="center_vertical" android:id="@id/autoreject_selectall_text" android:paddingLeft="12.0dip" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/callsettings_allcalls_selectall" android:layout_weight="0.9" />
+                <CheckBox android:id="@id/autoreject_selectall_checkbox" android:paddingRight="12.0dip" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <View android:id="@id/divider1" android:background="@android:drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="0.6700001dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ListView android:id="@id/autoreject_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </ScrollView>
+    <com.sec.android.touchwiz.widget.TwSoftkeyView android:id="@id/softkeyview" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true"
+      xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz">
+        <com.sec.android.touchwiz.widget.TwSoftkeyItem android:id="@id/softkeyleft" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="softkeyLeftRun" touchwiz:twSoftkeyItemType="text" touchwiz:twSoftkeyItemText="@string/callsettings_sfk_delete" />
+        <com.sec.android.touchwiz.widget.TwSoftkeyItem android:id="@id/softkeyright" android:layout_width="fill_parent" android:layout_height="fill_parent" android:onClick="softkeyRightRun" touchwiz:twSoftkeyItemType="text" touchwiz:twSoftkeyItemText="@string/callsettings_sfk_cancel" />
+    </com.sec.android.touchwiz.widget.TwSoftkeyView>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.sec.android.app.callsetting.allcalls.CLIRListPreference android:title="@string/callsettings_allcalls_showmynum" android:key="showmynumber_preference" android:summary="@string/callsettings_allcalls_bynetwork" android:dialogTitle="@string/callsettings_allcalls_showmynum" />
+    <PreferenceScreen android:title="@string/callsettings_allcalls_autoreject" android:key="autoreject_preference" android:summary="@string/callsettings_list1_sub_text">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.allcalls.AutoReject" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/callsettings_allcalls_answeringcall" android:key="answeringcall_list_preference" android:summary="@string/callsettings_list2_sub_text">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.allcalls.AnsweringCall" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/callsettings_allcalls_prefixdialing" android:key="prefixdialling_list_preference" android:summary="@string/callsettings_list3_sub_text">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.allcalls.PrefixDialing" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/callsettings_allcalls_rejectmessage" android:key="rejectmessage_list_preference" android:summary="@string/callsettings_list4_sub_text">
+        <intent android:targetPackage="com.sec.android.app.callsetting" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.app.callsetting.allcalls.RejectCallWithMsg" />
+    </PreferenceScreen>
+    <com.sec.android.app.callsetting.allcalls.CallStatusTonesPreference android:title="@string/callsettings_allcalls_callstatustones" android:key="callstatustones_preference" android:summary="@string/callsettings_list5_sub_text" android:dialogTitle="@string/callsettings_allcalls_callstatustones" />
+    <CheckBoxPreference android:title="@string/callsettings_allcalls_outgoing_call_vibration" android:key="outgoingcall_vibration_preference" android:summary="@string/callsettings_callcals_outgoing_call_sub" />
+    <com.sec.android.app.callsetting.allcalls.AlertOnCallPreference android:title="@string/callsettings_allcalls_alertsoncall" android:key="alertoncall_preference" android:summary="@string/callsettings_allcalls_alertoncall_off" android:dialogTitle="@string/callsettings_allcalls_alertsoncall" />
+</PreferenceScreen>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tw_color001">@touchwiz:color/tw_color001</color>
+    <color name="tw_color003">@touchwiz:color/tw_color003</color>
+    <color name="twcolor036">@touchwiz:color/tw_color036</color>
+    <color name="gray_blacklist">#ffa2a2a2</color>
+</resources>

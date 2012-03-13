@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/callsettings_allcalls_answering_homekey" android:key="anykey_mode_preference" android:summary="@string/callsettings_answeringmode_list2_subtext" />
+    <ListPreference android:entries="@array/entries_list_preference" android:title="@string/callsettings_allcalls_answering_auto" android:key="auto_time_preference" android:summary="@string/callsettings_autoanswer_summary" android:defaultValue="0" android:dialogTitle="@string/callsettings_allcalls_answering_auto" android:entryValues="@array/entryvalues_list_preference" />
+    <CheckBoxPreference android:title="@string/menu_PowerkeyEndsCalls" android:key="powerkey_end_preference" android:summary="@string/summary_PowerkeyEndsCalls" />
+</PreferenceScreen>

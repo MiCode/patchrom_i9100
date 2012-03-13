@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="calldiverting_list">
+        <item>始终</item>
+        <item>遇忙转移</item>
+        <item>无应答转移</item>
+        <item>不可接通转移</item>
+        <item>全部取消</item>
+    </string-array>
+    <string-array name="callbarring_list">
+        <item>全部拨打的电话</item>
+        <item>拨出的国际长途电话</item>
+        <item>国际长途电话（本国除外）</item>
+        <item>全部来电</item>
+        <item>漫游时来电</item>
+        <item>全部取消</item>
+    </string-array>
+    <string-array name="waiting_time">
+        <item>5秒</item>
+        <item>10 秒</item>
+        <item>15 秒</item>
+        <item>20秒</item>
+        <item>25秒</item>
+        <item>30秒</item>
+    </string-array>
+    <string-array name="automatic_time">
+        <item>1秒</item>
+        <item>2秒</item>
+        <item>3秒</item>
+        <item>4秒</item>
+        <item>5秒</item>
+    </string-array>
+    <string-array name="autoreject_alert">
+        <item>通讯记录</item>
+        <item>联系人</item>
+    </string-array>
+    <string-array name="fakecallerimage_alert">
+        <item>图像</item>
+        <item>拍照</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_default">
+        <item>图像</item>
+        <item>录像</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_changed">
+        <item>默认图像</item>
+        <item>图像</item>
+        <item>录像</item>
+    </string-array>
+    <string-array name="callerimage_alert_default">
+        <item>图像</item>
+        <item>录像</item>
+        <item>拍照</item>
+        <item>拍摄录像</item>
+    </string-array>
+    <string-array name="callerimage_alert_changed">
+        <item>默认图像</item>
+        <item>图像</item>
+        <item>录像</item>
+        <item>拍照</item>
+        <item>拍摄录像</item>
+    </string-array>
+    <string-array name="entries_list_preference">
+        <item>Off</item>
+        <item>After 1 second</item>
+        <item>After 2 seconds</item>
+        <item>After 3 seconds</item>
+        <item>After 4 seconds</item>
+        <item>After 5 seconds</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="match_criteria_entries">
+        <item>完全一样</item>
+        <item>开始以</item>
+        <item>结束于</item>
+        <item>包括</item>
+    </string-array>
+    <string-array name="match_criteria_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="auto_reject_mode">
+        <item>关</item>
+        <item>全部号码</item>
+        <item>自动拒绝号码</item>
+    </string-array>
+</resources>

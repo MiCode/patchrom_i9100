@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.phone" android:versionCode="1" android:versionName="1.0" package="com.sec.android.app.callsetting"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application android:theme="@touchwiz:style/TwTheme" android:label="@string/app_name" android:icon="@drawable/mainmenu_icon_dial">
+        <activity android:label="@string/app_name" android:name="CallSetting" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_title_allcalls" android:name=".allcalls.AllCalls" android:process="com.android.phone" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="allcalls" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/menu_setRejectCall" android:name=".allcalls.AutoReject" android:excludeFromRecents="true" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_allcalls_autorejectlist" android:name=".allcalls.AutoRejectList" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/menu_WhiteList" android:name=".allcalls.WhiteList" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_allcalls_prefixdialing" android:name=".allcalls.PrefixDialing" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/menu_callAlert" android:name=".allcalls.CallAlertList" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_allcalls_autorejectlist" android:name=".allcalls.BlackList" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_allcalls_autorejectnumber" android:name=".allcalls.BlackListNumber">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_allcalls_prefixdialinglist" android:name=".allcalls.PrefixDialingList" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_allcalls_rejectmessage" android:name=".allcalls.RejectCallWithMsg" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="allcalls" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_allcalls_rejectmessage" android:name=".allcalls.RejectMessages" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/menu_answeringEndCall" android:name=".allcalls.AnsweringCall" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/callsettings_title_voicecall" android:name=".voicecall.VoiceCall" android:process="com.android.phone" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="voicecall" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_voicecall_barring" android:name=".voicecall.CallBarring" android:process="com.android.phone" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/videocall_title_videocall" android:name=".videocall.VideoCall">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="com.sec.android.app.callsetting.VIDEOCALL_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/callsettings_videocall_barring" android:name=".videocall.VideoCallBarring" android:process="com.android.phone" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/menu_videocallImage" android:name=".videocall.PresetImage" android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="videocall" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".allcalls.RejectMessageLocaleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".allcalls.AutoRejectBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <provider android:name=".allcalls.AllCallsProvider" android:authorities="com.sec.android.app.callsetting.allcalls" />
+        <uses-library android:name="touchwiz" />
+    </application>
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="15" />
+</manifest>
