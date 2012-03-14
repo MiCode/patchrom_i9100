@@ -13,4 +13,14 @@
         <item>Always off</item>
         <item>Always on</item>
     </string-array>
+   <string-array name="screen_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+     <string-array name="screen_mode_entries">
+        <item>Dynamic</item>
+        <item>Standard</item>
+        <item>Movie</item>
+    </string-array>
 </resources>

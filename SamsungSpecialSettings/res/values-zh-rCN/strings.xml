@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="factory_settings">原厂设置</string>
+    <string name="screen_mode_setting">背景效果</string>
+    <string name="screen_mode_summary">选择屏幕模式</string>
+    <string name="touch_key_light">触摸按键灯持续时间</string>
+    <string name="touch_key_light_summary">调节触摸键灯光自动关闭前的延迟时间</string>
+    <string name="display_saving">自动调节屏幕电量</string>
+    <string name="display_saving_mode_summary">通过分析图像和调节显示屏亮度以节省电量</string>
+    <string name="a_sensor_title">水平校准</string>
+    <string name="a_sensor_summary">使用加速仪水平校准</string>
+    <string name="g_sensor_title">Gryo传感器校准</string>
+    <string name="g_sensor_summary">Gryo传感器校准</string>
+</resources>

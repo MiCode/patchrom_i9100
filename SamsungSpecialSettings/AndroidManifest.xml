@@ -36,7 +36,8 @@
     <application android:label="Samsung Settings"
                  android:theme="@miui:style/Theme.Light">
         <activity android:name="SamsungSpecialSettings"
-                  android:theme="@miui:style/Theme.Light">
+                  android:theme="@miui:style/Theme.Light"
+                  android:label="@string/factory_settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="com.android.setttings.device_specific" />

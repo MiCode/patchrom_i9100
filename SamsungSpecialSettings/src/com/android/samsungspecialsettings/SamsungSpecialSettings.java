@@ -15,6 +15,7 @@
  */
 
 package com.android.samsungspecialsettings;
+
 import android.app.ActivityManagerNative;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -55,9 +56,11 @@ public class SamsungSpecialSettings extends PreferenceActivity implements
 
     /** If there is no setting in the provider, use this. */
     private static final String KEY_TOUCH_KEY_LIGHT = "touch_key_light";
-    private static final String KEY_DISPLAY_SAVING = "display_saving";
+    private static final String KEY_DISPLAY_SAVING  = "power_saving_mode";
+    private static final String KEY_SCREEN_MODE     = "screen_mode";
 
     private ListPreference mTouchKeyLight;
+    private ListPreference mScreenMode;
     private CheckBoxPreference mDisplaySaving;
  
     public void onCreate(Bundle savedInstanceState) {
@@ -70,14 +73,21 @@ public class SamsungSpecialSettings extends PreferenceActivity implements
         addPreferencesFromResource(R.xml.samsung_special_settings);
 
         mTouchKeyLight = (ListPreference) findPreference(KEY_TOUCH_KEY_LIGHT);
-        //please read the value of TouchKeyLightDuration and set it to mTouchKeyLight
-        //mTouchKeyLight.setValue(String.valueOf(currentTimeout));
         mTouchKeyLight.setOnPreferenceChangeListener(this);
         mTouchKeyLight.setEnabled(true);
+        int light = Settings.System.getInt(getContentResolver(), "button_key_light", 0);
+        mTouchKeyLight.setValue(String.valueOf(light));
+
+        mScreenMode = (ListPreference) findPreference(KEY_SCREEN_MODE);
+        mScreenMode.setOnPreferenceChangeListener(this);
+        mScreenMode.setEnabled(true);
+        int mode = Settings.System.getInt(getContentResolver(), "screen_mode_setting", 0);
+        mScreenMode.setValue(String.valueOf(mode));
 
         mDisplaySaving = (CheckBoxPreference) findPreference(KEY_DISPLAY_SAVING);
-        updateAutoAdjustScreenPowerState();
-
+        int saving = Settings.System.getInt(getContentResolver(), KEY_DISPLAY_SAVING, 0); 
+        mDisplaySaving.setChecked( 1 == saving );
+        updateAutoAdjustScreenPowerState(mDisplaySaving.isChecked());
     }
     
     @Override
@@ -88,11 +98,12 @@ public class SamsungSpecialSettings extends PreferenceActivity implements
             Log.i(LOG_TAG, "Auto adjust screen power");
             if (mDisplaySaving.isChecked()) {
                 Log.i(LOG_TAG, "Checked");
-                //please write the value in to the database here
+                Settings.System.putInt(getContentResolver(), KEY_DISPLAY_SAVING, 1); 
             } else {
                 Log.i(LOG_TAG, "Unchecked");
-                //please write the value in to the database here
+                Settings.System.putInt(getContentResolver(), KEY_DISPLAY_SAVING, 0); 
             }
+            updateAutoAdjustScreenPowerState(mDisplaySaving.isChecked());
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -109,9 +120,9 @@ public class SamsungSpecialSettings extends PreferenceActivity implements
         }
     }
     
-    private void updateAutoAdjustScreenPowerState(){
+    private void updateAutoAdjustScreenPowerState(boolean state){
         Log.i(LOG_TAG, "updateAutoAdjustScreenPowerState");
-        //please update the state of mDisplaySaving here
+        //com.sec.android.hardware.SecHardwareInterface.setAmoledACL(state);
     }
 
     @Override
@@ -122,7 +133,24 @@ public class SamsungSpecialSettings extends PreferenceActivity implements
             int value = Integer.parseInt((String) objValue);
             //please put the value in to the database
             Log.i(LOG_TAG, "value: " + value);
+
+            try {
+                Settings.System.putInt(getContentResolver(), "button_key_light", value);
+                mTouchKeyLight.setValue(String.valueOf(value));
+            }
+            catch ( java.lang.NumberFormatException e) {
+            }
         }
+        else if (KEY_SCREEN_MODE.equals(key)) {
+            int value = Integer.parseInt((String) objValue);
+            try {
+                Settings.System.putInt(getContentResolver(), "screen_mode_setting", value);
+                mScreenMode.setValue(String.valueOf(value));
+            }
+            catch ( java.lang.NumberFormatException e) {
+            }
+        }
+
         return true;
     }
 }

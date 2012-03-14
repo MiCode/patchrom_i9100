@@ -12,15 +12,17 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
+        android:title="@string/samsung_settings"
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        android:title="@string/samsung_settings"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
-        <Preference
+        <ListPreference
             android:key="screen_mode"
             android:title="@string/screen_mode_setting"
             android:summary="@string/screen_mode_summary"
+            android:entries="@array/screen_mode_entries"
+            android:entryValues="@array/screen_mode_values" 
             android:persistent="false" />
 
         <ListPreference
@@ -32,21 +34,21 @@
             android:persistent="false"/>
 
         <CheckBoxPreference
-            android:key="display_saving"
+            android:key="power_saving_mode"
             android:title="@string/display_saving"
             android:summary="@string/display_saving_mode_summary"
             android:persistent="false"/>
 
-        <Preference
+        <!--Preference
             android:key="a_sensor"
             android:title="@string/a_sensor_title"
             android:summary="@string/a_sensor_summary"
-            android:persistent="false" />
+            android:persistent="false" /-->
 
-        <Preference
+        <!--Preference
             android:key="g_sensor"
             android:title="@string/g_sensor_title"
             android:summary="@string/g_sensor_summary"
-            android:persistent="false" />
+            android:persistent="false" /-->
 </PreferenceScreen>
 
