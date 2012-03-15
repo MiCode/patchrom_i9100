@@ -25,7 +25,7 @@
     return-void
 .end method
 
-.method private updateAutoAdjustScreenPowerState(Z)V
+.method private static updateAutoAdjustScreenPowerState(Z)V
     .locals 2
     .parameter "state"
 
@@ -37,8 +37,80 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-static {p0}, Lcom/sec/android/hardware/SecHardwareInterface;->setAmoledACL(Z)V
+
     .line 126
     return-void
+.end method
+
+.method private static updateScreenMode(I)V
+    .locals 4
+    .parameter "mode"
+
+    .prologue
+    .line 129
+    const-string v1, "SamsungSpecialSettingsLog"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "updateScreenMode:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 132
+
+    :try_start_0
+    invoke-static {p0}, Lcom/sec/android/hardware/SecHardwareInterface;->setmDNIeUserMode(I)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 137
+    :goto_0
+    return-void
+
+    .line 134
+    :catch_0
+    move-exception v0
+
+    .line 135
+    .local v0, e:Ljava/lang/Exception;
+    const-string v1, "SamsungSpecialSettingsLog"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Failed to updateScreenMode:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
 .end method
 
 
@@ -204,7 +276,7 @@
 
     move-result v4
 
-    invoke-direct {p0, v4}, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->updateAutoAdjustScreenPowerState(Z)V
+    invoke-static {v4}, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->updateAutoAdjustScreenPowerState(Z)V
 
     .line 91
     return-void
@@ -265,19 +337,19 @@
     .parameter "objValue"
 
     .prologue
-    .line 130
+    .line 141
     const-string v2, "SamsungSpecialSettingsLog"
 
     const-string v3, "onPreferenceChange"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
+    .line 142
     invoke-virtual {p1}, Landroid/preference/Preference;->getKey()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 132
+    .line 143
     .local v0, key:Ljava/lang/String;
     const-string v2, "touch_key_light"
 
@@ -287,7 +359,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 133
+    .line 144
     check-cast p2, Ljava/lang/String;
 
     .end local p2
@@ -295,7 +367,7 @@
 
     move-result v1
 
-    .line 135
+    .line 146
     .local v1, value:I
     const-string v2, "SamsungSpecialSettingsLog"
 
@@ -319,7 +391,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
+    .line 149
     :try_start_0
     invoke-virtual {p0}, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -329,7 +401,7 @@
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 139
+    .line 150
     iget-object v2, p0, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->mTouchKeyLight:Landroid/preference/ListPreference;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -340,7 +412,7 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 154
+    .line 166
     .end local v1           #value:I
     :cond_0
     :goto_0
@@ -348,7 +420,7 @@
 
     return v2
 
-    .line 144
+    .line 155
     .restart local p2
     :cond_1
     const-string v2, "screen_mode"
@@ -359,7 +431,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 145
+    .line 156
     check-cast p2, Ljava/lang/String;
 
     .end local p2
@@ -367,9 +439,12 @@
 
     move-result v1
 
-    .line 147
+    .line 158
     .restart local v1       #value:I
     :try_start_1
+    invoke-static {v1}, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->updateScreenMode(I)V
+
+    .line 159
     invoke-virtual {p0}, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -378,7 +453,7 @@
 
     invoke-static {v2, v3, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 148
+    .line 160
     iget-object v2, p0, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->mScreenMode:Landroid/preference/ListPreference;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -391,13 +466,13 @@
 
     goto :goto_0
 
-    .line 150
+    .line 162
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 141
+    .line 152
     :catch_1
     move-exception v2
 
@@ -479,7 +554,7 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->updateAutoAdjustScreenPowerState(Z)V
+    invoke-static {v0}, Lcom/android/samsungspecialsettings/SamsungSpecialSettings;->updateAutoAdjustScreenPowerState(Z)V
 
     goto :goto_0
 

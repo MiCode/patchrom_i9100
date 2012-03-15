@@ -9,7 +9,7 @@ local-zip-file     := stockrom.zip
 local-out-zip-file := MIUI_i9100.zip
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := Phone CallSetting
+local-modified-apps := Phone CallSetting SamsungSettings
 
 local-modified-jars := framework2
 
