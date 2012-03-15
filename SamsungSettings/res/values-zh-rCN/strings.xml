@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="factory_settings">原厂设置</string>
-    <string name="screen_mode_setting">背景效果</string>
+    <string name="screen_mode_setting">屏幕模式</string>
     <string name="screen_mode_summary">选择屏幕模式</string>
     <string name="touch_key_light">触摸按键灯持续时间</string>
     <string name="touch_key_light_summary">调节触摸键灯光自动关闭前的延迟时间</string>

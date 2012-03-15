@@ -63,7 +63,6 @@
 
 <favorite launcher:className="com.miui.compass.CompassActivity" launcher:packageName="com.miui.compass" launcher:screen="2" launcher:x="0" launcher:y="3" />
 <favorite launcher:className="com.miui.bugreport.BugReportActivity" launcher:packageName="com.miui.bugreport" launcher:screen="2" launcher:x="1" launcher:y="3" />
-<favorite launcher:className="com.miui.antispam.firewall.FirewallTab" launcher:packageName="com.miui.antispam" launcher:screen="2" launcher:x="2" launcher:y="3" />
 <!-- folder -->
 <favorite launcher:className="com.android.updater.MainActivity" launcher:packageName="com.android.updater" launcher:container="1" launcher:x="" launcher:y="" />
 <favorite launcher:className="com.miui.backup.BackupActivity" launcher:packageName="com.miui.backup" launcher:container="1" launcher:x="" launcher:y="" />
