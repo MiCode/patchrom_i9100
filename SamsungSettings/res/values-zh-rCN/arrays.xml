@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="touch_key_light_entries">
+        <item>1.5秒</item>
+        <item>6秒</item>
+        <item>始终关闭</item>
+        <item>始终打开</item>
+    </string-array>
+    <string-array name="screen_mode_entries">
+        <item>动态</item>
+        <item>标准</item>
+        <item>影院</item>
+    </string-array>
+</resources>

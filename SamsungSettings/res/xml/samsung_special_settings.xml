@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <ListPreference android:persistent="false" android:entries="@array/screen_mode_entries" android:title="@string/screen_mode_setting" android:key="screen_mode" android:summary="@string/screen_mode_summary" android:entryValues="@array/screen_mode_values" />
+    <ListPreference android:persistent="false" android:entries="@array/touch_key_light_entries" android:title="@string/touch_key_light" android:key="touch_key_light" android:summary="@string/touch_key_light_summary" android:entryValues="@array/touch_key_light_values" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/display_saving" android:key="power_saving_mode" android:summary="@string/display_saving_mode_summary" />
+</PreferenceScreen>
