@@ -2412,8 +2412,6 @@
     .line 978
     .local v1, isLockScreenWallpaperOn:Z
     :goto_0
-    const/4 v1, 0x0
-
     if-eqz v1, :cond_2
 
     .line 979
