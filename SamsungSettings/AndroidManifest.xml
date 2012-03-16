@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:versionCode="15" android:versionName="4.0.3-eng.gexudong.20120315.102024" package="com.android.samsungspecialsettings"
+<manifest android:sharedUserId="android.uid.system" android:versionCode="15" android:versionName="4.0.3-eng.gexudong.20120315.102024" package="com.android.samsungspecialsettings"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
