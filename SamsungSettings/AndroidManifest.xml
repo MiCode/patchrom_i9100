@@ -17,7 +17,7 @@
         <activity android:theme="@miui:style/Theme.Light" android:label="@string/factory_settings" android:name="SamsungSpecialSettings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.android.setttings.device_specific" />
+                <action android:name="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.DeviceSpecial" />
