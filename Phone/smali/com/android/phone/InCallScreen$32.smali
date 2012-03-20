@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 4994
+    .line 5000
     iput-object p1, p0, Lcom/android/phone/InCallScreen$32;->this$0:Lcom/android/phone/InCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InCallScreen$32;->val$fgCall:Lcom/android/internal/telephony/Call;
@@ -53,14 +53,14 @@
     .parameter "pos"
 
     .prologue
-    .line 4997
+    .line 5003
     packed-switch p2, :pswitch_data_0
 
-    .line 5040
+    .line 5046
     :goto_0
     return-void
 
-    .line 4999
+    .line 5005
     :pswitch_0
     :try_start_0
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->this$0:Lcom/android/phone/InCallScreen;
@@ -78,7 +78,7 @@
     #setter for: Lcom/android/phone/InCallScreen;->mAnswerCallAfterThisDisconnect:I
     invoke-static {v3, v4}, Lcom/android/phone/InCallScreen;->access$3602(Lcom/android/phone/InCallScreen;I)I
 
-    .line 5001
+    .line 5007
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->val$fgCall:Lcom/android/internal/telephony/Call;
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->getConnections()Ljava/util/List;
@@ -103,7 +103,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 5002
+    .line 5008
     .local v0, c:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->hangup()V
     :try_end_0
@@ -111,13 +111,13 @@
 
     goto :goto_1
 
-    .line 5037
+    .line 5043
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     .end local v2           #i$:Ljava/util/Iterator;
     :catch_0
     move-exception v1
 
-    .line 5038
+    .line 5044
     .local v1, ex:Lcom/android/internal/telephony/CallStateException;
     const-string v3, "InCallScreen"
 
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 5007
+    .line 5013
     .end local v1           #ex:Lcom/android/internal/telephony/CallStateException;
     .restart local v2       #i$:Ljava/util/Iterator;
     :cond_0
@@ -157,7 +157,7 @@
 
     goto :goto_0
 
-    .line 5010
+    .line 5016
     .end local v2           #i$:Ljava/util/Iterator;
     :pswitch_1
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->this$0:Lcom/android/phone/InCallScreen;
@@ -175,7 +175,7 @@
     #setter for: Lcom/android/phone/InCallScreen;->mAnswerCallAfterThisDisconnect:I
     invoke-static {v3, v4}, Lcom/android/phone/InCallScreen;->access$3602(Lcom/android/phone/InCallScreen;I)I
 
-    .line 5012
+    .line 5018
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->val$bgCall:Lcom/android/internal/telephony/Call;
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->getConnections()Ljava/util/List;
@@ -200,13 +200,13 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 5013
+    .line 5019
     .restart local v0       #c:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->hangup()V
 
     goto :goto_2
 
-    .line 5018
+    .line 5024
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     :cond_1
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->this$0:Lcom/android/phone/InCallScreen;
@@ -218,7 +218,7 @@
 
     goto :goto_0
 
-    .line 5021
+    .line 5027
     .end local v2           #i$:Ljava/util/Iterator;
     :pswitch_2
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->this$0:Lcom/android/phone/InCallScreen;
@@ -248,7 +248,7 @@
     #setter for: Lcom/android/phone/InCallScreen;->mAnswerCallAfterThisDisconnect:I
     invoke-static {v3, v4}, Lcom/android/phone/InCallScreen;->access$3602(Lcom/android/phone/InCallScreen;I)I
 
-    .line 5024
+    .line 5030
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->val$fgCall:Lcom/android/internal/telephony/Call;
 
     invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->getConnections()Ljava/util/List;
@@ -273,13 +273,13 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 5025
+    .line 5031
     .restart local v0       #c:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->hangup()V
 
     goto :goto_3
 
-    .line 5027
+    .line 5033
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     :cond_2
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->val$bgCall:Lcom/android/internal/telephony/Call;
@@ -305,13 +305,13 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 5028
+    .line 5034
     .restart local v0       #c:Lcom/android/internal/telephony/Connection;
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->hangup()V
 
     goto :goto_4
 
-    .line 5034
+    .line 5040
     .end local v0           #c:Lcom/android/internal/telephony/Connection;
     :cond_3
     iget-object v3, p0, Lcom/android/phone/InCallScreen$32;->this$0:Lcom/android/phone/InCallScreen;
@@ -325,7 +325,7 @@
 
     goto/16 :goto_0
 
-    .line 4997
+    .line 5003
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

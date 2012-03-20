@@ -387,7 +387,7 @@
     .locals 1
 
     .prologue
-    .line 315
+    .line 317
     const/16 v0, 0x14
 
     sput v0, Lcom/android/server/PowerManagerService;->POWERSAVEMODE_BRIGHTNESS_OFFSET:I
@@ -409,27 +409,27 @@
 
     const/4 v4, 0x0
 
-    .line 559
+    .line 561
     invoke-direct {p0}, Landroid/os/IPowerManager$Stub;-><init>()V
 
-    .line 148
+    .line 150
     const/16 v2, 0x1770
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mShortKeylightDelay:I
 
-    .line 183
+    .line 185
     iput-boolean v7, p0, Lcom/android/server/PowerManagerService;->mAnimateScreenLights:Z
 
-    .line 199
+    .line 201
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mDoneBooting:Z
 
-    .line 200
+    .line 202
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mBootCompleted:Z
 
-    .line 201
+    .line 203
     iput v4, p0, Lcom/android/server/PowerManagerService;->mStayOnConditions:I
 
-    .line 202
+    .line 204
     const/4 v2, 0x3
 
     new-array v2, v2, [I
@@ -438,94 +438,94 @@
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
-    .line 203
+    .line 205
     const/4 v2, 0x3
 
     new-array v2, v2, [I
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mBroadcastWhy:[I
 
-    .line 204
+    .line 206
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mPreparingForScreenOn:Z
 
-    .line 205
+    .line 207
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mSkippedScreenOn:Z
 
-    .line 206
+    .line 208
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mInitialized:Z
 
-    .line 207
+    .line 209
     iput v4, p0, Lcom/android/server/PowerManagerService;->mPartialCount:I
 
-    .line 213
+    .line 215
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mKeyboardVisible:Z
 
-    .line 214
+    .line 216
     iput-boolean v7, p0, Lcom/android/server/PowerManagerService;->mUserActivityAllowed:Z
 
-    .line 215
+    .line 217
     iput v4, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
-    .line 216
+    .line 218
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mProximitySensorEnabled:Z
 
-    .line 217
+    .line 219
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
-    .line 218
+    .line 220
     iput v5, p0, Lcom/android/server/PowerManagerService;->mProximityPendingValue:I
 
-    .line 222
+    .line 224
     const v2, 0x7fffffff
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mMaximumScreenOffTimeout:I
 
-    .line 227
+    .line 229
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lcom/android/server/PowerManagerService;->mLastEventTime:J
 
-    .line 230
+    .line 232
     new-instance v2, Lcom/android/server/PowerManagerService$LockList;
 
     invoke-direct {v2, p0, v6}, Lcom/android/server/PowerManagerService$LockList;-><init>(Lcom/android/server/PowerManagerService;Lcom/android/server/PowerManagerService$1;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
-    .line 231
+    .line 233
     new-instance v2, Lcom/android/server/PowerManagerService$DVFSLockList;
 
     invoke-direct {v2, p0, v6}, Lcom/android/server/PowerManagerService$DVFSLockList;-><init>(Lcom/android/server/PowerManagerService;Lcom/android/server/PowerManagerService$1;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
 
-    .line 232
+    .line 234
     iput-object v6, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 233
+    .line 235
     iput-object v6, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 234
+    .line 236
     iput-object v6, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
 
-    .line 235
+    .line 237
     iput v4, p0, Lcom/android/server/PowerManagerService;->mPersistentDVFSLocksInfo:I
 
-    .line 236
+    .line 238
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mMapPersistentDVFSLock:Ljava/util/HashMap;
 
-    .line 254
+    .line 256
     new-instance v2, Lcom/android/server/PowerManagerService$TimeoutTask;
 
     invoke-direct {v2, p0, v6}, Lcom/android/server/PowerManagerService$TimeoutTask;-><init>(Lcom/android/server/PowerManagerService;Lcom/android/server/PowerManagerService$1;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mTimeoutTask:Lcom/android/server/PowerManagerService$TimeoutTask;
 
-    .line 255
+    .line 257
     new-instance v2, Lcom/android/server/PowerManagerService$BrightnessState;
 
     const/4 v3, 0x2
@@ -534,165 +534,165 @@
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
-    .line 258
+    .line 260
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mIsPowered:Z
 
-    .line 266
+    .line 268
     iput v8, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
-    .line 267
+    .line 269
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
 
-    .line 268
+    .line 270
     iput v5, p0, Lcom/android/server/PowerManagerService;->mHighestLightSensorValue:I
 
-    .line 269
+    .line 271
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingDecrease:Z
 
-    .line 270
+    .line 272
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingIncrease:Z
 
-    .line 271
+    .line 273
     iput v8, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingValue:F
 
-    .line 272
+    .line 274
     iput v5, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightness:I
 
-    .line 273
+    .line 275
     iput v5, p0, Lcom/android/server/PowerManagerService;->mLightSensorButtonBrightness:I
 
-    .line 274
+    .line 276
     iput v5, p0, Lcom/android/server/PowerManagerService;->mLightSensorKeyboardBrightness:I
 
-    .line 275
+    .line 277
     iput v5, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessLowerLimit:I
 
-    .line 276
+    .line 278
     iput v5, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessUpperLimit:I
 
-    .line 277
+    .line 279
     iput-boolean v7, p0, Lcom/android/server/PowerManagerService;->mDimScreen:Z
 
-    .line 278
+    .line 280
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mIsDocked:Z
 
-    .line 280
+    .line 282
     iput v4, p0, Lcom/android/server/PowerManagerService;->mPokey:I
 
-    .line 281
+    .line 283
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mPokeAwakeOnSet:Z
 
-    .line 282
+    .line 284
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mInitComplete:Z
 
-    .line 283
+    .line 285
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mPokeLocks:Ljava/util/HashMap;
 
-    .line 287
+    .line 289
     iput v5, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessOverride:I
 
-    .line 288
+    .line 290
     iput v5, p0, Lcom/android/server/PowerManagerService;->mButtonBrightnessOverride:I
 
-    .line 300
+    .line 302
     const/16 v2, 0x10
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mAnimationSetting:I
 
-    .line 311
+    .line 313
     const/16 v2, 0xff
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mMaxBrightness:I
 
-    .line 313
+    .line 315
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mSystemPowerSaveModeEnabled:Z
 
-    .line 314
+    .line 316
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mPrevSystemPowerSaveModeEnabled:Z
 
-    .line 1536
+    .line 1538
     new-instance v2, Lcom/android/server/PowerManagerService$4;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$4;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mScreenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
 
-    .line 1551
+    .line 1553
     new-instance v2, Lcom/android/server/PowerManagerService$5;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$5;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mNotificationTask:Ljava/lang/Runnable;
 
-    .line 1632
+    .line 1634
     new-instance v2, Lcom/android/server/PowerManagerService$6;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$6;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mScreenOnBroadcastDone:Landroid/content/BroadcastReceiver;
 
-    .line 1643
+    .line 1645
     new-instance v2, Lcom/android/server/PowerManagerService$7;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$7;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mScreenOffBroadcastDone:Landroid/content/BroadcastReceiver;
 
-    .line 1656
+    .line 1658
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mIsSipVisible:Z
 
-    .line 1657
+    .line 1659
     new-instance v2, Lcom/android/server/PowerManagerService$8;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$8;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mSipIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1851
+    .line 1853
     new-instance v2, Lcom/android/server/PowerManagerService$9;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$9;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mForceReenableScreenTask:Ljava/lang/Runnable;
 
-    .line 2740
+    .line 2742
     new-instance v2, Lcom/android/server/PowerManagerService$10;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$10;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mProximityTask:Ljava/lang/Runnable;
 
-    .line 2754
+    .line 2756
     new-instance v2, Lcom/android/server/PowerManagerService$11;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$11;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mAutoBrightnessTask:Ljava/lang/Runnable;
 
-    .line 3446
+    .line 3449
     new-instance v2, Lcom/android/server/PowerManagerService$14;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$14;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mProximityListener:Landroid/hardware/SensorEventListener;
 
-    .line 3490
+    .line 3493
     new-instance v2, Lcom/android/server/PowerManagerService$15;
 
     invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$15;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mLightListener:Landroid/hardware/SensorEventListener;
 
-    .line 561
+    .line 563
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 562
+    .line 564
     .local v0, token:J
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -700,37 +700,37 @@
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->MY_UID:I
 
-    .line 563
+    .line 565
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->MY_PID:I
 
-    .line 564
+    .line 566
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 567
+    .line 569
     const-wide/32 v2, 0x240c8400
 
     invoke-static {v2, v3}, Landroid/os/Power;->setLastUserActivityTimeout(J)I
 
-    .line 570
+    .line 572
     iput v4, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     iput v4, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
-    .line 573
+    .line 575
     invoke-static {}, Lcom/android/server/Watchdog;->getInstance()Lcom/android/server/Watchdog;
 
     move-result-object v2
 
     invoke-virtual {v2, p0}, Lcom/android/server/Watchdog;->addMonitor(Lcom/android/server/Watchdog$Monitor;)V
 
-    .line 574
+    .line 576
     return-void
 
-    .line 202
+    .line 204
     nop
 
     :array_0
@@ -746,28 +746,28 @@
     .parameter "type"
 
     .prologue
-    .line 4003
+    .line 4006
     packed-switch p0, :pswitch_data_0
 
-    .line 4010
+    .line 4013
     const-string v0, "???                           "
 
     :goto_0
     return-object v0
 
-    .line 4006
+    .line 4009
     :pswitch_0
     const-string v0, "DVFS_MIN_LIMIT"
 
     goto :goto_0
 
-    .line 4008
+    .line 4011
     :pswitch_1
     const-string v0, "DVFS_MAX_LIMIT"
 
     goto :goto_0
 
-    .line 4003
+    .line 4006
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -780,7 +780,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     return v0
@@ -791,7 +791,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->forceUserActivityLocked()V
 
     return-void
@@ -803,7 +803,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->dockStateChanged(I)V
 
     return-void
@@ -814,7 +814,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mSettings:Landroid/content/ContentQueryMap;
 
     return-object v0
@@ -826,7 +826,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput p1, p0, Lcom/android/server/PowerManagerService;->mStayOnConditions:I
 
     return p1
@@ -837,7 +837,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffTimeoutSetting:I
 
     return v0
@@ -849,7 +849,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput p1, p0, Lcom/android/server/PowerManagerService;->mScreenOffTimeoutSetting:I
 
     return p1
@@ -860,7 +860,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     return v0
@@ -872,7 +872,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput p1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     return p1
@@ -884,7 +884,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->setScreenBrightnessMode(I)V
 
     return-void
@@ -895,7 +895,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
 
     return-void
@@ -906,7 +906,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mTimeoutTask:Lcom/android/server/PowerManagerService$TimeoutTask;
 
     return-object v0
@@ -919,7 +919,7 @@
     .parameter "x2"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/PowerManagerService;->setTimeoutLocked(JI)V
 
     return-void
@@ -935,7 +935,7 @@
     .parameter "x5"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct/range {p0 .. p7}, Lcom/android/server/PowerManagerService;->userActivity(JJZIZ)V
 
     return-void
@@ -946,7 +946,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mAnimationSetting:I
 
     return v0
@@ -958,7 +958,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput p1, p0, Lcom/android/server/PowerManagerService;->mAnimationSetting:I
 
     return p1
@@ -970,7 +970,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mAnimationSetting:I
 
     or-int/2addr v0, p1
@@ -985,7 +985,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffHandler:Landroid/os/Handler;
 
     return-object v0
@@ -997,7 +997,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-object p1, p0, Lcom/android/server/PowerManagerService;->mScreenOffHandler:Landroid/os/Handler;
 
     return-object p1
@@ -1008,7 +1008,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffThread:Landroid/os/HandlerThread;
 
     return-object v0
@@ -1020,7 +1020,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mInitComplete:Z
 
     return p1
@@ -1031,7 +1031,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->MY_UID:I
 
     return v0
@@ -1042,7 +1042,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->updateSettingsValues()V
 
     return-void
@@ -1053,7 +1053,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
     return v0
@@ -1065,7 +1065,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput p1, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
     return p1
@@ -1076,7 +1076,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
     return v0
@@ -1088,7 +1088,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->printCurLock(I)V
 
     return-void
@@ -1100,7 +1100,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->setPowerState(I)V
 
     return-void
@@ -1111,7 +1111,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
     return v0
@@ -1125,7 +1125,7 @@
     .parameter "x3"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct/range {p0 .. p5}, Lcom/android/server/PowerManagerService;->setTimeoutLocked(JJI)V
 
     return-void
@@ -1136,7 +1136,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mPreparingForScreenOn:Z
 
     return v0
@@ -1148,7 +1148,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mPreparingForScreenOn:Z
 
     return p1
@@ -1161,7 +1161,7 @@
     .parameter "x2"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1, p2}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
     return-void
@@ -1172,7 +1172,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     return-object v0
@@ -1183,7 +1183,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->MY_PID:I
 
     return v0
@@ -1194,7 +1194,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
     return-object v0
@@ -1205,7 +1205,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mBroadcastWhy:[I
 
     return-object v0
@@ -1216,7 +1216,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
 
     return-object v0
@@ -1227,7 +1227,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -1238,7 +1238,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOnIntent:Landroid/content/Intent;
 
     return-object v0
@@ -1249,7 +1249,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOnBroadcastDone:Landroid/content/BroadcastReceiver;
 
     return-object v0
@@ -1260,7 +1260,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -1271,7 +1271,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffIntent:Landroid/content/Intent;
 
     return-object v0
@@ -1282,7 +1282,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffBroadcastDone:Landroid/content/BroadcastReceiver;
 
     return-object v0
@@ -1293,7 +1293,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->forceReenableScreen()V
 
     return-void
@@ -1307,7 +1307,7 @@
     .parameter "x3"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/PowerManagerService;->releaseWakeLockLocked(Landroid/os/IBinder;IZ)V
 
     return-void
@@ -1320,7 +1320,7 @@
     .parameter "x2"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1, p2}, Lcom/android/server/PowerManagerService;->setLightBrightness(II)V
 
     return-void
@@ -1331,7 +1331,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mPrevSystemPowerSaveModeEnabled:Z
 
     return v0
@@ -1342,7 +1342,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mSystemPowerSaveModeEnabled:Z
 
     return v0
@@ -1353,7 +1353,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffReason:I
 
     return v0
@@ -1365,7 +1365,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->screenOffFinishedAnimatingLocked(I)I
 
     move-result v0
@@ -1378,7 +1378,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
     return-object v0
@@ -1390,7 +1390,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->nativeStartSurfaceFlingerAnimation(I)V
 
     return-void
@@ -1401,7 +1401,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mProximityPendingValue:I
 
     return v0
@@ -1413,7 +1413,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput p1, p0, Lcom/android/server/PowerManagerService;->mProximityPendingValue:I
 
     return p1
@@ -1425,7 +1425,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->proximityChangedLocked(Z)V
 
     return-void
@@ -1436,7 +1436,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mProximityPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     return-object v0
@@ -1447,7 +1447,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     return-object v0
@@ -1458,7 +1458,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingDecrease:Z
 
     return v0
@@ -1470,7 +1470,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingDecrease:Z
 
     return p1
@@ -1481,7 +1481,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingIncrease:Z
 
     return v0
@@ -1493,7 +1493,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingIncrease:Z
 
     return p1
@@ -1504,7 +1504,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingValue:F
 
     return v0
@@ -1516,7 +1516,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput p1, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingValue:F
 
     return p1
@@ -1528,7 +1528,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->lightSensorChangedLocked(I)V
 
     return-void
@@ -1540,7 +1540,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->isScreenLock(I)Z
 
     move-result v0
@@ -1553,7 +1553,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
 
     return v0
@@ -1565,7 +1565,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
 
     return p1
@@ -1576,7 +1576,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-wide v0, p0, Lcom/android/server/PowerManagerService;->mLastProximityEventTime:J
 
     return-wide v0
@@ -1588,7 +1588,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-wide p1, p0, Lcom/android/server/PowerManagerService;->mLastProximityEventTime:J
 
     return-wide p1
@@ -1599,7 +1599,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mProximityTask:Ljava/lang/Runnable;
 
     return-object v0
@@ -1610,7 +1610,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mProximitySensor:Landroid/hardware/Sensor;
 
     return-object v0
@@ -1621,7 +1621,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->isScreenTurningOffLocked()Z
 
     move-result v0
@@ -1634,7 +1634,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mIsPowered:Z
 
     return v0
@@ -1645,7 +1645,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
     return v0
@@ -1657,7 +1657,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mIsPowered:Z
 
     return p1
@@ -1668,7 +1668,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-wide v0, p0, Lcom/android/server/PowerManagerService;->mLastScreenOnTime:J
 
     return-wide v0
@@ -1679,7 +1679,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorWarmupTime:I
 
     return v0
@@ -1690,7 +1690,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mAutoBrightnessTask:Ljava/lang/Runnable;
 
     return-object v0
@@ -1701,7 +1701,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
 
     return-object v0
@@ -1713,7 +1713,7 @@
     .parameter "x1"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->releaseDVFSLockLocked(Landroid/os/IBinder;)V
 
     return-void
@@ -1724,7 +1724,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     return-object v0
@@ -1735,7 +1735,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     return-object v0
@@ -1746,7 +1746,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mBatteryService:Lcom/android/server/BatteryService;
 
     return-object v0
@@ -1757,7 +1757,7 @@
     .parameter "x0"
 
     .prologue
-    .line 103
+    .line 105
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->updateWakeLockLocked()V
 
     return-void
@@ -1773,7 +1773,7 @@
     .parameter "tag"
 
     .prologue
-    .line 3860
+    .line 3863
     const-string v1, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1840,18 +1840,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3862
+    .line 3865
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
 
     invoke-virtual {v1, p3}, Lcom/android/server/PowerManagerService$DVFSLockList;->getIndex(Landroid/os/IBinder;)I
 
     move-result v8
 
-    .line 3865
+    .line 3868
     .local v8, index:I
     if-gez v8, :cond_2
 
-    .line 3866
+    .line 3869
     new-instance v0, Lcom/android/server/PowerManagerService$DVFSLock;
 
     move-object v1, p0
@@ -1870,13 +1870,13 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/PowerManagerService$DVFSLock;-><init>(Lcom/android/server/PowerManagerService;IILandroid/os/IBinder;Ljava/lang/String;II)V
 
-    .line 3867
+    .line 3870
     .local v0, newDVFSwl:Lcom/android/server/PowerManagerService$DVFSLock;
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
 
     invoke-virtual {v1, v0}, Lcom/android/server/PowerManagerService$DVFSLockList;->addLock(Lcom/android/server/PowerManagerService$DVFSLock;)V
 
-    .line 3873
+    .line 3876
     :goto_0
     iget v1, v0, Lcom/android/server/PowerManagerService$DVFSLock;->type:I
 
@@ -1884,7 +1884,7 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 3874
+    .line 3877
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     if-eqz v1, :cond_0
@@ -1897,7 +1897,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 3875
+    .line 3878
     :cond_0
     const/4 v1, 0x2
 
@@ -1905,10 +1905,10 @@
 
     invoke-static {v1, v2}, Landroid/os/Power;->acquireDVFSLock(II)I
 
-    .line 3876
+    .line 3879
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 3885
+    .line 3888
     :cond_1
     :goto_1
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -1917,10 +1917,10 @@
 
     iput-wide v1, v0, Lcom/android/server/PowerManagerService$DVFSLock;->acqTime:J
 
-    .line 3886
+    .line 3889
     return-void
 
-    .line 3870
+    .line 3873
     .end local v0           #newDVFSwl:Lcom/android/server/PowerManagerService$DVFSLock;
     :cond_2
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -1934,7 +1934,7 @@
     .restart local v0       #newDVFSwl:Lcom/android/server/PowerManagerService$DVFSLock;
     goto :goto_0
 
-    .line 3879
+    .line 3882
     :cond_3
     iget v1, v0, Lcom/android/server/PowerManagerService$DVFSLock;->type:I
 
@@ -1942,7 +1942,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 3880
+    .line 3883
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     if-eqz v1, :cond_4
@@ -1955,7 +1955,7 @@
 
     if-le v1, v2, :cond_1
 
-    .line 3881
+    .line 3884
     :cond_4
     const/4 v1, 0x1
 
@@ -1963,7 +1963,7 @@
 
     invoke-static {v1, v2}, Landroid/os/Power;->acquireDVFSLock(II)I
 
-    .line 3882
+    .line 3885
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     goto :goto_1
@@ -1974,45 +1974,45 @@
     .parameter "state"
 
     .prologue
-    .line 2488
+    .line 2490
     const/4 v0, -0x1
 
-    .line 2489
+    .line 2491
     .local v0, brightness:I
     and-int/lit8 v1, p1, 0x10
 
     if-eqz v1, :cond_1
 
-    .line 2491
+    .line 2493
     and-int/lit8 p1, p1, -0x5
 
-    .line 2513
+    .line 2515
     .end local p1
     :cond_0
     :goto_0
     return p1
 
-    .line 2494
+    .line 2496
     .restart local p1
     :cond_1
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonBrightnessOverride:I
 
     if-ltz v1, :cond_3
 
-    .line 2495
+    .line 2497
     iget v0, p0, Lcom/android/server/PowerManagerService;->mButtonBrightnessOverride:I
 
-    .line 2508
+    .line 2510
     :cond_2
     :goto_1
     if-lez v0, :cond_6
 
-    .line 2509
+    .line 2511
     or-int/lit8 p1, p1, 0x4
 
     goto :goto_0
 
-    .line 2496
+    .line 2498
     :cond_3
     iget v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorButtonBrightness:I
 
@@ -2024,12 +2024,12 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 2499
+    .line 2501
     iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorButtonBrightness:I
 
     goto :goto_1
 
-    .line 2500
+    .line 2502
     :cond_4
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
@@ -2037,34 +2037,34 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 2502
+    .line 2504
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_5
 
-    .line 2503
+    .line 2505
     const/16 v0, 0xff
 
     goto :goto_1
 
-    .line 2504
+    .line 2506
     :cond_5
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     if-nez v1, :cond_2
 
-    .line 2505
+    .line 2507
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 2510
+    .line 2512
     :cond_6
     if-nez v0, :cond_0
 
-    .line 2511
+    .line 2513
     and-int/lit8 p1, p1, -0x5
 
     goto :goto_0
@@ -2075,56 +2075,56 @@
     .parameter "state"
 
     .prologue
-    .line 2518
+    .line 2520
     const/4 v0, -0x1
 
-    .line 2519
+    .line 2521
     .local v0, brightness:I
     and-int/lit8 v1, p1, 0x10
 
     if-eqz v1, :cond_1
 
-    .line 2521
+    .line 2523
     and-int/lit8 p1, p1, -0x9
 
-    .line 2544
+    .line 2546
     .end local p1
     :cond_0
     :goto_0
     return p1
 
-    .line 2523
+    .line 2525
     .restart local p1
     :cond_1
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mKeyboardVisible:Z
 
     if-nez v1, :cond_3
 
-    .line 2524
+    .line 2526
     const/4 v0, 0x0
 
-    .line 2539
+    .line 2541
     :cond_2
     :goto_1
     if-lez v0, :cond_7
 
-    .line 2540
+    .line 2542
     or-int/lit8 p1, p1, 0x8
 
     goto :goto_0
 
-    .line 2525
+    .line 2527
     :cond_3
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonBrightnessOverride:I
 
     if-ltz v1, :cond_4
 
-    .line 2526
+    .line 2528
     iget v0, p0, Lcom/android/server/PowerManagerService;->mButtonBrightnessOverride:I
 
     goto :goto_1
 
-    .line 2527
+    .line 2529
     :cond_4
     iget v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorKeyboardBrightness:I
 
@@ -2136,12 +2136,12 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 2530
+    .line 2532
     iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorKeyboardBrightness:I
 
     goto :goto_1
 
-    .line 2531
+    .line 2533
     :cond_5
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
@@ -2149,34 +2149,34 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 2533
+    .line 2535
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_6
 
-    .line 2534
+    .line 2536
     const/16 v0, 0xff
 
     goto :goto_1
 
-    .line 2535
+    .line 2537
     :cond_6
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     if-nez v1, :cond_2
 
-    .line 2536
+    .line 2538
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 2541
+    .line 2543
     :cond_7
     if-nez v0, :cond_0
 
-    .line 2542
+    .line 2544
     and-int/lit8 p1, p1, -0x9
 
     goto :goto_0
@@ -2186,7 +2186,7 @@
     .locals 2
 
     .prologue
-    .line 2102
+    .line 2104
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mIsPowered:Z
 
     if-nez v0, :cond_0
@@ -2216,21 +2216,21 @@
     .locals 2
 
     .prologue
-    .line 1412
+    .line 1414
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mTimeoutTask:Lcom/android/server/PowerManagerService$TimeoutTask;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1413
+    .line 1415
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mTimeoutTask:Lcom/android/server/PowerManagerService$TimeoutTask;
 
     const/4 v1, -0x1
 
     iput v1, v0, Lcom/android/server/PowerManagerService$TimeoutTask;->nextState:I
 
-    .line 1414
+    .line 1416
     return-void
 .end method
 
@@ -2240,24 +2240,24 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3349
+    .line 3352
     const-string v2, "PowerManagerService"
 
     const-string v3, "disableProximityLockLocked"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3351
+    .line 3354
     iget-boolean v2, p0, Lcom/android/server/PowerManagerService;->mProximitySensorEnabled:Z
 
     if-eqz v2, :cond_1
 
-    .line 3353
+    .line 3356
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3355
+    .line 3358
     .local v0, identity:J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mSensorManager:Landroid/hardware/SensorManager;
@@ -2266,14 +2266,14 @@
 
     invoke-virtual {v2, v3}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 3356
+    .line 3359
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mProximityTask:Ljava/lang/Runnable;
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 3357
+    .line 3360
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mProximityPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v2}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->isHeld()Z
@@ -2282,12 +2282,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 3358
+    .line 3361
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mProximityPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v2}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
-    .line 3360
+    .line 3363
     :cond_0
     const/4 v2, 0x0
 
@@ -2295,18 +2295,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3362
+    .line 3365
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3364
+    .line 3367
     iget-boolean v2, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
     if-eqz v2, :cond_1
 
-    .line 3365
+    .line 3368
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
-    .line 3367
+    .line 3370
     const-string v2, "PowerManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2331,20 +2331,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3370
+    .line 3373
     iget-boolean v2, p0, Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
 
     if-nez v2, :cond_1
 
-    .line 3371
+    .line 3374
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->forceUserActivityLocked()V
 
-    .line 3375
+    .line 3378
     .end local v0           #identity:J
     :cond_1
     return-void
 
-    .line 3362
+    .line 3365
     .restart local v0       #identity:J
     :catchall_0
     move-exception v2
@@ -2359,12 +2359,12 @@
     .parameter "state"
 
     .prologue
-    .line 2768
+    .line 2770
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v2
 
-    .line 2769
+    .line 2771
     if-eqz p1, :cond_2
 
     const/4 v1, 0x1
@@ -2373,17 +2373,17 @@
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mIsDocked:Z
 
-    .line 2770
+    .line 2772
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mIsDocked:Z
 
     if-eqz v1, :cond_0
 
-    .line 2771
+    .line 2773
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mHighestLightSensorValue:I
 
-    .line 2773
+    .line 2775
     :cond_0
     iget v1, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -2391,35 +2391,35 @@
 
     if-eqz v1, :cond_1
 
-    .line 2775
+    .line 2777
     iget v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
     float-to-int v0, v1
 
-    .line 2776
+    .line 2778
     .local v0, value:I
     const/high16 v1, -0x4080
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
-    .line 2777
+    .line 2779
     invoke-direct {p0, v0}, Lcom/android/server/PowerManagerService;->lightSensorChangedLocked(I)V
 
-    .line 2779
+    .line 2781
     .end local v0           #value:I
     :cond_1
     monitor-exit v2
 
-    .line 2780
+    .line 2782
     return-void
 
-    .line 2769
+    .line 2771
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2779
+    .line 2781
     :catchall_0
     move-exception v1
 
@@ -2435,7 +2435,7 @@
     .parameter "state"
 
     .prologue
-    .line 1197
+    .line 1199
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2516,7 +2516,7 @@
     .parameter "enable"
 
     .prologue
-    .line 3417
+    .line 3420
     const-string v2, "PowerManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2551,15 +2551,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3420
+    .line 3423
     iget-boolean v2, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
 
     if-nez v2, :cond_0
 
-    .line 3421
+    .line 3424
     const/4 p1, 0x0
 
-    .line 3423
+    .line 3426
     :cond_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -2569,29 +2569,29 @@
 
     if-eq v2, p1, :cond_1
 
-    .line 3424
+    .line 3427
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mLightSensorEnabled:Z
 
-    .line 3427
+    .line 3430
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mHighestLightSensorValue:I
 
-    .line 3428
+    .line 3431
     const/high16 v2, -0x4080
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
-    .line 3431
+    .line 3434
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3433
+    .line 3436
     .local v0, identity:J
     if-eqz p1, :cond_2
 
-    .line 3434
+    .line 3437
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mSensorManager:Landroid/hardware/SensorManager;
 
@@ -2605,16 +2605,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3441
+    .line 3444
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3444
+    .line 3447
     .end local v0           #identity:J
     :cond_1
     return-void
 
-    .line 3437
+    .line 3440
     .restart local v0       #identity:J
     :cond_2
     :try_start_1
@@ -2624,7 +2624,7 @@
 
     invoke-virtual {v2, v3}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 3438
+    .line 3441
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mAutoBrightnessTask:Ljava/lang/Runnable;
@@ -2635,7 +2635,7 @@
 
     goto :goto_0
 
-    .line 3441
+    .line 3444
     :catchall_0
     move-exception v2
 
@@ -2648,24 +2648,24 @@
     .locals 6
 
     .prologue
-    .line 3332
+    .line 3335
     const-string v2, "PowerManagerService"
 
     const-string v3, "enableProximityLockLocked"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3334
+    .line 3337
     iget-boolean v2, p0, Lcom/android/server/PowerManagerService;->mProximitySensorEnabled:Z
 
     if-nez v2, :cond_0
 
-    .line 3336
+    .line 3339
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3338
+    .line 3341
     .local v0, identity:J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mSensorManager:Landroid/hardware/SensorManager;
@@ -2678,22 +2678,22 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 3340
+    .line 3343
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/PowerManagerService;->mProximitySensorEnabled:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3342
+    .line 3345
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3345
+    .line 3348
     .end local v0           #identity:J
     :cond_0
     return-void
 
-    .line 3342
+    .line 3345
     .restart local v0       #identity:J
     :catchall_0
     move-exception v2
@@ -2703,27 +2703,166 @@
     throw v2
 .end method
 
+.method public static fileWriteInt(Ljava/lang/String;I)V
+    .locals 7
+    .parameter "filePath"
+    .parameter "value"
+
+    .prologue
+    .line 4018
+    const/4 v2, 0x0
+
+    .line 4020
+    .local v2, out:Ljava/io/FileOutputStream;
+    const-string v4, "PowerManagerService"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "fileWriteInt : "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, "  value : "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4024
+    :try_start_0
+    new-instance v3, Ljava/io/FileOutputStream;
+
+    new-instance v4, Ljava/io/File;
+
+    invoke-direct {v4, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v3, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 4030
+    .end local v2           #out:Ljava/io/FileOutputStream;
+    .local v3, out:Ljava/io/FileOutputStream;
+    :try_start_1
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/io/FileOutputStream;->write([B)V
+
+    .line 4031
+    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
+
+    move-object v2, v3
+
+    .line 4040
+    .end local v3           #out:Ljava/io/FileOutputStream;
+    .restart local v2       #out:Ljava/io/FileOutputStream;
+    :goto_0
+    return-void
+
+    .line 4025
+    :catch_0
+    move-exception v0
+
+    .line 4026
+    .local v0, e:Ljava/io/FileNotFoundException;
+    :try_start_2
+    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+
+    goto :goto_0
+
+    .line 4032
+    .end local v0           #e:Ljava/io/FileNotFoundException;
+    :catch_1
+    move-exception v0
+
+    .line 4033
+    .local v0, e:Ljava/io/IOException;
+    :goto_1
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    .line 4035
+    :try_start_3
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    goto :goto_0
+
+    .line 4036
+    :catch_2
+    move-exception v1
+
+    .line 4037
+    .local v1, err:Ljava/lang/Exception;
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
+
+    .line 4032
+    .end local v0           #e:Ljava/io/IOException;
+    .end local v1           #err:Ljava/lang/Exception;
+    .end local v2           #out:Ljava/io/FileOutputStream;
+    .restart local v3       #out:Ljava/io/FileOutputStream;
+    :catch_3
+    move-exception v0
+
+    move-object v2, v3
+
+    .end local v3           #out:Ljava/io/FileOutputStream;
+    .restart local v2       #out:Ljava/io/FileOutputStream;
+    goto :goto_1
+.end method
+
 .method private forceReenableScreen()V
     .locals 2
 
     .prologue
-    .line 1833
+    .line 1835
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mPreventScreenOn:Z
 
     if-nez v0, :cond_0
 
-    .line 1834
+    .line 1836
     const-string v0, "PowerManagerService"
 
     const-string v1, "forceReenableScreen: mPreventScreenOn is false, nothing to do"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1849
+    .line 1851
     :goto_0
     return-void
 
-    .line 1846
+    .line 1848
     :cond_0
     const-string v0, "PowerManagerService"
 
@@ -2731,7 +2870,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1848
+    .line 1850
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/PowerManagerService;->preventScreenOn(Z)V
@@ -2745,39 +2884,39 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2580
+    .line 2582
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->isScreenTurningOffLocked()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2582
+    .line 2584
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
     iput-boolean v3, v1, Lcom/android/server/PowerManagerService$BrightnessState;->animating:Z
 
-    .line 2584
+    .line 2586
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mUserActivityAllowed:Z
 
-    .line 2585
+    .line 2587
     .local v0, savedActivityAllowed:Z
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mUserActivityAllowed:Z
 
-    .line 2586
+    .line 2588
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
     invoke-virtual {p0, v1, v2, v3}, Lcom/android/server/PowerManagerService;->userActivity(JZ)V
 
-    .line 2587
+    .line 2589
     iput-boolean v0, p0, Lcom/android/server/PowerManagerService;->mUserActivityAllowed:Z
 
-    .line 2588
+    .line 2590
     return-void
 .end method
 
@@ -2787,7 +2926,7 @@
     .parameter "values"
 
     .prologue
-    .line 2727
+    .line 2729
     const/4 v1, 0x0
 
     .local v1, i:I
@@ -2799,34 +2938,34 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 2728
+    .line 2730
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mAutoBrightnessLevels:[I
 
     aget v2, v2, v1
 
     if-ge p1, v2, :cond_1
 
-    .line 2732
+    .line 2734
     :cond_0
     aget v2, p2, v1
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2736
+    .line 2738
     :goto_1
     return v2
 
-    .line 2727
+    .line 2729
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2733
+    .line 2735
     :catch_0
     move-exception v0
 
-    .line 2735
+    .line 2737
     .local v0, e:Ljava/lang/Exception;
     const-string v2, "PowerManagerService"
 
@@ -2834,7 +2973,7 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2736
+    .line 2738
     const/16 v2, 0xff
 
     goto :goto_1
@@ -2844,20 +2983,20 @@
     .locals 4
 
     .prologue
-    .line 2472
+    .line 2474
     :try_start_0
     iget v2, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessOverride:I
 
     if-ltz v2, :cond_0
 
-    .line 2473
+    .line 2475
     iget v2, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessOverride:I
 
-    .line 2483
+    .line 2485
     :goto_0
     return v2
 
-    .line 2474
+    .line 2476
     :cond_0
     iget v2, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightness:I
 
@@ -2871,12 +3010,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 2476
+    .line 2478
     iget v2, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightness:I
 
     goto :goto_0
 
-    .line 2478
+    .line 2480
     :cond_1
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
@@ -2890,7 +3029,7 @@
 
     move-result v0
 
-    .line 2481
+    .line 2483
     .local v0, brightness:I
     iget v2, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessDim:I
 
@@ -2902,12 +3041,12 @@
 
     goto :goto_0
 
-    .line 2482
+    .line 2484
     .end local v0           #brightness:I
     :catch_0
     move-exception v1
 
-    .line 2483
+    .line 2485
     .local v1, snfe:Landroid/provider/Settings$SettingNotFoundException;
     const/16 v2, 0xff
 
@@ -2924,32 +3063,32 @@
 
     const/4 v10, 0x0
 
-    .line 2942
+    .line 2944
     iget-wide v7, p0, Lcom/android/server/PowerManagerService;->mLastEventTime:J
 
     cmp-long v7, v7, p1
 
     if-gtz v7, :cond_5
 
-    .line 2943
+    .line 2945
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService;->isScreenOn()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 2944
+    .line 2946
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v3
 
-    .line 2945
+    .line 2947
     .local v3, pid:I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 2946
+    .line 2948
     .local v5, uid:I
     const-string v7, "PowerManagerService"
 
@@ -3025,31 +3164,31 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2948
+    .line 2950
     .end local v3           #pid:I
     .end local v5           #uid:I
     :cond_0
     iput-wide p1, p0, Lcom/android/server/PowerManagerService;->mLastEventTime:J
 
-    .line 2950
+    .line 2952
     iput v10, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
-    .line 2951
+    .line 2953
     iget-object v7, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v7}, Lcom/android/server/PowerManagerService$LockList;->size()I
 
     move-result v0
 
-    .line 2952
+    .line 2954
     .local v0, N:I
     const/4 v2, 0x0
 
-    .line 2953
+    .line 2955
     .local v2, numCleared:I
     const/4 v4, 0x0
 
-    .line 2954
+    .line 2956
     .local v4, proxLock:Z
     const/4 v1, 0x0
 
@@ -3057,7 +3196,7 @@
     :goto_0
     if-ge v1, v0, :cond_3
 
-    .line 2955
+    .line 2957
     iget-object v7, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v7, v1}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
@@ -3066,7 +3205,7 @@
 
     check-cast v6, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 2956
+    .line 2958
     .local v6, wl:Lcom/android/server/PowerManagerService$WakeLock;
     iget v7, v6, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -3076,7 +3215,7 @@
 
     if-eqz v7, :cond_1
 
-    .line 2957
+    .line 2959
     iget v7, v6, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
     and-int/lit8 v7, v7, 0x3f
@@ -3089,17 +3228,17 @@
 
     if-ne p3, v7, :cond_2
 
-    .line 2959
+    .line 2961
     const/4 v4, 0x1
 
-    .line 2954
+    .line 2956
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2961
+    .line 2963
     :cond_2
     iget-object v7, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
@@ -3111,45 +3250,45 @@
 
     iput-boolean v10, v7, Lcom/android/server/PowerManagerService$WakeLock;->activated:Z
 
-    .line 2962
+    .line 2964
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 2966
+    .line 2968
     .end local v6           #wl:Lcom/android/server/PowerManagerService$WakeLock;
     :cond_3
     if-nez v4, :cond_4
 
-    .line 2967
+    .line 2969
     iput-boolean v11, p0, Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
 
-    .line 2969
+    .line 2971
     const-string v7, "PowerManagerService"
 
     const-string v8, "setting mProxIgnoredBecauseScreenTurnedOff"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2972
+    .line 2974
     :cond_4
     const/16 v7, 0xaa4
 
     invoke-static {v7, v2}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 2973
+    .line 2975
     iput-boolean v11, p0, Lcom/android/server/PowerManagerService;->mStillNeedSleepNotification:Z
 
-    .line 2974
+    .line 2976
     iput v10, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
-    .line 2975
+    .line 2977
     invoke-direct {p0, v10, v10, p3}, Lcom/android/server/PowerManagerService;->setPowerState(IZI)V
 
-    .line 2976
+    .line 2978
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->cancelTimerLocked()V
 
-    .line 2978
+    .line 2980
     .end local v0           #N:I
     .end local v1           #i:I
     .end local v2           #numCleared:I
@@ -3164,19 +3303,19 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 3616
+    .line 3619
     const-string v4, "PowerManagerService"
 
     const-string v5, "initSupportedFrequency dvfs "
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3617
+    .line 3620
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
 
     if-nez v4, :cond_0
 
-    .line 3621
+    .line 3624
     :try_start_0
     new-instance v0, Ljava/io/BufferedReader;
 
@@ -3190,7 +3329,7 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3623
+    .line 3626
     .local v0, buf:Ljava/io/BufferedReader;
     :try_start_1
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
@@ -3198,7 +3337,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3629
+    .line 3632
     :goto_0
     :try_start_2
     new-instance v0, Ljava/io/BufferedReader;
@@ -3214,7 +3353,7 @@
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 3631
+    .line 3634
     .restart local v0       #buf:Ljava/io/BufferedReader;
     :try_start_3
     invoke-virtual {v0}, Ljava/io/BufferedReader;->close()V
@@ -3222,7 +3361,7 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 3637
+    .line 3640
     :goto_1
     :try_start_4
     new-instance v0, Ljava/io/BufferedReader;
@@ -3238,7 +3377,7 @@
     :try_end_4
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 3640
+    .line 3643
     .restart local v0       #buf:Ljava/io/BufferedReader;
     :try_start_5
     invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -3251,7 +3390,7 @@
 
     move-result-object v3
 
-    .line 3641
+    .line 3644
     .local v3, strSupportedFreq:[Ljava/lang/String;
     array-length v4, v3
 
@@ -3259,7 +3398,7 @@
 
     iput-object v4, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
 
-    .line 3643
+    .line 3646
     const/4 v2, 0x0
 
     .local v2, i:I
@@ -3268,7 +3407,7 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 3644
+    .line 3647
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
 
     aget-object v5, v3, v2
@@ -3279,7 +3418,7 @@
 
     aput v5, v4, v2
 
-    .line 3645
+    .line 3648
     const-string v4, "PowerManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3309,23 +3448,23 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
     .catch Ljava/io/FileNotFoundException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 3643
+    .line 3646
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3624
+    .line 3627
     .end local v2           #i:I
     .end local v3           #strSupportedFreq:[Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 3625
+    .line 3628
     .local v1, e:Ljava/io/IOException;
     :try_start_6
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 3626
+    .line 3629
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
@@ -3334,13 +3473,13 @@
 
     goto :goto_0
 
-    .line 3652
+    .line 3655
     .end local v0           #buf:Ljava/io/BufferedReader;
     .end local v1           #e:Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 3653
+    .line 3656
     .local v1, e:Ljava/io/FileNotFoundException;
     const-string v4, "PowerManagerService"
 
@@ -3348,29 +3487,29 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3654
+    .line 3657
     invoke-virtual {v1}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
-    .line 3655
+    .line 3658
     iput-object v7, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
 
-    .line 3658
+    .line 3661
     .end local v1           #e:Ljava/io/FileNotFoundException;
     :cond_0
     :goto_3
     return-void
 
-    .line 3632
+    .line 3635
     .restart local v0       #buf:Ljava/io/BufferedReader;
     :catch_2
     move-exception v1
 
-    .line 3633
+    .line 3636
     .local v1, e:Ljava/io/IOException;
     :try_start_7
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 3634
+    .line 3637
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
@@ -3379,7 +3518,7 @@
 
     goto :goto_1
 
-    .line 3647
+    .line 3650
     .end local v1           #e:Ljava/io/IOException;
     .restart local v2       #i:I
     .restart local v3       #strSupportedFreq:[Ljava/lang/String;
@@ -3392,18 +3531,18 @@
 
     goto :goto_3
 
-    .line 3648
+    .line 3651
     .end local v2           #i:I
     .end local v3           #strSupportedFreq:[Ljava/lang/String;
     :catch_3
     move-exception v1
 
-    .line 3649
+    .line 3652
     .local v1, e:Ljava/lang/Exception;
     :try_start_9
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 3650
+    .line 3653
     const/4 v4, 0x0
 
     iput-object v4, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
@@ -3418,10 +3557,10 @@
     .parameter "flags"
 
     .prologue
-    .line 800
+    .line 802
     and-int/lit8 v0, p1, 0x3f
 
-    .line 801
+    .line 803
     .local v0, n:I
     const/16 v1, 0x1a
 
@@ -3455,7 +3594,7 @@
     .locals 1
 
     .prologue
-    .line 2561
+    .line 2563
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
     iget-boolean v0, v0, Lcom/android/server/PowerManagerService$BrightnessState;->animating:Z
@@ -3486,7 +3625,7 @@
     .prologue
     const/4 v7, -0x2
 
-    .line 2784
+    .line 2786
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3509,15 +3648,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2788
+    .line 2790
     iget v3, p0, Lcom/android/server/PowerManagerService;->mHighestLightSensorValue:I
 
     if-ge v3, p1, :cond_0
 
-    .line 2789
+    .line 2791
     iput p1, p0, Lcom/android/server/PowerManagerService;->mHighestLightSensorValue:I
 
-    .line 2792
+    .line 2794
     :cond_0
     iget v3, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
@@ -3527,26 +3666,26 @@
 
     if-eqz v3, :cond_3
 
-    .line 2793
+    .line 2795
     int-to-float v3, p1
 
     iput v3, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
-    .line 2794
+    .line 2796
     iget v3, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     and-int/lit8 v3, v3, 0x10
 
     if-nez v3, :cond_3
 
-    .line 2798
+    .line 2800
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mLcdBacklightValues:[I
 
     invoke-direct {p0, p1, v3}, Lcom/android/server/PowerManagerService;->getAutoBrightnessValue(I[I)I
 
     move-result v2
 
-    .line 2801
+    .line 2803
     .local v2, lcdValue:I
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mButtonBacklightValues:[I
 
@@ -3554,35 +3693,35 @@
 
     move-result v0
 
-    .line 2803
+    .line 2805
     .local v0, buttonValue:I
     iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mKeyboardVisible:Z
 
     if-eqz v3, :cond_4
 
-    .line 2804
+    .line 2806
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mKeyboardBacklightValues:[I
 
     invoke-direct {p0, p1, v3}, Lcom/android/server/PowerManagerService;->getAutoBrightnessValue(I[I)I
 
     move-result v1
 
-    .line 2809
+    .line 2811
     .local v1, keyboardValue:I
     :goto_0
     iget v3, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessUpperLimit:I
 
     if-ltz v3, :cond_1
 
-    .line 2810
+    .line 2812
     iget v3, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessUpperLimit:I
 
     if-le v2, v3, :cond_1
 
-    .line 2811
+    .line 2813
     iget v2, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessUpperLimit:I
 
-    .line 2812
+    .line 2814
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3611,21 +3750,21 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2815
+    .line 2817
     :cond_1
     iget v3, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessLowerLimit:I
 
     if-ltz v3, :cond_2
 
-    .line 2816
+    .line 2818
     iget v3, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessLowerLimit:I
 
     if-ge v2, v3, :cond_2
 
-    .line 2817
+    .line 2819
     iget v2, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessLowerLimit:I
 
-    .line 2818
+    .line 2820
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3654,17 +3793,17 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2822
+    .line 2824
     :cond_2
     iput v2, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightness:I
 
-    .line 2823
+    .line 2825
     iput v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorButtonBrightness:I
 
-    .line 2824
+    .line 2826
     iput v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorKeyboardBrightness:I
 
-    .line 2827
+    .line 2829
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3687,7 +3826,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2828
+    .line 2830
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3710,7 +3849,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2829
+    .line 2831
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3733,21 +3872,21 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2833
+    .line 2835
     iget v3, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     and-int/lit8 v3, v3, 0x2
 
     if-nez v3, :cond_5
 
-    .line 2835
+    .line 2837
     const-string v3, "PowerManagerService"
 
     const-string v4, "dropping lightSensorChangedLocked because screen is off"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2860
+    .line 2862
     .end local v0           #buttonValue:I
     .end local v1           #keyboardValue:I
     .end local v2           #lcdValue:I
@@ -3755,7 +3894,7 @@
     :goto_1
     return-void
 
-    .line 2806
+    .line 2808
     .restart local v0       #buttonValue:I
     .restart local v2       #lcdValue:I
     :cond_4
@@ -3764,7 +3903,7 @@
     .restart local v1       #keyboardValue:I
     goto/16 :goto_0
 
-    .line 2840
+    .line 2842
     :cond_5
     iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
 
@@ -3774,15 +3913,15 @@
 
     if-gez v3, :cond_7
 
-    .line 2841
+    .line 2843
     iget v3, p0, Lcom/android/server/PowerManagerService;->mMaxBrightness:I
 
     if-le v2, v3, :cond_6
 
-    .line 2842
+    .line 2844
     iget v2, p0, Lcom/android/server/PowerManagerService;->mMaxBrightness:I
 
-    .line 2843
+    .line 2845
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3811,13 +3950,13 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2845
+    .line 2847
     :cond_6
     iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mSkippedScreenOn:Z
 
     if-nez v3, :cond_7
 
-    .line 2846
+    .line 2848
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
     const/16 v4, 0x14
@@ -3832,7 +3971,7 @@
 
     invoke-virtual {v3, v2, v4, v5, v6}, Lcom/android/server/PowerManagerService$BrightnessState;->setTargetLocked(IIII)V
 
-    .line 2850
+    .line 2852
     :cond_7
     iget v3, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
@@ -3842,7 +3981,7 @@
 
     if-gez v3, :cond_8
 
-    .line 2851
+    .line 2853
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3865,12 +4004,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2852
+    .line 2854
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mButtonLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v3, v0}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
 
-    .line 2854
+    .line 2856
     :cond_8
     iget v3, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
@@ -3885,7 +4024,7 @@
 
     if-nez v3, :cond_3
 
-    .line 2855
+    .line 2857
     :cond_a
     const-string v3, "PowerManagerService"
 
@@ -3909,7 +4048,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2856
+    .line 2858
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mKeyboardLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v3, v1}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
@@ -3922,46 +4061,46 @@
     .parameter "type"
 
     .prologue
-    .line 1179
+    .line 1181
     sparse-switch p0, :sswitch_data_0
 
-    .line 1192
+    .line 1194
     const-string v0, "???                           "
 
     :goto_0
     return-object v0
 
-    .line 1182
+    .line 1184
     :sswitch_0
     const-string v0, "FULL_WAKE_LOCK                "
 
     goto :goto_0
 
-    .line 1184
+    .line 1186
     :sswitch_1
     const-string v0, "SCREEN_BRIGHT_WAKE_LOCK       "
 
     goto :goto_0
 
-    .line 1186
+    .line 1188
     :sswitch_2
     const-string v0, "SCREEN_DIM_WAKE_LOCK          "
 
     goto :goto_0
 
-    .line 1188
+    .line 1190
     :sswitch_3
     const-string v0, "PARTIAL_WAKE_LOCK             "
 
     goto :goto_0
 
-    .line 1190
+    .line 1192
     :sswitch_4
     const-string v0, "PROXIMITY_SCREEN_OFF_WAKE_LOCK"
 
     goto :goto_0
 
-    .line 1179
+    .line 1181
     nop
 
     :sswitch_data_0
@@ -3988,7 +4127,7 @@
     .parameter "pos"
 
     .prologue
-    .line 3540
+    .line 3543
     iget v10, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
     if-nez v10, :cond_2
@@ -3997,7 +4136,7 @@
 
     if-eqz v10, :cond_2
 
-    .line 3542
+    .line 3545
     const-string v10, "PowerManagerService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -4032,24 +4171,24 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3543
+    .line 3546
     iget-object v10, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v10}, Lcom/android/server/PowerManagerService$LockList;->size()I
 
     move-result v0
 
-    .line 3544
+    .line 3547
     .local v0, N:I
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
 
-    .line 3545
+    .line 3548
     .local v3, cTime:J
     const-wide/16 v5, 0x0
 
-    .line 3546
+    .line 3549
     .local v5, eTime:J
     const/4 v7, 0x0
 
@@ -4057,7 +4196,7 @@
     :goto_0
     if-ge v7, v0, :cond_2
 
-    .line 3548
+    .line 3551
     iget-object v10, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v10, v7}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
@@ -4066,7 +4205,7 @@
 
     check-cast v9, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 3549
+    .line 3552
     .local v9, wl:Lcom/android/server/PowerManagerService$WakeLock;
     iget v10, v9, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -4076,11 +4215,11 @@
 
     move-result-object v8
 
-    .line 3550
+    .line 3553
     .local v8, type:Ljava/lang/String;
     const-string v1, ""
 
-    .line 3551
+    .line 3554
     .local v1, acquireCausesWakeup:Ljava/lang/String;
     iget v10, v9, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -4090,111 +4229,34 @@
 
     if-eqz v10, :cond_0
 
-    .line 3552
+    .line 3555
     const-string v1, " AW "
 
-    .line 3554
+    .line 3557
     :cond_0
     const-string v2, ""
 
-    .line 3555
+    .line 3558
     .local v2, activated:Ljava/lang/String;
     iget-boolean v10, v9, Lcom/android/server/PowerManagerService$WakeLock;->activated:Z
 
     if-eqz v10, :cond_1
 
-    .line 3556
+    .line 3559
     const-string v2, " active"
 
-    .line 3558
+    .line 3561
     :cond_1
     iget-wide v10, v9, Lcom/android/server/PowerManagerService$WakeLock;->acqTime:J
 
     sub-long v5, v3, v10
 
-    .line 3559
-    const-string v10, "PowerManagerService"
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v12, "type="
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, " \'"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    iget-object v12, v9, Lcom/android/server/PowerManagerService$WakeLock;->tag:Ljava/lang/String;
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, "\'"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, " (minState="
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    iget v12, v9, Lcom/android/server/PowerManagerService$WakeLock;->minState:I
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, ")"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, " activeT="
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-static {v10, v11}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3546
+    .line 3549
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 3563
+    .line 3566
     .end local v0           #N:I
     .end local v1           #acquireCausesWakeup:Ljava/lang/String;
     .end local v2           #activated:Ljava/lang/String;
@@ -4212,10 +4274,10 @@
     .parameter "screenOn"
 
     .prologue
-    .line 3569
+    .line 3572
     if-nez p1, :cond_3
 
-    .line 3571
+    .line 3574
     const-string v12, "PowerManagerService"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -4252,24 +4314,24 @@
 
     invoke-static {v12, v13}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3572
+    .line 3575
     iget-object v12, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v12}, Lcom/android/server/PowerManagerService$LockList;->size()I
 
     move-result v0
 
-    .line 3573
+    .line 3576
     .local v0, N:I
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
 
-    .line 3574
+    .line 3577
     .local v3, cTime:J
     const-wide/16 v5, 0x0
 
-    .line 3575
+    .line 3578
     .local v5, eTime:J
     const/4 v7, 0x0
 
@@ -4277,7 +4339,7 @@
     :goto_0
     if-ge v7, v0, :cond_2
 
-    .line 3577
+    .line 3580
     iget-object v12, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v12, v7}, Lcom/android/server/PowerManagerService$LockList;->get(I)Ljava/lang/Object;
@@ -4286,7 +4348,7 @@
 
     check-cast v11, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 3578
+    .line 3581
     .local v11, wl:Lcom/android/server/PowerManagerService$WakeLock;
     iget v12, v11, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -4296,11 +4358,11 @@
 
     move-result-object v10
 
-    .line 3579
+    .line 3582
     .local v10, type:Ljava/lang/String;
     const-string v1, ""
 
-    .line 3580
+    .line 3583
     .local v1, acquireCausesWakeup:Ljava/lang/String;
     iget v12, v11, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -4310,111 +4372,34 @@
 
     if-eqz v12, :cond_0
 
-    .line 3581
+    .line 3584
     const-string v1, " AW "
 
-    .line 3583
+    .line 3586
     :cond_0
     const-string v2, ""
 
-    .line 3584
+    .line 3587
     .local v2, activated:Ljava/lang/String;
     iget-boolean v12, v11, Lcom/android/server/PowerManagerService$WakeLock;->activated:Z
 
     if-eqz v12, :cond_1
 
-    .line 3585
+    .line 3588
     const-string v2, " active"
 
-    .line 3587
+    .line 3590
     :cond_1
     iget-wide v12, v11, Lcom/android/server/PowerManagerService$WakeLock;->acqTime:J
 
     sub-long v5, v3, v12
 
-    .line 3588
-    const-string v12, "PowerManagerService"
-
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v14, "type="
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    invoke-virtual {v13, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    const-string v14, " \'"
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    iget-object v14, v11, Lcom/android/server/PowerManagerService$WakeLock;->tag:Ljava/lang/String;
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    const-string v14, "\'"
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    invoke-virtual {v13, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    invoke-virtual {v13, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    const-string v14, " (mS="
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    iget v14, v11, Lcom/android/server/PowerManagerService$WakeLock;->minState:I
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    const-string v14, ")"
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    const-string v14, "  activeT="
-
-    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    invoke-virtual {v13, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v13
-
-    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v13
-
-    invoke-static {v12, v13}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 3575
+    .line 3578
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 3592
+    .line 3595
     .end local v1           #acquireCausesWakeup:Ljava/lang/String;
     .end local v2           #activated:Ljava/lang/String;
     .end local v10           #type:Ljava/lang/String;
@@ -4454,7 +4439,7 @@
 
     invoke-static {v12, v13}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3593
+    .line 3596
     iget-object v12, p0, Lcom/android/server/PowerManagerService;->mPokeLocks:Ljava/util/HashMap;
 
     invoke-virtual {v12}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -4479,7 +4464,7 @@
 
     check-cast v9, Lcom/android/server/PowerManagerService$PokeLock;
 
-    .line 3595
+    .line 3598
     .local v9, p:Lcom/android/server/PowerManagerService$PokeLock;
     const-string v12, "PowerManagerService"
 
@@ -4525,7 +4510,7 @@
 
     goto :goto_1
 
-    .line 3599
+    .line 3602
     .end local v0           #N:I
     .end local v3           #cTime:J
     .end local v5           #eTime:J
@@ -4541,7 +4526,7 @@
     .parameter "active"
 
     .prologue
-    .line 3379
+    .line 3382
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4564,28 +4549,28 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3381
+    .line 3384
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mProximitySensorEnabled:Z
 
     if-nez v0, :cond_1
 
-    .line 3382
+    .line 3385
     const-string v0, "PowerManagerService"
 
     const-string v1, "Ignoring proximity change after sensor is disabled"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3413
+    .line 3416
     :cond_0
     :goto_0
     return-void
 
-    .line 3385
+    .line 3388
     :cond_1
     if-eqz p1, :cond_3
 
-    .line 3387
+    .line 3390
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4610,12 +4595,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3390
+    .line 3393
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
 
     if-nez v0, :cond_2
 
-    .line 3391
+    .line 3394
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -4624,7 +4609,7 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/android/server/PowerManagerService;->goToSleepLocked(JI)V
 
-    .line 3394
+    .line 3397
     :cond_2
     const/4 v0, 0x1
 
@@ -4632,13 +4617,13 @@
 
     goto :goto_0
 
-    .line 3399
+    .line 3402
     :cond_3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
-    .line 3401
+    .line 3404
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4663,21 +4648,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3404
+    .line 3407
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mProxIgnoredBecauseScreenTurnedOff:Z
 
     if-nez v0, :cond_4
 
-    .line 3405
+    .line 3408
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->forceUserActivityLocked()V
 
-    .line 3408
+    .line 3411
     :cond_4
     iget v0, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
     if-nez v0, :cond_0
 
-    .line 3410
+    .line 3413
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->disableProximityLockLocked()V
 
     goto :goto_0
@@ -4694,44 +4679,44 @@
 
     const/4 v6, 0x1
 
-    .line 3904
+    .line 3907
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
 
     invoke-virtual {v3, p1}, Lcom/android/server/PowerManagerService$DVFSLockList;->removeLock(Landroid/os/IBinder;)Lcom/android/server/PowerManagerService$DVFSLock;
 
     move-result-object v2
 
-    .line 3905
+    .line 3908
     .local v2, removedDVFSwl:Lcom/android/server/PowerManagerService$DVFSLock;
     if-nez v2, :cond_0
 
-    .line 3945
+    .line 3948
     :goto_0
     return-void
 
-    .line 3910
+    .line 3913
     :cond_0
     iget v3, v2, Lcom/android/server/PowerManagerService$DVFSLock;->type:I
 
     if-ne v3, v7, :cond_3
 
-    .line 3911
+    .line 3914
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     if-ne v2, v3, :cond_1
 
-    .line 3912
+    .line 3915
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
 
     invoke-virtual {v3}, Lcom/android/server/PowerManagerService$DVFSLockList;->getMinOfMaxLock()Lcom/android/server/PowerManagerService$DVFSLock;
 
     move-result-object v1
 
-    .line 3914
+    .line 3917
     .local v1, nextMinOfMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
     if-eqz v1, :cond_2
 
-    .line 3915
+    .line 3918
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4756,15 +4741,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3916
+    .line 3919
     iget v3, v1, Lcom/android/server/PowerManagerService$DVFSLock;->frequency:I
 
     invoke-static {v7, v3}, Landroid/os/Power;->acquireDVFSLock(II)I
 
-    .line 3917
+    .line 3920
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 3944
+    .line 3947
     .end local v1           #nextMinOfMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
     :cond_1
     :goto_1
@@ -4776,7 +4761,7 @@
 
     goto :goto_0
 
-    .line 3920
+    .line 3923
     .restart local v1       #nextMinOfMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
     :cond_2
     const-string v3, "PowerManagerService"
@@ -4785,38 +4770,38 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3921
+    .line 3924
     invoke-static {v7}, Landroid/os/Power;->releaseDVFSLock(I)I
 
-    .line 3922
+    .line 3925
     iput-object v5, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     goto :goto_1
 
-    .line 3926
+    .line 3929
     .end local v1           #nextMinOfMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
     :cond_3
     iget v3, v2, Lcom/android/server/PowerManagerService$DVFSLock;->type:I
 
     if-ne v3, v6, :cond_1
 
-    .line 3927
+    .line 3930
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     if-ne v2, v3, :cond_1
 
-    .line 3928
+    .line 3931
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
 
     invoke-virtual {v3}, Lcom/android/server/PowerManagerService$DVFSLockList;->getMaxOfMinLock()Lcom/android/server/PowerManagerService$DVFSLock;
 
     move-result-object v0
 
-    .line 3930
+    .line 3933
     .local v0, nextMaxOfMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
     if-eqz v0, :cond_4
 
-    .line 3931
+    .line 3934
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -4841,17 +4826,17 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3932
+    .line 3935
     iget v3, v0, Lcom/android/server/PowerManagerService$DVFSLock;->frequency:I
 
     invoke-static {v6, v3}, Landroid/os/Power;->acquireDVFSLock(II)I
 
-    .line 3933
+    .line 3936
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     goto :goto_1
 
-    .line 3936
+    .line 3939
     :cond_4
     const-string v3, "PowerManagerService"
 
@@ -4859,10 +4844,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3937
+    .line 3940
     invoke-static {v6}, Landroid/os/Power;->releaseDVFSLock(I)I
 
-    .line 3938
+    .line 3941
     iput-object v5, p0, Lcom/android/server/PowerManagerService;->mCurrentDVFSMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
     goto :goto_1
@@ -4881,22 +4866,22 @@
 
     const/4 v5, 0x0
 
-    .line 1042
+    .line 1044
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v0, p1}, Lcom/android/server/PowerManagerService$LockList;->removeLock(Landroid/os/IBinder;)Lcom/android/server/PowerManagerService$WakeLock;
 
     move-result-object v9
 
-    .line 1043
+    .line 1045
     .local v9, wl:Lcom/android/server/PowerManagerService$WakeLock;
     if-nez v9, :cond_0
 
-    .line 1092
+    .line 1094
     :goto_0
     return-void
 
-    .line 1052
+    .line 1054
     :cond_0
     iget v0, v9, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -4906,7 +4891,7 @@
 
     if-eqz v0, :cond_7
 
-    .line 1053
+    .line 1055
     iget v0, v9, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
     and-int/lit8 v0, v0, 0x3f
@@ -4915,19 +4900,19 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1054
+    .line 1056
     iget v0, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
-    .line 1055
+    .line 1057
     iget v0, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
     if-nez v0, :cond_1
 
-    .line 1056
+    .line 1058
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
     if-eqz v0, :cond_2
@@ -4936,34 +4921,34 @@
 
     if-eqz v0, :cond_2
 
-    .line 1060
+    .line 1062
     const-string v0, "PowerManagerService"
 
     const-string v1, "waiting for proximity sensor to go negative"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1089
+    .line 1091
     :cond_1
     :goto_1
     iget-object v0, v9, Lcom/android/server/PowerManagerService$WakeLock;->binder:Landroid/os/IBinder;
 
     invoke-interface {v0, v9, v5}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 1091
+    .line 1093
     iget-object v0, v9, Lcom/android/server/PowerManagerService$WakeLock;->ws:Landroid/os/WorkSource;
 
     invoke-virtual {p0, v9, v0}, Lcom/android/server/PowerManagerService;->noteStopWakeLocked(Lcom/android/server/PowerManagerService$WakeLock;Landroid/os/WorkSource;)V
 
     goto :goto_0
 
-    .line 1063
+    .line 1065
     :cond_2
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->disableProximityLockLocked()V
 
     goto :goto_1
 
-    .line 1067
+    .line 1069
     :cond_3
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
@@ -4973,7 +4958,7 @@
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
-    .line 1069
+    .line 1071
     iget v0, v9, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
     const/high16 v1, 0x2000
@@ -4982,7 +4967,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 1070
+    .line 1072
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
@@ -4997,11 +4982,11 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/PowerManagerService;->userActivity(JJZIZ)V
 
-    .line 1073
+    .line 1075
     :cond_4
     invoke-direct {p0, v10}, Lcom/android/server/PowerManagerService;->printCurLock(I)V
 
-    .line 1074
+    .line 1076
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService;->isScreenOn()Z
 
     move-result v0
@@ -5018,7 +5003,7 @@
 
     if-nez v0, :cond_5
 
-    .line 1075
+    .line 1077
     .local v8, bGoOff:Z
     :goto_2
     const-string v1, "PowerManagerService"
@@ -5110,7 +5095,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1077
+    .line 1079
     iget v0, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
     iget v1, p0, Lcom/android/server/PowerManagerService;->mUserState:I
@@ -5125,17 +5110,17 @@
     :cond_5
     move v8, v5
 
-    .line 1074
+    .line 1076
     goto :goto_2
 
-    .line 1075
+    .line 1077
     .restart local v8       #bGoOff:Z
     :cond_6
     const-string v0, ""
 
     goto :goto_3
 
-    .line 1080
+    .line 1082
     .end local v8           #bGoOff:Z
     :cond_7
     iget v0, v9, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
@@ -5144,14 +5129,14 @@
 
     if-ne v0, v8, :cond_1
 
-    .line 1081
+    .line 1083
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPartialCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mPartialCount:I
 
-    .line 1082
+    .line 1084
     const/16 v0, 0xaa9
 
     new-array v1, v10, [Ljava/lang/Object;
@@ -5168,12 +5153,12 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 1083
+    .line 1085
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPartialCount:I
 
     if-nez v0, :cond_1
 
-    .line 1085
+    .line 1087
     const-string v0, "PowerManagerService"
 
     invoke-static {v0}, Landroid/os/Power;->releaseWakeLock(Ljava/lang/String;)V
@@ -5188,7 +5173,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 2090
+    .line 2092
     const/16 v1, 0xaa8
 
     const/4 v2, 0x4
@@ -5231,27 +5216,27 @@
 
     invoke-static {v1, v2}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 2092
+    .line 2094
     const-wide/16 v1, 0x0
 
     iput-wide v1, p0, Lcom/android/server/PowerManagerService;->mLastTouchDown:J
 
-    .line 2093
+    .line 2095
     invoke-direct {p0, v6}, Lcom/android/server/PowerManagerService;->setScreenStateLocked(Z)I
 
     move-result v0
 
-    .line 2094
+    .line 2096
     .local v0, err:I
     if-nez v0, :cond_0
 
-    .line 2095
+    .line 2097
     iput p1, p0, Lcom/android/server/PowerManagerService;->mScreenOffReason:I
 
-    .line 2096
+    .line 2098
     invoke-direct {p0, v6, p1}, Lcom/android/server/PowerManagerService;->sendNotificationLocked(ZI)V
 
-    .line 2098
+    .line 2100
     :cond_0
     return v0
 .end method
@@ -5272,17 +5257,17 @@
 
     const/4 v2, 0x1
 
-    .line 1457
+    .line 1459
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mInitialized:Z
 
     if-nez v1, :cond_1
 
-    .line 1534
+    .line 1536
     :cond_0
     :goto_0
     return-void
 
-    .line 1467
+    .line 1469
     :cond_1
     const-string v1, "PowerManagerService"
 
@@ -5306,17 +5291,17 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1474
+    .line 1476
     if-nez p1, :cond_2
 
-    .line 1475
+    .line 1477
     iput-boolean v3, p0, Lcom/android/server/PowerManagerService;->mStillNeedSleepNotification:Z
 
-    .line 1479
+    .line 1481
     :cond_2
     const/4 v0, 0x0
 
-    .line 1480
+    .line 1482
     .local v0, index:I
     :goto_1
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
@@ -5325,12 +5310,12 @@
 
     if-eq v1, v6, :cond_3
 
-    .line 1481
+    .line 1483
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1483
+    .line 1485
     :cond_3
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
@@ -5341,15 +5326,15 @@
     :goto_2
     aput v1, v4, v0
 
-    .line 1484
+    .line 1486
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWhy:[I
 
     aput p2, v1, v0
 
-    .line 1493
+    .line 1495
     if-ne v0, v7, :cond_5
 
-    .line 1496
+    .line 1498
     if-nez p1, :cond_4
 
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWhy:[I
@@ -5358,12 +5343,12 @@
 
     if-le v1, p2, :cond_4
 
-    .line 1497
+    .line 1499
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWhy:[I
 
     aput p2, v1, v3
 
-    .line 1499
+    .line 1501
     :cond_4
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
@@ -5374,41 +5359,15 @@
     :goto_3
     aput v1, v4, v3
 
-    .line 1500
+    .line 1502
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
     aput v6, v1, v2
 
-    .line 1501
+    .line 1503
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
     aput v6, v1, v7
-
-    .line 1502
-    new-array v1, v7, [Ljava/lang/Object;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v1, v3
-
-    iget-object v4, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
-
-    iget v4, v4, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mCount:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v1, v2
-
-    invoke-static {v8, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
-
-    .line 1503
-    iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
-
-    invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
     .line 1504
     new-array v1, v7, [Ljava/lang/Object;
@@ -5437,28 +5396,54 @@
     invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
     .line 1506
-    const/4 v0, 0x0
+    new-array v1, v7, [Ljava/lang/Object;
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v1, v3
+
+    iget-object v4, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
+
+    iget v4, v4, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->mCount:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v1, v2
+
+    invoke-static {v8, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
+
+    .line 1507
+    iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
+
+    invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
     .line 1508
+    const/4 v0, 0x0
+
+    .line 1510
     :cond_5
     if-ne v0, v2, :cond_6
 
     if-nez p1, :cond_6
 
-    .line 1509
+    .line 1511
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
     aput v6, v1, v3
 
-    .line 1510
+    .line 1512
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
     aput v6, v1, v2
 
-    .line 1511
+    .line 1513
     const/4 v0, -0x1
 
-    .line 1514
+    .line 1516
     new-array v1, v7, [Ljava/lang/Object;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5479,32 +5464,32 @@
 
     invoke-static {v8, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 1515
+    .line 1517
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
-    .line 1520
+    .line 1522
     :cond_6
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mSkippedScreenOn:Z
 
     if-eqz v1, :cond_7
 
-    .line 1521
+    .line 1523
     iget v1, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
-    .line 1525
+    .line 1527
     :cond_7
     if-ltz v0, :cond_0
 
-    .line 1530
+    .line 1532
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->acquire()V
 
-    .line 1531
+    .line 1533
     const/16 v1, 0xaa5
 
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
@@ -5513,7 +5498,7 @@
 
     invoke-static {v1, v2}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 1532
+    .line 1534
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mNotificationTask:Ljava/lang/Runnable;
@@ -5525,13 +5510,13 @@
     :cond_8
     move v1, v3
 
-    .line 1483
+    .line 1485
     goto/16 :goto_2
 
     :cond_9
     move v1, v3
 
-    .line 1499
+    .line 1501
     goto/16 :goto_3
 .end method
 
@@ -5541,31 +5526,31 @@
     .parameter "value"
 
     .prologue
-    .line 2305
+    .line 2307
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
 
     if-eqz v1, :cond_3
 
     const/4 v0, 0x1
 
-    .line 2308
+    .line 2310
     .local v0, brightnessMode:I
     :goto_0
     and-int/lit8 v1, p1, 0x2
 
     if-eqz v1, :cond_0
 
-    .line 2310
+    .line 2312
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mSystemPowerSaveModeEnabled:Z
 
     if-eqz v1, :cond_4
 
-    .line 2312
+    .line 2314
     sget v1, Lcom/android/server/PowerManagerService;->POWERSAVEMODE_BRIGHTNESS_OFFSET:I
 
     if-lt p2, v1, :cond_0
 
-    .line 2314
+    .line 2316
     const-string v1, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5602,7 +5587,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2320
+    .line 2322
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLcdLight:Lcom/android/server/LightsService$Light;
 
     sget v2, Lcom/android/server/PowerManagerService;->POWERSAVEMODE_BRIGHTNESS_OFFSET:I
@@ -5611,14 +5596,14 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/LightsService$Light;->setBrightness(II)V
 
-    .line 2333
+    .line 2335
     :cond_0
     :goto_1
     and-int/lit8 v1, p1, 0x4
 
     if-eqz v1, :cond_1
 
-    .line 2334
+    .line 2336
     const-string v1, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5641,34 +5626,34 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2335
+    .line 2337
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mButtonLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v1, p2}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
 
-    .line 2337
+    .line 2339
     :cond_1
     and-int/lit8 v1, p1, 0x8
 
     if-eqz v1, :cond_2
 
-    .line 2338
+    .line 2340
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mKeyboardLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v1, p2}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
 
-    .line 2340
+    .line 2342
     :cond_2
     return-void
 
-    .line 2305
+    .line 2307
     .end local v0           #brightnessMode:I
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2330
+    .line 2332
     .restart local v0       #brightnessMode:I
     :cond_4
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLcdLight:Lcom/android/server/LightsService$Light;
@@ -5683,14 +5668,14 @@
     .parameter "state"
 
     .prologue
-    .line 1906
+    .line 1908
     const/4 v0, 0x0
 
     const/4 v1, 0x3
 
     invoke-direct {p0, p1, v0, v1}, Lcom/android/server/PowerManagerService;->setPowerState(IZI)V
 
-    .line 1907
+    .line 1909
     return-void
 .end method
 
@@ -5701,15 +5686,15 @@
     .parameter "reason"
 
     .prologue
-    .line 1911
+    .line 1913
     iget-object v10, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v10
 
-    .line 1921
+    .line 1923
     if-eqz p2, :cond_0
 
-    .line 1922
+    .line 1924
     and-int/lit8 v9, p1, -0xf
 
     :try_start_0
@@ -5719,13 +5704,13 @@
 
     or-int p1, v9, v11
 
-    .line 1924
+    .line 1926
     :cond_0
     iget-boolean v9, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
     if-eqz v9, :cond_1
 
-    .line 1926
+    .line 1928
     const-string v9, "PowerManagerService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -5750,10 +5735,10 @@
 
     invoke-static {v9, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1927
+    .line 1929
     and-int/lit8 p1, p1, -0x4
 
-    .line 1930
+    .line 1932
     :cond_1
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->batteryIsLow()Z
 
@@ -5761,28 +5746,28 @@
 
     if-eqz v9, :cond_3
 
-    .line 1931
+    .line 1933
     and-int/lit8 v9, p1, -0xf
 
     or-int/lit8 p1, v9, 0x10
 
-    .line 1938
+    .line 1940
     :goto_0
     and-int/lit8 v9, p1, 0x1
 
     if-eqz v9, :cond_2
 
-    .line 1941
+    .line 1943
     invoke-direct/range {p0 .. p1}, Lcom/android/server/PowerManagerService;->applyButtonState(I)I
 
     move-result p1
 
-    .line 1942
+    .line 1944
     invoke-direct/range {p0 .. p1}, Lcom/android/server/PowerManagerService;->applyKeyboardState(I)I
 
     move-result p1
 
-    .line 1945
+    .line 1947
     :cond_2
     iget v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -5794,36 +5779,36 @@
 
     if-eqz v9, :cond_4
 
-    .line 1946
+    .line 1948
     monitor-exit v10
 
-    .line 2078
+    .line 2080
     :goto_1
     return-void
 
-    .line 1933
+    .line 1935
     :cond_3
     and-int/lit8 p1, p1, -0x11
 
     goto :goto_0
 
-    .line 1949
+    .line 1951
     :cond_4
     iget-boolean v9, p0, Lcom/android/server/PowerManagerService;->mBootCompleted:Z
 
     if-nez v9, :cond_5
 
-    .line 1950
+    .line 1952
     const-string v9, "PowerManagerService"
 
     const-string v11, "setPowerState : mBootCompleted : false, newState |= ALL_BRIGHT"
 
     invoke-static {v9, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1951
+    .line 1953
     or-int/lit8 p1, p1, 0xf
 
-    .line 1954
+    .line 1956
     :cond_5
     iget v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -5833,7 +5818,7 @@
 
     const/4 v6, 0x1
 
-    .line 1955
+    .line 1957
     .local v6, oldScreenOn:Z
     :goto_2
     and-int/lit8 v9, p1, 0x1
@@ -5842,7 +5827,7 @@
 
     const/4 v5, 0x1
 
-    .line 1972
+    .line 1974
     .local v5, newScreenOn:Z
     :goto_3
     iget v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
@@ -5853,45 +5838,45 @@
 
     const/4 v8, 0x1
 
-    .line 1974
+    .line 1976
     .local v8, stateChanged:Z
     :goto_4
     if-eq v6, v5, :cond_11
 
-    .line 1975
+    .line 1977
     if-eqz v5, :cond_e
 
-    .line 1992
+    .line 1994
     const/4 v7, 0x1
 
-    .line 1998
+    .line 2000
     .local v7, reallyTurnScreenOn:Z
     iget-boolean v9, p0, Lcom/android/server/PowerManagerService;->mPreventScreenOn:Z
 
     if-eqz v9, :cond_6
 
-    .line 2000
+    .line 2002
     const-string v9, "PowerManagerService"
 
     const-string v11, "- PREVENTING screen from really turning on!"
 
     invoke-static {v9, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2002
+    .line 2004
     const/4 v7, 0x0
 
-    .line 2004
+    .line 2006
     :cond_6
     if-eqz v7, :cond_c
 
-    .line 2005
+    .line 2007
     const/4 v9, 0x1
 
     invoke-direct {p0, v9}, Lcom/android/server/PowerManagerService;->setScreenStateLocked(Z)I
 
     move-result v2
 
-    .line 2006
+    .line 2008
     .local v2, err:I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -5899,7 +5884,7 @@
 
     move-result-wide v3
 
-    .line 2008
+    .line 2010
     .local v3, identity:J
     :try_start_1
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -5910,7 +5895,7 @@
 
     invoke-interface {v9, v11}, Lcom/android/internal/app/IBatteryStats;->noteScreenBrightness(I)V
 
-    .line 2009
+    .line 2011
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
     invoke-interface {v9}, Lcom/android/internal/app/IBatteryStats;->noteScreenOn()V
@@ -5918,28 +5903,28 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 2013
+    .line 2015
     :try_start_2
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2021
+    .line 2023
     .end local v3           #identity:J
     :goto_5
     const-wide/16 v11, 0x0
 
     iput-wide v11, p0, Lcom/android/server/PowerManagerService;->mLastTouchDown:J
 
-    .line 2022
+    .line 2024
     const-wide/16 v11, 0x0
 
     iput-wide v11, p0, Lcom/android/server/PowerManagerService;->mTotalTouchDownTime:J
 
-    .line 2023
+    .line 2025
     const/4 v9, 0x0
 
     iput v9, p0, Lcom/android/server/PowerManagerService;->mTouchCycles:I
 
-    .line 2024
+    .line 2026
     const/16 v9, 0xaa8
 
     const/4 v11, 0x4
@@ -5986,27 +5971,27 @@
 
     invoke-static {v9, v11}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 2026
+    .line 2028
     if-nez v2, :cond_d
 
-    .line 2027
+    .line 2029
     const/4 v9, 0x1
 
     const/4 v11, -0x1
 
     invoke-direct {p0, v9, v11}, Lcom/android/server/PowerManagerService;->sendNotificationLocked(ZI)V
 
-    .line 2032
+    .line 2034
     if-eqz v8, :cond_7
 
-    .line 2033
+    .line 2035
     const/4 v9, 0x0
 
     move/from16 v0, p1
 
     invoke-direct {p0, v0, v9}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
-    .line 2035
+    .line 2037
     :cond_7
     iget v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -6014,7 +5999,7 @@
 
     iput v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
-    .line 2074
+    .line 2076
     .end local v2           #err:I
     .end local v7           #reallyTurnScreenOn:Z
     :cond_8
@@ -6029,10 +6014,10 @@
 
     iput v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
-    .line 2076
+    .line 2078
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->updateNativePowerStateLocked()V
 
-    .line 2077
+    .line 2079
     monitor-exit v10
 
     goto/16 :goto_1
@@ -6049,27 +6034,27 @@
 
     throw v9
 
-    .line 1954
+    .line 1956
     :cond_9
     const/4 v6, 0x0
 
     goto/16 :goto_2
 
-    .line 1955
+    .line 1957
     .restart local v6       #oldScreenOn:Z
     :cond_a
     const/4 v5, 0x0
 
     goto/16 :goto_3
 
-    .line 1972
+    .line 1974
     .restart local v5       #newScreenOn:Z
     :cond_b
     const/4 v8, 0x0
 
     goto/16 :goto_4
 
-    .line 2010
+    .line 2012
     .restart local v2       #err:I
     .restart local v3       #identity:J
     .restart local v7       #reallyTurnScreenOn:Z
@@ -6077,7 +6062,7 @@
     :catch_0
     move-exception v1
 
-    .line 2011
+    .line 2013
     .local v1, e:Landroid/os/RemoteException;
     :try_start_3
     const-string v9, "PowerManagerService"
@@ -6088,7 +6073,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 2013
+    .line 2015
     :try_start_4
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -6102,7 +6087,7 @@
 
     throw v9
 
-    .line 2016
+    .line 2018
     .end local v2           #err:I
     .end local v3           #identity:J
     :cond_c
@@ -6110,13 +6095,13 @@
 
     invoke-direct {p0, v9}, Lcom/android/server/PowerManagerService;->setScreenStateLocked(Z)I
 
-    .line 2018
+    .line 2020
     const/4 v2, 0x0
 
     .restart local v2       #err:I
     goto :goto_5
 
-    .line 2038
+    .line 2040
     :cond_d
     const-string v9, "PowerManagerService"
 
@@ -6148,20 +6133,20 @@
 
     goto :goto_6
 
-    .line 2043
+    .line 2045
     .end local v2           #err:I
     .end local v7           #reallyTurnScreenOn:Z
     :cond_e
     if-eqz v8, :cond_f
 
-    .line 2044
+    .line 2046
     const/4 v9, 0x0
 
     move/from16 v0, p1
 
     invoke-direct {p0, v0, v9}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
-    .line 2048
+    .line 2050
     :cond_f
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
@@ -6169,31 +6154,31 @@
 
     invoke-virtual {v9, v11}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 2049
+    .line 2051
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingDecrease:Z
 
-    .line 2050
+    .line 2052
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/android/server/PowerManagerService;->mLightSensorPendingIncrease:Z
 
-    .line 2051
+    .line 2053
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v11
 
     iput-wide v11, p0, Lcom/android/server/PowerManagerService;->mScreenOffTime:J
 
-    .line 2052
+    .line 2054
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     move-result-wide v3
 
-    .line 2054
+    .line 2056
     .restart local v3       #identity:J
     :try_start_5
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -6203,11 +6188,11 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 2058
+    .line 2060
     :try_start_6
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2060
+    .line 2062
     :goto_7
     iget v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -6215,19 +6200,19 @@
 
     iput v9, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
-    .line 2061
+    .line 2063
     move/from16 v0, p3
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffReason:I
 
-    .line 2062
+    .line 2064
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
     iget-boolean v9, v9, Lcom/android/server/PowerManagerService$BrightnessState;->animating:Z
 
     if-nez v9, :cond_10
 
-    .line 2063
+    .line 2065
     move/from16 v0, p3
 
     invoke-direct {p0, v0}, Lcom/android/server/PowerManagerService;->screenOffFinishedAnimatingLocked(I)I
@@ -6239,12 +6224,12 @@
     .restart local v2       #err:I
     goto/16 :goto_6
 
-    .line 2055
+    .line 2057
     .end local v2           #err:I
     :catch_1
     move-exception v1
 
-    .line 2056
+    .line 2058
     .restart local v1       #e:Landroid/os/RemoteException;
     :try_start_7
     const-string v9, "PowerManagerService"
@@ -6255,7 +6240,7 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 2058
+    .line 2060
     :try_start_8
     invoke-static {v3, v4}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -6269,11 +6254,11 @@
 
     throw v9
 
-    .line 2065
+    .line 2067
     :cond_10
     const/4 v2, 0x0
 
-    .line 2066
+    .line 2068
     .restart local v2       #err:I
     const-wide/16 v11, 0x0
 
@@ -6281,13 +6266,13 @@
 
     goto/16 :goto_6
 
-    .line 2069
+    .line 2071
     .end local v2           #err:I
     .end local v3           #identity:J
     :cond_11
     if-eqz v8, :cond_8
 
-    .line 2071
+    .line 2073
     const/4 v9, 0x0
 
     move/from16 v0, p1
@@ -6300,7 +6285,7 @@
 .end method
 
 .method private setScreenBrightnessMode(I)V
-    .locals 5
+    .locals 6
     .parameter "mode"
 
     .prologue
@@ -6308,71 +6293,87 @@
 
     const/4 v1, 0x1
 
-    .line 3033
-    iget-object v3, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
+    .line 3035
+    iget-object v4, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
-    monitor-enter v3
+    monitor-enter v4
 
-    .line 3034
+    .line 3036
     if-ne p1, v1, :cond_1
 
     move v0, v1
 
-    .line 3035
+    .line 3037
     .local v0, enabled:Z
     :goto_0
     :try_start_0
-    iget-boolean v4, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
+    iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
-    if-eqz v4, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-boolean v4, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
+    iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
 
-    if-eq v4, v0, :cond_0
-
-    .line 3036
-    iput-boolean v0, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
+    if-eq v3, v0, :cond_0
 
     .line 3038
-    iget-boolean v4, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
+    iput-boolean v0, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
 
-    if-eqz v4, :cond_2
+    .line 3039
+    const-string v5, "/sys/class/backlight/panel/auto_brightness"
+
+    if-eqz v0, :cond_2
+
+    move v3, v1
+
+    :goto_1
+    invoke-static {v5, v3}, Lcom/android/server/PowerManagerService;->fileWriteInt(Ljava/lang/String;I)V
+
+    .line 3041
+    iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mAutoBrightessEnabled:Z
+
+    if-eqz v3, :cond_3
 
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService;->isScreenOn()Z
 
-    move-result v4
+    move-result v3
 
-    if-eqz v4, :cond_2
+    if-eqz v3, :cond_3
 
-    :goto_1
+    :goto_2
     invoke-direct {p0, v1}, Lcom/android/server/PowerManagerService;->enableLightSensorLocked(Z)V
 
-    .line 3040
+    .line 3043
     :cond_0
-    monitor-exit v3
+    monitor-exit v4
 
-    .line 3041
+    .line 3044
     return-void
 
     .end local v0           #enabled:Z
     :cond_1
     move v0, v2
 
-    .line 3034
+    .line 3036
     goto :goto_0
 
     .restart local v0       #enabled:Z
     :cond_2
-    move v1, v2
+    move v3, v2
 
-    .line 3038
+    .line 3039
     goto :goto_1
 
-    .line 3040
+    :cond_3
+    move v1, v2
+
+    .line 3041
+    goto :goto_2
+
+    .line 3043
     :catchall_0
     move-exception v1
 
-    monitor-exit v3
+    monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -6389,25 +6390,25 @@
 
     const/4 v3, -0x1
 
-    .line 3049
+    .line 3052
     iget v1, p0, Lcom/android/server/PowerManagerService;->mPokey:I
 
     and-int/lit8 v1, v1, 0x2
 
     if-eqz v1, :cond_0
 
-    .line 3050
+    .line 3053
     iget v1, p0, Lcom/android/server/PowerManagerService;->mShortKeylightDelay:I
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
-    .line 3051
+    .line 3054
     iput v3, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
-    .line 3052
+    .line 3055
     iput v4, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
-    .line 3103
+    .line 3106
     :goto_0
     const-string v1, "PowerManagerService"
 
@@ -6469,10 +6470,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3107
+    .line 3110
     return-void
 
-    .line 3053
+    .line 3056
     :cond_0
     iget v1, p0, Lcom/android/server/PowerManagerService;->mPokey:I
 
@@ -6480,20 +6481,20 @@
 
     if-eqz v1, :cond_1
 
-    .line 3054
+    .line 3057
     const/16 v1, 0x3a98
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
-    .line 3055
+    .line 3058
     iput v3, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
-    .line 3056
+    .line 3059
     iput v4, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
     goto :goto_0
 
-    .line 3057
+    .line 3060
     :cond_1
     iget v1, p0, Lcom/android/server/PowerManagerService;->mPokey:I
 
@@ -6501,61 +6502,61 @@
 
     if-eqz v1, :cond_2
 
-    .line 3058
+    .line 3061
     const/16 v1, 0x1770
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
-    .line 3059
+    .line 3062
     const/16 v1, 0xfa0
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
-    .line 3060
+    .line 3063
     const/16 v1, 0x4e20
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
     goto :goto_0
 
-    .line 3062
+    .line 3065
     :cond_2
     iget v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffTimeoutSetting:I
 
-    .line 3063
+    .line 3066
     .local v0, totalDelay:I
     iget v1, p0, Lcom/android/server/PowerManagerService;->mMaximumScreenOffTimeout:I
 
     if-le v0, v1, :cond_3
 
-    .line 3064
+    .line 3067
     iget v0, p0, Lcom/android/server/PowerManagerService;->mMaximumScreenOffTimeout:I
 
-    .line 3067
+    .line 3070
     :cond_3
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     if-ne v1, v3, :cond_6
 
-    .line 3068
+    .line 3071
     if-le v0, v5, :cond_5
 
-    .line 3069
+    .line 3072
     add-int/lit16 v1, v0, -0x1b58
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
-    .line 3084
+    .line 3087
     :cond_4
     :goto_1
     if-gez v0, :cond_7
 
-    .line 3086
+    .line 3089
     iget v1, p0, Lcom/android/server/PowerManagerService;->mMaximumScreenOffTimeout:I
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
-    .line 3095
+    .line 3098
     :goto_2
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mDimScreen:Z
 
@@ -6567,25 +6568,25 @@
 
     if-lt v0, v1, :cond_9
 
-    .line 3096
+    .line 3099
     iget v1, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
     add-int/lit16 v1, v1, -0x1b58
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
-    .line 3097
+    .line 3100
     iput v5, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
     goto/16 :goto_0
 
-    .line 3072
+    .line 3075
     :cond_5
     iput v0, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
     goto :goto_1
 
-    .line 3075
+    .line 3078
     :cond_6
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
@@ -6593,27 +6594,27 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 3077
+    .line 3080
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     const/4 v2, -0x3
 
     if-eq v1, v2, :cond_4
 
-    .line 3081
+    .line 3084
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
     goto :goto_1
 
-    .line 3087
+    .line 3090
     :cond_7
     iget v1, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
     if-ge v1, v0, :cond_8
 
-    .line 3091
+    .line 3094
     iget v1, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
 
     sub-int v1, v0, v1
@@ -6622,13 +6623,13 @@
 
     goto :goto_2
 
-    .line 3093
+    .line 3096
     :cond_8
     iput v4, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
     goto :goto_2
 
-    .line 3099
+    .line 3102
     :cond_9
     iput v3, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
@@ -6640,10 +6641,10 @@
     .parameter "on"
 
     .prologue
-    .line 1863
+    .line 1865
     if-eqz p1, :cond_1
 
-    .line 1864
+    .line 1866
     iget v1, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     and-int/lit8 v1, v1, 0x1
@@ -6654,7 +6655,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1877
+    .line 1879
     :cond_0
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
@@ -6662,17 +6663,17 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/PowerManagerService$BrightnessState;->forceValueLocked(I)V
 
-    .line 1880
+    .line 1882
     :cond_1
     invoke-static {p1}, Landroid/os/Power;->setScreenState(Z)I
 
     move-result v0
 
-    .line 1881
+    .line 1883
     .local v0, err:I
     if-nez v0, :cond_4
 
-    .line 1882
+    .line 1884
     if-eqz p1, :cond_3
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -6682,52 +6683,52 @@
     :goto_0
     iput-wide v1, p0, Lcom/android/server/PowerManagerService;->mLastScreenOnTime:J
 
-    .line 1883
+    .line 1885
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
     if-eqz v1, :cond_2
 
-    .line 1884
+    .line 1886
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->enableLightSensorLocked(Z)V
 
-    .line 1885
+    .line 1887
     if-nez p1, :cond_2
 
-    .line 1887
+    .line 1889
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mButtonLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v1}, Lcom/android/server/LightsService$Light;->turnOff()V
 
-    .line 1888
+    .line 1890
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mKeyboardLight:Lcom/android/server/LightsService$Light;
 
     invoke-virtual {v1}, Lcom/android/server/LightsService$Light;->turnOff()V
 
-    .line 1891
+    .line 1893
     const/high16 v1, -0x4080
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
-    .line 1893
+    .line 1895
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mHighestLightSensorValue:I
 
-    .line 1900
+    .line 1902
     :cond_2
     :goto_1
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->printCurLockForce(Z)V
 
-    .line 1901
+    .line 1903
     return v0
 
-    .line 1882
+    .line 1884
     :cond_3
     const-wide/16 v1, 0x0
 
     goto :goto_0
 
-    .line 1898
+    .line 1900
     :cond_4
     const-string v1, "PowerManagerService"
 
@@ -6760,7 +6761,7 @@
     .parameter "nextState"
 
     .prologue
-    .line 1337
+    .line 1339
     const-wide/16 v3, -0x1
 
     move-object v0, p0
@@ -6771,7 +6772,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/PowerManagerService;->setTimeoutLocked(JJI)V
 
-    .line 1338
+    .line 1340
     return-void
 .end method
 
@@ -6782,24 +6783,24 @@
     .parameter "nextState"
 
     .prologue
-    .line 1344
+    .line 1346
     move-wide v0, p3
 
-    .line 1345
+    .line 1347
     .local v0, timeoutOverride:J
     iget-boolean v4, p0, Lcom/android/server/PowerManagerService;->mBootCompleted:Z
 
     if-eqz v4, :cond_0
 
-    .line 1346
+    .line 1348
     iget-object v6, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v6
 
-    .line 1347
+    .line 1349
     const-wide/16 v2, 0x0
 
-    .line 1348
+    .line 1350
     .local v2, when:J
     const-wide/16 v4, 0x0
 
@@ -6807,14 +6808,14 @@
 
     if-gtz v4, :cond_2
 
-    .line 1349
+    .line 1351
     packed-switch p5, :pswitch_data_0
 
-    .line 1367
+    .line 1369
     :pswitch_0
     move-wide v2, p1
 
-    .line 1399
+    .line 1401
     :goto_0
     :try_start_0
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
@@ -6823,12 +6824,12 @@
 
     invoke-virtual {v4, v5}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1400
+    .line 1402
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mTimeoutTask:Lcom/android/server/PowerManagerService$TimeoutTask;
 
     iput p5, v4, Lcom/android/server/PowerManagerService$TimeoutTask;->nextState:I
 
-    .line 1401
+    .line 1403
     iget-object v7, p0, Lcom/android/server/PowerManagerService;->mTimeoutTask:Lcom/android/server/PowerManagerService$TimeoutTask;
 
     const-wide/16 v4, 0x0
@@ -6842,25 +6843,25 @@
     :goto_1
     iput-wide v4, v7, Lcom/android/server/PowerManagerService$TimeoutTask;->remainingTimeoutOverride:J
 
-    .line 1404
+    .line 1406
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v5, p0, Lcom/android/server/PowerManagerService;->mTimeoutTask:Lcom/android/server/PowerManagerService$TimeoutTask;
 
     invoke-virtual {v4, v5, v2, v3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
 
-    .line 1405
+    .line 1407
     iput-wide v2, p0, Lcom/android/server/PowerManagerService;->mNextTimeout:J
 
-    .line 1406
+    .line 1408
     monitor-exit v6
 
-    .line 1408
+    .line 1410
     .end local v2           #when:J
     :cond_0
     return-void
 
-    .line 1352
+    .line 1354
     .restart local v2       #when:J
     :pswitch_1
     iget v4, p0, Lcom/android/server/PowerManagerService;->mKeylightDelay:I
@@ -6869,26 +6870,26 @@
 
     add-long v2, p1, v4
 
-    .line 1353
+    .line 1355
     goto :goto_0
 
-    .line 1355
+    .line 1357
     :pswitch_2
     iget v4, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
     if-ltz v4, :cond_1
 
-    .line 1356
+    .line 1358
     iget v4, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
     int-to-long v4, v4
 
     add-long v2, p1, v4
 
-    .line 1357
+    .line 1359
     goto :goto_0
 
-    .line 1359
+    .line 1361
     :cond_1
     const-string v4, "PowerManagerService"
 
@@ -6920,7 +6921,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1362
+    .line 1364
     :pswitch_3
     iget-object v5, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
@@ -6928,7 +6929,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1363
+    .line 1365
     :try_start_1
     iget v4, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
@@ -6936,7 +6937,7 @@
 
     add-long v2, p1, v7
 
-    .line 1364
+    .line 1366
     monitor-exit v5
 
     goto :goto_0
@@ -6951,7 +6952,7 @@
     :try_start_2
     throw v4
 
-    .line 1406
+    .line 1408
     :catchall_1
     move-exception v4
 
@@ -6961,7 +6962,7 @@
 
     throw v4
 
-    .line 1372
+    .line 1374
     :cond_2
     :try_start_3
     const-string v4, "PowerManagerService"
@@ -6986,7 +6987,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1373
+    .line 1375
     iget v4, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
     int-to-long v4, v4
@@ -6995,16 +6996,16 @@
 
     if-gtz v4, :cond_3
 
-    .line 1374
+    .line 1376
     add-long v2, p1, v0
 
-    .line 1375
+    .line 1377
     const/4 p5, 0x0
 
-    .line 1376
+    .line 1378
     goto/16 :goto_0
 
-    .line 1378
+    .line 1380
     :cond_3
     iget v4, p0, Lcom/android/server/PowerManagerService;->mScreenOffDelay:I
 
@@ -7012,12 +7013,12 @@
 
     sub-long/2addr v0, v4
 
-    .line 1380
+    .line 1382
     iget v4, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
     if-ltz v4, :cond_5
 
-    .line 1381
+    .line 1383
     iget v4, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
 
     int-to-long v4, v4
@@ -7026,16 +7027,16 @@
 
     if-gtz v4, :cond_4
 
-    .line 1382
+    .line 1384
     add-long v2, p1, v0
 
-    .line 1383
+    .line 1385
     const/4 p5, 0x1
 
-    .line 1384
+    .line 1386
     goto/16 :goto_0
 
-    .line 1386
+    .line 1388
     :cond_4
     iget v4, p0, Lcom/android/server/PowerManagerService;->mDimDelay:I
     :try_end_3
@@ -7045,22 +7046,22 @@
 
     sub-long/2addr v0, v4
 
-    .line 1389
+    .line 1391
     :cond_5
     add-long v2, p1, v0
 
-    .line 1390
+    .line 1392
     const/4 p5, 0x3
 
     goto/16 :goto_0
 
-    .line 1401
+    .line 1403
     :cond_6
     const-wide/16 v4, -0x1
 
     goto/16 :goto_1
 
-    .line 1349
+    .line 1351
     nop
 
     :pswitch_data_0
@@ -7078,17 +7079,17 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2107
+    .line 2109
     iget-boolean v2, p0, Lcom/android/server/PowerManagerService;->mPreparingForScreenOn:Z
 
     if-eqz v2, :cond_1
 
-    .line 2126
+    .line 2128
     :cond_0
     :goto_0
     return v1
 
-    .line 2118
+    .line 2120
     :cond_1
     const/4 v0, 0x0
 
@@ -7100,19 +7101,19 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 2119
+    .line 2121
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mBroadcastQueue:[I
 
     aget v2, v2, v0
 
     if-eq v2, v1, :cond_0
 
-    .line 2118
+    .line 2120
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 2126
+    .line 2128
     :cond_2
     const/4 v1, 0x0
 
@@ -7128,12 +7129,12 @@
 
     const/4 v1, 0x0
 
-    .line 2565
+    .line 2567
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v2
 
-    .line 2566
+    .line 2568
     :try_start_0
     iget-wide v3, p0, Lcom/android/server/PowerManagerService;->mWarningSpewThrottleTime:J
 
@@ -7145,22 +7146,22 @@
 
     if-lez v3, :cond_0
 
-    .line 2567
+    .line 2569
     iput-wide p1, p0, Lcom/android/server/PowerManagerService;->mWarningSpewThrottleTime:J
 
-    .line 2568
+    .line 2570
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mWarningSpewThrottleCount:I
 
-    .line 2569
+    .line 2571
     monitor-exit v2
 
-    .line 2574
+    .line 2576
     :goto_0
     return v0
 
-    .line 2570
+    .line 2572
     :cond_0
     iget v3, p0, Lcom/android/server/PowerManagerService;->mWarningSpewThrottleCount:I
 
@@ -7168,19 +7169,19 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 2571
+    .line 2573
     iget v1, p0, Lcom/android/server/PowerManagerService;->mWarningSpewThrottleCount:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mWarningSpewThrottleCount:I
 
-    .line 2572
+    .line 2574
     monitor-exit v2
 
     goto :goto_0
 
-    .line 2576
+    .line 2578
     :catchall_0
     move-exception v0
 
@@ -7190,7 +7191,7 @@
 
     throw v0
 
-    .line 2574
+    .line 2576
     :cond_1
     :try_start_1
     monitor-exit v2
@@ -7208,12 +7209,12 @@
     .parameter "forceState"
 
     .prologue
-    .line 2130
+    .line 2132
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
-    .line 2134
+    .line 2136
     .local v11, oldState:I
     and-int/lit8 v18, v11, 0x1
 
@@ -7227,7 +7228,7 @@
 
     if-eqz v18, :cond_1
 
-    .line 2138
+    .line 2140
     :cond_0
     invoke-direct/range {p0 .. p0}, Lcom/android/server/PowerManagerService;->shouldDeferScreenOnLocked()Z
 
@@ -7241,45 +7242,45 @@
 
     if-eqz v18, :cond_1
 
-    .line 2139
+    .line 2141
     and-int/lit8 p1, p1, -0x4
 
-    .line 2153
+    .line 2155
     :cond_1
     xor-int v15, p1, v11
 
-    .line 2154
+    .line 2156
     .local v15, realDifference:I
     or-int v5, v15, p2
 
-    .line 2155
+    .line 2157
     .local v5, difference:I
     if-nez v5, :cond_3
 
-    .line 2302
+    .line 2304
     :cond_2
     :goto_0
     return-void
 
-    .line 2159
+    .line 2161
     :cond_3
     const/4 v10, 0x0
 
-    .line 2160
+    .line 2162
     .local v10, offMask:I
     const/4 v6, 0x0
 
-    .line 2161
+    .line 2163
     .local v6, dimMask:I
     const/4 v12, 0x0
 
-    .line 2163
+    .line 2165
     .local v12, onMask:I
     invoke-direct/range {p0 .. p0}, Lcom/android/server/PowerManagerService;->getPreferredBrightness()I
 
     move-result v13
 
-    .line 2165
+    .line 2167
     .local v13, preferredBrightness:I
     const-string v18, "PowerManagerService"
 
@@ -7333,56 +7334,56 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2167
+    .line 2169
     and-int/lit8 v18, v5, 0x8
 
     if-eqz v18, :cond_4
 
-    .line 2168
+    .line 2170
     and-int/lit8 v18, p1, 0x8
 
     if-nez v18, :cond_f
 
-    .line 2169
+    .line 2171
     or-int/lit8 v10, v10, 0x8
 
-    .line 2175
+    .line 2177
     :cond_4
     :goto_1
     and-int/lit8 v18, v5, 0x4
 
     if-eqz v18, :cond_5
 
-    .line 2176
+    .line 2178
     and-int/lit8 v18, p1, 0x4
 
     if-nez v18, :cond_10
 
-    .line 2177
+    .line 2179
     or-int/lit8 v10, v10, 0x4
 
-    .line 2183
+    .line 2185
     :cond_5
     :goto_2
     and-int/lit8 v18, v5, 0x3
 
     if-eqz v18, :cond_a
 
-    .line 2184
+    .line 2186
     const/4 v9, -0x1
 
-    .line 2190
+    .line 2192
     .local v9, nominalCurrentValue:I
     and-int/lit8 v18, v15, 0x3
 
     if-eqz v18, :cond_6
 
-    .line 2191
+    .line 2193
     and-int/lit8 v18, v11, 0x3
 
     packed-switch v18, :pswitch_data_0
 
-    .line 2204
+    .line 2206
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -7400,25 +7401,25 @@
 
     float-to-int v9, v0
 
-    .line 2208
+    .line 2210
     :cond_6
     :goto_3
     move v4, v13
 
-    .line 2209
+    .line 2211
     .local v4, brightness:I
     const/16 v17, 0x14
 
-    .line 2210
+    .line 2212
     .local v17, steps:I
     and-int/lit8 v18, p1, 0x2
 
     if-nez v18, :cond_8
 
-    .line 2214
+    .line 2216
     const/high16 v16, 0x3fc0
 
-    .line 2215
+    .line 2217
     .local v16, scale:F
     move-object/from16 v0, p0
 
@@ -7438,7 +7439,7 @@
 
     div-float v14, v18, v19
 
-    .line 2216
+    .line 2218
     .local v14, ratio:F
     const/high16 v18, 0x3f80
 
@@ -7448,25 +7449,25 @@
 
     const/high16 v14, 0x3f80
 
-    .line 2217
+    .line 2219
     :cond_7
     and-int/lit8 v18, p1, 0x1
 
     if-nez v18, :cond_12
 
-    .line 2218
+    .line 2220
     and-int/lit8 v18, v11, 0x2
 
     if-eqz v18, :cond_11
 
-    .line 2220
+    .line 2222
     const/16 v17, 0x14
 
-    .line 2225
+    .line 2227
     :goto_4
     const/4 v4, 0x0
 
-    .line 2245
+    .line 2247
     .end local v14           #ratio:F
     .end local v16           #scale:F
     :cond_8
@@ -7475,7 +7476,7 @@
 
     move-result-wide v7
 
-    .line 2247
+    .line 2249
     .local v7, identity:J
     :try_start_0
     move-object/from16 v0, p0
@@ -7491,10 +7492,10 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2251
+    .line 2253
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2254
+    .line 2256
     :goto_6
     move-object/from16 v0, p0
 
@@ -7506,12 +7507,12 @@
 
     if-le v4, v0, :cond_9
 
-    .line 2255
+    .line 2257
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/PowerManagerService;->mMaxBrightness:I
 
-    .line 2256
+    .line 2258
     const-string v18, "PowerManagerService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -7542,7 +7543,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2259
+    .line 2261
     :cond_9
     move-object/from16 v0, p0
 
@@ -7552,7 +7553,7 @@
 
     if-nez v18, :cond_a
 
-    .line 2260
+    .line 2262
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
@@ -7573,7 +7574,7 @@
 
     invoke-virtual {v0, v4, v1, v2, v3}, Lcom/android/server/PowerManagerService$BrightnessState;->setTargetLocked(IIII)V
 
-    .line 2280
+    .line 2282
     .end local v4           #brightness:I
     .end local v7           #identity:J
     .end local v9           #nominalCurrentValue:I
@@ -7581,7 +7582,7 @@
     :cond_a
     if-eqz v10, :cond_b
 
-    .line 2282
+    .line 2284
     const/16 v18, 0x0
 
     move-object/from16 v0, p0
@@ -7590,16 +7591,16 @@
 
     invoke-direct {v0, v10, v1}, Lcom/android/server/PowerManagerService;->setLightBrightness(II)V
 
-    .line 2284
+    .line 2286
     :cond_b
     if-eqz v6, :cond_d
 
-    .line 2285
+    .line 2287
     move-object/from16 v0, p0
 
     iget v4, v0, Lcom/android/server/PowerManagerService;->mScreenBrightnessDim:I
 
-    .line 2286
+    .line 2288
     .restart local v4       #brightness:I
     and-int/lit8 v18, p1, 0x10
 
@@ -7611,26 +7612,26 @@
 
     if-le v4, v0, :cond_c
 
-    .line 2288
+    .line 2290
     const/16 v4, 0xa
 
-    .line 2291
+    .line 2293
     :cond_c
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6, v4}, Lcom/android/server/PowerManagerService;->setLightBrightness(II)V
 
-    .line 2293
+    .line 2295
     .end local v4           #brightness:I
     :cond_d
     if-eqz v12, :cond_2
 
-    .line 2294
+    .line 2296
     invoke-direct/range {p0 .. p0}, Lcom/android/server/PowerManagerService;->getPreferredBrightness()I
 
     move-result v4
 
-    .line 2295
+    .line 2297
     .restart local v4       #brightness:I
     and-int/lit8 v18, p1, 0x10
 
@@ -7642,10 +7643,10 @@
 
     if-le v4, v0, :cond_e
 
-    .line 2297
+    .line 2299
     const/16 v4, 0xa
 
-    .line 2300
+    .line 2302
     :cond_e
     move-object/from16 v0, p0
 
@@ -7653,44 +7654,44 @@
 
     goto/16 :goto_0
 
-    .line 2171
+    .line 2173
     .end local v4           #brightness:I
     :cond_f
     or-int/lit8 v12, v12, 0x8
 
     goto/16 :goto_1
 
-    .line 2179
+    .line 2181
     :cond_10
     or-int/lit8 v12, v12, 0x4
 
     goto/16 :goto_2
 
-    .line 2193
+    .line 2195
     .restart local v9       #nominalCurrentValue:I
     :pswitch_1
     move v9, v13
 
-    .line 2194
+    .line 2196
     goto/16 :goto_3
 
-    .line 2196
+    .line 2198
     :pswitch_2
     move-object/from16 v0, p0
 
     iget v9, v0, Lcom/android/server/PowerManagerService;->mScreenBrightnessDim:I
 
-    .line 2197
+    .line 2199
     goto/16 :goto_3
 
-    .line 2199
+    .line 2201
     :pswitch_3
     const/4 v9, 0x0
 
-    .line 2200
+    .line 2202
     goto/16 :goto_3
 
-    .line 2223
+    .line 2225
     .restart local v4       #brightness:I
     .restart local v14       #ratio:F
     .restart local v16       #scale:F
@@ -7712,13 +7713,13 @@
 
     goto/16 :goto_4
 
-    .line 2227
+    .line 2229
     :cond_12
     and-int/lit8 v18, v11, 0x1
 
     if-eqz v18, :cond_14
 
-    .line 2229
+    .line 2231
     const/high16 v18, 0x41a0
 
     const/high16 v19, 0x3f80
@@ -7737,7 +7738,7 @@
 
     move/from16 v17, v0
 
-    .line 2234
+    .line 2236
     :goto_7
     move-object/from16 v0, p0
 
@@ -7765,7 +7766,7 @@
 
     if-eqz v18, :cond_13
 
-    .line 2240
+    .line 2242
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v18
@@ -7776,7 +7777,7 @@
 
     iput-wide v0, v2, Lcom/android/server/PowerManagerService;->mScreenOffTime:J
 
-    .line 2242
+    .line 2244
     :cond_13
     move-object/from16 v0, p0
 
@@ -7784,7 +7785,7 @@
 
     goto/16 :goto_5
 
-    .line 2232
+    .line 2234
     :cond_14
     const/high16 v18, 0x41a0
 
@@ -7798,14 +7799,14 @@
 
     goto :goto_7
 
-    .line 2248
+    .line 2250
     .end local v14           #ratio:F
     .end local v16           #scale:F
     .restart local v7       #identity:J
     :catch_0
     move-exception v18
 
-    .line 2251
+    .line 2253
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_6
@@ -7817,7 +7818,7 @@
 
     throw v18
 
-    .line 2191
+    .line 2193
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_3
@@ -7835,7 +7836,7 @@
 
     const/4 v2, 0x0
 
-    .line 2081
+    .line 2083
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     and-int/lit8 v0, v0, 0x1
@@ -7856,13 +7857,13 @@
     :goto_1
     invoke-direct {p0, v0, v1}, Lcom/android/server/PowerManagerService;->nativeSetPowerState(ZZ)V
 
-    .line 2084
+    .line 2086
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 2081
+    .line 2083
     goto :goto_0
 
     :cond_1
@@ -7875,7 +7876,7 @@
     .locals 3
 
     .prologue
-    .line 3114
+    .line 3117
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7892,7 +7893,7 @@
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mShortKeylightDelay:I
 
-    .line 3119
+    .line 3122
     return-void
 .end method
 
@@ -7900,7 +7901,7 @@
     .locals 2
 
     .prologue
-    .line 788
+    .line 790
     iget v0, p0, Lcom/android/server/PowerManagerService;->mStayOnConditions:I
 
     if-eqz v0, :cond_0
@@ -7915,27 +7916,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 790
+    .line 792
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mStayOnWhilePluggedInScreenDimLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->acquire()V
 
-    .line 791
+    .line 793
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mStayOnWhilePluggedInPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->acquire()V
 
-    .line 796
+    .line 798
     :goto_0
     return-void
 
-    .line 793
+    .line 795
     :cond_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mStayOnWhilePluggedInScreenDimLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
-    .line 794
+    .line 796
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mStayOnWhilePluggedInPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
@@ -7952,7 +7953,7 @@
     .parameter "force"
 
     .prologue
-    .line 2632
+    .line 2634
     iget v1, p0, Lcom/android/server/PowerManagerService;->mPokey:I
 
     and-int/lit8 v1, v1, 0x1
@@ -7965,18 +7966,18 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2722
+    .line 2724
     :cond_0
     :goto_0
     return-void
 
-    .line 2639
+    .line 2641
     :cond_1
     iget-object v12, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v12
 
-    .line 2650
+    .line 2652
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->isScreenTurningOffLocked()Z
 
@@ -7984,19 +7985,19 @@
 
     if-eqz v1, :cond_2
 
-    .line 2651
+    .line 2653
     const-string v1, "PowerManagerService"
 
     const-string v2, "ignoring user activity while turning off screen"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2652
+    .line 2654
     monitor-exit v12
 
     goto :goto_0
 
-    .line 2717
+    .line 2719
     :catchall_0
     move-exception v1
 
@@ -8006,7 +8007,7 @@
 
     throw v1
 
-    .line 2656
+    .line 2658
     :cond_2
     :try_start_1
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
@@ -8017,12 +8018,12 @@
 
     if-nez v1, :cond_3
 
-    .line 2657
+    .line 2659
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
-    .line 2659
+    .line 2661
     :cond_3
     iget-wide v1, p0, Lcom/android/server/PowerManagerService;->mLastEventTime:J
 
@@ -8032,11 +8033,11 @@
 
     if-eqz p7, :cond_a
 
-    .line 2660
+    .line 2662
     :cond_4
     iput-wide p1, p0, Lcom/android/server/PowerManagerService;->mLastEventTime:J
 
-    .line 2661
+    .line 2663
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mUserActivityAllowed:Z
 
     if-eqz v1, :cond_5
@@ -8048,7 +8049,7 @@
     :cond_5
     if-eqz p7, :cond_a
 
-    .line 2665
+    .line 2667
     :cond_6
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
@@ -8075,7 +8076,7 @@
     :cond_7
     const/4 v7, 0x1
 
-    .line 2670
+    .line 2672
     .local v7, byApplyButtonState:Z
     :goto_1
     const/4 v1, 0x2
@@ -8086,7 +8087,7 @@
 
     if-nez v7, :cond_d
 
-    .line 2671
+    .line 2673
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mKeyboardVisible:Z
 
     if-eqz v1, :cond_c
@@ -8096,7 +8097,7 @@
     :goto_2
     iput v1, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
-    .line 2686
+    .line 2688
     :goto_3
     iget v1, p0, Lcom/android/server/PowerManagerService;->mButtonOffTimeoutSetting:I
 
@@ -8104,7 +8105,7 @@
 
     if-ne v1, v2, :cond_8
 
-    .line 2687
+    .line 2689
     const/4 v1, 0x3
 
     move/from16 v0, p6
@@ -8117,14 +8118,14 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 2694
+    .line 2696
     :cond_8
     :goto_4
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v11
 
-    .line 2695
+    .line 2697
     .local v11, uid:I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -8132,7 +8133,7 @@
 
     move-result-wide v8
 
-    .line 2697
+    .line 2699
     .local v8, ident:J
     :try_start_2
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -8144,11 +8145,11 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 2701
+    .line 2703
     :try_start_3
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2704
+    .line 2706
     :goto_5
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService;->isScreenOn()Z
 
@@ -8156,12 +8157,12 @@
 
     if-nez v1, :cond_9
 
-    .line 2705
+    .line 2707
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v10
 
-    .line 2706
+    .line 2708
     .local v10, pid:I
     const-string v1, "PowerManagerService"
 
@@ -8237,7 +8238,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2710
+    .line 2712
     .end local v10           #pid:I
     :cond_9
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -8248,12 +8249,12 @@
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
-    .line 2711
+    .line 2713
     const/4 v1, 0x4
 
     invoke-direct {p0, v1}, Lcom/android/server/PowerManagerService;->printCurLock(I)V
 
-    .line 2712
+    .line 2714
     iget v1, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
     iget v2, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
@@ -8266,7 +8267,7 @@
 
     invoke-direct {p0, v1, v0, v2}, Lcom/android/server/PowerManagerService;->setPowerState(IZI)V
 
-    .line 2714
+    .line 2716
     const/4 v6, 0x3
 
     move-object v1, p0
@@ -8277,7 +8278,7 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/server/PowerManagerService;->setTimeoutLocked(JJI)V
 
-    .line 2717
+    .line 2719
     .end local v7           #byApplyButtonState:Z
     .end local v8           #ident:J
     .end local v11           #uid:I
@@ -8286,32 +8287,32 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2719
+    .line 2721
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
     if-eqz v1, :cond_0
 
-    .line 2720
+    .line 2722
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy;->userActivity()V
 
     goto/16 :goto_0
 
-    .line 2665
+    .line 2667
     :cond_b
     const/4 v7, 0x0
 
     goto/16 :goto_1
 
-    .line 2671
+    .line 2673
     .restart local v7       #byApplyButtonState:Z
     :cond_c
     const/4 v1, 0x7
 
     goto/16 :goto_2
 
-    .line 2673
+    .line 2675
     :cond_d
     const/4 v1, 0x3
 
@@ -8321,7 +8322,7 @@
 
     if-nez v7, :cond_e
 
-    .line 2674
+    .line 2676
     :try_start_4
     iget v1, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
@@ -8331,7 +8332,7 @@
 
     goto/16 :goto_3
 
-    .line 2676
+    .line 2678
     :cond_e
     const/4 v1, 0x1
 
@@ -8341,7 +8342,7 @@
 
     if-nez v7, :cond_10
 
-    .line 2677
+    .line 2679
     iget v2, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mKeyboardVisible:Z
@@ -8362,7 +8363,7 @@
 
     goto :goto_6
 
-    .line 2681
+    .line 2683
     :cond_10
     iget v1, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
@@ -8372,13 +8373,13 @@
 
     goto/16 :goto_3
 
-    .line 2689
+    .line 2691
     :cond_11
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mIsSipVisible:Z
 
     if-eqz v1, :cond_8
 
-    .line 2690
+    .line 2692
     iget v1, p0, Lcom/android/server/PowerManagerService;->mUserState:I
 
     and-int/lit8 v1, v1, -0xd
@@ -8387,13 +8388,13 @@
 
     goto/16 :goto_4
 
-    .line 2698
+    .line 2700
     .restart local v8       #ident:J
     .restart local v11       #uid:I
     :catch_0
     move-exception v1
 
-    .line 2701
+    .line 2703
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_5
@@ -8418,18 +8419,18 @@
     .parameter "tag"
 
     .prologue
-    .line 3844
+    .line 3847
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
 
-    .line 3845
+    .line 3848
     .local v4, uid:I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v5
 
-    .line 3847
+    .line 3850
     .local v5, pid:I
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
@@ -8439,12 +8440,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3849
+    .line 3852
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v7
 
-    .line 3851
+    .line 3854
     .local v7, ident:J
     :try_start_0
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -8463,22 +8464,22 @@
 
     move-object v6, p4
 
-    .line 3852
+    .line 3855
     :try_start_1
     invoke-direct/range {v0 .. v6}, Lcom/android/server/PowerManagerService;->acquireDVFSLockLocked(IILandroid/os/IBinder;IILjava/lang/String;)V
 
-    .line 3853
+    .line 3856
     monitor-exit v9
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3855
+    .line 3858
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3857
+    .line 3860
     return-void
 
-    .line 3853
+    .line 3856
     :catchall_0
     move-exception v0
 
@@ -8492,7 +8493,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3855
+    .line 3858
     :catchall_1
     move-exception v0
 
@@ -8509,18 +8510,18 @@
     .parameter "tag"
 
     .prologue
-    .line 3948
+    .line 3951
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
 
-    .line 3949
+    .line 3952
     .local v4, uid:I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v5
 
-    .line 3951
+    .line 3954
     .local v5, pid:I
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
@@ -8530,12 +8531,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3953
+    .line 3956
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v7
 
-    .line 3955
+    .line 3958
     .local v7, ident:J
     :try_start_0
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -8544,7 +8545,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3956
+    .line 3959
     :try_start_1
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPersistentDVFSLocksInfo:I
 
@@ -8552,12 +8553,12 @@
 
     if-nez v0, :cond_0
 
-    .line 3957
+    .line 3960
     new-instance v3, Landroid/os/Binder;
 
     invoke-direct {v3}, Landroid/os/Binder;-><init>()V
 
-    .line 3958
+    .line 3961
     .local v3, token:Landroid/os/IBinder;
     const-string v0, "PowerManagerService"
 
@@ -8641,7 +8642,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3959
+    .line 3962
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mMapPersistentDVFSLock:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8658,30 +8659,30 @@
 
     move-object v6, p4
 
-    .line 3960
+    .line 3963
     invoke-direct/range {v0 .. v6}, Lcom/android/server/PowerManagerService;->acquireDVFSLockLocked(IILandroid/os/IBinder;IILjava/lang/String;)V
 
-    .line 3961
+    .line 3964
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPersistentDVFSLocksInfo:I
 
     or-int/2addr v0, p3
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mPersistentDVFSLocksInfo:I
 
-    .line 3966
+    .line 3969
     .end local v3           #token:Landroid/os/IBinder;
     :goto_0
     monitor-exit v9
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3968
+    .line 3971
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3970
+    .line 3973
     return-void
 
-    .line 3964
+    .line 3967
     :cond_0
     :try_start_2
     const-string v0, "PowerManagerService"
@@ -8708,7 +8709,7 @@
 
     goto :goto_0
 
-    .line 3966
+    .line 3969
     :catchall_0
     move-exception v0
 
@@ -8721,7 +8722,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3968
+    .line 3971
     :catchall_1
     move-exception v0
 
@@ -8738,18 +8739,18 @@
     .parameter "ws"
 
     .prologue
-    .line 816
+    .line 818
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 817
+    .line 819
     .local v3, uid:I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v4
 
-    .line 818
+    .line 820
     .local v4, pid:I
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -8757,7 +8758,7 @@
 
     if-eq v3, v0, :cond_0
 
-    .line 819
+    .line 821
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.WAKE_LOCK"
@@ -8766,20 +8767,20 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 821
+    .line 823
     :cond_0
     if-eqz p4, :cond_1
 
-    .line 822
+    .line 824
     invoke-virtual {p0, v3, v4}, Lcom/android/server/PowerManagerService;->enforceWakeSourcePermission(II)V
 
-    .line 824
+    .line 826
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v7
 
-    .line 826
+    .line 828
     .local v7, ident:J
     :try_start_0
     iget-object v9, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -8798,22 +8799,22 @@
 
     move-object v6, p4
 
-    .line 827
+    .line 829
     :try_start_1
     invoke-virtual/range {v0 .. v6}, Lcom/android/server/PowerManagerService;->acquireWakeLockLocked(ILandroid/os/IBinder;IILjava/lang/String;Landroid/os/WorkSource;)V
 
-    .line 828
+    .line 830
     monitor-exit v9
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 830
+    .line 832
     invoke-static {v7, v8}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 832
+    .line 834
     return-void
 
-    .line 828
+    .line 830
     :catchall_0
     move-exception v0
 
@@ -8827,7 +8828,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 830
+    .line 832
     :catchall_1
     move-exception v0
 
@@ -8846,7 +8847,7 @@
     .parameter "ws"
 
     .prologue
-    .line 876
+    .line 878
     if-eqz p6, :cond_0
 
     invoke-virtual/range {p6 .. p6}, Landroid/os/WorkSource;->size()I
@@ -8855,10 +8856,10 @@
 
     if-nez v2, :cond_0
 
-    .line 877
+    .line 879
     const/16 p6, 0x0
 
-    .line 880
+    .line 882
     :cond_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
@@ -8868,11 +8869,11 @@
 
     move-result v10
 
-    .line 885
+    .line 887
     .local v10, index:I
     if-gez v10, :cond_7
 
-    .line 886
+    .line 888
     new-instance v1, Lcom/android/server/PowerManagerService$WakeLock;
 
     move-object v2, p0
@@ -8889,7 +8890,7 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/PowerManagerService$WakeLock;-><init>(Lcom/android/server/PowerManagerService;ILandroid/os/IBinder;Ljava/lang/String;II)V
 
-    .line 887
+    .line 889
     .local v1, wl:Lcom/android/server/PowerManagerService$WakeLock;
     iget v2, v1, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -8897,7 +8898,7 @@
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 910
+    .line 912
     const-string v2, "PowerManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -8938,28 +8939,28 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1006
+    .line 1008
     :cond_1
     :goto_0
     return-void
 
-    .line 895
+    .line 897
     :sswitch_0
     const/16 v2, 0xf
 
     iput v2, v1, Lcom/android/server/PowerManagerService$WakeLock;->minState:I
 
-    .line 914
+    .line 916
     :goto_1
     :sswitch_1
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v2, v1}, Lcom/android/server/PowerManagerService$LockList;->addLock(Lcom/android/server/PowerManagerService$WakeLock;)V
 
-    .line 915
+    .line 917
     if-eqz p6, :cond_2
 
-    .line 916
+    .line 918
     new-instance v2, Landroid/os/WorkSource;
 
     move-object/from16 v0, p6
@@ -8968,19 +8969,19 @@
 
     iput-object v2, v1, Lcom/android/server/PowerManagerService$WakeLock;->ws:Landroid/os/WorkSource;
 
-    .line 918
+    .line 920
     :cond_2
     const/4 v11, 0x1
 
-    .line 919
+    .line 921
     .local v11, newlock:Z
     const/4 v9, 0x0
 
-    .line 920
+    .line 922
     .local v9, diffsource:Z
     const/4 v13, 0x0
 
-    .line 941
+    .line 943
     .local v13, oldsource:Landroid/os/WorkSource;
     :cond_3
     :goto_2
@@ -8990,52 +8991,52 @@
 
     iput-wide v2, v1, Lcom/android/server/PowerManagerService$WakeLock;->acqTime:J
 
-    .line 942
+    .line 944
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->isScreenLock(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_10
 
-    .line 947
+    .line 949
     and-int/lit8 v2, p1, 0x3f
 
     const/16 v3, 0x20
 
     if-ne v2, v3, :cond_b
 
-    .line 948
+    .line 950
     iget v2, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
-    .line 949
+    .line 951
     iget v2, p0, Lcom/android/server/PowerManagerService;->mProximityWakeLockCount:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_4
 
-    .line 950
+    .line 952
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->enableProximityLockLocked()V
 
-    .line 998
+    .line 1000
     :cond_4
     :goto_3
     if-eqz v9, :cond_5
 
-    .line 1001
+    .line 1003
     invoke-virtual {p0, v1, v13}, Lcom/android/server/PowerManagerService;->noteStopWakeLocked(Lcom/android/server/PowerManagerService$WakeLock;Landroid/os/WorkSource;)V
 
-    .line 1003
+    .line 1005
     :cond_5
     if-nez v11, :cond_6
 
     if-eqz v9, :cond_1
 
-    .line 1004
+    .line 1006
     :cond_6
     move-object/from16 v0, p6
 
@@ -9043,7 +9044,7 @@
 
     goto :goto_0
 
-    .line 899
+    .line 901
     .end local v9           #diffsource:Z
     .end local v11           #newlock:Z
     .end local v13           #oldsource:Landroid/os/WorkSource;
@@ -9054,7 +9055,7 @@
 
     goto :goto_1
 
-    .line 902
+    .line 904
     :sswitch_3
     const/4 v2, 0x1
 
@@ -9062,7 +9063,7 @@
 
     goto :goto_1
 
-    .line 922
+    .line 924
     .end local v1           #wl:Lcom/android/server/PowerManagerService$WakeLock;
     :cond_7
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -9073,35 +9074,35 @@
 
     check-cast v1, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 923
+    .line 925
     .restart local v1       #wl:Lcom/android/server/PowerManagerService$WakeLock;
     const/4 v11, 0x0
 
-    .line 924
+    .line 926
     .restart local v11       #newlock:Z
     iget-object v13, v1, Lcom/android/server/PowerManagerService$WakeLock;->ws:Landroid/os/WorkSource;
 
-    .line 925
+    .line 927
     .restart local v13       #oldsource:Landroid/os/WorkSource;
     if-eqz v13, :cond_9
 
-    .line 926
+    .line 928
     if-nez p6, :cond_8
 
-    .line 927
+    .line 929
     const/4 v2, 0x0
 
     iput-object v2, v1, Lcom/android/server/PowerManagerService$WakeLock;->ws:Landroid/os/WorkSource;
 
-    .line 928
+    .line 930
     const/4 v9, 0x1
 
-    .line 937
+    .line 939
     .restart local v9       #diffsource:Z
     :goto_4
     if-eqz v9, :cond_3
 
-    .line 938
+    .line 940
     new-instance v2, Landroid/os/WorkSource;
 
     move-object/from16 v0, p6
@@ -9112,7 +9113,7 @@
 
     goto :goto_2
 
-    .line 930
+    .line 932
     .end local v9           #diffsource:Z
     :cond_8
     move-object/from16 v0, p6
@@ -9124,18 +9125,18 @@
     .restart local v9       #diffsource:Z
     goto :goto_4
 
-    .line 932
+    .line 934
     .end local v9           #diffsource:Z
     :cond_9
     if-eqz p6, :cond_a
 
-    .line 933
+    .line 935
     const/4 v9, 0x1
 
     .restart local v9       #diffsource:Z
     goto :goto_4
 
-    .line 935
+    .line 937
     .end local v9           #diffsource:Z
     :cond_a
     const/4 v9, 0x0
@@ -9143,7 +9144,7 @@
     .restart local v9       #diffsource:Z
     goto :goto_4
 
-    .line 953
+    .line 955
     :cond_b
     iget v2, v1, Lcom/android/server/PowerManagerService$WakeLock;->flags:I
 
@@ -9153,10 +9154,10 @@
 
     if-eqz v2, :cond_d
 
-    .line 954
+    .line 956
     iget v12, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
-    .line 955
+    .line 957
     .local v12, oldWakeLockState:I
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
@@ -9166,7 +9167,7 @@
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
-    .line 959
+    .line 961
     iget v2, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
     and-int/lit8 v2, v2, 0x1
@@ -9181,12 +9182,12 @@
 
     if-nez v2, :cond_c
 
-    .line 961
+    .line 963
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
-    .line 980
+    .line 982
     .end local v12           #oldWakeLockState:I
     :cond_c
     :goto_5
@@ -9206,7 +9207,7 @@
 
     const/4 v8, 0x1
 
-    .line 981
+    .line 983
     .local v8, bGoOn:Z
     :goto_6
     const-string v3, "PowerManagerService"
@@ -9322,7 +9323,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 984
+    .line 986
     iget v2, p0, Lcom/android/server/PowerManagerService;->mWakeLockState:I
 
     iget v3, p0, Lcom/android/server/PowerManagerService;->mUserState:I
@@ -9333,7 +9334,7 @@
 
     goto/16 :goto_3
 
-    .line 978
+    .line 980
     .end local v8           #bGoOn:Z
     :cond_d
     iget v2, p0, Lcom/android/server/PowerManagerService;->mUserState:I
@@ -9354,20 +9355,20 @@
 
     goto/16 :goto_5
 
-    .line 980
+    .line 982
     :cond_e
     const/4 v8, 0x0
 
     goto/16 :goto_6
 
-    .line 981
+    .line 983
     .restart local v8       #bGoOn:Z
     :cond_f
     const-string v2, ""
 
     goto/16 :goto_7
 
-    .line 987
+    .line 989
     .end local v8           #bGoOn:Z
     :cond_10
     and-int/lit8 v2, p1, 0x3f
@@ -9376,17 +9377,17 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 988
+    .line 990
     if-eqz v11, :cond_11
 
-    .line 989
+    .line 991
     iget v2, p0, Lcom/android/server/PowerManagerService;->mPartialCount:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lcom/android/server/PowerManagerService;->mPartialCount:I
 
-    .line 990
+    .line 992
     const/16 v2, 0xaa9
 
     const/4 v3, 0x2
@@ -9409,14 +9410,14 @@
 
     invoke-static {v2, v3}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 991
+    .line 993
     iget v2, p0, Lcom/android/server/PowerManagerService;->mPartialCount:I
 
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_11
 
-    .line 995
+    .line 997
     :cond_11
     const/4 v2, 0x1
 
@@ -9426,7 +9427,7 @@
 
     goto/16 :goto_3
 
-    .line 887
+    .line 889
     nop
 
     :sswitch_data_0
@@ -9443,25 +9444,25 @@
     .locals 7
 
     .prologue
-    .line 3243
+    .line 3246
     const-string v0, "PowerManagerService"
 
     const-string v1, "bootCompleted"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3244
+    .line 3247
     iget-object v6, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v6
 
-    .line 3245
+    .line 3248
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/PowerManagerService;->mBootCompleted:Z
 
-    .line 3246
+    .line 3249
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
@@ -9476,21 +9477,21 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/PowerManagerService;->userActivity(JZIZ)V
 
-    .line 3247
+    .line 3250
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->updateWakeLockLocked()V
 
-    .line 3248
+    .line 3251
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 3252
+    .line 3255
     monitor-exit v6
 
-    .line 3253
+    .line 3256
     return-void
 
-    .line 3252
+    .line 3255
     :catchall_0
     move-exception v0
 
@@ -9509,7 +9510,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2624
+    .line 2626
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DEVICE_POWER"
@@ -9518,7 +9519,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2625
+    .line 2627
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -9557,10 +9558,10 @@
 
     move v7, v5
 
-    .line 2626
+    .line 2628
     invoke-direct/range {v0 .. v7}, Lcom/android/server/PowerManagerService;->userActivity(JJZIZ)V
 
-    .line 2627
+    .line 2629
     return-void
 .end method
 
@@ -9569,7 +9570,7 @@
     .parameter "message"
 
     .prologue
-    .line 2928
+    .line 2930
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.REBOOT"
@@ -9578,32 +9579,32 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2929
+    .line 2931
     new-instance v1, Lcom/android/server/PowerManagerService$13;
 
     const-string v2, "PowerManagerService.crash()"
 
     invoke-direct {v1, p0, v2, p1}, Lcom/android/server/PowerManagerService$13;-><init>(Lcom/android/server/PowerManagerService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2933
+    .line 2935
     .local v1, t:Ljava/lang/Thread;
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/Thread;->start()V
 
-    .line 2934
+    .line 2936
     invoke-virtual {v1}, Ljava/lang/Thread;->join()V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2938
+    .line 2940
     :goto_0
     return-void
 
-    .line 2935
+    .line 2937
     :catch_0
     move-exception v0
 
-    .line 2936
+    .line 2938
     .local v0, e:Ljava/lang/InterruptedException;
     const-string v2, "PowerManagerService"
 
@@ -9619,7 +9620,7 @@
     .parameter "args"
 
     .prologue
-    .line 1209
+    .line 1211
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
@@ -9634,7 +9635,7 @@
 
     if-eqz v18, :cond_0
 
-    .line 1211
+    .line 1213
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -9677,17 +9678,17 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1334
+    .line 1336
     :goto_0
     return-void
 
-    .line 1217
+    .line 1219
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v13
 
-    .line 1219
+    .line 1221
     .local v13, now:J
     move-object/from16 v0, p0
 
@@ -9697,7 +9698,7 @@
 
     monitor-enter v19
 
-    .line 1220
+    .line 1222
     :try_start_0
     const-string v18, "Power Manager State:"
 
@@ -9707,7 +9708,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1221
+    .line 1223
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -9810,7 +9811,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1225
+    .line 1227
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -9849,7 +9850,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1226
+    .line 1228
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -9892,7 +9893,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1227
+    .line 1229
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -9935,7 +9936,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1228
+    .line 1230
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -9978,7 +9979,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1229
+    .line 1231
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10025,7 +10026,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1230
+    .line 1232
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10120,7 +10121,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1232
+    .line 1234
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10231,7 +10232,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1236
+    .line 1238
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10294,7 +10295,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1238
+    .line 1240
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10403,7 +10404,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1240
+    .line 1242
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10512,7 +10513,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1242
+    .line 1244
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10575,7 +10576,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1243
+    .line 1245
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10638,7 +10639,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1245
+    .line 1247
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10725,7 +10726,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1247
+    .line 1249
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10812,7 +10813,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1250
+    .line 1252
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10875,7 +10876,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1252
+    .line 1254
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10914,7 +10915,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1253
+    .line 1255
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10953,7 +10954,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1254
+    .line 1256
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -10992,7 +10993,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1255
+    .line 1257
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11031,7 +11032,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1256
+    .line 1258
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11070,7 +11071,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1257
+    .line 1259
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11109,7 +11110,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1258
+    .line 1260
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11148,7 +11149,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1259
+    .line 1261
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11187,7 +11188,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1260
+    .line 1262
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11226,7 +11227,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1261
+    .line 1263
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11265,7 +11266,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1262
+    .line 1264
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11304,7 +11305,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1263
+    .line 1265
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11343,7 +11344,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1264
+    .line 1266
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11382,7 +11383,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1265
+    .line 1267
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11421,7 +11422,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1266
+    .line 1268
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11484,7 +11485,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1268
+    .line 1270
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11547,7 +11548,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1270
+    .line 1272
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11634,7 +11635,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1273
+    .line 1275
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11673,7 +11674,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1274
+    .line 1276
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11712,7 +11713,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1275
+    .line 1277
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11751,7 +11752,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1276
+    .line 1278
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11790,7 +11791,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1277
+    .line 1279
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11829,7 +11830,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1278
+    .line 1280
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
@@ -11846,7 +11847,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/PowerManagerService$BrightnessState;->dump(Ljava/io/PrintWriter;Ljava/lang/String;)V
 
-    .line 1280
+    .line 1282
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -11857,11 +11858,11 @@
 
     move-result v5
 
-    .line 1281
+    .line 1283
     .local v5, N:I
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1282
+    .line 1284
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -11902,14 +11903,14 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1283
+    .line 1285
     const/4 v11, 0x0
 
     .local v11, i:I
     :goto_1
     if-ge v11, v5, :cond_3
 
-    .line 1284
+    .line 1286
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -11924,7 +11925,7 @@
 
     check-cast v17, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 1285
+    .line 1287
     .local v17, wl:Lcom/android/server/PowerManagerService$WakeLock;
     move-object/from16 v0, v17
 
@@ -11938,11 +11939,11 @@
 
     move-result-object v16
 
-    .line 1286
+    .line 1288
     .local v16, type:Ljava/lang/String;
     const-string v6, ""
 
-    .line 1287
+    .line 1289
     .local v6, acquireCausesWakeup:Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -11956,14 +11957,14 @@
 
     if-eqz v18, :cond_1
 
-    .line 1288
+    .line 1290
     const-string v6, "ACQUIRE_CAUSES_WAKEUP "
 
-    .line 1290
+    .line 1292
     :cond_1
     const-string v7, ""
 
-    .line 1291
+    .line 1293
     .local v7, activated:Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -11973,10 +11974,10 @@
 
     if-eqz v18, :cond_2
 
-    .line 1292
+    .line 1294
     const-string v7, " activated"
 
-    .line 1294
+    .line 1296
     :cond_2
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -12138,12 +12139,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1283
+    .line 1285
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_1
 
-    .line 1299
+    .line 1301
     .end local v6           #acquireCausesWakeup:Ljava/lang/String;
     .end local v7           #activated:Ljava/lang/String;
     .end local v16           #type:Ljava/lang/String;
@@ -12151,7 +12152,7 @@
     :cond_3
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1300
+    .line 1302
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -12204,7 +12205,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1301
+    .line 1303
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mPokeLocks:Ljava/util/HashMap;
@@ -12233,7 +12234,7 @@
 
     check-cast v15, Lcom/android/server/PowerManagerService$PokeLock;
 
-    .line 1302
+    .line 1304
     .local v15, p:Lcom/android/server/PowerManagerService$PokeLock;
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -12340,7 +12341,7 @@
 
     goto :goto_2
 
-    .line 1333
+    .line 1335
     .end local v5           #N:I
     .end local v11           #i:I
     .end local v12           #i$:Ljava/util/Iterator;
@@ -12354,7 +12355,7 @@
 
     throw v18
 
-    .line 1302
+    .line 1304
     .restart local v5       #N:I
     .restart local v11       #i:I
     .restart local v12       #i$:Ljava/util/Iterator;
@@ -12375,12 +12376,12 @@
 
     goto :goto_5
 
-    .line 1311
+    .line 1313
     .end local v15           #p:Lcom/android/server/PowerManagerService$PokeLock;
     :cond_7
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1312
+    .line 1314
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -12391,7 +12392,7 @@
 
     move-result v4
 
-    .line 1313
+    .line 1315
     .local v4, M:I
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -12433,13 +12434,13 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1314
+    .line 1316
     const/4 v11, 0x0
 
     :goto_6
     if-ge v11, v4, :cond_a
 
-    .line 1315
+    .line 1317
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -12454,7 +12455,7 @@
 
     check-cast v3, Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 1316
+    .line 1318
     .local v3, DVFSWl:Lcom/android/server/PowerManagerService$DVFSLock;
     iget v0, v3, Lcom/android/server/PowerManagerService$DVFSLock;->type:I
 
@@ -12464,11 +12465,11 @@
 
     move-result-object v16
 
-    .line 1317
+    .line 1319
     .restart local v16       #type:Ljava/lang/String;
     const-string v8, ""
 
-    .line 1318
+    .line 1320
     .local v8, currentDVFSLock:Ljava/lang/String;
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -12480,7 +12481,7 @@
 
     sub-long v9, v20, v22
 
-    .line 1320
+    .line 1322
     .local v9, elapsedTime:J
     move-object/from16 v0, p0
 
@@ -12492,10 +12493,10 @@
 
     if-ne v3, v0, :cond_9
 
-    .line 1321
+    .line 1323
     const-string v8, " <--- mCurrentDVFSMinLock"
 
-    .line 1327
+    .line 1329
     :cond_8
     :goto_7
     new-instance v18, Ljava/lang/StringBuilder;
@@ -12596,12 +12597,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1314
+    .line 1316
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_6
 
-    .line 1323
+    .line 1325
     :cond_9
     move-object/from16 v0, p0
 
@@ -12613,12 +12614,12 @@
 
     if-ne v3, v0, :cond_8
 
-    .line 1324
+    .line 1326
     const-string v8, " <--- mCurrentDVFSMaxLock"
 
     goto :goto_7
 
-    .line 1331
+    .line 1333
     .end local v3           #DVFSWl:Lcom/android/server/PowerManagerService$DVFSLock;
     .end local v8           #currentDVFSLock:Ljava/lang/String;
     .end local v9           #elapsedTime:J
@@ -12666,10 +12667,10 @@
 
     invoke-virtual {v0, v1}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1332
+    .line 1334
     invoke-virtual/range {p2 .. p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 1333
+    .line 1335
     monitor-exit v19
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -12682,7 +12683,7 @@
     .parameter "enabled"
 
     .prologue
-    .line 3021
+    .line 3023
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -12705,19 +12706,19 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3023
+    .line 3025
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 3024
+    .line 3026
     :try_start_0
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mUserActivityAllowed:Z
 
-    .line 3025
+    .line 3027
     if-nez p1, :cond_0
 
-    .line 3027
+    .line 3029
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -12726,14 +12727,14 @@
 
     invoke-direct {p0, v2, v3, v0}, Lcom/android/server/PowerManagerService;->setTimeoutLocked(JI)V
 
-    .line 3029
+    .line 3031
     :cond_0
     monitor-exit v1
 
-    .line 3030
+    .line 3032
     return-void
 
-    .line 3029
+    .line 3031
     :catchall_0
     move-exception v0
 
@@ -12750,18 +12751,18 @@
     .parameter "pid"
 
     .prologue
-    .line 808
+    .line 810
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v0
 
     if-ne p1, v0, :cond_0
 
-    .line 813
+    .line 815
     :goto_0
     return-void
 
-    .line 811
+    .line 813
     :cond_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
@@ -12778,7 +12779,7 @@
     .locals 1
 
     .prologue
-    .line 2617
+    .line 2619
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mBatteryService:Lcom/android/server/BatteryService;
 
     invoke-virtual {v0}, Lcom/android/server/BatteryService;->getPlugType()I
@@ -12792,7 +12793,7 @@
     .locals 1
 
     .prologue
-    .line 3195
+    .line 3198
     :goto_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
@@ -12802,7 +12803,7 @@
 
     if-nez v0, :cond_1
 
-    .line 3197
+    .line 3200
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -12813,13 +12814,13 @@
 
     goto :goto_0
 
-    .line 3198
+    .line 3201
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 3202
+    .line 3205
     :cond_1
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
@@ -12830,7 +12831,7 @@
     .locals 1
 
     .prologue
-    .line 3661
+    .line 3664
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mSupportedFrequency:[I
 
     return-object v0
@@ -12840,19 +12841,19 @@
     .locals 2
 
     .prologue
-    .line 3261
+    .line 3264
     const/16 v0, 0x1f
 
-    .line 3265
+    .line 3268
     .local v0, result:I
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mProximitySensor:Landroid/hardware/Sensor;
 
     if-eqz v1, :cond_0
 
-    .line 3266
+    .line 3269
     or-int/lit8 v0, v0, 0x20
 
-    .line 3269
+    .line 3272
     :cond_0
     return v0
 .end method
@@ -12862,12 +12863,12 @@
     .parameter "time"
 
     .prologue
-    .line 2868
+    .line 2870
     const/4 v0, 0x2
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/PowerManagerService;->goToSleepWithReason(JI)V
 
-    .line 2869
+    .line 2871
     return-void
 .end method
 
@@ -12877,7 +12878,7 @@
     .parameter "reason"
 
     .prologue
-    .line 2877
+    .line 2879
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -12910,7 +12911,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2878
+    .line 2880
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DEVICE_POWER"
@@ -12919,22 +12920,22 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2879
+    .line 2881
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 2880
+    .line 2882
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/PowerManagerService;->goToSleepLocked(JI)V
 
-    .line 2881
+    .line 2883
     monitor-exit v1
 
-    .line 2882
+    .line 2884
     return-void
 
-    .line 2881
+    .line 2883
     :catchall_0
     move-exception v0
 
@@ -12957,33 +12958,33 @@
 
     const/4 v2, 0x0
 
-    .line 580
+    .line 582
     iput-object p2, p0, Lcom/android/server/PowerManagerService;->mLightsService:Lcom/android/server/LightsService;
 
-    .line 581
+    .line 583
     iput-object p1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
-    .line 582
+    .line 584
     iput-object p3, p0, Lcom/android/server/PowerManagerService;->mActivityService:Landroid/app/IActivityManager;
 
-    .line 583
+    .line 585
     invoke-static {}, Lcom/android/server/am/BatteryStatsService;->getService()Lcom/android/internal/app/IBatteryStats;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
-    .line 584
+    .line 586
     iput-object p4, p0, Lcom/android/server/PowerManagerService;->mBatteryService:Lcom/android/server/BatteryService;
 
-    .line 586
+    .line 588
     invoke-virtual {p2, v2}, Lcom/android/server/LightsService;->getLight(I)Lcom/android/server/LightsService$Light;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mLcdLight:Lcom/android/server/LightsService$Light;
 
-    .line 587
+    .line 589
     const/4 v0, 0x2
 
     invoke-virtual {p2, v0}, Lcom/android/server/LightsService;->getLight(I)Lcom/android/server/LightsService$Light;
@@ -12992,14 +12993,14 @@
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mButtonLight:Lcom/android/server/LightsService$Light;
 
-    .line 588
+    .line 590
     invoke-virtual {p2, v1}, Lcom/android/server/LightsService;->getLight(I)Lcom/android/server/LightsService$Light;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mKeyboardLight:Lcom/android/server/LightsService$Light;
 
-    .line 589
+    .line 591
     const/4 v0, 0x5
 
     invoke-virtual {p2, v0}, Lcom/android/server/LightsService;->getLight(I)Lcom/android/server/LightsService$Light;
@@ -13008,27 +13009,27 @@
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mAttentionLight:Lcom/android/server/LightsService$Light;
 
-    .line 591
+    .line 593
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->nativeInit()V
 
-    .line 592
+    .line 594
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 593
+    .line 595
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->updateNativePowerStateLocked()V
 
-    .line 594
+    .line 596
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 596
+    .line 598
     iput-boolean v2, p0, Lcom/android/server/PowerManagerService;->mInitComplete:Z
 
-    .line 597
+    .line 599
     new-instance v0, Lcom/android/server/PowerManagerService$1;
 
     const-string v1, "PowerManagerService.mScreenOffThread"
@@ -13037,17 +13038,17 @@
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffThread:Landroid/os/HandlerThread;
 
-    .line 607
+    .line 609
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 609
+    .line 611
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mScreenOffThread:Landroid/os/HandlerThread;
 
     monitor-enter v1
 
-    .line 610
+    .line 612
     :goto_0
     :try_start_1
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mInitComplete:Z
@@ -13056,7 +13057,7 @@
 
     if-nez v0, :cond_0
 
-    .line 612
+    .line 614
     :try_start_2
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mScreenOffThread:Landroid/os/HandlerThread;
 
@@ -13067,13 +13068,13 @@
 
     goto :goto_0
 
-    .line 613
+    .line 615
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 594
+    .line 596
     :catchall_0
     move-exception v0
 
@@ -13084,17 +13085,17 @@
 
     throw v0
 
-    .line 617
+    .line 619
     :cond_0
     :try_start_4
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 619
+    .line 621
     iput-boolean v2, p0, Lcom/android/server/PowerManagerService;->mInitComplete:Z
 
-    .line 620
+    .line 622
     new-instance v0, Lcom/android/server/PowerManagerService$2;
 
     const-string v1, "PowerManagerService"
@@ -13103,17 +13104,17 @@
 
     iput-object v0, p0, Lcom/android/server/PowerManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 627
+    .line 629
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 629
+    .line 631
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
     monitor-enter v1
 
-    .line 630
+    .line 632
     :goto_1
     :try_start_5
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mInitComplete:Z
@@ -13122,7 +13123,7 @@
 
     if-nez v0, :cond_1
 
-    .line 632
+    .line 634
     :try_start_6
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
@@ -13133,13 +13134,13 @@
 
     goto :goto_1
 
-    .line 633
+    .line 635
     :catch_1
     move-exception v0
 
     goto :goto_1
 
-    .line 617
+    .line 619
     :catchall_1
     move-exception v0
 
@@ -13150,42 +13151,42 @@
 
     throw v0
 
-    .line 637
+    .line 639
     :cond_1
     :try_start_8
     monitor-exit v1
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 639
+    .line 641
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->nativeInit()V
 
-    .line 640
+    .line 642
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 641
+    .line 643
     :try_start_9
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->updateNativePowerStateLocked()V
 
-    .line 644
+    .line 646
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->forceUserActivityLocked()V
 
-    .line 645
+    .line 647
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/PowerManagerService;->mInitialized:Z
 
-    .line 646
+    .line 648
     monitor-exit v1
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 647
+    .line 649
     return-void
 
-    .line 637
+    .line 639
     :catchall_2
     move-exception v0
 
@@ -13196,7 +13197,7 @@
 
     throw v0
 
-    .line 646
+    .line 648
     :catchall_3
     move-exception v0
 
@@ -13222,14 +13223,14 @@
 
     const/4 v11, 0x1
 
-    .line 650
+    .line 652
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
-    .line 652
+    .line 654
     new-instance v1, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     const-string v3, "sleep_broadcast"
@@ -13238,7 +13239,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mBroadcastWakeLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
-    .line 654
+    .line 656
     new-instance v1, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     const-string v3, "StayOnWhilePluggedIn Screen Dim"
@@ -13247,7 +13248,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mStayOnWhilePluggedInScreenDimLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
-    .line 656
+    .line 658
     new-instance v1, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     const-string v3, "StayOnWhilePluggedIn Partial"
@@ -13256,7 +13257,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mStayOnWhilePluggedInPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
-    .line 658
+    .line 660
     new-instance v1, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     const-string v3, "PreventScreenOn Partial"
@@ -13265,7 +13266,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mPreventScreenOnPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
-    .line 660
+    .line 662
     new-instance v1, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     const-string v3, "Proximity Partial"
@@ -13274,7 +13275,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mProximityPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
-    .line 663
+    .line 665
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.SCREEN_ON"
@@ -13283,12 +13284,12 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mScreenOnIntent:Landroid/content/Intent;
 
-    .line 664
+    .line 666
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mScreenOnIntent:Landroid/content/Intent;
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 665
+    .line 667
     new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.SCREEN_OFF"
@@ -13297,19 +13298,19 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mScreenOffIntent:Landroid/content/Intent;
 
-    .line 666
+    .line 668
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mScreenOffIntent:Landroid/content/Intent;
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 668
+    .line 670
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
 
-    .line 670
+    .line 672
     .local v7, resources:Landroid/content/res/Resources;
     const v1, 0x1110012
 
@@ -13319,7 +13320,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mAnimateScreenLights:Z
 
-    .line 673
+    .line 675
     const v1, 0x1110011
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -13328,7 +13329,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mUnplugTurnsOnScreen:Z
 
-    .line 676
+    .line 678
     const v1, 0x10e001e
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -13337,7 +13338,7 @@
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessDim:I
 
-    .line 680
+    .line 682
     const v1, 0x111000f
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
@@ -13346,12 +13347,12 @@
 
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
-    .line 682
+    .line 684
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
     if-eqz v1, :cond_0
 
-    .line 683
+    .line 685
     const v1, 0x1070025
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -13360,7 +13361,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mAutoBrightnessLevels:[I
 
-    .line 685
+    .line 687
     const v1, 0x1070026
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -13369,7 +13370,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mLcdBacklightValues:[I
 
-    .line 687
+    .line 689
     const v1, 0x1070027
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -13378,7 +13379,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mButtonBacklightValues:[I
 
-    .line 689
+    .line 691
     const v1, 0x1070028
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -13387,7 +13388,7 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mKeyboardBacklightValues:[I
 
-    .line 691
+    .line 693
     const v1, 0x10e0020
 
     invoke-virtual {v7, v1}, Landroid/content/res/Resources;->getInteger(I)I
@@ -13396,7 +13397,7 @@
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorWarmupTime:I
 
-    .line 695
+    .line 697
     :cond_0
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
@@ -13404,7 +13405,7 @@
 
     move-result-object v0
 
-    .line 696
+    .line 698
     .local v0, resolver:Landroid/content/ContentResolver;
     sget-object v1, Landroid/provider/Settings$System;->CONTENT_URI:Landroid/net/Uri;
 
@@ -13456,7 +13457,7 @@
 
     move-result-object v8
 
-    .line 707
+    .line 709
     .local v8, settingsCursor:Landroid/database/Cursor;
     new-instance v1, Landroid/content/ContentQueryMap;
 
@@ -13468,34 +13469,34 @@
 
     iput-object v1, p0, Lcom/android/server/PowerManagerService;->mSettings:Landroid/content/ContentQueryMap;
 
-    .line 708
+    .line 710
     new-instance v9, Lcom/android/server/PowerManagerService$SettingsObserver;
 
     invoke-direct {v9, p0, v2}, Lcom/android/server/PowerManagerService$SettingsObserver;-><init>(Lcom/android/server/PowerManagerService;Lcom/android/server/PowerManagerService$1;)V
 
-    .line 709
+    .line 711
     .local v9, settingsObserver:Lcom/android/server/PowerManagerService$SettingsObserver;
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mSettings:Landroid/content/ContentQueryMap;
 
     invoke-virtual {v1, v9}, Landroid/content/ContentQueryMap;->addObserver(Ljava/util/Observer;)V
 
-    .line 712
+    .line 714
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mSettings:Landroid/content/ContentQueryMap;
 
     invoke-virtual {v9, v1, v2}, Lcom/android/server/PowerManagerService$SettingsObserver;->update(Ljava/util/Observable;Ljava/lang/Object;)V
 
-    .line 715
+    .line 717
     new-instance v6, Landroid/content/IntentFilter;
 
     invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 716
+    .line 718
     .local v6, filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v6, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 717
+    .line 719
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     new-instance v3, Lcom/android/server/PowerManagerService$BatteryReceiver;
@@ -13504,19 +13505,19 @@
 
     invoke-virtual {v1, v3, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 718
+    .line 720
     new-instance v6, Landroid/content/IntentFilter;
 
     .end local v6           #filter:Landroid/content/IntentFilter;
     invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 719
+    .line 721
     .restart local v6       #filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v6, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 720
+    .line 722
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     new-instance v3, Lcom/android/server/PowerManagerService$BootCompletedReceiver;
@@ -13525,19 +13526,19 @@
 
     invoke-virtual {v1, v3, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 721
+    .line 723
     new-instance v6, Landroid/content/IntentFilter;
 
     .end local v6           #filter:Landroid/content/IntentFilter;
     invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 722
+    .line 724
     .restart local v6       #filter:Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.DOCK_EVENT"
 
     invoke-virtual {v6, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 723
+    .line 725
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     new-instance v3, Lcom/android/server/PowerManagerService$DockReceiver;
@@ -13546,7 +13547,7 @@
 
     invoke-virtual {v1, v3, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 726
+    .line 728
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mSipIntentReceiver:Landroid/content/BroadcastReceiver;
@@ -13559,10 +13560,10 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 728
+    .line 730
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->initSupportedFrequency()V
 
-    .line 731
+    .line 733
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -13581,32 +13582,32 @@
 
     invoke-virtual {v1, v2, v11, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 738
+    .line 740
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->updateSettingsValues()V
 
-    .line 740
+    .line 742
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
     monitor-enter v2
 
-    .line 741
+    .line 743
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mInitComplete:Z
 
-    .line 742
+    .line 744
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
 
-    .line 743
+    .line 745
     monitor-exit v2
 
-    .line 744
+    .line 746
     return-void
 
-    .line 743
+    .line 745
     :catchall_0
     move-exception v1
 
@@ -13621,12 +13622,12 @@
     .locals 3
 
     .prologue
-    .line 2555
+    .line 2557
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 2556
+    .line 2558
     :try_start_0
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -13648,7 +13649,7 @@
 
     goto :goto_0
 
-    .line 2557
+    .line 2559
     :catchall_0
     move-exception v0
 
@@ -13663,12 +13664,12 @@
     .locals 2
 
     .prologue
-    .line 2549
+    .line 2551
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 2550
+    .line 2552
     :try_start_0
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -13688,7 +13689,7 @@
 
     goto :goto_0
 
-    .line 2551
+    .line 2553
     :catchall_0
     move-exception v0
 
@@ -13703,7 +13704,7 @@
     .locals 4
 
     .prologue
-    .line 1681
+    .line 1683
     iget-wide v0, p0, Lcom/android/server/PowerManagerService;->mLastTouchDown:J
 
     const-wide/16 v2, 0x0
@@ -13712,21 +13713,21 @@
 
     if-nez v0, :cond_0
 
-    .line 1682
+    .line 1684
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/PowerManagerService;->mLastTouchDown:J
 
-    .line 1683
+    .line 1685
     iget v0, p0, Lcom/android/server/PowerManagerService;->mTouchCycles:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mTouchCycles:I
 
-    .line 1686
+    .line 1688
     :cond_0
     return-void
 .end method
@@ -13735,7 +13736,7 @@
     .locals 6
 
     .prologue
-    .line 1673
+    .line 1675
     iget-wide v0, p0, Lcom/android/server/PowerManagerService;->mTotalTouchDownTime:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -13750,12 +13751,12 @@
 
     iput-wide v0, p0, Lcom/android/server/PowerManagerService;->mTotalTouchDownTime:J
 
-    .line 1674
+    .line 1676
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/PowerManagerService;->mLastTouchDown:J
 
-    .line 1676
+    .line 1678
     return-void
 .end method
 
@@ -13763,7 +13764,7 @@
     .locals 2
 
     .prologue
-    .line 3257
+    .line 3260
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
@@ -13771,10 +13772,10 @@
     :try_start_0
     monitor-exit v1
 
-    .line 3258
+    .line 3261
     return-void
 
-    .line 3257
+    .line 3260
     :catchall_0
     move-exception v0
 
@@ -13791,21 +13792,21 @@
     .parameter "ws"
 
     .prologue
-    .line 835
+    .line 837
     iget v2, p1, Lcom/android/server/PowerManagerService$WakeLock;->monitorType:I
 
     if-ltz v2, :cond_0
 
-    .line 836
+    .line 838
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 838
+    .line 840
     .local v0, origId:J
     if-eqz p2, :cond_1
 
-    .line 839
+    .line 841
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
@@ -13820,17 +13821,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 847
+    .line 849
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 850
+    .line 852
     .end local v0           #origId:J
     :cond_0
     :goto_1
     return-void
 
-    .line 842
+    .line 844
     .restart local v0       #origId:J
     :cond_1
     :try_start_1
@@ -13851,11 +13852,11 @@
 
     goto :goto_0
 
-    .line 844
+    .line 846
     :catch_0
     move-exception v2
 
-    .line 847
+    .line 849
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -13874,21 +13875,21 @@
     .parameter "ws"
 
     .prologue
-    .line 853
+    .line 855
     iget v2, p1, Lcom/android/server/PowerManagerService$WakeLock;->monitorType:I
 
     if-ltz v2, :cond_0
 
-    .line 854
+    .line 856
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 856
+    .line 858
     .local v0, origId:J
     if-eqz p2, :cond_1
 
-    .line 857
+    .line 859
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
@@ -13903,17 +13904,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 865
+    .line 867
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 868
+    .line 870
     .end local v0           #origId:J
     :cond_0
     :goto_1
     return-void
 
-    .line 860
+    .line 862
     .restart local v0       #origId:J
     :cond_1
     :try_start_1
@@ -13934,11 +13935,11 @@
 
     goto :goto_0
 
-    .line 862
+    .line 864
     :catch_0
     move-exception v2
 
-    .line 865
+    .line 867
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -13956,7 +13957,7 @@
     .parameter "prevent"
 
     .prologue
-    .line 1718
+    .line 1720
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.DEVICE_POWER"
@@ -13965,12 +13966,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1720
+    .line 1722
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v2
 
-    .line 1721
+    .line 1723
     :try_start_0
     const-string v1, "PowerManagerService"
 
@@ -13994,22 +13995,22 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1722
+    .line 1724
     if-eqz p1, :cond_0
 
-    .line 1726
+    .line 1728
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mPreventScreenOnPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
 
     invoke-virtual {v1}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->acquire()V
 
-    .line 1731
+    .line 1733
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mForceReenableScreenTask:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1732
+    .line 1734
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mForceReenableScreenTask:Ljava/lang/Runnable;
@@ -14018,32 +14019,32 @@
 
     invoke-virtual {v1, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 1737
+    .line 1739
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mPreventScreenOn:Z
 
-    .line 1764
+    .line 1766
     :goto_0
     monitor-exit v2
 
-    .line 1765
+    .line 1767
     return-void
 
-    .line 1740
+    .line 1742
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/PowerManagerService;->mPreventScreenOn:Z
 
-    .line 1744
+    .line 1746
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mForceReenableScreenTask:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1749
+    .line 1751
     iget-boolean v1, p0, Lcom/android/server/PowerManagerService;->mProximitySensorActive:Z
 
     if-nez v1, :cond_1
@@ -14054,18 +14055,18 @@
 
     if-eqz v1, :cond_1
 
-    .line 1754
+    .line 1756
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Lcom/android/server/PowerManagerService;->setScreenStateLocked(Z)I
 
     move-result v0
 
-    .line 1755
+    .line 1757
     .local v0, err:I
     if-eqz v0, :cond_1
 
-    .line 1756
+    .line 1758
     const-string v1, "PowerManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -14088,7 +14089,7 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1762
+    .line 1764
     .end local v0           #err:I
     :cond_1
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mPreventScreenOnPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
@@ -14097,7 +14098,7 @@
 
     goto :goto_0
 
-    .line 1764
+    .line 1766
     :catchall_0
     move-exception v1
 
@@ -14113,7 +14114,7 @@
     .parameter "reason"
 
     .prologue
-    .line 2890
+    .line 2892
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "android.permission.REBOOT"
@@ -14122,7 +14123,7 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2892
+    .line 2894
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     if-eqz v2, :cond_0
@@ -14133,7 +14134,7 @@
 
     if-nez v2, :cond_1
 
-    .line 2893
+    .line 2895
     :cond_0
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -14143,26 +14144,26 @@
 
     throw v2
 
-    .line 2896
+    .line 2898
     :cond_1
     move-object v0, p1
 
-    .line 2897
+    .line 2899
     .local v0, finalReason:Ljava/lang/String;
     new-instance v1, Lcom/android/server/PowerManagerService$12;
 
     invoke-direct {v1, p0, v0}, Lcom/android/server/PowerManagerService$12;-><init>(Lcom/android/server/PowerManagerService;Ljava/lang/String;)V
 
-    .line 2909
+    .line 2911
     .local v1, runnable:Ljava/lang/Runnable;
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2912
+    .line 2914
     monitor-enter v1
 
-    .line 2915
+    .line 2917
     :goto_0
     :try_start_0
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
@@ -14172,13 +14173,13 @@
 
     goto :goto_0
 
-    .line 2916
+    .line 2918
     :catch_0
     move-exception v2
 
     goto :goto_0
 
-    .line 2919
+    .line 2921
     :catchall_0
     move-exception v2
 
@@ -14195,12 +14196,12 @@
     .parameter "lock"
 
     .prologue
-    .line 3889
+    .line 3892
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 3891
+    .line 3894
     .local v2, uid:I
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
@@ -14210,12 +14211,12 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3893
+    .line 3896
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3895
+    .line 3898
     .local v0, ident:J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -14224,22 +14225,22 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3896
+    .line 3899
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService;->releaseDVFSLockLocked(Landroid/os/IBinder;)V
 
-    .line 3897
+    .line 3900
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3899
+    .line 3902
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3901
+    .line 3904
     return-void
 
-    .line 3897
+    .line 3900
     :catchall_0
     move-exception v3
 
@@ -14253,7 +14254,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3899
+    .line 3902
     :catchall_1
     move-exception v3
 
@@ -14267,12 +14268,12 @@
     .parameter "callingId"
 
     .prologue
-    .line 3973
+    .line 3976
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 3975
+    .line 3978
     .local v3, uid:I
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
@@ -14282,12 +14283,12 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3977
+    .line 3980
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 3979
+    .line 3982
     .local v0, ident:J
     :try_start_0
     iget-object v5, p0, Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -14296,7 +14297,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 3980
+    .line 3983
     :try_start_1
     iget v4, p0, Lcom/android/server/PowerManagerService;->mPersistentDVFSLocksInfo:I
 
@@ -14304,7 +14305,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 3981
+    .line 3984
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mMapPersistentDVFSLock:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -14317,11 +14318,11 @@
 
     check-cast v2, Landroid/os/IBinder;
 
-    .line 3982
+    .line 3985
     .local v2, lock:Landroid/os/IBinder;
     if-eqz v2, :cond_0
 
-    .line 3983
+    .line 3986
     const-string v4, "PowerManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -14364,10 +14365,10 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3984
+    .line 3987
     invoke-direct {p0, v2}, Lcom/android/server/PowerManagerService;->releaseDVFSLockLocked(Landroid/os/IBinder;)V
 
-    .line 3985
+    .line 3988
     iget v4, p0, Lcom/android/server/PowerManagerService;->mPersistentDVFSLocksInfo:I
 
     xor-int/lit8 v6, p1, -0x1
@@ -14376,20 +14377,20 @@
 
     iput v4, p0, Lcom/android/server/PowerManagerService;->mPersistentDVFSLocksInfo:I
 
-    .line 3995
+    .line 3998
     .end local v2           #lock:Landroid/os/IBinder;
     :goto_0
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3997
+    .line 4000
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3999
+    .line 4002
     return-void
 
-    .line 3988
+    .line 3991
     .restart local v2       #lock:Landroid/os/IBinder;
     :cond_0
     :try_start_2
@@ -14399,7 +14400,7 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3989
+    .line 3992
     new-instance v4, Ljava/lang/RuntimeException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -14424,7 +14425,7 @@
 
     throw v4
 
-    .line 3995
+    .line 3998
     .end local v2           #lock:Landroid/os/IBinder;
     :catchall_0
     move-exception v4
@@ -14438,7 +14439,7 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3997
+    .line 4000
     :catchall_1
     move-exception v4
 
@@ -14446,7 +14447,7 @@
 
     throw v4
 
-    .line 3993
+    .line 3996
     :cond_1
     :try_start_4
     const-string v4, "PowerManagerService"
@@ -14482,12 +14483,12 @@
     .parameter "flags"
 
     .prologue
-    .line 1031
+    .line 1033
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 1032
+    .line 1034
     .local v0, uid:I
     invoke-static {}, Landroid/os/Process;->myUid()I
 
@@ -14495,7 +14496,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1033
+    .line 1035
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.WAKE_LOCK"
@@ -14504,25 +14505,25 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1036
+    .line 1038
     :cond_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v2
 
-    .line 1037
+    .line 1039
     const/4 v1, 0x0
 
     :try_start_0
     invoke-direct {p0, p1, p2, v1}, Lcom/android/server/PowerManagerService;->releaseWakeLockLocked(Landroid/os/IBinder;IZ)V
 
-    .line 1038
+    .line 1040
     monitor-exit v2
 
-    .line 1039
+    .line 1041
     return-void
 
-    .line 1038
+    .line 1040
     :catchall_0
     move-exception v1
 
@@ -14541,7 +14542,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3326
+    .line 3329
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.DEVICE_POWER"
@@ -14550,7 +14551,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3327
+    .line 3330
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mAttentionLight:Lcom/android/server/LightsService$Light;
 
     const/4 v3, 0x2
@@ -14562,13 +14563,13 @@
     :goto_0
     invoke-virtual {v2, p2, v3, v0, v1}, Lcom/android/server/LightsService$Light;->setFlashing(IIII)V
 
-    .line 3328
+    .line 3331
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 3327
+    .line 3330
     goto :goto_0
 .end method
 
@@ -14578,7 +14579,7 @@
     .parameter "upperLimit"
 
     .prologue
-    .line 1809
+    .line 1811
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.DEVICE_POWER"
@@ -14587,7 +14588,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1811
+    .line 1813
     const-string v1, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -14620,12 +14621,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1812
+    .line 1814
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v2
 
-    .line 1813
+    .line 1815
     :try_start_0
     iget v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessLowerLimit:I
 
@@ -14635,36 +14636,36 @@
 
     if-eq v1, p2, :cond_1
 
-    .line 1814
+    .line 1816
     :cond_0
     iput p1, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessLowerLimit:I
 
-    .line 1815
+    .line 1817
     iput p2, p0, Lcom/android/server/PowerManagerService;->mLightSensorScreenBrightnessUpperLimit:I
 
-    .line 1817
+    .line 1819
     iget v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
     float-to-int v0, v1
 
-    .line 1818
+    .line 1820
     .local v0, value:I
     const/high16 v1, -0x4080
 
     iput v1, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
-    .line 1819
+    .line 1821
     invoke-direct {p0, v0}, Lcom/android/server/PowerManagerService;->lightSensorChangedLocked(I)V
 
-    .line 1821
+    .line 1823
     .end local v0           #value:I
     :cond_1
     monitor-exit v2
 
-    .line 1822
+    .line 1824
     return-void
 
-    .line 1821
+    .line 1823
     :catchall_0
     move-exception v1
 
@@ -14680,7 +14681,7 @@
     .parameter "brightness"
 
     .prologue
-    .line 3273
+    .line 3276
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.DEVICE_POWER"
@@ -14689,7 +14690,7 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3275
+    .line 3278
     const-string v3, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -14712,31 +14713,31 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3277
+    .line 3280
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->isScreenTurningOffLocked()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 3278
+    .line 3281
     const-string v3, "PowerManagerService"
 
     const-string v4, "but, isScreenTurningOffLocked : TRUE , so should be ignored"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3323
+    .line 3326
     :goto_0
     return-void
 
-    .line 3283
+    .line 3286
     :cond_0
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v4
 
-    .line 3284
+    .line 3287
     :try_start_0
     iget v3, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessDim:I
 
@@ -14744,15 +14745,15 @@
 
     move-result p1
 
-    .line 3285
+    .line 3288
     iget v3, p0, Lcom/android/server/PowerManagerService;->mMaxBrightness:I
 
     if-le p1, v3, :cond_1
 
-    .line 3286
+    .line 3289
     iget p1, p0, Lcom/android/server/PowerManagerService;->mMaxBrightness:I
 
-    .line 3287
+    .line 3290
     const-string v3, "PowerManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -14781,18 +14782,18 @@
 
     invoke-static {v3, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3291
+    .line 3294
     :cond_1
     iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mSystemPowerSaveModeEnabled:Z
 
     if-eqz v3, :cond_3
 
-    .line 3293
+    .line 3296
     sget v3, Lcom/android/server/PowerManagerService;->POWERSAVEMODE_BRIGHTNESS_OFFSET:I
 
     if-lt p1, v3, :cond_2
 
-    .line 3295
+    .line 3298
     const-string v3, "PowerManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -14829,7 +14830,7 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3296
+    .line 3299
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mLcdLight:Lcom/android/server/LightsService$Light;
 
     sget v5, Lcom/android/server/PowerManagerService;->POWERSAVEMODE_BRIGHTNESS_OFFSET:I
@@ -14838,7 +14839,7 @@
 
     invoke-virtual {v3, v5}, Lcom/android/server/LightsService$Light;->setBrightness(I)V
 
-    .line 3308
+    .line 3311
     :cond_2
     :goto_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
@@ -14847,7 +14848,7 @@
 
     move-result-wide v1
 
-    .line 3310
+    .line 3313
     .local v1, identity:J
     :try_start_1
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -14857,11 +14858,11 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 3314
+    .line 3317
     :try_start_2
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3318
+    .line 3321
     :goto_2
     iget-object v5, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
@@ -14869,23 +14870,23 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3319
+    .line 3322
     :try_start_3
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
     iput p1, v3, Lcom/android/server/PowerManagerService$BrightnessState;->targetValue:I
 
-    .line 3320
+    .line 3323
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mScreenBrightness:Lcom/android/server/PowerManagerService$BrightnessState;
 
     invoke-virtual {v3}, Lcom/android/server/PowerManagerService$BrightnessState;->jumpToTargetLocked()V
 
-    .line 3321
+    .line 3324
     monitor-exit v5
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 3322
+    .line 3325
     :try_start_4
     monitor-exit v4
 
@@ -14901,7 +14902,7 @@
 
     throw v3
 
-    .line 3301
+    .line 3304
     :cond_3
     :try_start_5
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mLcdLight:Lcom/android/server/LightsService$Light;
@@ -14912,12 +14913,12 @@
 
     goto :goto_1
 
-    .line 3311
+    .line 3314
     .restart local v1       #identity:J
     :catch_0
     move-exception v0
 
-    .line 3312
+    .line 3315
     .local v0, e:Landroid/os/RemoteException;
     :try_start_6
     const-string v3, "PowerManagerService"
@@ -14928,7 +14929,7 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 3314
+    .line 3317
     :try_start_7
     invoke-static {v1, v2}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -14944,7 +14945,7 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 3321
+    .line 3324
     :catchall_2
     move-exception v3
 
@@ -14964,7 +14965,7 @@
     .parameter "brightness"
 
     .prologue
-    .line 1783
+    .line 1785
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DEVICE_POWER"
@@ -14973,21 +14974,21 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1786
+    .line 1788
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 1787
+    .line 1789
     :try_start_0
     iget v0, p0, Lcom/android/server/PowerManagerService;->mButtonBrightnessOverride:I
 
     if-eq v0, p1, :cond_0
 
-    .line 1788
+    .line 1790
     iput p1, p0, Lcom/android/server/PowerManagerService;->mButtonBrightnessOverride:I
 
-    .line 1789
+    .line 1791
     const-string v0, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -15012,28 +15013,28 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1790
+    .line 1792
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService;->isScreenOn()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1791
+    .line 1793
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     const/16 v2, 0xc
 
     invoke-direct {p0, v0, v2}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
-    .line 1794
+    .line 1796
     :cond_0
     monitor-exit v1
 
-    .line 1795
+    .line 1797
     return-void
 
-    .line 1794
+    .line 1796
     :catchall_0
     move-exception v0
 
@@ -15049,33 +15050,33 @@
     .parameter "visible"
 
     .prologue
-    .line 2990
+    .line 2992
     iget-object v7, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v7
 
-    .line 2994
+    .line 2996
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mKeyboardVisible:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 2995
+    .line 2997
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mKeyboardVisible:Z
 
-    .line 2999
+    .line 3001
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_1
 
-    .line 3000
+    .line 3002
     iget-boolean v0, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
     if-eqz v0, :cond_0
 
-    .line 3002
+    .line 3004
     iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
     const/4 v1, 0x0
@@ -15084,21 +15085,21 @@
 
     if-ltz v0, :cond_0
 
-    .line 3003
+    .line 3005
     iget v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
     float-to-int v6, v0
 
-    .line 3004
+    .line 3006
     .local v6, value:I
     const/high16 v0, -0x4080
 
     iput v0, p0, Lcom/android/server/PowerManagerService;->mLightSensorValue:F
 
-    .line 3005
+    .line 3007
     invoke-direct {p0, v6}, Lcom/android/server/PowerManagerService;->lightSensorChangedLocked(I)V
 
-    .line 3008
+    .line 3010
     .end local v6           #value:I
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
@@ -15115,14 +15116,14 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/PowerManagerService;->userActivity(JZIZ)V
 
-    .line 3011
+    .line 3013
     :cond_1
     monitor-exit v7
 
-    .line 3012
+    .line 3014
     return-void
 
-    .line 3011
+    .line 3013
     :catchall_0
     move-exception v0
 
@@ -15139,7 +15140,7 @@
     .parameter "upperLimit"
 
     .prologue
-    .line 1798
+    .line 1800
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DEVICE_POWER"
@@ -15148,7 +15149,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1799
+    .line 1801
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -15181,16 +15182,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1801
+    .line 1803
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 1802
+    .line 1804
     :try_start_0
     iput p2, p0, Lcom/android/server/PowerManagerService;->mMaxBrightness:I
 
-    .line 1803
+    .line 1805
     const-string v0, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -15215,20 +15216,20 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1804
+    .line 1806
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     const/4 v2, 0x3
 
     invoke-direct {p0, v0, v2}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
-    .line 1805
+    .line 1807
     monitor-exit v1
 
-    .line 1806
+    .line 1808
     return-void
 
-    .line 1805
+    .line 1807
     :catchall_0
     move-exception v0
 
@@ -15244,7 +15245,7 @@
     .parameter "timeMs"
 
     .prologue
-    .line 479
+    .line 481
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.WRITE_SECURE_SETTINGS"
@@ -15253,25 +15254,25 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 481
+    .line 483
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 482
+    .line 484
     :try_start_0
     iput p1, p0, Lcom/android/server/PowerManagerService;->mMaximumScreenOffTimeout:I
 
-    .line 484
+    .line 486
     invoke-direct {p0}, Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
 
-    .line 485
+    .line 487
     monitor-exit v1
 
-    .line 486
+    .line 488
     return-void
 
-    .line 485
+    .line 487
     :catchall_0
     move-exception v0
 
@@ -15289,7 +15290,7 @@
     .parameter "tag"
 
     .prologue
-    .line 1117
+    .line 1119
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
@@ -15300,7 +15301,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1118
+    .line 1120
     const-string v15, "PowerManagerService"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -15341,10 +15342,10 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1119
+    .line 1121
     if-nez p2, :cond_0
 
-    .line 1120
+    .line 1122
     const-string v15, "PowerManagerService"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -15377,11 +15378,11 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1175
+    .line 1177
     :goto_0
     return-void
 
-    .line 1124
+    .line 1126
     :cond_0
     and-int/lit8 v15, p1, 0x16
 
@@ -15391,7 +15392,7 @@
 
     if-ne v15, v0, :cond_1
 
-    .line 1125
+    .line 1127
     new-instance v15, Ljava/lang/IllegalArgumentException;
 
     const-string v16, "setPokeLock can\'t have both POKE_LOCK_SHORT_TIMEOUT and POKE_LOCK_MEDIUM_TIMEOUT"
@@ -15400,7 +15401,7 @@
 
     throw v15
 
-    .line 1129
+    .line 1131
     :cond_1
     move-object/from16 v0, p0
 
@@ -15410,10 +15411,10 @@
 
     monitor-enter v16
 
-    .line 1130
+    .line 1132
     if-eqz p1, :cond_5
 
-    .line 1131
+    .line 1133
     :try_start_0
     move-object/from16 v0, p0
 
@@ -15427,31 +15428,31 @@
 
     check-cast v13, Lcom/android/server/PowerManagerService$PokeLock;
 
-    .line 1132
+    .line 1134
     .local v13, p:Lcom/android/server/PowerManagerService$PokeLock;
     const/4 v11, 0x0
 
-    .line 1133
+    .line 1135
     .local v11, oldPokey:I
     if-eqz v13, :cond_4
 
-    .line 1134
+    .line 1136
     iget v11, v13, Lcom/android/server/PowerManagerService$PokeLock;->pokey:I
 
-    .line 1135
+    .line 1137
     move/from16 v0, p1
 
     iput v0, v13, Lcom/android/server/PowerManagerService$PokeLock;->pokey:I
 
-    .line 1140
+    .line 1142
     :goto_1
     and-int/lit8 v12, v11, 0x16
 
-    .line 1141
+    .line 1143
     .local v12, oldTimeout:I
     and-int/lit8 v8, p1, 0x16
 
-    .line 1142
+    .line 1144
     .local v8, newTimeout:I
     move-object/from16 v0, p0
 
@@ -15463,12 +15464,12 @@
 
     if-eq v12, v8, :cond_2
 
-    .line 1143
+    .line 1145
     const/4 v15, 0x1
 
     iput-boolean v15, v13, Lcom/android/server/PowerManagerService$PokeLock;->awakeOnSet:Z
 
-    .line 1152
+    .line 1154
     .end local v8           #newTimeout:I
     .end local v11           #oldPokey:I
     .end local v12           #oldTimeout:I
@@ -15479,21 +15480,21 @@
 
     iget v11, v0, Lcom/android/server/PowerManagerService;->mPokey:I
 
-    .line 1153
+    .line 1155
     .restart local v11       #oldPokey:I
     const/4 v5, 0x0
 
-    .line 1154
+    .line 1156
     .local v5, cumulative:I
     move-object/from16 v0, p0
 
     iget-boolean v9, v0, Lcom/android/server/PowerManagerService;->mPokeAwakeOnSet:Z
 
-    .line 1155
+    .line 1157
     .local v9, oldAwakeOnSet:Z
     const/4 v4, 0x0
 
-    .line 1156
+    .line 1158
     .local v4, awakeOnSet:Z
     move-object/from16 v0, p0
 
@@ -15522,23 +15523,23 @@
 
     check-cast v13, Lcom/android/server/PowerManagerService$PokeLock;
 
-    .line 1157
+    .line 1159
     .restart local v13       #p:Lcom/android/server/PowerManagerService$PokeLock;
     iget v15, v13, Lcom/android/server/PowerManagerService$PokeLock;->pokey:I
 
     or-int/2addr v5, v15
 
-    .line 1158
+    .line 1160
     iget-boolean v15, v13, Lcom/android/server/PowerManagerService$PokeLock;->awakeOnSet:Z
 
     if-eqz v15, :cond_3
 
-    .line 1159
+    .line 1161
     const/4 v4, 0x1
 
     goto :goto_3
 
-    .line 1137
+    .line 1139
     .end local v4           #awakeOnSet:Z
     .end local v5           #cumulative:I
     .end local v6           #i$:Ljava/util/Iterator;
@@ -15557,7 +15558,7 @@
 
     invoke-direct {v13, v0, v1, v2, v3}, Lcom/android/server/PowerManagerService$PokeLock;-><init>(Lcom/android/server/PowerManagerService;ILandroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 1138
+    .line 1140
     .restart local v13       #p:Lcom/android/server/PowerManagerService$PokeLock;
     move-object/from16 v0, p0
 
@@ -15569,7 +15570,7 @@
 
     goto :goto_1
 
-    .line 1174
+    .line 1176
     .end local v11           #oldPokey:I
     .end local v13           #p:Lcom/android/server/PowerManagerService$PokeLock;
     :catchall_0
@@ -15581,7 +15582,7 @@
 
     throw v15
 
-    .line 1146
+    .line 1148
     :cond_5
     :try_start_1
     move-object/from16 v0, p0
@@ -15596,11 +15597,11 @@
 
     check-cast v14, Lcom/android/server/PowerManagerService$PokeLock;
 
-    .line 1147
+    .line 1149
     .local v14, rLock:Lcom/android/server/PowerManagerService$PokeLock;
     if-eqz v14, :cond_2
 
-    .line 1148
+    .line 1150
     const/4 v15, 0x0
 
     move-object/from16 v0, p2
@@ -15609,7 +15610,7 @@
 
     goto :goto_2
 
-    .line 1162
+    .line 1164
     .end local v14           #rLock:Lcom/android/server/PowerManagerService$PokeLock;
     .restart local v4       #awakeOnSet:Z
     .restart local v5       #cumulative:I
@@ -15621,26 +15622,26 @@
 
     iput v5, v0, Lcom/android/server/PowerManagerService;->mPokey:I
 
-    .line 1163
+    .line 1165
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/server/PowerManagerService;->mPokeAwakeOnSet:Z
 
-    .line 1165
+    .line 1167
     and-int/lit8 v10, v11, 0x16
 
-    .line 1166
+    .line 1168
     .local v10, oldCumulativeTimeout:I
     and-int/lit8 v7, p1, 0x16
 
-    .line 1168
+    .line 1170
     .local v7, newCumulativeTimeout:I
     if-eq v10, v7, :cond_7
 
-    .line 1169
+    .line 1171
     invoke-direct/range {p0 .. p0}, Lcom/android/server/PowerManagerService;->setScreenOffTimeoutsLocked()V
 
-    .line 1172
+    .line 1174
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v17
@@ -15657,7 +15658,7 @@
 
     invoke-direct {v0, v1, v2, v15}, Lcom/android/server/PowerManagerService;->setTimeoutLocked(JI)V
 
-    .line 1174
+    .line 1176
     :cond_7
     monitor-exit v16
     :try_end_1
@@ -15671,27 +15672,27 @@
     .parameter "p"
 
     .prologue
-    .line 3188
+    .line 3191
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 3189
+    .line 3192
     :try_start_0
     iput-object p1, p0, Lcom/android/server/PowerManagerService;->mPolicy:Landroid/view/WindowManagerPolicy;
 
-    .line 3190
+    .line 3193
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 3191
+    .line 3194
     monitor-exit v1
 
-    .line 3192
+    .line 3195
     return-void
 
-    .line 3191
+    .line 3194
     :catchall_0
     move-exception v0
 
@@ -15707,7 +15708,7 @@
     .parameter "brightness"
 
     .prologue
-    .line 1768
+    .line 1770
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DEVICE_POWER"
@@ -15716,21 +15717,21 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1771
+    .line 1773
     iget-object v1, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v1
 
-    .line 1772
+    .line 1774
     :try_start_0
     iget v0, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessOverride:I
 
     if-eq v0, p1, :cond_0
 
-    .line 1773
+    .line 1775
     iput p1, p0, Lcom/android/server/PowerManagerService;->mScreenBrightnessOverride:I
 
-    .line 1774
+    .line 1776
     const-string v0, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -15755,28 +15756,28 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1775
+    .line 1777
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService;->isScreenOn()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1776
+    .line 1778
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     const/4 v2, 0x1
 
     invoke-direct {p0, v0, v2}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
-    .line 1779
+    .line 1781
     :cond_0
     monitor-exit v1
 
-    .line 1780
+    .line 1782
     return-void
 
-    .line 1779
+    .line 1781
     :catchall_0
     move-exception v0
 
@@ -15792,7 +15793,7 @@
     .parameter "val"
 
     .prologue
-    .line 473
+    .line 475
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.WRITE_SETTINGS"
@@ -15801,7 +15802,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 474
+    .line 476
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -15812,7 +15813,7 @@
 
     invoke-static {v0, v1, p1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 476
+    .line 478
     return-void
 .end method
 
@@ -15821,7 +15822,7 @@
     .parameter "isEnabled"
 
     .prologue
-    .line 3605
+    .line 3608
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -15844,20 +15845,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3607
+    .line 3610
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mSystemPowerSaveModeEnabled:Z
 
-    .line 3609
+    .line 3612
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
     const/4 v1, 0x3
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/PowerManagerService;->updateLightsLocked(II)V
 
-    .line 3611
+    .line 3614
     iput-boolean p1, p0, Lcom/android/server/PowerManagerService;->mPrevSystemPowerSaveModeEnabled:Z
 
-    .line 3612
+    .line 3615
     return-void
 .end method
 
@@ -15866,28 +15867,28 @@
     .parameter "reason"
 
     .prologue
-    .line 4025
+    .line 4054
     const-string v1, "PowerManagerService"
 
     const-string v2, "Fota System Reboot !!!!!!!!!!!!!!!!!!!!!!!!!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4027
+    .line 4056
     :try_start_0
     invoke-static {p1}, Landroid/os/Power;->reboot(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4031
+    .line 4060
     :goto_0
     return-void
 
-    .line 4028
+    .line 4057
     :catch_0
     move-exception v0
 
-    .line 4029
+    .line 4058
     .local v0, e:Ljava/io/IOException;
     const-string v1, "PowerManagerService"
 
@@ -15904,7 +15905,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 3206
+    .line 3209
     new-instance v3, Landroid/hardware/SensorManager;
 
     iget-object v4, p0, Lcom/android/server/PowerManagerService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -15917,7 +15918,7 @@
 
     iput-object v3, p0, Lcom/android/server/PowerManagerService;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 3207
+    .line 3210
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/16 v4, 0x8
@@ -15928,12 +15929,12 @@
 
     iput-object v3, p0, Lcom/android/server/PowerManagerService;->mProximitySensor:Landroid/hardware/Sensor;
 
-    .line 3209
+    .line 3212
     iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
     if-eqz v3, :cond_0
 
-    .line 3210
+    .line 3213
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v4, 0x5
@@ -15944,24 +15945,24 @@
 
     iput-object v3, p0, Lcom/android/server/PowerManagerService;->mLightSensor:Landroid/hardware/Sensor;
 
-    .line 3216
+    .line 3219
     :cond_0
     iget-boolean v3, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
     if-eqz v3, :cond_1
 
-    .line 3218
+    .line 3221
     const/4 v3, 0x3
 
     invoke-direct {p0, v3}, Lcom/android/server/PowerManagerService;->setPowerState(I)V
 
-    .line 3224
+    .line 3227
     :goto_0
     iget-object v3, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v3
 
-    .line 3225
+    .line 3228
     :try_start_0
     const-string v4, "PowerManagerService"
 
@@ -15969,12 +15970,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3226
+    .line 3229
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/server/PowerManagerService;->mDoneBooting:Z
 
-    .line 3228
+    .line 3231
     iget-boolean v4, p0, Lcom/android/server/PowerManagerService;->mUseSoftwareAutoBrightness:Z
 
     if-eqz v4, :cond_2
@@ -15986,14 +15987,14 @@
     :goto_1
     invoke-direct {p0, v2}, Lcom/android/server/PowerManagerService;->enableLightSensorLocked(Z)V
 
-    .line 3230
+    .line 3233
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v0
 
-    .line 3232
+    .line 3235
     .local v0, identity:J
     :try_start_1
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
@@ -16004,7 +16005,7 @@
 
     invoke-interface {v2, v4}, Lcom/android/internal/app/IBatteryStats;->noteScreenBrightness(I)V
 
-    .line 3233
+    .line 3236
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mBatteryStats:Lcom/android/internal/app/IBatteryStats;
 
     invoke-interface {v2}, Lcom/android/internal/app/IBatteryStats;->noteScreenOn()V
@@ -16012,20 +16013,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 3237
+    .line 3240
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3239
+    .line 3242
     :goto_2
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3240
+    .line 3243
     return-void
 
-    .line 3221
+    .line 3224
     .end local v0           #identity:J
     :cond_1
     const/16 v3, 0xf
@@ -16034,24 +16035,24 @@
 
     goto :goto_0
 
-    .line 3228
+    .line 3231
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 3234
+    .line 3237
     .restart local v0       #identity:J
     :catch_0
     move-exception v2
 
-    .line 3237
+    .line 3240
     :try_start_3
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
 
-    .line 3239
+    .line 3242
     .end local v0           #identity:J
     :catchall_0
     move-exception v2
@@ -16062,7 +16063,7 @@
 
     throw v2
 
-    .line 3237
+    .line 3240
     .restart local v0       #identity:J
     :catchall_1
     move-exception v2
@@ -16079,14 +16080,14 @@
     .locals 3
 
     .prologue
-    .line 4014
+    .line 4043
     const-string v1, "PowerManagerService"
 
     const-string v2, " System Reboot"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4017
+    .line 4046
     const/4 v1, 0x0
 
     :try_start_0
@@ -16094,15 +16095,15 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4021
+    .line 4050
     :goto_0
     return-void
 
-    .line 4018
+    .line 4047
     :catch_0
     move-exception v0
 
-    .line 4019
+    .line 4048
     .local v0, e:Ljava/io/IOException;
     const-string v1, "PowerManagerService"
 
@@ -16117,12 +16118,12 @@
     .locals 5
 
     .prologue
-    .line 2981
+    .line 2983
     iget-object v2, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v2
 
-    .line 2982
+    .line 2984
     :try_start_0
     iget v0, p0, Lcom/android/server/PowerManagerService;->mPowerState:I
 
@@ -16130,12 +16131,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2983
+    .line 2985
     const-wide/16 v0, 0x0
 
     monitor-exit v2
 
-    .line 2985
+    .line 2987
     :goto_0
     return-wide v0
 
@@ -16152,7 +16153,7 @@
 
     goto :goto_0
 
-    .line 2986
+    .line 2988
     :catchall_0
     move-exception v0
 
@@ -16169,18 +16170,18 @@
     .parameter "ws"
 
     .prologue
-    .line 1009
+    .line 1011
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 1010
+    .line 1012
     .local v3, uid:I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 1011
+    .line 1013
     .local v2, pid:I
     if-eqz p2, :cond_0
 
@@ -16190,23 +16191,23 @@
 
     if-nez v5, :cond_0
 
-    .line 1012
+    .line 1014
     const/4 p2, 0x0
 
-    .line 1014
+    .line 1016
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 1015
+    .line 1017
     invoke-virtual {p0, v3, v2}, Lcom/android/server/PowerManagerService;->enforceWakeSourcePermission(II)V
 
-    .line 1017
+    .line 1019
     :cond_1
     iget-object v6, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
     monitor-enter v6
 
-    .line 1018
+    .line 1020
     :try_start_0
     iget-object v5, p0, Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
 
@@ -16214,11 +16215,11 @@
 
     move-result v0
 
-    .line 1019
+    .line 1021
     .local v0, index:I
     if-gez v0, :cond_2
 
-    .line 1020
+    .line 1022
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
     const-string v7, "Wake lock not active"
@@ -16227,7 +16228,7 @@
 
     throw v5
 
-    .line 1027
+    .line 1029
     .end local v0           #index:I
     :catchall_0
     move-exception v5
@@ -16238,7 +16239,7 @@
 
     throw v5
 
-    .line 1022
+    .line 1024
     .restart local v0       #index:I
     :cond_2
     :try_start_1
@@ -16250,11 +16251,11 @@
 
     check-cast v4, Lcom/android/server/PowerManagerService$WakeLock;
 
-    .line 1023
+    .line 1025
     .local v4, wl:Lcom/android/server/PowerManagerService$WakeLock;
     iget-object v1, v4, Lcom/android/server/PowerManagerService$WakeLock;->ws:Landroid/os/WorkSource;
 
-    .line 1024
+    .line 1026
     .local v1, oldsource:Landroid/os/WorkSource;
     if-eqz p2, :cond_3
 
@@ -16265,21 +16266,21 @@
     :goto_0
     iput-object v5, v4, Lcom/android/server/PowerManagerService$WakeLock;->ws:Landroid/os/WorkSource;
 
-    .line 1025
+    .line 1027
     invoke-virtual {p0, v4, v1}, Lcom/android/server/PowerManagerService;->noteStopWakeLocked(Lcom/android/server/PowerManagerService$WakeLock;Landroid/os/WorkSource;)V
 
-    .line 1026
+    .line 1028
     invoke-virtual {p0, v4, p2}, Lcom/android/server/PowerManagerService;->noteStartWakeLocked(Lcom/android/server/PowerManagerService$WakeLock;Landroid/os/WorkSource;)V
 
-    .line 1027
+    .line 1029
     monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1028
+    .line 1030
     return-void
 
-    .line 1024
+    .line 1026
     :cond_3
     const/4 v5, 0x0
 
@@ -16294,7 +16295,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 2596
+    .line 2598
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DEVICE_POWER"
@@ -16305,14 +16306,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2598
+    .line 2600
     invoke-direct {p0, p1, p2}, Lcom/android/server/PowerManagerService;->shouldLog(J)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2599
+    .line 2601
     const-string v0, "PowerManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -16353,12 +16354,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2606
+    .line 2608
     :cond_0
     :goto_0
     return-void
 
-    .line 2605
+    .line 2607
     :cond_1
     const-wide/16 v3, -0x1
 
@@ -16382,7 +16383,7 @@
     .parameter "eventType"
 
     .prologue
-    .line 2609
+    .line 2611
     const-wide/16 v3, -0x1
 
     const/4 v7, 0x0
@@ -16397,7 +16398,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/PowerManagerService;->userActivity(JJZIZ)V
 
-    .line 2610
+    .line 2612
     return-void
 .end method
 
@@ -16409,7 +16410,7 @@
     .parameter "force"
 
     .prologue
-    .line 2613
+    .line 2615
     const-wide/16 v3, -0x1
 
     move-object v0, p0
@@ -16424,7 +16425,7 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/PowerManagerService;->userActivity(JJZIZ)V
 
-    .line 2614
+    .line 2616
     return-void
 .end method
 
@@ -16435,7 +16436,7 @@
     .parameter "force"
 
     .prologue
-    .line 2591
+    .line 2593
     iget-object v0, p0, Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DEVICE_POWER"
@@ -16444,7 +16445,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2592
+    .line 2594
     const-wide/16 v3, -0x1
 
     const/4 v6, 0x0
@@ -16459,6 +16460,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/PowerManagerService;->userActivity(JJZIZ)V
 
-    .line 2593
+    .line 2595
     return-void
 .end method

@@ -102,7 +102,7 @@
     if-eq v0, v1, :cond_1
 
     .line 100
-    const v0, 0x10900da
+    const v0, 0x10900dd
 
     invoke-virtual {v7, v0, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -314,7 +314,7 @@
     .end local v6           #imm:Landroid/view/inputmethod/InputMethodManager;
     .end local v8           #switchImeButton:Landroid/view/View;
     :cond_1
-    const v0, 0x10900d9
+    const v0, 0x10900dc
 
     invoke-virtual {v7, v0, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

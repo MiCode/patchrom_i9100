@@ -58,16 +58,16 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
+    const/4 v1, 0x0
+
     .line 35
     invoke-direct {p0}, Lcom/android/phone/TimeConsumingPreferenceActivity;-><init>()V
 
     .line 37
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->DBG:Z
+    iput-boolean v1, p0, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->DBG:Z
 
     .line 55
     new-instance v0, Ljava/util/ArrayList;
@@ -77,9 +77,7 @@
     iput-object v0, p0, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->mPreferences:Ljava/util/ArrayList;
 
     .line 57
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->mInitIndex:I
+    iput v1, p0, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->mInitIndex:I
 
     return-void
 .end method
@@ -97,31 +95,18 @@
 
     const/4 v7, 0x0
 
-    .line 148
-    const-string v0, "GsmUmtsVideoCallForwardOptions"
-
-    const-string v1, "onActivityResult: done"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 149
     const/4 v0, -0x1
 
-    if-eq p2, v0, :cond_0
-
-    .line 150
-    const-string v0, "GsmUmtsVideoCallForwardOptions"
-
-    const-string v1, "onActivityResult: contact picker result not OK."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eq p2, v0, :cond_1
 
     .line 181
+    :cond_0
     :goto_0
     return-void
 
     .line 153
-    :cond_0
+    :cond_1
     invoke-virtual {p0}, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -142,31 +127,14 @@
 
     .line 155
     .local v6, cursor:Landroid/database/Cursor;
-    if-nez v6, :cond_1
-
-    .line 156
-    const-string v0, "GsmUmtsVideoCallForwardOptions"
-
-    const-string v1, "onActivityResult: bad contact data, query return null"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    if-eqz v6, :cond_0
 
     .line 159
-    :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-nez v0, :cond_2
-
-    .line 160
-    const-string v0, "GsmUmtsVideoCallForwardOptions"
-
-    const-string v1, "onActivityResult: bad contact data, no results found."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 179
     :goto_1
@@ -229,8 +197,6 @@
     goto :goto_1
 
     .line 162
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -247,34 +213,27 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 64
     invoke-super {p0, p1}, Lcom/android/phone/TimeConsumingPreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 66
     const v2, 0x7f060014
 
     invoke-virtual {p0, v2}, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->addPreferencesFromResource(I)V
 
-    .line 68
     invoke-virtual {p0}, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 69
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 71
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 74
     :cond_0
     invoke-virtual {p0}, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v1
 
-    .line 75
     .local v1, prefSet:Landroid/preference/PreferenceScreen;
     const-string v2, "button_vcfu_key"
 
@@ -526,13 +485,6 @@
     iget-object v4, p0, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->mIcicle:Landroid/os/Bundle;
 
     if-nez v4, :cond_2
-
-    .line 101
-    const-string v4, "GsmUmtsVideoCallForwardOptions"
-
-    const-string v5, "start to init "
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 102
     iget-object v4, p0, Lcom/android/phone/GsmUmtsVideoCallForwardOptions;->mPreferences:Ljava/util/ArrayList;

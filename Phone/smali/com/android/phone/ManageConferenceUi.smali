@@ -229,11 +229,6 @@
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 70
-    const-string v1, "Inflate manage conference view"
-
-    invoke-direct {p0, v1}, Lcom/android/phone/ManageConferenceUi;->log(Ljava/lang/String;)V
-
     .line 71
     const v1, 0x7f090110
 

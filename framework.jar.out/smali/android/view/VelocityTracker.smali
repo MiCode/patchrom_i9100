@@ -110,10 +110,19 @@
 .method private static native nativeComputeCurrentVelocity(IIF)V
 .end method
 
+.method private static native nativeComputeMonomialCurrentVelocity(IIF)V
+.end method
+
 .method private static native nativeDispose(I)V
 .end method
 
 .method private static native nativeGetEstimator(IIIILandroid/view/VelocityTracker$Estimator;)Z
+.end method
+
+.method private static native nativeGetMonomialXVelocity(II)F
+.end method
+
+.method private static native nativeGetMonomialYVelocity(II)F
 .end method
 
 .method private static native nativeGetXVelocity(II)F
@@ -214,6 +223,37 @@
     return-void
 .end method
 
+.method public computeMonomialCurrentVelocity(I)V
+    .locals 2
+    .parameter "units"
+
+    .prologue
+    .line 261
+    iget v0, p0, Landroid/view/VelocityTracker;->mPtr:I
+
+    const v1, 0x7f7fffff
+
+    invoke-static {v0, p1, v1}, Landroid/view/VelocityTracker;->nativeComputeMonomialCurrentVelocity(IIF)V
+
+    .line 262
+    return-void
+.end method
+
+.method public computeMonomialCurrentVelocity(IF)V
+    .locals 1
+    .parameter "units"
+    .parameter "maxVelocity"
+
+    .prologue
+    .line 268
+    iget v0, p0, Landroid/view/VelocityTracker;->mPtr:I
+
+    invoke-static {v0, p1, p2}, Landroid/view/VelocityTracker;->nativeComputeMonomialCurrentVelocity(IIF)V
+
+    .line 269
+    return-void
+.end method
+
 .method protected finalize()V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -265,10 +305,10 @@
     .parameter "outEstimator"
 
     .prologue
-    .line 240
+    .line 293
     if-nez p4, :cond_0
 
-    .line 241
+    .line 294
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "outEstimator must not be null"
@@ -277,11 +317,73 @@
 
     throw v0
 
-    .line 243
+    .line 296
     :cond_0
     iget v0, p0, Landroid/view/VelocityTracker;->mPtr:I
 
     invoke-static {v0, p1, p2, p3, p4}, Landroid/view/VelocityTracker;->nativeGetEstimator(IIIILandroid/view/VelocityTracker$Estimator;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMonomialXVelocity()F
+    .locals 2
+
+    .prologue
+    .line 231
+    iget v0, p0, Landroid/view/VelocityTracker;->mPtr:I
+
+    const/4 v1, -0x1
+
+    invoke-static {v0, v1}, Landroid/view/VelocityTracker;->nativeGetMonomialXVelocity(II)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMonomialXVelocity(I)F
+    .locals 1
+    .parameter "id"
+
+    .prologue
+    .line 246
+    iget v0, p0, Landroid/view/VelocityTracker;->mPtr:I
+
+    invoke-static {v0, p1}, Landroid/view/VelocityTracker;->nativeGetMonomialXVelocity(II)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMonomialYVelocity()F
+    .locals 2
+
+    .prologue
+    .line 238
+    iget v0, p0, Landroid/view/VelocityTracker;->mPtr:I
+
+    const/4 v1, -0x1
+
+    invoke-static {v0, v1}, Landroid/view/VelocityTracker;->nativeGetMonomialYVelocity(II)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMonomialYVelocity(I)F
+    .locals 1
+    .parameter "id"
+
+    .prologue
+    .line 254
+    iget v0, p0, Landroid/view/VelocityTracker;->mPtr:I
+
+    invoke-static {v0, p1}, Landroid/view/VelocityTracker;->nativeGetMonomialYVelocity(II)F
 
     move-result v0
 

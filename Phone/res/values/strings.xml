@@ -467,7 +467,7 @@ to decline"</string>
     <string name="onscreenHideDialpadText">Hide</string>
     <string name="onscreenSpeakerText">Speaker</string>
     <string name="onscreenMuteText">Mute</string>
-    <string name="onscreenBluetoothText">Headset</string>
+    <string name="onscreenBluetoothText">bluetooth</string>
     <string name="onscreenAddCallText">Add call</string>
     <string name="onscreenMergeCallsText">Merge</string>
     <string name="onscreenSwapCallsText">Swap</string>

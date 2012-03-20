@@ -63,17 +63,11 @@
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 1412
-    const-string v5, "All VM provider related changes done"
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
     .line 1413
     iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mForwardingChangeResults:Ljava/util/Map;
-    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$400(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
+    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$300(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
 
     move-result-object v5
 
@@ -85,14 +79,14 @@
     const/16 v6, 0x259
 
     #calls: Lcom/android/phone/CallFeaturesSetting;->dismissDialogSafely(I)V
-    invoke-static {v5, v6}, Lcom/android/phone/CallFeaturesSetting;->access$700(Lcom/android/phone/CallFeaturesSetting;I)V
+    invoke-static {v5, v6}, Lcom/android/phone/CallFeaturesSetting;->access$600(Lcom/android/phone/CallFeaturesSetting;I)V
 
     .line 1416
     :cond_1
     iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #calls: Lcom/android/phone/CallFeaturesSetting;->handleSetVMOrFwdMessage()V
-    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$800(Lcom/android/phone/CallFeaturesSetting;)V
+    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$700(Lcom/android/phone/CallFeaturesSetting;)V
 
     .line 1418
     :cond_2
@@ -121,36 +115,6 @@
     :cond_3
     iput-boolean v5, v7, Lcom/android/phone/CallFeaturesSetting;->mVMChangeCompletedSuccesfully:Z
 
-    .line 1365
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "VM change complete msg, VM change done = "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
-
-    iget-boolean v6, v6, Lcom/android/phone/CallFeaturesSetting;->mVMChangeCompletedSuccesfully:Z
-
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
     .line 1367
     const/4 v1, 0x1
 
@@ -162,7 +126,7 @@
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mForwardingChangeResults:Ljava/util/Map;
-    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$400(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
+    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$300(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
 
     move-result-object v7
 
@@ -179,52 +143,12 @@
 
     if-eqz v7, :cond_4
 
-    .line 1373
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "Error in setting fwd# "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    iget v8, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    const-string v8, ": "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    iget-object v8, v4, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
-
-    invoke-virtual {v8}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
     .line 1379
-    :goto_1
+    :cond_4
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #calls: Lcom/android/phone/CallFeaturesSetting;->checkForwardingCompleted()Z
-    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$500(Lcom/android/phone/CallFeaturesSetting;)Z
+    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$400(Lcom/android/phone/CallFeaturesSetting;)Z
 
     move-result v0
 
@@ -236,62 +160,21 @@
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #calls: Lcom/android/phone/CallFeaturesSetting;->checkFwdChangeSuccess()Ljava/lang/String;
-    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$600(Lcom/android/phone/CallFeaturesSetting;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$500(Lcom/android/phone/CallFeaturesSetting;)Ljava/lang/String;
 
     move-result-object v7
 
     if-nez v7, :cond_5
-
-    .line 1383
-    const-string v5, "Overall fwd changes completed ok, starting vm change"
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
 
     .line 1384
     iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     invoke-virtual {v5}, Lcom/android/phone/CallFeaturesSetting;->setVMNumberWithCarrier()V
 
-    goto/16 :goto_0
-
-    .line 1377
-    .end local v0           #completed:Z
-    :cond_4
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "Success in setting fwd# "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    iget v8, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 1387
-    .restart local v0       #completed:Z
-    :cond_5
-    const-string v7, "Overall fwd changes completed, failure"
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v7}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
+    goto :goto_0
 
     .line 1388
+    :cond_5
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     iput-boolean v5, v7, Lcom/android/phone/CallFeaturesSetting;->mFwdChangesRequireRollback:Z
@@ -300,7 +183,7 @@
     iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mForwardingChangeResults:Ljava/util/Map;
-    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$400(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
+    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$300(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
 
     move-result-object v5
 
@@ -340,12 +223,6 @@
 
     if-nez v5, :cond_6
 
-    .line 1397
-    const-string v5, "Rollback will be required"
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v5}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
     .line 1398
     iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting$5;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
@@ -357,9 +234,11 @@
     const/4 v1, 0x1
 
     .line 1403
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 1360
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1f4
         :pswitch_0

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="emailAddressTypes">
         <item>Home</item>
@@ -529,10 +529,6 @@
         <item>alarm_clock</item>
         <item>secure</item>
         <item>clock</item>
-        <item>headset</item>
-        <item>call_record</item>
-        <item>privacy_mode</item>
-        <item>wimax</item>
     </string-array>
     <string-array name="networkAttributes">
         <item>wifi,1,1,1,-1,true</item>
@@ -576,12 +572,12 @@
     <string-array name="config_tether_wifi_regexs">
         <item>wlan0</item>
     </string-array>
-    <array name="config_tether_wimax_regexs"/>
+    <array name="config_tether_wimax_regexs" />
     <string-array name="config_tether_bluetooth_regexs">
         <item>bnep\\d</item>
     </string-array>
-    <array name="config_tether_dhcp_range"/>
-    <array name="config_mobile_hotspot_provision_app"/>
+    <array name="config_tether_dhcp_range" />
+    <array name="config_mobile_hotspot_provision_app" />
     <integer-array name="config_tether_upstream_types">
         <item>0</item>
         <item>1</item>
@@ -634,10 +630,10 @@
         <item>15000</item>
     </integer-array>
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>32</item>
-        <item>69</item>
-        <item>118</item>
-        <item>177</item>
+        <item>40</item>
+        <item>110</item>
+        <item>160</item>
+        <item>220</item>
         <item>255</item>
     </integer-array>
     <integer-array name="config_autoBrightnessButtonBacklightValues">
@@ -666,15 +662,15 @@
         <item>300000</item>
         <item>0</item>
     </integer-array>
-    <array name="config_twoDigitNumberPattern"/>
-    <array name="config_sms_enabled_single_shift_tables"/>
-    <array name="config_sms_enabled_locking_shift_tables"/>
-    <array name="common_nicknames"/>
+    <array name="config_twoDigitNumberPattern" />
+    <array name="config_sms_enabled_single_shift_tables" />
+    <array name="config_sms_enabled_locking_shift_tables" />
+    <array name="common_nicknames" />
     <string-array name="imAddressTypes">
         <item>Home</item>
         <item>Work</item>
         <item>Other</item>
         <item>Custom</item>
     </string-array>
-    <array name="carrier_properties"/>
+    <array name="carrier_properties" />
 </resources>

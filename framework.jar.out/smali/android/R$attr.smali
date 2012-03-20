@@ -285,7 +285,7 @@
 
 .field public static final clipToPadding:I = 0x10100eb
 
-.field public static final clipboardFormat:I = 0x10103a8
+.field public static final clipboardFormat:I = 0x10103aa
 
 .field public static final codes:I = 0x1010242
 
@@ -1693,6 +1693,8 @@
 
 .field public static final textSelectHandleLeft:I = 0x10102c5
 
+.field public static final textSelectHandleLeftTop:I = 0x10103a8
+
 .field public static final textSelectHandleRight:I = 0x10102c6
 
 .field public static final textSelectHandleWindowStyle:I = 0x10102c8
@@ -1764,6 +1766,8 @@
 .field public static final translationX:I = 0x1010322
 
 .field public static final translationY:I = 0x1010323
+
+.field public static final twActionPopup:I = 0x10103a9
 
 .field public static final type:I = 0x10101a1
 

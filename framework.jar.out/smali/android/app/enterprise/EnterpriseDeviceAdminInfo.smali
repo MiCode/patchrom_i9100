@@ -26,8 +26,6 @@
     .end annotation
 .end field
 
-.field static final TAG:Ljava/lang/String; = "EnterpriseDeviceAdminInfo"
-
 .field public static final USES_POLICY_MDM_APN_SETTINGS:I = 0x22
 
 .field public static final USES_POLICY_MDM_APN_SETTINGS_TAG:Ljava/lang/String; = "android.permission.sec.MDM_APN"
@@ -867,7 +865,7 @@
 
     move/from16 v0, v17
 
-    if-eq v15, v0, :cond_a
+    if-eq v15, v0, :cond_9
 
     const/16 v17, 0x3
 
@@ -881,7 +879,7 @@
 
     move/from16 v0, v17
 
-    if-le v0, v8, :cond_a
+    if-le v0, v8, :cond_9
 
     .line 535
     :cond_6
@@ -980,7 +978,7 @@
 
     .line 550
     .local v16, val:Ljava/lang/Integer;
-    if-eqz v16, :cond_9
+    if-eqz v16, :cond_7
 
     .line 552
     move-object/from16 v0, p0
@@ -1004,48 +1002,6 @@
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->mUsesPolicies:J
-
-    goto :goto_0
-
-    .line 555
-    :cond_9
-    const-string v17, "EnterpriseDeviceAdminInfo"
-
-    new-instance v18, Ljava/lang/StringBuilder;
-
-    invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v19, "Unknown tag under uses-policies of "
-
-    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v18
-
-    invoke-virtual/range {p0 .. p0}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
-
-    move-result-object v19
-
-    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v18
-
-    const-string v19, ": "
-
-    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v18
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v18
-
-    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v18
-
-    invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1057,14 +1013,14 @@
     .end local v11           #policyName:Ljava/lang/String;
     .end local v14           #tagName:Ljava/lang/String;
     .end local v16           #val:Ljava/lang/Integer;
-    :cond_a
-    if-eqz v9, :cond_b
+    :cond_9
+    if-eqz v9, :cond_a
 
     .line 566
     invoke-interface {v9}, Landroid/content/res/XmlResourceParser;->close()V
 
     .line 569
-    :cond_b
+    :cond_a
     invoke-virtual/range {p0 .. p0}, Landroid/app/enterprise/EnterpriseDeviceAdminInfo;->parseRequestedPermissions()Ljava/util/ArrayList;
 
     .line 570
@@ -1590,7 +1546,7 @@
 
     invoke-direct {v5}, Landroid/content/res/AssetManager;-><init>()V
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 786
     .end local v4           #assmgr:Landroid/content/res/AssetManager;
@@ -1602,7 +1558,7 @@
 
     .line 787
     .local v7, cookie:I
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_0
 
     .line 788
     const-string v20, "AndroidManifest.xml"
@@ -1611,114 +1567,37 @@
 
     invoke-virtual {v5, v7, v0}, Landroid/content/res/AssetManager;->openXmlResourceParser(ILjava/lang/String;)Landroid/content/res/XmlResourceParser;
     :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     move-result-object v12
 
     .line 789
     const/4 v3, 0x0
 
-    :goto_0
+    :cond_0
     move-object v4, v5
 
     .line 797
     .end local v5           #assmgr:Landroid/content/res/AssetManager;
     .end local v7           #cookie:I
     .restart local v4       #assmgr:Landroid/content/res/AssetManager;
-    :goto_1
+    :goto_0
     if-eqz v3, :cond_2
 
     .line 798
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     invoke-virtual {v4}, Landroid/content/res/AssetManager;->close()V
 
     .line 799
-    :cond_0
+    :cond_1
     const/16 v20, 0x0
 
     .line 861
-    :goto_2
+    :goto_1
     return-object v20
 
-    .line 791
-    .end local v4           #assmgr:Landroid/content/res/AssetManager;
-    .restart local v5       #assmgr:Landroid/content/res/AssetManager;
-    .restart local v7       #cookie:I
-    :cond_1
-    :try_start_2
-    const-string v20, "EnterpriseDeviceAdminInfo"
-
-    new-instance v21, Ljava/lang/StringBuilder;
-
-    invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v22, "Failed adding asset path:"
-
-    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v21
-
-    move-object/from16 v0, v21
-
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v21
-
-    invoke-virtual/range {v21 .. v21}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v21
-
-    invoke-static/range {v20 .. v21}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    goto :goto_0
-
-    .line 793
-    .end local v7           #cookie:I
-    :catch_0
-    move-exception v8
-
-    move-object v4, v5
-
-    .line 794
-    .end local v5           #assmgr:Landroid/content/res/AssetManager;
-    .restart local v4       #assmgr:Landroid/content/res/AssetManager;
-    .local v8, e:Ljava/lang/Exception;
-    :goto_3
-    const-string v20, "EnterpriseDeviceAdminInfo"
-
-    new-instance v21, Ljava/lang/StringBuilder;
-
-    invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v22, "Unable to read AndroidManifest.xml of "
-
-    invoke-virtual/range {v21 .. v22}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v21
-
-    move-object/from16 v0, v21
-
-    invoke-virtual {v0, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v21
-
-    invoke-virtual/range {v21 .. v21}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v21
-
-    move-object/from16 v0, v20
-
-    move-object/from16 v1, v21
-
-    invoke-static {v0, v1, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_1
-
     .line 802
-    .end local v8           #e:Ljava/lang/Exception;
     :cond_2
     new-instance v9, Landroid/util/DisplayMetrics;
 
@@ -1729,7 +1608,7 @@
     invoke-virtual {v9}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
     .line 807
-    :try_start_3
+    :try_start_2
     new-instance v15, Landroid/content/res/Resources;
 
     const/16 v20, 0x0
@@ -1785,7 +1664,7 @@
     .line 821
     .local v11, outerDepth:I
     :cond_5
-    :goto_4
+    :goto_2
     invoke-interface {v12}, Landroid/content/res/XmlResourceParser;->next()I
 
     move-result v18
@@ -1948,10 +1827,10 @@
     .line 852
     :cond_7
     invoke-static {v12}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    goto/16 :goto_4
+    goto/16 :goto_2
 
     .line 856
     .end local v6           #attrs:Landroid/util/AttributeSet;
@@ -1962,11 +1841,11 @@
     .end local v17           #tagName:Ljava/lang/String;
     .end local v18           #type:I
     .end local v19           #val:Ljava/lang/Integer;
-    :catch_1
+    :catch_0
     move-exception v8
 
     .line 857
-    .restart local v8       #e:Ljava/lang/Exception;
+    .local v8, e:Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
     .line 859
@@ -1984,14 +1863,25 @@
 
     move-object/from16 v20, v0
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     .line 793
     .end local v9           #metrics:Landroid/util/DisplayMetrics;
-    :catch_2
-    move-exception v8
+    :catch_1
+    move-exception v20
 
-    goto/16 :goto_3
+    goto/16 :goto_0
+
+    .end local v4           #assmgr:Landroid/content/res/AssetManager;
+    .restart local v5       #assmgr:Landroid/content/res/AssetManager;
+    :catch_2
+    move-exception v20
+
+    move-object v4, v5
+
+    .end local v5           #assmgr:Landroid/content/res/AssetManager;
+    .restart local v4       #assmgr:Landroid/content/res/AssetManager;
+    goto/16 :goto_0
 .end method
 
 .method public readPoliciesFromXml(Lorg/xmlpull/v1/XmlPullParser;)V

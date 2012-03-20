@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 446
+    .line 448
     iput-object p1, p0, Lcom/android/server/PowerManagerService$BootCompletedReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 446
+    .line 448
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$BootCompletedReceiver;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -52,11 +52,11 @@
     .parameter "intent"
 
     .prologue
-    .line 449
+    .line 451
     iget-object v0, p0, Lcom/android/server/PowerManagerService$BootCompletedReceiver;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService;->bootCompleted()V
 
-    .line 450
+    .line 452
     return-void
 .end method

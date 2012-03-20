@@ -25,13 +25,13 @@
     .parameter "handler"
 
     .prologue
-    .line 1207
+    .line 1208
     iput-object p1, p0, Lcom/android/server/NotificationManagerService$MotionSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
-    .line 1208
+    .line 1209
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1209
+    .line 1210
     return-void
 .end method
 
@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 1212
+    .line 1213
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$MotionSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    .line 1213
+    .line 1214
     .local v0, resolver:Landroid/content/ContentResolver;
     const-string v1, "motion_overturn"
 
@@ -62,10 +62,10 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1215
+    .line 1216
     invoke-virtual {p0}, Lcom/android/server/NotificationManagerService$MotionSettingsObserver;->update()V
 
-    .line 1216
+    .line 1217
     return-void
 .end method
 
@@ -74,10 +74,10 @@
     .parameter "selfChange"
 
     .prologue
-    .line 1219
+    .line 1220
     invoke-virtual {p0}, Lcom/android/server/NotificationManagerService$MotionSettingsObserver;->update()V
 
-    .line 1220
+    .line 1221
     return-void
 .end method
 
@@ -87,7 +87,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1223
+    .line 1224
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$MotionSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
 
     iget-object v1, v1, Lcom/android/server/NotificationManagerService;->mContext:Landroid/content/Context;
@@ -106,7 +106,7 @@
 
     const/4 v0, 0x1
 
-    .line 1225
+    .line 1226
     .local v0, motionEnabled:Z
     :cond_0
     iget-object v1, p0, Lcom/android/server/NotificationManagerService$MotionSettingsObserver;->this$0:Lcom/android/server/NotificationManagerService;
@@ -122,6 +122,6 @@
 
     invoke-virtual {v1, v2, v0}, Lcom/android/server/NotificationPlayer;->setMotionEnabled(Landroid/content/Context;Z)V
 
-    .line 1226
+    .line 1227
     return-void
 .end method

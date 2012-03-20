@@ -145,26 +145,21 @@
 
     invoke-virtual {v1, v2}, Landroid/preference/EditTextPreference;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 375
     invoke-virtual {v1, p0}, Landroid/preference/EditTextPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
 
-    .line 377
     invoke-virtual {p0}, Lcom/android/phone/RespondViaSmsManager$Settings;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 378
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_1
 
-    .line 380
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
 
-    .line 382
     :cond_1
     return-void
 .end method

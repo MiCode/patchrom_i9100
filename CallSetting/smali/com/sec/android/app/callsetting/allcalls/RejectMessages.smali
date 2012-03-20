@@ -120,35 +120,28 @@
 
     const/4 v7, 0x1
 
-    .line 94
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 95
     const-string v4, "CreateRejectMessages"
 
     const-string v5, "OnCreate ============== :"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     const v4, 0x7f03000f
 
     invoke-virtual {p0, v4}, Lcom/sec/android/app/callsetting/allcalls/RejectMessages;->setContentView(I)V
 
-    .line 100
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/allcalls/RejectMessages;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 101
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 103
     invoke-virtual {v0, v7}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v7}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 106
     :cond_0
     const v4, 0x7f080034
 

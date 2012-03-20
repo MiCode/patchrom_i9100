@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 4728
+    .line 4741
     iput-object p1, p0, Landroid/webkit/WebView$SingleCursorTimerTask;->this$0:Landroid/webkit/WebView;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -38,13 +38,13 @@
     .locals 2
 
     .prologue
-    .line 4731
+    .line 4744
     iget-object v0, p0, Landroid/webkit/WebView$SingleCursorTimerTask;->this$0:Landroid/webkit/WebView;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Landroid/webkit/WebView;->mIsSCHExpired:Z
 
-    .line 4732
+    .line 4745
     return-void
 .end method

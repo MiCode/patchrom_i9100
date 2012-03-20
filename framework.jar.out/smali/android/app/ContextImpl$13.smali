@@ -32,7 +32,6 @@
     .parameter "ctx"
 
     .prologue
-    .line 334
     invoke-virtual {p1}, Landroid/app/ContextImpl;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1

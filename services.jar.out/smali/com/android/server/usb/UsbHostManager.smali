@@ -116,7 +116,7 @@
 
     iput-object v0, p0, Lcom/android/server/usb/UsbHostManager;->mUEventHostObserver:Landroid/os/UEventObserver;
 
-    .line 437
+    .line 438
     new-instance v0, Lcom/android/server/usb/UsbHostManager$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/usb/UsbHostManager$3;-><init>(Lcom/android/server/usb/UsbHostManager;)V
@@ -1429,7 +1429,7 @@
     .parameter "deviceProtocol"
 
     .prologue
-    .line 485
+    .line 486
     const-string v0, "add"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1438,7 +1438,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 486
+    .line 487
     const/4 v0, 0x3
 
     if-ne p2, v0, :cond_1
@@ -1451,12 +1451,12 @@
 
     if-ne p4, v0, :cond_1
 
-    .line 489
+    .line 490
     const v1, 0x10405c3
 
     const v2, 0x10405c5
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x1
 
@@ -1468,12 +1468,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/usb/UsbHostManager;->setUsbObserverNotification(IIIZZLandroid/app/PendingIntent;)V
 
-    .line 554
+    .line 555
     :cond_0
     :goto_0
     return-void
 
-    .line 497
+    .line 498
     :cond_1
     const/4 v0, 0x3
 
@@ -1487,12 +1487,12 @@
 
     if-ne p4, v0, :cond_2
 
-    .line 500
+    .line 501
     const v1, 0x10405c6
 
     const v2, 0x10405c8
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x1
 
@@ -1506,18 +1506,18 @@
 
     goto :goto_0
 
-    .line 508
+    .line 509
     :cond_2
     const/4 v0, 0x7
 
     if-ne p2, v0, :cond_3
 
-    .line 509
+    .line 510
     const v1, 0x10405d0
 
     const v2, 0x10405d2
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x1
 
@@ -1531,7 +1531,7 @@
 
     goto :goto_0
 
-    .line 518
+    .line 519
     :cond_3
     const-string v0, "remove"
 
@@ -1541,7 +1541,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 519
+    .line 520
     const/4 v0, 0x3
 
     if-ne p2, v0, :cond_4
@@ -1554,12 +1554,12 @@
 
     if-ne p4, v0, :cond_4
 
-    .line 522
+    .line 523
     const v1, 0x10405c4
 
     const/4 v2, 0x0
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x1
 
@@ -1571,12 +1571,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/usb/UsbHostManager;->setUsbObserverNotification(IIIZZLandroid/app/PendingIntent;)V
 
-    .line 527
+    .line 528
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x0
 
@@ -1590,7 +1590,7 @@
 
     goto :goto_0
 
-    .line 531
+    .line 532
     :cond_4
     const/4 v0, 0x3
 
@@ -1604,12 +1604,12 @@
 
     if-ne p4, v0, :cond_5
 
-    .line 534
+    .line 535
     const v1, 0x10405c7
 
     const/4 v2, 0x0
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x1
 
@@ -1621,12 +1621,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/usb/UsbHostManager;->setUsbObserverNotification(IIIZZLandroid/app/PendingIntent;)V
 
-    .line 539
+    .line 540
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x0
 
@@ -1640,18 +1640,18 @@
 
     goto :goto_0
 
-    .line 543
+    .line 544
     :cond_5
     const/4 v0, 0x7
 
     if-ne p2, v0, :cond_0
 
-    .line 544
+    .line 545
     const v1, 0x10405d1
 
     const/4 v2, 0x0
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x1
 
@@ -1663,12 +1663,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/usb/UsbHostManager;->setUsbObserverNotification(IIIZZLandroid/app/PendingIntent;)V
 
-    .line 549
+    .line 550
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    const v3, 0x1080536
+    const v3, 0x1080533
 
     const/4 v4, 0x0
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2740
+    .line 2742
     iput-object p1, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
 
     const/4 v3, -0x1
 
-    .line 2742
+    .line 2744
     iget-object v1, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mLocks:Lcom/android/server/PowerManagerService$LockList;
@@ -55,7 +55,7 @@
 
     monitor-enter v1
 
-    .line 2743
+    .line 2745
     :try_start_0
     iget-object v2, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -66,7 +66,7 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 2744
+    .line 2746
     iget-object v2, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
     iget-object v3, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
@@ -82,7 +82,7 @@
     #calls: Lcom/android/server/PowerManagerService;->proximityChangedLocked(Z)V
     invoke-static {v2, v0}, Lcom/android/server/PowerManagerService;->access$5800(Lcom/android/server/PowerManagerService;Z)V
 
-    .line 2745
+    .line 2747
     iget-object v0, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
     const/4 v2, -0x1
@@ -90,7 +90,7 @@
     #setter for: Lcom/android/server/PowerManagerService;->mProximityPendingValue:I
     invoke-static {v0, v2}, Lcom/android/server/PowerManagerService;->access$5702(Lcom/android/server/PowerManagerService;I)I
 
-    .line 2747
+    .line 2749
     :cond_0
     iget-object v0, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -105,7 +105,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2748
+    .line 2750
     iget-object v0, p0, Lcom/android/server/PowerManagerService$10;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mProximityPartialLock:Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;
@@ -115,20 +115,20 @@
 
     invoke-virtual {v0}, Lcom/android/server/PowerManagerService$UnsynchronizedWakeLock;->release()V
 
-    .line 2750
+    .line 2752
     :cond_1
     monitor-exit v1
 
-    .line 2751
+    .line 2753
     return-void
 
-    .line 2744
+    .line 2746
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 2750
+    .line 2752
     :catchall_0
     move-exception v0
 

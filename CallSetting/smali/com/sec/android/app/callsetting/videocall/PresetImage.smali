@@ -1676,35 +1676,28 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 398
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 399
     const-string v8, "PresetImage"
 
     const-string v9, "onCreate"
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     const v8, 0x7f030019
 
     invoke-virtual {p0, v8}, Lcom/sec/android/app/callsetting/videocall/PresetImage;->setContentView(I)V
 
-    .line 403
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/videocall/PresetImage;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 404
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 406
     invoke-virtual {v0, v10}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v10}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 410
     :cond_0
     const v8, 0x7f08003c
 

@@ -147,7 +147,7 @@
 
     .line 85
     .local v0, styledAttributes:Landroid/content/res/TypedArray;
-    const/16 v1, 0xe5
+    const/16 v1, 0xe7
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -639,7 +639,7 @@
 
     move-result-object v0
 
-    const v1, 0x10802ca
+    const v1, 0x10802c9
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 

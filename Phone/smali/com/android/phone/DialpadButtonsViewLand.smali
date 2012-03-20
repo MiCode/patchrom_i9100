@@ -24,20 +24,6 @@
     return-void
 .end method
 
-.method private log(Ljava/lang/String;)V
-    .locals 1
-    .parameter "msg"
-
-    .prologue
-    .line 54
-    const-string v0, "DialpadButtonsViewLand"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 55
-    return-void
-.end method
-
 
 # virtual methods
 .method initialize()V
@@ -58,11 +44,6 @@
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    .line 44
-    const-string v1, "Inflate Dialpad buttons view (landscape)"
-
-    invoke-direct {p0, v1}, Lcom/android/phone/DialpadButtonsViewLand;->log(Ljava/lang/String;)V
 
     .line 45
     return-void

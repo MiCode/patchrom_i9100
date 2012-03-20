@@ -31,7 +31,7 @@
     .parameter
 
     .prologue
-    .line 400
+    .line 402
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$ForegroundToken;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V

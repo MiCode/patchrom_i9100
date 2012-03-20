@@ -1,11 +1,14 @@
 .class Lcom/android/server/pm/PackageManagerService$12;
-.super Landroid/content/IIntentReceiver$Stub;
+.super Ljava/lang/Object;
 .source "PackageManagerService.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/PackageManagerService;->unloadMediaPackages(Ljava/util/HashMap;[IZ)V
+    value = Lcom/android/server/pm/PackageManagerService;->updateExternalMediaStatus(ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,85 +20,54 @@
 # instance fields
 .field final synthetic this$0:Lcom/android/server/pm/PackageManagerService;
 
-.field final synthetic val$keys:Ljava/util/Set;
+.field final synthetic val$mediaStatus:Z
 
 .field final synthetic val$reportStatus:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/pm/PackageManagerService;ZLjava/util/Set;)V
+.method constructor <init>(Lcom/android/server/pm/PackageManagerService;ZZ)V
     .locals 0
     .parameter
     .parameter
     .parameter
 
     .prologue
-    .line 8693
+    .line 8638
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$12;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    iput-boolean p2, p0, Lcom/android/server/pm/PackageManagerService$12;->val$reportStatus:Z
+    iput-boolean p2, p0, Lcom/android/server/pm/PackageManagerService$12;->val$mediaStatus:Z
 
-    iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$12;->val$keys:Ljava/util/Set;
+    iput-boolean p3, p0, Lcom/android/server/pm/PackageManagerService$12;->val$reportStatus:Z
 
-    invoke-direct {p0}, Landroid/content/IIntentReceiver$Stub;-><init>()V
+    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public performReceive(Landroid/content/Intent;ILjava/lang/String;Landroid/os/Bundle;ZZ)V
-    .locals 6
-    .parameter "intent"
-    .parameter "resultCode"
-    .parameter "data"
-    .parameter "extras"
-    .parameter "ordered"
-    .parameter "sticky"
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+.method public run()V
+    .locals 3
 
     .prologue
-    const/4 v2, 0x1
+    .line 8641
+    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$12;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 8696
-    iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$12;->this$0:Lcom/android/server/pm/PackageManagerService;
+    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
-    iget-object v3, v1, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
+    invoke-virtual {v0, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    const/16 v4, 0xc
+    .line 8642
+    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$12;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    iget-boolean v1, p0, Lcom/android/server/pm/PackageManagerService$12;->val$reportStatus:Z
+    iget-boolean v1, p0, Lcom/android/server/pm/PackageManagerService$12;->val$mediaStatus:Z
 
-    if-eqz v1, :cond_0
+    iget-boolean v2, p0, Lcom/android/server/pm/PackageManagerService$12;->val$reportStatus:Z
 
-    move v1, v2
+    #calls: Lcom/android/server/pm/PackageManagerService;->updateExternalMediaStatusInner(ZZ)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/pm/PackageManagerService;->access$3400(Lcom/android/server/pm/PackageManagerService;ZZ)V
 
-    :goto_0
-    iget-object v5, p0, Lcom/android/server/pm/PackageManagerService$12;->val$keys:Ljava/util/Set;
-
-    invoke-virtual {v3, v4, v1, v2, v5}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    .line 8698
-    .local v0, msg:Landroid/os/Message;
-    iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$12;->this$0:Lcom/android/server/pm/PackageManagerService;
-
-    iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
-
-    invoke-virtual {v1, v0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessage(Landroid/os/Message;)Z
-
-    .line 8699
+    .line 8643
     return-void
-
-    .line 8696
-    .end local v0           #msg:Landroid/os/Message;
-    :cond_0
-    const/4 v1, 0x0
-
-    goto :goto_0
 .end method

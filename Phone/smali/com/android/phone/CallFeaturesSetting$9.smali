@@ -255,7 +255,7 @@
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mButtonTTY:Landroid/preference/ListPreference;
-    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->access$900(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
+    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->access$800(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
 
     move-result-object v9
 
@@ -269,7 +269,7 @@
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #calls: Lcom/android/phone/CallFeaturesSetting;->handleTTYChange(I)V
-    invoke-static {v9, v4}, Lcom/android/phone/CallFeaturesSetting;->access$1000(Lcom/android/phone/CallFeaturesSetting;I)V
+    invoke-static {v9, v4}, Lcom/android/phone/CallFeaturesSetting;->access$900(Lcom/android/phone/CallFeaturesSetting;I)V
 
     goto :goto_1
 
@@ -289,7 +289,7 @@
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mButtonTTY:Landroid/preference/ListPreference;
-    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->access$900(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
+    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->access$800(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
 
     move-result-object v9
 
@@ -299,7 +299,7 @@
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mButtonTTY:Landroid/preference/ListPreference;
-    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->access$900(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
+    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->access$800(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
 
     move-result-object v9
 

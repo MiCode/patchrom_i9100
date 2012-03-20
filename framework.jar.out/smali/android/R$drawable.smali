@@ -370,8 +370,6 @@
 
 .field public static final sym_def_app_icon:I = 0x1080093
 
-.field public static final text_select_handle_left_top:I = 0x10800b4
-
 .field public static final title_bar:I = 0x1080095
 
 .field public static final title_bar_tall:I = 0x10800a6
@@ -386,7 +384,7 @@
     .locals 0
 
     .prologue
-    .line 9960
+    .line 9976
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

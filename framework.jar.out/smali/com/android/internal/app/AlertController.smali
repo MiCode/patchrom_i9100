@@ -532,7 +532,7 @@
     .line 597
     const/16 v19, 0x0
 
-    const v20, 0x1080457
+    const v20, 0x1080454
 
     move-object/from16 v0, p5
 
@@ -548,7 +548,7 @@
     .local v9, fullDark:I
     const/16 v19, 0x1
 
-    const v20, 0x108045f
+    const v20, 0x108045c
 
     move-object/from16 v0, p5
 
@@ -564,7 +564,7 @@
     .local v16, topDark:I
     const/16 v19, 0x2
 
-    const v20, 0x1080454
+    const v20, 0x1080451
 
     move-object/from16 v0, p5
 
@@ -580,7 +580,7 @@
     .local v7, centerDark:I
     const/16 v19, 0x3
 
-    const v20, 0x1080451
+    const v20, 0x108044e
 
     move-object/from16 v0, p5
 
@@ -596,7 +596,7 @@
     .local v4, bottomDark:I
     const/16 v19, 0x4
 
-    const v20, 0x1080456
+    const v20, 0x1080453
 
     move-object/from16 v0, p5
 
@@ -612,7 +612,7 @@
     .local v8, fullBright:I
     const/16 v19, 0x5
 
-    const v20, 0x108045e
+    const v20, 0x108045b
 
     move-object/from16 v0, p5
 
@@ -628,7 +628,7 @@
     .local v15, topBright:I
     const/16 v19, 0x6
 
-    const v20, 0x1080453
+    const v20, 0x1080450
 
     move-object/from16 v0, p5
 
@@ -644,7 +644,7 @@
     .local v6, centerBright:I
     const/16 v19, 0x7
 
-    const v20, 0x1080450
+    const v20, 0x108044d
 
     move-object/from16 v0, p5
 
@@ -660,7 +660,7 @@
     .local v3, bottomBright:I
     const/16 v19, 0x8
 
-    const v20, 0x1080452
+    const v20, 0x108044f
 
     move-object/from16 v0, p5
 
@@ -1883,7 +1883,7 @@
 
     move-result-object v2
 
-    const v3, 0x10103b5
+    const v3, 0x10103b7
 
     invoke-virtual {v2, v3, v0, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 

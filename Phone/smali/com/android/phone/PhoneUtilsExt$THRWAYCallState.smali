@@ -40,7 +40,7 @@
 
     const/4 v2, 0x0
 
-    .line 147
+    .line 145
     new-instance v0, Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
     const-string v1, "PARTY_CALL"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;->TRANSFER_CALL:Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
-    .line 146
+    .line 144
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
@@ -86,7 +86,7 @@
     .end annotation
 
     .prologue
-    .line 146
+    .line 144
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -97,7 +97,7 @@
     .parameter
 
     .prologue
-    .line 146
+    .line 144
     const-class v0, Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -113,7 +113,7 @@
     .locals 1
 
     .prologue
-    .line 146
+    .line 144
     sget-object v0, Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;->$VALUES:[Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
     invoke-virtual {v0}, [Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;->clone()Ljava/lang/Object;

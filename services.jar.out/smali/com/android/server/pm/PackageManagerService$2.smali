@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/android/server/pm/PackageManagerService;->freeStorage(JLandroid/content/IntentSender;)V
+    value = Lcom/android/server/pm/PackageManagerService;->freeStorageAndNotify(JLandroid/content/pm/IPackageDataObserver;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,23 +22,23 @@
 
 .field final synthetic val$freeStorageSize:J
 
-.field final synthetic val$pi:Landroid/content/IntentSender;
+.field final synthetic val$observer:Landroid/content/pm/IPackageDataObserver;
 
 
 # direct methods
-.method constructor <init>(Lcom/android/server/pm/PackageManagerService;JLandroid/content/IntentSender;)V
+.method constructor <init>(Lcom/android/server/pm/PackageManagerService;JLandroid/content/pm/IPackageDataObserver;)V
     .locals 0
     .parameter
     .parameter
     .parameter
 
     .prologue
-    .line 1759
+    .line 1894
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-wide p2, p0, Lcom/android/server/pm/PackageManagerService$2;->val$freeStorageSize:J
 
-    iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$2;->val$pi:Landroid/content/IntentSender;
+    iput-object p4, p0, Lcom/android/server/pm/PackageManagerService$2;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,94 +48,84 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 5
 
     .prologue
-    .line 1761
-    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
+    .line 1896
+    iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
+    iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
-    invoke-virtual {v0, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v2, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 1762
-    const/4 v7, -0x1
+    .line 1897
+    const/4 v1, -0x1
 
-    .line 1763
-    .local v7, retCode:I
-    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
+    .line 1898
+    .local v1, retCode:I
+    iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
+    iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
 
     iget-wide v3, p0, Lcom/android/server/pm/PackageManagerService$2;->val$freeStorageSize:J
 
-    invoke-virtual {v0, v3, v4}, Lcom/android/server/pm/Installer;->freeCache(J)I
+    invoke-virtual {v2, v3, v4}, Lcom/android/server/pm/Installer;->freeCache(J)I
 
-    move-result v7
+    move-result v1
 
-    .line 1764
-    if-gez v7, :cond_0
+    .line 1899
+    if-gez v1, :cond_0
 
-    .line 1765
-    const-string v0, "PackageManager"
+    .line 1900
+    const-string v2, "PackageManager"
 
-    const-string v1, "Couldn\'t clear application caches"
+    const-string v3, "Couldn\'t clear application caches"
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1767
+    .line 1902
     :cond_0
-    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$2;->val$pi:Landroid/content/IntentSender;
+    iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$2;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
-    if-eqz v0, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 1770
-    if-ltz v7, :cond_2
-
-    const/4 v2, 0x1
-
-    .line 1771
-    .local v2, code:I
-    :goto_0
+    .line 1904
     :try_start_0
-    iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$2;->val$pi:Landroid/content/IntentSender;
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
+    iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$2;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
     const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    if-ltz v1, :cond_2
 
-    invoke-virtual/range {v0 .. v5}, Landroid/content/IntentSender;->sendIntent(Landroid/content/Context;ILandroid/content/Intent;Landroid/content/IntentSender$OnFinished;Landroid/os/Handler;)V
+    const/4 v2, 0x1
+
+    :goto_0
+    invoke-interface {v3, v4, v2}, Landroid/content/pm/IPackageDataObserver;->onRemoveCompleted(Ljava/lang/String;Z)V
     :try_end_0
-    .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1777
-    .end local v2           #code:I
+    .line 1909
     :cond_1
     :goto_1
     return-void
 
-    .line 1770
+    .line 1904
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1773
-    .restart local v2       #code:I
+    .line 1905
     :catch_0
-    move-exception v6
+    move-exception v0
 
-    .line 1774
-    .local v6, e1:Landroid/content/IntentSender$SendIntentException;
-    const-string v0, "PackageManager"
+    .line 1906
+    .local v0, e:Landroid/os/RemoteException;
+    const-string v2, "PackageManager"
 
-    const-string v1, "Failed to send pending intent"
+    const-string v3, "RemoveException when invoking call back"
 
-    invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 .end method

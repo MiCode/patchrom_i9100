@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1900
+    .line 1921
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +43,12 @@
     .parameter "proxy"
 
     .prologue
-    .line 1902
+    .line 1923
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_2
 
-    .line 1903
+    .line 1924
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     check-cast p2, Landroid/bluetooth/BluetoothHeadset;
@@ -57,12 +57,12 @@
     #setter for: Lcom/android/phone/BluetoothHandsfree;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v0, p2}, Lcom/android/phone/BluetoothHandsfree;->access$5102(Lcom/android/phone/BluetoothHandsfree;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
-    .line 1904
+    .line 1925
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     monitor-enter v1
 
-    .line 1905
+    .line 1926
     :try_start_0
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -73,7 +73,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1906
+    .line 1927
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
@@ -101,7 +101,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/bluetooth/BluetoothHeadset;->setAudioState(Landroid/bluetooth/BluetoothDevice;I)Z
 
-    .line 1907
+    .line 1928
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     const/4 v2, 0x0
@@ -109,16 +109,16 @@
     #setter for: Lcom/android/phone/BluetoothHandsfree;->mPendingAudioState:Z
     invoke-static {v0, v2}, Lcom/android/phone/BluetoothHandsfree;->access$5202(Lcom/android/phone/BluetoothHandsfree;Z)Z
 
-    .line 1909
+    .line 1930
     :cond_0
     monitor-exit v1
 
-    .line 1913
+    .line 1934
     :cond_1
     :goto_0
     return-void
 
-    .line 1909
+    .line 1930
     :catchall_0
     move-exception v0
 
@@ -128,14 +128,14 @@
 
     throw v0
 
-    .line 1910
+    .line 1931
     .restart local p2
     :cond_2
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_1
 
-    .line 1911
+    .line 1932
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     check-cast p2, Landroid/bluetooth/BluetoothA2dp;
@@ -154,29 +154,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1915
+    .line 1936
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 1916
+    .line 1937
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #setter for: Lcom/android/phone/BluetoothHandsfree;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v0, v1}, Lcom/android/phone/BluetoothHandsfree;->access$5102(Lcom/android/phone/BluetoothHandsfree;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
-    .line 1920
+    .line 1941
     :cond_0
     :goto_0
     return-void
 
-    .line 1917
+    .line 1938
     :cond_1
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 1918
+    .line 1939
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$1;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #setter for: Lcom/android/phone/BluetoothHandsfree;->mA2dp:Landroid/bluetooth/BluetoothA2dp;

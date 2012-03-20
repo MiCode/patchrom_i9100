@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest android:sharedUserId="android.uid.phone" android:versionCode="15" android:versionName="4.0.3-XXLPH" android:sharedUserLabel="@string/phoneAppLabel" package="com.android.phone" coreApp="true"
+<manifest android:sharedUserId="android.uid.phone" android:versionCode="15" android:versionName="4.0.3-ZSLPE" android:sharedUserLabel="@string/phoneAppLabel" package="com.android.phone" coreApp="true"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
     <original-package android:name="com.android.phone" />
@@ -61,6 +61,8 @@
     <uses-permission android:name="com.android.smspush.WAPPUSH_MANAGER_BIND" />
     <uses-permission android:name="android.permission.MASTER_CLEAR" />
     <uses-permission android:name="android.permission.DUMP" />
+    <uses-permission android:name="com.sec.android.provider.logsprovider.permission.READ_LOGS" />
+    <uses-permission android:name="com.sec.android.provider.logsprovider.permission.WRITE_LOGS" />
     <uses-permission android:name="com.sprint.internal.permission.SYSTEMPROPERTIES" />
     <uses-permission android:name="android.permission.STOP_APP_SWITCHES" />
     <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />

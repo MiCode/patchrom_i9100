@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1176
+    .line 1180
     iput-object p1, p0, Lcom/android/server/DrmEventService$5;->this$0:Lcom/android/server/DrmEventService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,12 +45,12 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 1180
+    .line 1184
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_0
 
-    .line 1181
+    .line 1185
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -77,7 +77,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1183
+    .line 1187
     :cond_0
     invoke-virtual {p2}, Landroid/drm/DrmEvent;->getType()I
 
@@ -87,16 +87,16 @@
 
     if-ne v7, v8, :cond_11
 
-    .line 1185
+    .line 1189
     const/4 v3, 0x0
 
-    .line 1187
+    .line 1191
     .local v3, result:Landroid/drm/DrmInfo;
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_1
 
-    .line 1188
+    .line 1192
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -123,7 +123,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1190
+    .line 1194
     :cond_1
     const-string v7, "drm_info_status_object"
 
@@ -133,7 +133,7 @@
 
     check-cast v5, Landroid/drm/DrmInfoStatus;
 
-    .line 1192
+    .line 1196
     .local v5, status:Landroid/drm/DrmInfoStatus;
     if-eqz v5, :cond_8
 
@@ -141,7 +141,7 @@
 
     if-eqz v7, :cond_8
 
-    .line 1193
+    .line 1197
     iget-object v7, p0, Lcom/android/server/DrmEventService$5;->this$0:Lcom/android/server/DrmEventService;
 
     new-instance v8, Ljava/lang/String;
@@ -156,12 +156,12 @@
 
     iput-object v8, v7, Lcom/android/server/DrmEventService;->contentId:Ljava/lang/String;
 
-    .line 1194
+    .line 1198
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_2
 
-    .line 1195
+    .line 1199
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -188,7 +188,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1208
+    .line 1212
     :cond_2
     iget-object v7, p0, Lcom/android/server/DrmEventService$5;->this$0:Lcom/android/server/DrmEventService;
 
@@ -196,7 +196,7 @@
 
     if-eqz v7, :cond_b
 
-    .line 1210
+    .line 1214
     new-instance v2, Landroid/drm/DrmInfoRequest;
 
     const/16 v7, 0x9
@@ -205,7 +205,7 @@
 
     invoke-direct {v2, v7, v8}, Landroid/drm/DrmInfoRequest;-><init>(ILjava/lang/String;)V
 
-    .line 1211
+    .line 1215
     .local v2, request:Landroid/drm/DrmInfoRequest;
     const-string v7, "cid"
 
@@ -215,7 +215,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1213
+    .line 1217
     iget-object v7, p0, Lcom/android/server/DrmEventService$5;->this$0:Lcom/android/server/DrmEventService;
 
     iget-object v7, v7, Lcom/android/server/DrmEventService;->mDrmManagerClient:Landroid/drm/DrmManagerClient;
@@ -224,10 +224,10 @@
 
     move-result-object v3
 
-    .line 1215
+    .line 1219
     if-eqz v3, :cond_a
 
-    .line 1216
+    .line 1220
     const-string v7, "status"
 
     invoke-virtual {v3, v7}, Landroid/drm/DrmInfo;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -238,13 +238,13 @@
 
     move-result-object v6
 
-    .line 1217
+    .line 1221
     .local v6, status_req1:Ljava/lang/String;
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_3
 
-    .line 1218
+    .line 1222
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -267,7 +267,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1220
+    .line 1224
     :cond_3
     const-string v7, "success"
 
@@ -277,19 +277,19 @@
 
     if-eqz v7, :cond_9
 
-    .line 1221
+    .line 1225
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_4
 
-    .line 1222
+    .line 1226
     const-string v7, "DrmEventService"
 
     const-string v8, "Wap push receiver: processdrmRequest Success"
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1256
+    .line 1260
     :cond_4
     const-string v7, "drm_path"
 
@@ -297,15 +297,15 @@
 
     move-result-object v1
 
-    .line 1257
+    .line 1261
     .local v1, file_path_object:Ljava/lang/Object;
     const/4 v0, 0x0
 
-    .line 1259
+    .line 1263
     .local v0, filePath:Ljava/lang/String;
     if-eqz v1, :cond_c
 
-    .line 1260
+    .line 1264
     const-string v7, "drm_path"
 
     invoke-virtual {v3, v7}, Landroid/drm/DrmInfo;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -316,12 +316,12 @@
 
     move-result-object v0
 
-    .line 1267
+    .line 1271
     :cond_5
     :goto_0
     if-eqz v0, :cond_10
 
-    .line 1268
+    .line 1272
     iget-object v7, p0, Lcom/android/server/DrmEventService$5;->this$0:Lcom/android/server/DrmEventService;
 
     iget-object v7, v7, Lcom/android/server/DrmEventService;->mDrmManagerClient:Landroid/drm/DrmManagerClient;
@@ -330,23 +330,23 @@
 
     move-result v4
 
-    .line 1269
+    .line 1273
     .local v4, rightStatus:I
     if-nez v4, :cond_d
 
-    .line 1274
+    .line 1278
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_6
 
-    .line 1275
+    .line 1279
     const-string v7, "DrmEventService"
 
     const-string v8, " Rights Valid , Show Popup"
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1277
+    .line 1281
     :cond_6
     iget-object v7, p0, Lcom/android/server/DrmEventService$5;->this$0:Lcom/android/server/DrmEventService;
 
@@ -354,7 +354,7 @@
 
     invoke-virtual {v7, v8, v0}, Lcom/android/server/DrmEventService;->InitializeOmaIntent(ILjava/lang/String;)V
 
-    .line 1311
+    .line 1315
     .end local v0           #filePath:Ljava/lang/String;
     .end local v1           #file_path_object:Ljava/lang/Object;
     .end local v2           #request:Landroid/drm/DrmInfoRequest;
@@ -366,7 +366,7 @@
     :goto_1
     return-void
 
-    .line 1197
+    .line 1201
     .restart local v3       #result:Landroid/drm/DrmInfo;
     .restart local v5       #status:Landroid/drm/DrmInfoStatus;
     :cond_8
@@ -374,7 +374,7 @@
 
     if-eqz v7, :cond_7
 
-    .line 1198
+    .line 1202
     const-string v7, "DrmEventService"
 
     const-string v8, "Wap push receiver:processdrmRequest Fail  0"
@@ -383,7 +383,7 @@
 
     goto :goto_1
 
-    .line 1225
+    .line 1229
     .restart local v2       #request:Landroid/drm/DrmInfoRequest;
     .restart local v6       #status_req1:Ljava/lang/String;
     :cond_9
@@ -391,7 +391,7 @@
 
     if-eqz v7, :cond_7
 
-    .line 1226
+    .line 1230
     const-string v7, "DrmEventService"
 
     const-string v8, "Wap push receiver:processdrmRequest Fail 1"
@@ -400,14 +400,14 @@
 
     goto :goto_1
 
-    .line 1238
+    .line 1242
     .end local v6           #status_req1:Ljava/lang/String;
     :cond_a
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_7
 
-    .line 1239
+    .line 1243
     const-string v7, "DrmEventService"
 
     const-string v8, "Wap push receiver:processdrmRequest result is NULL "
@@ -416,14 +416,14 @@
 
     goto :goto_1
 
-    .line 1244
+    .line 1248
     .end local v2           #request:Landroid/drm/DrmInfoRequest;
     :cond_b
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_7
 
-    .line 1245
+    .line 1249
     const-string v7, "DrmEventService"
 
     const-string v8, "Wap push receiver:processdrmRequest Fail  2"
@@ -432,7 +432,7 @@
 
     goto :goto_1
 
-    .line 1263
+    .line 1267
     .restart local v0       #filePath:Ljava/lang/String;
     .restart local v1       #file_path_object:Ljava/lang/Object;
     .restart local v2       #request:Landroid/drm/DrmInfoRequest;
@@ -442,7 +442,7 @@
 
     if-eqz v7, :cond_5
 
-    .line 1264
+    .line 1268
     const-string v7, "DrmEventService"
 
     const-string v8, "Wap push receiver:processdrmRequest FILE Object not available"
@@ -451,24 +451,24 @@
 
     goto :goto_0
 
-    .line 1278
+    .line 1282
     .restart local v4       #rightStatus:I
     :cond_d
     if-ne v4, v10, :cond_f
 
-    .line 1280
+    .line 1284
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_e
 
-    .line 1281
+    .line 1285
     const-string v7, "DrmEventService"
 
     const-string v8, " Rights are not yet active: Show Popup"
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1288
+    .line 1292
     :cond_e
     iget-object v7, p0, Lcom/android/server/DrmEventService$5;->this$0:Lcom/android/server/DrmEventService;
 
@@ -476,13 +476,13 @@
 
     goto :goto_1
 
-    .line 1291
+    .line 1295
     :cond_f
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_7
 
-    .line 1292
+    .line 1296
     const-string v7, "DrmEventService"
 
     const-string v8, "Unknown right status. Exit"
@@ -491,14 +491,14 @@
 
     goto :goto_1
 
-    .line 1295
+    .line 1299
     .end local v4           #rightStatus:I
     :cond_10
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_7
 
-    .line 1296
+    .line 1300
     const-string v7, "DrmEventService"
 
     const-string v8, "Wap push receiver: No File Path "
@@ -507,7 +507,7 @@
 
     goto :goto_1
 
-    .line 1307
+    .line 1311
     .end local v0           #filePath:Ljava/lang/String;
     .end local v1           #file_path_object:Ljava/lang/Object;
     .end local v2           #request:Landroid/drm/DrmInfoRequest;
@@ -519,7 +519,7 @@
 
     if-eqz v7, :cond_7
 
-    .line 1308
+    .line 1312
     const-string v7, "DrmEventService"
 
     const-string v8, "DRM PUSH RECEIVER : mimeType is not valid for WAp Push Received"

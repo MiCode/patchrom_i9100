@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3527
+    .line 3523
     iput-object p1, p0, Landroid/net/wifi/WifiStateMachine$WaitForWpsCompletionState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,7 +38,7 @@
     .locals 2
 
     .prologue
-    .line 3531
+    .line 3527
     const v0, 0xc365
 
     invoke-virtual {p0}, Landroid/net/wifi/WifiStateMachine$WaitForWpsCompletionState;->getName()Ljava/lang/String;
@@ -47,7 +47,7 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(ILjava/lang/String;)I
 
-    .line 3532
+    .line 3528
     return-void
 .end method
 
@@ -56,26 +56,26 @@
     .parameter "message"
 
     .prologue
-    .line 3536
+    .line 3532
     iget v0, p1, Landroid/os/Message;->what:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 3559
+    .line 3555
     const/4 v0, 0x0
 
-    .line 3562
+    .line 3558
     :goto_0
     return v0
 
-    .line 3547
+    .line 3543
     :sswitch_0
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$WaitForWpsCompletionState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
     #calls: Landroid/net/wifi/WifiStateMachine;->deferMessage(Landroid/os/Message;)V
     invoke-static {v0, p1}, Landroid/net/wifi/WifiStateMachine;->access$14200(Landroid/net/wifi/WifiStateMachine;Landroid/os/Message;)V
 
-    .line 3561
+    .line 3557
     :goto_1
     const v0, 0xc366
 
@@ -83,12 +83,12 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(II)I
 
-    .line 3562
+    .line 3558
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 3551
+    .line 3547
     :sswitch_1
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$WaitForWpsCompletionState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -97,7 +97,7 @@
 
     goto :goto_1
 
-    .line 3556
+    .line 3552
     :sswitch_2
     iget-object v0, p0, Landroid/net/wifi/WifiStateMachine$WaitForWpsCompletionState;->this$0:Landroid/net/wifi/WifiStateMachine;
 
@@ -113,7 +113,7 @@
 
     goto :goto_1
 
-    .line 3536
+    .line 3532
     :sswitch_data_0
     .sparse-switch
         0x2000e -> :sswitch_0

@@ -103,6 +103,8 @@
 
 .field private final mMediaButtonReceiver:Landroid/content/BroadcastReceiver;
 
+.field public mMmiInitMsg:Landroid/os/AsyncResult;
+
 .field private mOrientation:I
 
 .field private mPUKEntryActivity:Landroid/app/Activity;
@@ -160,52 +162,35 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .prologue
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
     .line 103
-    const-string v0, "ro.debuggable"
-
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v1
-
-    :goto_0
     sput-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     .line 187
-    sput v2, Lcom/android/phone/PhoneApp;->mDockState:I
+    sput v0, Lcom/android/phone/PhoneApp;->mDockState:I
 
     .line 188
     sput-boolean v1, Lcom/android/phone/PhoneApp;->sVoiceCapable:Z
 
     .line 190
-    sput-boolean v2, Lcom/android/phone/PhoneApp;->mIsDockConnected:Z
+    sput-boolean v0, Lcom/android/phone/PhoneApp;->mIsDockConnected:Z
 
     .line 191
-    sput-boolean v2, Lcom/android/phone/PhoneApp;->mIsCarDockConnected:Z
+    sput-boolean v0, Lcom/android/phone/PhoneApp;->mIsCarDockConnected:Z
 
     .line 296
     sput-boolean v1, Lcom/android/phone/PhoneApp;->mIsScreenOn:Z
 
     .line 310
-    sput-boolean v2, Lcom/android/phone/PhoneApp;->sRestrictedCallForQC:Z
+    sput-boolean v0, Lcom/android/phone/PhoneApp;->sRestrictedCallForQC:Z
 
     return-void
-
-    :cond_0
-    move v0, v2
-
-    .line 103
-    goto :goto_0
 .end method
 
 .method public constructor <init>()V
@@ -218,7 +203,7 @@
 
     const/4 v1, 0x0
 
-    .line 560
+    .line 568
     invoke-direct {p0}, Landroid/app/Application;-><init>()V
 
     .line 184
@@ -299,31 +284,34 @@
     .line 306
     iput-wide v3, p0, Lcom/android/phone/PhoneApp;->elapsedTime:J
 
-    .line 331
+    .line 313
+    iput-object v2, p0, Lcom/android/phone/PhoneApp;->mMmiInitMsg:Landroid/os/AsyncResult;
+
+    .line 333
     new-instance v0, Lcom/android/phone/PhoneApp$1;
 
     invoke-direct {v0, p0}, Lcom/android/phone/PhoneApp$1;-><init>(Lcom/android/phone/PhoneApp;)V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
-    .line 1824
+    .line 1833
     new-instance v0, Lcom/android/phone/PhoneApp$2;
 
     invoke-direct {v0, p0}, Lcom/android/phone/PhoneApp$2;-><init>(Lcom/android/phone/PhoneApp;)V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 2317
+    .line 2343
     new-instance v0, Lcom/android/phone/PhoneApp$3;
 
     invoke-direct {v0, p0}, Lcom/android/phone/PhoneApp$3;-><init>(Lcom/android/phone/PhoneApp;)V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mProximityListener:Landroid/hardware/SensorEventListener;
 
-    .line 561
+    .line 569
     sput-object p0, Lcom/android/phone/PhoneApp;->sMe:Lcom/android/phone/PhoneApp;
 
-    .line 562
+    .line 570
     return-void
 .end method
 
@@ -573,10 +561,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 855
+    .line 864
     const/4 v0, 0x0
 
-    .line 856
+    .line 865
     .local v0, intent:Landroid/content/Intent;
     const-string v1, "limited_service_state_for_lgt"
 
@@ -586,7 +574,7 @@
 
     if-nez v1, :cond_0
 
-    .line 857
+    .line 866
     new-instance v0, Landroid/content/Intent;
 
     .end local v0           #intent:Landroid/content/Intent;
@@ -594,17 +582,17 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 858
+    .line 867
     .restart local v0       #intent:Landroid/content/Intent;
     const-string v1, "vnd.android.cursor.dir/calls"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 863
+    .line 872
     :goto_0
     return-object v0
 
-    .line 860
+    .line 869
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -626,7 +614,7 @@
 
     const/4 v5, 0x1
 
-    .line 867
+    .line 876
     const-string v2, "PhoneApp"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -649,14 +637,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 868
+    .line 877
     const/4 v0, 0x0
 
-    .line 869
+    .line 878
     .local v0, intent:Landroid/content/Intent;
     if-nez p0, :cond_1
 
-    .line 870
+    .line 879
     const-string v2, "limited_service_state_for_lgt"
 
     invoke-static {v2}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -665,7 +653,7 @@
 
     if-nez v2, :cond_0
 
-    .line 871
+    .line 880
     new-instance v0, Landroid/content/Intent;
 
     .end local v0           #intent:Landroid/content/Intent;
@@ -673,13 +661,13 @@
 
     invoke-direct {v0, v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 872
+    .line 881
     .restart local v0       #intent:Landroid/content/Intent;
     const-string v2, "vnd.android.cursor.dir/calls"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 873
+    .line 882
     const-string v2, "ViewBy"
 
     invoke-virtual {v0, v2, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
@@ -687,13 +675,13 @@
     :goto_0
     move-object v1, v0
 
-    .line 882
+    .line 891
     .end local v0           #intent:Landroid/content/Intent;
     .local v1, intent:Ljava/lang/Object;
     :goto_1
     return-object v1
 
-    .line 875
+    .line 884
     .end local v1           #intent:Ljava/lang/Object;
     .restart local v0       #intent:Landroid/content/Intent;
     :cond_0
@@ -707,7 +695,7 @@
     .restart local v0       #intent:Landroid/content/Intent;
     goto :goto_0
 
-    .line 879
+    .line 888
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -716,7 +704,7 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 881
+    .line 890
     .restart local v0       #intent:Landroid/content/Intent;
     const-string v2, "direct"
 
@@ -724,7 +712,7 @@
 
     move-object v1, v0
 
-    .line 882
+    .line 891
     .restart local v1       #intent:Ljava/lang/Object;
     goto :goto_1
 .end method
@@ -733,7 +721,7 @@
     .locals 3
 
     .prologue
-    .line 893
+    .line 902
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -742,13 +730,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 894
+    .line 903
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x1084
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 897
+    .line 906
     const-string v1, "com.android.phone"
 
     invoke-static {}, Lcom/android/phone/PhoneApp;->getCallScreenClassName()Ljava/lang/String;
@@ -757,26 +745,27 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 899
+    .line 908
     return-object v0
 .end method
 
 .method static createInCallIntent(Z)Landroid/content/Intent;
     .locals 2
-    .parameter
+    .parameter "showDialpad"
 
     .prologue
-    .line 924
+    .line 933
     invoke-static {}, Lcom/android/phone/PhoneApp;->createInCallIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 925
+    .line 934
+    .local v0, intent:Landroid/content/Intent;
     const-string v1, "com.android.phone.ShowDialpad"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 926
+    .line 935
     return-object v0
 .end method
 
@@ -784,7 +773,7 @@
     .locals 4
 
     .prologue
-    .line 908
+    .line 917
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -793,13 +782,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 909
+    .line 918
     .local v0, intent:Landroid/content/Intent;
     const/high16 v1, 0x1084
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 912
+    .line 921
     const-string v1, "com.android.phone"
 
     invoke-static {}, Lcom/android/phone/PhoneApp;->getVTCallScreenClassName()Ljava/lang/String;
@@ -808,7 +797,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 914
+    .line 923
     const-string v1, "PhoneApp"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -863,7 +852,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 915
+    .line 924
     return-object v0
 .end method
 
@@ -871,7 +860,7 @@
     .locals 1
 
     .prologue
-    .line 933
+    .line 942
     const-class v0, Lcom/android/phone/InCallScreen;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -885,7 +874,7 @@
     .locals 1
 
     .prologue
-    .line 828
+    .line 837
     sget-object v0, Lcom/android/phone/PhoneApp;->sMe:Lcom/android/phone/PhoneApp;
 
     return-object v0
@@ -895,7 +884,7 @@
     .locals 1
 
     .prologue
-    .line 835
+    .line 844
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
@@ -909,7 +898,7 @@
     .locals 1
 
     .prologue
-    .line 937
+    .line 946
     const-class v0, Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -926,17 +915,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2181
+    .line 2207
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 2182
+    .line 2208
     iget-object v2, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v2, :cond_1
 
-    .line 2183
+    .line 2209
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -947,12 +936,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2214
+    .line 2240
     :cond_0
     :goto_0
     return-void
 
-    .line 2185
+    .line 2211
     :cond_1
     sget-boolean v2, Lcom/android/phone/PhoneApp;->DBG:Z
 
@@ -964,7 +953,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2188
+    .line 2214
     :cond_2
     iget-object v0, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -974,7 +963,7 @@
 
     aget v2, v0, v1
 
-    .line 2189
+    .line 2215
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_3
@@ -1001,7 +990,7 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2191
+    .line 2217
     :cond_3
     new-instance v3, Landroid/content/Intent;
 
@@ -1009,7 +998,7 @@
 
     invoke-direct {v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2192
+    .line 2218
     const-string v4, "ttyEnabled"
 
     if-eqz v2, :cond_4
@@ -1019,18 +1008,18 @@
     :goto_1
     invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2193
+    .line 2219
     invoke-virtual {p0, v3}, Lcom/android/phone/PhoneApp;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 2196
+    .line 2222
     packed-switch v2, :pswitch_data_0
 
-    .line 2208
+    .line 2234
     const-string v0, "tty_off"
 
     move-object v1, v0
 
-    .line 2211
+    .line 2237
     :goto_2
     const-string v0, "audio"
 
@@ -1040,7 +1029,7 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 2212
+    .line 2238
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1066,37 +1055,37 @@
     :cond_4
     move v0, v1
 
-    .line 2192
+    .line 2218
     goto :goto_1
 
-    .line 2198
+    .line 2224
     :pswitch_0
     const-string v0, "tty_full"
 
     move-object v1, v0
 
-    .line 2199
+    .line 2225
     goto :goto_2
 
-    .line 2201
+    .line 2227
     :pswitch_1
     const-string v0, "tty_vco"
 
     move-object v1, v0
 
-    .line 2202
+    .line 2228
     goto :goto_2
 
-    .line 2204
+    .line 2230
     :pswitch_2
     const-string v0, "tty_hco"
 
     move-object v1, v0
 
-    .line 2205
+    .line 2231
     goto :goto_2
 
-    .line 2196
+    .line 2222
     nop
 
     :pswitch_data_0
@@ -1112,7 +1101,7 @@
     .parameter "intent"
 
     .prologue
-    .line 2098
+    .line 2124
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
@@ -1121,22 +1110,22 @@
 
     move-result-object v0
 
-    .line 2100
+    .line 2126
     .local v0, ss:Landroid/telephony/ServiceState;
     if-eqz v0, :cond_0
 
-    .line 2101
+    .line 2127
     invoke-virtual {v0}, Landroid/telephony/ServiceState;->getState()I
 
     move-result v1
 
-    .line 2102
+    .line 2128
     .local v1, state:I
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->notificationMgr:Lcom/android/phone/NotificationMgr;
 
     invoke-virtual {v2, v1}, Lcom/android/phone/NotificationMgr;->updateNetworkSelection(I)V
 
-    .line 2104
+    .line 2130
     .end local v1           #state:I
     :cond_0
     return-void
@@ -1147,17 +1136,17 @@
     .parameter
 
     .prologue
-    .line 2217
+    .line 2243
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 2219
+    .line 2245
     iget-object v1, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v1, :cond_0
 
-    .line 2220
+    .line 2246
     sget-boolean v1, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v1, :cond_0
@@ -1186,7 +1175,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2224
+    .line 2250
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -1200,7 +1189,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/Phone;->queryTTYMode(Landroid/os/Message;)V
 
-    .line 2225
+    .line 2251
     return-void
 .end method
 
@@ -1208,7 +1197,7 @@
     .locals 4
 
     .prologue
-    .line 1677
+    .line 1686
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1219,7 +1208,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1679
+    .line 1688
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -1231,19 +1220,19 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1681
+    .line 1690
     new-instance v0, Lcom/android/phone/CdmaPhoneCallState;
 
     invoke-direct {v0}, Lcom/android/phone/CdmaPhoneCallState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
-    .line 1682
+    .line 1691
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
     invoke-virtual {v0}, Lcom/android/phone/CdmaPhoneCallState;->CdmaPhoneCallStateInit()V
 
-    .line 1684
+    .line 1693
     :cond_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -1253,58 +1242,58 @@
 
     if-eqz v0, :cond_a
 
-    .line 1686
+    .line 1695
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaProvisionData:Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
     if-nez v0, :cond_2
 
-    .line 1687
+    .line 1696
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaProvisionData:Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
-    .line 1689
+    .line 1698
     :cond_2
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaConfigData:Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
     if-nez v0, :cond_3
 
-    .line 1690
+    .line 1699
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaConfigData:Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
-    .line 1692
+    .line 1701
     :cond_3
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaScreenState:Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
     if-nez v0, :cond_4
 
-    .line 1693
+    .line 1702
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaScreenState:Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
-    .line 1695
+    .line 1704
     :cond_4
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaInCallScreenUiState:Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;
 
     if-nez v0, :cond_5
 
-    .line 1696
+    .line 1705
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaInCallScreenUiState:Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;
 
-    .line 1703
+    .line 1712
     :cond_5
     :goto_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->ringer:Lcom/android/phone/Ringer;
@@ -1313,33 +1302,33 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/Ringer;->updateRingerContextAfterRadioTechnologyChange(Lcom/android/internal/telephony/Phone;)V
 
-    .line 1704
+    .line 1713
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->notifier:Lcom/android/phone/CallNotifier;
 
     invoke-virtual {v0}, Lcom/android/phone/CallNotifier;->updateCallNotifierRegistrationsAfterRadioTechnologyChange()V
 
-    .line 1705
+    .line 1714
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
     if-eqz v0, :cond_6
 
-    .line 1706
+    .line 1715
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-virtual {v0}, Lcom/android/phone/BluetoothHandsfree;->updateBtHandsfreeAfterRadioTechnologyChange()V
 
-    .line 1708
+    .line 1717
     :cond_6
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-eqz v0, :cond_7
 
-    .line 1709
+    .line 1718
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InCallScreen;->updateAfterRadioTechnologyChange()V
 
-    .line 1713
+    .line 1722
     :cond_7
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -1347,10 +1336,10 @@
 
     move-result-object v0
 
-    .line 1714
+    .line 1723
     if-eqz v0, :cond_9
 
-    .line 1715
+    .line 1724
     sget-boolean v1, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v1, :cond_8
@@ -1361,7 +1350,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1718
+    .line 1727
     :cond_8
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
@@ -1371,11 +1360,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/telephony/IccCard;->registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 1720
+    .line 1729
     :cond_9
     return-void
 
-    .line 1700
+    .line 1709
     :cond_a
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->clearOtaState()V
 
@@ -1384,24 +1373,18 @@
 
 .method private onMMIComplete(Landroid/os/AsyncResult;)V
     .locals 4
-    .parameter
+    .parameter "r"
 
     .prologue
     const/4 v3, 0x0
 
-    .line 1665
-    const-string v0, "PhoneApp"
-
-    const-string v1, "onMMIComplete()..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1666
+    .line 1675
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/MmiCode;
 
-    .line 1667
+    .line 1676
+    .local v0, mmiCode:Lcom/android/internal/telephony/MmiCode;
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
@@ -1410,30 +1393,24 @@
 
     invoke-static {v1, v2, v0, v3, v3}, Lcom/android/phone/PhoneUtils;->displayMMIComplete(Lcom/android/internal/telephony/Phone;Landroid/content/Context;Lcom/android/internal/telephony/MmiCode;Landroid/os/Message;Landroid/app/AlertDialog;)V
 
-    .line 1668
+    .line 1677
     return-void
 .end method
 
 .method private onSSInfo(Landroid/os/AsyncResult;)V
     .locals 4
-    .parameter
+    .parameter "r"
 
     .prologue
     const/4 v3, 0x0
 
-    .line 1671
-    const-string v0, "PhoneApp"
-
-    const-string v1, "onSSInfo()..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1672
+    .line 1681
     iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/telephony/gsm/SuppServiceNotification;
 
-    .line 1673
+    .line 1682
+    .local v0, SSnoti:Lcom/android/internal/telephony/gsm/SuppServiceNotification;
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
@@ -1442,7 +1419,7 @@
 
     invoke-static {v1, v2, v0, v3, v3}, Lcom/android/phone/PhoneUtils;->displaySSInfo(Lcom/android/internal/telephony/Phone;Landroid/content/Context;Lcom/android/internal/telephony/gsm/SuppServiceNotification;Landroid/os/Message;Landroid/app/AlertDialog;)V
 
-    .line 1674
+    .line 1683
     return-void
 .end method
 
@@ -1450,7 +1427,7 @@
     .locals 2
 
     .prologue
-    .line 2459
+    .line 2485
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1461,13 +1438,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2460
+    .line 2486
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
     if-eqz v0, :cond_1
 
-    .line 2463
+    .line 2489
     :cond_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phoneMgr:Lcom/android/phone/PhoneInterfaceManager;
 
@@ -1475,21 +1452,21 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/PhoneInterfaceManager;->resetPhoneMngrContextForIMS(Lcom/android/internal/telephony/Phone;)V
 
-    .line 2464
+    .line 2490
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->ringer:Lcom/android/phone/Ringer;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-virtual {v0, v1}, Lcom/android/phone/Ringer;->resetRingerContextFromIMS(Lcom/android/internal/telephony/Phone;)V
 
-    .line 2465
+    .line 2491
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->notifier:Lcom/android/phone/CallNotifier;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-virtual {v0, v1}, Lcom/android/phone/CallNotifier;->resetCallNotifierRegistrationsFromIMS(Lcom/android/internal/telephony/Phone;)V
 
-    .line 2480
+    .line 2506
     return-void
 .end method
 
@@ -1506,7 +1483,7 @@
 
     const/4 v1, 0x0
 
-    .line 1799
+    .line 1808
     sget-object v2, Lcom/android/phone/PhoneApp$4;->$SwitchMap$com$android$internal$telephony$Phone$State:[I
 
     invoke-virtual {p2}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
@@ -1523,12 +1500,12 @@
 
     move v0, v1
 
-    .line 1817
+    .line 1826
     :cond_0
     :goto_0
     return v0
 
-    .line 1805
+    .line 1814
     :pswitch_0
     if-ne p0, v4, :cond_1
 
@@ -1541,7 +1518,7 @@
 
     goto :goto_0
 
-    .line 1814
+    .line 1823
     :pswitch_1
     if-eq p0, v4, :cond_0
 
@@ -1549,7 +1526,7 @@
 
     goto :goto_0
 
-    .line 1799
+    .line 1808
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1561,10 +1538,10 @@
     .locals 4
 
     .prologue
-    .line 1195
+    .line 1204
     const/4 v0, 0x0
 
-    .line 1197
+    .line 1206
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->isShowingCallScreen()Z
 
     move-result v1
@@ -1581,10 +1558,10 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 1198
+    .line 1207
     const/16 v0, 0x10
 
-    .line 1248
+    .line 1257
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mPowerManagerService:Landroid/os/IPowerManager;
@@ -1597,15 +1574,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1252
+    .line 1261
     :goto_0
     return-void
 
-    .line 1249
+    .line 1258
     :catch_0
     move-exception v0
 
-    .line 1250
+    .line 1259
     const-string v1, "PhoneApp"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1635,7 +1612,7 @@
     .locals 2
 
     .prologue
-    .line 2435
+    .line 2461
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1646,7 +1623,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2436
+    .line 2462
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -1662,63 +1639,63 @@
 
     if-eqz v0, :cond_3
 
-    .line 2438
+    .line 2464
     new-instance v0, Lcom/android/phone/CdmaPhoneCallState;
 
     invoke-direct {v0}, Lcom/android/phone/CdmaPhoneCallState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
-    .line 2439
+    .line 2465
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
     invoke-virtual {v0}, Lcom/android/phone/CdmaPhoneCallState;->CdmaPhoneCallStateInit()V
 
-    .line 2441
+    .line 2467
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaProvisionData:Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
     if-nez v0, :cond_1
 
-    .line 2442
+    .line 2468
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaProvisionData:Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
-    .line 2444
+    .line 2470
     :cond_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaConfigData:Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
     if-nez v0, :cond_2
 
-    .line 2445
+    .line 2471
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaConfigData:Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
-    .line 2447
+    .line 2473
     :cond_2
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaScreenState:Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
     if-nez v0, :cond_3
 
-    .line 2448
+    .line 2474
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaScreenState:Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
-    .line 2451
+    .line 2477
     :cond_3
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
     if-eqz v0, :cond_4
 
-    .line 2454
+    .line 2480
     :cond_4
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phoneMgr:Lcom/android/phone/PhoneInterfaceManager;
 
@@ -1726,21 +1703,21 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/PhoneInterfaceManager;->initPhoneMngrContextForIMS(Lcom/android/internal/telephony/Phone;)V
 
-    .line 2455
+    .line 2481
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->ringer:Lcom/android/phone/Ringer;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-virtual {v0, v1}, Lcom/android/phone/Ringer;->initRingerContextForIMS(Lcom/android/internal/telephony/Phone;)V
 
-    .line 2456
+    .line 2482
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->notifier:Lcom/android/phone/CallNotifier;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-virtual {v0, v1}, Lcom/android/phone/CallNotifier;->initCallNotifierRegistrationsForIMS(Lcom/android/internal/telephony/Phone;)V
 
-    .line 2457
+    .line 2483
     return-void
 .end method
 
@@ -1753,10 +1730,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2248
+    .line 2274
     if-nez p1, :cond_1
 
-    .line 2249
+    .line 2275
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1767,12 +1744,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2274
+    .line 2300
     :cond_0
     :goto_0
     return-void
 
-    .line 2255
+    .line 2281
     :cond_1
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1784,13 +1761,13 @@
 
     move-result v2
 
-    .line 2256
+    .line 2282
     const/4 v0, 0x3
 
-    .line 2258
+    .line 2284
     if-nez v2, :cond_3
 
-    .line 2260
+    .line 2286
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
     if-eqz v0, :cond_4
@@ -1801,7 +1778,7 @@
 
     move-result v0
 
-    .line 2261
+    .line 2287
     :goto_1
     if-nez v0, :cond_2
 
@@ -1811,11 +1788,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 2263
+    .line 2289
     :cond_2
     const-string v0, "answeringmode_auto_time"
 
-    .line 2265
+    .line 2291
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -1826,23 +1803,23 @@
 
     move-result v0
 
-    .line 2266
+    .line 2292
     const/4 v1, 0x1
 
     if-lt v0, v1, :cond_0
 
-    .line 2271
+    .line 2297
     :cond_3
     mul-int/lit16 v0, v0, 0x3e8
 
     int-to-long v0, v0
 
-    .line 2272
+    .line 2298
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    .line 2273
+    .line 2299
     new-instance v3, Lcom/android/phone/PhoneApp$AutoAnswerCallThread;
 
     invoke-direct {v3, p0, p1}, Lcom/android/phone/PhoneApp$AutoAnswerCallThread;-><init>(Lcom/android/phone/PhoneApp;Lcom/android/internal/telephony/Connection;)V
@@ -1861,7 +1838,7 @@
     .locals 2
 
     .prologue
-    .line 2146
+    .line 2172
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1872,18 +1849,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2147
+    .line 2173
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-eqz v0, :cond_1
 
-    .line 2148
+    .line 2174
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InCallScreen;->resetInCallScreenMode()V
 
-    .line 2150
+    .line 2176
     :cond_1
     return-void
 .end method
@@ -1892,7 +1869,7 @@
     .locals 2
 
     .prologue
-    .line 2126
+    .line 2152
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1903,7 +1880,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2127
+    .line 2153
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
@@ -1913,14 +1890,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 2129
+    .line 2155
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->otaUtils:Lcom/android/phone/OtaUtils;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/phone/OtaUtils;->cleanOtaScreen(Z)V
 
-    .line 2130
+    .line 2156
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_1
@@ -1931,7 +1908,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2132
+    .line 2158
     :cond_1
     return-void
 .end method
@@ -1940,7 +1917,7 @@
     .locals 5
 
     .prologue
-    .line 2229
+    .line 2255
     :try_start_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPowerManagerService:Landroid/os/IPowerManager;
 
@@ -1954,11 +1931,11 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2234
+    .line 2260
     :goto_0
     return-void
 
-    .line 2231
+    .line 2257
     :catch_0
     move-exception v0
 
@@ -1969,7 +1946,7 @@
     .locals 3
 
     .prologue
-    .line 2375
+    .line 2401
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
 
     iget-object v0, v0, Lcom/android/phone/InCallUiState;->latestActiveCallOrigin:Ljava/lang/String;
@@ -1982,51 +1959,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2376
-    const-string v0, "PhoneApp"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Valid latestActiveCallOrigin("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
-
-    iget-object v2, v2, Lcom/android/phone/InCallUiState;->latestActiveCallOrigin:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ") was found. "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "Go back to the previous screen."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2382
+    .line 2408
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 2383
+    .line 2409
     const-string v1, "com.android.contacts"
 
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
@@ -2035,51 +1973,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2389
+    .line 2415
     :goto_0
     return-object v0
 
-    .line 2386
     :cond_0
-    const-string v0, "PhoneApp"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Current latestActiveCallOrigin ("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
-
-    iget-object v2, v2, Lcom/android/phone/InCallUiState;->latestActiveCallOrigin:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ") is not valid. "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "Just use CallLog as a default destination."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2389
     invoke-static {}, Lcom/android/phone/PhoneApp;->createCallLogIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -2091,7 +1989,7 @@
     .locals 3
 
     .prologue
-    .line 2427
+    .line 2453
     const-string v0, "PhoneApp"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2116,7 +2014,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2428
+    .line 2454
     iget v0, p0, Lcom/android/phone/PhoneApp;->mIMSPhoneIndex:I
 
     if-lez v0, :cond_0
@@ -2127,7 +2025,7 @@
 
     iput v0, p0, Lcom/android/phone/PhoneApp;->mIMSPhoneIndex:I
 
-    .line 2429
+    .line 2455
     :cond_0
     return-void
 .end method
@@ -2136,12 +2034,12 @@
     .locals 2
 
     .prologue
-    .line 1049
+    .line 1058
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-eqz v0, :cond_1
 
-    .line 1050
+    .line 1059
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-static {v0}, Lcom/android/phone/TelephonyCapabilities;->supportsOtasp(Lcom/android/internal/telephony/Phone;)Z
@@ -2178,24 +2076,24 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1059
+    .line 1068
     :cond_0
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->wakeUpScreen()V
 
-    .line 1062
+    .line 1071
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->displayCallScreen()V
 
-    .line 1064
+    .line 1073
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InCallScreen;->handleOtaCallEnd()V
 
-    .line 1070
+    .line 1079
     :cond_1
     :goto_0
     return-void
 
-    .line 1067
+    .line 1076
     :cond_2
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
@@ -2208,7 +2106,7 @@
     .locals 2
 
     .prologue
-    .line 2136
+    .line 2162
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2219,7 +2117,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2137
+    .line 2163
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
@@ -2229,12 +2127,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 2139
+    .line 2165
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->otaUtils:Lcom/android/phone/OtaUtils;
 
     invoke-virtual {v0}, Lcom/android/phone/OtaUtils;->dismissAllOtaDialogs()V
 
-    .line 2140
+    .line 2166
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_1
@@ -2245,7 +2143,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2142
+    .line 2168
     :cond_1
     return-void
 .end method
@@ -2254,19 +2152,12 @@
     .locals 4
 
     .prologue
-    .line 944
-    const-string v0, "PhoneApp"
-
-    const-string v1, "displayCallScreen()..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 948
+    .line 957
     sget-boolean v0, Lcom/android/phone/PhoneApp;->sVoiceCapable:Z
 
     if-nez v0, :cond_0
 
-    .line 949
+    .line 958
     const-string v0, "PhoneApp"
 
     const-string v1, "displayCallScreen() not allowed: non-voice-capable device"
@@ -2279,11 +2170,11 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 964
+    .line 973
     :goto_0
     return-void
 
-    .line 956
+    .line 965
     :cond_0
     :try_start_0
     invoke-static {}, Lcom/android/phone/PhoneApp;->createInCallIntent()Landroid/content/Intent;
@@ -2294,17 +2185,17 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 963
+    .line 972
     :goto_1
     invoke-static {}, Lcom/android/phone/Profiler;->callScreenRequested()V
 
     goto :goto_0
 
-    .line 957
+    .line 966
     :catch_0
     move-exception v0
 
-    .line 961
+    .line 970
     const-string v1, "PhoneApp"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2334,7 +2225,7 @@
     .locals 1
 
     .prologue
-    .line 843
+    .line 852
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
     return-object v0
@@ -2344,7 +2235,7 @@
     .locals 3
 
     .prologue
-    .line 2423
+    .line 2449
     const-string v0, "PhoneApp"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2369,7 +2260,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2424
+    .line 2450
     iget v0, p0, Lcom/android/phone/PhoneApp;->mIMSPhoneIndex:I
 
     return v0
@@ -2379,7 +2270,7 @@
     .locals 1
 
     .prologue
-    .line 1657
+    .line 1666
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mKeyguardManager:Landroid/app/KeyguardManager;
 
     return-object v0
@@ -2389,7 +2280,7 @@
     .locals 1
 
     .prologue
-    .line 993
+    .line 1002
     const/4 v0, 0x0
 
     return v0
@@ -2399,7 +2290,7 @@
     .locals 1
 
     .prologue
-    .line 1126
+    .line 1135
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPUKEntryActivity:Landroid/app/Activity;
 
     return-object v0
@@ -2409,7 +2300,7 @@
     .locals 1
 
     .prologue
-    .line 1661
+    .line 1670
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -2419,7 +2310,7 @@
     .locals 1
 
     .prologue
-    .line 1636
+    .line 1645
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mLastPhoneState:Lcom/android/internal/telephony/Phone$State;
 
     return-object v0
@@ -2429,7 +2320,7 @@
     .locals 1
 
     .prologue
-    .line 328
+    .line 330
     iget-boolean v0, p0, Lcom/android/phone/PhoneApp;->mShouldRestoreMuteOnInCallResume:Z
 
     return v0
@@ -2439,7 +2330,7 @@
     .locals 1
 
     .prologue
-    .line 839
+    .line 848
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->ringer:Lcom/android/phone/Ringer;
 
     return-object v0
@@ -2449,7 +2340,7 @@
     .locals 2
 
     .prologue
-    .line 1097
+    .line 1106
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2460,24 +2351,24 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1099
+    .line 1108
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->otaUtils:Lcom/android/phone/OtaUtils;
 
     if-nez v0, :cond_1
 
-    .line 1102
+    .line 1111
     const-string v0, "PhoneApp"
 
     const-string v1, "handleOtaspDisconnect: otaUtils is null!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1107
+    .line 1116
     :goto_0
     return-void
 
-    .line 1106
+    .line 1115
     :cond_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->otaUtils:Lcom/android/phone/OtaUtils;
 
@@ -2491,7 +2382,7 @@
     .parameter
 
     .prologue
-    .line 1079
+    .line 1088
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2524,13 +2415,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1081
+    .line 1090
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->otaUtils:Lcom/android/phone/OtaUtils;
 
     if-nez v0, :cond_1
 
-    .line 1084
+    .line 1093
     const-string v0, "PhoneApp"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2553,11 +2444,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1090
+    .line 1099
     :goto_0
     return-void
 
-    .line 1089
+    .line 1098
     :cond_1
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->otaUtils:Lcom/android/phone/OtaUtils;
 
@@ -2574,7 +2465,7 @@
     .locals 2
 
     .prologue
-    .line 2395
+    .line 2421
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
     const/16 v1, 0x12
@@ -2590,56 +2481,34 @@
     .locals 1
 
     .prologue
-    .line 1729
+    .line 1738
     iget-boolean v0, p0, Lcom/android/phone/PhoneApp;->mIsHeadsetPlugged:Z
 
     return v0
 .end method
 
 .method public isOtaCallInActiveState()Z
-    .locals 4
+    .locals 2
 
     .prologue
-    .line 2107
+    .line 2133
     const/4 v0, 0x0
 
-    .line 2108
+    .line 2134
+    .local v0, otaCallActive:Z
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-eqz v1, :cond_0
 
-    .line 2109
-    iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
+    .line 2135
+    iget-object v1, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    invoke-virtual {v0}, Lcom/android/phone/InCallScreen;->isOtaCallInActiveState()Z
+    invoke-virtual {v1}, Lcom/android/phone/InCallScreen;->isOtaCallInActiveState()Z
 
     move-result v0
 
-    .line 2111
+    .line 2138
     :cond_0
-    const-string v1, "PhoneApp"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "- isOtaCallInActiveState "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2112
     return v0
 .end method
 
@@ -2647,7 +2516,7 @@
     .locals 1
 
     .prologue
-    .line 2238
+    .line 2264
     :try_start_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPowerManagerService:Landroid/os/IPowerManager;
 
@@ -2657,15 +2526,15 @@
 
     move-result v0
 
-    .line 2242
+    .line 2268
     :goto_0
     return v0
 
-    .line 2239
+    .line 2265
     :catch_0
     move-exception v0
 
-    .line 2242
+    .line 2268
     const/4 v0, 0x0
 
     goto :goto_0
@@ -2675,14 +2544,14 @@
     .locals 1
 
     .prologue
-    .line 1031
+    .line 1040
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 1032
+    .line 1041
     :goto_0
     return v0
 
@@ -2700,14 +2569,14 @@
     .locals 1
 
     .prologue
-    .line 1035
+    .line 1044
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInVTCallScreen:Lcom/android/phone/InVTCallScreen;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 1036
+    .line 1045
     :goto_0
     return v0
 
@@ -2725,7 +2594,7 @@
     .locals 1
 
     .prologue
-    .line 988
+    .line 997
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getIccCard()Lcom/android/internal/telephony/IccCard;
@@ -2743,7 +2612,7 @@
     .locals 1
 
     .prologue
-    .line 984
+    .line 993
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getIccCard()Lcom/android/internal/telephony/IccCard;
@@ -2764,15 +2633,15 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 813
+    .line 822
     iget v0, p1, Landroid/content/res/Configuration;->hardKeyboardHidden:I
 
     if-ne v0, v1, :cond_0
 
-    .line 814
+    .line 823
     iput-boolean v1, p0, Lcom/android/phone/PhoneApp;->mIsHardKeyboardOpen:Z
 
-    .line 820
+    .line 829
     :goto_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -2782,13 +2651,13 @@
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->updateProximitySensorMode(Lcom/android/internal/telephony/Phone$State;)V
 
-    .line 821
+    .line 830
     invoke-super {p0, p1}, Landroid/app/Application;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 822
+    .line 831
     return-void
 
-    .line 816
+    .line 825
     :cond_0
     const/4 v0, 0x0
 
@@ -2805,29 +2674,22 @@
 
     const/4 v5, 0x0
 
-    .line 566
-    const-string v0, "PhoneApp"
-
-    const-string v1, "onCreate()..."
-
-    invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 568
+    .line 576
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 570
+    .line 578
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 571
+    .line 579
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 572
+    .line 580
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
@@ -2836,7 +2698,7 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 577
+    .line 585
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -2849,43 +2711,43 @@
 
     sput-boolean v0, Lcom/android/phone/PhoneApp;->sVoiceCapable:Z
 
-    .line 584
+    .line 592
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     if-nez v0, :cond_9
 
-    .line 586
+    .line 594
     invoke-static {p0}, Lcom/android/internal/telephony/PhoneFactory;->makeDefaultPhones(Landroid/content/Context;)V
 
-    .line 589
+    .line 597
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 591
+    .line 599
     invoke-static {}, Lcom/android/internal/telephony/CallManager;->getInstance()Lcom/android/internal/telephony/CallManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    .line 592
+    .line 600
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-virtual {v0, v2}, Lcom/android/internal/telephony/CallManager;->registerPhone(Lcom/android/internal/telephony/Phone;)Z
 
-    .line 596
+    .line 604
     invoke-static {p0}, Lcom/android/phone/NotificationMgr;->init(Lcom/android/phone/PhoneApp;)Lcom/android/phone/NotificationMgr;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->notificationMgr:Lcom/android/phone/NotificationMgr;
 
-    .line 598
+    .line 606
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-static {p0, v0}, Lcom/android/phone/PhoneInterfaceManager;->init(Lcom/android/phone/PhoneApp;Lcom/android/internal/telephony/Phone;)Lcom/android/phone/PhoneInterfaceManager;
@@ -2894,7 +2756,7 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->phoneMgr:Lcom/android/phone/PhoneInterfaceManager;
 
-    .line 599
+    .line 607
     new-instance v0, Lcom/android/phone/PhoneInterfaceManagerExt;
 
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
@@ -2903,7 +2765,7 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->phoneMgrExt:Lcom/android/phone/PhoneInterfaceManagerExt;
 
-    .line 602
+    .line 610
     const-string v0, "roaming_auto_dial_for_lgt"
 
     invoke-static {v0}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -2912,14 +2774,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 603
+    .line 611
     const-string v0, "ril.cdma.sid"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 604
+    .line 612
     const-string v2, "PhoneApp"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2942,7 +2804,7 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 605
+    .line 613
     const-string v0, "ril.cdma.roamingarea"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -2957,7 +2819,7 @@
 
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
+    .line 617
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
@@ -2965,31 +2827,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 611
+    .line 619
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getPhoneType()I
 
     move-result v0
 
-    .line 613
+    .line 621
     const/4 v2, 0x2
 
     if-ne v0, v2, :cond_1
 
-    .line 615
+    .line 623
     new-instance v0, Lcom/android/phone/CdmaPhoneCallState;
 
     invoke-direct {v0}, Lcom/android/phone/CdmaPhoneCallState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
-    .line 616
+    .line 624
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
     invoke-virtual {v0}, Lcom/android/phone/CdmaPhoneCallState;->CdmaPhoneCallStateInit()V
 
-    .line 619
+    .line 627
     :cond_1
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -2997,7 +2859,7 @@
 
     if-eqz v0, :cond_d
 
-    .line 622
+    .line 630
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {p0, v0}, Lcom/android/phone/BluetoothHandsfree;->init(Landroid/content/Context;Lcom/android/internal/telephony/CallManager;)Lcom/android/phone/BluetoothHandsfree;
@@ -3006,7 +2868,7 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
-    .line 623
+    .line 631
     new-instance v0, Landroid/content/Intent;
 
     const-class v2, Lcom/android/phone/BluetoothHeadsetService;
@@ -3015,7 +2877,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 629
+    .line 637
     :goto_0
     invoke-static {p0}, Lcom/android/phone/Ringer;->init(Landroid/content/Context;)Lcom/android/phone/Ringer;
 
@@ -3023,10 +2885,10 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->ringer:Lcom/android/phone/Ringer;
 
-    .line 631
+    .line 639
     invoke-static {}, Lcom/android/phone/PhoneFeature;->makeFeature()V
 
-    .line 633
+    .line 641
     const-string v0, "roaming_auto_dial"
 
     invoke-static {v0}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -3035,10 +2897,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 634
+    .line 642
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->setPhoneAppSetting()V
 
-    .line 638
+    .line 646
     :cond_2
     const-string v0, "power"
 
@@ -3048,7 +2910,7 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 639
+    .line 647
     const v2, 0x1000001a
 
     const-string v3, "PhoneApp"
@@ -3059,7 +2921,7 @@
 
     iput-object v2, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 643
+    .line 651
     const v2, 0x20000001
 
     const-string v3, "PhoneApp"
@@ -3070,7 +2932,7 @@
 
     iput-object v2, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 646
+    .line 654
     const v2, 0x1000000a
 
     const-string v3, "PhoneApp"
@@ -3081,7 +2943,7 @@
 
     iput-object v2, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 650
+    .line 658
     invoke-virtual {v0}, Landroid/os/PowerManager;->getSupportedWakeLockFlags()I
 
     move-result v2
@@ -3090,7 +2952,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 652
+    .line 660
     const/16 v2, 0x20
 
     const-string v3, "PhoneApp"
@@ -3101,7 +2963,7 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 655
+    .line 663
     :cond_3
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
@@ -3131,7 +2993,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 658
+    .line 666
     :cond_4
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->proximitySensorModeEnabled()Z
 
@@ -3139,14 +3001,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 659
+    .line 667
     new-instance v0, Lcom/android/phone/AccelerometerListener;
 
     invoke-direct {v0, p0, p0}, Lcom/android/phone/AccelerometerListener;-><init>(Landroid/content/Context;Lcom/android/phone/AccelerometerListener$OrientationListener;)V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mAccelerometerListener:Lcom/android/phone/AccelerometerListener;
 
-    .line 662
+    .line 670
     :cond_5
     const-string v0, "keyguard"
 
@@ -3158,14 +3020,14 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mKeyguardManager:Landroid/app/KeyguardManager;
 
-    .line 665
+    .line 673
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 669
+    .line 677
     const-string v0, "power"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -3178,21 +3040,21 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mPowerManagerService:Landroid/os/IPowerManager;
 
-    .line 675
+    .line 683
     invoke-static {p0}, Lcom/android/phone/CallController;->init(Lcom/android/phone/PhoneApp;)Lcom/android/phone/CallController;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->callController:Lcom/android/phone/CallController;
 
-    .line 678
+    .line 686
     invoke-static {p0}, Lcom/android/phone/InCallUiState;->init(Landroid/content/Context;)Lcom/android/phone/InCallUiState;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
 
-    .line 684
+    .line 692
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->ringer:Lcom/android/phone/Ringer;
@@ -3209,7 +3071,7 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->notifier:Lcom/android/phone/CallNotifier;
 
-    .line 687
+    .line 695
     const-string v0, "sensor"
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3220,7 +3082,7 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 688
+    .line 696
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/16 v2, 0x8
@@ -3231,32 +3093,34 @@
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->mProximitySensor:Landroid/hardware/Sensor;
 
-    .line 691
+    .line 699
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getIccCard()Lcom/android/internal/telephony/IccCard;
 
     move-result-object v0
 
-    .line 692
+    .line 700
     if-eqz v0, :cond_6
 
-    .line 693
-    const-string v2, "PhoneApp"
-
-    const-string v3, "register for ICC status"
-
-    invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 694
+    .line 702
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
     const/4 v3, 0x3
 
     invoke-virtual {v0, v2, v3, v6}, Lcom/android/internal/telephony/IccCard;->registerForNetworkLocked(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 698
+    .line 706
     :cond_6
+    iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
+
+    iget-object v2, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
+
+    const/16 v3, 0x33
+
+    invoke-virtual {v0, v2, v3, v6}, Lcom/android/internal/telephony/CallManager;->registerForMmiInitiate(Landroid/os/Handler;ILjava/lang/Object;)V
+
+    .line 707
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -3265,7 +3129,7 @@
 
     invoke-virtual {v0, v2, v3, v6}, Lcom/android/internal/telephony/CallManager;->registerForMmiComplete(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 701
+    .line 710
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -3274,12 +3138,12 @@
 
     invoke-interface {v0, v2, v3, v6}, Lcom/android/internal/telephony/Phone;->registerForSuppServiceNotification(Landroid/os/Handler;ILjava/lang/Object;)V
 
-    .line 703
+    .line 712
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->initializeConnectionHandler(Lcom/android/internal/telephony/CallManager;)V
 
-    .line 706
+    .line 715
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -3292,80 +3156,80 @@
 
     iput-boolean v0, p0, Lcom/android/phone/PhoneApp;->mTtyEnabled:Z
 
-    .line 709
+    .line 718
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v2, "android.intent.action.AIRPLANE_MODE"
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 711
+    .line 720
     const-string v2, "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 712
+    .line 721
     const-string v2, "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 713
+    .line 722
     const-string v2, "android.intent.action.ANY_DATA_STATE"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 714
+    .line 723
     const-string v2, "android.intent.action.HEADSET_PLUG"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 715
+    .line 724
     const-string v2, "android.intent.action.DOCK_EVENT"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 716
+    .line 725
     const-string v2, "android.intent.action.BATTERY_LOW"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 717
+    .line 726
     const-string v2, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 718
+    .line 727
     const-string v2, "android.intent.action.RADIO_TECHNOLOGY"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 719
+    .line 728
     const-string v2, "android.intent.action.SERVICE_STATE"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 720
+    .line 729
     const-string v2, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 722
+    .line 731
     iget-boolean v2, p0, Lcom/android/phone/PhoneApp;->mTtyEnabled:Z
 
     if-eqz v2, :cond_7
 
-    .line 723
+    .line 732
     const-string v2, "com.android.internal.telephony.cdma.intent.action.TTY_PREFERRED_MODE_CHANGE"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 725
+    .line 734
     :cond_7
     const-string v2, "android.media.RINGER_MODE_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 727
+    .line 736
     const-string v2, "raft"
 
     invoke-static {v2}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -3374,65 +3238,65 @@
 
     if-eqz v2, :cond_8
 
-    .line 728
+    .line 737
     const-string v2, "android.intent.action.BATTERY_CHANGED"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 729
+    .line 738
     const-string v2, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 730
+    .line 739
     const-string v2, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 733
+    .line 742
     :cond_8
     const-string v2, "android.intent.action.WB_AMR"
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 735
+    .line 744
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v2, v0}, Lcom/android/phone/PhoneApp;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 740
+    .line 749
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v2, "android.intent.action.MEDIA_BUTTON"
 
     invoke-direct {v0, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 746
+    .line 755
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 748
+    .line 757
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->mMediaButtonReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v2, v0}, Lcom/android/phone/PhoneApp;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 757
+    .line 766
     const v0, 0x7f06000d
 
     invoke-static {p0, v0, v5}, Landroid/preference/PreferenceManager;->setDefaultValues(Landroid/content/Context;IZ)V
 
-    .line 759
+    .line 768
     const/high16 v0, 0x7f06
 
     invoke-static {p0, v0, v5}, Landroid/preference/PreferenceManager;->setDefaultValues(Landroid/content/Context;IZ)V
 
-    .line 764
+    .line 773
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->setAudioMode(Lcom/android/internal/telephony/CallManager;)V
 
-    .line 766
+    .line 775
     const-string v0, "limited_service_state_for_lgt"
 
     invoke-static {v0}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -3441,12 +3305,12 @@
 
     if-eqz v0, :cond_9
 
-    .line 767
+    .line 776
     sget-object v0, Lcom/android/phone/PhoneUtilsExt$CallType;->DIAL_VOICE:Lcom/android/phone/PhoneUtilsExt$CallType;
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtilsExt;->setCallType(Lcom/android/phone/PhoneUtilsExt$CallType;)V
 
-    .line 772
+    .line 781
     :cond_9
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -3456,35 +3320,35 @@
 
     if-eqz v0, :cond_a
 
-    .line 773
+    .line 782
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaProvisionData:Lcom/android/phone/OtaUtils$CdmaOtaProvisionData;
 
-    .line 774
+    .line 783
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaConfigData;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaConfigData:Lcom/android/phone/OtaUtils$CdmaOtaConfigData;
 
-    .line 775
+    .line 784
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaScreenState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaScreenState:Lcom/android/phone/OtaUtils$CdmaOtaScreenState;
 
-    .line 776
+    .line 785
     new-instance v0, Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;
 
     invoke-direct {v0}, Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->cdmaOtaInCallScreenUiState:Lcom/android/phone/OtaUtils$CdmaOtaInCallScreenUiState;
 
-    .line 780
+    .line 789
     :cond_a
     const-string v0, "content://icc/adn"
 
@@ -3494,15 +3358,15 @@
 
     invoke-virtual {v1, v0}, Landroid/content/ContentResolver;->getType(Landroid/net/Uri;)Ljava/lang/String;
 
-    .line 783
+    .line 792
     iput-boolean v5, p0, Lcom/android/phone/PhoneApp;->mShouldRestoreMuteOnInCallResume:Z
 
-    .line 792
+    .line 801
     iget-boolean v0, p0, Lcom/android/phone/PhoneApp;->mTtyEnabled:Z
 
     if-eqz v0, :cond_b
 
-    .line 793
+    .line 802
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
@@ -3521,7 +3385,7 @@
 
     iput v0, p0, Lcom/android/phone/PhoneApp;->mPreferredTtyMode:I
 
-    .line 797
+    .line 806
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -3538,7 +3402,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 800
+    .line 809
     :cond_b
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getResources()Landroid/content/res/Resources;
 
@@ -3552,7 +3416,7 @@
 
     if-eqz v0, :cond_c
 
-    .line 801
+    .line 810
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
@@ -3569,7 +3433,7 @@
 
     move-result v1
 
-    .line 804
+    .line 813
     const-string v0, "audio"
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3578,7 +3442,7 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 805
+    .line 814
     const-string v2, "HACSetting"
 
     if-eqz v1, :cond_e
@@ -3588,17 +3452,17 @@
     :goto_1
     invoke-virtual {v0, v2, v1}, Landroid/media/AudioManager;->setParameter(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 809
+    .line 818
     :cond_c
     return-void
 
-    .line 626
+    .line 634
     :cond_d
     iput-object v6, p0, Lcom/android/phone/PhoneApp;->mBtHandsfree:Lcom/android/phone/BluetoothHandsfree;
 
     goto/16 :goto_0
 
-    .line 805
+    .line 814
     :cond_e
     const-string v1, "OFF"
 
@@ -3610,10 +3474,10 @@
     .parameter "orientation"
 
     .prologue
-    .line 1604
+    .line 1613
     iput p1, p0, Lcom/android/phone/PhoneApp;->mOrientation:I
 
-    .line 1605
+    .line 1614
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
@@ -3622,7 +3486,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->updateProximitySensorMode(Lcom/android/internal/telephony/Phone$State;)V
 
-    .line 1606
+    .line 1615
     return-void
 .end method
 
@@ -3630,14 +3494,7 @@
     .locals 4
 
     .prologue
-    .line 1483
-    const-string v0, "PhoneApp"
-
-    const-string v1, "pokeUserActivity()..."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1485
+    .line 1494
     :try_start_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPowerManagerService:Landroid/os/IPowerManager;
 
@@ -3651,15 +3508,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1489
+    .line 1498
     :goto_0
     return-void
 
-    .line 1486
+    .line 1495
     :catch_0
     move-exception v0
 
-    .line 1487
+    .line 1496
     const-string v1, "PhoneApp"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3690,36 +3547,7 @@
     .parameter
 
     .prologue
-    .line 1448
-    const-string v0, "PhoneApp"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "- preventScreenOn("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ")..."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1450
+    .line 1459
     :try_start_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPowerManagerService:Landroid/os/IPowerManager;
 
@@ -3727,15 +3555,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1454
+    .line 1463
     :goto_0
     return-void
 
-    .line 1451
+    .line 1460
     :catch_0
     move-exception v0
 
-    .line 1452
+    .line 1461
     const-string v1, "PhoneApp"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3767,25 +3595,25 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1645
+    .line 1654
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v0
 
-    .line 1646
+    .line 1655
     .local v0, myCall:Lcom/android/internal/telephony/Call;
     if-eqz v0, :cond_1
 
-    .line 1648
+    .line 1657
     invoke-virtual {v0}, Lcom/android/internal/telephony/Call;->isVideoCall()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 1653
+    .line 1662
     :cond_0
     :goto_0
     return v1
@@ -3801,49 +3629,20 @@
 .end method
 
 .method requestWakeState(Lcom/android/phone/PhoneApp$WakeState;)V
-    .locals 3
-    .parameter
+    .locals 2
+    .parameter "ws"
 
     .prologue
-    .line 1264
-    const-string v0, "PhoneApp"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "requestWakeState("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ")..."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1265
+    .line 1274
     monitor-enter p0
 
-    .line 1266
+    .line 1275
     :try_start_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeState:Lcom/android/phone/PhoneApp$WakeState;
 
     if-eq v0, p1, :cond_3
 
-    .line 1267
+    .line 1276
     sget-object v0, Lcom/android/phone/PhoneApp$4;->$SwitchMap$com$android$phone$PhoneApp$WakeState:[I
 
     invoke-virtual {p1}, Lcom/android/phone/PhoneApp$WakeState;->ordinal()I
@@ -3854,7 +3653,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1303
+    .line 1312
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -3863,12 +3662,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1304
+    .line 1313
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1306
+    .line 1315
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -3878,12 +3677,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1307
+    .line 1316
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1309
+    .line 1318
     :cond_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -3893,30 +3692,30 @@
 
     if-eqz v0, :cond_2
 
-    .line 1310
+    .line 1319
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1314
+    .line 1323
     :cond_2
     :goto_0
     iput-object p1, p0, Lcom/android/phone/PhoneApp;->mWakeState:Lcom/android/phone/PhoneApp$WakeState;
 
-    .line 1316
+    .line 1325
     :cond_3
     monitor-exit p0
 
-    .line 1317
+    .line 1326
     return-void
 
-    .line 1271
+    .line 1280
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1272
+    .line 1281
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -3925,12 +3724,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 1273
+    .line 1282
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1275
+    .line 1284
     :cond_4
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -3940,14 +3739,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 1276
+    .line 1285
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     goto :goto_0
 
-    .line 1316
+    .line 1325
     :catchall_0
     move-exception v0
 
@@ -3957,14 +3756,14 @@
 
     throw v0
 
-    .line 1282
+    .line 1291
     :pswitch_1
     :try_start_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1283
+    .line 1292
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -3973,12 +3772,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 1284
+    .line 1293
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1286
+    .line 1295
     :cond_5
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -3988,20 +3787,20 @@
 
     if-eqz v0, :cond_2
 
-    .line 1287
+    .line 1296
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     goto :goto_0
 
-    .line 1291
+    .line 1300
     :pswitch_2
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenBrightWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1293
+    .line 1302
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -4010,12 +3809,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 1294
+    .line 1303
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1296
+    .line 1305
     :cond_6
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -4025,7 +3824,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1297
+    .line 1306
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPartialWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
@@ -4034,7 +3833,7 @@
 
     goto :goto_0
 
-    .line 1267
+    .line 1276
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4047,7 +3846,7 @@
     .locals 3
 
     .prologue
-    .line 2412
+    .line 2438
     const-string v0, "PhoneApp"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4072,46 +3871,46 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2413
+    .line 2439
     iget-boolean v0, p0, Lcom/android/phone/PhoneApp;->mIsIMSPhoneSet:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 2414
+    .line 2440
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->decImsPhoneIndex()V
 
-    .line 2415
+    .line 2441
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/CallManager;->unregisterPhone(Lcom/android/internal/telephony/Phone;)V
 
-    .line 2416
+    .line 2442
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 2417
+    .line 2443
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->phoneMgr:Lcom/android/phone/PhoneInterfaceManager;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     iput-object v1, v0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 2418
+    .line 2444
     invoke-direct {p0}, Lcom/android/phone/PhoneApp;->resetStatesFromIMS()V
 
-    .line 2419
+    .line 2445
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/PhoneApp;->mIsIMSPhoneSet:Z
 
-    .line 2421
+    .line 2447
     :cond_0
     return-void
 .end method
@@ -4121,10 +3920,10 @@
     .parameter "beginning"
 
     .prologue
-    .line 1499
+    .line 1508
     iput-boolean p1, p0, Lcom/android/phone/PhoneApp;->mBeginningCall:Z
 
-    .line 1501
+    .line 1510
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
@@ -4133,7 +3932,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->updateProximitySensorMode(Lcom/android/internal/telephony/Phone$State;)V
 
-    .line 1502
+    .line 1511
     return-void
 .end method
 
@@ -4141,7 +3940,7 @@
     .locals 3
 
     .prologue
-    .line 2400
+    .line 2426
     const-string v0, "PhoneApp"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4166,92 +3965,63 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2401
+    .line 2427
     iget v0, p0, Lcom/android/phone/PhoneApp;->mIMSPhoneIndex:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/phone/PhoneApp;->mIMSPhoneIndex:I
 
-    .line 2402
+    .line 2428
     iget-boolean v0, p0, Lcom/android/phone/PhoneApp;->mIsIMSPhoneSet:Z
 
     if-nez v0, :cond_0
 
-    .line 2403
+    .line 2429
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getIMSPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
 
-    .line 2404
+    .line 2430
     iput-object v0, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 2405
+    .line 2431
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     iget-object v2, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/CallManager;->registerPhone(Lcom/android/internal/telephony/Phone;)Z
 
-    .line 2406
+    .line 2432
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->phoneMgr:Lcom/android/phone/PhoneInterfaceManager;
 
     iput-object v0, v1, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 2407
+    .line 2433
     invoke-direct {p0}, Lcom/android/phone/PhoneApp;->updateStatesForIMS()V
 
-    .line 2408
+    .line 2434
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/phone/PhoneApp;->mIsIMSPhoneSet:Z
 
-    .line 2410
+    .line 2436
     :cond_0
     return-void
 .end method
 
 .method setIgnoreTouchUserActivity(Z)V
-    .locals 3
-    .parameter
+    .locals 0
+    .parameter "ignore"
 
     .prologue
-    .line 1470
-    const-string v0, "PhoneApp"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setIgnoreTouchUserActivity("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ")..."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1471
+    .line 1480
     iput-boolean p1, p0, Lcom/android/phone/PhoneApp;->mIgnoreTouchUserActivity:Z
 
-    .line 1472
+    .line 1481
     invoke-direct {p0}, Lcom/android/phone/PhoneApp;->updatePokeLock()V
 
-    .line 1473
+    .line 1482
     return-void
 .end method
 
@@ -4260,7 +4030,7 @@
     .parameter
 
     .prologue
-    .line 2431
+    .line 2457
     const-string v0, "PhoneApp"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4283,10 +4053,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2432
+    .line 2458
     iput p1, p0, Lcom/android/phone/PhoneApp;->mIMSPhoneIndex:I
 
-    .line 2433
+    .line 2459
     return-void
 .end method
 
@@ -4295,10 +4065,10 @@
     .parameter "inCallScreen"
 
     .prologue
-    .line 1006
+    .line 1015
     iput-object p1, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
-    .line 1007
+    .line 1016
     return-void
 .end method
 
@@ -4307,10 +4077,10 @@
     .parameter "inVTCallScreen"
 
     .prologue
-    .line 1011
+    .line 1020
     iput-object p1, p0, Lcom/android/phone/PhoneApp;->mInVTCallScreen:Lcom/android/phone/InVTCallScreen;
 
-    .line 1012
+    .line 1021
     return-void
 .end method
 
@@ -4319,12 +4089,12 @@
     .parameter "callOrigin"
 
     .prologue
-    .line 2366
+    .line 2392
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->inCallUiState:Lcom/android/phone/InCallUiState;
 
     iput-object p1, v0, Lcom/android/phone/InCallUiState;->latestActiveCallOrigin:Ljava/lang/String;
 
-    .line 2367
+    .line 2393
     return-void
 .end method
 
@@ -4333,10 +4103,10 @@
     .parameter "activity"
 
     .prologue
-    .line 1122
+    .line 1131
     iput-object p1, p0, Lcom/android/phone/PhoneApp;->mPUKEntryActivity:Landroid/app/Activity;
 
-    .line 1123
+    .line 1132
     return-void
 .end method
 
@@ -4345,10 +4115,10 @@
     .parameter "dialog"
 
     .prologue
-    .line 1139
+    .line 1148
     iput-object p1, p0, Lcom/android/phone/PhoneApp;->mPUKEntryProgressDialog:Landroid/app/ProgressDialog;
 
-    .line 1140
+    .line 1149
     return-void
 .end method
 
@@ -4357,61 +4127,32 @@
     .parameter "mode"
 
     .prologue
-    .line 319
+    .line 321
     iput-boolean p1, p0, Lcom/android/phone/PhoneApp;->mShouldRestoreMuteOnInCallResume:Z
 
-    .line 320
+    .line 322
     return-void
 .end method
 
 .method setScreenTimeout(Lcom/android/phone/PhoneApp$ScreenTimeoutDuration;)V
-    .locals 3
-    .parameter
+    .locals 1
+    .parameter "duration"
 
     .prologue
-    .line 1161
-    const-string v0, "PhoneApp"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setScreenTimeout("
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ")..."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1166
+    .line 1175
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mScreenTimeoutDuration:Lcom/android/phone/PhoneApp$ScreenTimeoutDuration;
 
     if-ne p1, v0, :cond_0
 
-    .line 1177
+    .line 1186
     :goto_0
     return-void
 
-    .line 1175
+    .line 1184
     :cond_0
     iput-object p1, p0, Lcom/android/phone/PhoneApp;->mScreenTimeoutDuration:Lcom/android/phone/PhoneApp$ScreenTimeoutDuration;
 
-    .line 1176
+    .line 1185
     invoke-direct {p0}, Lcom/android/phone/PhoneApp;->updatePokeLock()V
 
     goto :goto_0
@@ -4421,7 +4162,7 @@
     .locals 1
 
     .prologue
-    .line 1744
+    .line 1753
     iget-boolean v0, p0, Lcom/android/phone/PhoneApp;->mShowBluetoothIndication:Z
 
     return v0
@@ -4431,14 +4172,14 @@
     .locals 4
 
     .prologue
-    .line 2339
+    .line 2365
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/phone/PhoneApp;->systemTime:J
 
-    .line 2340
+    .line 2366
     iget-wide v0, p0, Lcom/android/phone/PhoneApp;->systemTime:J
 
     iget-wide v2, p0, Lcom/android/phone/PhoneApp;->lastTime:J
@@ -4447,7 +4188,7 @@
 
     iput-wide v0, p0, Lcom/android/phone/PhoneApp;->elapsedTime:J
 
-    .line 2342
+    .line 2368
     iget-wide v0, p0, Lcom/android/phone/PhoneApp;->elapsedTime:J
 
     const-wide/16 v2, 0x7d0
@@ -4456,25 +4197,25 @@
 
     if-gez v0, :cond_0
 
-    .line 2343
+    .line 2369
     iget-wide v0, p0, Lcom/android/phone/PhoneApp;->systemTime:J
 
     iput-wide v0, p0, Lcom/android/phone/PhoneApp;->lastTime:J
 
-    .line 2344
+    .line 2370
     const/4 v0, 0x1
 
-    .line 2347
+    .line 2373
     :goto_0
     return v0
 
-    .line 2346
+    .line 2372
     :cond_0
     iget-wide v0, p0, Lcom/android/phone/PhoneApp;->systemTime:J
 
     iput-wide v0, p0, Lcom/android/phone/PhoneApp;->lastTime:J
 
-    .line 2347
+    .line 2373
     const/4 v0, 0x0
 
     goto :goto_0
@@ -4485,7 +4226,7 @@
     .parameter
 
     .prologue
-    .line 1758
+    .line 1767
     iget v0, p0, Lcom/android/phone/PhoneApp;->mBluetoothHeadsetState:I
 
     iget v1, p0, Lcom/android/phone/PhoneApp;->mBluetoothHeadsetAudioState:I
@@ -4498,10 +4239,10 @@
 
     iput-boolean v0, p0, Lcom/android/phone/PhoneApp;->mShowBluetoothIndication:Z
 
-    .line 1761
+    .line 1770
     if-eqz p1, :cond_3
 
-    .line 1764
+    .line 1773
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->isShowingCallScreen()Z
 
     move-result v0
@@ -4512,7 +4253,7 @@
 
     invoke-virtual {v0}, Lcom/android/phone/InCallScreen;->requestUpdateBluetoothIndication()V
 
-    .line 1766
+    .line 1775
     :cond_0
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->isShowingInVTCallScreen()Z
 
@@ -4520,12 +4261,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1767
+    .line 1776
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInVTCallScreen:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen;->requestUpdateBluetoothIndication()V
 
-    .line 1769
+    .line 1778
     :cond_1
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
@@ -4537,7 +4278,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1770
+    .line 1779
     :cond_2
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
@@ -4545,7 +4286,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1774
+    .line 1783
     :cond_3
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -4555,7 +4296,7 @@
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->updateProximitySensorMode(Lcom/android/internal/telephony/Phone$State;)V
 
-    .line 1775
+    .line 1784
     return-void
 .end method
 
@@ -4563,7 +4304,7 @@
     .locals 2
 
     .prologue
-    .line 2167
+    .line 2193
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -4574,29 +4315,29 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2168
+    .line 2194
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-eqz v0, :cond_1
 
-    .line 2172
+    .line 2198
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InCallScreen;->requestUpdateScreen()V
 
-    .line 2175
+    .line 2201
     :cond_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInVTCallScreen:Lcom/android/phone/InVTCallScreen;
 
     if-eqz v0, :cond_2
 
-    .line 2176
+    .line 2202
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInVTCallScreen:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen;->requestUpdateTouchUi()V
 
-    .line 2178
+    .line 2204
     :cond_2
     return-void
 .end method
@@ -4608,35 +4349,35 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1613
+    .line 1622
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mLastPhoneState:Lcom/android/internal/telephony/Phone$State;
 
     if-eq p1, v1, :cond_2
 
-    .line 1614
+    .line 1623
     iput-object p1, p0, Lcom/android/phone/PhoneApp;->mLastPhoneState:Lcom/android/internal/telephony/Phone$State;
 
-    .line 1615
+    .line 1624
     invoke-virtual {p0, p1}, Lcom/android/phone/PhoneApp;->updateProximitySensorMode(Lcom/android/internal/telephony/Phone$State;)V
 
-    .line 1616
+    .line 1625
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mAccelerometerListener:Lcom/android/phone/AccelerometerListener;
 
     if-eqz v1, :cond_0
 
-    .line 1618
+    .line 1627
     iput v0, p0, Lcom/android/phone/PhoneApp;->mOrientation:I
 
-    .line 1623
+    .line 1632
     :cond_0
     iput-boolean v0, p0, Lcom/android/phone/PhoneApp;->mBeginningCall:Z
 
-    .line 1629
+    .line 1638
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-eqz v1, :cond_2
 
-    .line 1630
+    .line 1639
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     sget-object v2, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
@@ -4648,7 +4389,7 @@
     :cond_1
     invoke-virtual {v1, v0}, Lcom/android/phone/InCallScreen;->updateKeyguardPolicy(Z)V
 
-    .line 1633
+    .line 1642
     :cond_2
     return-void
 .end method
@@ -4662,46 +4403,23 @@
 
     const/4 v0, 0x0
 
-    .line 1533
-    const-string v2, "PhoneApp"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "updateProximitySensorMode: state = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1535
+    .line 1544
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->proximitySensorModeEnabled()Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 1536
+    .line 1545
     iget-object v4, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
 
     monitor-enter v4
 
-    .line 1540
+    .line 1549
     :try_start_0
     const-string v2, "proximity_sensor"
 
-    .line 1541
+    .line 1550
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -4714,7 +4432,7 @@
 
     move-result v2
 
-    .line 1543
+    .line 1552
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->isHeadsetPlugged()Z
 
     move-result v3
@@ -4749,7 +4467,7 @@
     :cond_1
     move v3, v1
 
-    .line 1550
+    .line 1559
     :goto_0
     iget v2, p0, Lcom/android/phone/PhoneApp;->mOrientation:I
 
@@ -4759,7 +4477,7 @@
 
     move v2, v1
 
-    .line 1559
+    .line 1568
     :goto_1
     sget-object v5, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
@@ -4767,23 +4485,23 @@
 
     iget-boolean v5, p0, Lcom/android/phone/PhoneApp;->mBeginningCall:Z
 
-    if-eqz v5, :cond_9
+    if-eqz v5, :cond_8
 
     :cond_2
-    if-nez v3, :cond_9
+    if-nez v3, :cond_8
 
-    if-nez v2, :cond_9
+    if-nez v2, :cond_8
 
-    .line 1563
+    .line 1572
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_4
 
-    .line 1564
+    .line 1573
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_3
@@ -4794,13 +4512,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1565
+    .line 1574
     :cond_3
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1567
+    .line 1576
     const-string v0, "raft"
 
     invoke-static {v0}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -4809,12 +4527,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 1568
+    .line 1577
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/phone/PhoneApp;->mIsProximityCloseDistance:Z
 
-    .line 1569
+    .line 1578
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/android/phone/PhoneApp;->mProximityListener:Landroid/hardware/SensorEventListener;
@@ -4825,38 +4543,82 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 1599
+    .line 1608
     :cond_4
     :goto_2
     monitor-exit v4
 
-    .line 1601
+    .line 1610
     :cond_5
     return-void
 
     :cond_6
     move v3, v0
 
-    .line 1543
+    .line 1552
     goto :goto_0
 
     :cond_7
     move v2, v0
 
-    .line 1550
+    .line 1559
     goto :goto_1
 
-    .line 1574
+    .line 1588
     :cond_8
-    const-string v0, "PhoneApp"
+    iget-object v2, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    const-string v1, "updateProximitySensorMode: lock already held."
+    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    .line 1589
+    sget-boolean v2, Lcom/android/phone/PhoneApp;->DBG:Z
+
+    if-eqz v2, :cond_9
+
+    const-string v2, "PhoneApp"
+
+    const-string v5, "updateProximitySensorMode: releasing..."
+
+    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1593
+    :cond_9
+    if-eqz v3, :cond_a
+
+    .line 1595
+    :goto_3
+    iget-object v1, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
+
+    invoke-virtual {v1, v0}, Landroid/os/PowerManager$WakeLock;->release(I)V
+
+    .line 1597
+    const-string v0, "raft"
+
+    invoke-static {v0}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 1598
+    iget-object v0, p0, Lcom/android/phone/PhoneApp;->mSensorManager:Landroid/hardware/SensorManager;
+
+    iget-object v1, p0, Lcom/android/phone/PhoneApp;->mProximityListener:Landroid/hardware/SensorEventListener;
+
+    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
+
+    .line 1600
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/android/phone/PhoneApp;->mIsProximityCloseDistance:Z
 
     goto :goto_2
 
-    .line 1599
+    .line 1608
     :catchall_0
     move-exception v0
 
@@ -4866,78 +4628,11 @@
 
     throw v0
 
-    .line 1579
-    :cond_9
-    :try_start_1
-    iget-object v2, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    .line 1580
-    sget-boolean v2, Lcom/android/phone/PhoneApp;->DBG:Z
-
-    if-eqz v2, :cond_a
-
-    const-string v2, "PhoneApp"
-
-    const-string v5, "updateProximitySensorMode: releasing..."
-
-    invoke-static {v2, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1584
     :cond_a
-    if-eqz v3, :cond_b
-
-    .line 1586
-    :goto_3
-    iget-object v1, p0, Lcom/android/phone/PhoneApp;->mProximityWakeLock:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1, v0}, Landroid/os/PowerManager$WakeLock;->release(I)V
-
-    .line 1588
-    const-string v0, "raft"
-
-    invoke-static {v0}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 1589
-    iget-object v0, p0, Lcom/android/phone/PhoneApp;->mSensorManager:Landroid/hardware/SensorManager;
-
-    iget-object v1, p0, Lcom/android/phone/PhoneApp;->mProximityListener:Landroid/hardware/SensorEventListener;
-
-    invoke-virtual {v0, v1}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
-
-    .line 1591
-    const/4 v0, 0x0
-
-    sput-boolean v0, Lcom/android/phone/PhoneApp;->mIsProximityCloseDistance:Z
-
-    goto :goto_2
-
-    :cond_b
     move v0, v1
 
-    .line 1584
+    .line 1593
     goto :goto_3
-
-    .line 1595
-    :cond_c
-    const-string v0, "PhoneApp"
-
-    const-string v1, "updateProximitySensorMode: lock already released."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_2
 .end method
 
 .method updateVTDuringCallWakeState(Z)V
@@ -4945,38 +4640,38 @@
     .parameter
 
     .prologue
-    .line 1430
+    .line 1439
     const-string v0, "PhoneApp"
 
     const-string v1, "PhoneAPP :: updateVTDuringCallWakeState : "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1431
+    .line 1440
     if-eqz p1, :cond_1
 
-    .line 1432
+    .line 1441
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
 
     move-result-object v0
 
-    .line 1433
+    .line 1442
     sget-object v1, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
     if-ne v0, v1, :cond_0
 
-    .line 1434
+    .line 1443
     sget-object v0, Lcom/android/phone/PhoneApp$WakeState;->SCREEN_BRIGHT:Lcom/android/phone/PhoneApp$WakeState;
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->requestWakeState(Lcom/android/phone/PhoneApp$WakeState;)V
 
-    .line 1440
+    .line 1449
     :goto_0
     return-void
 
-    .line 1436
+    .line 1445
     :cond_0
     sget-object v0, Lcom/android/phone/PhoneApp$WakeState;->FULL:Lcom/android/phone/PhoneApp$WakeState;
 
@@ -4984,7 +4679,7 @@
 
     goto :goto_0
 
-    .line 1438
+    .line 1447
     :cond_1
     sget-object v0, Lcom/android/phone/PhoneApp$WakeState;->SLEEP:Lcom/android/phone/PhoneApp$WakeState;
 
@@ -5001,19 +4696,19 @@
 
     const/4 v2, 0x0
 
-    .line 1348
+    .line 1357
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/CallManager;->getState()Lcom/android/internal/telephony/Phone$State;
 
     move-result-object v6
 
-    .line 1353
+    .line 1362
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->isShowingCallScreen()Z
 
     move-result v4
 
-    .line 1358
+    .line 1367
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     if-eqz v0, :cond_4
@@ -5028,7 +4723,7 @@
 
     move v0, v1
 
-    .line 1368
+    .line 1377
     :goto_0
     sget-object v3, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
@@ -5042,7 +4737,7 @@
 
     move v3, v1
 
-    .line 1376
+    .line 1385
     :goto_1
     sget-boolean v5, Lcom/android/phone/PhoneApp;->DBG:Z
 
@@ -5106,20 +4801,20 @@
 
     invoke-static {v5, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1399
+    .line 1408
     :cond_0
     sget-object v0, Lcom/android/phone/PhoneApp$ScreenTimeoutDuration;->DEFAULT:Lcom/android/phone/PhoneApp$ScreenTimeoutDuration;
 
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->setScreenTimeout(Lcom/android/phone/PhoneApp$ScreenTimeoutDuration;)V
 
-    .line 1408
+    .line 1417
     sget-object v0, Lcom/android/internal/telephony/Phone$State;->RINGING:Lcom/android/internal/telephony/Phone$State;
 
     if-ne v6, v0, :cond_6
 
     move v0, v1
 
-    .line 1409
+    .line 1418
     :goto_2
     iget-object v3, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -5137,7 +4832,7 @@
 
     move v3, v1
 
-    .line 1410
+    .line 1419
     :goto_3
     iget-object v5, p0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
@@ -5151,7 +4846,7 @@
 
     move v5, v1
 
-    .line 1412
+    .line 1421
     :goto_4
     if-nez v0, :cond_1
 
@@ -5162,7 +4857,7 @@
     :cond_1
     move v4, v1
 
-    .line 1413
+    .line 1422
     :goto_5
     sget-boolean v7, Lcom/android/phone/PhoneApp;->DBG:Z
 
@@ -5226,7 +4921,7 @@
 
     invoke-static {v7, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1417
+    .line 1426
     :cond_2
     const-string v0, "limited_service_state_for_lgt"
 
@@ -5240,7 +4935,7 @@
 
     if-ne v6, v0, :cond_3
 
-    .line 1418
+    .line 1427
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -5253,7 +4948,7 @@
 
     if-gez v0, :cond_3
 
-    .line 1419
+    .line 1428
     const-string v0, "PhoneApp"
 
     const-string v2, "skt admin: never display timeout"
@@ -5262,7 +4957,7 @@
 
     move v4, v1
 
-    .line 1424
+    .line 1433
     :cond_3
     const-string v0, "PhoneApp"
 
@@ -5286,7 +4981,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1425
+    .line 1434
     if-eqz v4, :cond_a
 
     sget-object v0, Lcom/android/phone/PhoneApp$WakeState;->FULL:Lcom/android/phone/PhoneApp$WakeState;
@@ -5294,46 +4989,46 @@
     :goto_6
     invoke-virtual {p0, v0}, Lcom/android/phone/PhoneApp;->requestWakeState(Lcom/android/phone/PhoneApp$WakeState;)V
 
-    .line 1426
+    .line 1435
     return-void
 
     :cond_4
     move v0, v2
 
-    .line 1358
+    .line 1367
     goto/16 :goto_0
 
     :cond_5
     move v3, v2
 
-    .line 1368
+    .line 1377
     goto/16 :goto_1
 
     :cond_6
     move v0, v2
 
-    .line 1408
+    .line 1417
     goto/16 :goto_2
 
     :cond_7
     move v3, v2
 
-    .line 1409
+    .line 1418
     goto/16 :goto_3
 
     :cond_8
     move v5, v2
 
-    .line 1410
+    .line 1419
     goto/16 :goto_4
 
     :cond_9
     move v4, v2
 
-    .line 1412
+    .line 1421
     goto/16 :goto_5
 
-    .line 1425
+    .line 1434
     :cond_a
     sget-object v0, Lcom/android/phone/PhoneApp$WakeState;->SLEEP:Lcom/android/phone/PhoneApp$WakeState;
 
@@ -5344,10 +5039,10 @@
     .locals 5
 
     .prologue
-    .line 1324
+    .line 1333
     monitor-enter p0
 
-    .line 1325
+    .line 1334
     :try_start_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mWakeState:Lcom/android/phone/PhoneApp$WakeState;
 
@@ -5355,7 +5050,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1326
+    .line 1335
     sget-boolean v0, Lcom/android/phone/PhoneApp;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -5368,7 +5063,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1328
+    .line 1337
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/phone/PhoneApp;->mPowerManagerService:Landroid/os/IPowerManager;
@@ -5386,16 +5081,16 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1333
+    .line 1342
     :cond_1
     :goto_0
     :try_start_2
     monitor-exit p0
 
-    .line 1334
+    .line 1343
     return-void
 
-    .line 1333
+    .line 1342
     :catchall_0
     move-exception v0
 
@@ -5405,7 +5100,7 @@
 
     throw v0
 
-    .line 1329
+    .line 1338
     :catch_0
     move-exception v0
 

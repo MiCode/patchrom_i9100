@@ -63,32 +63,8 @@
     :pswitch_0
     return-void
 
-    .line 397
-    :pswitch_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "mRingHandler: msg = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p1, Landroid/os/Message;->what:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-    invoke-static {v1}, Lcom/android/phone/Ringer;->access$200(Ljava/lang/String;)V
-
     .line 398
+    :pswitch_1
     iget-object v1, p0, Lcom/android/phone/Ringer$1;->this$0:Lcom/android/phone/Ringer;
 
     iget-object v1, v1, Lcom/android/phone/Ringer;->mRingtone:Landroid/media/Ringtone;
@@ -100,32 +76,6 @@
     move-result v1
 
     if-nez v1, :cond_3
-
-    .line 400
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "creating ringtone: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/phone/Ringer$1;->this$0:Lcom/android/phone/Ringer;
-
-    iget-object v2, v2, Lcom/android/phone/Ringer;->mCustomRingtoneUri:Landroid/net/Uri;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-    invoke-static {v1}, Lcom/android/phone/Ringer;->access$200(Ljava/lang/String;)V
 
     .line 403
     invoke-static {}, Lcom/android/phone/PhoneUtils;->setAudioMode()V
@@ -268,7 +218,7 @@
     :cond_4
     monitor-exit v2
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :catchall_0
     move-exception v1
@@ -298,7 +248,7 @@
 
     .line 446
     :pswitch_2
-    invoke-static {}, Lcom/android/phone/Ringer;->access$300()Z
+    invoke-static {}, Lcom/android/phone/Ringer;->access$200()Z
 
     move-result v1
 
@@ -307,7 +257,7 @@
     const-string v1, "mRingHandler: PLAY_TTS..."
 
     #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-    invoke-static {v1}, Lcom/android/phone/Ringer;->access$200(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/phone/Ringer;->access$300(Ljava/lang/String;)V
 
     .line 448
     :cond_6
@@ -350,7 +300,7 @@
 
     .line 455
     :pswitch_3
-    invoke-static {}, Lcom/android/phone/Ringer;->access$300()Z
+    invoke-static {}, Lcom/android/phone/Ringer;->access$200()Z
 
     move-result v1
 
@@ -359,7 +309,7 @@
     const-string v1, "mRingHandler: STOP_RING..."
 
     #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-    invoke-static {v1}, Lcom/android/phone/Ringer;->access$200(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/phone/Ringer;->access$300(Ljava/lang/String;)V
 
     .line 456
     :cond_7
@@ -430,7 +380,7 @@
 
     .line 466
     :cond_a
-    invoke-static {}, Lcom/android/phone/Ringer;->access$300()Z
+    invoke-static {}, Lcom/android/phone/Ringer;->access$200()Z
 
     move-result v1
 
@@ -455,13 +405,13 @@
     move-result-object v1
 
     #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-    invoke-static {v1}, Lcom/android/phone/Ringer;->access$200(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/phone/Ringer;->access$300(Ljava/lang/String;)V
 
     goto :goto_2
 
     .line 473
     :pswitch_4
-    invoke-static {}, Lcom/android/phone/Ringer;->access$300()Z
+    invoke-static {}, Lcom/android/phone/Ringer;->access$200()Z
 
     move-result v1
 
@@ -493,7 +443,7 @@
     move-result-object v1
 
     #calls: Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-    invoke-static {v1}, Lcom/android/phone/Ringer;->access$200(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/android/phone/Ringer;->access$300(Ljava/lang/String;)V
 
     .line 474
     :cond_b
@@ -513,6 +463,8 @@
     goto/16 :goto_0
 
     .line 394
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

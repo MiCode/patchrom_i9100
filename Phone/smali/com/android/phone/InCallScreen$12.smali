@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3116
+    .line 3122
     iput-object p1, p0, Lcom/android/phone/InCallScreen$12;->this$0:Lcom/android/phone/InCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InCallScreen$12;->val$c:Lcom/android/internal/telephony/Connection;
@@ -48,18 +48,10 @@
     .parameter "whichButton"
 
     .prologue
-    .line 3118
-    iget-object v1, p0, Lcom/android/phone/InCallScreen$12;->this$0:Lcom/android/phone/InCallScreen;
-
-    const-string v2, "handle WILD_PROMPT_CHAR_ENTERED, proceed..."
-
-    #calls: Lcom/android/phone/InCallScreen;->log(Ljava/lang/String;)V
-    invoke-static {v1, v2}, Lcom/android/phone/InCallScreen;->access$000(Lcom/android/phone/InCallScreen;Ljava/lang/String;)V
-
-    .line 3119
+    .line 3125
     const/4 v0, 0x0
 
-    .line 3120
+    .line 3126
     .local v0, replacement:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/phone/InCallScreen$12;->this$0:Lcom/android/phone/InCallScreen;
 
@@ -70,7 +62,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3121
+    .line 3127
     iget-object v1, p0, Lcom/android/phone/InCallScreen$12;->this$0:Lcom/android/phone/InCallScreen;
 
     #getter for: Lcom/android/phone/InCallScreen;->mWildPromptText:Landroid/widget/EditText;
@@ -86,7 +78,7 @@
 
     move-result-object v0
 
-    .line 3122
+    .line 3128
     iget-object v1, p0, Lcom/android/phone/InCallScreen$12;->this$0:Lcom/android/phone/InCallScreen;
 
     const/4 v2, 0x0
@@ -94,16 +86,16 @@
     #setter for: Lcom/android/phone/InCallScreen;->mWildPromptText:Landroid/widget/EditText;
     invoke-static {v1, v2}, Lcom/android/phone/InCallScreen;->access$3002(Lcom/android/phone/InCallScreen;Landroid/widget/EditText;)Landroid/widget/EditText;
 
-    .line 3124
+    .line 3130
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3125
+    .line 3131
     iget-object v1, p0, Lcom/android/phone/InCallScreen$12;->val$c:Lcom/android/internal/telephony/Connection;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/telephony/Connection;->proceedAfterWildChar(Ljava/lang/String;)V
 
-    .line 3127
+    .line 3133
     :cond_1
     iget-object v1, p0, Lcom/android/phone/InCallScreen$12;->this$0:Lcom/android/phone/InCallScreen;
 
@@ -114,6 +106,6 @@
 
     invoke-virtual {v1}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
 
-    .line 3128
+    .line 3134
     return-void
 .end method

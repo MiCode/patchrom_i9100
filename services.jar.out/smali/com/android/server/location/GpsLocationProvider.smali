@@ -3066,46 +3066,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider;->mNetworkAvailable:Z
 
-    .line 517
-    const-string v1, "GpsLocationProvider"
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "updateNetworkState "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider;->mNetworkAvailable:Z
-
-    if-eqz v0, :cond_8
-
-    const-string v0, "available"
-
-    :goto_1
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " info: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 521
     if-eqz p2, :cond_1
 
@@ -3130,26 +3090,26 @@
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_9
+    if-ne v0, v1, :cond_8
 
     const/4 v8, 0x1
 
     .line 524
     .local v8, dataEnabled:Z
-    :goto_2
+    :goto_1
     invoke-virtual {p2}, Landroid/net/NetworkInfo;->isAvailable()Z
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
-    if-eqz v8, :cond_a
+    if-eqz v8, :cond_9
 
     const/4 v4, 0x1
 
     .line 525
     .local v4, networkAvailable:Z
-    :goto_3
+    :goto_2
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider;->getSelectedApn()Ljava/lang/String;
 
     move-result-object v6
@@ -3213,7 +3173,7 @@
     .local v7, apnName:Ljava/lang/String;
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider;->mNetworkAvailable:Z
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_a
 
     .line 539
     if-nez v7, :cond_2
@@ -3305,7 +3265,7 @@
     .line 564
     .end local v7           #apnName:Ljava/lang/String;
     :cond_4
-    :goto_4
+    :goto_3
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider;->mNetworkAvailable:Z
 
     if-eqz v0, :cond_6
@@ -3349,29 +3309,23 @@
 
     goto/16 :goto_0
 
-    .line 517
+    .line 522
     :cond_8
-    const-string v0, "unavailable"
+    const/4 v8, 0x0
 
     goto/16 :goto_1
 
-    .line 522
-    :cond_9
-    const/4 v8, 0x0
-
-    goto/16 :goto_2
-
     .line 524
     .restart local v8       #dataEnabled:Z
-    :cond_a
+    :cond_9
     const/4 v4, 0x0
 
-    goto/16 :goto_3
+    goto/16 :goto_2
 
     .line 557
     .end local v8           #dataEnabled:Z
     .restart local v7       #apnName:Ljava/lang/String;
-    :cond_b
+    :cond_a
     const-string v0, "GpsLocationProvider"
 
     const-string v1, "call native_agps_data_conn_failed"
@@ -3391,7 +3345,7 @@
     .line 560
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider;->native_agps_data_conn_failed()V
 
-    goto :goto_4
+    goto :goto_3
 .end method
 
 .method private hasCapability(I)Z

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2288
+    .line 2292
     iput-object p1, p0, Lcom/android/phone/CallCard$5;->this$0:Lcom/android/phone/CallCard;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,32 +39,32 @@
     .parameter "msg"
 
     .prologue
-    .line 2292
+    .line 2296
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 2319
+    .line 2323
     :cond_0
     :goto_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 2320
+    .line 2324
     return-void
 
-    .line 2294
+    .line 2298
     :pswitch_0
     invoke-static {p1}, Lcom/android/phone/FDNContactsCache;->getNumberFromMsg(Landroid/os/Message;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2295
+    .line 2299
     .local v1, number:Ljava/lang/String;
     invoke-static {p1}, Lcom/android/phone/FDNContactsCache;->getNameFromMsg(Landroid/os/Message;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2297
+    .line 2301
     .local v0, name:Ljava/lang/String;
     const-string v2, "CallCard"
 
@@ -98,7 +98,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2300
+    .line 2304
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -123,7 +123,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 2305
+    .line 2309
     iget-object v2, p0, Lcom/android/phone/CallCard$5;->this$0:Lcom/android/phone/CallCard;
 
     #getter for: Lcom/android/phone/CallCard;->mName:Landroid/widget/TextView;
@@ -154,7 +154,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 2307
+    .line 2311
     :cond_1
     iget-object v2, p0, Lcom/android/phone/CallCard$5;->this$0:Lcom/android/phone/CallCard;
 
@@ -165,7 +165,7 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2308
+    .line 2312
     iget-object v2, p0, Lcom/android/phone/CallCard$5;->this$0:Lcom/android/phone/CallCard;
 
     #getter for: Lcom/android/phone/CallCard;->mPhoneNumber:Landroid/widget/TextView;
@@ -181,7 +181,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 2309
+    .line 2313
     iget-object v2, p0, Lcom/android/phone/CallCard$5;->this$0:Lcom/android/phone/CallCard;
 
     #getter for: Lcom/android/phone/CallCard;->mPhoneNumber:Landroid/widget/TextView;
@@ -193,7 +193,7 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2311
+    .line 2315
     :cond_2
     iget-object v2, p0, Lcom/android/phone/CallCard$5;->this$0:Lcom/android/phone/CallCard;
 
@@ -204,7 +204,7 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2313
+    .line 2317
     iget-object v2, p0, Lcom/android/phone/CallCard$5;->this$0:Lcom/android/phone/CallCard;
 
     #setter for: Lcom/android/phone/CallCard;->FDN_Number:Ljava/lang/String;
@@ -212,7 +212,7 @@
 
     goto/16 :goto_0
 
-    .line 2292
+    .line 2296
     :pswitch_data_0
     .packed-switch 0x3e9
         :pswitch_0

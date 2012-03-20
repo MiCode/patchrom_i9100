@@ -48,18 +48,12 @@
     :goto_0
     return-void
 
-    .line 389
-    :pswitch_0
-    const-string v0, "disconnect message recieved, shutting down."
-
-    #calls: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$000(Ljava/lang/String;)V
-
     .line 391
+    :pswitch_0
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT$1;->this$0:Lcom/android/phone/DTMFTwelveKeyDialerForVT;
 
     #getter for: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mPhone:Lcom/android/internal/telephony/Phone;
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$300(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)Lcom/android/internal/telephony/Phone;
+    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$200(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
 
@@ -74,14 +68,8 @@
 
     goto :goto_0
 
-    .line 395
-    :pswitch_1
-    const-string v0, "dtmf confirmation received from FW."
-
-    #calls: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$000(Ljava/lang/String;)V
-
     .line 397
+    :pswitch_1
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT$1;->this$0:Lcom/android/phone/DTMFTwelveKeyDialerForVT;
 
     invoke-virtual {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->handleBurstDtmfConfirmation()V

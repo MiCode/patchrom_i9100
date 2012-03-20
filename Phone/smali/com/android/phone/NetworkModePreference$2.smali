@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 151
+    .line 155
     iput-object p1, p0, Lcom/android/phone/NetworkModePreference$2;->this$0:Lcom/android/phone/NetworkModePreference;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +45,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 153
+    .line 157
     packed-switch p2, :pswitch_data_0
 
-    .line 170
+    .line 174
     :goto_0
     return-void
 
-    .line 155
+    .line 159
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$2;->this$0:Lcom/android/phone/NetworkModePreference;
 
@@ -67,7 +67,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/Settings;->showDialog(I)V
 
-    .line 156
+    .line 160
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$2;->this$0:Lcom/android/phone/NetworkModePreference;
 
     #getter for: Lcom/android/phone/NetworkModePreference;->mConnectivityMgr:Landroid/net/ConnectivityManager;
@@ -77,7 +77,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 157
+    .line 161
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$2;->this$0:Lcom/android/phone/NetworkModePreference;
 
     #getter for: Lcom/android/phone/NetworkModePreference;->mConnectivityMgr:Landroid/net/ConnectivityManager;
@@ -87,7 +87,7 @@
 
     invoke-virtual {v0, v2}, Landroid/net/ConnectivityManager;->setMobileDataEnabled(Z)V
 
-    .line 158
+    .line 162
     :cond_0
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$2;->this$0:Lcom/android/phone/NetworkModePreference;
 
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 162
+    .line 166
     :pswitch_1
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$2;->this$0:Lcom/android/phone/NetworkModePreference;
 
@@ -120,7 +120,7 @@
 
     invoke-interface {v0, v1}, Lcom/android/internal/telephony/Phone;->getPreferredNetworkType(Landroid/os/Message;)V
 
-    .line 164
+    .line 168
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$2;->this$0:Lcom/android/phone/NetworkModePreference;
 
     #getter for: Lcom/android/phone/NetworkModePreference;->mDialog:Landroid/app/AlertDialog;
@@ -132,7 +132,7 @@
 
     goto :goto_0
 
-    .line 153
+    .line 157
     nop
 
     :pswitch_data_0

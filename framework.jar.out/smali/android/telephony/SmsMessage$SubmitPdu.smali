@@ -26,20 +26,20 @@
     .parameter "spb"
 
     .prologue
-    .line 124
+    .line 129
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
+    .line 130
     iget-object v0, p1, Lcom/android/internal/telephony/SmsMessageBase$SubmitPduBase;->encodedMessage:[B
 
     iput-object v0, p0, Landroid/telephony/SmsMessage$SubmitPdu;->encodedMessage:[B
 
-    .line 126
+    .line 131
     iget-object v0, p1, Lcom/android/internal/telephony/SmsMessageBase$SubmitPduBase;->encodedScAddress:[B
 
     iput-object v0, p0, Landroid/telephony/SmsMessage$SubmitPdu;->encodedScAddress:[B
 
-    .line 127
+    .line 132
     return-void
 .end method
 
@@ -49,7 +49,7 @@
     .locals 2
 
     .prologue
-    .line 115
+    .line 120
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

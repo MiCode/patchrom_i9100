@@ -80,7 +80,7 @@
     .line 70
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity;->mContent:Landroid/widget/ImageView;
 
-    const v1, 0x1080447
+    const v1, 0x1080444
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

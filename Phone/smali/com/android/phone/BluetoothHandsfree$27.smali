@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3251
+    .line 3276
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$27;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     iput-object p2, p0, Lcom/android/phone/BluetoothHandsfree$27;->val$phone:Lcom/android/internal/telephony/Phone;
@@ -43,25 +43,25 @@
     .locals 4
 
     .prologue
-    .line 3254
+    .line 3279
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$27;->val$phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getLine1Number()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3255
+    .line 3280
     .local v0, number:Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 3256
+    .line 3281
     new-instance v1, Landroid/bluetooth/AtCommandResult;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v2}, Landroid/bluetooth/AtCommandResult;-><init>(I)V
 
-    .line 3258
+    .line 3283
     :goto_0
     return-object v1
 

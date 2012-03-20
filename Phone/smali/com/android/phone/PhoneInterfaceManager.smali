@@ -60,66 +60,49 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 4
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
-
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     .line 83
-    const-string v2, "ro.debuggable"
-
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
-    sput-boolean v0, Lcom/android/phone/PhoneInterfaceManager;->DBG:Z
+    sput-boolean v2, Lcom/android/phone/PhoneInterfaceManager;->DBG:Z
 
     .line 1911
-    sput-boolean v1, Lcom/android/phone/PhoneInterfaceManager;->bVoIPActivated:Z
+    sput-boolean v2, Lcom/android/phone/PhoneInterfaceManager;->bVoIPActivated:Z
 
     .line 1912
-    sput-boolean v1, Lcom/android/phone/PhoneInterfaceManager;->bVoIPRinging:Z
+    sput-boolean v2, Lcom/android/phone/PhoneInterfaceManager;->bVoIPRinging:Z
 
     .line 1913
-    sput-boolean v1, Lcom/android/phone/PhoneInterfaceManager;->bVoIPDialing:Z
+    sput-boolean v2, Lcom/android/phone/PhoneInterfaceManager;->bVoIPDialing:Z
 
     .line 1914
-    sput-boolean v1, Lcom/android/phone/PhoneInterfaceManager;->bMuteState:Z
+    sput-boolean v2, Lcom/android/phone/PhoneInterfaceManager;->bMuteState:Z
 
     .line 1915
-    const-wide/16 v2, 0x0
+    const-wide/16 v0, 0x0
 
-    sput-wide v2, Lcom/android/phone/PhoneInterfaceManager;->mCallBaseTime:J
+    sput-wide v0, Lcom/android/phone/PhoneInterfaceManager;->mCallBaseTime:J
 
     .line 1916
-    sput v1, Lcom/android/phone/PhoneInterfaceManager;->nActiveCallsCount:I
+    sput v2, Lcom/android/phone/PhoneInterfaceManager;->nActiveCallsCount:I
 
     .line 1917
-    sput v1, Lcom/android/phone/PhoneInterfaceManager;->nHoldCallsCount:I
+    sput v2, Lcom/android/phone/PhoneInterfaceManager;->nHoldCallsCount:I
 
     .line 1918
-    sput-object v4, Lcom/android/phone/PhoneInterfaceManager;->mCurApkName:Ljava/lang/String;
+    sput-object v3, Lcom/android/phone/PhoneInterfaceManager;->mCurApkName:Ljava/lang/String;
 
     .line 1919
-    sput-object v4, Lcom/android/phone/PhoneInterfaceManager;->mActionExitVoIPCall:Ljava/lang/String;
+    sput-object v3, Lcom/android/phone/PhoneInterfaceManager;->mActionExitVoIPCall:Ljava/lang/String;
 
     .line 1920
-    sput-object v4, Lcom/android/phone/PhoneInterfaceManager;->mVoIPNumber:Ljava/lang/String;
+    sput-object v3, Lcom/android/phone/PhoneInterfaceManager;->mVoIPNumber:Ljava/lang/String;
 
     return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 83
-    goto :goto_0
 .end method
 
 .method private constructor <init>(Lcom/android/phone/PhoneApp;Lcom/android/internal/telephony/Phone;)V

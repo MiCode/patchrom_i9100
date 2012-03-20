@@ -7,9 +7,9 @@
 #the value of this static final field might be set in the static constructor
 .field private static final DIR_ENCRYPTION:Z = false
 
-.field private static final ENCRYPTED_STATE:Ljava/lang/String; = "1"
+.field static final ENCRYPTED_STATE:Ljava/lang/String; = "1"
 
-.field private static final ENCRYPTING_STATE:Ljava/lang/String; = "trigger_restart_min_framework"
+.field static final ENCRYPTING_STATE:Ljava/lang/String; = "trigger_restart_min_framework"
 
 .field private static final TAG:Ljava/lang/String; = "SystemServer"
 
@@ -602,24 +602,20 @@
     :goto_7
     invoke-static {v4, v3}, Landroid/content/ContentService;->main(Landroid/content/Context;Z)Landroid/content/IContentService;
 
-    .line 230
     const-string v3, "SystemServer"
 
     const-string v9, "System Content Providers"
 
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     invoke-static {}, Lcom/android/server/am/ActivityManagerService;->installSystemProviders()V
 
-    .line 233
     const-string v3, "SystemServer"
 
     const-string v9, "Lights Service"
 
     invoke-static {v3, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     new-instance v75, Lcom/android/server/MiuiLightsService;
 
     move-object/from16 v0, v75

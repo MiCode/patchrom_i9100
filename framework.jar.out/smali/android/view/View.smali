@@ -481,6 +481,10 @@
     .end annotation
 .end field
 
+.field public static final VELOCITY_TYPE_MONOMIAL:I = 0x1
+
+.field public static final VELOCITY_TYPE_POLONOMIAL:I = 0x0
+
 .field protected static final VIEW_LOG_TAG:Ljava/lang/String; = "View"
 
 .field static final VIEW_STATE_ACCELERATED:I = 0x40
@@ -14723,6 +14727,34 @@
     goto :goto_0
 .end method
 
+.method public getVelocityPolynomialType()I
+    .locals 2
+
+    .prologue
+    .line 15162
+    invoke-virtual {p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
+
+    move-result-object v0
+
+    .line 15164
+    .local v0, viewroot:Landroid/view/ViewRootImpl;
+    if-eqz v0, :cond_0
+
+    .line 15166
+    invoke-virtual {v0}, Landroid/view/ViewRootImpl;->getVelocityPolynomialType()I
+
+    move-result v1
+
+    .line 15169
+    :goto_0
+    return v1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+.end method
+
 .method public getVerticalFadingEdgeLength()I
     .locals 2
 
@@ -26699,6 +26731,24 @@
     iput v1, p0, Landroid/view/View;->mPrivateFlags:I
 
     invoke-virtual {p0, v2}, Landroid/view/View;->invalidate(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setVelocityPolynomialType(I)V
+    .locals 1
+    .parameter "type"
+
+    .prologue
+    invoke-virtual {p0}, Landroid/view/View;->getViewRootImpl()Landroid/view/ViewRootImpl;
+
+    move-result-object v0
+
+    .local v0, viewroot:Landroid/view/ViewRootImpl;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewRootImpl;->setVelocityPolynomialType(I)V
 
     :cond_0
     return-void

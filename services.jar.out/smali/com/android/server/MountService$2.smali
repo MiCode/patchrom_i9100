@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 742
+    .line 764
     iput-object p1, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -38,7 +38,7 @@
     .locals 15
 
     .prologue
-    .line 749
+    .line 771
     :try_start_0
     iget-object v10, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
 
@@ -55,7 +55,7 @@
 
     move-result-object v8
 
-    .line 751
+    .line 773
     .local v8, vols:[Ljava/lang/String;
     move-object v0, v8
 
@@ -71,7 +71,7 @@
 
     aget-object v9, v0, v2
 
-    .line 752
+    .line 774
     .local v9, volstr:Ljava/lang/String;
     const-string v10, " "
 
@@ -79,17 +79,17 @@
 
     move-result-object v7
 
-    .line 754
+    .line 776
     .local v7, tok:[Ljava/lang/String;
     const/4 v10, 0x1
 
     aget-object v4, v7, v10
 
-    .line 755
+    .line 777
     .local v4, path:Ljava/lang/String;
     const-string v6, "removed"
 
-    .line 757
+    .line 779
     .local v6, state:Ljava/lang/String;
     const/4 v10, 0x2
 
@@ -99,18 +99,18 @@
 
     move-result v5
 
-    .line 758
+    .line 780
     .local v5, st:I
     if-nez v5, :cond_1
 
-    .line 759
+    .line 781
     const-string v6, "removed"
 
-    .line 772
+    .line 794
     :goto_1
     if-eqz v6, :cond_0
 
-    .line 773
+    .line 795
     const-string v10, "MountService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -133,39 +133,39 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 774
+    .line 796
     iget-object v10, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v10, v4, v6}, Lcom/android/server/MountService;->access$1900(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 751
+    .line 773
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 760
+    .line 782
     :cond_1
     const/4 v10, 0x1
 
     if-ne v5, v10, :cond_2
 
-    .line 761
+    .line 783
     const-string v6, "unmounted"
 
     goto :goto_1
 
-    .line 762
+    .line 784
     :cond_2
     const/4 v10, 0x4
 
     if-ne v5, v10, :cond_4
 
-    .line 763
+    .line 785
     const-string v6, "mounted"
 
-    .line 764
+    .line 786
     const-string v10, "MountService"
 
     const-string v11, "Media already mounted on daemon connection"
@@ -176,7 +176,7 @@
 
     goto :goto_1
 
-    .line 777
+    .line 799
     .end local v0           #arr$:[Ljava/lang/String;
     .end local v2           #i$:I
     .end local v3           #len$:I
@@ -189,7 +189,7 @@
     :catch_0
     move-exception v1
 
-    .line 778
+    .line 800
     .local v1, e:Ljava/lang/Exception;
     const-string v10, "MountService"
 
@@ -197,7 +197,7 @@
 
     invoke-static {v10, v11, v1}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 779
+    .line 801
     iget-object v10, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
 
     iget-object v11, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
@@ -212,7 +212,7 @@
     #calls: Lcom/android/server/MountService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v10, v11, v12}, Lcom/android/server/MountService;->access$1900(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 786
+    .line 808
     .end local v1           #e:Ljava/lang/Exception;
     :cond_3
     iget-object v10, p0, Lcom/android/server/MountService$2;->this$0:Lcom/android/server/MountService;
@@ -222,10 +222,10 @@
     #setter for: Lcom/android/server/MountService;->mReady:Z
     invoke-static {v10, v11}, Lcom/android/server/MountService;->access$2102(Lcom/android/server/MountService;Z)Z
 
-    .line 787
+    .line 809
     return-void
 
-    .line 765
+    .line 787
     .restart local v0       #arr$:[Ljava/lang/String;
     .restart local v2       #i$:I
     .restart local v3       #len$:I
@@ -240,11 +240,11 @@
 
     if-ne v5, v10, :cond_5
 
-    .line 766
+    .line 788
     :try_start_1
     const-string v6, "shared"
 
-    .line 767
+    .line 789
     const-string v10, "MountService"
 
     const-string v11, "Media shared on daemon connection"
@@ -253,7 +253,7 @@
 
     goto :goto_1
 
-    .line 769
+    .line 791
     :cond_5
     new-instance v10, Ljava/lang/Exception;
 

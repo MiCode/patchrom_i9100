@@ -26,7 +26,7 @@
     .locals 1
 
     .prologue
-    .line 491
+    .line 493
     const/4 v0, 0x0
 
     sput-object v0, Landroid/webkit/WebView$OnTrimMemoryListener;->sInstance:Landroid/webkit/WebView$OnTrimMemoryListener;
@@ -39,13 +39,13 @@
     .parameter "c"
 
     .prologue
-    .line 499
+    .line 501
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 500
+    .line 502
     invoke-virtual {p1, p0}, Landroid/content/Context;->registerComponentCallbacks(Landroid/content/ComponentCallbacks;)V
 
-    .line 501
+    .line 503
     return-void
 .end method
 
@@ -54,12 +54,12 @@
     .parameter "c"
 
     .prologue
-    .line 494
+    .line 496
     sget-object v0, Landroid/webkit/WebView$OnTrimMemoryListener;->sInstance:Landroid/webkit/WebView$OnTrimMemoryListener;
 
     if-nez v0, :cond_0
 
-    .line 495
+    .line 497
     new-instance v0, Landroid/webkit/WebView$OnTrimMemoryListener;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -70,7 +70,7 @@
 
     sput-object v0, Landroid/webkit/WebView$OnTrimMemoryListener;->sInstance:Landroid/webkit/WebView$OnTrimMemoryListener;
 
-    .line 497
+    .line 499
     :cond_0
     return-void
 .end method
@@ -82,7 +82,7 @@
     .parameter "newConfig"
 
     .prologue
-    .line 506
+    .line 508
     return-void
 .end method
 
@@ -90,7 +90,7 @@
     .locals 0
 
     .prologue
-    .line 511
+    .line 513
     return-void
 .end method
 
@@ -99,10 +99,10 @@
     .parameter "level"
 
     .prologue
-    .line 518
+    .line 520
     #calls: Landroid/webkit/WebView;->nativeOnTrimMemory(I)V
     invoke-static {p1}, Landroid/webkit/WebView;->access$100(I)V
 
-    .line 519
+    .line 521
     return-void
 .end method

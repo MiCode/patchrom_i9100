@@ -39,8 +39,6 @@
 
 .field public static currentPrlVer:Ljava/lang/String;
 
-.field public static defaultIMEI:Ljava/lang/String;
-
 .field public static durationTime:J
 
 .field static isSendDtmf:Z
@@ -108,30 +106,17 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 5
 
     .prologue
-    const-wide/16 v4, 0x0
-
-    const/4 v1, 0x1
-
-    const/4 v3, 0x0
+    const-wide/16 v3, 0x0
 
     const/4 v2, 0x0
 
+    const/4 v1, 0x0
+
     .line 65
-    const-string v0, "ro.debuggable"
-
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    sput-boolean v0, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
 
     .line 70
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
@@ -139,86 +124,77 @@
     sput-boolean v0, Lcom/android/phone/PhoneUtilsExt;->VDBG:Z
 
     .line 77
-    sput-wide v4, Lcom/android/phone/PhoneUtilsExt;->durationTime:J
+    sput-wide v3, Lcom/android/phone/PhoneUtilsExt;->durationTime:J
 
     .line 78
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->RoamingOTA:Z
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->RoamingOTA:Z
 
     .line 119
-    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->mOpticsCallHistoryShow:Z
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mOpticsCallHistoryShow:Z
 
     .line 122
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->mIsCMFCall:Z
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->mIsCMFCall:Z
 
     .line 123
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->mIsMessageCall:Z
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->mIsMessageCall:Z
 
     .line 125
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->mIsWzoneCall:Z
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->mIsWzoneCall:Z
 
     .line 130
-    sput-object v3, Lcom/android/phone/PhoneUtilsExt;->mCANPToggleTimer:Landroid/os/CountDownTimer;
+    sput-object v2, Lcom/android/phone/PhoneUtilsExt;->mCANPToggleTimer:Landroid/os/CountDownTimer;
 
     .line 132
-    sput-object v3, Lcom/android/phone/PhoneUtilsExt;->mDisplayName:Ljava/lang/String;
+    sput-object v2, Lcom/android/phone/PhoneUtilsExt;->mDisplayName:Ljava/lang/String;
 
     .line 133
-    sput-object v3, Lcom/android/phone/PhoneUtilsExt;->mContactName:Ljava/lang/String;
+    sput-object v2, Lcom/android/phone/PhoneUtilsExt;->mContactName:Ljava/lang/String;
 
-    .line 136
-    const-string v0, "000000000000000"
+    .line 137
+    sput-object v2, Lcom/android/phone/PhoneUtilsExt;->mWzoneprefix:Ljava/lang/String;
 
-    sput-object v0, Lcom/android/phone/PhoneUtilsExt;->defaultIMEI:Ljava/lang/String;
+    .line 140
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->IsVTCallInRejectList:Z
 
-    .line 139
-    sput-object v3, Lcom/android/phone/PhoneUtilsExt;->mWzoneprefix:Ljava/lang/String;
+    .line 152
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->canMulti:Z
 
-    .line 142
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->IsVTCallInRejectList:Z
+    .line 153
+    sput-wide v3, Lcom/android/phone/PhoneUtilsExt;->mPlaceCallTime:J
 
     .line 154
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->canMulti:Z
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->OTACancel:Z
 
-    .line 155
-    sput-wide v4, Lcom/android/phone/PhoneUtilsExt;->mPlaceCallTime:J
+    .line 216
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->callEnd:Z
 
-    .line 156
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->OTACancel:Z
+    .line 924
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->isSendEmptyFlash:Z
 
-    .line 218
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->callEnd:Z
-
-    .line 925
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->isSendEmptyFlash:Z
-
-    .line 927
-    sput-boolean v2, Lcom/android/phone/PhoneUtilsExt;->isSendDtmf:Z
+    .line 926
+    sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->isSendDtmf:Z
 
     return-void
-
-    :cond_0
-    move v0, v2
-
-    .line 65
-    goto :goto_0
 .end method
 
 .method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 224
+    .line 222
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
+    .line 223
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->sMe:Lcom/android/phone/PhoneUtilsExt;
 
-    .line 227
+    .line 225
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mSKTRADDialingToKoreaEnabled:Z
 
-    .line 228
+    .line 226
     return-void
 .end method
 
@@ -226,7 +202,7 @@
     .locals 1
 
     .prologue
-    .line 321
+    .line 320
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mRevertDialingNumber:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -244,7 +220,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 712
+    .line 711
     const-string v0, "PhoneUtilsExt"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -267,10 +243,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 714
+    .line 713
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->setSKTRADOutgoingCallNumber(Ljava/lang/String;)V
 
-    .line 715
+    .line 714
     const-string v0, "LGT_RAD_TEMP"
 
     invoke-virtual {p1, v0, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -279,7 +255,7 @@
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtilsExt;->setLGTRADTemp(I)V
 
-    .line 716
+    .line 715
     const-string v0, "LGT_RAD_CALLOG"
 
     invoke-virtual {p1, v0, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -288,7 +264,7 @@
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtilsExt;->setLGTRADCallog(I)V
 
-    .line 717
+    .line 716
     const-string v0, "PhoneUtilsExt"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -315,13 +291,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 718
+    .line 717
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->setRADCode()V
 
-    .line 719
+    .line 718
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->setOutgoingToKorea(Z)V
 
-    .line 722
+    .line 721
     const-string v0, "SMS_CALL"
 
     invoke-virtual {p1, v0, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -330,21 +306,21 @@
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtilsExt;->setSMS(Z)V
 
-    .line 723
+    .line 722
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isSMS()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 724
+    .line 723
     const-string v0, "PhoneUtilsExt"
 
     const-string v1, "RoamingArea SMS Call"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
+    .line 725
     :cond_0
     return-void
 .end method
@@ -358,28 +334,28 @@
 
     const/4 v4, 0x1
 
-    .line 666
+    .line 665
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->setPhoneAppSetting()V
 
-    .line 668
+    .line 667
     const-string v2, "OPTICS_CALL_HISTORY_SHOW"
 
     invoke-virtual {p0, v2, v4}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 669
+    .line 668
     .local v0, OpticsCallHistoryShow:Z
     invoke-static {v0}, Lcom/android/phone/PhoneUtilsExt;->setOpticsCallHistoryShow(Z)V
 
-    .line 671
+    .line 670
     const-string v2, "SKTRADDialOption"
 
     invoke-virtual {p0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 673
+    .line 672
     .local v1, SKTRADDialOption:Ljava/lang/String;
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getSKTRADSetting()Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
@@ -389,7 +365,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 675
+    .line 674
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v2
@@ -408,25 +384,25 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 676
+    .line 675
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setSKTRADDialingToKoreaEnabled(Z)V
 
-    .line 680
+    .line 679
     :goto_0
     sput-boolean v4, Lcom/android/phone/PhoneUtilsExt;->mSkipSKTRADDialOption:Z
 
-    .line 702
+    .line 701
     :cond_0
     :goto_1
     return-void
 
-    .line 678
+    .line 677
     :cond_1
     invoke-static {v4}, Lcom/android/phone/PhoneUtilsExt;->setSKTRADDialingToKoreaEnabled(Z)V
 
     goto :goto_0
 
-    .line 684
+    .line 683
     :cond_2
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -434,19 +410,19 @@
 
     if-eqz v2, :cond_3
 
-    .line 686
+    .line 685
     invoke-static {v4}, Lcom/android/phone/PhoneUtilsExt;->setSKTRADDialingToKoreaEnabled(Z)V
 
-    .line 687
+    .line 686
     sput-boolean v5, Lcom/android/phone/PhoneUtilsExt;->mSkipSKTRADDialOption:Z
 
     goto :goto_1
 
-    .line 691
+    .line 690
     :cond_3
     sput-boolean v4, Lcom/android/phone/PhoneUtilsExt;->mSkipSKTRADDialOption:Z
 
-    .line 695
+    .line 694
     const-string v2, "korea"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -455,12 +431,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 696
+    .line 695
     invoke-static {v4}, Lcom/android/phone/PhoneUtilsExt;->setSKTRADDialingToKoreaEnabled(Z)V
 
     goto :goto_1
 
-    .line 698
+    .line 697
     :cond_4
     const-string v2, "abroad"
 
@@ -470,7 +446,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 699
+    .line 698
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setSKTRADDialingToKoreaEnabled(Z)V
 
     goto :goto_1
@@ -481,7 +457,7 @@
     .parameter "intent"
 
     .prologue
-    .line 656
+    .line 655
     const-string v0, "com.skt.iswzone"
 
     const/4 v1, 0x0
@@ -492,14 +468,14 @@
 
     sput-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mIsWzoneCall:Z
 
-    .line 657
+    .line 656
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mIsWzoneCall:Z
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 658
+    .line 657
     const-string v0, "Wzoneprefix"
 
     invoke-virtual {p0, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -508,7 +484,7 @@
 
     sput-object v0, Lcom/android/phone/PhoneUtilsExt;->mWzoneprefix:Ljava/lang/String;
 
-    .line 661
+    .line 660
     :cond_0
     return-void
 .end method
@@ -522,24 +498,24 @@
 
     const/4 v5, 0x1
 
-    .line 832
+    .line 831
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->setUserInputDialingNumber(Ljava/lang/String;)V
 
-    .line 834
+    .line 833
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 836
+    .line 835
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getInternationalAccessCode()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 837
+    .line 836
     .local v1, InternationalAccessCode:Ljava/lang/String;
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getCountryCode()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 838
+    .line 837
     .local v0, CountryCode:Ljava/lang/String;
     const-string v2, "PhoneUtilsExt"
 
@@ -573,7 +549,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 843
+    .line 842
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -582,15 +558,15 @@
 
     if-gt v2, v3, :cond_0
 
-    .line 844
+    .line 843
     invoke-static {v6}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 876
+    .line 875
     .end local p0
     :goto_0
     return-object p0
 
-    .line 846
+    .line 845
     .restart local p0
     :cond_0
     const-string v2, "0234167010"
@@ -601,13 +577,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 847
+    .line 846
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 848
+    .line 847
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setOutgoingToKorea(Z)V
 
-    .line 849
+    .line 848
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -636,7 +612,7 @@
 
     goto :goto_0
 
-    .line 850
+    .line 849
     :cond_1
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isSMS()Z
 
@@ -644,13 +620,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 851
+    .line 850
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 852
+    .line 851
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setOutgoingToKorea(Z)V
 
-    .line 853
+    .line 852
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -679,7 +655,7 @@
 
     goto :goto_0
 
-    .line 855
+    .line 854
     :cond_2
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADCallog()I
 
@@ -689,12 +665,12 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 856
+    .line 855
     invoke-static {v6}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
     goto :goto_0
 
-    .line 859
+    .line 858
     :cond_3
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -710,12 +686,12 @@
 
     if-le v2, v3, :cond_4
 
-    .line 860
+    .line 859
     invoke-static {v6}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
     goto :goto_0
 
-    .line 862
+    .line 861
     :cond_4
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -723,10 +699,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 863
+    .line 862
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 864
+    .line 863
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -745,7 +721,7 @@
 
     goto/16 :goto_0
 
-    .line 865
+    .line 864
     :cond_5
     const-string v2, "00"
 
@@ -755,12 +731,12 @@
 
     if-eqz v2, :cond_6
 
-    .line 866
+    .line 865
     invoke-static {v6}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
     goto/16 :goto_0
 
-    .line 868
+    .line 867
     :cond_6
     const-string v2, "0"
 
@@ -770,10 +746,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 869
+    .line 868
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 870
+    .line 869
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -800,7 +776,7 @@
 
     goto/16 :goto_0
 
-    .line 871
+    .line 870
     :cond_7
     const-string v2, "*"
 
@@ -818,17 +794,17 @@
 
     if-eqz v2, :cond_9
 
-    .line 872
+    .line 871
     :cond_8
     invoke-static {v6}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
     goto/16 :goto_0
 
-    .line 875
+    .line 874
     :cond_9
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 876
+    .line 875
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -863,13 +839,13 @@
 
     const/4 v3, 0x0
 
-    .line 465
+    .line 464
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->setUserInputDialingNumber(Ljava/lang/String;)V
 
-    .line 466
+    .line 465
     invoke-static {v4}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 468
+    .line 467
     const-string v1, "limited_service_state_for_kt"
 
     invoke-static {v1}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -926,20 +902,20 @@
 
     if-eqz v1, :cond_2
 
-    .line 476
+    .line 475
     :cond_0
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 477
+    .line 476
     const-string p0, "+82263439000"
 
-    .line 535
+    .line 534
     .end local p0
     :cond_1
     :goto_0
     return-object p0
 
-    .line 479
+    .line 478
     .restart local p0
     :cond_2
     const-string v1, "111"
@@ -998,11 +974,11 @@
 
     if-eqz v1, :cond_4
 
-    .line 487
+    .line 486
     :cond_3
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 489
+    .line 488
     const-string v1, "limited_service_state_for_kt"
 
     invoke-static {v1}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -1011,12 +987,12 @@
 
     if-nez v1, :cond_1
 
-    .line 492
+    .line 491
     const-string p0, "+82232100404"
 
     goto :goto_0
 
-    .line 497
+    .line 496
     :cond_4
     const-string v1, "change_voice_mailbox_number_for_rad"
 
@@ -1026,7 +1002,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 498
+    .line 497
     const-string v1, "*88"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1035,25 +1011,25 @@
 
     if-eqz v1, :cond_6
 
-    .line 499
+    .line 498
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v1
 
     sput-object v1, Lcom/android/phone/PhoneUtilsExt;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 501
+    .line 500
     sget-object v1, Lcom/android/phone/PhoneUtilsExt;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getLine1Number()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 503
+    .line 502
     .local v0, orig_number:Ljava/lang/String;
     if-eqz v0, :cond_6
 
-    .line 504
+    .line 503
     sget-boolean v1, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
 
     if-eqz v1, :cond_5
@@ -1083,10 +1059,10 @@
     :cond_5
     move-object p0, v0
 
-    .line 505
+    .line 504
     goto/16 :goto_0
 
-    .line 510
+    .line 509
     .end local v0           #orig_number:Ljava/lang/String;
     :cond_6
     const-string v1, "001"
@@ -1129,7 +1105,7 @@
 
     if-nez v1, :cond_8
 
-    .line 511
+    .line 510
     :cond_7
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1157,7 +1133,7 @@
 
     goto/16 :goto_0
 
-    .line 513
+    .line 512
     :cond_8
     const-string v1, "00700"
 
@@ -1191,7 +1167,7 @@
 
     if-eqz v1, :cond_a
 
-    .line 514
+    .line 513
     :cond_9
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1219,7 +1195,7 @@
 
     goto/16 :goto_0
 
-    .line 516
+    .line 515
     :cond_a
     const-string v1, "+"
 
@@ -1237,13 +1213,13 @@
 
     if-eqz v1, :cond_c
 
-    .line 517
+    .line 516
     :cond_b
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
     goto/16 :goto_0
 
-    .line 520
+    .line 519
     :cond_c
     const-string v1, "1544"
 
@@ -1292,7 +1268,7 @@
 
     if-ne v1, v5, :cond_e
 
-    .line 522
+    .line 521
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1313,7 +1289,7 @@
 
     goto/16 :goto_0
 
-    .line 524
+    .line 523
     :cond_e
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -1338,7 +1314,7 @@
 
     if-nez v1, :cond_10
 
-    .line 525
+    .line 524
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1359,7 +1335,7 @@
 
     goto/16 :goto_0
 
-    .line 527
+    .line 526
     :cond_10
     const-string v1, "0"
 
@@ -1369,7 +1345,7 @@
 
     if-nez v1, :cond_11
 
-    .line 528
+    .line 527
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1390,7 +1366,7 @@
 
     goto/16 :goto_0
 
-    .line 530
+    .line 529
     :cond_11
     const-string v1, "0"
 
@@ -1400,7 +1376,7 @@
 
     if-eqz v1, :cond_12
 
-    .line 531
+    .line 530
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1425,7 +1401,7 @@
 
     goto/16 :goto_0
 
-    .line 534
+    .line 533
     :cond_12
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
@@ -1437,10 +1413,10 @@
     .parameter "number"
 
     .prologue
-    .line 449
+    .line 448
     move-object v0, p0
 
-    .line 451
+    .line 450
     .local v0, orig_number:Ljava/lang/String;
     const-string v2, "*88"
 
@@ -1450,18 +1426,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 453
+    .line 452
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v1
 
-    .line 455
+    .line 454
     .local v1, phone:Lcom/android/internal/telephony/Phone;
     invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getLine1Number()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 458
+    .line 457
     .end local v1           #phone:Lcom/android/internal/telephony/Phone;
     :cond_0
     sget-boolean v2, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
@@ -1490,7 +1466,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
+    .line 458
     :cond_1
     return-object v0
 .end method
@@ -1499,14 +1475,14 @@
     .locals 4
 
     .prologue
-    .line 1086
+    .line 1085
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 1087
+    .line 1086
     invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getForegroundCall()Lcom/android/internal/telephony/Call;
 
     move-result-object v0
@@ -1515,14 +1491,14 @@
 
     move-result-object v0
 
-    .line 1088
+    .line 1087
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-lez v1, :cond_0
 
-    .line 1089
+    .line 1088
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -1539,7 +1515,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/Connection;
 
-    .line 1090
+    .line 1089
     const-string v1, "PhoneUtilsExt"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1572,16 +1548,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1091
+    .line 1090
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->isIncoming()Z
 
     move-result v0
 
-    .line 1095
+    .line 1094
     :goto_0
     return v0
 
-    .line 1094
+    .line 1093
     :cond_0
     const-string v0, "PhoneUtilsExt"
 
@@ -1589,7 +1565,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1095
+    .line 1094
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1602,7 +1578,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 803
+    .line 802
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v7
@@ -1613,13 +1589,13 @@
 
     move-result-object v1
 
-    .line 804
+    .line 803
     .local v1, context:Landroid/content/Context;
     new-instance v0, Lcom/android/phone/RoamingData;
 
     invoke-direct {v0, v1}, Lcom/android/phone/RoamingData;-><init>(Landroid/content/Context;)V
 
-    .line 805
+    .line 804
     .local v0, DBdata:Lcom/android/phone/RoamingData;
     const-string v7, "RoamingPrefs"
 
@@ -1627,7 +1603,7 @@
 
     move-result-object v5
 
-    .line 807
+    .line 806
     .local v5, sp:Landroid/content/SharedPreferences;
     const-string v7, "fakesid"
 
@@ -1637,7 +1613,7 @@
 
     move-result-object v4
 
-    .line 808
+    .line 807
     .local v4, sid:Ljava/lang/String;
     if-eqz v4, :cond_0
 
@@ -1649,7 +1625,7 @@
 
     if-eqz v7, :cond_1
 
-    .line 809
+    .line 808
     :cond_0
     const-string v7, "ril.cdma.sid"
 
@@ -1657,11 +1633,11 @@
 
     move-result-object v4
 
-    .line 811
+    .line 810
     :cond_1
     const-string v2, ""
 
-    .line 812
+    .line 811
     .local v2, data:Ljava/lang/String;
     const-string v7, "PhoneUtilsExt"
 
@@ -1685,7 +1661,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 814
+    .line 813
     :try_start_0
     invoke-virtual {v0, v4}, Lcom/android/phone/RoamingData;->getConnectNumBySid(Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -1693,44 +1669,44 @@
 
     move-result-object v2
 
-    .line 815
+    .line 814
     if-nez v2, :cond_3
 
-    .line 827
+    .line 826
     :goto_0
     return v6
 
-    .line 817
+    .line 816
     :catch_0
     move-exception v3
 
-    .line 818
+    .line 817
     .local v3, e:Ljava/lang/Exception;
     if-eqz p0, :cond_2
 
-    .line 819
+    .line 818
     const-string v7, "00"
 
     sput-object v7, Lcom/android/phone/PhoneUtilsExt;->mInternationalAccessCode:Ljava/lang/String;
 
-    .line 820
+    .line 819
     :cond_2
     invoke-virtual {v0}, Lcom/android/phone/RoamingData;->close()V
 
     goto :goto_0
 
-    .line 824
+    .line 823
     .end local v3           #e:Ljava/lang/Exception;
     :cond_3
     invoke-virtual {v0}, Lcom/android/phone/RoamingData;->close()V
 
-    .line 825
+    .line 824
     if-eqz p0, :cond_4
 
-    .line 826
+    .line 825
     sput-object v2, Lcom/android/phone/PhoneUtilsExt;->mInternationalAccessCode:Ljava/lang/String;
 
-    .line 827
+    .line 826
     :cond_4
     const/4 v6, 0x1
 
@@ -1741,7 +1717,7 @@
     .locals 1
 
     .prologue
-    .line 1000
+    .line 999
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mCONFCallState:Lcom/android/phone/PhoneUtilsExt$CONFCallState;
 
     return-object v0
@@ -1751,7 +1727,7 @@
     .locals 1
 
     .prologue
-    .line 896
+    .line 895
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mCallCardNumber:Ljava/lang/String;
 
     return-object v0
@@ -1761,7 +1737,7 @@
     .locals 1
 
     .prologue
-    .line 901
+    .line 900
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->callEnd:Z
 
     return v0
@@ -1771,7 +1747,7 @@
     .locals 3
 
     .prologue
-    .line 339
+    .line 338
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -1800,7 +1776,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
+    .line 339
     :cond_0
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mCallType:Lcom/android/phone/PhoneUtilsExt$CallType;
 
@@ -1811,7 +1787,7 @@
     .locals 1
 
     .prologue
-    .line 888
+    .line 887
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mContactsNumber:Ljava/lang/String;
 
     return-object v0
@@ -1821,7 +1797,7 @@
     .locals 2
 
     .prologue
-    .line 774
+    .line 773
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mCountryCode:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -1836,13 +1812,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 775
+    .line 774
     :cond_0
     const-string v0, "82"
 
     sput-object v0, Lcom/android/phone/PhoneUtilsExt;->mCountryCode:Ljava/lang/String;
 
-    .line 776
+    .line 775
     :cond_1
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mCountryCode:Ljava/lang/String;
 
@@ -1854,19 +1830,19 @@
     .parameter
 
     .prologue
-    .line 1129
+    .line 1128
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 1130
+    .line 1129
     invoke-interface {v0, p0}, Lcom/android/internal/telephony/Phone;->getHandsetInfo(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1131
+    .line 1130
     const-string v1, "PhoneUtilsExt"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1893,7 +1869,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1132
+    .line 1131
     return-object v0
 .end method
 
@@ -1901,7 +1877,7 @@
     .locals 2
 
     .prologue
-    .line 764
+    .line 763
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mInternationalAccessCode:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -1916,13 +1892,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 765
+    .line 764
     :cond_0
     const-string v0, "00"
 
     sput-object v0, Lcom/android/phone/PhoneUtilsExt;->mInternationalAccessCode:Ljava/lang/String;
 
-    .line 766
+    .line 765
     :cond_1
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mInternationalAccessCode:Ljava/lang/String;
 
@@ -1933,7 +1909,7 @@
     .locals 1
 
     .prologue
-    .line 799
+    .line 798
     sget v0, Lcom/android/phone/PhoneUtilsExt;->mLGTRADCallog:I
 
     return v0
@@ -1943,7 +1919,7 @@
     .locals 1
 
     .prologue
-    .line 791
+    .line 790
     sget v0, Lcom/android/phone/PhoneUtilsExt;->mLGTRADTemp:I
 
     return v0
@@ -1954,18 +1930,18 @@
     .parameter "number"
 
     .prologue
-    .line 584
+    .line 583
     if-nez p0, :cond_1
 
     const/4 p0, 0x0
 
-    .line 596
+    .line 595
     .end local p0
     :cond_0
     :goto_0
     return-object p0
 
-    .line 586
+    .line 585
     .restart local p0
     :cond_1
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mIsWzoneCall:Z
@@ -1976,7 +1952,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 587
+    .line 586
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mWzoneprefix:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -1987,7 +1963,7 @@
 
     move-result-object p0
 
-    .line 589
+    .line 588
     :cond_2
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mIsCMFCall:Z
 
@@ -1997,7 +1973,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 590
+    .line 589
     :cond_3
     const-string v0, "***"
 
@@ -2007,7 +1983,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 591
+    .line 590
     const-string v0, "***"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -2020,7 +1996,7 @@
 
     goto :goto_0
 
-    .line 592
+    .line 591
     :cond_4
     const-string v0, "#"
 
@@ -2030,7 +2006,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 593
+    .line 592
     const-string v0, "#"
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -2048,7 +2024,7 @@
     .locals 1
 
     .prologue
-    .line 370
+    .line 369
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mOutgoingCallString:Ljava/lang/String;
 
     return-object v0
@@ -2058,7 +2034,7 @@
     .locals 1
 
     .prologue
-    .line 366
+    .line 365
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mOutgoingCallUri:Landroid/net/Uri;
 
     return-object v0
@@ -2068,7 +2044,7 @@
     .locals 1
 
     .prologue
-    .line 362
+    .line 361
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mSKTRADSetting:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
     return-object v0
@@ -2079,7 +2055,7 @@
     .parameter "number"
 
     .prologue
-    .line 374
+    .line 373
     const/4 v6, 0x5
 
     new-array v0, v6, [Ljava/lang/String;
@@ -2114,7 +2090,7 @@
 
     aput-object v7, v0, v6
 
-    .line 376
+    .line 375
     .local v0, SKTRADPrefixlist:[Ljava/lang/String;
     if-eqz p0, :cond_0
 
@@ -2126,7 +2102,7 @@
 
     if-le v6, v7, :cond_0
 
-    .line 377
+    .line 376
     move-object v1, v0
 
     .local v1, arr$:[Ljava/lang/String;
@@ -2141,13 +2117,13 @@
 
     aget-object v5, v1, v2
 
-    .line 378
+    .line 377
     .local v5, strPrefix:Ljava/lang/String;
     invoke-virtual {p0, v5}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 379
+    .line 378
     .local v3, internationalNumPrefixPos:I
     const/4 v6, -0x1
 
@@ -2161,7 +2137,7 @@
 
     if-ge v3, v6, :cond_1
 
-    .line 380
+    .line 379
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2190,7 +2166,7 @@
 
     move-result-object p0
 
-    .line 383
+    .line 382
     .end local v1           #arr$:[Ljava/lang/String;
     .end local v2           #i$:I
     .end local v3           #internationalNumPrefixPos:I
@@ -2200,7 +2176,7 @@
     :cond_0
     return-object p0
 
-    .line 377
+    .line 376
     .restart local v1       #arr$:[Ljava/lang/String;
     .restart local v2       #i$:I
     .restart local v3       #internationalNumPrefixPos:I
@@ -2217,7 +2193,7 @@
     .locals 1
 
     .prologue
-    .line 996
+    .line 995
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mTHRWAYCallState:Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
     return-object v0
@@ -2227,7 +2203,7 @@
     .locals 1
 
     .prologue
-    .line 358
+    .line 357
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mUserInputDialingNumber:Ljava/lang/String;
 
     return-object v0
@@ -2241,7 +2217,7 @@
 
     const/4 v5, 0x0
 
-    .line 729
+    .line 728
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v6
@@ -2250,7 +2226,7 @@
 
     move-result-object v1
 
-    .line 730
+    .line 729
     .local v1, context:Landroid/content/Context;
     const-string v6, "RoamingPrefs"
 
@@ -2258,7 +2234,7 @@
 
     move-result-object v3
 
-    .line 732
+    .line 731
     .local v3, sp:Landroid/content/SharedPreferences;
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADTemp()I
 
@@ -2266,7 +2242,7 @@
 
     if-ne v6, v4, :cond_2
 
-    .line 733
+    .line 732
     const-string v6, "connect_number"
 
     const/4 v7, 0x0
@@ -2275,11 +2251,11 @@
 
     move-result-object v0
 
-    .line 734
+    .line 733
     .local v0, AutoDial:Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 735
+    .line 734
     .local v2, isSetAutoDial:Z
     if-eqz v0, :cond_0
 
@@ -2291,7 +2267,7 @@
 
     if-nez v6, :cond_0
 
-    .line 736
+    .line 735
     const-string v6, "AUTO"
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2302,7 +2278,7 @@
 
     move v2, v4
 
-    .line 737
+    .line 736
     :cond_0
     :goto_0
     invoke-static {v5}, Lcom/android/phone/PhoneUtilsExt;->findAccessCode(Z)Z
@@ -2319,7 +2295,7 @@
 
     if-eqz v2, :cond_3
 
-    .line 743
+    .line 742
     .end local v0           #AutoDial:Ljava/lang/String;
     .end local v2           #isSetAutoDial:Z
     :goto_1
@@ -2330,10 +2306,10 @@
     :cond_1
     move v2, v5
 
-    .line 736
+    .line 735
     goto :goto_0
 
-    .line 741
+    .line 740
     .end local v0           #AutoDial:Ljava/lang/String;
     .end local v2           #isSetAutoDial:Z
     :cond_2
@@ -2346,54 +2322,66 @@
     :cond_3
     move v4, v5
 
-    .line 743
+    .line 742
     goto :goto_1
 .end method
 
 .method public static isDefaultIMEI()Z
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 232
-    const-string v2, "roaming_auto_dial_for_lgt"
+    .line 229
+    const-string v3, "roaming_auto_dial_for_lgt"
 
-    invoke-static {v2}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
 
-    move-result v2
+    move-result v3
 
-    if-eqz v2, :cond_1
+    if-eqz v3, :cond_1
 
-    .line 240
-    .local v0, currentIMEI:Ljava/lang/String;
+    .line 239
+    .local v0, imei:Ljava/lang/String;
+    .local v1, telephonyManager:Landroid/telephony/TelephonyManager;
     :cond_0
     :goto_0
-    return v1
+    return v2
 
-    .line 235
-    .end local v0           #currentIMEI:Ljava/lang/String;
+    .line 232
+    .end local v0           #imei:Ljava/lang/String;
+    .end local v1           #telephonyManager:Landroid/telephony/TelephonyManager;
     :cond_1
-    const-string v2, "ril.IMEI"
+    invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
-    const-string v3, "Default"
+    move-result-object v3
 
-    invoke-static {v2, v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v4, "phone"
+
+    invoke-virtual {v3, v4}, Lcom/android/phone/PhoneApp;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/telephony/TelephonyManager;
+
+    .line 234
+    .restart local v1       #telephonyManager:Landroid/telephony/TelephonyManager;
+    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v0
 
+    .line 236
+    .restart local v0       #imei:Ljava/lang/String;
+    const-string v3, "000000000000000"
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
     .line 237
-    .restart local v0       #currentIMEI:Ljava/lang/String;
-    sget-object v2, Lcom/android/phone/PhoneUtilsExt;->defaultIMEI:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 238
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     goto :goto_0
 .end method
@@ -2403,7 +2391,7 @@
     .parameter "number"
 
     .prologue
-    .line 325
+    .line 324
     const-string v0, "114"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2468,11 +2456,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 333
+    .line 332
     :cond_0
     const/4 v0, 0x1
 
-    .line 335
+    .line 334
     :goto_0
     return v0
 
@@ -2486,7 +2474,7 @@
     .locals 3
 
     .prologue
-    .line 1101
+    .line 1100
     invoke-static {}, Lcom/android/phone/PhoneApp;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v0
@@ -2505,7 +2493,7 @@
 
     move-result-object v0
 
-    .line 1102
+    .line 1101
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v1
@@ -2516,7 +2504,7 @@
 
     move-result v1
 
-    .line 1103
+    .line 1102
     const/4 v2, 0x6
 
     if-eq v1, v2, :cond_0
@@ -2534,10 +2522,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 1106
+    .line 1105
     const/4 v0, 0x1
 
-    .line 1108
+    .line 1107
     :goto_0
     return v0
 
@@ -2553,7 +2541,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 754
+    .line 753
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v2
@@ -2562,7 +2550,7 @@
 
     move-result-object v0
 
-    .line 755
+    .line 754
     .local v0, context:Landroid/content/Context;
     const-string v2, "RoamingPrefs"
 
@@ -2570,7 +2558,7 @@
 
     move-result-object v1
 
-    .line 756
+    .line 755
     .local v1, preference:Landroid/content/SharedPreferences;
     const-string v2, "toggle_auto_dialing"
 
@@ -2585,7 +2573,7 @@
     .locals 1
 
     .prologue
-    .line 989
+    .line 988
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->LGTisPartyCall:Z
 
     return v0
@@ -2595,7 +2583,7 @@
     .locals 1
 
     .prologue
-    .line 974
+    .line 973
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->LGTmergeState:Z
 
     return v0
@@ -2605,7 +2593,7 @@
     .locals 1
 
     .prologue
-    .line 981
+    .line 980
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->LGTtransferState:Z
 
     return v0
@@ -2619,7 +2607,7 @@
 
     const/4 v7, 0x0
 
-    .line 266
+    .line 265
     const-string v8, "roaming_auto_dial_for_lgt"
 
     invoke-static {v8}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -2628,7 +2616,7 @@
 
     if-eqz v8, :cond_2
 
-    .line 267
+    .line 266
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v8
@@ -2639,7 +2627,7 @@
 
     move-result-object v0
 
-    .line 269
+    .line 268
     .local v0, context:Landroid/content/Context;
     :try_start_0
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -2652,11 +2640,11 @@
 
     move-result v5
 
-    .line 270
+    .line 269
     .local v5, roamingArea:I
     if-ne v5, v6, :cond_1
 
-    .line 271
+    .line 270
     sget-boolean v6, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
 
     if-eqz v6, :cond_0
@@ -2667,7 +2655,7 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
+    .line 271
     :cond_0
     const/4 v6, 0x1
 
@@ -2675,13 +2663,13 @@
 
     move-result-object v6
 
-    .line 294
+    .line 293
     .end local v0           #context:Landroid/content/Context;
     .end local v5           #roamingArea:I
     :goto_0
     return-object v6
 
-    .line 274
+    .line 273
     .restart local v0       #context:Landroid/content/Context;
     .restart local v5       #roamingArea:I
     :cond_1
@@ -2695,12 +2683,12 @@
 
     goto :goto_0
 
-    .line 275
+    .line 274
     .end local v5           #roamingArea:I
     :catch_0
     move-exception v2
 
-    .line 277
+    .line 276
     .local v2, e:Ljava/lang/Exception;
     const-string v6, "PhoneUtilsExt"
 
@@ -2708,20 +2696,20 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
+    .line 278
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
 
     goto :goto_0
 
-    .line 282
+    .line 281
     .end local v0           #context:Landroid/content/Context;
     .end local v2           #e:Ljava/lang/Exception;
     :cond_2
     const/4 v4, 0x0
 
-    .line 283
+    .line 282
     .local v4, isSimCardReady:Z
     invoke-static {}, Lcom/android/internal/telephony/PhoneFactory;->getDefaultPhone()Lcom/android/internal/telephony/Phone;
 
@@ -2729,7 +2717,7 @@
 
     sput-object v8, Lcom/android/phone/PhoneUtilsExt;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 284
+    .line 283
     invoke-static {}, Lcom/android/phone/PhoneApp;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v8
@@ -2738,7 +2726,7 @@
 
     move-result-object v3
 
-    .line 285
+    .line 284
     .local v3, iccCard:Lcom/android/internal/telephony/IccCard;
     const-string v8, "ril.currentplmn"
 
@@ -2746,11 +2734,11 @@
 
     move-result-object v1
 
-    .line 287
+    .line 286
     .local v1, current_plmn:Ljava/lang/String;
     if-eqz v3, :cond_3
 
-    .line 288
+    .line 287
     sget-object v8, Lcom/android/phone/PhoneUtilsExt;->phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v8}, Lcom/android/internal/telephony/Phone;->getIccCard()Lcom/android/internal/telephony/IccCard;
@@ -2767,7 +2755,7 @@
 
     move v4, v6
 
-    .line 289
+    .line 288
     :cond_3
     :goto_1
     sget-boolean v8, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
@@ -2820,7 +2808,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
+    .line 290
     :cond_4
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2834,7 +2822,7 @@
 
     if-eqz v8, :cond_7
 
-    .line 292
+    .line 291
     :cond_5
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -2845,10 +2833,10 @@
     :cond_6
     move v4, v7
 
-    .line 288
+    .line 287
     goto :goto_1
 
-    .line 294
+    .line 293
     :cond_7
     const-string v8, "domestic"
 
@@ -2885,7 +2873,7 @@
     .locals 1
 
     .prologue
-    .line 317
+    .line 316
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mSKTRADDialingToKoreaEnabled:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -2899,7 +2887,7 @@
     .locals 2
 
     .prologue
-    .line 301
+    .line 300
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mSKTRADSetting:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
     sget-object v1, Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;->Disabled:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
@@ -2935,7 +2923,7 @@
     .locals 1
 
     .prologue
-    .line 921
+    .line 920
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->smsCall:Z
 
     return v0
@@ -2945,7 +2933,7 @@
     .locals 1
 
     .prologue
-    .line 940
+    .line 939
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->isSendDtmf:Z
 
     return v0
@@ -2955,7 +2943,7 @@
     .locals 1
 
     .prologue
-    .line 931
+    .line 930
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->isSendEmptyFlash:Z
 
     return v0
@@ -2970,8 +2958,8 @@
 
     const/4 v0, 0x1
 
+    .line 1111
     .line 1112
-    .line 1113
     const-string v2, "*22"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -2980,17 +2968,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 1115
+    .line 1114
     invoke-static {v0}, Lcom/android/phone/PhoneUtilsExt;->setLGTmergeState(Z)V
 
-    .line 1116
+    .line 1115
     invoke-static {v1}, Lcom/android/phone/PhoneUtilsExt;->setLGTisPartyCall(Z)V
 
-    .line 1125
+    .line 1124
     :goto_0
     return v0
 
-    .line 1117
+    .line 1116
     :cond_0
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isSendEmptyFlash()Z
 
@@ -2998,10 +2986,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 1120
+    .line 1119
     invoke-static {v0}, Lcom/android/phone/PhoneUtilsExt;->setLGTmergeState(Z)V
 
-    .line 1121
+    .line 1120
     invoke-static {v1}, Lcom/android/phone/PhoneUtilsExt;->setLGTisPartyCall(Z)V
 
     goto :goto_0
@@ -3009,7 +2997,7 @@
     :cond_1
     move v0, v1
 
-    .line 1123
+    .line 1122
     goto :goto_0
 .end method
 
@@ -3017,7 +3005,7 @@
     .locals 3
 
     .prologue
-    .line 349
+    .line 348
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -3046,7 +3034,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 351
+    .line 350
     :cond_0
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mCallType:Lcom/android/phone/PhoneUtilsExt$CallType;
 
@@ -3060,11 +3048,11 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 352
+    .line 351
     :cond_1
     const/4 v0, 0x1
 
-    .line 354
+    .line 353
     :goto_0
     return v0
 
@@ -3079,10 +3067,10 @@
     .parameter "newState"
 
     .prologue
-    .line 1007
+    .line 1006
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mCONFCallState:Lcom/android/phone/PhoneUtilsExt$CONFCallState;
 
-    .line 1008
+    .line 1007
     return-void
 .end method
 
@@ -3091,10 +3079,10 @@
     .parameter "callCardNumber"
 
     .prologue
-    .line 892
+    .line 891
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mCallCardNumber:Ljava/lang/String;
 
-    .line 893
+    .line 892
     return-void
 .end method
 
@@ -3103,10 +3091,10 @@
     .parameter "callend"
 
     .prologue
-    .line 905
+    .line 904
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->callEnd:Z
 
-    .line 906
+    .line 905
     return-void
 .end method
 
@@ -3115,7 +3103,7 @@
     .parameter "type"
 
     .prologue
-    .line 344
+    .line 343
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -3142,11 +3130,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 345
+    .line 344
     :cond_0
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mCallType:Lcom/android/phone/PhoneUtilsExt$CallType;
 
-    .line 346
+    .line 345
     return-void
 .end method
 
@@ -3155,10 +3143,10 @@
     .parameter "contactsNumber"
 
     .prologue
-    .line 884
+    .line 883
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mContactsNumber:Ljava/lang/String;
 
-    .line 885
+    .line 884
     return-void
 .end method
 
@@ -3167,10 +3155,10 @@
     .parameter "countryCode"
 
     .prologue
-    .line 770
+    .line 769
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mCountryCode:Ljava/lang/String;
 
-    .line 771
+    .line 770
     return-void
 .end method
 
@@ -3183,7 +3171,7 @@
 
     const/4 v3, 0x1
 
-    .line 1032
+    .line 1031
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v1
@@ -3192,7 +3180,7 @@
 
     move-result v0
 
-    .line 1033
+    .line 1032
     .local v0, isEmergencyNumber:Z
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isRoamingArea()Ljava/lang/Boolean;
 
@@ -3210,7 +3198,7 @@
 
     if-nez v1, :cond_2
 
-    .line 1034
+    .line 1033
     if-eqz v0, :cond_0
 
     invoke-static {p0}, Landroid/telephony/PhoneNumberUtils;->isEmergencyNumber(Ljava/lang/String;)Z
@@ -3219,7 +3207,7 @@
 
     if-nez v1, :cond_1
 
-    .line 1036
+    .line 1035
     :cond_0
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isLGTRADSetting()Z
 
@@ -3227,7 +3215,7 @@
 
     if-eqz v1, :cond_6
 
-    .line 1037
+    .line 1036
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADTemp()I
 
     move-result v1
@@ -3236,10 +3224,10 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 1038
+    .line 1037
     invoke-static {v4}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 1065
+    .line 1064
     :cond_1
     :goto_0
     const-string v1, "0234167010"
@@ -3260,16 +3248,16 @@
 
     if-nez v1, :cond_2
 
-    .line 1067
+    .line 1066
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->changeDialingNumberForLGTRAD(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1069
+    .line 1068
     :cond_2
     return-object p0
 
-    .line 1039
+    .line 1038
     :cond_3
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADTemp()I
 
@@ -3277,14 +3265,14 @@
 
     if-ne v1, v3, :cond_4
 
-    .line 1040
+    .line 1039
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->changeDialingNumberForLGTRAD(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1042
+    .line 1041
     :cond_4
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADCallog()I
 
@@ -3294,12 +3282,12 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 1043
+    .line 1042
     invoke-static {v4}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
     goto :goto_0
 
-    .line 1045
+    .line 1044
     :cond_5
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->changeDialingNumberForLGTRAD(Ljava/lang/String;)Ljava/lang/String;
 
@@ -3307,7 +3295,7 @@
 
     goto :goto_0
 
-    .line 1048
+    .line 1047
     :cond_6
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADTemp()I
 
@@ -3315,14 +3303,14 @@
 
     if-ne v1, v3, :cond_7
 
-    .line 1049
+    .line 1048
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->changeDialingNumberForLGTRAD(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1050
+    .line 1049
     :cond_7
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADTemp()I
 
@@ -3330,14 +3318,14 @@
 
     if-ne v1, v3, :cond_8
 
-    .line 1051
+    .line 1050
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->changeDialingNumberForLGTRAD(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1052
+    .line 1051
     :cond_8
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isSMS()Z
 
@@ -3345,17 +3333,17 @@
 
     if-eqz v1, :cond_9
 
-    .line 1053
+    .line 1052
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->findAccessCode(Z)Z
 
-    .line 1054
+    .line 1053
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->changeDialingNumberForLGTRAD(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1056
+    .line 1055
     :cond_9
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getLGTRADCallog()I
 
@@ -3365,17 +3353,17 @@
 
     if-ne v1, v2, :cond_a
 
-    .line 1057
+    .line 1056
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->findAccessCode(Z)Z
 
-    .line 1058
+    .line 1057
     invoke-static {p0}, Lcom/android/phone/PhoneUtilsExt;->changeDialingNumberForLGTRAD(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 1060
+    .line 1059
     :cond_a
     invoke-static {v4}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
@@ -3387,10 +3375,10 @@
     .parameter "revert"
 
     .prologue
-    .line 430
+    .line 429
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->mRevertDialingNumber:Z
 
-    .line 431
+    .line 430
     return-void
 .end method
 
@@ -3399,10 +3387,10 @@
     .parameter "isSend"
 
     .prologue
-    .line 935
+    .line 934
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->isSendEmptyFlash:Z
 
-    .line 936
+    .line 935
     return-void
 .end method
 
@@ -3412,7 +3400,7 @@
     .parameter
 
     .prologue
-    .line 1073
+    .line 1072
     const-string v0, "mwcho"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3445,7 +3433,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1074
+    .line 1073
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isRoamingArea()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -3480,12 +3468,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1077
+    .line 1076
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getSKTRADOutgoingCallNumber()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1078
+    .line 1077
     const-string v0, "mwcho"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3508,7 +3496,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1080
+    .line 1079
     :cond_0
     const-string v0, "mwcho"
 
@@ -3532,7 +3520,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1081
+    .line 1080
     return-object p0
 .end method
 
@@ -3541,10 +3529,10 @@
     .parameter "accessCode"
 
     .prologue
-    .line 760
+    .line 759
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mInternationalAccessCode:Ljava/lang/String;
 
-    .line 761
+    .line 760
     return-void
 .end method
 
@@ -3553,10 +3541,10 @@
     .parameter "callog"
 
     .prologue
-    .line 795
+    .line 794
     sput p0, Lcom/android/phone/PhoneUtilsExt;->mLGTRADCallog:I
 
-    .line 796
+    .line 795
     return-void
 .end method
 
@@ -3565,10 +3553,10 @@
     .parameter "temp"
 
     .prologue
-    .line 787
+    .line 786
     sput p0, Lcom/android/phone/PhoneUtilsExt;->mLGTRADTemp:I
 
-    .line 788
+    .line 787
     return-void
 .end method
 
@@ -3577,10 +3565,10 @@
     .parameter "lGTisPartyCall"
 
     .prologue
-    .line 993
+    .line 992
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->LGTisPartyCall:Z
 
-    .line 994
+    .line 993
     return-void
 .end method
 
@@ -3589,10 +3577,10 @@
     .parameter "lGTmergeState"
 
     .prologue
-    .line 978
+    .line 977
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->LGTmergeState:Z
 
-    .line 979
+    .line 978
     return-void
 .end method
 
@@ -3601,10 +3589,10 @@
     .parameter "lGTtransferState"
 
     .prologue
-    .line 985
+    .line 984
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->LGTtransferState:Z
 
-    .line 986
+    .line 985
     return-void
 .end method
 
@@ -3612,12 +3600,12 @@
     .locals 3
 
     .prologue
-    .line 1012
+    .line 1011
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
 
-    .line 1013
+    .line 1012
     .local v0, app:Lcom/android/phone/PhoneApp;
     iget-object v1, v0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
@@ -3629,7 +3617,7 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 1015
+    .line 1014
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getTHRWAYCallState()Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
     move-result-object v1
@@ -3638,14 +3626,14 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1016
+    .line 1015
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isLGTmergeState()Z
 
     move-result v1
 
     sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->canMulti:Z
 
-    .line 1017
+    .line 1016
     :cond_0
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getTHRWAYCallState()Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
@@ -3655,19 +3643,19 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1018
+    .line 1017
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isLGTtransferState()Z
 
     move-result v1
 
     sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->canMulti:Z
 
-    .line 1028
+    .line 1027
     :cond_1
     :goto_0
     return-void
 
-    .line 1019
+    .line 1018
     :cond_2
     iget-object v1, v0, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
@@ -3679,7 +3667,7 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 1021
+    .line 1020
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getCONFCallState()Lcom/android/phone/PhoneUtilsExt$CONFCallState;
 
     move-result-object v1
@@ -3688,14 +3676,14 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 1022
+    .line 1021
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->isLGTmergeState()Z
 
     move-result v1
 
     sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->canMulti:Z
 
-    .line 1023
+    .line 1022
     :cond_3
     invoke-static {}, Lcom/android/phone/PhoneUtilsExt;->getCONFCallState()Lcom/android/phone/PhoneUtilsExt$CONFCallState;
 
@@ -3705,14 +3693,14 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1024
+    .line 1023
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->canMulti:Z
 
     goto :goto_0
 
-    .line 1026
+    .line 1025
     :cond_4
     const/4 v1, 0x0
 
@@ -3726,10 +3714,10 @@
     .parameter "set"
 
     .prologue
-    .line 601
+    .line 600
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->mOpticsCallHistoryShow:Z
 
-    .line 602
+    .line 601
     return-void
 .end method
 
@@ -3738,10 +3726,10 @@
     .parameter "isKorea"
 
     .prologue
-    .line 909
+    .line 908
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->outgoingToKorea:Z
 
-    .line 910
+    .line 909
     return-void
 .end method
 
@@ -3751,7 +3739,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 387
+    .line 386
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
@@ -3770,19 +3758,19 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 403
+    .line 402
     sget-object v0, Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;->Disabled:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
     sput-object v0, Lcom/android/phone/PhoneUtilsExt;->mSKTRADSetting:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
-    .line 404
+    .line 403
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
-    .line 407
+    .line 406
     :goto_0
     return-void
 
-    .line 390
+    .line 389
     :pswitch_0
     sget-object v0, Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;->Enabled:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
@@ -3790,18 +3778,18 @@
 
     goto :goto_0
 
-    .line 394
+    .line 393
     :pswitch_1
     sget-object v0, Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;->Disabled:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
     sput-object v0, Lcom/android/phone/PhoneUtilsExt;->mSKTRADSetting:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
-    .line 395
+    .line 394
     invoke-static {v3}, Lcom/android/phone/PhoneUtilsExt;->setDialingNumberRevert(Z)V
 
     goto :goto_0
 
-    .line 399
+    .line 398
     :pswitch_2
     sget-object v0, Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;->OnlyOutgoingToKorea:Lcom/android/phone/PhoneUtilsExt$SKTRADSetting;
 
@@ -3809,7 +3797,7 @@
 
     goto :goto_0
 
-    .line 387
+    .line 386
     nop
 
     :pswitch_data_0
@@ -3824,10 +3812,10 @@
     .locals 5
 
     .prologue
-    .line 958
+    .line 957
     sget-object v1, Lcom/android/phone/PhoneUtilsExt;->currentPrlVer:Ljava/lang/String;
 
-    .line 959
+    .line 958
     .local v1, lastest_prl:Ljava/lang/String;
     const-string v2, "ril.prl_ver_3"
 
@@ -3835,7 +3823,7 @@
 
     move-result-object v0
 
-    .line 960
+    .line 959
     .local v0, current_prl:Ljava/lang/String;
     const-string v2, "PhoneUtilsExt"
 
@@ -3869,14 +3857,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 961
+    .line 960
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 962
+    .line 961
     invoke-static {}, Lcom/android/phone/PhoneApp;->getPhone()Lcom/android/internal/telephony/Phone;
 
     move-result-object v2
@@ -3893,11 +3881,11 @@
 
     sput-object v2, Lcom/android/phone/PhoneUtilsExt;->PrlupdateSuccessString:Ljava/lang/String;
 
-    .line 967
+    .line 966
     :goto_0
     return-void
 
-    .line 964
+    .line 963
     :cond_0
     invoke-static {}, Lcom/android/phone/PhoneApp;->getPhone()Lcom/android/internal/telephony/Phone;
 
@@ -3915,7 +3903,7 @@
 
     sput-object v2, Lcom/android/phone/PhoneUtilsExt;->PrlupdateSuccessString:Ljava/lang/String;
 
-    .line 965
+    .line 964
     sput-object v0, Lcom/android/phone/PhoneUtilsExt;->currentPrlVer:Ljava/lang/String;
 
     goto :goto_0
@@ -3927,7 +3915,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 747
+    .line 746
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v2
@@ -3936,7 +3924,7 @@
 
     move-result-object v0
 
-    .line 748
+    .line 747
     .local v0, context:Landroid/content/Context;
     const-string v2, "RoamingPrefs"
 
@@ -3946,7 +3934,7 @@
 
     move-result-object v1
 
-    .line 749
+    .line 748
     .local v1, preference:Landroid/content/SharedPreferences;
     const-string v2, "connect_number"
 
@@ -3956,7 +3944,7 @@
 
     invoke-static {v2}, Lcom/android/phone/PhoneUtilsExt;->setInternationalAccessCode(Ljava/lang/String;)V
 
-    .line 750
+    .line 749
     const-string v2, "country_number"
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -3965,7 +3953,7 @@
 
     invoke-static {v2}, Lcom/android/phone/PhoneUtilsExt;->setCountryCode(Ljava/lang/String;)V
 
-    .line 751
+    .line 750
     return-void
 .end method
 
@@ -3976,7 +3964,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 557
+    .line 556
     sget-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mIsWzoneCall:Z
 
     if-eqz v0, :cond_0
@@ -3985,7 +3973,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 558
+    .line 557
     sget-object v0, Lcom/android/phone/PhoneUtilsExt;->mWzoneprefix:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -3996,7 +3984,7 @@
 
     move-result-object p0
 
-    .line 573
+    .line 572
     :cond_0
     const-string v0, "***"
 
@@ -4006,23 +3994,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 574
+    .line 573
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/phone/PhoneUtilsExt;->mIsCMFCall:Z
 
-    .line 575
+    .line 574
     sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->mIsMessageCall:Z
 
-    .line 581
+    .line 580
     :goto_0
     return-void
 
-    .line 577
+    .line 576
     :cond_1
     sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->mIsCMFCall:Z
 
-    .line 578
+    .line 577
     sput-boolean v1, Lcom/android/phone/PhoneUtilsExt;->mIsMessageCall:Z
 
     goto :goto_0
@@ -4033,10 +4021,10 @@
     .parameter "set"
 
     .prologue
-    .line 434
+    .line 433
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->mSKTRADDialingToKoreaEnabled:Z
 
-    .line 435
+    .line 434
     return-void
 .end method
 
@@ -4045,10 +4033,10 @@
     .parameter "outgoingCallString"
 
     .prologue
-    .line 414
+    .line 413
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mOutgoingCallString:Ljava/lang/String;
 
-    .line 415
+    .line 414
     return-void
 .end method
 
@@ -4057,10 +4045,10 @@
     .parameter "outgoingCallUri"
 
     .prologue
-    .line 410
+    .line 409
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mOutgoingCallUri:Landroid/net/Uri;
 
-    .line 411
+    .line 410
     return-void
 .end method
 
@@ -4069,10 +4057,10 @@
     .parameter "sms"
 
     .prologue
-    .line 917
+    .line 916
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->smsCall:Z
 
-    .line 918
+    .line 917
     return-void
 .end method
 
@@ -4081,10 +4069,10 @@
     .parameter "isSend"
 
     .prologue
-    .line 944
+    .line 943
     sput-boolean p0, Lcom/android/phone/PhoneUtilsExt;->isSendDtmf:Z
 
-    .line 945
+    .line 944
     return-void
 .end method
 
@@ -4093,10 +4081,10 @@
     .parameter "newState"
 
     .prologue
-    .line 1003
+    .line 1002
     sput-object p0, Lcom/android/phone/PhoneUtilsExt;->mTHRWAYCallState:Lcom/android/phone/PhoneUtilsExt$THRWAYCallState;
 
-    .line 1004
+    .line 1003
     return-void
 .end method
 
@@ -4105,14 +4093,14 @@
     .parameter "number"
 
     .prologue
-    .line 419
+    .line 418
     move-object v0, p0
 
-    .line 420
+    .line 419
     .local v0, inputNumber:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 422
+    .line 421
     const-string v1, "\\,.*"
 
     const-string v2, ""
@@ -4121,7 +4109,7 @@
 
     move-result-object v0
 
-    .line 423
+    .line 422
     const-string v1, "\\;.*"
 
     const-string v2, ""
@@ -4130,7 +4118,7 @@
 
     move-result-object v0
 
-    .line 425
+    .line 424
     :cond_0
     sget-boolean v1, Lcom/android/phone/PhoneUtilsExt;->DBG:Z
 
@@ -4168,10 +4156,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
+    .line 425
     :cond_1
     sput-object v0, Lcom/android/phone/PhoneUtilsExt;->mUserInputDialingNumber:Ljava/lang/String;
 
-    .line 427
+    .line 426
     return-void
 .end method

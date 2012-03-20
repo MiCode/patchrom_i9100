@@ -31,25 +31,25 @@
     .parameter "baseContext"
 
     .prologue
-    .line 410
+    .line 441
     iput-object p1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
-    .line 407
+    .line 438
     const/4 v0, 0x1
 
     iput v0, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->TOUCH_DISABLE:I
 
-    .line 408
+    .line 439
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->TOUCH_ENABLE:I
 
-    .line 411
+    .line 442
     iput-object p2, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 
-    .line 412
+    .line 443
     return-void
 .end method
 
@@ -60,27 +60,27 @@
     .parameter "e"
 
     .prologue
-    .line 466
+    .line 497
     const-string v1, "ViewRootImpl"
 
     const-string v2, "[Surface Touch Event] Hand Touched"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
+    .line 498
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.HAND_TOUCHED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 468
+    .line 499
     .local v0, statusIntent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 469
+    .line 500
     const/4 v1, 0x0
 
     return v1
@@ -95,44 +95,44 @@
 
     const/4 v3, 0x1
 
-    .line 437
+    .line 468
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     if-ne v1, v3, :cond_0
 
-    .line 438
+    .line 469
     const-string v1, "ViewRootImpl"
 
     const-string v2, "[Surface Touch Event] Palm Touch Up"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 439
+    .line 470
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->this$0:Landroid/view/ViewRootImpl;
 
     #setter for: Landroid/view/ViewRootImpl;->g_bPalmTouched:Z
     invoke-static {v1, v4}, Landroid/view/ViewRootImpl;->access$102(Landroid/view/ViewRootImpl;Z)Z
 
-    .line 440
+    .line 471
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.PALM_UP"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 441
+    .line 472
     .local v0, statusIntent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 449
+    .line 480
     :goto_0
     return v4
 
-    .line 443
+    .line 474
     .end local v0           #statusIntent:Landroid/content/Intent;
     :cond_0
     const-string v1, "ViewRootImpl"
@@ -141,26 +141,26 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
+    .line 475
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->this$0:Landroid/view/ViewRootImpl;
 
     #setter for: Landroid/view/ViewRootImpl;->g_bPalmTouched:Z
     invoke-static {v1, v3}, Landroid/view/ViewRootImpl;->access$102(Landroid/view/ViewRootImpl;Z)Z
 
-    .line 445
+    .line 476
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->this$0:Landroid/view/ViewRootImpl;
 
     #setter for: Landroid/view/ViewRootImpl;->g_bPalmTouchedKey:Z
     invoke-static {v1, v3}, Landroid/view/ViewRootImpl;->access$202(Landroid/view/ViewRootImpl;Z)Z
 
-    .line 446
+    .line 477
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.PALM_DOWN"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 447
+    .line 478
     .restart local v0       #statusIntent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 
@@ -178,27 +178,27 @@
 
     const/4 v1, 0x0
 
-    .line 428
+    .line 459
     if-ne p1, v2, :cond_1
 
-    .line 429
+    .line 460
     iget-object v0, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->this$0:Landroid/view/ViewRootImpl;
 
     #setter for: Landroid/view/ViewRootImpl;->g_bNotTouched:Z
     invoke-static {v0, v2}, Landroid/view/ViewRootImpl;->access$002(Landroid/view/ViewRootImpl;Z)Z
 
-    .line 433
+    .line 464
     :cond_0
     :goto_0
     return v1
 
-    .line 430
+    .line 461
     :cond_1
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 431
+    .line 462
     iget-object v0, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->this$0:Landroid/view/ViewRootImpl;
 
     #setter for: Landroid/view/ViewRootImpl;->g_bNotTouched:Z
@@ -212,32 +212,32 @@
     .parameter "direction"
 
     .prologue
-    .line 415
+    .line 446
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 416
+    .line 447
     const-string v1, "ViewRootImpl"
 
     const-string v2, "[Surface Touch Event] Palm Sweep - Right"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 417
+    .line 448
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SWEEP_RIGHT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 418
+    .line 449
     .local v0, statusIntent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 424
+    .line 455
     .end local v0           #statusIntent:Landroid/content/Intent;
     :cond_0
     :goto_0
@@ -245,27 +245,27 @@
 
     return v1
 
-    .line 419
+    .line 450
     :cond_1
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_0
 
-    .line 420
+    .line 451
     const-string v1, "ViewRootImpl"
 
     const-string v2, "[Surface Touch Event] Palm Sweep - Left"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
+    .line 452
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.SWEEP_LEFT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 422
+    .line 453
     .restart local v0       #statusIntent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 
@@ -283,32 +283,32 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 453
+    .line 484
     cmpl-float v1, p3, v2
 
     if-lez v1, :cond_1
 
-    .line 454
+    .line 485
     const-string v1, "ViewRootImpl"
 
     const-string v2, "[Surface Touch Event] Twist Right"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 455
+    .line 486
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.TWIST_RIGHT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 456
+    .line 487
     .local v0, statusIntent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 462
+    .line 493
     .end local v0           #statusIntent:Landroid/content/Intent;
     :cond_0
     :goto_0
@@ -316,27 +316,27 @@
 
     return v1
 
-    .line 457
+    .line 488
     :cond_1
     cmpg-float v1, p3, v2
 
     if-gez v1, :cond_0
 
-    .line 458
+    .line 489
     const-string v1, "ViewRootImpl"
 
     const-string v2, "[Surface Touch Event] Twist Left"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
+    .line 490
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.TWIST_LEFT"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 460
+    .line 491
     .restart local v0       #statusIntent:Landroid/content/Intent;
     iget-object v1, p0, Landroid/view/ViewRootImpl$GestureSurfaceTouch;->mContext:Landroid/content/Context;
 

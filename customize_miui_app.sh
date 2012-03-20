@@ -9,3 +9,7 @@ XMLMERGYTOOL=$PORT_ROOT/tools/ResValuesModify/jar/ResValuesModify
 if [ $1 = "MiuiSystemUI" ];then
 	$XMLMERGYTOOL $1/res/values $2/res/values
 fi
+
+if [ $1 = "Mms" ];then
+	$XMLMERGYTOOL $1/res/values $2/res/values
+fi

@@ -1293,25 +1293,21 @@
     .end annotation
 
     .prologue
-    .line 843
     const-string v15, "getUSIMPBCapa"
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v15}, Lcom/android/internal/telephony/IccProvider;->log(Ljava/lang/String;)V
 
-    .line 844
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 845
     .local v13, results:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/util/ArrayList;>;"
     new-instance v14, Lcom/android/internal/telephony/UsimPhonebookCapaInfo;
 
     invoke-direct {v14}, Lcom/android/internal/telephony/UsimPhonebookCapaInfo;-><init>()V
 
-    .line 847
     .local v14, usimPhonebookCapaInfo:Lcom/android/internal/telephony/UsimPhonebookCapaInfo;
     :try_start_0
     const-string v15, "simphonebook"
@@ -1851,19 +1847,15 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 800
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 802
     :cond_3
     const-string v8, "loadFromEf: return results"
 
     invoke-virtual {p0, v8}, Lcom/android/internal/telephony/IccProvider;->log(Ljava/lang/String;)V
 
-    .line 803
     return-object v5
 
-    .line 777
     :catch_1
     move-exception v8
 
@@ -2919,19 +2911,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 624
     const-string v2, "Change null"
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v2}, Lcom/android/internal/telephony/IccProvider;->log(Ljava/lang/String;)V
 
-    .line 625
     const-string v4, ""
 
     goto :goto_1
 
-    .line 563
     .end local v3           #efType:I
     .end local v4           #tag:Ljava/lang/String;
     .end local v5           #number:Ljava/lang/String;
@@ -3063,19 +3052,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 630
     const-string v2, "Change null"
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v2}, Lcom/android/internal/telephony/IccProvider;->log(Ljava/lang/String;)V
 
-    .line 631
     const-string v5, ""
 
     goto/16 :goto_1
 
-    .line 634
     :cond_4
     const-string v2, "emails"
 

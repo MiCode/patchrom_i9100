@@ -900,15 +900,13 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 464
     .local v0, audioManager:Landroid/media/AudioManager;
-    const-string/jumbo v3, "shutdown"
+    const-string v3, "shutdown"
 
     const-string v4, "1"
 
     invoke-virtual {v0, v3, v4}, Landroid/media/AudioManager;->setParameter(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 468
     # it is a Landroid/app/ProgressDialog object in android.
     new-instance v2, Lcom/android/internal/app/ProgressDialog;
 
@@ -1453,7 +1451,6 @@
 
     const v3, 0x104015f
 
-    .line 172
     .local v3, resourceId:I
     :goto_1
     invoke-static {v3}, Lcom/android/internal/app/ShutdownThread;->getResourceId(I)I
@@ -1464,14 +1461,12 @@
 
     sput-object p0, Lcom/android/internal/app/ShutdownThread;->mContext:Landroid/content/Context;
 
-    .line 174
     new-instance v1, Ljava/io/File;
 
     const-string v6, "//system/media/video/shutdown/shutdown.qmg"
 
     invoke-direct {v1, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 175
     .local v1, f:Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->isFile()Z
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 279
+    .line 280
     iput-object p1, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +43,12 @@
     .parameter "proxy"
 
     .prologue
-    .line 281
+    .line 282
     iget-object v1, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     monitor-enter v1
 
-    .line 282
+    .line 283
     :try_start_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
@@ -58,7 +58,7 @@
     #setter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mHeadsetService:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v0, p2}, Landroid/bluetooth/BluetoothDeviceProfileState;->access$1302(Landroid/bluetooth/BluetoothDeviceProfileState;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
-    .line 283
+    .line 284
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     #getter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mAutoConnectionPending:Z
@@ -68,14 +68,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 284
+    .line 285
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     const/16 v2, 0x65
 
     invoke-virtual {v0, v2}, Landroid/bluetooth/BluetoothDeviceProfileState;->sendMessage(I)V
 
-    .line 285
+    .line 286
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     const/4 v2, 0x0
@@ -83,14 +83,14 @@
     #setter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mAutoConnectionPending:Z
     invoke-static {v0, v2}, Landroid/bluetooth/BluetoothDeviceProfileState;->access$1402(Landroid/bluetooth/BluetoothDeviceProfileState;Z)Z
 
-    .line 287
+    .line 288
     :cond_0
     monitor-exit v1
 
-    .line 288
+    .line 289
     return-void
 
-    .line 287
+    .line 288
     :catchall_0
     move-exception v0
 
@@ -106,12 +106,12 @@
     .parameter "profile"
 
     .prologue
-    .line 290
+    .line 291
     iget-object v1, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
     monitor-enter v1
 
-    .line 291
+    .line 292
     :try_start_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothDeviceProfileState$2;->this$0:Landroid/bluetooth/BluetoothDeviceProfileState;
 
@@ -120,13 +120,13 @@
     #setter for: Landroid/bluetooth/BluetoothDeviceProfileState;->mHeadsetService:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v0, v2}, Landroid/bluetooth/BluetoothDeviceProfileState;->access$1302(Landroid/bluetooth/BluetoothDeviceProfileState;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
-    .line 292
+    .line 293
     monitor-exit v1
 
-    .line 293
+    .line 294
     return-void
 
-    .line 292
+    .line 293
     :catchall_0
     move-exception v0
 

@@ -875,7 +875,7 @@
     .end local v0           #imageDescId:I
     .end local v1           #imageResId:I
     :sswitch_2
-    const v1, 0x1080318
+    const v1, 0x1080317
 
     .line 359
     .restart local v1       #imageResId:I

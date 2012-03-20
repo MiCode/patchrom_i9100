@@ -30,7 +30,7 @@
         <item>显示号码</item>
     </string-array>
     <string-array name="clir_values">
-        <item>默认</item>
+        <item>默认日历</item>
         <item>隐藏</item>
         <item>显示</item>
     </string-array>
@@ -56,7 +56,7 @@
     </string-array>
     <string-array name="list_language_entries">
         <item>English</item>
-        <item>French</item>
+        <item>法语</item>
         <item>西班牙</item>
         <item>日语</item>
         <item>韩语</item>

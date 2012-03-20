@@ -347,11 +347,6 @@
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 118
-    const-string v1, "Inflate Incoming widget view (portrait)"
-
-    invoke-direct {p0, v1}, Lcom/android/phone/IncomingSlidingWidget;->log(Ljava/lang/String;)V
-
     .line 119
     invoke-direct {p0}, Lcom/android/phone/IncomingSlidingWidget;->linkControls()V
 
@@ -475,13 +470,8 @@
     :goto_0
     return-void
 
-    .line 205
-    :pswitch_0
-    const-string v0, "LEFT_HANDLE: answer!"
-
-    invoke-direct {p0, v0}, Lcom/android/phone/IncomingSlidingWidget;->log(Ljava/lang/String;)V
-
     .line 207
+    :pswitch_0
     invoke-direct {p0}, Lcom/android/phone/IncomingSlidingWidget;->hideIncomingCallWidget()V
 
     .line 211
@@ -550,13 +540,8 @@
 
     goto :goto_0
 
-    .line 227
-    :pswitch_1
-    const-string v0, "RIGHT_HANDLE: reject!"
-
-    invoke-direct {p0, v0}, Lcom/android/phone/IncomingSlidingWidget;->log(Ljava/lang/String;)V
-
     .line 229
+    :pswitch_1
     invoke-direct {p0}, Lcom/android/phone/IncomingSlidingWidget;->hideIncomingCallWidget()V
 
     .line 233
@@ -623,11 +608,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 203
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -113,22 +113,18 @@
 
     iput-object v1, p0, Lcom/sec/android/app/callsetting/allcalls/AutoReject;->mBlackList:Landroid/preference/PreferenceScreen;
 
-    .line 53
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/allcalls/AutoReject;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 54
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 56
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 58
     :cond_0
     return-void
 .end method

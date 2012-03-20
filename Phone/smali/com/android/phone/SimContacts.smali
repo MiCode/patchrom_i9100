@@ -764,22 +764,18 @@
 
     invoke-virtual {p0, v4}, Lcom/android/phone/SimContacts;->registerForContextMenu(Landroid/view/View;)V
 
-    .line 233
     invoke-virtual {p0}, Lcom/android/phone/SimContacts;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v2
 
-    .line 234
     .local v2, actionBar:Landroid/app/ActionBar;
     if-eqz v2, :cond_1
 
-    .line 236
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v2, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 238
     :cond_1
     return-void
 .end method

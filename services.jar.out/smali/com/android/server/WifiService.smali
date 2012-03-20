@@ -484,7 +484,7 @@
     iput-boolean v3, p0, Lcom/android/server/WifiService;->mBackgroundScanSupported:Z
 
     .line 502
-    const v3, 0x1080515
+    const v3, 0x1080512
 
     iput v3, p0, Lcom/android/server/WifiService;->ICON_NETWORKS_AVAILABLE:I
 

@@ -53,7 +53,7 @@
     .line 61
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 248
+    .line 254
     return-void
 .end method
 
@@ -71,7 +71,7 @@
     .locals 2
 
     .prologue
-    .line 280
+    .line 286
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -86,7 +86,7 @@
 
     if-nez v0, :cond_0
 
-    .line 281
+    .line 287
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not on the UI thread!"
@@ -95,7 +95,7 @@
 
     throw v0
 
-    .line 283
+    .line 289
     :cond_0
     return-void
 .end method

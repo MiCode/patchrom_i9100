@@ -1817,28 +1817,22 @@
 
     const/4 v5, 0x0
 
-    .line 141
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 142
     const v3, 0x7f030007
 
     invoke-virtual {p0, v3}, Lcom/sec/android/app/callsetting/allcalls/BlackListNumber;->setContentView(I)V
 
-    .line 144
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/allcalls/BlackListNumber;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 145
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 147
     invoke-virtual {v0, v6}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v6}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 149
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/allcalls/BlackListNumber;->getApplicationContext()Landroid/content/Context;
 

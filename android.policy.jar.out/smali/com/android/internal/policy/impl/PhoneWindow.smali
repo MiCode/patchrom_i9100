@@ -4059,7 +4059,7 @@
 
     move-result-object v19
 
-    const v20, 0x10103c8
+    const v20, 0x10103ca
 
     const/16 v21, 0x1
 
@@ -4308,7 +4308,7 @@
 
     move-result-object v19
 
-    const v20, 0x10103c9
+    const v20, 0x10103cb
 
     const/16 v21, 0x1
 
@@ -4376,7 +4376,7 @@
 
     move-result-object v19
 
-    const v20, 0x10103ca
+    const v20, 0x10103cc
 
     const/16 v21, 0x1
 

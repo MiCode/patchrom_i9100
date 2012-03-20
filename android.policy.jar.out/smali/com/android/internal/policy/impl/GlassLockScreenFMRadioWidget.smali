@@ -225,7 +225,7 @@
 
     .line 155
     .local v1, inflater:Landroid/view/LayoutInflater;
-    const v2, 0x10900d5
+    const v2, 0x10900d8
 
     invoke-virtual {v1, v2, p0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -1376,7 +1376,7 @@
     .line 252
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mPauseButton:Landroid/widget/ImageButton;
 
-    const v2, 0x108071d
+    const v2, 0x1080723
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
@@ -1384,7 +1384,7 @@
     :goto_3
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mFMAppImage:Landroid/widget/ImageView;
 
-    const v2, 0x10803f0
+    const v2, 0x10803ed
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1394,7 +1394,7 @@
     :cond_4
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mPauseButton:Landroid/widget/ImageButton;
 
-    const v2, 0x108071c
+    const v2, 0x1080722
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
@@ -1516,7 +1516,7 @@
     .line 285
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mPauseButton:Landroid/widget/ImageButton;
 
-    const v1, 0x108071d
+    const v1, 0x1080723
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
@@ -1527,7 +1527,7 @@
     .line 290
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mFMAppImage:Landroid/widget/ImageView;
 
-    const v1, 0x10803f0
+    const v1, 0x10803ed
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1537,7 +1537,7 @@
     :cond_5
     iget-object v0, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mPauseButton:Landroid/widget/ImageButton;
 
-    const v1, 0x108071c
+    const v1, 0x1080722
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
@@ -1870,7 +1870,7 @@
     .line 576
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mMaxFMRadio:Landroid/widget/FrameLayout;
 
-    const v2, 0x108070b
+    const v2, 0x1080711
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
@@ -2031,7 +2031,7 @@
     .line 563
     iget-object v1, p0, Lcom/android/internal/policy/impl/GlassLockScreenFMRadioWidget;->mMaxFMRadio:Landroid/widget/FrameLayout;
 
-    const v2, 0x108070c
+    const v2, 0x1080712
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 

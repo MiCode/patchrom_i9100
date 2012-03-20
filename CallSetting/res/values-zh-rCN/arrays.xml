@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="calldiverting_list">
-        <item>始终</item>
+        <item>总是</item>
         <item>遇忙转移</item>
         <item>无应答转移</item>
         <item>不可接通转移</item>
@@ -31,7 +31,7 @@
         <item>5秒</item>
     </string-array>
     <string-array name="autoreject_alert">
-        <item>通讯记录</item>
+        <item>记录</item>
         <item>联系人</item>
     </string-array>
     <string-array name="fakecallerimage_alert">
@@ -39,34 +39,34 @@
         <item>拍照</item>
     </string-array>
     <string-array name="callerimage_alert_video_default">
-        <item>图像</item>
+        <item>图片</item>
         <item>录像</item>
     </string-array>
     <string-array name="callerimage_alert_video_changed">
         <item>默认图像</item>
-        <item>图像</item>
+        <item>图片</item>
         <item>录像</item>
     </string-array>
     <string-array name="callerimage_alert_default">
-        <item>图像</item>
+        <item>图片</item>
         <item>录像</item>
         <item>拍照</item>
-        <item>拍摄录像</item>
+        <item>录制视频</item>
     </string-array>
     <string-array name="callerimage_alert_changed">
         <item>默认图像</item>
-        <item>图像</item>
+        <item>图片</item>
         <item>录像</item>
         <item>拍照</item>
-        <item>拍摄录像</item>
+        <item>录制视频</item>
     </string-array>
     <string-array name="entries_list_preference">
-        <item>Off</item>
-        <item>After 1 second</item>
-        <item>After 2 seconds</item>
-        <item>After 3 seconds</item>
-        <item>After 4 seconds</item>
-        <item>After 5 seconds</item>
+        <item>关闭</item>
+        <item>1秒钟之后</item>
+        <item>2 秒后</item>
+        <item>3 秒后</item>
+        <item>4 秒后</item>
+        <item>5秒钟之后</item>
     </string-array>
     <string-array name="entryvalues_list_preference">
         <item>0</item>
@@ -78,7 +78,7 @@
     </string-array>
     <string-array name="match_criteria_entries">
         <item>完全一样</item>
-        <item>开始以</item>
+        <item>开始于</item>
         <item>结束于</item>
         <item>包括</item>
     </string-array>
@@ -92,5 +92,10 @@
         <item>关</item>
         <item>全部号码</item>
         <item>自动拒绝号码</item>
+    </string-array>
+    <string-array name="auto_reject_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 </resources>

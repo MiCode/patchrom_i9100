@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 695
+    .line 718
     iput-object p1, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
     iput-object p2, p0, Lcom/android/server/DevicePolicyManagerService$2;->val$admin:Lcom/android/server/DevicePolicyManagerService$ActiveAdmin;
@@ -50,10 +50,10 @@
     .parameter "intent"
 
     .prologue
-    .line 698
+    .line 721
     monitor-enter p0
 
-    .line 699
+    .line 722
     :try_start_0
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->val$admin:Lcom/android/server/DevicePolicyManagerService$ActiveAdmin;
 
@@ -65,7 +65,7 @@
 
     move-result v0
 
-    .line 701
+    .line 724
     .local v0, doProxyCleanup:Z
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
@@ -75,7 +75,7 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 702
+    .line 725
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
     iget-object v5, v5, Lcom/android/server/DevicePolicyManagerService;->mAdminMap:Ljava/util/HashMap;
@@ -84,26 +84,26 @@
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 703
+    .line 726
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
     invoke-virtual {v5}, Lcom/android/server/DevicePolicyManagerService;->validatePasswordOwnerLocked()V
 
-    .line 704
+    .line 727
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
     invoke-virtual {v5}, Lcom/android/server/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked()V
 
-    .line 705
+    .line 728
     if-eqz v0, :cond_0
 
-    .line 706
+    .line 729
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
     #calls: Lcom/android/server/DevicePolicyManagerService;->resetGlobalProxy()V
     invoke-static {v5}, Lcom/android/server/DevicePolicyManagerService;->access$200(Lcom/android/server/DevicePolicyManagerService;)V
 
-    .line 710
+    .line 733
     :cond_0
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
 
@@ -115,7 +115,7 @@
 
     move-result-wide v3
 
-    .line 711
+    .line 734
     .local v3, timeMs:J
     const-wide/16 v5, 0x0
 
@@ -123,10 +123,10 @@
 
     if-gtz v5, :cond_1
 
-    .line 712
+    .line 735
     const-wide/32 v3, 0x7fffffff
 
-    .line 715
+    .line 738
     :cond_1
     :try_start_1
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
@@ -144,7 +144,7 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 722
+    .line 745
     :goto_0
     :try_start_2
     iget-object v5, p0, Lcom/android/server/DevicePolicyManagerService$2;->this$0:Lcom/android/server/DevicePolicyManagerService;
@@ -152,17 +152,17 @@
     #calls: Lcom/android/server/DevicePolicyManagerService;->saveSettingsLocked()V
     invoke-static {v5}, Lcom/android/server/DevicePolicyManagerService;->access$100(Lcom/android/server/DevicePolicyManagerService;)V
 
-    .line 723
+    .line 746
     monitor-exit p0
 
-    .line 724
+    .line 747
     return-void
 
-    .line 716
+    .line 739
     :catch_0
     move-exception v1
 
-    .line 717
+    .line 740
     .local v1, e:Landroid/os/RemoteException;
     const-string v5, "DevicePolicyManagerService"
 
@@ -172,7 +172,7 @@
 
     goto :goto_0
 
-    .line 723
+    .line 746
     .end local v0           #doProxyCleanup:Z
     .end local v1           #e:Landroid/os/RemoteException;
     .end local v3           #timeMs:J
@@ -185,13 +185,13 @@
 
     throw v5
 
-    .line 718
+    .line 741
     .restart local v0       #doProxyCleanup:Z
     .restart local v3       #timeMs:J
     :catch_1
     move-exception v2
 
-    .line 719
+    .line 742
     .local v2, se:Ljava/lang/SecurityException;
     :try_start_3
     const-string v5, "DevicePolicyManagerService"

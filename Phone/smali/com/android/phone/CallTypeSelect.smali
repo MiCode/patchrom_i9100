@@ -119,46 +119,38 @@
 
     if-eqz v2, :cond_1
 
-    .line 68
     const-string v2, "CallTypeSelct"
 
     const-string v3, "Set the title: forwarding"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     const v2, 0x7f0e0079
 
     invoke-virtual {p0, v2}, Lcom/android/phone/CallTypeSelect;->setTitle(I)V
 
-    .line 75
     :goto_0
     invoke-virtual {p0}, Lcom/android/phone/CallTypeSelect;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 76
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 78
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 80
     :cond_0
     return-void
 
-    .line 71
     .end local v0           #actionBar:Landroid/app/ActionBar;
     :cond_1
     const v2, 0x7f0e02c1
 
     invoke-virtual {p0, v2}, Lcom/android/phone/CallTypeSelect;->setTitle(I)V
 
-    .line 72
     const-string v2, "CallTypeSelct"
 
     const-string v3, "Set the title: barring"

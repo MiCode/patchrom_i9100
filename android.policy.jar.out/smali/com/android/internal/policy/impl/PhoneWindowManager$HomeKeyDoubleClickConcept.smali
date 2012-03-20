@@ -63,29 +63,29 @@
 
     const/4 v3, 0x0
 
-    .line 5055
+    .line 5071
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5003
+    .line 5019
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPosted:Z
 
-    .line 5004
+    .line 5020
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
-    .line 5005
+    .line 5021
     invoke-static {}, Landroid/view/ViewConfiguration;->getGlobalActionKeyTimeout()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPostDelay:J
 
-    .line 5006
+    .line 5022
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VOICE_COMMAND"
@@ -94,7 +94,7 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIntentExplicit:Landroid/content/Intent;
 
-    .line 5007
+    .line 5023
     new-instance v0, Landroid/content/ComponentName;
 
     const-string v1, "com.vlingo.client.samsung"
@@ -105,50 +105,50 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mExplicitComponent:Landroid/content/ComponentName;
 
-    .line 5009
+    .line 5025
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 5011
+    .line 5027
     iput-boolean v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIgnoreSingleJob:Z
 
-    .line 5018
+    .line 5034
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept$1;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;)V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mCheckHomeShortDoubleClick:Ljava/lang/Runnable;
 
-    .line 5057
+    .line 5073
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIntentExplicit:Landroid/content/Intent;
 
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 5058
+    .line 5074
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIntentExplicit:Landroid/content/Intent;
 
     const-string v1, "AUTO_LISTEN"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 5059
+    .line 5075
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIntentExplicit:Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mExplicitComponent:Landroid/content/ComponentName;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 5063
+    .line 5079
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIntentExplicit:Landroid/content/Intent;
 
     const-string v1, "isThisComeFromHomeKeyDoubleClickConcept"
 
     invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 5064
+    .line 5080
     return-void
 .end method
 
@@ -157,7 +157,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5002
+    .line 5018
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->singleClickJob()V
 
     return-void
@@ -168,7 +168,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5002
+    .line 5018
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->isDoubleClick()Z
 
     move-result v0
@@ -181,7 +181,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5002
+    .line 5018
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->doubleClickJob()V
 
     return-void
@@ -192,7 +192,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5002
+    .line 5018
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->reset()V
 
     return-void
@@ -203,7 +203,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5002
+    .line 5018
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mStatusBar:Landroid/app/StatusBarManager;
 
     return-object v0
@@ -215,7 +215,7 @@
     .parameter "x1"
 
     .prologue
-    .line 5002
+    .line 5018
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mStatusBar:Landroid/app/StatusBarManager;
 
     return-object p1
@@ -226,7 +226,7 @@
     .parameter "x0"
 
     .prologue
-    .line 5002
+    .line 5018
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->isSingleClick()Z
 
     move-result v0
@@ -241,14 +241,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 5273
+    .line 5289
     const/4 v0, 0x0
 
-    .line 5274
+    .line 5290
     .local v0, explicitActivityInfo:Landroid/content/pm/ActivityInfo;
     const/4 v1, 0x0
 
-    .line 5276
+    .line 5292
     .local v1, implicitActivityList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const-string v3, "HomeKeyDoubleClick"
 
@@ -272,31 +272,31 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5278
+    .line 5294
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
 
     if-nez v3, :cond_0
 
-    .line 5279
+    .line 5295
     const-string v3, "HomeKeyDoubleClick"
 
     const-string v4, "in checkVoiceCommandActivity(), mContext is null. return false"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5315
+    .line 5331
     :goto_0
     return v2
 
-    .line 5283
+    .line 5299
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPm:Landroid/content/pm/PackageManager;
 
     if-nez v3, :cond_1
 
-    .line 5284
+    .line 5300
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -307,13 +307,13 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 5287
+    .line 5303
     :cond_1
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPm:Landroid/content/pm/PackageManager;
 
     if-nez v3, :cond_2
 
-    .line 5288
+    .line 5304
     const-string v3, "HomeKeyDoubleClick"
 
     const-string v4, "in checkVoiceCommandActivity(), fail to retrieve Package manager. return false"
@@ -322,11 +322,11 @@
 
     goto :goto_0
 
-    .line 5293
+    .line 5309
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 5295
+    .line 5311
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPm:Landroid/content/pm/PackageManager;
 
@@ -340,11 +340,11 @@
 
     move-result-object v0
 
-    .line 5299
+    .line 5315
     :goto_1
     if-nez v0, :cond_5
 
-    .line 5300
+    .line 5316
     const-string v3, "HomeKeyDoubleClick"
 
     const-string v4, "in checkVoiceCommandActivity(), ActivityInfo is null. return false"
@@ -353,7 +353,7 @@
 
     goto :goto_0
 
-    .line 5305
+    .line 5321
     :cond_3
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPm:Landroid/content/pm/PackageManager;
 
@@ -369,7 +369,7 @@
 
     move-result-object v1
 
-    .line 5307
+    .line 5323
     if-eqz v1, :cond_4
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -378,7 +378,7 @@
 
     if-nez v3, :cond_5
 
-    .line 5308
+    .line 5324
     :cond_4
     const-string v3, "HomeKeyDoubleClick"
 
@@ -388,7 +388,7 @@
 
     goto :goto_0
 
-    .line 5314
+    .line 5330
     :cond_5
     const-string v2, "HomeKeyDoubleClick"
 
@@ -396,12 +396,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5315
+    .line 5331
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 5296
+    .line 5312
     :catch_0
     move-exception v3
 
@@ -412,7 +412,7 @@
     .locals 2
 
     .prologue
-    .line 5343
+    .line 5359
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -423,7 +423,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 5354
+    .line 5370
     return-void
 .end method
 
@@ -431,7 +431,7 @@
     .locals 2
 
     .prologue
-    .line 5319
+    .line 5335
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->keyguardOn()Z
@@ -450,14 +450,14 @@
 
     if-nez v0, :cond_1
 
-    .line 5320
+    .line 5336
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguard:Landroid/view/WindowManagerPolicy$WindowState;
 
     if-eqz v0, :cond_0
 
-    .line 5321
+    .line 5337
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguard:Landroid/view/WindowManagerPolicy$WindowState;
@@ -466,7 +466,7 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy$WindowState;->hideLw(Z)Z
 
-    .line 5322
+    .line 5338
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
@@ -477,7 +477,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 5323
+    .line 5339
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -488,14 +488,14 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 5330
+    .line 5346
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     #calls: Lcom/android/internal/policy/impl/PhoneWindowManager;->updateLockScreenTimeout()V
     invoke-static {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->access$1400(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
-    .line 5332
+    .line 5348
     :cond_1
     return-void
 .end method
@@ -504,12 +504,12 @@
     .locals 1
 
     .prologue
-    .line 5210
+    .line 5226
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->startVoiceCommandActivity(Landroid/content/Intent;)V
 
-    .line 5211
+    .line 5227
     return-void
 .end method
 
@@ -521,20 +521,17 @@
 
     const/4 v1, 0x1
 
-    .line 5124
+    .line 5140
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v3, "isDoubleClick() is called"
 
     invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5125
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->printList()V
-
-    .line 5127
+    .line 5143
     monitor-enter p0
 
-    .line 5128
+    .line 5144
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
@@ -546,7 +543,7 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 5129
+    .line 5145
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
     const/4 v3, 0x0
@@ -611,23 +608,23 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 5133
+    .line 5149
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v2, "in isDoubleClick() true"
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5134
+    .line 5150
     monitor-exit p0
 
     move v0, v1
 
-    .line 5140
+    .line 5156
     :goto_0
     return v0
 
-    .line 5139
+    .line 5155
     :cond_0
     const-string v0, "HomeKeyDoubleClick"
 
@@ -635,14 +632,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5140
+    .line 5156
     monitor-exit p0
 
     move v0, v2
 
     goto :goto_0
 
-    .line 5141
+    .line 5157
     :catchall_0
     move-exception v0
 
@@ -661,20 +658,17 @@
 
     const/4 v2, 0x1
 
-    .line 5106
+    .line 5122
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v3, "isSingleClick() is called"
 
     invoke-static {v0, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5107
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->printList()V
-
-    .line 5109
+    .line 5125
     monitor-enter p0
 
-    .line 5110
+    .line 5126
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
@@ -696,7 +690,7 @@
 
     if-lt v0, v3, :cond_1
 
-    .line 5111
+    .line 5127
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
@@ -730,23 +724,23 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 5113
+    .line 5129
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v1, "in isSingleClick() true"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5114
+    .line 5130
     monitor-exit p0
 
     move v0, v2
 
-    .line 5119
+    .line 5135
     :goto_0
     return v0
 
-    .line 5118
+    .line 5134
     :cond_1
     const-string v0, "HomeKeyDoubleClick"
 
@@ -754,14 +748,14 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5119
+    .line 5135
     monitor-exit p0
 
     move v0, v1
 
     goto :goto_0
 
-    .line 5120
+    .line 5136
     :catchall_0
     move-exception v0
 
@@ -776,19 +770,19 @@
     .locals 5
 
     .prologue
-    .line 5160
+    .line 5176
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    .line 5161
+    .line 5177
     .local v0, buff:Ljava/lang/String;
     const-string v0, "list value = "
 
-    .line 5163
+    .line 5179
     monitor-enter p0
 
-    .line 5164
+    .line 5180
     :try_start_0
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
@@ -796,7 +790,7 @@
 
     move-result v2
 
-    .line 5165
+    .line 5181
     .local v2, size:I
     const/4 v1, 0x0
 
@@ -804,7 +798,7 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 5166
+    .line 5182
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -843,24 +837,24 @@
 
     move-result-object v0
 
-    .line 5165
+    .line 5181
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 5168
+    .line 5184
     :cond_0
     const-string v3, "HomeKeyDoubleClick"
 
     invoke-static {v3, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5169
+    .line 5185
     monitor-exit p0
 
-    .line 5170
+    .line 5186
     return-void
 
-    .line 5169
+    .line 5185
     .end local v1           #i:I
     .end local v2           #size:I
     :catchall_0
@@ -877,23 +871,23 @@
     .locals 3
 
     .prologue
-    .line 5145
+    .line 5161
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v1, "reset() is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5146
+    .line 5162
     monitor-enter p0
 
-    .line 5147
+    .line 5163
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPosted:Z
 
     if-eqz v0, :cond_0
 
-    .line 5148
+    .line 5164
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -902,28 +896,28 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 5150
+    .line 5166
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mSentHomeDownToApp:Z
 
-    .line 5151
+    .line 5167
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIgnoreSingleJob:Z
 
-    .line 5152
+    .line 5168
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPosted:Z
 
-    .line 5153
+    .line 5169
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 5154
+    .line 5170
     const-string v0, "HomeKeyDoubleClick"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -964,13 +958,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5155
+    .line 5171
     monitor-exit p0
 
-    .line 5156
+    .line 5172
     return-void
 
-    .line 5155
+    .line 5171
     :catchall_0
     move-exception v0
 
@@ -987,62 +981,62 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 5173
+    .line 5189
     const-string v3, "HomeKeyDoubleClick"
 
     const-string v4, "singleClickJob() is called."
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5178
+    .line 5194
     const/4 v1, 0x0
 
-    .line 5180
+    .line 5196
     .local v1, incomingRinging:Z
     :try_start_0
     invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getTelephonyService()Lcom/android/internal/telephony/ITelephony;
 
     move-result-object v2
 
-    .line 5181
+    .line 5197
     .local v2, telephonyService:Lcom/android/internal/telephony/ITelephony;
     if-eqz v2, :cond_0
 
-    .line 5182
+    .line 5198
     invoke-interface {v2}, Lcom/android/internal/telephony/ITelephony;->isRinging()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v1
 
-    .line 5188
+    .line 5204
     .end local v2           #telephonyService:Lcom/android/internal/telephony/ITelephony;
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 5189
+    .line 5205
     const-string v3, "WindowManager"
 
     const-string v4, "Ignoring HOME; there\'s a ringing incoming call."
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5205
+    .line 5221
     :goto_1
     iput-boolean v5, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mSentHomeDownToApp:Z
 
-    .line 5206
+    .line 5222
     iput-boolean v5, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIgnoreSingleJob:Z
 
-    .line 5207
+    .line 5223
     return-void
 
-    .line 5184
+    .line 5200
     :catch_0
     move-exception v0
 
-    .line 5185
+    .line 5201
     .local v0, ex:Landroid/os/RemoteException;
     const-string v3, "WindowManager"
 
@@ -1052,7 +1046,7 @@
 
     goto :goto_0
 
-    .line 5196
+    .line 5212
     .end local v0           #ex:Landroid/os/RemoteException;
     :cond_1
     iget-boolean v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mSentHomeDownToApp:Z
@@ -1063,21 +1057,21 @@
 
     if-nez v3, :cond_2
 
-    .line 5197
+    .line 5213
     const-string v3, "HomeKeyDoubleClick"
 
     const-string v4, "  in singleClickJob(), mSentHomeDownToApp is false. Now call launchHomeFromHotKey()"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5198
+    .line 5214
     iget-object v3, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->launchHomeFromHotKey()V
 
     goto :goto_1
 
-    .line 5200
+    .line 5216
     :cond_2
     const-string v3, "HomeKeyDoubleClick"
 
@@ -1097,7 +1091,7 @@
     .parameter "canceled"
 
     .prologue
-    .line 5082
+    .line 5098
     const-string v0, "HomeKeyDoubleClick"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1130,10 +1124,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5083
+    .line 5099
     monitor-enter p0
 
-    .line 5085
+    .line 5101
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
@@ -1147,20 +1141,20 @@
 
     if-nez v0, :cond_0
 
-    .line 5086
+    .line 5102
     monitor-exit p0
 
-    .line 5103
+    .line 5119
     :goto_0
     return-void
 
-    .line 5089
+    .line 5105
     :cond_0
     if-nez p3, :cond_1
 
     if-eqz p2, :cond_2
 
-    .line 5090
+    .line 5106
     :cond_1
     const-string v0, "HomeKeyDoubleClick"
 
@@ -1168,15 +1162,15 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5091
+    .line 5107
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->reset()V
 
-    .line 5092
+    .line 5108
     monitor-exit p0
 
     goto :goto_0
 
-    .line 5102
+    .line 5118
     :catchall_0
     move-exception v0
 
@@ -1186,7 +1180,7 @@
 
     throw v0
 
-    .line 5095
+    .line 5111
     :cond_2
     :try_start_1
     const-string v0, "HomeKeyDoubleClick"
@@ -1195,7 +1189,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5096
+    .line 5112
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mHomeActionList:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/Integer;
@@ -1204,20 +1198,20 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5098
+    .line 5114
     if-nez p1, :cond_3
 
-    .line 5099
+    .line 5115
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v1, "in addAction(), down event. now call postCheckRunnable()."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5100
+    .line 5116
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->postCheckRunnable()V
 
-    .line 5102
+    .line 5118
     :cond_3
     monitor-exit p0
     :try_end_1
@@ -1230,30 +1224,30 @@
     .locals 4
 
     .prologue
-    .line 5067
+    .line 5083
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v1, "postCheckRunnable() is called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5068
+    .line 5084
     monitor-enter p0
 
-    .line 5069
+    .line 5085
     :try_start_0
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPosted:Z
 
     if-nez v0, :cond_0
 
-    .line 5070
+    .line 5086
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v1, "in postCheckRunnable(), now posting."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5071
+    .line 5087
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -1268,27 +1262,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 5072
+    .line 5088
     const-string v0, "HomeKeyDoubleClick"
 
     const-string v1, "in postCheckRunnable(), posting success."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5076
+    .line 5092
     :goto_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mPosted:Z
 
-    .line 5078
+    .line 5094
     :cond_0
     monitor-exit p0
 
-    .line 5079
+    .line 5095
     return-void
 
-    .line 5074
+    .line 5090
     :cond_1
     const-string v0, "HomeKeyDoubleClick"
 
@@ -1298,7 +1292,7 @@
 
     goto :goto_0
 
-    .line 5078
+    .line 5094
     :catchall_0
     move-exception v0
 
@@ -1313,12 +1307,12 @@
     .locals 1
 
     .prologue
-    .line 5335
+    .line 5351
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mSentHomeDownToApp:Z
 
-    .line 5336
+    .line 5352
     return-void
 .end method
 
@@ -1326,12 +1320,12 @@
     .locals 1
 
     .prologue
-    .line 5339
+    .line 5355
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIgnoreSingleJob:Z
 
-    .line 5340
+    .line 5356
     return-void
 .end method
 
@@ -1342,10 +1336,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 5214
+    .line 5230
     const/4 v0, 0x0
 
-    .line 5216
+    .line 5232
     .local v0, isRun:Z
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -1355,16 +1349,16 @@
 
     if-nez v1, :cond_1
 
-    .line 5217
+    .line 5233
     const/4 v0, 0x1
 
-    .line 5227
+    .line 5243
     :goto_0
     iget-boolean v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mSentHomeDownToApp:Z
 
     if-nez v1, :cond_7
 
-    .line 5228
+    .line 5244
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -1375,7 +1369,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 5230
+    .line 5246
     const/4 v1, 0x1
 
     :try_start_0
@@ -1385,23 +1379,23 @@
 
     if-eqz v1, :cond_4
 
-    .line 5231
+    .line 5247
     const-string v1, "HomeKeyDoubleClick"
 
     const-string v2, "in startVoiceCommandActivity(), use explicit internal Intent"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5232
+    .line 5248
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->dismissKeyguard()V
 
-    .line 5233
+    .line 5249
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->collapseQuickPanel()V
 
-    .line 5235
+    .line 5251
     if-nez p1, :cond_3
 
-    .line 5236
+    .line 5252
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIntentExplicit:Landroid/content/Intent;
 
     const-string v2, "CHECK_SCHEDULE_ENABLED"
@@ -1410,7 +1404,7 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 5241
+    .line 5257
     :goto_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -1422,15 +1416,15 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5269
+    .line 5285
     :cond_0
     :goto_2
     iput-boolean v4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mSentHomeDownToApp:Z
 
-    .line 5270
+    .line 5286
     return-void
 
-    .line 5219
+    .line 5235
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -1442,19 +1436,19 @@
 
     if-nez v1, :cond_2
 
-    .line 5220
+    .line 5236
     const-string v1, "HomeKeyDoubleClick"
 
     const-string v2, "in startVoiceCommandActivity(), Secure lock is off"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5221
+    .line 5237
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 5223
+    .line 5239
     :cond_2
     const-string v1, "HomeKeyDoubleClick"
 
@@ -1464,7 +1458,7 @@
 
     goto :goto_0
 
-    .line 5238
+    .line 5254
     :cond_3
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->mIntentExplicit:Landroid/content/Intent;
@@ -1477,17 +1471,17 @@
 
     goto :goto_1
 
-    .line 5261
+    .line 5277
     :catch_0
     move-exception v1
 
     goto :goto_2
 
-    .line 5243
+    .line 5259
     :cond_4
     if-nez p1, :cond_5
 
-    .line 5244
+    .line 5260
     const-string v1, "HomeKeyDoubleClick"
 
     const-string v2, "in startVoiceCommandActivity(), User was double clicking Home button. But there is no Samsung voice command app. So do nothing."
@@ -1496,7 +1490,7 @@
 
     goto :goto_2
 
-    .line 5247
+    .line 5263
     :cond_5
     const/4 v1, 0x0
 
@@ -1506,27 +1500,27 @@
 
     if-eqz v1, :cond_6
 
-    .line 5248
+    .line 5264
     const-string v1, "HomeKeyDoubleClick"
 
     const-string v2, "in startVoiceCommandActivity(), use external Intent"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5249
+    .line 5265
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->dismissKeyguard()V
 
-    .line 5250
+    .line 5266
     invoke-direct {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->collapseQuickPanel()V
 
-    .line 5254
+    .line 5270
     const-string v1, "isThisComeFromHomeKeyDoubleClickConcept"
 
     const/4 v2, 0x1
 
     invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 5255
+    .line 5271
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HomeKeyDoubleClickConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -1535,7 +1529,7 @@
 
     goto :goto_2
 
-    .line 5257
+    .line 5273
     :cond_6
     const-string v1, "HomeKeyDoubleClick"
 
@@ -1547,7 +1541,7 @@
 
     goto :goto_2
 
-    .line 5265
+    .line 5281
     :cond_7
     const-string v1, "HomeKeyDoubleClick"
 

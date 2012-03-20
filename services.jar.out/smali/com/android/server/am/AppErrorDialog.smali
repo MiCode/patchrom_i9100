@@ -130,7 +130,6 @@
 
     invoke-virtual {p0, v2, v3, v4}, Lcom/android/server/am/AppErrorDialog;->setButton(ILjava/lang/CharSequence;Landroid/os/Message;)V
 
-    .line 195
 
     const/4 v2, -0x2
 

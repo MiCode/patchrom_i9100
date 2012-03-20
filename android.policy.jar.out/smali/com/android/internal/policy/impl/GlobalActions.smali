@@ -829,9 +829,9 @@
     .line 173
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$2;
 
-    const v2, 0x1080641
+    const v2, 0x108063f
 
-    const v3, 0x1080640
+    const v3, 0x108063e
 
     const v4, 0x1040170
 
@@ -848,9 +848,9 @@
     .line 217
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$3;
 
-    const v2, 0x10802e2
+    const v2, 0x10802e1
 
-    const v3, 0x10802e3
+    const v3, 0x10802e2
 
     const v4, 0x104016b
 
@@ -867,7 +867,7 @@
     .line 277
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$4;
 
-    const v1, 0x1080657
+    const v1, 0x1080658
 
     const v2, 0x104050c
 
@@ -889,7 +889,7 @@
     .line 315
     new-instance v0, Lcom/android/internal/policy/impl/GlobalActions$6;
 
-    const v1, 0x1080642
+    const v1, 0x1080640
 
     const v2, 0x1040165
 

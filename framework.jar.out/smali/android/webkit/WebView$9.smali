@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4849
+    .line 4862
     iput-object p1, p0, Landroid/webkit/WebView$9;->this$0:Landroid/webkit/WebView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,27 +41,27 @@
     .locals 4
 
     .prologue
-    .line 4851
+    .line 4864
     iget-object v1, p0, Landroid/webkit/WebView$9;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mTouchMode:I
-    invoke-static {v1}, Landroid/webkit/WebView;->access$1300(Landroid/webkit/WebView;)I
+    invoke-static {v1}, Landroid/webkit/WebView;->access$1400(Landroid/webkit/WebView;)I
 
     move-result v1
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 4863
+    .line 4876
     :cond_0
     :goto_0
     return-void
 
-    .line 4855
+    .line 4868
     :sswitch_0
     iget-object v1, p0, Landroid/webkit/WebView$9;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mTouchOptimizer:Landroid/webkit/PointerDevice$TouchOptimizer;
-    invoke-static {v1}, Landroid/webkit/WebView;->access$1400(Landroid/webkit/WebView;)Landroid/webkit/PointerDevice$TouchOptimizer;
+    invoke-static {v1}, Landroid/webkit/WebView;->access$1500(Landroid/webkit/WebView;)Landroid/webkit/PointerDevice$TouchOptimizer;
 
     move-result-object v1
 
@@ -71,22 +71,22 @@
 
     move-result-object v0
 
-    .line 4856
+    .line 4869
     .local v0, ev:Landroid/view/MotionEvent;
     if-eqz v0, :cond_0
 
-    .line 4859
+    .line 4872
     iget-object v1, p0, Landroid/webkit/WebView$9;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->_onTouchEvent(Landroid/view/MotionEvent;)Z
-    invoke-static {v1, v0}, Landroid/webkit/WebView;->access$1500(Landroid/webkit/WebView;Landroid/view/MotionEvent;)Z
+    invoke-static {v1, v0}, Landroid/webkit/WebView;->access$1600(Landroid/webkit/WebView;Landroid/view/MotionEvent;)Z
 
-    .line 4860
+    .line 4873
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
     goto :goto_0
 
-    .line 4851
+    .line 4864
     nop
 
     :sswitch_data_0

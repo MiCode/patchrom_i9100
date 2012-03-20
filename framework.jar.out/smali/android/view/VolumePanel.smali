@@ -269,7 +269,7 @@
 
     .line 245
     .local v2, inflater:Landroid/view/LayoutInflater;
-    const v6, 0x10900c4
+    const v6, 0x10900c7
 
     invoke-virtual {v2, v6, v10}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -883,7 +883,7 @@
     iput v6, v4, Landroid/view/VolumePanel$StreamControl;->streamType:I
 
     .line 363
-    const v7, 0x10900c5
+    const v7, 0x10900c8
 
     invoke-virtual {v1, v7, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -1525,9 +1525,9 @@
     .parameter "sc"
 
     .prologue
-    const v6, 0x10802af
+    const v6, 0x10802ae
 
-    const v5, 0x10802ae
+    const v5, 0x10802ad
 
     const/4 v4, 0x3
 
@@ -1584,7 +1584,7 @@
     .line 420
     iget-object v1, p1, Landroid/view/VolumePanel$StreamControl;->icon:Landroid/widget/ImageView;
 
-    const v2, 0x10802ab
+    const v2, 0x10802aa
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -1608,9 +1608,9 @@
     if-eqz v1, :cond_3
 
     .line 430
-    const v1, 0x10802a4
+    const v1, 0x10802a3
 
-    const v2, 0x10802a5
+    const v2, 0x10802a4
 
     invoke-direct {p0, v1, v2}, Landroid/view/VolumePanel;->setMusicIcon(II)V
 
@@ -2437,9 +2437,9 @@
     if-eqz v4, :cond_8
 
     .line 578
-    const v4, 0x10802a4
+    const v4, 0x10802a3
 
-    const v5, 0x10802a5
+    const v5, 0x10802a4
 
     invoke-direct {p0, v4, v5}, Landroid/view/VolumePanel;->setMusicIcon(II)V
 
@@ -2447,9 +2447,9 @@
 
     .line 580
     :cond_8
-    const v4, 0x10802ae
+    const v4, 0x10802ad
 
-    const v5, 0x10802af
+    const v5, 0x10802ae
 
     invoke-direct {p0, v4, v5}, Landroid/view/VolumePanel;->setMusicIcon(II)V
 
@@ -2620,7 +2620,7 @@
     .parameter "flags"
 
     .prologue
-    const v10, 0x10802ae
+    const v10, 0x10802ad
 
     const/16 v9, 0xa
 
@@ -2778,9 +2778,9 @@
     if-eqz v3, :cond_a
 
     .line 509
-    const v3, 0x10802a4
+    const v3, 0x10802a3
 
-    const v4, 0x10802a5
+    const v4, 0x10802a4
 
     invoke-direct {p0, v3, v4}, Landroid/view/VolumePanel;->setMusicIcon(II)V
 
@@ -2790,7 +2790,7 @@
     if-ne p1, v9, :cond_5
 
     .line 516
-    const v3, 0x10802af
+    const v3, 0x10802ae
 
     invoke-direct {p0, v10, v3}, Landroid/view/VolumePanel;->setRadioIcon(II)V
 
@@ -2878,7 +2878,7 @@
     .restart local v0       #isMusicHPH:Ljava/lang/String;
     .restart local v1       #volumeLimitIndex:I
     :cond_a
-    const v3, 0x10802af
+    const v3, 0x10802ae
 
     invoke-direct {p0, v10, v3}, Landroid/view/VolumePanel;->setMusicIcon(II)V
 

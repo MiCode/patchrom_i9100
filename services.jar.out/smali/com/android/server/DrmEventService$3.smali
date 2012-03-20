@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1060
+    .line 1064
     iput-object p1, p0, Lcom/android/server/DrmEventService$3;->this$0:Lcom/android/server/DrmEventService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 1062
+    .line 1066
     sget-boolean v0, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 1063
+    .line 1067
     const-string v0, "DrmEventService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -72,13 +72,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1064
+    .line 1068
     :cond_0
     iget-object v0, p0, Lcom/android/server/DrmEventService$3;->this$0:Lcom/android/server/DrmEventService;
 
     #calls: Lcom/android/server/DrmEventService;->userUpdateHandler(Landroid/content/Intent;)V
     invoke-static {v0, p2}, Lcom/android/server/DrmEventService;->access$300(Lcom/android/server/DrmEventService;Landroid/content/Intent;)V
 
-    .line 1066
+    .line 1070
     return-void
 .end method

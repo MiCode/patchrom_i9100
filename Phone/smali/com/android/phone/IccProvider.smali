@@ -8,9 +8,7 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Lcom/android/internal/telephony/MiuiIccProvider;-><init>()V
 
-    .line 25
     return-void
 .end method

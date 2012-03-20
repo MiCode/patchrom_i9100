@@ -5878,7 +5878,7 @@
 
     .line 1495
     .restart local v5       #textId:I
-    const v0, 0x10802d4
+    const v0, 0x10802d3
 
     .line 1496
     .local v0, emergencyIcon:I
@@ -6036,7 +6036,7 @@
 
     .line 1461
     .restart local v4       #textId:I
-    const v0, 0x10802d4
+    const v0, 0x10802d3
 
     .line 1462
     .local v0, emergencyIcon:I

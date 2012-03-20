@@ -26,7 +26,7 @@
     .parameter
 
     .prologue
-    .line 2664
+    .line 2666
     iput-object p1, p0, Landroid/widget/AbsListView$WindowRunnnable;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2664
+    .line 2666
     invoke-direct {p0, p1}, Landroid/widget/AbsListView$WindowRunnnable;-><init>(Landroid/widget/AbsListView;)V
 
     return-void
@@ -52,7 +52,7 @@
     .locals 1
 
     .prologue
-    .line 2668
+    .line 2670
     iget-object v0, p0, Landroid/widget/AbsListView$WindowRunnnable;->this$0:Landroid/widget/AbsListView;
 
     #calls: Landroid/widget/AbsListView;->getWindowAttachCount()I
@@ -62,7 +62,7 @@
 
     iput v0, p0, Landroid/widget/AbsListView$WindowRunnnable;->mOriginalAttachCount:I
 
-    .line 2669
+    .line 2671
     return-void
 .end method
 
@@ -70,7 +70,7 @@
     .locals 2
 
     .prologue
-    .line 2672
+    .line 2674
     iget-object v0, p0, Landroid/widget/AbsListView$WindowRunnnable;->this$0:Landroid/widget/AbsListView;
 
     invoke-virtual {v0}, Landroid/widget/AbsListView;->hasWindowFocus()Z

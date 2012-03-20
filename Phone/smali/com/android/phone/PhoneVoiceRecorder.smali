@@ -53,23 +53,12 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
     .line 56
-    const-string v2, "ro.debuggable"
+    const/4 v0, 0x0
 
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
     sput-boolean v0, Lcom/android/phone/PhoneVoiceRecorder;->DBG:Z
 
     .line 72
@@ -136,12 +125,6 @@
     sput-wide v0, Lcom/android/phone/PhoneVoiceRecorder;->mStartRecordTime:J
 
     return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 56
-    goto :goto_0
 .end method
 
 .method constructor <init>(Landroid/content/Context;Lcom/android/phone/CallCard;)V
@@ -247,7 +230,19 @@
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+.method static synthetic access$202(Lcom/android/phone/PhoneVoiceRecorder;J)J
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 54
+    iput-wide p1, p0, Lcom/android/phone/PhoneVoiceRecorder;->mRecordingTimeInMiliSecond:J
+
+    return-wide p1
+.end method
+
+.method static synthetic access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
     .locals 1
     .parameter "x0"
 
@@ -258,7 +253,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
+.method static synthetic access$400(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
     .locals 1
     .parameter "x0"
 
@@ -267,18 +262,6 @@
     iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder;->mContext:Landroid/content/Context;
 
     return-object v0
-.end method
-
-.method static synthetic access$402(Lcom/android/phone/PhoneVoiceRecorder;J)J
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 54
-    iput-wide p1, p0, Lcom/android/phone/PhoneVoiceRecorder;->mRecordingTimeInMiliSecond:J
-
-    return-wide p1
 .end method
 
 .method static synthetic access$500(Lcom/android/phone/PhoneVoiceRecorder;)Lcom/android/phone/CallCard;

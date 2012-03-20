@@ -41,17 +41,17 @@
     .end annotation
 
     .prologue
-    .line 166
+    .line 168
     .local p3, verifiers:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/VerifierInfo;>;"
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 167
+    .line 169
     iput-object p1, p0, Landroid/content/pm/PackageParser$PackageLite;->packageName:Ljava/lang/String;
 
-    .line 168
+    .line 170
     iput p2, p0, Landroid/content/pm/PackageParser$PackageLite;->installLocation:I
 
-    .line 169
+    .line 171
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v0
@@ -66,6 +66,6 @@
 
     iput-object v0, p0, Landroid/content/pm/PackageParser$PackageLite;->verifiers:[Landroid/content/pm/VerifierInfo;
 
-    .line 170
+    .line 172
     return-void
 .end method

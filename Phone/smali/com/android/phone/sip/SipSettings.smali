@@ -1345,39 +1345,31 @@
 
     iput-object v1, p0, Lcom/android/phone/sip/SipSettings;->mSipListContainer:Landroid/preference/PreferenceCategory;
 
-    .line 154
     invoke-direct {p0}, Lcom/android/phone/sip/SipSettings;->registerForAddSipListener()V
 
-    .line 155
     invoke-direct {p0}, Lcom/android/phone/sip/SipSettings;->registerForReceiveCallsCheckBox()V
 
-    .line 156
     invoke-static {}, Lcom/android/internal/telephony/CallManager;->getInstance()Lcom/android/internal/telephony/CallManager;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/phone/sip/SipSettings;->mCallManager:Lcom/android/internal/telephony/CallManager;
 
-    .line 158
     invoke-direct {p0}, Lcom/android/phone/sip/SipSettings;->updateProfilesStatus()V
 
-    .line 160
     invoke-virtual {p0}, Lcom/android/phone/sip/SipSettings;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 161
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 163
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
 
-    .line 165
     :cond_0
     return-void
 .end method

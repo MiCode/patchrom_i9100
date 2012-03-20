@@ -9,31 +9,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
     .line 43
-    const-string v2, "ro.debuggable"
+    const/4 v0, 0x0
 
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
     sput-boolean v0, Lcom/android/phone/InCallScreenShowActivation;->DBG:Z
 
     return-void
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
 .end method
 
 .method public constructor <init>()V

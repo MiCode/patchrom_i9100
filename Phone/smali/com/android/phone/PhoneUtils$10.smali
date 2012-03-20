@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 3694
+    .line 3719
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,13 +37,13 @@
     .parameter "extra"
 
     .prologue
-    .line 3696
+    .line 3721
     const-string v0, "onError: playMediaTone error"
 
     #calls: Lcom/android/phone/PhoneUtils;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->access$100(Ljava/lang/String;)V
 
-    .line 3697
+    .line 3722
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->isPlaying()Z
 
     move-result v0
@@ -52,11 +52,11 @@
 
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 3698
+    .line 3723
     :cond_0
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->release()V
 
-    .line 3699
+    .line 3724
     const/4 v0, 0x1
 
     return v0

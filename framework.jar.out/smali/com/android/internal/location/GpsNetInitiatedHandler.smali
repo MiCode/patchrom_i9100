@@ -844,7 +844,7 @@
     .line 198
     iget-object v5, p0, Lcom/android/internal/location/GpsNetInitiatedHandler;->mNiNotification:Landroid/app/Notification;
 
-    const v6, 0x1080540
+    const v6, 0x108053d
 
     iput v6, v5, Landroid/app/Notification;->icon:I
 

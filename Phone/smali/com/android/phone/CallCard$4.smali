@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2235
+    .line 2239
     iput-object p1, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -43,22 +43,22 @@
 
     const-wide/16 v5, 0x0
 
-    .line 2237
+    .line 2241
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Landroid/os/AsyncResult;
 
-    .line 2239
+    .line 2243
     .local v0, ar:Landroid/os/AsyncResult;
     iget v2, p1, Landroid/os/Message;->what:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 2275
+    .line 2279
     :goto_0
     return-void
 
-    .line 2243
+    .line 2247
     :pswitch_0
     const-string v2, "CallCard"
 
@@ -68,7 +68,7 @@
 
     goto :goto_0
 
-    .line 2248
+    .line 2252
     :pswitch_1
     iget-object v2, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
@@ -78,7 +78,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 2250
+    .line 2254
     iget-object v2, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [B
@@ -87,7 +87,7 @@
 
     check-cast v1, [B
 
-    .line 2252
+    .line 2256
     .local v1, buf:[B
     const-string v2, "CallCard"
 
@@ -157,7 +157,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2253
+    .line 2257
     iget-object v2, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
 
     const/16 v3, 0xc
@@ -170,7 +170,7 @@
     #setter for: Lcom/android/phone/CallCard;->mTotalCallTime:J
     invoke-static {v2, v3, v4}, Lcom/android/phone/CallCard;->access$402(Lcom/android/phone/CallCard;J)J
 
-    .line 2255
+    .line 2259
     iget-object v2, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
 
     #getter for: Lcom/android/phone/CallCard;->fgDuration:J
@@ -182,7 +182,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 2256
+    .line 2260
     iget-object v2, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
 
     iget-object v3, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
@@ -196,7 +196,7 @@
 
     invoke-static {v2, v3, v4}, Lcom/android/phone/CallCard;->access$414(Lcom/android/phone/CallCard;J)J
 
-    .line 2260
+    .line 2264
     :cond_0
     :goto_1
     const-string v2, "Call Time"
@@ -234,7 +234,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2262
+    .line 2266
     iget-object v2, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
 
     #calls: Lcom/android/phone/CallCard;->SetTotalCallTime()V
@@ -242,7 +242,7 @@
 
     goto/16 :goto_0
 
-    .line 2257
+    .line 2261
     :cond_1
     iget-object v2, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
 
@@ -255,7 +255,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 2258
+    .line 2262
     iget-object v2, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
 
     iget-object v3, p0, Lcom/android/phone/CallCard$4;->this$0:Lcom/android/phone/CallCard;
@@ -271,7 +271,7 @@
 
     goto :goto_1
 
-    .line 2266
+    .line 2270
     .end local v1           #buf:[B
     :cond_2
     const-string v2, "CallCard"
@@ -282,7 +282,7 @@
 
     goto/16 :goto_0
 
-    .line 2239
+    .line 2243
     nop
 
     :pswitch_data_0

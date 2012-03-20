@@ -56,7 +56,7 @@
     .line 240
     iput-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mFileName:Ljava/lang/String;
 
-    .line 461
+    .line 464
     return-void
 .end method
 
@@ -78,12 +78,12 @@
     .parameter "num"
 
     .prologue
-    .line 407
+    .line 410
     const/16 v1, 0xa
 
     if-ge p2, v1, :cond_0
 
-    .line 408
+    .line 411
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -112,19 +112,19 @@
 
     move-result-object v0
 
-    .line 414
+    .line 417
     .local v0, t:Ljava/lang/String;
     :goto_0
     return-object v0
 
-    .line 409
+    .line 412
     .end local v0           #t:Ljava/lang/String;
     :cond_0
     const/16 v1, 0x64
 
     if-ge p2, v1, :cond_1
 
-    .line 410
+    .line 413
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,7 +156,7 @@
     .restart local v0       #t:Ljava/lang/String;
     goto :goto_0
 
-    .line 412
+    .line 415
     .end local v0           #t:Ljava/lang/String;
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -193,12 +193,12 @@
     .locals 4
 
     .prologue
-    .line 376
+    .line 379
     invoke-virtual {p0}, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->createNewFileName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 377
+    .line 380
     .local v0, fileName:Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -238,7 +238,7 @@
 
     iput-object v1, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mFilePath:Ljava/lang/String;
 
-    .line 378
+    .line 381
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +271,7 @@
 
     iput-object v1, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mSaveFilePath:Ljava/lang/String;
 
-    .line 379
+    .line 382
     invoke-static {}, Lcom/android/phone/PhoneVoiceRecorder;->access$700()Z
 
     move-result v1
@@ -302,7 +302,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
+    .line 383
     :cond_0
     iget-object v1, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mFilePath:Ljava/lang/String;
 
@@ -314,7 +314,7 @@
     .parameter "c"
 
     .prologue
-    .line 458
+    .line 461
     const/16 v0, 0x30
 
     if-lt p1, v0, :cond_0
@@ -345,19 +345,19 @@
     .parameter "phoneNumber"
 
     .prologue
-    .line 435
+    .line 438
     if-nez p1, :cond_1
 
-    .line 436
+    .line 439
     const/4 p1, 0x0
 
-    .line 454
+    .line 457
     .end local p1
     :cond_0
     :goto_0
     return-object p1
 
-    .line 438
+    .line 441
     .restart local p1
     :cond_1
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
@@ -420,18 +420,18 @@
 
     if-nez v4, :cond_0
 
-    .line 444
+    .line 447
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 445
+    .line 448
     .local v2, len:I
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 447
+    .line 450
     .local v3, ret:Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
@@ -439,12 +439,12 @@
     :goto_1
     if-ge v1, v2, :cond_3
 
-    .line 448
+    .line 451
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 449
+    .line 452
     .local v0, c:C
     invoke-direct {p0, v0}, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->isPhoneNumberChar(C)Z
 
@@ -452,16 +452,16 @@
 
     if-eqz v4, :cond_2
 
-    .line 450
+    .line 453
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 447
+    .line 450
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 454
+    .line 457
     .end local v0           #c:C
     :cond_3
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -477,7 +477,7 @@
     .locals 0
 
     .prologue
-    .line 477
+    .line 480
     return-void
 .end method
 
@@ -487,14 +487,14 @@
     .parameter "context"
 
     .prologue
-    .line 418
+    .line 421
     const/4 v0, 0x0
 
-    .line 419
+    .line 422
     .local v0, dir:Ljava/io/File;
     const/4 v2, 0x0
 
-    .line 421
+    .line 424
     .local v2, files:[Ljava/io/File;
     new-instance v1, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread$FileEndWithFilter;
 
@@ -518,7 +518,7 @@
 
     invoke-direct {v1, p0, v3}, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread$FileEndWithFilter;-><init>(Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;Ljava/lang/String;)V
 
-    .line 423
+    .line 426
     .local v1, filenameFilter:Ljava/io/FilenameFilter;
     new-instance v0, Ljava/io/File;
 
@@ -527,7 +527,7 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 425
+    .line 428
     .restart local v0       #dir:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -535,16 +535,16 @@
 
     if-nez v3, :cond_0
 
-    .line 426
+    .line 429
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 429
+    .line 432
     :cond_0
     invoke-virtual {v0, v1}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v2
 
-    .line 431
+    .line 434
     if-eqz v2, :cond_1
 
     array-length v3, v2
@@ -567,19 +567,19 @@
     .locals 5
 
     .prologue
-    .line 384
+    .line 387
     const-string v3, "PhoneVoiceRecorder"
 
     const-string v4, "createNewFileName()"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 386
+    .line 389
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 387
+    .line 390
     .local v0, fileName:Ljava/lang/StringBuilder;
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
@@ -597,12 +597,12 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 388
+    .line 391
     const-string v3, " "
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 389
+    .line 392
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -620,16 +620,16 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 391
+    .line 394
     const/4 v1, 0x1
 
-    .line 392
+    .line 395
     .local v1, num:I
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 394
+    .line 397
     .local v2, prefix:Ljava/lang/String;
     :goto_0
     invoke-direct {p0, v2, v1}, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->buildFileNumber(Ljava/lang/String;I)Ljava/lang/String;
@@ -638,7 +638,7 @@
 
     iput-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mFileName:Ljava/lang/String;
 
-    .line 395
+    .line 398
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mFileName:Ljava/lang/String;
 
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
@@ -651,13 +651,13 @@
 
     if-nez v3, :cond_0
 
-    .line 396
+    .line 399
     add-int/lit8 v1, v1, 0x1
 
-    .line 397
+    .line 400
     goto :goto_0
 
-    .line 401
+    .line 404
     :cond_0
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mFileName:Ljava/lang/String;
 
@@ -671,7 +671,7 @@
     .parameter "arg2"
 
     .prologue
-    .line 293
+    .line 296
     invoke-static {}, Lcom/android/phone/PhoneVoiceRecorder;->access$700()Z
 
     move-result v0
@@ -710,11 +710,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
+    .line 297
     :cond_0
     invoke-virtual {p0}, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->cancelRecording()V
 
-    .line 295
+    .line 298
     return-void
 .end method
 
@@ -725,7 +725,7 @@
     .parameter "extra"
 
     .prologue
-    .line 298
+    .line 301
     invoke-static {}, Lcom/android/phone/PhoneVoiceRecorder;->access$700()Z
 
     move-result v0
@@ -774,23 +774,23 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 300
+    .line 303
     :cond_0
     const/16 v0, 0x321
 
     if-ne p2, v0, :cond_1
 
-    .line 301
+    .line 304
     const-string v0, "PhoneVoiceRecorder"
 
     const-string v1, "onInfo - MediaRecorder.MEDIA_RECORDER_INFO_MAX_FILESIZE_REACHED"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
+    .line 305
     invoke-virtual {p0}, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->stopRecording()V
 
-    .line 304
+    .line 307
     :cond_1
     return-void
 .end method
@@ -801,42 +801,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 362
+    .line 365
     const-string v0, "PhoneVoiceRecorder"
 
     const-string v1, "releaseMediaRecorder..."
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 364
-    iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
-
-    #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
-    invoke-static {v0}, Lcom/android/phone/PhoneVoiceRecorder;->access$100(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/media/MediaRecorder;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 365
-    iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
-
-    #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
-    invoke-static {v0}, Lcom/android/phone/PhoneVoiceRecorder;->access$100(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/media/MediaRecorder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setOnErrorListener(Landroid/media/MediaRecorder$OnErrorListener;)V
-
-    .line 366
-    iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
-
-    #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
-    invoke-static {v0}, Lcom/android/phone/PhoneVoiceRecorder;->access$100(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/media/MediaRecorder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setOnInfoListener(Landroid/media/MediaRecorder$OnInfoListener;)V
 
     .line 367
     iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
@@ -846,7 +816,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/media/MediaRecorder;->reset()V
+    if-eqz v0, :cond_0
 
     .line 368
     iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
@@ -856,24 +826,54 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setOnErrorListener(Landroid/media/MediaRecorder$OnErrorListener;)V
 
     .line 369
+    iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
+
+    #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
+    invoke-static {v0}, Lcom/android/phone/PhoneVoiceRecorder;->access$100(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/media/MediaRecorder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/media/MediaRecorder;->setOnInfoListener(Landroid/media/MediaRecorder$OnInfoListener;)V
+
+    .line 370
+    iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
+
+    #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
+    invoke-static {v0}, Lcom/android/phone/PhoneVoiceRecorder;->access$100(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/media/MediaRecorder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->reset()V
+
+    .line 371
+    iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
+
+    #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
+    invoke-static {v0}, Lcom/android/phone/PhoneVoiceRecorder;->access$100(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/media/MediaRecorder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/media/MediaRecorder;->release()V
+
+    .line 372
     iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #setter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
     invoke-static {v0, v2}, Lcom/android/phone/PhoneVoiceRecorder;->access$102(Lcom/android/phone/PhoneVoiceRecorder;Landroid/media/MediaRecorder;)Landroid/media/MediaRecorder;
 
-    .line 372
+    .line 375
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     const-wide/16 v1, 0x0
 
     #setter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecordingTimeInMiliSecond:J
-    invoke-static {v0, v1, v2}, Lcom/android/phone/PhoneVoiceRecorder;->access$402(Lcom/android/phone/PhoneVoiceRecorder;J)J
+    invoke-static {v0, v1, v2}, Lcom/android/phone/PhoneVoiceRecorder;->access$202(Lcom/android/phone/PhoneVoiceRecorder;J)J
 
-    .line 373
+    .line 376
     return-void
 .end method
 
@@ -881,8 +881,6 @@
     .locals 8
 
     .prologue
-    const/4 v6, 0x1
-
     const/4 v7, 0x0
 
     .line 244
@@ -894,7 +892,7 @@
 
     if-nez v3, :cond_0
 
-    .line 290
+    .line 293
     :goto_0
     return-void
 
@@ -1061,30 +1059,49 @@
     move-result-object v3
 
     invoke-virtual {v3}, Landroid/media/MediaRecorder;->prepare()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 277
+    .line 270
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     const-wide/16 v4, 0x0
 
     #setter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecordingTimeInMiliSecond:J
-    invoke-static {v3, v4, v5}, Lcom/android/phone/PhoneVoiceRecorder;->access$402(Lcom/android/phone/PhoneVoiceRecorder;J)J
+    invoke-static {v3, v4, v5}, Lcom/android/phone/PhoneVoiceRecorder;->access$202(Lcom/android/phone/PhoneVoiceRecorder;J)J
 
-    .line 278
+    .line 271
+    const-string v3, "PhoneVoiceRecorder"
+
+    const-string v4, "RecorderThread started"
+
+    invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 272
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
-    iput-boolean v6, v3, Lcom/android/phone/PhoneVoiceRecorder;->isRecording:Z
+    #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mRecorder:Landroid/media/MediaRecorder;
+    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$100(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/media/MediaRecorder;
 
-    .line 281
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/media/MediaRecorder;->start()V
+
+    .line 273
+    iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
+
+    const/4 v4, 0x1
+
+    iput-boolean v4, v3, Lcom/android/phone/PhoneVoiceRecorder;->isRecording:Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 284
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
     sput-wide v3, Lcom/android/phone/PhoneVoiceRecorder;->mStartRecordTime:J
 
-    .line 283
+    .line 286
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mCallCard:Lcom/android/phone/CallCard;
@@ -1094,18 +1111,18 @@
 
     invoke-virtual {v3}, Lcom/android/phone/CallCard;->visibleRecInfoView()V
 
-    .line 284
+    .line 287
     invoke-static {}, Lcom/android/phone/PhoneVoiceRecorder;->access$600()Lcom/android/phone/PhoneApp;
 
     move-result-object v3
 
     invoke-virtual {v3}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
-    .line 287
+    .line 290
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v3
 
@@ -1114,7 +1131,7 @@
     iget-object v5, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mContext:Landroid/content/Context;
-    invoke-static {v5}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
+    invoke-static {v5}, Lcom/android/phone/PhoneVoiceRecorder;->access$400(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
 
     move-result-object v5
 
@@ -1132,12 +1149,12 @@
 
     move-result-object v2
 
-    .line 289
+    .line 292
     .local v2, msg:Landroid/os/Message;
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v3
 
@@ -1145,12 +1162,12 @@
 
     goto/16 :goto_0
 
-    .line 269
+    .line 274
     .end local v2           #msg:Landroid/os/Message;
     :catch_0
     move-exception v1
 
-    .line 270
+    .line 275
     .local v1, e:Ljava/lang/Exception;
     const-string v3, "PhoneVoiceRecorder"
 
@@ -1174,11 +1191,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
+    .line 276
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v3
 
@@ -1187,7 +1204,7 @@
     iget-object v5, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mContext:Landroid/content/Context;
-    invoke-static {v5}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
+    invoke-static {v5}, Lcom/android/phone/PhoneVoiceRecorder;->access$400(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
 
     move-result-object v5
 
@@ -1205,16 +1222,21 @@
 
     move-result-object v2
 
-    .line 273
+    .line 278
     .restart local v2       #msg:Landroid/os/Message;
     iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v3}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v3
 
     invoke-virtual {v3, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    .line 279
+    iget-object v3, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
+
+    iput-boolean v7, v3, Lcom/android/phone/PhoneVoiceRecorder;->isRecording:Z
 
     goto/16 :goto_0
 .end method
@@ -1223,14 +1245,14 @@
     .locals 15
 
     .prologue
-    .line 307
+    .line 310
     const-string v9, "PhoneVoiceRecorder"
 
     const-string v10, "stopRecording"
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 310
+    .line 313
     :try_start_0
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
@@ -1241,31 +1263,31 @@
 
     invoke-virtual {v9}, Landroid/media/MediaRecorder;->stop()V
 
-    .line 311
+    .line 314
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     const/4 v10, 0x0
 
     iput-boolean v10, v9, Lcom/android/phone/PhoneVoiceRecorder;->isRecording:Z
 
-    .line 312
+    .line 315
     invoke-virtual {p0}, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->releaseMediaRecorder()V
 
-    .line 314
+    .line 317
     new-instance v5, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v5}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    .line 315
+    .line 318
     .local v5, retriever:Landroid/media/MediaMetadataRetriever;
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mFilePath:Ljava/lang/String;
 
     invoke-virtual {v5, v9}, Landroid/media/MediaMetadataRetriever;->setDataSource(Ljava/lang/String;)V
 
-    .line 316
+    .line 319
     const/4 v8, 0x0
 
-    .line 317
+    .line 320
     .local v8, value:Ljava/lang/String;
     const/16 v9, 0x9
 
@@ -1273,14 +1295,14 @@
 
     move-result-object v8
 
-    .line 318
+    .line 321
     invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v9
 
     int-to-long v1, v9
 
-    .line 319
+    .line 322
     .local v1, fileDuration:J
     const-wide/16 v9, 0x3e8
 
@@ -1288,7 +1310,7 @@
 
     if-gez v9, :cond_0
 
-    .line 320
+    .line 323
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mCallCard:Lcom/android/phone/CallCard;
@@ -1298,18 +1320,18 @@
 
     invoke-virtual {v9}, Lcom/android/phone/CallCard;->invisibleRecInfoView()V
 
-    .line 321
+    .line 324
     invoke-static {}, Lcom/android/phone/PhoneVoiceRecorder;->access$600()Lcom/android/phone/PhoneApp;
 
     move-result-object v9
 
     invoke-virtual {v9}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
-    .line 322
+    .line 325
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v9
 
@@ -1322,7 +1344,7 @@
     iget-object v13, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mContext:Landroid/content/Context;
-    invoke-static {v13}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
+    invoke-static {v13}, Lcom/android/phone/PhoneVoiceRecorder;->access$400(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
 
     move-result-object v13
 
@@ -1340,25 +1362,25 @@
 
     move-result-object v4
 
-    .line 324
+    .line 327
     .local v4, msg:Landroid/os/Message;
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v9
 
     invoke-virtual {v9, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 359
+    .line 362
     .end local v1           #fileDuration:J
     .end local v5           #retriever:Landroid/media/MediaMetadataRetriever;
     .end local v8           #value:Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 327
+    .line 330
     .end local v4           #msg:Landroid/os/Message;
     .restart local v1       #fileDuration:J
     .restart local v5       #retriever:Landroid/media/MediaMetadataRetriever;
@@ -1370,7 +1392,7 @@
 
     invoke-direct {v7, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 328
+    .line 331
     .local v7, tempFile:Ljava/io/File;
     new-instance v6, Ljava/io/File;
 
@@ -1378,16 +1400,16 @@
 
     invoke-direct {v6, v9}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 329
+    .line 332
     .local v6, saveFile:Ljava/io/File;
     invoke-virtual {v7, v6}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    .line 330
+    .line 333
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 331
+    .line 334
     .local v3, mediaStore:Landroid/content/ContentValues;
     const-string v9, "title"
 
@@ -1395,21 +1417,21 @@
 
     invoke-virtual {v3, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
+    .line 335
     const-string v9, "mime_type"
 
     const-string v10, "audio/amr"
 
     invoke-virtual {v3, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 333
+    .line 336
     const-string v9, "_data"
 
     iget-object v10, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->mSaveFilePath:Ljava/lang/String;
 
     invoke-virtual {v3, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 334
+    .line 337
     const-string v9, "duration"
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1418,7 +1440,7 @@
 
     invoke-virtual {v3, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 335
+    .line 338
     const-string v9, "_size"
 
     invoke-virtual {v6}, Ljava/io/File;->length()J
@@ -1431,7 +1453,7 @@
 
     invoke-virtual {v3, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 336
+    .line 339
     const-string v9, "date_modified"
 
     invoke-virtual {v6}, Ljava/io/File;->lastModified()J
@@ -1448,7 +1470,7 @@
 
     invoke-virtual {v3, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 337
+    .line 340
     const-string v9, "is_sound"
 
     const/4 v10, 0x1
@@ -1459,7 +1481,7 @@
 
     invoke-virtual {v3, v9, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 338
+    .line 341
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v9
@@ -1474,7 +1496,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 351
+    .line 354
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mCallCard:Lcom/android/phone/CallCard;
@@ -1484,18 +1506,18 @@
 
     invoke-virtual {v9}, Lcom/android/phone/CallCard;->invisibleRecInfoView()V
 
-    .line 352
+    .line 355
     invoke-static {}, Lcom/android/phone/PhoneVoiceRecorder;->access$600()Lcom/android/phone/PhoneApp;
 
     move-result-object v9
 
     invoke-virtual {v9}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
-    .line 356
+    .line 359
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v9
 
@@ -1508,7 +1530,7 @@
     iget-object v13, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mContext:Landroid/content/Context;
-    invoke-static {v13}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
+    invoke-static {v13}, Lcom/android/phone/PhoneVoiceRecorder;->access$400(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
 
     move-result-object v13
 
@@ -1526,12 +1548,12 @@
 
     move-result-object v4
 
-    .line 358
+    .line 361
     .restart local v4       #msg:Landroid/os/Message;
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v9
 
@@ -1539,7 +1561,7 @@
 
     goto/16 :goto_0
 
-    .line 339
+    .line 342
     .end local v1           #fileDuration:J
     .end local v3           #mediaStore:Landroid/content/ContentValues;
     .end local v4           #msg:Landroid/os/Message;
@@ -1550,7 +1572,7 @@
     :catch_0
     move-exception v0
 
-    .line 340
+    .line 343
     .local v0, e:Ljava/lang/Exception;
     const-string v9, "PhoneVoiceRecorder"
 
@@ -1558,7 +1580,7 @@
 
     invoke-static {v9, v10, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 341
+    .line 344
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mCallCard:Lcom/android/phone/CallCard;
@@ -1568,18 +1590,18 @@
 
     invoke-virtual {v9}, Lcom/android/phone/CallCard;->invisibleRecInfoView()V
 
-    .line 342
+    .line 345
     invoke-static {}, Lcom/android/phone/PhoneVoiceRecorder;->access$600()Lcom/android/phone/PhoneApp;
 
     move-result-object v9
 
     invoke-virtual {v9}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
-    .line 343
+    .line 346
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v9
 
@@ -1592,7 +1614,7 @@
     iget-object v13, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mContext:Landroid/content/Context;
-    invoke-static {v13}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
+    invoke-static {v13}, Lcom/android/phone/PhoneVoiceRecorder;->access$400(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
 
     move-result-object v13
 
@@ -1610,12 +1632,12 @@
 
     move-result-object v4
 
-    .line 345
+    .line 348
     .restart local v4       #msg:Landroid/os/Message;
     iget-object v9, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;->this$0:Lcom/android/phone/PhoneVoiceRecorder;
 
     #getter for: Lcom/android/phone/PhoneVoiceRecorder;->mHandler:Landroid/os/Handler;
-    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+    invoke-static {v9}, Lcom/android/phone/PhoneVoiceRecorder;->access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
 
     move-result-object v9
 

@@ -64,7 +64,7 @@
 
     const/4 v13, 0x2
 
-    const v12, 0x10802a8
+    const v12, 0x10802a7
 
     const/4 v11, 0x1
 
@@ -79,9 +79,9 @@
 
     const v4, 0x1040480
 
-    const v5, 0x10802a4
+    const v5, 0x10802a3
 
-    const v6, 0x10802a4
+    const v6, 0x10802a3
 
     move v7, v2
 
@@ -96,9 +96,9 @@
 
     const v7, 0x1040481
 
-    const v8, 0x10802a9
+    const v8, 0x10802a8
 
-    const v9, 0x10802aa
+    const v9, 0x10802a9
 
     move v5, v11
 
@@ -140,9 +140,9 @@
 
     const v7, 0x104047c
 
-    const v8, 0x10802a2
+    const v8, 0x10802a1
 
-    const v9, 0x10802a3
+    const v9, 0x10802a2
 
     move v5, v14
 
@@ -161,9 +161,9 @@
 
     const v7, 0x1040483
 
-    const v8, 0x10802ae
+    const v8, 0x10802ad
 
-    const v9, 0x10802af
+    const v9, 0x10802ae
 
     move v6, v14
 
@@ -184,9 +184,9 @@
 
     const v7, 0x1040484
 
-    const v8, 0x10802a6
+    const v8, 0x10802a5
 
-    const v9, 0x10802a7
+    const v9, 0x10802a6
 
     move v10, v11
 
@@ -205,9 +205,9 @@
 
     const v7, 0x104047f
 
-    const v8, 0x10802ae
+    const v8, 0x10802ad
 
-    const v9, 0x10802af
+    const v9, 0x10802ae
 
     move v10, v11
 

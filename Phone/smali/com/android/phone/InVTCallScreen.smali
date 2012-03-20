@@ -492,63 +492,41 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
     .line 221
-    const-string v0, "ro.debuggable"
-
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v1
-
-    :goto_0
     sput-boolean v0, Lcom/android/phone/InVTCallScreen;->DBG:Z
 
     .line 223
-    const-string v0, "ro.debuggable"
-
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_1
-
-    move v0, v1
-
-    :goto_1
     sput-boolean v0, Lcom/android/phone/InVTCallScreen;->VDBG:Z
 
     .line 528
-    sput-object v3, Lcom/android/phone/InVTCallScreen;->mImageSelectedFromGalary:Landroid/net/Uri;
+    sput-object v2, Lcom/android/phone/InVTCallScreen;->mImageSelectedFromGalary:Landroid/net/Uri;
 
     .line 529
-    sput-object v3, Lcom/android/phone/InVTCallScreen;->mVideoSelectedFromGalary:Landroid/net/Uri;
+    sput-object v2, Lcom/android/phone/InVTCallScreen;->mVideoSelectedFromGalary:Landroid/net/Uri;
 
     .line 711
-    sput-boolean v2, Lcom/android/phone/InVTCallScreen;->nearend_pressed:Z
+    sput-boolean v0, Lcom/android/phone/InVTCallScreen;->nearend_pressed:Z
 
     .line 837
-    sput-boolean v2, Lcom/android/phone/InVTCallScreen;->farend_pressed:Z
+    sput-boolean v0, Lcom/android/phone/InVTCallScreen;->farend_pressed:Z
 
     .line 845
-    sput-boolean v2, Lcom/android/phone/InVTCallScreen;->isVTManagerAlreadyStarted:Z
+    sput-boolean v0, Lcom/android/phone/InVTCallScreen;->isVTManagerAlreadyStarted:Z
 
     .line 1422
-    sput-boolean v2, Lcom/android/phone/InVTCallScreen;->disconnectDueToLowBattery:Z
+    sput-boolean v0, Lcom/android/phone/InVTCallScreen;->disconnectDueToLowBattery:Z
 
     .line 3347
-    sput-boolean v2, Lcom/android/phone/InVTCallScreen;->mBackPressed:Z
+    sput-boolean v0, Lcom/android/phone/InVTCallScreen;->mBackPressed:Z
 
     .line 3348
     sput-boolean v1, Lcom/android/phone/InVTCallScreen;->mHomePressed:Z
@@ -557,27 +535,15 @@
     sput-boolean v1, Lcom/android/phone/InVTCallScreen;->mLongPressMenuEnabled:Z
 
     .line 8369
-    sput v2, Lcom/android/phone/InVTCallScreen;->mLongPressMoveCount:I
+    sput v0, Lcom/android/phone/InVTCallScreen;->mLongPressMoveCount:I
 
     .line 8372
-    sput v2, Lcom/android/phone/InVTCallScreen;->mXMoveStart:I
+    sput v0, Lcom/android/phone/InVTCallScreen;->mXMoveStart:I
 
     .line 8373
-    sput v2, Lcom/android/phone/InVTCallScreen;->mYMoveStart:I
+    sput v0, Lcom/android/phone/InVTCallScreen;->mYMoveStart:I
 
     return-void
-
-    :cond_0
-    move v0, v2
-
-    .line 221
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    .line 223
-    goto :goto_1
 .end method
 
 .method public constructor <init>()V

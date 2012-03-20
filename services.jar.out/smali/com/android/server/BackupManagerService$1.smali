@@ -35,33 +35,12 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 13
+    .locals 12
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    .line 1278
-    const-string v10, "BackupManagerService"
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v12, "Received broadcast "
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-static {v10, v11}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const/4 v11, 0x0
 
     .line 1280
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -147,9 +126,7 @@
     new-array v6, v10, [Ljava/lang/String;
 
     .end local v6           #pkgList:[Ljava/lang/String;
-    const/4 v10, 0x0
-
-    aput-object v7, v6, v10
+    aput-object v7, v6, v11
 
     .line 1296
     .restart local v6       #pkgList:[Ljava/lang/String;
@@ -237,8 +214,6 @@
 
     .line 1302
     const-string v10, "android.intent.extra.REPLACING"
-
-    const/4 v11, 0x0
 
     invoke-virtual {v3, v10, v11}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 

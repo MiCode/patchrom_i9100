@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 57
+    .line 58
     iput-object p1, p0, Lcom/android/phone/NetworkModePreference$1;->this$0:Lcom/android/phone/NetworkModePreference;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,15 +39,15 @@
     .parameter "state"
 
     .prologue
-    .line 60
+    .line 61
     packed-switch p1, :pswitch_data_0
 
-    .line 74
+    .line 75
     :cond_0
     :goto_0
     return-void
 
-    .line 62
+    .line 63
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$1;->this$0:Lcom/android/phone/NetworkModePreference;
 
@@ -60,21 +60,21 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 63
+    .line 64
     invoke-static {}, Lcom/android/phone/NetworkModePreference;->access$100()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 64
+    .line 65
     const-string v0, "NetworkModePreference"
 
     const-string v1, "onDataConnectionStateChanged.."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
+    .line 66
     :cond_1
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$1;->this$0:Lcom/android/phone/NetworkModePreference;
 
@@ -89,13 +89,13 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/Settings;->removeDialog(I)V
 
-    .line 66
+    .line 67
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$1;->this$0:Lcom/android/phone/NetworkModePreference;
 
     #calls: Lcom/android/phone/NetworkModePreference;->changeNetworkType()V
     invoke-static {v0}, Lcom/android/phone/NetworkModePreference;->access$300(Lcom/android/phone/NetworkModePreference;)V
 
-    .line 67
+    .line 68
     iget-object v0, p0, Lcom/android/phone/NetworkModePreference$1;->this$0:Lcom/android/phone/NetworkModePreference;
 
     const/4 v1, 0x0
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 60
+    .line 61
     nop
 
     :pswitch_data_0

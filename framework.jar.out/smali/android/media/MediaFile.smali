@@ -376,7 +376,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 251
 
     invoke-static {}, Landroid/media/MediaFile;->isWMAEnabled()Z
 
@@ -384,6 +383,7 @@
 
     if-eqz v0, :cond_0
 
+    .line 251
     const-string v0, "WMA"
 
     const/4 v1, 0x6
@@ -394,7 +394,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 255
     :cond_0
     const-string v0, "OGG"
 
@@ -1306,7 +1305,6 @@
 
     if-le p0, v1, :cond_2
 
-    .line 402
     .local v0, bOrg:Z
     :cond_1
     if-lt p0, v2, :cond_3
@@ -1317,7 +1315,6 @@
     :goto_0
     return v0
 
-    .line 377
     .end local v0           #bOrg:Z
     :cond_3
     const/4 v0, 0x0

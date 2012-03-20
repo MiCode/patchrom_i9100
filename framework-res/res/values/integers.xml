@@ -30,7 +30,7 @@
     <integer name="config_notificationsBatteryLedOn">125</integer>
     <integer name="config_notificationsBatteryLedOff">2875</integer>
     <integer name="config_longPressOnHomeBehavior">2</integer>
-    <integer name="config_screenBrightnessDim">20</integer>
+    <integer name="config_screenBrightnessDim">30</integer>
     <integer name="config_IOPControlConditionStopTemperature">480</integer>
     <integer name="config_lightSensorWarmupTime">0</integer>
     <integer name="config_virtualKeyQuietTimeMillis">250</integer>

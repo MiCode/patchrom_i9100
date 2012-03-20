@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3363
+    .line 3369
     iput-object p1, p0, Lcom/android/phone/InCallScreen$14;->this$0:Lcom/android/phone/InCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -38,19 +38,11 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 0
     .parameter "dialog"
     .parameter "which"
 
     .prologue
-    .line 3366
-    iget-object v0, p0, Lcom/android/phone/InCallScreen$14;->this$0:Lcom/android/phone/InCallScreen;
-
-    const-string v1, "Missing voicemail AlertDialog: POSITIVE click..."
-
-    #calls: Lcom/android/phone/InCallScreen;->log(Ljava/lang/String;)V
-    invoke-static {v0, v1}, Lcom/android/phone/InCallScreen;->access$000(Lcom/android/phone/InCallScreen;Ljava/lang/String;)V
-
-    .line 3370
+    .line 3376
     return-void
 .end method

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2520
+    .line 2541
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-direct {p0}, Landroid/bluetooth/AtCommandHandler;-><init>()V
@@ -36,7 +36,7 @@
     .locals 4
 
     .prologue
-    .line 2522
+    .line 2543
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -54,7 +54,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2524
+    .line 2545
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mBluetoothPhoneState:Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;
@@ -65,7 +65,7 @@
     #calls: Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->stopRing()V
     invoke-static {v0}, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->access$5800(Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;)V
 
-    .line 2525
+    .line 2546
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     const-string v1, "OK"
@@ -73,7 +73,7 @@
     #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/BluetoothHandsfree;->access$1500(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
 
-    .line 2526
+    .line 2547
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -87,23 +87,23 @@
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->answerCall(Lcom/android/internal/telephony/Call;)Z
 
-    .line 2529
+    .line 2550
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-virtual {v0}, Lcom/android/phone/BluetoothHandsfree;->audioOn()Z
 
-    .line 2530
+    .line 2551
     new-instance v0, Landroid/bluetooth/AtCommandResult;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Landroid/bluetooth/AtCommandResult;-><init>(I)V
 
-    .line 2551
+    .line 2572
     :goto_0
     return-object v0
 
-    .line 2531
+    .line 2552
     :cond_0
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -118,7 +118,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 2532
+    .line 2553
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-virtual {v0}, Lcom/android/phone/BluetoothHandsfree;->isAudioOn()Z
@@ -127,12 +127,12 @@
 
     if-nez v0, :cond_2
 
-    .line 2534
+    .line 2555
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-virtual {v0}, Lcom/android/phone/BluetoothHandsfree;->audioOn()Z
 
-    .line 2548
+    .line 2569
     :cond_1
     :goto_1
     new-instance v0, Landroid/bluetooth/AtCommandResult;
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 2536
+    .line 2557
     :cond_2
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -183,13 +183,13 @@
 
     if-ltz v0, :cond_1
 
-    .line 2544
+    .line 2565
     :cond_3
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-virtual {v0}, Lcom/android/phone/BluetoothHandsfree;->audioOff()V
 
-    .line 2545
+    .line 2566
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
@@ -200,7 +200,7 @@
 
     goto :goto_1
 
-    .line 2551
+    .line 2572
     :cond_4
     iget-object v0, p0, Lcom/android/phone/BluetoothHandsfree$2;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -218,7 +218,7 @@
     .locals 1
 
     .prologue
-    .line 2556
+    .line 2577
     invoke-direct {p0}, Lcom/android/phone/BluetoothHandsfree$2;->headsetButtonPress()Landroid/bluetooth/AtCommandResult;
 
     move-result-object v0
@@ -231,7 +231,7 @@
     .parameter "args"
 
     .prologue
-    .line 2560
+    .line 2581
     invoke-direct {p0}, Lcom/android/phone/BluetoothHandsfree$2;->headsetButtonPress()Landroid/bluetooth/AtCommandResult;
 
     move-result-object v0

@@ -55,7 +55,7 @@
 
     .prologue
     .line 45
-    const v0, 0x10103d6
+    const v0, 0x10103d8
 
     invoke-direct {p0, p1, p2, v0}, Landroid/preference/PreferenceFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 

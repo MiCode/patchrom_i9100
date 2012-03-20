@@ -410,9 +410,9 @@
     .parameter "level"
 
     .prologue
-    const v0, 0x1080527
+    const v0, 0x1080524
 
-    const v1, 0x1080519
+    const v1, 0x1080516
 
     .line 557
     iget v2, p0, Lcom/android/server/BatteryService;->mBatteryStatus:I
@@ -475,7 +475,7 @@
 
     .line 569
     :cond_5
-    const v0, 0x1080535
+    const v0, 0x1080532
 
     goto :goto_0
 .end method
@@ -2415,7 +2415,7 @@
     .parameter "args"
 
     .prologue
-    .line 605
+    .line 606
     iget-object v0, p0, Lcom/android/server/BatteryService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DUMP"
@@ -2426,7 +2426,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 608
+    .line 609
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2465,12 +2465,12 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 656
+    .line 657
     :cond_0
     :goto_0
     return-void
 
-    .line 614
+    .line 615
     :cond_1
     if-eqz p3, :cond_2
 
@@ -2490,17 +2490,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 615
+    .line 616
     :cond_2
     monitor-enter p0
 
-    .line 616
+    .line 617
     :try_start_0
     const-string v0, "Current Battery Service state:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 617
+    .line 618
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2523,7 +2523,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 618
+    .line 619
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2546,7 +2546,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 619
+    .line 620
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2569,7 +2569,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 620
+    .line 621
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2592,7 +2592,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 621
+    .line 622
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2615,7 +2615,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 622
+    .line 623
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2638,12 +2638,12 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 623
+    .line 624
     const-string v0, "  scale: 100"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 624
+    .line 625
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2666,7 +2666,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 625
+    .line 626
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2689,7 +2689,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 626
+    .line 627
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2712,7 +2712,7 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 627
+    .line 628
     monitor-exit p0
 
     goto/16 :goto_0
@@ -2782,7 +2782,7 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
+    .line 600
     .end local v3           #fileReader:Ljava/io/FileReader;
     :goto_0
     return v5
@@ -2817,10 +2817,13 @@
 
     move-result v0
 
-    .line 590
-    if-ltz v0, :cond_1
+    .line 589
+    invoke-virtual {v3}, Ljava/io/FileReader;->close()V
 
     .line 591
+    if-ltz v0, :cond_1
+
+    .line 592
     sget-object v6, Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
 
     const-string v7, "isOverCurrent : not overcurrent"
@@ -2831,13 +2834,13 @@
 
     goto :goto_0
 
-    .line 597
+    .line 598
     .end local v3           #fileReader:Ljava/io/FileReader;
     .end local v4           #splitString:[Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 598
+    .line 599
     .local v1, exception:Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
 
@@ -2863,7 +2866,7 @@
 
     goto :goto_0
 
-    .line 594
+    .line 595
     .end local v1           #exception:Ljava/lang/Exception;
     .restart local v3       #fileReader:Ljava/io/FileReader;
     .restart local v4       #splitString:[Ljava/lang/String;
@@ -2877,7 +2880,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 595
+    .line 596
     const/4 v5, 0x1
 
     goto :goto_0

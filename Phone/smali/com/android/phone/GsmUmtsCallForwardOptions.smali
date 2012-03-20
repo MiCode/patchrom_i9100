@@ -58,16 +58,16 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
+    const/4 v1, 0x0
+
     .line 34
     invoke-direct {p0}, Lcom/android/phone/TimeConsumingPreferenceActivity;-><init>()V
 
     .line 36
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->DBG:Z
+    iput-boolean v1, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->DBG:Z
 
     .line 54
     new-instance v0, Ljava/util/ArrayList;
@@ -77,9 +77,7 @@
     iput-object v0, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mPreferences:Ljava/util/ArrayList;
 
     .line 56
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mInitIndex:I
+    iput v1, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mInitIndex:I
 
     return-void
 .end method
@@ -97,31 +95,18 @@
 
     const/4 v7, 0x0
 
-    .line 150
-    const-string v0, "GsmUmtsCallForwardOptions"
-
-    const-string v1, "onActivityResult: done"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 151
     const/4 v0, -0x1
 
-    if-eq p2, v0, :cond_0
-
-    .line 152
-    const-string v0, "GsmUmtsCallForwardOptions"
-
-    const-string v1, "onActivityResult: contact picker result not OK."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eq p2, v0, :cond_1
 
     .line 183
+    :cond_0
     :goto_0
     return-void
 
     .line 155
-    :cond_0
+    :cond_1
     invoke-virtual {p0}, Lcom/android/phone/GsmUmtsCallForwardOptions;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -142,31 +127,14 @@
 
     .line 157
     .local v6, cursor:Landroid/database/Cursor;
-    if-nez v6, :cond_1
-
-    .line 158
-    const-string v0, "GsmUmtsCallForwardOptions"
-
-    const-string v1, "onActivityResult: bad contact data, query return null"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    if-eqz v6, :cond_0
 
     .line 161
-    :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-nez v0, :cond_2
-
-    .line 162
-    const-string v0, "GsmUmtsCallForwardOptions"
-
-    const-string v1, "onActivityResult: bad contact data, no results found."
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 181
     :goto_1
@@ -229,8 +197,6 @@
     goto :goto_1
 
     .line 164
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -341,54 +307,44 @@
 
     invoke-virtual {v2, p0, v3}, Lcom/android/phone/CallForwardEditPreference;->setParentActivity(Landroid/app/Activity;I)V
 
-    .line 78
     iget-object v2, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mPreferences:Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mButtonCFU:Lcom/android/phone/CallForwardEditPreference;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 79
     iget-object v2, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mPreferences:Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mButtonCFB:Lcom/android/phone/CallForwardEditPreference;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 80
     iget-object v2, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mPreferences:Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mButtonCFNRy:Lcom/android/phone/CallForwardEditPreference;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 81
     iget-object v2, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mPreferences:Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mButtonCFNRc:Lcom/android/phone/CallForwardEditPreference;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 87
     iput-boolean v4, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mFirstResume:Z
 
-    .line 88
     iput-object p1, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mIcicle:Landroid/os/Bundle;
 
-    .line 90
     invoke-virtual {p0}, Lcom/android/phone/GsmUmtsCallForwardOptions;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 91
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 93
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 95
     :cond_0
     return-void
 .end method
@@ -526,13 +482,6 @@
     iget-object v4, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mIcicle:Landroid/os/Bundle;
 
     if-nez v4, :cond_2
-
-    .line 103
-    const-string v4, "GsmUmtsCallForwardOptions"
-
-    const-string v5, "start to init "
-
-    invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 104
     iget-object v4, p0, Lcom/android/phone/GsmUmtsCallForwardOptions;->mPreferences:Ljava/util/ArrayList;

@@ -3391,28 +3391,22 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 205
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 206
     const v2, 0x7f040004
 
     invoke-virtual {p0, v2}, Lcom/sec/android/app/callsetting/voicecall/CallBarring;->addPreferencesFromResource(I)V
 
-    .line 208
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/voicecall/CallBarring;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 209
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 211
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 214
     :cond_0
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/voicecall/CallBarring;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 

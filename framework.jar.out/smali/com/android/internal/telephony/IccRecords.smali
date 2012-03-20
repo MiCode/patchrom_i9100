@@ -164,7 +164,7 @@
     .locals 1
 
     .prologue
-    .line 370
+    .line 385
     const/4 v0, 0x0
 
     return-object v0
@@ -174,7 +174,7 @@
     .locals 1
 
     .prologue
-    .line 374
+    .line 389
     const/4 v0, 0x0
 
     return-object v0
@@ -194,7 +194,7 @@
     .locals 1
 
     .prologue
-    .line 397
+    .line 412
     const/4 v0, 0x0
 
     return-object v0
@@ -269,7 +269,7 @@
     .locals 1
 
     .prologue
-    .line 401
+    .line 416
     const/4 v0, 0x0
 
     return-object v0
@@ -515,7 +515,7 @@
     .locals 1
 
     .prologue
-    .line 362
+    .line 377
     const/4 v0, 0x1
 
     return v0
@@ -593,11 +593,23 @@
     return-void
 .end method
 
+.method public setCallForwardingFlag(ILjava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/String;)V
+    .locals 0
+    .parameter "line"
+    .parameter "voiceEnable"
+    .parameter "videoEnable"
+    .parameter "dialingNumber"
+
+    .prologue
+    .line 368
+    return-void
+.end method
+
 .method public setLanguageOnSim()V
     .locals 0
 
     .prologue
-    .line 406
+    .line 421
     return-void
 .end method
 
@@ -607,7 +619,7 @@
     .parameter "rawData"
 
     .prologue
-    .line 405
+    .line 420
     return-void
 .end method
 
@@ -718,7 +730,7 @@
     .parameter "currentPlmn"
 
     .prologue
-    .line 367
+    .line 382
     return-void
 .end method
 
@@ -732,6 +744,17 @@
     return-void
 .end method
 
+.method public setVideoCallForwardingFlag(IZLjava/lang/String;)V
+    .locals 0
+    .parameter "line"
+    .parameter "enable"
+    .parameter "dialingNumber"
+
+    .prologue
+    .line 365
+    return-void
+.end method
+
 .method public setVoiceCallForwardingFlag(IZ)V
     .locals 0
     .parameter "line"
@@ -739,6 +762,17 @@
 
     .prologue
     .line 343
+    return-void
+.end method
+
+.method public setVoiceCallForwardingFlag(IZLjava/lang/String;)V
+    .locals 0
+    .parameter "line"
+    .parameter "enable"
+    .parameter "dialingNumber"
+
+    .prologue
+    .line 362
     return-void
 .end method
 

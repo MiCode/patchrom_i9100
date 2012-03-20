@@ -141,20 +141,6 @@
     return-void
 .end method
 
-.method private log(Ljava/lang/String;)V
-    .locals 1
-    .parameter "msg"
-
-    .prologue
-    .line 153
-    const-string v0, "EndCallButtonsView"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 154
-    return-void
-.end method
-
 
 # virtual methods
 .method initialize(Lcom/android/phone/InCallScreen;)V
@@ -176,11 +162,6 @@
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    .line 86
-    const-string v1, "Inflate End call buttons view (portrait)"
-
-    invoke-direct {p0, v1}, Lcom/android/phone/DialpadButtonsView;->log(Ljava/lang/String;)V
 
     .line 87
     const v1, 0x7f09007b
@@ -213,45 +194,8 @@
 
     move-result v0
 
-    .line 131
-    .local v0, id:I
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onClick(View "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", id "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ")..."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/android/phone/DialpadButtonsView;->log(Ljava/lang/String;)V
-
     .line 132
+    .local v0, id:I
     packed-switch v0, :pswitch_data_0
 
     .line 146

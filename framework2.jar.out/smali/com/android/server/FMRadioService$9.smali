@@ -116,30 +116,7 @@
     invoke-virtual {v2}, Lcom/android/server/FMRadioService;->cancelScan()Z
 
     .line 451
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "it was scanning - cancel it and got the freq:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/FMRadioService$9;->this$0:Lcom/android/server/FMRadioService;
-
-    #getter for: Lcom/android/server/FMRadioService;->mNeedResumeToFreq:J
-    invoke-static {v3}, Lcom/android/server/FMRadioService;->access$1200(Lcom/android/server/FMRadioService;)J
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
+    const-string v2, "it was scanning - cancel it and got the freq:"
 
     invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
@@ -273,7 +250,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 469
     :catch_0
@@ -337,11 +314,6 @@
     cmp-long v2, v2, v4
 
     if-eqz v2, :cond_1
-
-    .line 476
-    const-string v2, "Need to resume waiting for com.android.phone.COMPLETE_AUDIO_RESET_AFTER_CALL_END to come"
-
-    invoke-static {v2}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
     .line 477
     iget-object v2, p0, Lcom/android/server/FMRadioService$9;->this$0:Lcom/android/server/FMRadioService;

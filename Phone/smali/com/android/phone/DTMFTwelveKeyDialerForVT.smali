@@ -544,11 +544,6 @@
 
     iput-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mHandler:Landroid/os/Handler;
 
-    .line 416
-    const-string v0, "DTMFTwelveKeyDialer constructor..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 418
     iput-object p1, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mInVTCallScreen:Lcom/android/phone/InVTCallScreen;
 
@@ -579,54 +574,8 @@
     :cond_0
     iput-object p2, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDialerView:Lcom/android/phone/DTMFTwelveKeyDialerViewForVT;
 
-    .line 429
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "- Got passed-in mDialerView: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDialerView:Lcom/android/phone/DTMFTwelveKeyDialerViewForVT;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 431
     iput-object p3, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDialerDrawer:Landroid/widget/SlidingDrawer;
-
-    .line 432
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "- Got passed-in mDialerDrawer: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDialerDrawer:Landroid/widget/SlidingDrawer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
 
     .line 434
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDialerView:Lcom/android/phone/DTMFTwelveKeyDialerViewForVT;
@@ -696,18 +645,7 @@
     return-void
 .end method
 
-.method static synthetic access$000(Ljava/lang/String;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 50
-    invoke-static {p0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$100(Lcom/android/phone/DTMFTwelveKeyDialerForVT;C)V
+.method static synthetic access$000(Lcom/android/phone/DTMFTwelveKeyDialerForVT;C)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -719,7 +657,7 @@
     return-void
 .end method
 
-.method static synthetic access$200(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)V
+.method static synthetic access$100(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)V
     .locals 0
     .parameter "x0"
 
@@ -730,7 +668,7 @@
     return-void
 .end method
 
-.method static synthetic access$300(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)Lcom/android/internal/telephony/Phone;
+.method static synthetic access$200(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)Lcom/android/internal/telephony/Phone;
     .locals 1
     .parameter "x0"
 
@@ -741,29 +679,10 @@
     return-object v0
 .end method
 
-.method private static log(Ljava/lang/String;)V
-    .locals 1
-    .parameter "msg"
-
-    .prologue
-    .line 943
-    const-string v0, "DTMFTwelveKeyDialerForVT"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 944
-    return-void
-.end method
-
 .method private onDialerClose()V
     .locals 2
 
     .prologue
-    .line 559
-    const-string v0, "onDialerClose()..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 565
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -784,11 +703,6 @@
     .locals 4
 
     .prologue
-    .line 499
-    const-string v0, "onDialerOpen()..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 503
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -819,34 +733,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
-
-    .line 816
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "updating display and sending dtmf tone for \'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
     .line 819
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDialpadDigits:Landroid/widget/EditText;
@@ -881,7 +768,6 @@
 
     .line 842
     :cond_1
-    :goto_0
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
@@ -890,40 +776,10 @@
 
     .line 843
     return-void
-
-    .line 838
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "ignoring dtmf request for \'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
-    goto :goto_0
 .end method
 
 .method private sendShortDtmfToNetwork(C)V
-    .locals 5
+    .locals 4
     .parameter "dtmfDigit"
 
     .prologue
@@ -962,31 +818,8 @@
 
     move-result-object v0
 
-    .line 1032
-    .local v0, dtmfStr:Ljava/lang/String;
-    const-string v1, "DTMFTwelveKeyDialerForVT"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "dtmfsent = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 1036
+    .local v0, dtmfStr:Ljava/lang/String;
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDTMFBurstCnfPending:Z
@@ -1201,11 +1034,6 @@
     .locals 1
 
     .prologue
-    .line 1046
-    const-string v0, "stopping remote tone."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 1048
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -1225,11 +1053,6 @@
     .parameter "animate"
 
     .prologue
-    .line 759
-    const-string v0, "closeDialer()..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 761
     invoke-virtual {p0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->isOpened()Z
 
@@ -1278,7 +1101,7 @@
 .end method
 
 .method handleBurstDtmfConfirmation()V
-    .locals 6
+    .locals 4
 
     .prologue
     .line 1074
@@ -1317,29 +1140,6 @@
     check-cast v0, Ljava/lang/Character;
 
     move-object v1, v0
-
-    .line 1079
-    const-string v2, "DTMFTwelveKeyDialerForVT"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "The dtmf character removed from queue"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v2, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 1081
     :cond_0
@@ -1527,7 +1327,7 @@
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 2
+    .locals 1
     .parameter "keyCode"
     .parameter "event"
 
@@ -1547,18 +1347,15 @@
     :goto_0
     return v0
 
-    .line 629
-    :pswitch_0
-    const-string v1, "exit requested"
-
-    invoke-static {v1}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 630
+    :pswitch_0
     invoke-virtual {p0, v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->closeDialer(Z)V
 
     goto :goto_0
 
     .line 625
+    nop
+
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_0
@@ -1667,11 +1464,6 @@
     .parameter "animate"
 
     .prologue
-    .line 728
-    const-string v0, "openDialer()..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 730
     invoke-virtual {p0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->isOpened()Z
 
@@ -1818,29 +1610,8 @@
     :catch_0
     move-exception v0
 
-    .line 546
-    .local v0, e:Ljava/lang/RuntimeException;
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Exception caught while creating local tone generator: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 547
+    .local v0, e:Ljava/lang/RuntimeException;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mToneGenerator:Landroid/media/ToneGenerator;
@@ -1864,11 +1635,6 @@
     .parameter "tone"
 
     .prologue
-    .line 887
-    const-string v0, "startDtmfTone()..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 889
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mVTManager:Lsiso/vt/VTManager;
 
@@ -1896,27 +1662,6 @@
 
     if-nez v0, :cond_1
 
-    .line 894
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "startDtmfTone: mToneGenerator == null, tone: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 899
     :goto_0
     monitor-exit v1
@@ -1925,29 +1670,8 @@
     :cond_0
     return-void
 
-    .line 896
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "starting local tone "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 897
+    :cond_1
     iget-object v2, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mToneGenerator:Landroid/media/ToneGenerator;
 
     sget-object v0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mToneMap:Ljava/util/HashMap;
@@ -2002,27 +1726,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1005
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "startToneCdma: mToneGenerator == null, tone: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 1016
     :goto_0
     monitor-exit v2
@@ -2031,29 +1734,8 @@
     :cond_0
     return-void
 
-    .line 1007
-    :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "starting local tone "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 1010
+    :cond_1
     const/4 v0, -0x1
 
     .line 1011
@@ -2138,31 +1820,8 @@
     .line 995
     return-void
 
-    .line 990
-    :cond_0
-    const-string v0, "DTMFTwelveKeyDialerForVT"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "send long dtmf for "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 991
+    :cond_0
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v0, p1}, Lcom/android/internal/telephony/Phone;->startDtmf(C)V
@@ -2174,16 +1833,6 @@
     .locals 2
 
     .prologue
-    .line 915
-    const-string v0, "stopDtmfTone()..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
-    .line 919
-    const-string v0, "trying to stop local tone..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 920
     iget-boolean v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDTMFToneEnabled:Z
 
@@ -2200,11 +1849,6 @@
 
     if-nez v0, :cond_1
 
-    .line 923
-    const-string v0, "stopDtmfTone: mToneGenerator == null"
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 928
     :goto_0
     monitor-exit v1
@@ -2213,13 +1857,8 @@
     :cond_0
     return-void
 
-    .line 925
-    :cond_1
-    const-string v0, "stopping local tone."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 926
+    :cond_1
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mToneGenerator:Landroid/media/ToneGenerator;
 
     invoke-virtual {v0}, Landroid/media/ToneGenerator;->stopTone()V
@@ -2241,11 +1880,6 @@
     .locals 2
 
     .prologue
-    .line 1057
-    const-string v0, "trying to stop local tone..."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 1058
     iget-boolean v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mDTMFToneEnabled:Z
 
@@ -2262,11 +1896,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1061
-    const-string v0, "stopLocalToneCdma: mToneGenerator == null"
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 1066
     :goto_0
     monitor-exit v1
@@ -2275,13 +1904,8 @@
     :cond_0
     return-void
 
-    .line 1063
-    :cond_1
-    const-string v0, "stopping local tone."
-
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-
     .line 1064
+    :cond_1
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->mToneGenerator:Landroid/media/ToneGenerator;
 
     invoke-virtual {v0}, Landroid/media/ToneGenerator;->stopTone()V

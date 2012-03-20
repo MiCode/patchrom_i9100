@@ -30,15 +30,15 @@
     .parameter "fileName"
 
     .prologue
-    .line 463
+    .line 466
     iput-object p1, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread$FileEndWithFilter;->this$1:Lcom/android/phone/PhoneVoiceRecorder$RecorderThread;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 464
+    .line 467
     iput-object p2, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread$FileEndWithFilter;->fileName:Ljava/lang/String;
 
-    .line 465
+    .line 468
     return-void
 .end method
 
@@ -50,17 +50,17 @@
     .parameter "name"
 
     .prologue
-    .line 468
+    .line 471
     if-eqz p2, :cond_0
 
-    .line 469
+    .line 472
     iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder$RecorderThread$FileEndWithFilter;->fileName:Ljava/lang/String;
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 471
+    .line 474
     :goto_0
     return v0
 

@@ -29,7 +29,7 @@
     .parameter
 
     .prologue
-    .line 2686
+    .line 2688
     iput-object p1, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     const/4 v0, 0x0
@@ -45,7 +45,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2686
+    .line 2688
     invoke-direct {p0, p1}, Landroid/widget/AbsListView$PerformClick;-><init>(Landroid/widget/AbsListView;)V
 
     return-void
@@ -57,7 +57,7 @@
     .locals 6
 
     .prologue
-    .line 2692
+    .line 2694
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     #getter for: Landroid/widget/AbsListView;->mForcedClick:Z
@@ -73,22 +73,22 @@
 
     if-eqz v3, :cond_1
 
-    .line 2706
+    .line 2708
     :cond_0
     :goto_0
     return-void
 
-    .line 2694
+    .line 2696
     :cond_1
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v0, v3, Landroid/widget/AbsListView;->mAdapter:Landroid/widget/ListAdapter;
 
-    .line 2695
+    .line 2697
     .local v0, adapter:Landroid/widget/ListAdapter;
     iget v1, p0, Landroid/widget/AbsListView$PerformClick;->mClickMotionPosition:I
 
-    .line 2696
+    .line 2698
     .local v1, motionPosition:I
     if-eqz v0, :cond_0
 
@@ -114,7 +114,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 2699
+    .line 2701
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v4, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
@@ -127,11 +127,11 @@
 
     move-result-object v2
 
-    .line 2702
+    .line 2704
     .local v2, view:Landroid/view/View;
     if-eqz v2, :cond_0
 
-    .line 2703
+    .line 2705
     iget-object v3, p0, Landroid/widget/AbsListView$PerformClick;->this$0:Landroid/widget/AbsListView;
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->getItemId(I)J

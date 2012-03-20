@@ -348,8 +348,8 @@
     <string name="silent_mode_vibrate">Ringer vibrate</string>
     <string name="silent_mode_ring">Ringer on</string>
     <string name="shutdown_progress">Shutting down…</string>
-    <string name="shutdown_confirm">Your device will shut down</string>
-    <string name="restart_confirm">Your device will restart</string>
+    <string name="shutdown_confirm">Device will now shut down</string>
+    <string name="restart_confirm">Device will restart</string>
     <string name="shutdown_confirm_question">Would you like to shut down?</string>
     <string name="restart_confirm_question">Would you like to restart?</string>
     <string name="recent_tasks_title">Recent</string>
@@ -1188,7 +1188,7 @@ Would you like to close it?"</string>
     <string name="wifi_watchdog_network_disabled_detailed">" has a poor internet connection."</string>
     <string name="wifi_tether_configure_ssid_default">AndroidAP</string>
     <string name="wifi_p2p_dialog_title">Wi-Fi Direct</string>
-    <string name="wifi_p2p_turnon_message">Start Wi-Fi Direct operation. This will turn off Wi-Fi client/hotspot operation.</string>
+    <string name="wifi_p2p_turnon_message">Start Wi-Fi Direct operation. This will turn off Wi-Fi client/hotspot operation</string>
     <string name="wifi_p2p_failed_message">"Couldn't start Wi-Fi Direct"</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
@@ -1200,7 +1200,7 @@ Would you like to close it?"</string>
     <string name="wifi_p2p_show_pin_message">PIN:</string>
     <string name="wifi_p2p_enabled_notification_title">Wi-Fi Direct is on</string>
     <string name="wifi_p2p_enabled_notification_message">Tap to change settings</string>
-    <string name="wifi_p2p_connected_notification_title">Wi-Fi Direct connected with %d devices.</string>
+    <string name="wifi_p2p_connected_notification_title">Wi-Fi Direct connected with %d devices</string>
     <string name="select_character">Insert character</string>
     <string name="sms_control_default_app_name">Unknown application</string>
     <string name="sms_control_title">Sending SMS messages</string>
@@ -1540,10 +1540,10 @@ for account %s"</string>
     <string name="cmcc_operator_name">CMCC</string>
     <string name="cu_operator_name">China Unicom</string>
     <string name="chunghwa_operator_name">Chunghwa</string>
-    <string name="fareastone_operator_name">FET</string>
+    <string name="fareastone_operator_name">FarEasTone</string>
     <string name="kgt_operator_name">KGT</string>
     <string name="vibo_operator_name">VIBO</string>
-    <string name="twmobile_operator_name">TWM</string>
+    <string name="twmobile_operator_name">TW Mobile</string>
     <string name="smartone_operator_name">SmarTone</string>
     <string name="cmhk_operator_name">CMHK</string>
     <string name="zzz_limited_service">LimitedService</string>
@@ -1601,6 +1601,12 @@ for account %s"</string>
     <string name="zzz_dual_clock_city_seoul">Seoul</string>
     <string name="zzz_dual_clock_city_local">Local time</string>
     <string name="wifi_on_vt_not_allowed_msg">Video Telephony is impossible during Wi-Fi on</string>
+    <string name="cutAll">Cut all</string>
+    <string name="copyAll">Copy all</string>
+    <string name="undo">Undo</string>
+    <string name="redo">Redo</string>
+    <string name="operation_not_allowed">Operation Not Allowed</string>
+    <string name="exceeded_maxlength">Maximum message size exceeded</string>
     <item type="string" name="APKTOOL_DUMMY_062b">false</item>
     <item type="string" name="APKTOOL_DUMMY_062c">false</item>
     <item type="string" name="APKTOOL_DUMMY_062d">false</item>
@@ -1629,10 +1635,4 @@ for account %s"</string>
     <item type="string" name="APKTOOL_DUMMY_0646">false</item>
     <item type="string" name="APKTOOL_DUMMY_0647">false</item>
     <item type="string" name="APKTOOL_DUMMY_0648">false</item>
-    <string name="cutAll">Cut all</string>
-    <string name="copyAll">Copy all</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
-    <string name="operation_not_allowed">Operation Not Allowed</string>
-    <string name="exceeded_maxlength">Maximum message size exceeded</string>
 </resources>

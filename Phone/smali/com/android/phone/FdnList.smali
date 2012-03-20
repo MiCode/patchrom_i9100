@@ -395,25 +395,20 @@
     .parameter "icicle"
 
     .prologue
-    .line 75
     invoke-super {p0, p1}, Lcom/android/phone/ADNList;->onCreate(Landroid/os/Bundle;)V
 
-    .line 77
     invoke-virtual {p0}, Lcom/android/phone/FdnList;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 78
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 80
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 82
     :cond_0
     return-void
 .end method

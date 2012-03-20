@@ -56,17 +56,17 @@
     .parameter
 
     .prologue
-    .line 1136
+    .line 1144
     iput-object p1, p0, Landroid/webkit/WebView$HitTestResult;->this$0:Landroid/webkit/WebView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1137
+    .line 1145
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/webkit/WebView$HitTestResult;->mType:I
 
-    .line 1138
+    .line 1146
     return-void
 .end method
 
@@ -76,7 +76,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1089
+    .line 1097
     invoke-direct {p0, p1}, Landroid/webkit/WebView$HitTestResult;->setType(I)V
 
     return-void
@@ -88,18 +88,18 @@
     .parameter "x1"
 
     .prologue
-    .line 1089
+    .line 1097
     invoke-direct {p0, p1}, Landroid/webkit/WebView$HitTestResult;->setExtra(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method static synthetic access$1600(Landroid/webkit/WebView$HitTestResult;)I
+.method static synthetic access$1700(Landroid/webkit/WebView$HitTestResult;)I
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 1089
+    .line 1097
     iget v0, p0, Landroid/webkit/WebView$HitTestResult;->mType:I
 
     return v0
@@ -110,10 +110,10 @@
     .parameter "extra"
 
     .prologue
-    .line 1145
+    .line 1153
     iput-object p1, p0, Landroid/webkit/WebView$HitTestResult;->mExtra:Ljava/lang/String;
 
-    .line 1146
+    .line 1154
     return-void
 .end method
 
@@ -122,10 +122,10 @@
     .parameter "type"
 
     .prologue
-    .line 1141
+    .line 1149
     iput p1, p0, Landroid/webkit/WebView$HitTestResult;->mType:I
 
-    .line 1142
+    .line 1150
     return-void
 .end method
 
@@ -135,7 +135,7 @@
     .locals 1
 
     .prologue
-    .line 1153
+    .line 1161
     iget-object v0, p0, Landroid/webkit/WebView$HitTestResult;->mExtra:Ljava/lang/String;
 
     return-object v0
@@ -145,7 +145,7 @@
     .locals 1
 
     .prologue
-    .line 1149
+    .line 1157
     iget v0, p0, Landroid/webkit/WebView$HitTestResult;->mType:I
 
     return v0

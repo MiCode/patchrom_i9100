@@ -40,28 +40,17 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+    .locals 3
     .parameter "context"
 
     .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     .line 71
     invoke-direct {p0, p1}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     .line 46
-    const-string v2, "ro.debuggable"
-
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/android/phone/IncomingCallWidget;->DBG:Z
+    iput-boolean v2, p0, Lcom/android/phone/IncomingCallWidget;->DBG:Z
 
     .line 48
     const-string v0, "IncomingCallWidget"
@@ -69,17 +58,17 @@
     iput-object v0, p0, Lcom/android/phone/IncomingCallWidget;->LOG_TAG:Ljava/lang/String;
 
     .line 50
-    const-wide/16 v2, 0x1e
+    const-wide/16 v0, 0x1e
 
-    iput-wide v2, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_SHORT:J
+    iput-wide v0, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_SHORT:J
 
     .line 52
-    const-wide/16 v2, 0x28
+    const-wide/16 v0, 0x28
 
-    iput-wide v2, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_LONG:J
+    iput-wide v0, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_LONG:J
 
     .line 62
-    iput v1, p0, Lcom/android/phone/IncomingCallWidget;->mGrabbedState:I
+    iput v2, p0, Lcom/android/phone/IncomingCallWidget;->mGrabbedState:I
 
     .line 72
     iput-object p1, p0, Lcom/android/phone/IncomingCallWidget;->mContext:Landroid/content/Context;
@@ -89,38 +78,21 @@
 
     .line 74
     return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 46
-    goto :goto_0
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 4
+    .locals 3
     .parameter "context"
     .parameter "attrs"
 
     .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     .line 77
     invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 46
-    const-string v2, "ro.debuggable"
-
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/android/phone/IncomingCallWidget;->DBG:Z
+    iput-boolean v2, p0, Lcom/android/phone/IncomingCallWidget;->DBG:Z
 
     .line 48
     const-string v0, "IncomingCallWidget"
@@ -128,17 +100,17 @@
     iput-object v0, p0, Lcom/android/phone/IncomingCallWidget;->LOG_TAG:Ljava/lang/String;
 
     .line 50
-    const-wide/16 v2, 0x1e
+    const-wide/16 v0, 0x1e
 
-    iput-wide v2, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_SHORT:J
+    iput-wide v0, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_SHORT:J
 
     .line 52
-    const-wide/16 v2, 0x28
+    const-wide/16 v0, 0x28
 
-    iput-wide v2, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_LONG:J
+    iput-wide v0, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_LONG:J
 
     .line 62
-    iput v1, p0, Lcom/android/phone/IncomingCallWidget;->mGrabbedState:I
+    iput v2, p0, Lcom/android/phone/IncomingCallWidget;->mGrabbedState:I
 
     .line 78
     iput-object p1, p0, Lcom/android/phone/IncomingCallWidget;->mContext:Landroid/content/Context;
@@ -148,39 +120,22 @@
 
     .line 80
     return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 46
-    goto :goto_0
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 4
+    .locals 3
     .parameter "context"
     .parameter "attrs"
     .parameter "defStyle"
 
     .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     .line 83
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 46
-    const-string v2, "ro.debuggable"
-
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/android/phone/IncomingCallWidget;->DBG:Z
+    iput-boolean v2, p0, Lcom/android/phone/IncomingCallWidget;->DBG:Z
 
     .line 48
     const-string v0, "IncomingCallWidget"
@@ -188,17 +143,17 @@
     iput-object v0, p0, Lcom/android/phone/IncomingCallWidget;->LOG_TAG:Ljava/lang/String;
 
     .line 50
-    const-wide/16 v2, 0x1e
+    const-wide/16 v0, 0x1e
 
-    iput-wide v2, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_SHORT:J
+    iput-wide v0, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_SHORT:J
 
     .line 52
-    const-wide/16 v2, 0x28
+    const-wide/16 v0, 0x28
 
-    iput-wide v2, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_LONG:J
+    iput-wide v0, p0, Lcom/android/phone/IncomingCallWidget;->VIBRATE_LONG:J
 
     .line 62
-    iput v1, p0, Lcom/android/phone/IncomingCallWidget;->mGrabbedState:I
+    iput v2, p0, Lcom/android/phone/IncomingCallWidget;->mGrabbedState:I
 
     .line 84
     iput-object p1, p0, Lcom/android/phone/IncomingCallWidget;->mContext:Landroid/content/Context;
@@ -208,12 +163,6 @@
 
     .line 86
     return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 46
-    goto :goto_0
 .end method
 
 .method static synthetic access$1000(Lcom/android/phone/IncomingCallWidget;)Lcom/android/phone/IncomingCallWidget$Handle;

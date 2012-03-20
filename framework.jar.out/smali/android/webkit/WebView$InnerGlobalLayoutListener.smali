@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 375
+    .line 377
     iput-object p1, p0, Landroid/webkit/WebView$InnerGlobalLayoutListener;->this$0:Landroid/webkit/WebView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 375
+    .line 377
     invoke-direct {p0, p1}, Landroid/webkit/WebView$InnerGlobalLayoutListener;-><init>(Landroid/webkit/WebView;)V
 
     return-void
@@ -55,7 +55,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 377
+    .line 379
     iget-object v0, p0, Landroid/webkit/WebView$InnerGlobalLayoutListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->isShown()Z
@@ -64,12 +64,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 378
+    .line 380
     iget-object v0, p0, Landroid/webkit/WebView$InnerGlobalLayoutListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->setGLRectViewport()V
 
-    .line 383
+    .line 385
     iget-object v0, p0, Landroid/webkit/WebView$InnerGlobalLayoutListener;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mTurnOffWindowResizeAnim:Z
@@ -87,13 +87,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 385
+    .line 387
     iget-object v0, p0, Landroid/webkit/WebView$InnerGlobalLayoutListener;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mTurnOffWindowResizeAnim:Z
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$002(Landroid/webkit/WebView;Z)Z
 
-    .line 386
+    .line 388
     iget-object v0, p0, Landroid/webkit/WebView$InnerGlobalLayoutListener;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getRootView()Landroid/view/View;
@@ -102,7 +102,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->hackTurnOffWindowResizeAnim(Z)V
 
-    .line 390
+    .line 392
     :cond_0
     return-void
 .end method

@@ -45,7 +45,7 @@
 .end method
 
 .method private handleGetVPResponse(Landroid/os/Message;)V
-    .locals 6
+    .locals 5
     .parameter "msg"
 
     .prologue
@@ -62,31 +62,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 82
-    const-string v2, "CdmaVoicePrivacyCheckBoxPreference"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "handleGetVPResponse: ar.exception="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget-object v5, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 83
     iget-object v2, p0, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference$MyHandler;->this$0:Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference;
 
@@ -96,15 +71,8 @@
     :goto_0
     return-void
 
-    .line 85
-    :cond_0
-    const-string v2, "CdmaVoicePrivacyCheckBoxPreference"
-
-    const-string v4, "handleGetVPResponse: VP state successfully queried."
-
-    invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 86
+    :cond_0
     iget-object v2, v0, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v2, [I
@@ -149,7 +117,7 @@
 .end method
 
 .method private handleSetVPResponse(Landroid/os/Message;)V
-    .locals 4
+    .locals 3
     .parameter "msg"
 
     .prologue
@@ -164,40 +132,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 98
-    const-string v1, "CdmaVoicePrivacyCheckBoxPreference"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "handleSetVPResponse: ar.exception="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 100
-    :cond_0
-    const-string v1, "CdmaVoicePrivacyCheckBoxPreference"
-
-    const-string v2, "handleSetVPResponse: re get"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 102
+    :cond_0
     iget-object v1, p0, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference$MyHandler;->this$0:Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference;
 
     iget-object v1, v1, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference;->phone:Lcom/android/internal/telephony/Phone;

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4916
+    .line 4922
     iput-object p1, p0, Lcom/android/phone/InCallScreen$30;->this$0:Lcom/android/phone/InCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +45,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4918
+    .line 4924
     packed-switch p2, :pswitch_data_0
 
-    .line 4928
+    .line 4934
     :goto_0
     return-void
 
-    .line 4920
+    .line 4926
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/InCallScreen$30;->this$0:Lcom/android/phone/InCallScreen;
 
@@ -67,7 +67,7 @@
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->answerCall(Lcom/android/internal/telephony/Call;)Z
 
-    .line 4921
+    .line 4927
     iget-object v0, p0, Lcom/android/phone/InCallScreen$30;->this$0:Lcom/android/phone/InCallScreen;
 
     #setter for: Lcom/android/phone/InCallScreen;->mFlagWaitingCallDialog:I
@@ -75,7 +75,7 @@
 
     goto :goto_0
 
-    .line 4924
+    .line 4930
     :pswitch_1
     iget-object v0, p0, Lcom/android/phone/InCallScreen$30;->this$0:Lcom/android/phone/InCallScreen;
 
@@ -90,7 +90,7 @@
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->hangup(Lcom/android/internal/telephony/Call;)Z
 
-    .line 4925
+    .line 4931
     iget-object v0, p0, Lcom/android/phone/InCallScreen$30;->this$0:Lcom/android/phone/InCallScreen;
 
     #setter for: Lcom/android/phone/InCallScreen;->mFlagWaitingCallDialog:I
@@ -98,7 +98,7 @@
 
     goto :goto_0
 
-    .line 4918
+    .line 4924
     nop
 
     :pswitch_data_0

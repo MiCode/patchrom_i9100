@@ -588,11 +588,6 @@
     .line 60
     invoke-super {p0, p1}, Lcom/android/phone/MultiCallView;->initialize(Lcom/android/phone/InCallScreen;)V
 
-    .line 61
-    const-string v0, "Inflate multi call large view"
-
-    invoke-virtual {p0, v0}, Lcom/android/phone/MultiCallLargeView;->log(Ljava/lang/String;)V
-
     .line 62
     const v0, 0x7f090122
 
@@ -761,11 +756,6 @@
 
     :goto_2
     invoke-virtual {p0, v4, v0}, Lcom/android/phone/MultiCallLargeView;->fillCallerInfo(ZLcom/android/internal/telephony/Call;)V
-
-    .line 123
-    const-string v4, "!SecFeature.U1_NA_SPR"
-
-    invoke-virtual {p0, v4}, Lcom/android/phone/MultiCallLargeView;->log(Ljava/lang/String;)V
 
     .line 132
     iget-object v4, p0, Lcom/android/phone/MultiCallView;->mSwapButton:Landroid/widget/Button;

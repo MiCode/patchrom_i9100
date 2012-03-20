@@ -1038,20 +1038,16 @@
 
     iput-object v9, p0, Lcom/android/phone/Settings;->mDataUsageListener:Lcom/android/phone/DataUsageListener;
 
-    .line 455
     invoke-virtual {p0}, Lcom/android/phone/Settings;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 456
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_4
 
-    .line 458
     invoke-virtual {v0, v10}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v10}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 522
     :cond_4
     return-void
 

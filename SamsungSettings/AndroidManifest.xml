@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
     <application android:theme="@miui:style/Theme.Light" android:label="Samsung Settings">
+    <uses-library android:name="sechardware" />
         <activity android:theme="@miui:style/Theme.Light" android:label="@string/factory_settings" android:name="SamsungSpecialSettings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3173
+    .line 3198
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$23;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-direct {p0}, Landroid/bluetooth/AtCommandHandler;-><init>()V
@@ -38,18 +38,18 @@
     .locals 4
 
     .prologue
-    .line 3177
+    .line 3202
     const-string v1, "ro.product.model"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3178
+    .line 3203
     .local v0, model:Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 3179
+    .line 3204
     new-instance v1, Landroid/bluetooth/AtCommandResult;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -72,7 +72,7 @@
 
     invoke-direct {v1, v2}, Landroid/bluetooth/AtCommandResult;-><init>(Ljava/lang/String;)V
 
-    .line 3181
+    .line 3206
     :goto_0
     return-object v1
 

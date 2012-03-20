@@ -128,31 +128,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
     .line 84
-    const-string v2, "ro.debuggable"
+    const/4 v0, 0x0
 
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
     sput-boolean v0, Lcom/android/phone/CallCard;->DBG:Z
 
     return-void
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -202,14 +186,14 @@
 
     iput-object v1, p0, Lcom/android/phone/CallCard;->mHandler:Landroid/os/Handler;
 
-    .line 2234
+    .line 2238
     new-instance v1, Lcom/android/phone/CallCard$4;
 
     invoke-direct {v1, p0}, Lcom/android/phone/CallCard$4;-><init>(Lcom/android/phone/CallCard;)V
 
     iput-object v1, p0, Lcom/android/phone/CallCard;->mTotalCallTimeHandler:Landroid/os/Handler;
 
-    .line 2288
+    .line 2292
     new-instance v1, Lcom/android/phone/CallCard$5;
 
     invoke-direct {v1, p0}, Lcom/android/phone/CallCard$5;-><init>(Lcom/android/phone/CallCard;)V
@@ -628,29 +612,29 @@
 
     const-wide/16 v7, 0xff
 
-    .line 2163
+    .line 2167
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
 
-    .line 2165
+    .line 2169
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 2166
+    .line 2170
     new-instance v2, Ljava/io/DataOutputStream;
 
     invoke-direct {v2, v1}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 2168
+    .line 2172
     const/4 v3, 0x4
 
     new-array v3, v3, [B
 
-    .line 2170
+    .line 2174
     iget-wide v4, p0, Lcom/android/phone/CallCard;->mTotalCallTime:J
 
     and-long/2addr v4, v7
@@ -661,7 +645,7 @@
 
     aput-byte v4, v3, v6
 
-    .line 2171
+    .line 2175
     iget-wide v4, p0, Lcom/android/phone/CallCard;->mTotalCallTime:J
 
     const/16 v6, 0x8
@@ -676,7 +660,7 @@
 
     aput-byte v4, v3, v9
 
-    .line 2172
+    .line 2176
     iget-wide v4, p0, Lcom/android/phone/CallCard;->mTotalCallTime:J
 
     const/16 v6, 0x10
@@ -691,7 +675,7 @@
 
     aput-byte v4, v3, v10
 
-    .line 2173
+    .line 2177
     iget-wide v4, p0, Lcom/android/phone/CallCard;->mTotalCallTime:J
 
     const/16 v6, 0x18
@@ -706,49 +690,49 @@
 
     aput-byte v4, v3, v11
 
-    .line 2177
+    .line 2181
     const/16 v4, 0xb
 
     :try_start_0
     invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    .line 2178
+    .line 2182
     const/16 v4, 0xb
 
     invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    .line 2181
+    .line 2185
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    .line 2182
+    .line 2186
     const/16 v4, 0x8
 
     invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    .line 2184
+    .line 2188
     const/4 v4, 0x0
 
     aget-byte v4, v3, v4
 
     invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    .line 2185
+    .line 2189
     const/4 v4, 0x1
 
     aget-byte v4, v3, v4
 
     invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    .line 2186
+    .line 2190
     const/4 v4, 0x2
 
     aget-byte v4, v3, v4
 
     invoke-virtual {v2, v4}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    .line 2187
+    .line 2191
     const/4 v4, 0x3
 
     aget-byte v3, v3, v4
@@ -757,7 +741,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2194
+    .line 2198
     :goto_0
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -773,14 +757,14 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/internal/telephony/Phone;->invokeOemRilRequestRaw([BLandroid/os/Message;)V
 
-    .line 2195
+    .line 2199
     return-void
 
-    .line 2189
+    .line 2193
     :catch_0
     move-exception v2
 
-    .line 2191
+    .line 2195
     const-string v2, "CallCard"
 
     const-string v3, "IOException in getServMQueryData!!!"
@@ -960,10 +944,10 @@
     .parameter
 
     .prologue
-    .line 2225
+    .line 2229
     const-wide/16 v0, 0x0
 
-    .line 2226
+    .line 2230
     add-int/lit8 v2, p1, 0x0
 
     aget-byte v2, p0, v2
@@ -974,7 +958,7 @@
 
     add-long/2addr v0, v2
 
-    .line 2227
+    .line 2231
     add-int/lit8 v2, p1, 0x1
 
     aget-byte v2, p0, v2
@@ -989,7 +973,7 @@
 
     add-long/2addr v0, v2
 
-    .line 2228
+    .line 2232
     add-int/lit8 v2, p1, 0x2
 
     aget-byte v2, p0, v2
@@ -1004,7 +988,7 @@
 
     add-long/2addr v0, v2
 
-    .line 2229
+    .line 2233
     add-int/lit8 v2, p1, 0x3
 
     aget-byte v2, p0, v2
@@ -1019,7 +1003,7 @@
 
     add-long/2addr v0, v2
 
-    .line 2231
+    .line 2235
     return-wide v0
 .end method
 
@@ -4097,14 +4081,18 @@
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     .line 2042
-    invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->formatNumber(Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, "disable_format_number"
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
 
-    .line 2046
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 2050
     :goto_0
     const v1, 0x7f0e0196
 
@@ -4112,7 +4100,7 @@
 
     move-result-object v1
 
-    .line 2047
+    .line 2051
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -4127,8 +4115,16 @@
 
     return-object v0
 
-    .line 2044
+    .line 2045
     :cond_0
+    invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->formatNumber(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 2048
+    :cond_1
     const v0, 0x7f0e0007
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -4509,7 +4505,7 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 2343
+    .line 2347
     sget-boolean v0, Lcom/android/phone/CallCard;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -4518,7 +4514,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->log(Ljava/lang/String;)V
 
-    .line 2344
+    .line 2348
     :cond_0
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRecInfo:Landroid/view/View;
 
@@ -4528,7 +4524,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2345
+    .line 2349
     :cond_1
     iget-object v0, p0, Lcom/android/phone/CallCard;->mMultiCallInfo:Lcom/android/phone/MultiCallView;
 
@@ -4538,7 +4534,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/MultiCallView;->setRecInfoViewVisibility(I)V
 
-    .line 2346
+    .line 2350
     :cond_2
     return-void
 .end method
@@ -4807,12 +4803,12 @@
     .parameter "msg"
 
     .prologue
-    .line 2282
+    .line 2286
     const-string v0, "CallCard"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2283
+    .line 2287
     return-void
 .end method
 
@@ -4826,14 +4822,14 @@
 
     const/16 v3, 0xc8
 
-    .line 2124
+    .line 2128
     new-instance v0, Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/AnimationDrawable;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 2125
+    .line 2129
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4846,7 +4842,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2126
+    .line 2130
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4861,7 +4857,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2127
+    .line 2131
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4876,7 +4872,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2128
+    .line 2132
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4891,7 +4887,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2129
+    .line 2133
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4906,7 +4902,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2130
+    .line 2134
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4921,7 +4917,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2131
+    .line 2135
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4936,7 +4932,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2132
+    .line 2136
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4951,19 +4947,19 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2133
+    .line 2137
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallIncomingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0, v4}, Landroid/graphics/drawable/AnimationDrawable;->setOneShot(Z)V
 
-    .line 2134
+    .line 2138
     new-instance v0, Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-direct {v0}, Landroid/graphics/drawable/AnimationDrawable;-><init>()V
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 2135
+    .line 2139
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4976,7 +4972,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2136
+    .line 2140
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -4991,7 +4987,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2137
+    .line 2141
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -5006,7 +5002,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2138
+    .line 2142
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -5021,7 +5017,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2139
+    .line 2143
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -5036,7 +5032,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2140
+    .line 2144
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -5051,7 +5047,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2141
+    .line 2145
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -5066,7 +5062,7 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2142
+    .line 2146
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
@@ -5081,12 +5077,12 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/AnimationDrawable;->addFrame(Landroid/graphics/drawable/Drawable;I)V
 
-    .line 2143
+    .line 2147
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRingingCallOutgoingAnimation:Landroid/graphics/drawable/AnimationDrawable;
 
     invoke-virtual {v0, v4}, Landroid/graphics/drawable/AnimationDrawable;->setOneShot(Z)V
 
-    .line 2144
+    .line 2148
     return-void
 .end method
 
@@ -5294,7 +5290,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2338
+    .line 2342
     sget-boolean v0, Lcom/android/phone/CallCard;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -5303,7 +5299,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->log(Ljava/lang/String;)V
 
-    .line 2339
+    .line 2343
     :cond_0
     iget-object v0, p0, Lcom/android/phone/CallCard;->mRecInfo:Landroid/view/View;
 
@@ -5313,7 +5309,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2340
+    .line 2344
     :cond_1
     iget-object v0, p0, Lcom/android/phone/CallCard;->mMultiCallInfo:Lcom/android/phone/MultiCallView;
 
@@ -5323,7 +5319,7 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/MultiCallView;->setRecInfoViewVisibility(I)V
 
-    .line 2341
+    .line 2345
     :cond_2
     return-void
 .end method
@@ -7858,14 +7854,14 @@
     .locals 2
 
     .prologue
-    .line 2064
+    .line 2068
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPrimaryCallInfo:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2065
+    .line 2069
     return-void
 .end method
 
@@ -7875,7 +7871,7 @@
     .prologue
     const/16 v1, 0x6e
 
-    .line 2332
+    .line 2336
     sget-boolean v0, Lcom/android/phone/CallCard;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -7884,7 +7880,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->log(Ljava/lang/String;)V
 
-    .line 2333
+    .line 2337
     :cond_0
     iget-object v0, p0, Lcom/android/phone/CallCard;->mHandler:Landroid/os/Handler;
 
@@ -7898,11 +7894,11 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 2334
+    .line 2338
     :cond_1
     invoke-direct {p0}, Lcom/android/phone/CallCard;->hideRecInfo()V
 
-    .line 2335
+    .line 2339
     return-void
 .end method
 
@@ -8323,7 +8319,7 @@
 
     const/4 v5, 0x0
 
-    .line 2351
+    .line 2355
     sget-boolean v0, Lcom/android/phone/CallCard;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -8348,7 +8344,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->log(Ljava/lang/String;)V
 
-    .line 2352
+    .line 2356
     :cond_0
     const-string v0, "display_sns_info"
 
@@ -8358,28 +8354,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 2353
+    .line 2357
     if-eqz p1, :cond_3
 
     iget-object v0, p1, Lcom/android/phone/AdditionalCallerInfoAsyncQuery$AdditionalCallerInfo;->mStatus:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    .line 2354
+    .line 2358
     iget-object v0, p0, Lcom/android/phone/CallCard;->mSnsStatus:Landroid/widget/TextView;
 
     iget-object v1, p1, Lcom/android/phone/AdditionalCallerInfoAsyncQuery$AdditionalCallerInfo;->mStatus:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2355
+    .line 2359
     iget-object v0, p0, Lcom/android/phone/CallCard;->mSnsIcon:Landroid/widget/ImageView;
 
     iget-object v1, p1, Lcom/android/phone/AdditionalCallerInfoAsyncQuery$AdditionalCallerInfo;->mSNSDisplayIcon:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 2362
+    .line 2366
     :cond_1
     :goto_0
     const-string v0, "display_birthday_info"
@@ -8390,7 +8386,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2363
+    .line 2367
     if-eqz p1, :cond_4
 
     iget-wide v0, p1, Lcom/android/phone/AdditionalCallerInfoAsyncQuery$AdditionalCallerInfo;->mRemainedDaysUntilBirthday:J
@@ -8401,14 +8397,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 2364
+    .line 2368
     new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "%d"
 
     aput-object v1, v0, v5
 
-    .line 2365
+    .line 2369
     new-array v1, v4, [Ljava/lang/String;
 
     iget-wide v2, p1, Lcom/android/phone/AdditionalCallerInfoAsyncQuery$AdditionalCallerInfo;->mRemainedDaysUntilBirthday:J
@@ -8419,7 +8415,7 @@
 
     aput-object v2, v1, v5
 
-    .line 2368
+    .line 2372
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -8436,7 +8432,7 @@
 
     aget-object v2, v2, v3
 
-    .line 2370
+    .line 2374
     iget-object v3, p0, Lcom/android/phone/CallCard;->mBirthRemainedDays:Landroid/widget/TextView;
 
     invoke-static {v2, v0, v1}, Landroid/text/TextUtils;->replace(Ljava/lang/CharSequence;[Ljava/lang/String;[Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
@@ -8445,23 +8441,23 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2371
+    .line 2375
     iget-object v0, p0, Lcom/android/phone/CallCard;->mBirthPanel:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 2376
+    .line 2380
     :cond_2
     :goto_1
     return-void
 
-    .line 2357
+    .line 2361
     :cond_3
     iget-object v0, p0, Lcom/android/phone/CallCard;->mSnsIcon:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
-    .line 2358
+    .line 2362
     iget-object v0, p0, Lcom/android/phone/CallCard;->mSnsStatus:Landroid/widget/TextView;
 
     const-string v1, ""
@@ -8470,7 +8466,7 @@
 
     goto :goto_0
 
-    .line 2373
+    .line 2377
     :cond_4
     iget-object v0, p0, Lcom/android/phone/CallCard;->mBirthPanel:Landroid/widget/LinearLayout;
 
@@ -8516,12 +8512,12 @@
 
     const/16 v3, 0x8
 
-    .line 2068
+    .line 2072
     if-ne p1, v0, :cond_5
 
     move v1, v0
 
-    .line 2069
+    .line 2073
     :goto_0
     iget-object v4, p0, Lcom/android/phone/CallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
@@ -8537,7 +8533,7 @@
 
     if-nez v4, :cond_6
 
-    .line 2070
+    .line 2074
     :goto_1
     if-eqz v1, :cond_7
 
@@ -8547,17 +8543,17 @@
 
     if-eq v4, v5, :cond_7
 
-    .line 2071
+    .line 2075
     sget-object v0, Lcom/android/phone/CallCard$CallCardScreenState;->PORTRAIT:Lcom/android/phone/CallCard$CallCardScreenState;
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mScreenState:Lcom/android/phone/CallCard$CallCardScreenState;
 
-    .line 2072
+    .line 2076
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPortrait:Landroid/view/View;
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->linkControls(Landroid/view/View;)V
 
-    .line 2073
+    .line 2077
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPortrait:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -8566,12 +8562,12 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 2074
+    .line 2078
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPortrait:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2075
+    .line 2079
     :cond_0
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
@@ -8585,12 +8581,12 @@
 
     if-nez v0, :cond_1
 
-    .line 2076
+    .line 2080
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
     invoke-virtual {v0, v3}, Lcom/android/phone/CallCardLand;->setVisibility(I)V
 
-    .line 2077
+    .line 2081
     :cond_1
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
@@ -8604,12 +8600,12 @@
 
     if-nez v0, :cond_2
 
-    .line 2078
+    .line 2082
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
     invoke-virtual {v0, v3}, Lcom/android/phone/CallCardLandIncoming;->setVisibility(I)V
 
-    .line 2109
+    .line 2113
     :cond_2
     :goto_2
     iget-object v0, p0, Lcom/android/phone/CallCard;->mUpperTitleTextLand:Landroid/widget/TextView;
@@ -8622,7 +8618,7 @@
 
     if-ne v0, v4, :cond_4
 
-    .line 2110
+    .line 2114
     iget-object v0, p0, Lcom/android/phone/CallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -8635,7 +8631,7 @@
 
     move-result-object v0
 
-    .line 2111
+    .line 2115
     sget-object v4, Lcom/android/internal/telephony/Call$State;->DIALING:Lcom/android/internal/telephony/Call$State;
 
     if-eq v0, v4, :cond_3
@@ -8644,20 +8640,20 @@
 
     if-ne v0, v4, :cond_f
 
-    .line 2112
+    .line 2116
     :cond_3
     iget-object v0, p0, Lcom/android/phone/CallCard;->mUpperTitleTextLand:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2113
+    .line 2117
     iget-object v0, p0, Lcom/android/phone/CallCard;->mUpperTitleTextLand:Landroid/widget/TextView;
 
     const v4, 0x7f0e018b
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
-    .line 2120
+    .line 2124
     :cond_4
     :goto_3
     iget-object v0, p0, Lcom/android/phone/CallCard;->mUpperTitle:Landroid/view/View;
@@ -8667,22 +8663,22 @@
     :goto_4
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2121
+    .line 2125
     return-void
 
     :cond_5
     move v1, v2
 
-    .line 2068
+    .line 2072
     goto/16 :goto_0
 
     :cond_6
     move v0, v2
 
-    .line 2069
+    .line 2073
     goto :goto_1
 
-    .line 2080
+    .line 2084
     :cond_7
     if-nez v1, :cond_b
 
@@ -8694,17 +8690,17 @@
 
     if-eq v4, v5, :cond_b
 
-    .line 2081
+    .line 2085
     sget-object v0, Lcom/android/phone/CallCard$CallCardScreenState;->LANDSCAPE_INCOMING:Lcom/android/phone/CallCard$CallCardScreenState;
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mScreenState:Lcom/android/phone/CallCard$CallCardScreenState;
 
-    .line 2082
+    .line 2086
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
     if-nez v0, :cond_8
 
-    .line 2083
+    .line 2087
     const v0, 0x7f090047
 
     invoke-virtual {p0, v0}, Lcom/android/phone/CallCard;->findViewById(I)Landroid/view/View;
@@ -8715,18 +8711,18 @@
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
-    .line 2084
+    .line 2088
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
     invoke-virtual {v0}, Lcom/android/phone/CallCardLandIncoming;->initialize()V
 
-    .line 2086
+    .line 2090
     :cond_8
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->linkControls(Landroid/view/View;)V
 
-    .line 2087
+    .line 2091
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPortrait:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -8735,12 +8731,12 @@
 
     if-nez v0, :cond_9
 
-    .line 2088
+    .line 2092
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPortrait:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2089
+    .line 2093
     :cond_9
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
@@ -8754,12 +8750,12 @@
 
     if-nez v0, :cond_a
 
-    .line 2090
+    .line 2094
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
     invoke-virtual {v0, v3}, Lcom/android/phone/CallCardLand;->setVisibility(I)V
 
-    .line 2091
+    .line 2095
     :cond_a
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
@@ -8769,14 +8765,14 @@
 
     if-ne v0, v3, :cond_2
 
-    .line 2092
+    .line 2096
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
     invoke-virtual {v0, v2}, Lcom/android/phone/CallCardLandIncoming;->setVisibility(I)V
 
     goto/16 :goto_2
 
-    .line 2094
+    .line 2098
     :cond_b
     if-nez v1, :cond_2
 
@@ -8788,17 +8784,17 @@
 
     if-eq v0, v4, :cond_2
 
-    .line 2095
+    .line 2099
     sget-object v0, Lcom/android/phone/CallCard$CallCardScreenState;->LANDSCAPE:Lcom/android/phone/CallCard$CallCardScreenState;
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mScreenState:Lcom/android/phone/CallCard$CallCardScreenState;
 
-    .line 2096
+    .line 2100
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
     if-nez v0, :cond_c
 
-    .line 2097
+    .line 2101
     const v0, 0x7f090046
 
     invoke-virtual {p0, v0}, Lcom/android/phone/CallCard;->findViewById(I)Landroid/view/View;
@@ -8809,12 +8805,12 @@
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
-    .line 2098
+    .line 2102
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
     invoke-virtual {v0}, Lcom/android/phone/CallCardLand;->initialize()V
 
-    .line 2099
+    .line 2103
     const v0, 0x7f090051
 
     invoke-virtual {p0, v0}, Lcom/android/phone/CallCard;->findViewById(I)Landroid/view/View;
@@ -8825,13 +8821,13 @@
 
     iput-object v0, p0, Lcom/android/phone/CallCard;->mUpperTitleTextLand:Landroid/widget/TextView;
 
-    .line 2101
+    .line 2105
     :cond_c
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->linkControls(Landroid/view/View;)V
 
-    .line 2102
+    .line 2106
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPortrait:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -8840,12 +8836,12 @@
 
     if-nez v0, :cond_d
 
-    .line 2103
+    .line 2107
     iget-object v0, p0, Lcom/android/phone/CallCard;->mPortrait:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 2104
+    .line 2108
     :cond_d
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
@@ -8855,12 +8851,12 @@
 
     if-ne v0, v3, :cond_e
 
-    .line 2105
+    .line 2109
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscape:Lcom/android/phone/CallCardLand;
 
     invoke-virtual {v0, v2}, Lcom/android/phone/CallCardLand;->setVisibility(I)V
 
-    .line 2106
+    .line 2110
     :cond_e
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
@@ -8874,14 +8870,14 @@
 
     if-nez v0, :cond_2
 
-    .line 2107
+    .line 2111
     iget-object v0, p0, Lcom/android/phone/CallCard;->mLandscapeIncoming:Lcom/android/phone/CallCardLandIncoming;
 
     invoke-virtual {v0, v3}, Lcom/android/phone/CallCardLandIncoming;->setVisibility(I)V
 
     goto/16 :goto_2
 
-    .line 2117
+    .line 2121
     :cond_f
     iget-object v0, p0, Lcom/android/phone/CallCard;->mUpperTitleTextLand:Landroid/widget/TextView;
 
@@ -8894,7 +8890,7 @@
     :cond_10
     move v2, v3
 
-    .line 2120
+    .line 2124
     goto/16 :goto_4
 .end method
 
@@ -9106,7 +9102,7 @@
     .prologue
     const/16 v1, 0x6e
 
-    .line 2327
+    .line 2331
     sget-boolean v0, Lcom/android/phone/CallCard;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -9115,7 +9111,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallCard;->log(Ljava/lang/String;)V
 
-    .line 2328
+    .line 2332
     :cond_0
     iget-object v0, p0, Lcom/android/phone/CallCard;->mHandler:Landroid/os/Handler;
 
@@ -9129,7 +9125,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2329
+    .line 2333
     :cond_1
     return-void
 .end method

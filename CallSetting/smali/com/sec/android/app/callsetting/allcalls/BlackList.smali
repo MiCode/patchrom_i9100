@@ -1708,20 +1708,16 @@
 
     invoke-virtual {v1, v2, v4, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 235
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/allcalls/BlackList;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 236
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_1
 
-    .line 238
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 240
     :cond_1
     return-void
 .end method

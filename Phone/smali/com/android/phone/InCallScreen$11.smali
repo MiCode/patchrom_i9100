@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3131
+    .line 3137
     iput-object p1, p0, Lcom/android/phone/InCallScreen$11;->this$0:Lcom/android/phone/InCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InCallScreen$11;->val$c:Lcom/android/internal/telephony/Connection;
@@ -43,24 +43,16 @@
 
 # virtual methods
 .method public onCancel(Landroid/content/DialogInterface;)V
-    .locals 2
+    .locals 1
     .parameter "dialog"
 
     .prologue
-    .line 3133
-    iget-object v0, p0, Lcom/android/phone/InCallScreen$11;->this$0:Lcom/android/phone/InCallScreen;
-
-    const-string v1, "handle POST_DIAL_CANCELED!"
-
-    #calls: Lcom/android/phone/InCallScreen;->log(Ljava/lang/String;)V
-    invoke-static {v0, v1}, Lcom/android/phone/InCallScreen;->access$000(Lcom/android/phone/InCallScreen;Ljava/lang/String;)V
-
-    .line 3134
+    .line 3140
     iget-object v0, p0, Lcom/android/phone/InCallScreen$11;->val$c:Lcom/android/internal/telephony/Connection;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->cancelPostDial()V
 
-    .line 3135
+    .line 3141
     iget-object v0, p0, Lcom/android/phone/InCallScreen$11;->this$0:Lcom/android/phone/InCallScreen;
 
     #getter for: Lcom/android/phone/InCallScreen;->mApp:Lcom/android/phone/PhoneApp;
@@ -70,6 +62,6 @@
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
 
-    .line 3136
+    .line 3142
     return-void
 .end method

@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 3696
+    .line 3699
     iput-object p1, p0, Lcom/android/server/PowerManagerService$DVFSLockList;->this$0:Lcom/android/server/PowerManagerService;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
@@ -47,7 +47,7 @@
     .parameter "x1"
 
     .prologue
-    .line 3696
+    .line 3699
     invoke-direct {p0, p1}, Lcom/android/server/PowerManagerService$DVFSLockList;-><init>(Lcom/android/server/PowerManagerService;)V
 
     return-void
@@ -60,21 +60,21 @@
     .parameter "wl"
 
     .prologue
-    .line 3700
+    .line 3703
     iget-object v1, p1, Lcom/android/server/PowerManagerService$DVFSLock;->binder:Landroid/os/IBinder;
 
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$DVFSLockList;->getIndex(Landroid/os/IBinder;)I
 
     move-result v0
 
-    .line 3701
+    .line 3704
     .local v0, index:I
     if-gez v0, :cond_0
 
-    .line 3702
+    .line 3705
     invoke-virtual {p0, p1}, Lcom/android/server/PowerManagerService$DVFSLockList;->add(Ljava/lang/Object;)Z
 
-    .line 3704
+    .line 3707
     :cond_0
     return-void
 .end method
@@ -83,7 +83,7 @@
     .locals 10
 
     .prologue
-    .line 3812
+    .line 3815
     iget-object v2, p0, Lcom/android/server/PowerManagerService$DVFSLockList;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -93,24 +93,24 @@
 
     monitor-enter v3
 
-    .line 3813
+    .line 3816
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$DVFSLockList;->size()I
 
     move-result v0
 
-    .line 3814
+    .line 3817
     .local v0, N:I
     if-nez v0, :cond_0
 
-    .line 3815
+    .line 3818
     monitor-exit v3
 
-    .line 3840
+    .line 3843
     :goto_0
     return-void
 
-    .line 3818
+    .line 3821
     :cond_0
     const-string v2, "PowerManagerService"
 
@@ -118,14 +118,14 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3819
+    .line 3822
     const/4 v1, 0x0
 
     .local v1, i:I
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 3820
+    .line 3823
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -138,7 +138,7 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 3821
+    .line 3824
     const-string v4, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -221,13 +221,13 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3819
+    .line 3822
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 3825
+    .line 3828
     :cond_2
     const-string v2, "PowerManagerService"
 
@@ -235,13 +235,13 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3826
+    .line 3829
     const/4 v1, 0x0
 
     :goto_2
     if-ge v1, v0, :cond_4
 
-    .line 3827
+    .line 3830
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -254,7 +254,7 @@
 
     if-ne v2, v4, :cond_3
 
-    .line 3828
+    .line 3831
     const-string v4, "PowerManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -337,13 +337,13 @@
 
     invoke-static {v4, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3826
+    .line 3829
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 3833
+    .line 3836
     :cond_4
     iget-object v2, p0, Lcom/android/server/PowerManagerService$DVFSLockList;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -354,7 +354,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 3834
+    .line 3837
     const-string v2, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -390,7 +390,7 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3836
+    .line 3839
     :cond_5
     iget-object v2, p0, Lcom/android/server/PowerManagerService$DVFSLockList;->this$0:Lcom/android/server/PowerManagerService;
 
@@ -401,7 +401,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 3837
+    .line 3840
     const-string v2, "PowerManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -437,7 +437,7 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3839
+    .line 3842
     :cond_6
     monitor-exit v3
 
@@ -460,12 +460,12 @@
     .parameter "binder"
 
     .prologue
-    .line 3718
+    .line 3721
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$DVFSLockList;->size()I
 
     move-result v0
 
-    .line 3719
+    .line 3722
     .local v0, N:I
     const/4 v1, 0x0
 
@@ -473,7 +473,7 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 3720
+    .line 3723
     invoke-virtual {p0, v1}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -484,19 +484,19 @@
 
     if-ne v2, p1, :cond_0
 
-    .line 3724
+    .line 3727
     .end local v1           #i:I
     :goto_1
     return v1
 
-    .line 3719
+    .line 3722
     .restart local v1       #i:I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 3724
+    .line 3727
     :cond_1
     const/4 v1, -0x1
 
@@ -507,20 +507,20 @@
     .locals 8
 
     .prologue
-    .line 3728
+    .line 3731
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$DVFSLockList;->size()I
 
     move-result v0
 
-    .line 3729
+    .line 3732
     .local v0, N:I
     const/4 v3, -0x1
 
-    .line 3730
+    .line 3733
     .local v3, indexMaxFrequency:I
     const/4 v4, -0x1
 
-    .line 3734
+    .line 3737
     .local v4, maxFrequency:I
     const/4 v2, 0x0
 
@@ -528,7 +528,7 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 3735
+    .line 3738
     invoke-virtual {p0, v2}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -541,7 +541,7 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 3736
+    .line 3739
     invoke-virtual {p0, v2}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -550,19 +550,19 @@
 
     iget v1, v6, Lcom/android/server/PowerManagerService$DVFSLock;->frequency:I
 
-    .line 3740
+    .line 3743
     .local v1, frequency:I
     const/4 v6, -0x1
 
     if-ne v4, v6, :cond_1
 
-    .line 3741
+    .line 3744
     move v4, v1
 
-    .line 3742
+    .line 3745
     move v3, v2
 
-    .line 3734
+    .line 3737
     .end local v1           #frequency:I
     :cond_0
     :goto_1
@@ -570,37 +570,37 @@
 
     goto :goto_0
 
-    .line 3745
+    .line 3748
     .restart local v1       #frequency:I
     :cond_1
     if-le v1, v4, :cond_0
 
-    .line 3746
+    .line 3749
     move v4, v1
 
-    .line 3747
+    .line 3750
     move v3, v2
 
     goto :goto_1
 
-    .line 3753
+    .line 3756
     .end local v1           #frequency:I
     :cond_2
     if-ltz v3, :cond_3
 
-    .line 3754
+    .line 3757
     invoke-virtual {p0, v3}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 3766
+    .line 3769
     .local v5, maxOfMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
     :goto_2
     return-object v5
 
-    .line 3760
+    .line 3763
     .end local v5           #maxOfMinLock:Lcom/android/server/PowerManagerService$DVFSLock;
     :cond_3
     const/4 v5, 0x0
@@ -613,20 +613,20 @@
     .locals 8
 
     .prologue
-    .line 3770
+    .line 3773
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$DVFSLockList;->size()I
 
     move-result v0
 
-    .line 3771
+    .line 3774
     .local v0, N:I
     const/4 v3, -0x1
 
-    .line 3772
+    .line 3775
     .local v3, indexMinFrequency:I
     const/4 v4, -0x1
 
-    .line 3776
+    .line 3779
     .local v4, minFrequency:I
     const/4 v2, 0x0
 
@@ -634,7 +634,7 @@
     :goto_0
     if-ge v2, v0, :cond_2
 
-    .line 3777
+    .line 3780
     invoke-virtual {p0, v2}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -647,7 +647,7 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 3778
+    .line 3781
     invoke-virtual {p0, v2}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -656,19 +656,19 @@
 
     iget v1, v6, Lcom/android/server/PowerManagerService$DVFSLock;->frequency:I
 
-    .line 3782
+    .line 3785
     .local v1, frequency:I
     const/4 v6, -0x1
 
     if-ne v4, v6, :cond_1
 
-    .line 3783
+    .line 3786
     move v4, v1
 
-    .line 3784
+    .line 3787
     move v3, v2
 
-    .line 3776
+    .line 3779
     .end local v1           #frequency:I
     :cond_0
     :goto_1
@@ -676,37 +676,37 @@
 
     goto :goto_0
 
-    .line 3787
+    .line 3790
     .restart local v1       #frequency:I
     :cond_1
     if-ge v1, v4, :cond_0
 
-    .line 3788
+    .line 3791
     move v4, v1
 
-    .line 3789
+    .line 3792
     move v3, v2
 
     goto :goto_1
 
-    .line 3795
+    .line 3798
     .end local v1           #frequency:I
     :cond_2
     if-ltz v3, :cond_3
 
-    .line 3796
+    .line 3799
     invoke-virtual {p0, v3}, Lcom/android/server/PowerManagerService$DVFSLockList;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 3808
+    .line 3811
     .local v5, minOfMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
     :goto_2
     return-object v5
 
-    .line 3802
+    .line 3805
     .end local v5           #minOfMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
     :cond_3
     const/4 v5, 0x0
@@ -720,23 +720,23 @@
     .parameter "binder"
 
     .prologue
-    .line 3708
+    .line 3711
     invoke-virtual {p0, p1}, Lcom/android/server/PowerManagerService$DVFSLockList;->getIndex(Landroid/os/IBinder;)I
 
     move-result v0
 
-    .line 3709
+    .line 3712
     .local v0, index:I
     if-ltz v0, :cond_0
 
-    .line 3710
+    .line 3713
     invoke-virtual {p0, v0}, Lcom/android/server/PowerManagerService$DVFSLockList;->remove(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/PowerManagerService$DVFSLock;
 
-    .line 3712
+    .line 3715
     :goto_0
     return-object v1
 

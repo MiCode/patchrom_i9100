@@ -27,16 +27,16 @@
     .parameter "toneId"
 
     .prologue
-    .line 2591
+    .line 2610
     iput-object p1, p0, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;->this$0:Lcom/android/phone/CallNotifier;
 
-    .line 2592
+    .line 2611
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 2593
+    .line 2612
     iput p2, p0, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;->mToneId:I
 
-    .line 2594
+    .line 2613
     return-void
 .end method
 
@@ -46,7 +46,7 @@
     .locals 3
 
     .prologue
-    .line 2598
+    .line 2617
     iget-object v0, p0, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;->this$0:Lcom/android/phone/CallNotifier;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,7 +78,7 @@
     #calls: Lcom/android/phone/CallNotifier;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/CallNotifier;->access$400(Lcom/android/phone/CallNotifier;Ljava/lang/String;)V
 
-    .line 2600
+    .line 2619
     iget-object v0, p0, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;->this$0:Lcom/android/phone/CallNotifier;
 
     #getter for: Lcom/android/phone/CallNotifier;->mSignalInfoToneGenerator:Landroid/media/ToneGenerator;
@@ -88,7 +88,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2602
+    .line 2621
     iget-object v0, p0, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;->this$0:Lcom/android/phone/CallNotifier;
 
     #getter for: Lcom/android/phone/CallNotifier;->mSignalInfoToneGenerator:Landroid/media/ToneGenerator;
@@ -98,7 +98,7 @@
 
     invoke-virtual {v0}, Landroid/media/ToneGenerator;->stopTone()V
 
-    .line 2605
+    .line 2624
     iget-object v0, p0, Lcom/android/phone/CallNotifier$SignalInfoTonePlayer;->this$0:Lcom/android/phone/CallNotifier;
 
     #getter for: Lcom/android/phone/CallNotifier;->mSignalInfoToneGenerator:Landroid/media/ToneGenerator;
@@ -110,7 +110,7 @@
 
     invoke-virtual {v0, v1}, Landroid/media/ToneGenerator;->startTone(I)Z
 
-    .line 2607
+    .line 2626
     :cond_0
     return-void
 .end method

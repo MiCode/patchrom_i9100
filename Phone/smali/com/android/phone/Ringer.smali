@@ -61,31 +61,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
     .line 47
-    const-string v2, "ro.debuggable"
+    const/4 v0, 0x0
 
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
     sput-boolean v0, Lcom/android/phone/Ringer;->DBG:Z
 
     return-void
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
 .end method
 
 .method private constructor <init>(Landroid/content/Context;)V
@@ -172,7 +156,17 @@
     return-void
 .end method
 
-.method static synthetic access$200(Ljava/lang/String;)V
+.method static synthetic access$200()Z
+    .locals 1
+
+    .prologue
+    .line 45
+    sget-boolean v0, Lcom/android/phone/Ringer;->DBG:Z
+
+    return v0
+.end method
+
+.method static synthetic access$300(Ljava/lang/String;)V
     .locals 0
     .parameter "x0"
 
@@ -181,16 +175,6 @@
     invoke-static {p0}, Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
 
     return-void
-.end method
-
-.method static synthetic access$300()Z
-    .locals 1
-
-    .prologue
-    .line 45
-    sget-boolean v0, Lcom/android/phone/Ringer;->DBG:Z
-
-    return v0
 .end method
 
 .method static synthetic access$400(Lcom/android/phone/Ringer;)I
@@ -746,11 +730,6 @@
 
     const/4 v0, 0x1
 
-    .line 180
-    const-string v1, "ring()..."
-
-    invoke-static {v1}, Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-
     .line 182
     monitor-enter p0
 
@@ -1172,16 +1151,8 @@
     .line 276
     monitor-enter p0
 
-    .line 277
-    :try_start_0
-    const-string v1, "stopRing()..."
-
-    invoke-static {v1}, Lcom/android/phone/Ringer;->log(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
     .line 280
-    :try_start_1
+    :try_start_0
     iget-object v1, p0, Lcom/android/phone/Ringer;->mPowerManager:Landroid/os/IPowerManager;
 
     const/4 v2, 0x0
@@ -1189,13 +1160,13 @@
     const/4 v3, 0x0
 
     invoke-interface {v1, v2, v3}, Landroid/os/IPowerManager;->setAttentionLight(ZI)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 285
     :goto_0
-    :try_start_2
+    :try_start_1
     iget-object v1, p0, Lcom/android/phone/Ringer;->mRingHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_7
@@ -1392,8 +1363,8 @@
     move-exception v1
 
     monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v1
 

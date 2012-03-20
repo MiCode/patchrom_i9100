@@ -112,14 +112,7 @@
 
     const/16 v15, 0x834
 
-    if-ne v13, v15, :cond_7
-
-    .line 859
-    const-string v13, "WindowManager"
-
-    const-string v15, "this is Widget window, Set mSkipWidgetFocus=false"
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-ne v13, v15, :cond_6
 
     .line 860
     move-object/from16 v0, p0
@@ -141,41 +134,8 @@
 
     move-result v4
 
-    .line 862
-    .local v4, i:I
-    const-string v13, "WindowManager"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "targetWin("
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    const-string v16, ")\'s index="
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 864
+    .local v4, i:I
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
@@ -212,41 +172,8 @@
     .end local v9           #win:Lcom/android/server/wm/WindowState;
     check-cast v9, Lcom/android/server/wm/WindowState;
 
-    .line 871
-    .restart local v9       #win:Lcom/android/server/wm/WindowState;
-    const-string v13, "WindowManager"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "  Checking win @"
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    const-string v16, " "
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 872
+    .restart local v9       #win:Lcom/android/server/wm/WindowState;
     iget-object v13, v9, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
 
     iget v13, v13, Landroid/view/WindowManager$LayoutParams;->type:I
@@ -260,75 +187,8 @@
 
     goto :goto_1
 
-    .line 876
-    :cond_2
-    const-string v13, "WindowManager"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "  Found topWidgetWin : topWidgetWin="
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    const-string v16, "\n"
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    const-string v16, "                       targetWin="
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    const-string v16, "\n"
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    const-string v16, "                       mCurrentFocus="
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    move-object/from16 v16, v0
-
-    move-object/from16 v0, v16
-
-    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService;->mCurrentFocus:Lcom/android/server/wm/WindowState;
-
-    move-object/from16 v16, v0
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 879
+    :cond_2
     move-object v8, v9
 
     .line 880
@@ -356,41 +216,6 @@
     .line 890
     :goto_2
     if-eqz v8, :cond_3
-
-    .line 891
-    const-string v13, "WindowManager"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "    place targetWin after topWidgetWin in mWindows!! : mFocusMayChange="
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
-
-    move-object/from16 v16, v0
-
-    move-object/from16 v0, v16
-
-    iget-boolean v0, v0, Lcom/android/server/wm/WindowManagerService;->mFocusMayChange:Z
-
-    move/from16 v16, v0
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 892
     move-object/from16 v0, p0
@@ -445,7 +270,7 @@
     :goto_3
     monitor-exit v14
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .end local v7           #targetWin:Lcom/android/server/wm/WindowState;
     :catchall_0
@@ -457,7 +282,7 @@
 
     throw v13
 
-    .line 886
+    .line 887
     .restart local v1       #N:I
     .restart local v4       #i:I
     .restart local v5       #id:I
@@ -468,35 +293,6 @@
     .restart local v10       #windows:Ljava/util/ArrayList;
     :cond_4
     :try_start_1
-    const-string v13, "WindowManager"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "    remove targetWin(index="
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    const-string v16, ") from mWindows!!"
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 887
     invoke-virtual {v10, v5}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
     goto :goto_2
@@ -510,14 +306,7 @@
 
     iget-object v13, v13, Lcom/android/server/wm/WindowManagerService;->mCurrentFocus:Lcom/android/server/wm/WindowState;
 
-    if-eq v13, v7, :cond_6
-
-    .line 903
-    const-string v13, "WindowManager"
-
-    const-string v15, "    already targetWindow is top. But the focus has changed."
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eq v13, v7, :cond_3
 
     .line 904
     move-object/from16 v0, p0
@@ -547,16 +336,6 @@
 
     goto :goto_3
 
-    .line 909
-    :cond_6
-    const-string v13, "WindowManager"
-
-    const-string v15, "    already targetWindow is top. And the focuse is not changed. Skip performLayout"
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_3
-
     .line 914
     .end local v1           #N:I
     .end local v4           #i:I
@@ -564,7 +343,7 @@
     .end local v8           #topWidgetWin:Lcom/android/server/wm/WindowState;
     .end local v9           #win:Lcom/android/server/wm/WindowState;
     .end local v10           #windows:Ljava/util/ArrayList;
-    :cond_7
+    :cond_6
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/wm/WindowManagerService$4;->this$0:Lcom/android/server/wm/WindowManagerService;
@@ -598,13 +377,6 @@
     move-result v15
 
     if-ge v13, v15, :cond_3
-
-    .line 915
-    const-string v13, "WindowManager"
-
-    const-string v15, "Set mSkipWidgetFocus=true"
-
-    invoke-static {v13, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 917
     move-object/from16 v0, p0
@@ -643,5 +415,5 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto/16 :goto_3
+    goto :goto_3
 .end method

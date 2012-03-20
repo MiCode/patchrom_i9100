@@ -10,6 +10,6 @@
     </plurals>
     <plurals name="alert_dialog_not_avaialble_in_ecm">
         <item quantity="other">选择的活动在紧急呼叫模式下不可用。手机将在%s分钟内保持此模式。现在退出？</item>
-        <item quantity="one">选择的操作在紧急重拨模式下不可用。手机将在这种模式下保持1分钟。现在退出吗？</item>
+        <item quantity="one">选择的操作在紧急回拨模式下不可用。手机将在这种模式下保持1分钟。现在退出吗？</item>
     </plurals>
 </resources>

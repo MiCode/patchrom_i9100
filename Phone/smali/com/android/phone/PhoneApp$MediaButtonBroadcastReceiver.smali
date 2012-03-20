@@ -26,12 +26,12 @@
     .parameter
 
     .prologue
-    .line 2017
+    .line 2043
     iput-object p1, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 2025
+    .line 2051
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
@@ -45,7 +45,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2017
+    .line 2043
     invoke-direct {p0, p1}, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;-><init>(Lcom/android/phone/PhoneApp;)V
 
     return-void
@@ -54,18 +54,18 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 10
+    .locals 9
     .parameter "context"
     .parameter "intent"
 
     .prologue
-    const/16 v9, 0x4f
+    const/16 v8, 0x4f
 
     const/4 v5, 0x0
 
     const/4 v4, 0x1
 
-    .line 2029
+    .line 2055
     const-string v6, "android.intent.extra.KEY_EVENT"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -74,38 +74,15 @@
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 2030
+    .line 2058
     .local v0, event:Landroid/view/KeyEvent;
-    const-string v6, "PhoneApp"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "MediaButtonBroadcastReceiver.onReceive()...  event = "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2032
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v6
 
-    if-ne v6, v9, :cond_1
+    if-ne v6, v8, :cond_1
 
     invoke-virtual {v0}, Landroid/view/KeyEvent;->getAction()I
 
@@ -113,7 +90,7 @@
 
     if-nez v6, :cond_1
 
-    .line 2036
+    .line 2062
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -126,28 +103,21 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 2037
+    .line 2063
     invoke-virtual {v0}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v6
 
     if-lez v6, :cond_0
 
-    .line 2038
-    const-string v6, "PhoneApp"
-
-    const-string v7, "MediaButtonBroadcastReceiver.onReceive()... Long pressed "
-
-    invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2040
+    .line 2066
     iput-boolean v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
 
-    .line 2042
+    .line 2068
     :cond_0
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->abortBroadcast()V
 
-    .line 2046
+    .line 2072
     :cond_1
     if-eqz v0, :cond_5
 
@@ -155,7 +125,7 @@
 
     move-result v6
 
-    if-ne v6, v9, :cond_5
+    if-ne v6, v8, :cond_5
 
     invoke-virtual {v0}, Landroid/view/KeyEvent;->getAction()I
 
@@ -163,7 +133,7 @@
 
     if-ne v6, v4, :cond_5
 
-    .line 2050
+    .line 2076
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -176,7 +146,7 @@
 
     if-eq v6, v7, :cond_4
 
-    .line 2051
+    .line 2077
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -193,7 +163,7 @@
 
     move v2, v4
 
-    .line 2052
+    .line 2078
     .local v2, hasActiveCall:Z
     :goto_0
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
@@ -212,14 +182,14 @@
 
     move v3, v4
 
-    .line 2053
+    .line 2079
     .local v3, hasHoldingCall:Z
     :goto_1
     iget-boolean v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
 
     if-eqz v6, :cond_a
 
-    .line 2055
+    .line 2081
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -232,12 +202,12 @@
 
     if-ne v6, v7, :cond_9
 
-    .line 2056
+    .line 2082
     if-nez v2, :cond_2
 
     if-eqz v3, :cond_8
 
-    .line 2057
+    .line 2083
     :cond_2
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -245,40 +215,40 @@
 
     invoke-static {v4, v0}, Lcom/android/phone/PhoneUtils;->handleHeadsetHook(Lcom/android/internal/telephony/Phone;Landroid/view/KeyEvent;)Z
 
-    .line 2080
+    .line 2106
     :cond_3
     :goto_2
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v4}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
-    .line 2082
+    .line 2108
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->abortBroadcast()V
 
-    .line 2084
+    .line 2110
     .end local v2           #hasActiveCall:Z
     .end local v3           #hasHoldingCall:Z
     :cond_4
     iput-boolean v5, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
 
-    .line 2086
+    .line 2112
     :cond_5
     return-void
 
     :cond_6
     move v2, v5
 
-    .line 2051
+    .line 2077
     goto :goto_0
 
     .restart local v2       #hasActiveCall:Z
     :cond_7
     move v3, v5
 
-    .line 2052
+    .line 2078
     goto :goto_1
 
-    .line 2059
+    .line 2085
     .restart local v3       #hasHoldingCall:Z
     :cond_8
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
@@ -293,7 +263,7 @@
 
     goto :goto_2
 
-    .line 2062
+    .line 2088
     :cond_9
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -303,7 +273,7 @@
 
     move-result-object v1
 
-    .line 2063
+    .line 2089
     .local v1, foregroundCall:Lcom/android/internal/telephony/Call;
     if-eqz v1, :cond_3
 
@@ -329,12 +299,12 @@
 
     if-eq v4, v6, :cond_3
 
-    .line 2068
+    .line 2094
     invoke-static {v1}, Lcom/android/phone/PhoneUtils;->switchHoldingAndActive(Lcom/android/internal/telephony/Call;)Z
 
     goto :goto_2
 
-    .line 2072
+    .line 2098
     .end local v1           #foregroundCall:Lcom/android/internal/telephony/Call;
     :cond_a
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
@@ -353,7 +323,7 @@
 
     if-eqz v3, :cond_c
 
-    .line 2074
+    .line 2100
     :cond_b
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -367,7 +337,7 @@
 
     goto :goto_2
 
-    .line 2076
+    .line 2102
     :cond_c
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 

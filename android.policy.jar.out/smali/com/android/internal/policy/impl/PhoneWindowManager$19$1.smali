@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3990
+    .line 4006
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$19$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
     invoke-direct {p0}, Landroid/os/IRemoteCallback$Stub;-><init>()V
@@ -39,21 +39,21 @@
     .parameter "data"
 
     .prologue
-    .line 3992
+    .line 4008
     const-string v0, "WindowManager"
 
     const-string v1, "Lock screen displayed!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3993
+    .line 4009
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$19$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$19;->val$screenOnListener:Landroid/view/WindowManagerPolicy$ScreenOnListener;
 
     invoke-interface {v0}, Landroid/view/WindowManagerPolicy$ScreenOnListener;->onScreenOn()V
 
-    .line 3994
+    .line 4010
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$19$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager$19;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -62,7 +62,7 @@
 
     monitor-enter v1
 
-    .line 3995
+    .line 4011
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$19$1;->this$1:Lcom/android/internal/policy/impl/PhoneWindowManager$19;
 
@@ -72,13 +72,13 @@
 
     iput-boolean v2, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mScreenOnFully:Z
 
-    .line 3996
+    .line 4012
     monitor-exit v1
 
-    .line 3997
+    .line 4013
     return-void
 
-    .line 3996
+    .line 4012
     :catchall_0
     move-exception v0
 

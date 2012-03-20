@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3384
+    .line 3438
     iput-object p1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/os/storage/IDirEncryptServiceListener$Stub;-><init>()V
@@ -45,7 +45,7 @@
 
     const/4 v4, 0x1
 
-    .line 3388
+    .line 3442
     const-string v1, "MountService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -78,7 +78,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3389
+    .line 3443
     const-string v1, "/mnt/sdcard/external_sd"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -95,7 +95,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 3391
+    .line 3445
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     #getter for: Lcom/android/server/MountService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -117,12 +117,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/NativeDaemonConnector;->doCommand(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    .line 3412
+    .line 3466
     :cond_0
     :goto_0
     return-void
 
-    .line 3393
+    .line 3447
     :cond_1
     const-string v1, "/mnt/sdcard/external_sd"
 
@@ -148,7 +148,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 3396
+    .line 3450
     :cond_2
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
@@ -157,19 +157,19 @@
     #calls: Lcom/android/server/MountService;->updatePublicVolumeState(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, p1, v2}, Lcom/android/server/MountService;->access$1900(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3397
+    .line 3451
     const-string v0, "android.intent.action.MEDIA_NOFS"
 
-    .line 3399
+    .line 3453
     .local v0, action:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     #calls: Lcom/android/server/MountService;->sendStorageIntent(Ljava/lang/String;Ljava/lang/String;)V
-    invoke-static {v1, v0, p1}, Lcom/android/server/MountService;->access$3600(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0, p1}, Lcom/android/server/MountService;->access$3700(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 3401
+    .line 3455
     .end local v0           #action:Ljava/lang/String;
     :cond_3
     const-string v1, "/mnt/sdcard/external_sd"
@@ -188,17 +188,17 @@
 
     if-eqz v1, :cond_4
 
-    .line 3404
+    .line 3458
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     const-string v2, "decrypt"
 
     #calls: Lcom/android/server/MountService;->doMountVolume(Ljava/lang/String;Ljava/lang/String;)I
-    invoke-static {v1, p1, v2}, Lcom/android/server/MountService;->access$3700(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, p1, v2}, Lcom/android/server/MountService;->access$3800(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 3406
+    .line 3460
     :cond_4
     const-string v1, "/mnt/sdcard/external_sd"
 
@@ -216,7 +216,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 3409
+    .line 3463
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     const-string v2, "crypto"
@@ -224,7 +224,7 @@
     #calls: Lcom/android/server/MountService;->notifyVolumeStateChange(Ljava/lang/String;Ljava/lang/String;II)V
     invoke-static {v1, v2, p1, v4, v5}, Lcom/android/server/MountService;->access$700(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 3410
+    .line 3464
     iget-object v1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     const-string v2, "crypto"

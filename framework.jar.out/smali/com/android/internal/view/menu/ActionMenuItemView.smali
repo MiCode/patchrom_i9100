@@ -574,7 +574,7 @@
 
     move-result-object v11
 
-    const v12, 0x10103da
+    const v12, 0x10103dc
 
     invoke-virtual {v11, v12, v5, v10}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 

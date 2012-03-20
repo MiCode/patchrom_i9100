@@ -531,7 +531,7 @@
 
 .field public static final copy:I = 0x1040001
 
-.field public static final copyAll:I = 0x104064a
+.field public static final copyAll:I = 0x104064b
 
 .field public static final copyUrl:I = 0x1040002
 
@@ -541,7 +541,7 @@
 
 .field public static final cut:I = 0x1040003
 
-.field public static final cutAll:I = 0x1040649
+.field public static final cutAll:I = 0x104064a
 
 .field public static final data_call_restriction:I = 0x10401a4
 
@@ -767,7 +767,7 @@
 
 .field public static final eventTypeOther:I = 0x1040347
 
-.field public static final exceeded_maxlength:I = 0x104064e
+.field public static final exceeded_maxlength:I = 0x104064f
 
 .field public static final expires_on:I = 0x1040598
 
@@ -1485,7 +1485,7 @@
 
 .field public static final open_permission_deny:I = 0x1040418
 
-.field public static final operation_not_allowed:I = 0x104064d
+.field public static final operation_not_allowed:I = 0x104064e
 
 .field public static final orgTypeCustom:I = 0x1040361
 
@@ -2543,7 +2543,7 @@
 
 .field public static final recover:I = 0x10405dc
 
-.field public static final redo:I = 0x104064c
+.field public static final redo:I = 0x104064d
 
 .field public static final relationTypeAssistant:I = 0x1040363
 
@@ -2975,7 +2975,7 @@
 
 .field public static final twmobile_operator_name:I = 0x10405f0
 
-.field public static final undo:I = 0x104064b
+.field public static final undo:I = 0x104064c
 
 .field public static final unknownName:I = 0x104000e
 
@@ -3217,6 +3217,8 @@
 
 .field public static final zzz_pcwlock_unlock:I = 0x1040422
 
+.field public static final zzz_skt_usim_not_used:I = 0x1040649
+
 .field public static final zzz_tts_lockscreen_1_missed_call:I = 0x10405a7
 
 .field public static final zzz_tts_lockscreen_1_unread_message:I = 0x10405a8
@@ -3251,7 +3253,7 @@
     .locals 0
 
     .prologue
-    .line 15705
+    .line 15735
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void

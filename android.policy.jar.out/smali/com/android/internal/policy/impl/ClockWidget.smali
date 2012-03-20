@@ -71,7 +71,7 @@
     if-eq v2, v3, :cond_1
 
     .line 78
-    const v2, 0x10900d3
+    const v2, 0x10900d6
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -198,7 +198,7 @@
     .line 82
     .end local v1           #showClock:Z
     :cond_1
-    const v2, 0x10900d4
+    const v2, 0x10900d7
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

@@ -22,7 +22,66 @@ local-miui-modified-apps := MiuiHome Settings MiuiSystemUI Mms
 local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
 	SystemUI RootExplorer SetupWizard MyFiles RebootTool Superuser CWMManager GoogleQuickSearchBox \
 	DioPenChineseIME SecDownloadProviderUi SecDownloadProvider VoiceRecorder ClockPackage \
-	JobManager VideoPlayer TouchWizCalculator SecCalendarProvider Gallery3D
+	JobManager VideoPlayer TouchWizCalculator SecCalendarProvider Gallery3D \
+	AnalogClock  \
+	ApplicationsProvider  \
+	CalendarProvider \
+	CertInstaller  \
+	CloudService  \
+	DeskClock  \
+	DigitalClock  \
+	DrmProvider  \
+	DualClock  \
+	GameHub  \
+	GenieWidget  \
+	Kobo  \
+	MiniDiary \
+	MobilePrint  \
+	MobileTrackerEngineTwo  \
+	PostIt  \
+	PressReader  \
+	ReadersHub  \
+	SamsungApps  \
+	SamsungWidget_ProgramMonitor  \
+	SamsungWidget_StockClock  \
+	SamsungWidget_WeatherClock  \
+	SevenEngine  \
+	SnsAccountFb  \
+	SnsAccountLi \
+	SnsAccountMs  \
+	SnsAccountPk  \
+	SnsAccountTw  \
+	SnsDisclaimer  \
+	SnsImageCache  \
+	SnsProvider \
+	SocialHub  \
+	TouchWizCalendar  \
+	TwWallpaperChooser \
+	VideoEditor  \
+	YouTube  \
+	Dlna \
+	SamsungWidget_News \
+	Zinio \
+	AccuWeatherDaemonService \
+	DSMForwarding \
+	DSMLawmo \
+	Days \
+	FotaClient \
+	Kies \
+	Microbesgl \
+	PlusOne \
+	SamsungAppsUNA3 \
+	SamsungChineseIME \
+	Samsungservice \
+	SocialHubWidget \
+	SyncmlDM \
+	SyncmlDS \
+	Tasks \
+	TasksProvider \
+	TrimApp \
+	TwDVFSApp \
+	kieswifi \
+	talkback
 
 
 # To include the local targets before and after zip the final ZIP file, 
@@ -40,8 +99,12 @@ include $(PORT_BUILD)/porting.mk
 # To define any local-target
 updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 local-fix-updater-script:
-	cp other/boot.img $(ZIP_DIR)
+#	cp other/boot.img $(ZIP_DIR)
+#	cp other/modem.bin  $(TMP_DIR)/target_files
+	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
+	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/AxT9IME.apk $(ZIP_DIR)/system/app
+	rm -rf $(ZIP_DIR)/system/csc
 
 local-put-to-phone:
 	adb shell rm /sdcard/MIUI_i9100.zip

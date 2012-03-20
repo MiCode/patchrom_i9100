@@ -302,7 +302,7 @@
     invoke-virtual {v0, v1}, Landroid/view/Window;->setGravity(I)V
 
     .line 179
-    const v1, 0x10900db
+    const v1, 0x10900de
 
     invoke-virtual {p0, v1}, Landroid/webkit/WebSelectDialog;->setContentView(I)V
 

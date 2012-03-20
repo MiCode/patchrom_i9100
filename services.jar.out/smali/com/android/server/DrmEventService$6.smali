@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1315
+    .line 1319
     iput-object p1, p0, Lcom/android/server/DrmEventService$6;->this$0:Lcom/android/server/DrmEventService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "event"
 
     .prologue
-    .line 1321
+    .line 1325
     invoke-virtual {p2}, Landroid/drm/DrmErrorEvent;->getType()I
 
     move-result v0
@@ -52,30 +52,30 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1322
+    .line 1326
     sget-boolean v0, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 1323
+    .line 1327
     const-string v0, "DrmEventService"
 
     const-string v1, "on Error TYPE_PROCESS_DRM_INFO_FAILED"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1336
+    .line 1340
     :cond_0
     :goto_0
     return-void
 
-    .line 1332
+    .line 1336
     :cond_1
     sget-boolean v0, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 1333
+    .line 1337
     const-string v0, "DrmEventService"
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -17,24 +17,20 @@
     .prologue
     const/high16 v2, 0x2
 
-    .line 31
     const v0, 0x30d0020
 
     invoke-direct {p0, p1, v0}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 70
     new-instance v0, Lcom/android/server/am/BaseErrorDialog$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/BaseErrorDialog$1;-><init>(Lcom/android/server/am/BaseErrorDialog;)V
 
     iput-object v0, p0, Lcom/android/server/am/BaseErrorDialog;->mHandler:Landroid/os/Handler;
 
-    .line 79
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/am/BaseErrorDialog;->mConsuming:Z
 
-    .line 33
     invoke-virtual {p0}, Lcom/android/server/am/BaseErrorDialog;->getWindow()Landroid/view/Window;
 
     move-result-object v0

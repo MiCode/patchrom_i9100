@@ -419,7 +419,7 @@
 
     .line 154
     :cond_0
-    const v0, 0x10103ab
+    const v0, 0x10103ad
 
     .line 155
     .local v0, defStyle:I
@@ -445,7 +445,7 @@
     iput v2, p0, Landroid/text/style/SuggestionSpan;->mMisspelledUnderlineColor:I
 
     .line 162
-    const v0, 0x10103aa
+    const v0, 0x10103ac
 
     .line 163
     sget-object v2, Lcom/android/internal/R$styleable;->SuggestionSpan:[I
@@ -469,7 +469,7 @@
     iput v2, p0, Landroid/text/style/SuggestionSpan;->mEasyCorrectUnderlineColor:I
 
     .line 170
-    const v0, 0x10103ac
+    const v0, 0x10103ae
 
     .line 171
     sget-object v2, Lcom/android/internal/R$styleable;->SuggestionSpan:[I

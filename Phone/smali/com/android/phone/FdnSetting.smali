@@ -1666,44 +1666,35 @@
 
     iput-object v2, p0, Lcom/android/phone/FdnSetting;->mButtonFDNList:Landroid/preference/PreferenceScreen;
 
-    .line 725
     iget-object v2, p0, Lcom/android/phone/FdnSetting;->mButtonEnableFDN:Lcom/android/phone/EditPinPreference;
 
     invoke-virtual {v2, p0}, Lcom/android/phone/EditPinPreference;->setOnPinEnteredListener(Lcom/android/phone/EditPinPreference$OnPinEnteredListener;)V
 
-    .line 727
     iget-object v2, p0, Lcom/android/phone/FdnSetting;->mButtonChangePin2:Lcom/android/phone/EditPinPreference;
 
     invoke-virtual {v2, p0}, Lcom/android/phone/EditPinPreference;->setOnPinEnteredListener(Lcom/android/phone/EditPinPreference$OnPinEnteredListener;)V
 
-    .line 731
     if-nez p1, :cond_1
 
-    .line 733
     invoke-direct {p0}, Lcom/android/phone/FdnSetting;->resetPinChangeState()V
 
-    .line 743
     :goto_0
     invoke-virtual {p0}, Lcom/android/phone/FdnSetting;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 744
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 746
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
 
-    .line 748
     :cond_0
     return-void
 
-    .line 735
     .end local v0           #actionBar:Landroid/app/ActionBar;
     :cond_1
     const-string v2, "skip_old_pin_key"

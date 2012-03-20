@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2574
+    .line 2595
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$3;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-direct {p0}, Landroid/bluetooth/AtCommandHandler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "args"
 
     .prologue
-    .line 2577
+    .line 2598
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$3;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     const-string v2, "OK"
@@ -47,7 +47,7 @@
     #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/phone/BluetoothHandsfree;->access$1500(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
 
-    .line 2578
+    .line 2599
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$3;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mBluetoothPhoneState:Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;
@@ -58,7 +58,7 @@
     #calls: Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->stopRing()V
     invoke-static {v1}, Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;->access$5800(Lcom/android/phone/BluetoothHandsfree$BluetoothPhoneState;)V
 
-    .line 2579
+    .line 2600
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$3;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -72,7 +72,7 @@
 
     invoke-static {v1}, Lcom/android/phone/PhoneUtils;->answerCall(Lcom/android/internal/telephony/Call;)Z
 
-    .line 2582
+    .line 2603
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$3;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -88,7 +88,7 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2584
+    .line 2605
     :try_start_0
     const-string v1, "voip"
 
@@ -100,23 +100,23 @@
 
     move-result-object v0
 
-    .line 2585
+    .line 2606
     .local v0, voipInf:Landroid/os/IVoIPInterface;
     if-eqz v0, :cond_0
 
-    .line 2586
+    .line 2607
     invoke-interface {v0}, Landroid/os/IVoIPInterface;->isVoIPRinging()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 2587
+    .line 2608
     invoke-interface {v0}, Landroid/os/IVoIPInterface;->answerVoIPCall()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2595
+    .line 2616
     .end local v0           #voipInf:Landroid/os/IVoIPInterface;
     :cond_0
     :goto_0
@@ -128,7 +128,7 @@
 
     return-object v1
 
-    .line 2590
+    .line 2611
     :catch_0
     move-exception v1
 

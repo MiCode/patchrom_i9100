@@ -755,11 +755,6 @@
 
     invoke-virtual {v0, v1, p0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 102
-    const-string v1, "Inflate multi call view"
-
-    invoke-virtual {p0, v1}, Lcom/android/phone/MultiCallView;->log(Ljava/lang/String;)V
-
     .line 103
     const v1, 0x7f090113
 
@@ -1058,45 +1053,8 @@
 
     move-result v0
 
-    .line 331
-    .local v0, id:I
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "onClick(View "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, ", id "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, ")..."
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/android/phone/MultiCallView;->log(Ljava/lang/String;)V
-
     .line 333
+    .local v0, id:I
     sparse-switch v0, :sswitch_data_0
 
     .line 353
@@ -1536,11 +1494,6 @@
 
     :goto_7
     invoke-virtual {p0, v4, v0}, Lcom/android/phone/MultiCallView;->fillCallerInfo(ZLcom/android/internal/telephony/Call;)V
-
-    .line 199
-    const-string v4, "!SecFeature.U1_NA_SPR"
-
-    invoke-virtual {p0, v4}, Lcom/android/phone/MultiCallView;->log(Ljava/lang/String;)V
 
     .line 208
     iget-object v4, p0, Lcom/android/phone/MultiCallView;->mSwapButton:Landroid/widget/Button;

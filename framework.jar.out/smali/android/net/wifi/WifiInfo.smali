@@ -213,7 +213,7 @@
 
     sput-object v0, Landroid/net/wifi/WifiInfo;->WIFI_MAC_FILE:Ljava/lang/String;
 
-    .line 347
+    .line 344
     new-instance v0, Landroid/net/wifi/WifiInfo$1;
 
     invoke-direct {v0}, Landroid/net/wifi/WifiInfo$1;-><init>()V
@@ -387,7 +387,7 @@
     .parameter "suppState"
 
     .prologue
-    .line 280
+    .line 277
     sget-object v0, Landroid/net/wifi/WifiInfo;->stateMap:Ljava/util/EnumMap;
 
     invoke-virtual {v0, p0}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -404,7 +404,7 @@
     .parameter "stateName"
 
     .prologue
-    .line 294
+    .line 291
     const-string v1, "4WAY_HANDSHAKE"
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -413,14 +413,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 295
+    .line 292
     sget-object v1, Landroid/net/wifi/SupplicantState;->FOUR_WAY_HANDSHAKE:Landroid/net/wifi/SupplicantState;
 
-    .line 300
+    .line 297
     :goto_0
     return-object v1
 
-    .line 298
+    .line 295
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -435,11 +435,11 @@
 
     goto :goto_0
 
-    .line 299
+    .line 296
     :catch_0
     move-exception v0
 
-    .line 300
+    .line 297
     .local v0, e:Ljava/lang/IllegalArgumentException;
     sget-object v1, Landroid/net/wifi/SupplicantState;->INVALID:Landroid/net/wifi/SupplicantState;
 
@@ -452,7 +452,7 @@
     .locals 1
 
     .prologue
-    .line 325
+    .line 322
     const/4 v0, 0x0
 
     return v0
@@ -472,7 +472,7 @@
     .locals 1
 
     .prologue
-    .line 266
+    .line 263
     iget-boolean v0, p0, Landroid/net/wifi/WifiInfo;->mHiddenSSID:Z
 
     return v0
@@ -482,7 +482,7 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 254
     iget-object v0, p0, Landroid/net/wifi/WifiInfo;->mIpAddress:Ljava/net/InetAddress;
 
     if-eqz v0, :cond_0
@@ -496,7 +496,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 258
+    .line 255
     :goto_0
     return v0
 
@@ -521,223 +521,201 @@
 .end method
 
 .method public getMacAddress()Ljava/lang/String;
-    .locals 8
+    .locals 9
 
     .prologue
     .line 179
-    iget-object v5, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
-
-    if-eqz v5, :cond_0
+    const/16 v0, 0x11
 
     .line 180
-    iget-object v5, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
+    .local v0, MacLength:I
+    iget-object v6, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
 
-    .line 205
+    if-eqz v6, :cond_0
+
+    .line 181
+    iget-object v6, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
+
+    .line 202
     :goto_0
-    return-object v5
-
-    .line 182
-    :cond_0
-    const/4 v2, 0x0
+    return-object v6
 
     .line 183
-    .local v2, in:Ljava/io/DataInputStream;
-    const/4 v4, 0x0
+    :cond_0
+    const/4 v3, 0x0
 
     .line 184
-    .local v4, length:I
-    const/16 v5, 0x64
+    .local v3, in:Ljava/io/DataInputStream;
+    const/4 v5, 0x0
 
-    new-array v0, v5, [B
+    .line 185
+    .local v5, length:I
+    const/16 v6, 0x64
 
-    .line 187
-    .local v0, buffer:[B
+    new-array v1, v6, [B
+
+    .line 188
+    .local v1, buffer:[B
     :try_start_0
-    new-instance v3, Ljava/io/DataInputStream;
+    new-instance v4, Ljava/io/DataInputStream;
 
-    new-instance v5, Ljava/io/BufferedInputStream;
+    new-instance v6, Ljava/io/BufferedInputStream;
 
-    new-instance v6, Ljava/io/FileInputStream;
+    new-instance v7, Ljava/io/FileInputStream;
 
-    sget-object v7, Landroid/net/wifi/WifiInfo;->WIFI_MAC_FILE:Ljava/lang/String;
+    sget-object v8, Landroid/net/wifi/WifiInfo;->WIFI_MAC_FILE:Ljava/lang/String;
 
-    invoke-direct {v6, v7}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v8}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v5, v6}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {v6, v7}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
 
-    invoke-direct {v3, v5}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+    invoke-direct {v4, v6}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 188
-    .end local v2           #in:Ljava/io/DataInputStream;
-    .local v3, in:Ljava/io/DataInputStream;
-    :try_start_1
-    invoke-virtual {v3, v0}, Ljava/io/DataInputStream;->read([B)I
-
-    move-result v4
-
     .line 189
-    if-eqz v4, :cond_1
+    .end local v3           #in:Ljava/io/DataInputStream;
+    .local v4, in:Ljava/io/DataInputStream;
+    :try_start_1
+    invoke-virtual {v4, v1}, Ljava/io/DataInputStream;->read([B)I
+
+    move-result v5
 
     .line 190
-    new-instance v5, Ljava/lang/String;
+    if-lt v5, v0, :cond_1
 
-    const/4 v6, 0x0
+    .line 191
+    new-instance v6, Ljava/lang/String;
 
-    invoke-direct {v5, v0, v6, v4}, Ljava/lang/String;-><init>([BII)V
+    const/4 v7, 0x0
 
-    iput-object v5, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
+    invoke-direct {v6, v1, v7, v0}, Ljava/lang/String;-><init>([BII)V
+
+    iput-object v6, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
-    .line 195
+    .line 196
     :cond_1
-    if-eqz v3, :cond_5
+    if-eqz v4, :cond_4
 
-    .line 197
+    .line 198
     :try_start_2
-    invoke-virtual {v3}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v4}, Ljava/io/DataInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    move-object v2, v3
+    move-object v3, v4
 
     .line 202
-    .end local v3           #in:Ljava/io/DataInputStream;
-    .restart local v2       #in:Ljava/io/DataInputStream;
+    .end local v4           #in:Ljava/io/DataInputStream;
+    .restart local v3       #in:Ljava/io/DataInputStream;
     :cond_2
     :goto_1
-    iget-object v5, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
-
-    const-string v6, "\n"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    .line 203
-    iget-object v5, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
-
-    const-string v6, "\n"
-
-    const-string v7, ""
-
-    invoke-virtual {v5, v6, v7}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object v5
+    iget-object v6, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 198
-    .end local v2           #in:Ljava/io/DataInputStream;
-    .restart local v3       #in:Ljava/io/DataInputStream;
-    :catch_0
-    move-exception v5
-
-    move-object v2, v3
-
+    .line 199
     .end local v3           #in:Ljava/io/DataInputStream;
-    .restart local v2       #in:Ljava/io/DataInputStream;
+    .restart local v4       #in:Ljava/io/DataInputStream;
+    :catch_0
+    move-exception v6
+
+    move-object v3, v4
+
+    .end local v4           #in:Ljava/io/DataInputStream;
+    .restart local v3       #in:Ljava/io/DataInputStream;
     goto :goto_1
 
-    .line 192
-    :catch_1
-    move-exception v1
-
     .line 193
-    .local v1, ignore:Ljava/io/IOException;
+    :catch_1
+    move-exception v2
+
+    .line 194
+    .local v2, ignore:Ljava/io/IOException;
     :goto_2
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     :try_start_3
-    iput-object v5, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
+    iput-object v6, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 195
-    if-eqz v2, :cond_2
+    .line 196
+    if-eqz v3, :cond_2
 
-    .line 197
+    .line 198
     :try_start_4
-    invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/DataInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
     goto :goto_1
 
-    .line 198
+    .line 199
     :catch_2
-    move-exception v5
+    move-exception v6
 
     goto :goto_1
 
-    .line 195
-    .end local v1           #ignore:Ljava/io/IOException;
+    .line 196
+    .end local v2           #ignore:Ljava/io/IOException;
     :catchall_0
-    move-exception v5
+    move-exception v6
 
     :goto_3
-    if-eqz v2, :cond_3
+    if-eqz v3, :cond_3
 
-    .line 197
+    .line 198
     :try_start_5
-    invoke-virtual {v2}, Ljava/io/DataInputStream;->close()V
+    invoke-virtual {v3}, Ljava/io/DataInputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 198
+    .line 199
     :cond_3
     :goto_4
-    throw v5
+    throw v6
 
-    .line 205
-    :cond_4
-    iget-object v5, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
-
-    goto :goto_0
-
-    .line 198
     :catch_3
-    move-exception v6
+    move-exception v7
 
     goto :goto_4
 
-    .line 195
-    .end local v2           #in:Ljava/io/DataInputStream;
-    .restart local v3       #in:Ljava/io/DataInputStream;
-    :catchall_1
-    move-exception v5
-
-    move-object v2, v3
-
+    .line 196
     .end local v3           #in:Ljava/io/DataInputStream;
-    .restart local v2       #in:Ljava/io/DataInputStream;
+    .restart local v4       #in:Ljava/io/DataInputStream;
+    :catchall_1
+    move-exception v6
+
+    move-object v3, v4
+
+    .end local v4           #in:Ljava/io/DataInputStream;
+    .restart local v3       #in:Ljava/io/DataInputStream;
     goto :goto_3
 
-    .line 192
-    .end local v2           #in:Ljava/io/DataInputStream;
-    .restart local v3       #in:Ljava/io/DataInputStream;
-    :catch_4
-    move-exception v1
-
-    move-object v2, v3
-
+    .line 193
     .end local v3           #in:Ljava/io/DataInputStream;
-    .restart local v2       #in:Ljava/io/DataInputStream;
+    .restart local v4       #in:Ljava/io/DataInputStream;
+    :catch_4
+    move-exception v2
+
+    move-object v3, v4
+
+    .end local v4           #in:Ljava/io/DataInputStream;
+    .restart local v3       #in:Ljava/io/DataInputStream;
     goto :goto_2
 
-    .end local v2           #in:Ljava/io/DataInputStream;
-    .restart local v3       #in:Ljava/io/DataInputStream;
-    :cond_5
-    move-object v2, v3
-
     .end local v3           #in:Ljava/io/DataInputStream;
-    .restart local v2       #in:Ljava/io/DataInputStream;
+    .restart local v4       #in:Ljava/io/DataInputStream;
+    :cond_4
+    move-object v3, v4
+
+    .end local v4           #in:Ljava/io/DataInputStream;
+    .restart local v3       #in:Ljava/io/DataInputStream;
     goto :goto_1
 .end method
 
@@ -745,7 +723,7 @@
     .locals 1
 
     .prologue
-    .line 236
+    .line 233
     iget v0, p0, Landroid/net/wifi/WifiInfo;->mNetworkId:I
 
     return v0
@@ -775,7 +753,7 @@
     .locals 1
 
     .prologue
-    .line 245
+    .line 242
     iget-object v0, p0, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
 
     return-object v0
@@ -785,7 +763,7 @@
     .locals 1
 
     .prologue
-    .line 218
+    .line 215
     iget-boolean v0, p0, Landroid/net/wifi/WifiInfo;->mExplicitConnect:Z
 
     return v0
@@ -808,10 +786,10 @@
     .parameter "explicitConnect"
 
     .prologue
-    .line 225
+    .line 222
     iput-boolean p1, p0, Landroid/net/wifi/WifiInfo;->mExplicitConnect:Z
 
-    .line 226
+    .line 223
     return-void
 .end method
 
@@ -820,10 +798,10 @@
     .parameter "hiddenSSID"
 
     .prologue
-    .line 271
+    .line 268
     iput-boolean p1, p0, Landroid/net/wifi/WifiInfo;->mHiddenSSID:Z
 
-    .line 272
+    .line 269
     return-void
 .end method
 
@@ -832,10 +810,10 @@
     .parameter "address"
 
     .prologue
-    .line 253
+    .line 250
     iput-object p1, p0, Landroid/net/wifi/WifiInfo;->mIpAddress:Ljava/net/InetAddress;
 
-    .line 254
+    .line 251
     return-void
 .end method
 
@@ -868,10 +846,10 @@
     .parameter "id"
 
     .prologue
-    .line 210
+    .line 207
     iput p1, p0, Landroid/net/wifi/WifiInfo;->mNetworkId:I
 
-    .line 211
+    .line 208
     return-void
 .end method
 
@@ -909,10 +887,10 @@
     .parameter "state"
 
     .prologue
-    .line 249
+    .line 246
     iput-object p1, p0, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
 
-    .line 250
+    .line 247
     return-void
 .end method
 
@@ -921,14 +899,14 @@
     .parameter "stateName"
 
     .prologue
-    .line 290
+    .line 287
     invoke-static {p1}, Landroid/net/wifi/WifiInfo;->valueOf(Ljava/lang/String;)Landroid/net/wifi/SupplicantState;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
 
-    .line 291
+    .line 288
     return-void
 .end method
 
@@ -936,16 +914,16 @@
     .locals 4
 
     .prologue
-    .line 307
+    .line 304
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 308
+    .line 305
     .local v1, sb:Ljava/lang/StringBuffer;
     const-string v0, "<none>"
 
-    .line 310
+    .line 307
     .local v0, none:Ljava/lang/String;
     const-string v2, "SSID: "
 
@@ -1060,14 +1038,14 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Z)Ljava/lang/StringBuffer;
 
-    .line 320
+    .line 317
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     return-object v2
 
-    .line 310
+    .line 307
     .restart local v0       #none:Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Landroid/net/wifi/WifiInfo;->mSSID:Ljava/lang/String;
@@ -1100,30 +1078,30 @@
 
     const/4 v1, 0x0
 
-    .line 330
+    .line 327
     iget v2, p0, Landroid/net/wifi/WifiInfo;->mNetworkId:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 331
+    .line 328
     iget v2, p0, Landroid/net/wifi/WifiInfo;->mRssi:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 332
+    .line 329
     iget v2, p0, Landroid/net/wifi/WifiInfo;->mLinkSpeed:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 333
+    .line 330
     iget-object v2, p0, Landroid/net/wifi/WifiInfo;->mIpAddress:Ljava/net/InetAddress;
 
     if-eqz v2, :cond_0
 
-    .line 334
+    .line 331
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 335
+    .line 332
     iget-object v2, p0, Landroid/net/wifi/WifiInfo;->mIpAddress:Ljava/net/InetAddress;
 
     invoke-virtual {v2}, Ljava/net/InetAddress;->getAddress()[B
@@ -1132,7 +1110,7 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 339
+    .line 336
     :goto_0
     invoke-virtual {p0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
@@ -1140,17 +1118,17 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 340
+    .line 337
     iget-object v2, p0, Landroid/net/wifi/WifiInfo;->mBSSID:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 341
+    .line 338
     iget-object v2, p0, Landroid/net/wifi/WifiInfo;->mMacAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 342
+    .line 339
     iget-boolean v2, p0, Landroid/net/wifi/WifiInfo;->mExplicitConnect:Z
 
     if-eqz v2, :cond_1
@@ -1158,15 +1136,15 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 343
+    .line 340
     iget-object v0, p0, Landroid/net/wifi/WifiInfo;->mSupplicantState:Landroid/net/wifi/SupplicantState;
 
     invoke-virtual {v0, p1, p2}, Landroid/net/wifi/SupplicantState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 344
+    .line 341
     return-void
 
-    .line 337
+    .line 334
     :cond_0
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeByte(B)V
 
@@ -1175,6 +1153,6 @@
     :cond_1
     move v0, v1
 
-    .line 342
+    .line 339
     goto :goto_1
 .end method

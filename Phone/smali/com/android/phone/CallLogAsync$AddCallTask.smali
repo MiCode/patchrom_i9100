@@ -98,7 +98,7 @@
 
     .local v10, i:I
     :goto_0
-    if-ge v10, v9, :cond_8
+    if-ge v10, v9, :cond_4
 
     .line 188
     aget-object v8, p1, v10
@@ -219,7 +219,7 @@
 
     sget v1, Lcom/android/internal/telephony/Connection;->PRESENTATION_RESTRICTED:I
 
-    if-ne v0, v1, :cond_4
+    if-ne v0, v1, :cond_5
 
     .line 212
     const-string v11, "-2"
@@ -260,15 +260,85 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
+    .line 224
     :cond_3
+    const-string v0, "vold.decrypt"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "trigger_restart_min_framework"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const-string v0, "vold.decrypt"
+
+    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "1"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    .line 236
+    .end local v8           #c:Lcom/android/phone/CallLogAsync$AddCallArgs;
+    .end local v11           #logNumber:Ljava/lang/String;
+    :cond_4
+    return-object v12
+
+    .line 213
+    .restart local v8       #c:Lcom/android/phone/CallLogAsync$AddCallArgs;
+    .restart local v11       #logNumber:Ljava/lang/String;
+    :cond_5
+    iget v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->presentation:I
+
+    sget v1, Lcom/android/internal/telephony/Connection;->PRESENTATION_PAYPHONE:I
+
+    if-ne v0, v1, :cond_6
+
+    .line 214
+    const-string v11, "-3"
+
+    goto :goto_1
+
+    .line 215
+    :cond_6
+    invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    iget v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->presentation:I
+
+    sget v1, Lcom/android/internal/telephony/Connection;->PRESENTATION_UNKNOWN:I
+
+    if-ne v0, v1, :cond_2
+
+    .line 217
+    :cond_7
+    const-string v11, "-1"
+
+    goto :goto_1
+
+    .line 228
+    :cond_8
     iget-object v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->dbUri:Landroid/net/Uri;
 
-    # if no dbUri presented(our case), just do as following (i.e, not to cond_7).
-    if-nez v0, :cond_7
+    if-nez v0, :cond_9
     :goto_2
 
-    .line 224
+    .line 229
     iget-object v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->context:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -283,46 +353,11 @@
 
     aput-object v0, v12, v10
 
-    .line 187
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_0
 
-    .line 213
-    :cond_4
-    iget v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->presentation:I
-
-    sget v1, Lcom/android/internal/telephony/Connection;->PRESENTATION_PAYPHONE:I
-
-    if-ne v0, v1, :cond_5
-
-    .line 214
-    const-string v11, "-3"
-
-    goto :goto_1
-
-    .line 215
-    :cond_5
-    invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    iget v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->presentation:I
-
-    sget v1, Lcom/android/internal/telephony/Connection;->PRESENTATION_UNKNOWN:I
-
-    if-ne v0, v1, :cond_2
-
-    .line 217
-    :cond_6
-    const-string v11, "-1"
-
-    goto :goto_1
-
-    .line 226
-    :cond_7
+    :cond_9
     iget-object v0, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->ci:Lcom/android/internal/telephony/CallerInfo;
 
     iget-object v1, v8, Lcom/android/phone/CallLogAsync$AddCallArgs;->context:Landroid/content/Context;
@@ -344,12 +379,6 @@
     aput-object v0, v12, v10
 
     goto :goto_2
-
-    .line 230
-    .end local v8           #c:Lcom/android/phone/CallLogAsync$AddCallArgs;
-    .end local v11           #logNumber:Ljava/lang/String;
-    :cond_8
-    return-object v12
 .end method
 
 .method protected bridge synthetic onPostExecute(Ljava/lang/Object;)V
@@ -371,7 +400,7 @@
     .parameter "result"
 
     .prologue
-    .line 237
+    .line 243
     move-object v0, p1
 
     .local v0, arr$:[Landroid/net/Uri;
@@ -386,24 +415,24 @@
 
     aget-object v3, v0, v1
 
-    .line 238
+    .line 244
     .local v3, uri:Landroid/net/Uri;
     if-nez v3, :cond_0
 
-    .line 239
+    .line 245
     const-string v4, "CallLogAsync"
 
     const-string v5, "Failed to write call to the log."
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
+    .line 243
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 242
+    .line 248
     .end local v3           #uri:Landroid/net/Uri;
     :cond_1
     return-void

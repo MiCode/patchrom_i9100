@@ -169,22 +169,18 @@
 
     iput-object v1, p0, Lcom/sec/android/app/callsetting/allcalls/AnsweringCall;->mPowerkeyPreference:Landroid/preference/CheckBoxPreference;
 
-    .line 90
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/allcalls/AnsweringCall;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 91
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 93
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 95
     :cond_0
     return-void
 .end method

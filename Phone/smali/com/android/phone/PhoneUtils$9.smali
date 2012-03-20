@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 3672
+    .line 3697
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
     .parameter "mp"
 
     .prologue
-    .line 3674
+    .line 3699
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->isPlaying()Z
 
     move-result v2
@@ -44,22 +44,22 @@
 
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 3675
+    .line 3700
     :cond_0
     invoke-virtual {p1}, Landroid/media/MediaPlayer;->release()V
 
-    .line 3676
+    .line 3701
     const-string v2, "onCompletion : excuted "
 
     #calls: Lcom/android/phone/PhoneUtils;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/phone/PhoneUtils;->access$100(Ljava/lang/String;)V
 
-    .line 3677
+    .line 3702
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
 
-    .line 3679
+    .line 3704
     .local v0, app:Lcom/android/phone/PhoneApp;
     iget-object v2, v0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -73,7 +73,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 3680
+    .line 3705
     invoke-static {}, Lcom/android/phone/PhoneUtils;->access$000()Z
 
     move-result v2
@@ -85,7 +85,7 @@
     #calls: Lcom/android/phone/PhoneUtils;->log(Ljava/lang/String;)V
     invoke-static {v2}, Lcom/android/phone/PhoneUtils;->access$100(Ljava/lang/String;)V
 
-    .line 3681
+    .line 3706
     :cond_1
     const-string v2, "ims_vt_call"
 
@@ -95,19 +95,19 @@
 
     if-eqz v2, :cond_3
 
-    .line 3682
+    .line 3707
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v2
 
     invoke-static {v2}, Lcom/android/phone/PhoneUtils;->playRingConnectTone(Landroid/content/Context;)V
 
-    .line 3688
+    .line 3713
     :cond_2
     :goto_0
     return-void
 
-    .line 3684
+    .line 3709
     :cond_3
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
@@ -115,7 +115,7 @@
 
     iget-object v1, v2, Lcom/android/phone/PhoneApp;->notifier:Lcom/android/phone/CallNotifier;
 
-    .line 3685
+    .line 3710
     .local v1, notifier:Lcom/android/phone/CallNotifier;
     invoke-virtual {v1}, Lcom/android/phone/CallNotifier;->sendPlayRingBackTone()V
 

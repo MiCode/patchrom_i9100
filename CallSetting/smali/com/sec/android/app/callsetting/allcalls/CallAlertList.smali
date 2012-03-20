@@ -60,22 +60,18 @@
 
     iput-object v1, p0, Lcom/sec/android/app/callsetting/allcalls/CallAlertList;->mAlertsOnCallPreference:Landroid/preference/CheckBoxPreference;
 
-    .line 66
     invoke-virtual {p0}, Lcom/sec/android/app/callsetting/allcalls/CallAlertList;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 67
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_0
 
-    .line 69
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 71
     :cond_0
     return-void
 .end method

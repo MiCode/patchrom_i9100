@@ -556,7 +556,7 @@
     if-ge v0, v1, :cond_0
 
     .line 686
-    const/16 v0, 0x5a
+    const/16 v0, 0x3c
 
     .line 688
     :cond_0

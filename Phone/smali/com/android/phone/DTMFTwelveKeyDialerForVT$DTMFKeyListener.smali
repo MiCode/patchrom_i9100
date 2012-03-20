@@ -103,7 +103,7 @@
 .end method
 
 .method public onKeyDown(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 4
+    .locals 3
     .parameter "view"
     .parameter "content"
     .parameter "keyCode"
@@ -144,91 +144,29 @@
     .local v1, keyOK:Z
     if-eqz v1, :cond_0
 
-    .line 257
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "DTMFKeyListener reading \'"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "\' from input."
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    #calls: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$000(Ljava/lang/String;)V
-
     .line 258
     iget-object v2, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT$DTMFKeyListener;->this$0:Lcom/android/phone/DTMFTwelveKeyDialerForVT;
 
     #calls: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->processDtmf(C)V
-    invoke-static {v2, v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$100(Lcom/android/phone/DTMFTwelveKeyDialerForVT;C)V
+    invoke-static {v2, v0}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$000(Lcom/android/phone/DTMFTwelveKeyDialerForVT;C)V
 
     .line 262
-    :goto_0
+    :cond_0
     const/4 v2, 0x1
 
     .line 264
     .end local v1           #keyOK:Z
-    :goto_1
+    :goto_0
     return v2
 
-    .line 260
-    .restart local v1       #keyOK:Z
-    :cond_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "DTMFKeyListener rejecting \'"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "\' from input."
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    #calls: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$000(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 264
-    .end local v1           #keyOK:Z
     :cond_1
     const/4 v2, 0x0
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method public onKeyUp(Landroid/view/View;Landroid/text/Editable;ILandroid/view/KeyEvent;)Z
-    .locals 4
+    .locals 3
     .parameter "view"
     .parameter "content"
     .parameter "keyCode"
@@ -259,39 +197,11 @@
     .local v1, keyOK:Z
     if-eqz v1, :cond_0
 
-    .line 284
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Stopping the tone for \'"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "\'"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    #calls: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$000(Ljava/lang/String;)V
-
     .line 285
     iget-object v2, p0, Lcom/android/phone/DTMFTwelveKeyDialerForVT$DTMFKeyListener;->this$0:Lcom/android/phone/DTMFTwelveKeyDialerForVT;
 
     #calls: Lcom/android/phone/DTMFTwelveKeyDialerForVT;->stopTone()V
-    invoke-static {v2}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$200(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)V
+    invoke-static {v2}, Lcom/android/phone/DTMFTwelveKeyDialerForVT;->access$100(Lcom/android/phone/DTMFTwelveKeyDialerForVT;)V
 
     .line 286
     const/4 v2, 0x1

@@ -116,7 +116,7 @@
 
     .line 112
     .local v2, inflater:Landroid/view/LayoutInflater;
-    const v4, 0x10900d8
+    const v4, 0x10900db
 
     invoke-virtual {v2, v4, p0, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -539,7 +539,7 @@
     .local v2, inflater2:Landroid/view/LayoutInflater;
     iget-object v8, p0, Lcom/android/internal/policy/impl/PcwUnlockScreen;->mContext:Landroid/content/Context;
 
-    const v9, 0x10900d7
+    const v9, 0x10900da
 
     invoke-static {v8, v9, v11}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 

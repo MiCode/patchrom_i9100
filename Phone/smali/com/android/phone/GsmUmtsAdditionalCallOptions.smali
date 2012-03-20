@@ -41,16 +41,16 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
+    const/4 v1, 0x0
+
     .line 37
     invoke-direct {p0}, Lcom/android/phone/TimeConsumingPreferenceActivity;-><init>()V
 
     .line 42
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->DBG:Z
+    iput-boolean v1, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->DBG:Z
 
     .line 55
     new-instance v0, Ljava/util/ArrayList;
@@ -60,9 +60,7 @@
     iput-object v0, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mPreferences:Ljava/util/ArrayList;
 
     .line 56
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mInitIndex:I
+    iput v1, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mInitIndex:I
 
     return-void
 .end method
@@ -197,40 +195,32 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 87
     :cond_0
     iget-object v2, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mFDNButton:Landroid/preference/PreferenceScreen;
 
     if-eqz v2, :cond_1
 
-    .line 88
     iget-object v2, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mFDNButton:Landroid/preference/PreferenceScreen;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
-    .line 109
     :cond_1
     iput-boolean v4, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mFirstResume:Z
 
-    .line 110
     iput-object p1, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mIcicle:Landroid/os/Bundle;
 
-    .line 112
     invoke-virtual {p0}, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 113
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_2
 
-    .line 115
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v4}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
-    .line 117
     :cond_2
     return-void
 .end method
@@ -371,13 +361,6 @@
 
     if-nez v3, :cond_1
 
-    .line 149
-    const-string v3, "GsmUmtsAdditionalCallOptions"
-
-    const-string v4, "start to init "
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 150
     iget-object v3, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mCLIRButton:Lcom/android/phone/CLIRListPreference;
 
@@ -397,13 +380,6 @@
     iget-object v3, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v3, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
-    .line 170
-    const-string v3, "GsmUmtsAdditionalCallOptions"
-
-    const-string v4, "Check the status of Auto-redial btton onResume"
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 171
     iget-object v3, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mAutoRedial:Landroid/preference/CheckBoxPreference;
@@ -426,15 +402,8 @@
     .line 172
     return-void
 
-    .line 152
-    :cond_1
-    const-string v3, "GsmUmtsAdditionalCallOptions"
-
-    const-string v4, "restore stored states"
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 153
+    :cond_1
     iget-object v3, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mPreferences:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -469,43 +438,6 @@
     .line 157
     .local v0, clirArray:[I
     if-eqz v0, :cond_2
-
-    .line 158
-    const-string v3, "GsmUmtsAdditionalCallOptions"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "onCreate:  clirArray[0]="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    aget v5, v0, v2
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ", clirArray[1]="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    aget v5, v0, v1
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 160
     iget-object v3, p0, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->mCLIRButton:Lcom/android/phone/CLIRListPreference;
@@ -564,83 +496,44 @@
 .end method
 
 .method public onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
-    .locals 6
+    .locals 3
     .parameter "sharedPreferences"
     .parameter "key"
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     .line 185
-    const-string v2, "button_autoredial_key"
+    const-string v1, "button_autoredial_key"
 
-    invoke-virtual {p2, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_1
 
     .line 186
-    invoke-interface {p1, p2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {p1, p2, v0}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_0
 
     const/4 v0, 0x1
 
     .line 187
     .local v0, auto_redial:I
-    :goto_0
+    :cond_0
     invoke-virtual {p0}, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v2
-
-    const-string v3, "autoredial_mode"
-
-    invoke-static {v2, v3, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    .line 188
-    const-string v2, "GsmUmtsAdditionalCallOptions"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "AUTOREDIAL_MODE after putInt to the system = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Lcom/android/phone/GsmUmtsAdditionalCallOptions;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v4
-
-    const-string v5, "autoredial_mode"
-
-    invoke-static {v4, v5, v1}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, "autoredial_mode"
 
-    move-result-object v1
-
-    invoke-static {v2, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
     .line 191
     .end local v0           #auto_redial:I
-    :cond_0
-    return-void
-
     :cond_1
-    move v0, v1
-
-    .line 186
-    goto :goto_0
+    return-void
 .end method

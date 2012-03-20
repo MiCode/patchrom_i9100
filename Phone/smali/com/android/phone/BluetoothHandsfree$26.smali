@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3216
+    .line 3241
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-direct {p0}, Landroid/bluetooth/AtCommandHandler;-><init>()V
@@ -43,7 +43,7 @@
 
     const/4 v3, 0x1
 
-    .line 3219
+    .line 3244
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mContext:Landroid/content/Context;
@@ -57,16 +57,16 @@
 
     if-nez v1, :cond_0
 
-    .line 3220
+    .line 3245
     new-instance v1, Landroid/bluetooth/AtCommandResult;
 
     invoke-direct {v1, v3}, Landroid/bluetooth/AtCommandResult;-><init>(I)V
 
-    .line 3242
+    .line 3267
     :goto_0
     return-object v1
 
-    .line 3222
+    .line 3247
     :cond_0
     array-length v1, p1
 
@@ -84,12 +84,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 3223
+    .line 3248
     iget-object v2, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     monitor-enter v2
 
-    .line 3224
+    .line 3249
     :try_start_0
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -120,7 +120,7 @@
 
     if-nez v1, :cond_1
 
-    .line 3228
+    .line 3253
     :try_start_1
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -138,20 +138,20 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 3232
+    .line 3257
     :try_start_2
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #calls: Lcom/android/phone/BluetoothHandsfree;->expectVoiceRecognition()V
     invoke-static {v1}, Lcom/android/phone/BluetoothHandsfree;->access$7600(Lcom/android/phone/BluetoothHandsfree;)V
 
-    .line 3234
+    .line 3259
     :cond_1
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3235
+    .line 3260
     new-instance v1, Landroid/bluetooth/AtCommandResult;
 
     const/4 v2, 0x2
@@ -160,11 +160,11 @@
 
     goto :goto_0
 
-    .line 3229
+    .line 3254
     :catch_0
     move-exception v0
 
-    .line 3230
+    .line 3255
     .local v0, e:Landroid/content/ActivityNotFoundException;
     :try_start_3
     new-instance v1, Landroid/bluetooth/AtCommandResult;
@@ -177,7 +177,7 @@
 
     goto :goto_0
 
-    .line 3234
+    .line 3259
     .end local v0           #e:Landroid/content/ActivityNotFoundException;
     :catchall_0
     move-exception v1
@@ -188,7 +188,7 @@
 
     throw v1
 
-    .line 3236
+    .line 3261
     :cond_2
     array-length v1, p1
 
@@ -206,7 +206,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 3237
+    .line 3262
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #calls: Lcom/android/phone/BluetoothHandsfree;->isVoiceRecognitionInProgress()Z
@@ -216,12 +216,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 3238
+    .line 3263
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$26;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-virtual {v1}, Lcom/android/phone/BluetoothHandsfree;->audioOff()V
 
-    .line 3240
+    .line 3265
     :cond_3
     new-instance v1, Landroid/bluetooth/AtCommandResult;
 
@@ -229,7 +229,7 @@
 
     goto :goto_0
 
-    .line 3242
+    .line 3267
     :cond_4
     new-instance v1, Landroid/bluetooth/AtCommandResult;
 
@@ -242,7 +242,7 @@
     .locals 2
 
     .prologue
-    .line 3246
+    .line 3271
     new-instance v0, Landroid/bluetooth/AtCommandResult;
 
     const-string v1, "+BVRA: (0-1)"

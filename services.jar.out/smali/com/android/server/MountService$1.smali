@@ -60,12 +60,19 @@
     if-eqz v3, :cond_3
 
     .line 555
+    const-string v3, "MountService"
+
+    const-string v4, "received ACTION_BOOT_COMPLETED"
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 556
     iget-object v3, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     #setter for: Lcom/android/server/MountService;->mBooted:Z
     invoke-static {v3, v1}, Lcom/android/server/MountService;->access$602(Lcom/android/server/MountService;Z)Z
 
-    .line 561
+    .line 562
     const-string v3, "simulator"
 
     const-string v4, "ro.product.device"
@@ -80,7 +87,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 562
+    .line 563
     iget-object v3, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     const/4 v4, 0x0
@@ -92,12 +99,12 @@
     #calls: Lcom/android/server/MountService;->notifyVolumeStateChange(Ljava/lang/String;Ljava/lang/String;II)V
     invoke-static {v3, v4, v5, v2, v6}, Lcom/android/server/MountService;->access$700(Lcom/android/server/MountService;Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 641
+    .line 642
     :cond_0
     :goto_0
     return-void
 
-    .line 568
+    .line 569
     :cond_1
     invoke-static {}, Landroid/dirEncryption/DirEncryptionManager;->isEncryptionFeatureEnabled()Z
 
@@ -105,7 +112,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 569
+    .line 570
     iget-object v2, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     new-instance v3, Landroid/dirEncryption/DirEncryptionManager;
@@ -121,7 +128,7 @@
 
     iput-object v3, v2, Lcom/android/server/MountService;->mDem:Landroid/dirEncryption/DirEncryptionManager;
 
-    .line 570
+    .line 571
     iget-object v2, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     new-instance v3, Lcom/android/server/MountService$DirEncryptListner;
@@ -133,7 +140,7 @@
     #setter for: Lcom/android/server/MountService;->mDirEncryptListner:Lcom/android/server/MountService$DirEncryptListner;
     invoke-static {v2, v3}, Lcom/android/server/MountService;->access$902(Lcom/android/server/MountService;Lcom/android/server/MountService$DirEncryptListner;)Lcom/android/server/MountService$DirEncryptListner;
 
-    .line 571
+    .line 572
     iget-object v2, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     iget-object v2, v2, Lcom/android/server/MountService;->mDem:Landroid/dirEncryption/DirEncryptionManager;
@@ -147,7 +154,7 @@
 
     invoke-virtual {v2, v3}, Landroid/dirEncryption/DirEncryptionManager;->registerListener(Landroid/os/storage/IDirEncryptServiceListener;)V
 
-    .line 574
+    .line 575
     :cond_2
     new-instance v2, Lcom/android/server/MountService$1$1;
 
@@ -157,7 +164,7 @@
 
     goto :goto_0
 
-    .line 636
+    .line 637
     :cond_3
     const-string v3, "android.hardware.usb.action.USB_STATE"
 
@@ -167,7 +174,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 637
+    .line 638
     const-string v3, "connected"
 
     invoke-virtual {p2, v3, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -184,7 +191,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 639
+    .line 640
     .local v1, available:Z
     :goto_1
     iget-object v2, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
@@ -198,6 +205,6 @@
     :cond_4
     move v1, v2
 
-    .line 637
+    .line 638
     goto :goto_1
 .end method

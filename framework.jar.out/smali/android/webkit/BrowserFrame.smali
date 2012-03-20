@@ -1152,7 +1152,7 @@
     .line 1119
     .end local v2           #resid:I
     :pswitch_2
-    const v2, 0x10800df
+    const v2, 0x10800de
 
     .line 1120
     .restart local v2       #resid:I

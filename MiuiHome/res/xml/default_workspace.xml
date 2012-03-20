@@ -40,8 +40,8 @@
 
 <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="1" launcher:x="2" launcher:y="2" />
 <favorite launcher:className="com.android.thememanager.ThemeResourceTabActivity" launcher:packageName="com.android.thememanager" launcher:screen="1" launcher:x="3" launcher:y="2" />
+<favorite launcher:className="com.android.settings.MiuiSettings" launcher:packageName="com.android.settings" launcher:screen="1" launcher:x="0" launcher:y="3" />
 
-<favorite launcher:className="com.android.settings.Settings" launcher:packageName="com.android.settings" launcher:screen="1" launcher:x="0" launcher:y="3" />
 <favorite launcher:className="com.android.fileexplorer.FileExplorerTabActivity" launcher:packageName="com.android.fileexplorer" launcher:screen="1" launcher:x="1" launcher:y="3" />
 <favorite launcher:className="com.miui.supermarket.MainTabActivity" launcher:packageName="com.miui.supermarket" launcher:screen="1" launcher:x="3" launcher:y="3" />
 <!-- 第3屏 -->

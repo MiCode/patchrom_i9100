@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2667
+    .line 2688
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-direct {p0}, Landroid/bluetooth/AtCommandHandler;-><init>()V
@@ -38,7 +38,7 @@
     .locals 3
 
     .prologue
-    .line 2670
+    .line 2691
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     const-string v2, "OK"
@@ -46,7 +46,7 @@
     #calls: Lcom/android/phone/BluetoothHandsfree;->sendURC(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/phone/BluetoothHandsfree;->access$1500(Lcom/android/phone/BluetoothHandsfree;Ljava/lang/String;)V
 
-    .line 2671
+    .line 2692
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #calls: Lcom/android/phone/BluetoothHandsfree;->isVirtualCallInProgress()Z
@@ -56,12 +56,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 2672
+    .line 2693
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     invoke-virtual {v1}, Lcom/android/phone/BluetoothHandsfree;->terminateScoUsingVirtualVoiceCall()Z
 
-    .line 2694
+    .line 2715
     :cond_0
     :goto_0
     new-instance v1, Landroid/bluetooth/AtCommandResult;
@@ -72,7 +72,7 @@
 
     return-object v1
 
-    .line 2674
+    .line 2695
     :cond_1
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -87,7 +87,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 2675
+    .line 2696
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -103,7 +103,7 @@
 
     goto :goto_0
 
-    .line 2676
+    .line 2697
     :cond_2
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -118,7 +118,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 2677
+    .line 2698
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -134,7 +134,7 @@
 
     goto :goto_0
 
-    .line 2678
+    .line 2699
     :cond_3
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -149,7 +149,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 2679
+    .line 2700
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$5;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     #getter for: Lcom/android/phone/BluetoothHandsfree;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -165,7 +165,7 @@
 
     goto :goto_0
 
-    .line 2683
+    .line 2704
     :cond_4
     :try_start_0
     const-string v1, "voip"
@@ -178,25 +178,25 @@
 
     move-result-object v0
 
-    .line 2684
+    .line 2705
     .local v0, voipInf:Landroid/os/IVoIPInterface;
     if-eqz v0, :cond_0
 
-    .line 2685
+    .line 2706
     invoke-interface {v0}, Landroid/os/IVoIPInterface;->isVoIPIdle()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 2686
+    .line 2707
     invoke-interface {v0}, Landroid/os/IVoIPInterface;->hangupVoIPCall()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 2689
+    .line 2710
     .end local v0           #voipInf:Landroid/os/IVoIPInterface;
     :catch_0
     move-exception v1

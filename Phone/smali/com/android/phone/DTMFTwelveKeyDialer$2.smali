@@ -62,7 +62,7 @@
     move-result-object v0
 
     #calls: Lcom/android/phone/DTMFTwelveKeyDialer;->log(Ljava/lang/String;)V
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialer;->access$000(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialer;->access$300(Ljava/lang/String;)V
 
     .line 716
     return-void
@@ -102,7 +102,7 @@
     move-result-object v0
 
     #calls: Lcom/android/phone/DTMFTwelveKeyDialer;->log(Ljava/lang/String;)V
-    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialer;->access$000(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/android/phone/DTMFTwelveKeyDialer;->access$300(Ljava/lang/String;)V
 
     .line 706
     iget-object v0, p0, Lcom/android/phone/DTMFTwelveKeyDialer$2;->this$0:Lcom/android/phone/DTMFTwelveKeyDialer;

@@ -30,7 +30,7 @@
 
 .field public static final CscFeatureTagWeb_Bool_OverrideUserAgent:Z = false
 
-.field public static final CscFeatureTagWeb_Bool_RemoveVideoDownload:Z = false
+.field public static final CscFeatureTagWeb_Bool_RemoveVideoDownload:Z = true
 
 .field public static final CscFeatureTagWeb_Bool_SkipSettingDefaultBookmarkImage:Z = false
 

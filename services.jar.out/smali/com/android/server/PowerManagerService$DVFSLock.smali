@@ -47,25 +47,25 @@
     .parameter "p"
 
     .prologue
-    .line 3666
+    .line 3669
     iput-object p1, p0, Lcom/android/server/PowerManagerService$DVFSLock;->this$0:Lcom/android/server/PowerManagerService;
 
-    .line 3667
+    .line 3670
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3668
+    .line 3671
     iput p2, p0, Lcom/android/server/PowerManagerService$DVFSLock;->type:I
 
-    .line 3669
+    .line 3672
     iput p3, p0, Lcom/android/server/PowerManagerService$DVFSLock;->frequency:I
 
-    .line 3670
+    .line 3673
     iput-object p4, p0, Lcom/android/server/PowerManagerService$DVFSLock;->binder:Landroid/os/IBinder;
 
-    .line 3671
+    .line 3674
     iput-object p5, p0, Lcom/android/server/PowerManagerService$DVFSLock;->tag:Ljava/lang/String;
 
-    .line 3672
+    .line 3675
     #getter for: Lcom/android/server/PowerManagerService;->MY_UID:I
     invoke-static {p1}, Lcom/android/server/PowerManagerService;->access$300(Lcom/android/server/PowerManagerService;)I
 
@@ -79,10 +79,10 @@
     :cond_0
     iput p6, p0, Lcom/android/server/PowerManagerService$DVFSLock;->uid:I
 
-    .line 3673
+    .line 3676
     iput p7, p0, Lcom/android/server/PowerManagerService$DVFSLock;->pid:I
 
-    .line 3676
+    .line 3679
     const/4 v1, 0x0
 
     :try_start_0
@@ -90,15 +90,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3680
+    .line 3683
     :goto_0
     return-void
 
-    .line 3677
+    .line 3680
     :catch_0
     move-exception v0
 
-    .line 3678
+    .line 3681
     .local v0, e:Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/PowerManagerService$DVFSLock;->binderDied()V
 
@@ -111,7 +111,7 @@
     .locals 4
 
     .prologue
-    .line 3682
+    .line 3685
     iget-object v0, p0, Lcom/android/server/PowerManagerService$DVFSLock;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mDVFSLocks:Lcom/android/server/PowerManagerService$DVFSLockList;
@@ -121,7 +121,7 @@
 
     monitor-enter v1
 
-    .line 3683
+    .line 3686
     :try_start_0
     const-string v0, "PowerManagerService"
 
@@ -147,7 +147,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3684
+    .line 3687
     iget-object v0, p0, Lcom/android/server/PowerManagerService$DVFSLock;->this$0:Lcom/android/server/PowerManagerService;
 
     iget-object v2, p0, Lcom/android/server/PowerManagerService$DVFSLock;->binder:Landroid/os/IBinder;
@@ -155,13 +155,13 @@
     #calls: Lcom/android/server/PowerManagerService;->releaseDVFSLockLocked(Landroid/os/IBinder;)V
     invoke-static {v0, v2}, Lcom/android/server/PowerManagerService;->access$7500(Lcom/android/server/PowerManagerService;Landroid/os/IBinder;)V
 
-    .line 3685
+    .line 3688
     monitor-exit v1
 
-    .line 3686
+    .line 3689
     return-void
 
-    .line 3685
+    .line 3688
     :catchall_0
     move-exception v0
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1878
+    .line 1911
     iput-object p1, p0, Landroid/view/ViewRootImpl$1$1;->this$1:Landroid/view/ViewRootImpl$1;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1881
+    .line 1914
     iget-object v0, p0, Landroid/view/ViewRootImpl$1$1;->this$1:Landroid/view/ViewRootImpl$1;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
@@ -64,13 +64,13 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1882
+    .line 1915
     iget-object v0, p0, Landroid/view/ViewRootImpl$1$1;->this$1:Landroid/view/ViewRootImpl$1;
 
     iget-object v0, v0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-virtual {v0}, Landroid/view/ViewRootImpl;->scheduleTraversals()V
 
-    .line 1883
+    .line 1916
     return-void
 .end method

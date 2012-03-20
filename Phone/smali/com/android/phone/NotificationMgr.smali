@@ -65,75 +65,58 @@
     .prologue
     const/4 v5, 0x2
 
-    const/4 v1, 0x1
+    const/4 v4, 0x1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 77
-    const-string v0, "ro.debuggable"
-
-    invoke-static {v0, v2}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    sput-boolean v0, Lcom/android/phone/NotificationMgr;->DBG:Z
+    sput-boolean v3, Lcom/android/phone/NotificationMgr;->DBG:Z
 
     .line 80
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const-string v3, "_id"
+    const-string v1, "_id"
 
-    aput-object v3, v0, v2
+    aput-object v1, v0, v3
 
-    const-string v3, "number"
+    const-string v1, "number"
 
-    aput-object v3, v0, v1
+    aput-object v1, v0, v4
 
-    const-string v3, "date"
+    const-string v1, "date"
 
-    aput-object v3, v0, v5
+    aput-object v1, v0, v5
 
-    const/4 v3, 0x3
+    const/4 v1, 0x3
 
-    const-string v4, "duration"
+    const-string v2, "duration"
 
-    aput-object v4, v0, v3
+    aput-object v2, v0, v1
 
-    const/4 v3, 0x4
+    const/4 v1, 0x4
 
-    const-string v4, "type"
+    const-string v2, "type"
 
-    aput-object v4, v0, v3
+    aput-object v2, v0, v1
 
     sput-object v0, Lcom/android/phone/NotificationMgr;->CALL_LOG_PROJECTION:[Ljava/lang/String;
 
     .line 341
     new-array v0, v5, [Ljava/lang/String;
 
-    const-string v3, "number"
+    const-string v1, "number"
 
-    aput-object v3, v0, v2
+    aput-object v1, v0, v3
 
-    const-string v2, "display_name"
+    const-string v1, "display_name"
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v4
 
     sput-object v0, Lcom/android/phone/NotificationMgr;->PHONES_PROJECTION:[Ljava/lang/String;
 
     return-void
-
-    :cond_0
-    move v0, v2
-
-    .line 77
-    goto :goto_0
 .end method
 
 .method private constructor <init>(Lcom/android/phone/PhoneApp;)V
@@ -354,7 +337,7 @@
     .locals 2
 
     .prologue
-    .line 1412
+    .line 1418
     sget-boolean v0, Lcom/android/phone/NotificationMgr;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -363,7 +346,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1413
+    .line 1419
     :cond_0
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
 
@@ -371,7 +354,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 1414
+    .line 1420
     return-void
 .end method
 
@@ -511,8 +494,8 @@
 
     const/4 v2, 0x0
 
-    .line 1220
-    .line 1223
+    .line 1226
+    .line 1229
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -543,7 +526,7 @@
 
     move v0, v1
 
-    .line 1226
+    .line 1232
     :goto_0
     sget-boolean v3, Lcom/android/phone/NotificationMgr;->DBG:Z
 
@@ -569,11 +552,11 @@
 
     invoke-direct {p0, v3}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1230
+    .line 1236
     :cond_0
     if-eqz v0, :cond_3
 
-    .line 1247
+    .line 1253
     :cond_1
     :goto_1
     return v1
@@ -581,10 +564,10 @@
     :cond_2
     move v0, v2
 
-    .line 1223
+    .line 1229
     goto :goto_0
 
-    .line 1234
+    .line 1240
     :cond_3
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -596,7 +579,7 @@
 
     if-ne v0, v3, :cond_5
 
-    .line 1235
+    .line 1241
     sget-boolean v0, Lcom/android/phone/NotificationMgr;->DBG:Z
 
     if-eqz v0, :cond_4
@@ -627,11 +610,11 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1236
+    .line 1242
     :cond_4
     const-string v0, "alertoncall_mode"
 
-    .line 1238
+    .line 1244
     iget-object v3, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -642,20 +625,20 @@
 
     move-result v0
 
-    .line 1239
+    .line 1245
     const/4 v3, 0x2
 
     if-eq v0, v3, :cond_1
 
     move v1, v2
 
-    .line 1242
+    .line 1248
     goto :goto_1
 
     :cond_5
     move v1, v2
 
-    .line 1245
+    .line 1251
     goto :goto_1
 .end method
 
@@ -664,12 +647,12 @@
     .parameter "msg"
 
     .prologue
-    .line 1463
+    .line 1469
     const-string v0, "NotificationMgr"
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1464
+    .line 1470
     return-void
 .end method
 
@@ -756,7 +739,7 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1381
+    .line 1387
     sget-boolean v0, Lcom/android/phone/NotificationMgr;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -787,7 +770,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1383
+    .line 1389
     :cond_0
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
@@ -797,7 +780,7 @@
 
     move-result-object v0
 
-    .line 1385
+    .line 1391
     iget-object v1, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0e01a3
@@ -812,44 +795,44 @@
 
     move-result-object v1
 
-    .line 1388
+    .line 1394
     new-instance v2, Landroid/app/Notification;
 
     invoke-direct {v2}, Landroid/app/Notification;-><init>()V
 
-    .line 1389
+    .line 1395
     const v3, 0x108008a
 
     iput v3, v2, Landroid/app/Notification;->icon:I
 
-    .line 1390
+    .line 1396
     const-wide/16 v3, 0x0
 
     iput-wide v3, v2, Landroid/app/Notification;->when:J
 
-    .line 1391
+    .line 1397
     const/4 v3, 0x2
 
     iput v3, v2, Landroid/app/Notification;->flags:I
 
-    .line 1392
+    .line 1398
     const/4 v3, 0x0
 
     iput-object v3, v2, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
 
-    .line 1395
+    .line 1401
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.MAIN"
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1396
+    .line 1402
     const/high16 v4, 0x1020
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1399
+    .line 1405
     new-instance v4, Landroid/content/ComponentName;
 
     const-string v5, "com.android.phone"
@@ -860,26 +843,26 @@
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1401
+    .line 1407
     iget-object v4, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     invoke-static {v4, v7, v3, v7}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v3
 
-    .line 1403
+    .line 1409
     iget-object v4, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v4, v0, v1, v3}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 1405
+    .line 1411
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 1406
+    .line 1412
     return-void
 .end method
 
@@ -2022,7 +2005,7 @@
     .locals 2
 
     .prologue
-    .line 1372
+    .line 1378
     sget-boolean v0, Lcom/android/phone/NotificationMgr;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2031,7 +2014,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1373
+    .line 1379
     :cond_0
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
 
@@ -2039,7 +2022,7 @@
 
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 1374
+    .line 1380
     return-void
 .end method
 
@@ -2437,17 +2420,17 @@
     .parameter "msg"
 
     .prologue
-    .line 1454
+    .line 1460
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mToast:Landroid/widget/Toast;
 
     if-eqz v0, :cond_0
 
-    .line 1455
+    .line 1461
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mToast:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
 
-    .line 1458
+    .line 1464
     :cond_0
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
@@ -2459,12 +2442,12 @@
 
     iput-object v0, p0, Lcom/android/phone/NotificationMgr;->mToast:Landroid/widget/Toast;
 
-    .line 1459
+    .line 1465
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mToast:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1460
+    .line 1466
     return-void
 .end method
 
@@ -2474,7 +2457,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1339
+    .line 1345
     sget-boolean v0, Lcom/android/phone/NotificationMgr;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2483,13 +2466,13 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1342
+    .line 1348
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 1343
+    .line 1349
     const-string v1, "roaming_auto_dial_for_lgt"
 
     invoke-static {v1}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -2498,14 +2481,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 1344
+    .line 1350
     const-string v1, "com.android.phone"
 
     const-string v2, "com.android.phone.GlobalAutoRoaming"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1353
+    .line 1359
     :goto_0
     new-instance v1, Landroid/app/Notification;
 
@@ -2519,7 +2502,7 @@
 
     invoke-direct {v1, v2, v3, v4, v5}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
-    .line 1357
+    .line 1363
     iget-object v2, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
@@ -2546,17 +2529,17 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 1363
+    .line 1369
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
 
     const/4 v2, 0x7
 
     invoke-virtual {v0, v2, v1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 1366
+    .line 1372
     return-void
 
-    .line 1346
+    .line 1352
     :cond_1
     const-string v1, "com.android.phone"
 
@@ -2578,7 +2561,7 @@
 
     const/4 v6, 0x0
 
-    .line 1255
+    .line 1261
     sget-boolean v0, Lcom/android/phone/NotificationMgr;->DBG:Z
 
     if-eqz v0, :cond_0
@@ -2603,7 +2586,7 @@
 
     invoke-direct {p0, v0}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1257
+    .line 1263
     :cond_0
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -2611,7 +2594,7 @@
 
     move-result v1
 
-    .line 1263
+    .line 1269
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -2620,17 +2603,17 @@
 
     aput-object v2, v0, v6
 
-    .line 1264
+    .line 1270
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v2
 
-    .line 1265
+    .line 1271
     iget-object v3, p0, Lcom/android/phone/NotificationMgr;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v3, v0, v2}, Lcom/android/internal/telephony/Phone;->invokeOemRilRequestStrings([Ljava/lang/String;Landroid/os/Message;)V
 
-    .line 1266
+    .line 1272
     iget-object v0, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Boolean;
@@ -2639,12 +2622,12 @@
 
     move-result v0
 
-    .line 1269
+    .line 1275
     if-nez v1, :cond_1
 
     if-eqz v0, :cond_4
 
-    .line 1284
+    .line 1290
     :cond_1
     new-instance v2, Landroid/content/Intent;
 
@@ -2652,36 +2635,36 @@
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1285
+    .line 1291
     const/high16 v3, 0x1000
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1286
+    .line 1292
     const-string v3, "com.android.phone"
 
     const-string v4, "com.android.phone.CallTypeSelect"
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1288
+    .line 1294
     const-string v3, "SS_Type"
 
     const-string v4, "forwarding"
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1292
+    .line 1298
     if-eqz v1, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 1294
+    .line 1300
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 1305
+    .line 1311
     :goto_0
     new-instance v0, Landroid/app/Notification;
 
@@ -2693,7 +2676,7 @@
 
     invoke-direct {v0, v1, v3, v4, v5}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
-    .line 1310
+    .line 1316
     iget-object v1, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
@@ -2718,27 +2701,27 @@
 
     invoke-virtual {v0, v1, v3, v4, v2}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 1323
+    .line 1329
     iget v1, v0, Landroid/app/Notification;->flags:I
 
     or-int/lit8 v1, v1, 0x2
 
     iput v1, v0, Landroid/app/Notification;->flags:I
 
-    .line 1325
+    .line 1331
     iget-object v1, p0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
 
     invoke-virtual {v1, v7, v0}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 1331
+    .line 1337
     :goto_1
     return-void
 
-    .line 1296
+    .line 1302
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 1298
+    .line 1304
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     const v1, 0x7f0e02c5
@@ -2747,7 +2730,7 @@
 
     goto :goto_0
 
-    .line 1302
+    .line 1308
     :cond_3
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
@@ -2757,7 +2740,7 @@
 
     goto :goto_0
 
-    .line 1329
+    .line 1335
     :cond_4
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
 
@@ -2889,7 +2872,7 @@
 
     .line 1049
     :cond_0
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_f
 
     .line 1050
     const v13, 0x108007e
@@ -3041,7 +3024,7 @@
 
     invoke-virtual/range {v18 .. v20}, Lcom/android/phone/CallNotifier;->sendMwiChangedDelayed(J)V
 
-    .line 1217
+    .line 1223
     .end local v8           #notificationTitle:Ljava/lang/String;
     .end local v13           #resId:I
     .end local v16           #vmNumber:Ljava/lang/String;
@@ -3145,7 +3128,7 @@
 
     move-result-object v7
 
-    .line 1141
+    .line 1147
     .local v7, notificationText:Ljava/lang/String;
     :goto_1
     new-instance v5, Landroid/content/Intent;
@@ -3168,7 +3151,7 @@
 
     invoke-direct {v5, v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1143
+    .line 1149
     .local v5, intent:Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -3190,7 +3173,7 @@
 
     move-result-object v9
 
-    .line 1145
+    .line 1151
     .local v9, pendingIntent:Landroid/app/PendingIntent;
     new-instance v6, Landroid/app/Notification;
 
@@ -3206,7 +3189,7 @@
 
     invoke-direct {v6, v13, v0, v1, v2}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
-    .line 1152
+    .line 1158
     .local v6, notification:Landroid/app/Notification;
     move-object/from16 v0, p0
 
@@ -3218,14 +3201,14 @@
 
     invoke-virtual {v6, v0, v8, v7, v9}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 1160
+    .line 1166
     invoke-direct/range {p0 .. p0}, Lcom/android/phone/NotificationMgr;->isTTSenabled()Z
 
     move-result v18
 
-    if-eqz v18, :cond_9
+    if-eqz v18, :cond_a
 
-    .line 1161
+    .line 1167
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
@@ -3236,7 +3219,7 @@
 
     invoke-static/range {v18 .. v19}, Lcom/android/phone/CallTextToSpeech;->getInstance(Landroid/content/Context;I)Lcom/android/phone/CallTextToSpeech;
 
-    .line 1172
+    .line 1178
     :goto_2
     iget v0, v6, Landroid/app/Notification;->flags:I
 
@@ -3248,7 +3231,7 @@
 
     iput v0, v6, Landroid/app/Notification;->flags:I
 
-    .line 1184
+    .line 1190
     :try_start_0
     const-string v18, "phone"
 
@@ -3260,9 +3243,9 @@
 
     move-result-object v10
 
-    .line 1186
+    .line 1192
     .local v10, phone:Lcom/android/internal/telephony/ITelephony;
-    if-eqz v10, :cond_d
+    if-eqz v10, :cond_e
 
     invoke-interface {v10}, Lcom/android/internal/telephony/ITelephony;->getCallState()I
 
@@ -3288,15 +3271,15 @@
 
     move/from16 v1, v19
 
-    if-ne v0, v1, :cond_d
+    if-ne v0, v1, :cond_e
 
-    .line 1212
+    .line 1218
     .end local v10           #phone:Lcom/android/internal/telephony/ITelephony;
     :cond_7
     :goto_3
     invoke-static {v6}, Lcom/android/phone/NotificationMgr;->configureLedNotification(Landroid/app/Notification;)V
 
-    .line 1213
+    .line 1219
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
@@ -3319,6 +3302,49 @@
     .end local v7           #notificationText:Ljava/lang/String;
     .end local v9           #pendingIntent:Landroid/app/PendingIntent;
     :cond_8
+    const-string v18, "disable_format_number"
+
+    invoke-static/range {v18 .. v18}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
+
+    move-result v18
+
+    if-eqz v18, :cond_9
+
+    .line 1137
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
+
+    move-object/from16 v18, v0
+
+    const v19, 0x7f0e01a0
+
+    invoke-virtual/range {v18 .. v19}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v18
+
+    const/16 v19, 0x1
+
+    move/from16 v0, v19
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    move-object/from16 v19, v0
+
+    const/16 v20, 0x0
+
+    aput-object v16, v19, v20
+
+    invoke-static/range {v18 .. v19}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .restart local v7       #notificationText:Ljava/lang/String;
+    goto/16 :goto_1
+
+    .line 1141
+    .end local v7           #notificationText:Ljava/lang/String;
+    :cond_9
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
@@ -3354,11 +3380,11 @@
     .restart local v7       #notificationText:Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1164
+    .line 1170
     .restart local v5       #intent:Landroid/content/Intent;
     .restart local v6       #notification:Landroid/app/Notification;
     .restart local v9       #pendingIntent:Landroid/app/PendingIntent;
-    :cond_9
+    :cond_a
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
@@ -3373,7 +3399,7 @@
 
     check-cast v3, Landroid/media/AudioManager;
 
-    .line 1165
+    .line 1171
     .local v3, audioManager:Landroid/media/AudioManager;
     invoke-virtual {v3}, Landroid/media/AudioManager;->getRingerMode()I
 
@@ -3385,16 +3411,16 @@
 
     move/from16 v1, v19
 
-    if-eq v0, v1, :cond_b
+    if-eq v0, v1, :cond_c
 
     const/4 v4, 0x1
 
-    .line 1166
+    .line 1172
     .local v4, bNowSilent:Z
     :goto_4
     sget-boolean v18, Lcom/android/phone/NotificationMgr;->DBG:Z
 
-    if-eqz v18, :cond_a
+    if-eqz v18, :cond_b
 
     new-instance v18, Ljava/lang/StringBuilder;
 
@@ -3422,11 +3448,11 @@
 
     invoke-direct {v0, v1}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1167
-    :cond_a
-    if-eqz v4, :cond_c
+    .line 1173
+    :cond_b
+    if-eqz v4, :cond_d
 
-    .line 1168
+    .line 1174
     iget v0, v6, Landroid/app/Notification;->defaults:I
 
     move/from16 v18, v0
@@ -3439,16 +3465,16 @@
 
     goto/16 :goto_2
 
-    .line 1165
+    .line 1171
     .end local v4           #bNowSilent:Z
-    :cond_b
+    :cond_c
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 1170
+    .line 1176
     .restart local v4       #bNowSilent:Z
-    :cond_c
+    :cond_d
     iget v0, v6, Landroid/app/Notification;->defaults:I
 
     move/from16 v18, v0
@@ -3461,11 +3487,11 @@
 
     goto/16 :goto_2
 
-    .line 1195
+    .line 1201
     .end local v3           #audioManager:Landroid/media/AudioManager;
     .end local v4           #bNowSilent:Z
     .restart local v10       #phone:Lcom/android/internal/telephony/ITelephony;
-    :cond_d
+    :cond_e
     :try_start_1
     move-object/from16 v0, p0
 
@@ -3481,7 +3507,7 @@
 
     check-cast v11, Landroid/os/PowerManager;
 
-    .line 1197
+    .line 1203
     .local v11, pm:Landroid/os/PowerManager;
     const v18, 0x3000001a
 
@@ -3495,7 +3521,7 @@
 
     move-result-object v17
 
-    .line 1201
+    .line 1207
     .local v17, wl:Landroid/os/PowerManager$WakeLock;
     const-wide/16 v18, 0xfa0
 
@@ -3505,14 +3531,14 @@
 
     goto/16 :goto_3
 
-    .line 1204
+    .line 1210
     .end local v10           #phone:Lcom/android/internal/telephony/ITelephony;
     .end local v11           #pm:Landroid/os/PowerManager;
     .end local v17           #wl:Landroid/os/PowerManager$WakeLock;
     :catch_0
     move-exception v12
 
-    .line 1205
+    .line 1211
     .local v12, re:Landroid/os/RemoteException;
     const-string v18, "NotificationMgr"
 
@@ -3542,7 +3568,7 @@
 
     goto/16 :goto_3
 
-    .line 1215
+    .line 1221
     .end local v5           #intent:Landroid/content/Intent;
     .end local v6           #notification:Landroid/app/Notification;
     .end local v7           #notificationText:Ljava/lang/String;
@@ -3551,7 +3577,7 @@
     .end local v12           #re:Landroid/os/RemoteException;
     .end local v13           #resId:I
     .end local v16           #vmNumber:Ljava/lang/String;
-    :cond_e
+    :cond_f
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/NotificationMgr;->mNotificationManager:Landroid/app/NotificationManager;
@@ -3572,7 +3598,7 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1422
+    .line 1428
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-static {v0}, Lcom/android/phone/TelephonyCapabilities;->supportsNetworkSelection(Lcom/android/internal/telephony/Phone;)Z
@@ -3581,14 +3607,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 1426
+    .line 1432
     iget-object v0, p0, Lcom/android/phone/NotificationMgr;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 1428
+    .line 1434
     const-string v0, "network_selection_name_key"
 
     const-string v2, ""
@@ -3597,14 +3623,14 @@
 
     move-result-object v0
 
-    .line 1430
+    .line 1436
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 1431
+    .line 1437
     const-string v0, "network_selection_key"
 
     const-string v2, ""
@@ -3613,7 +3639,7 @@
 
     move-result-object v0
 
-    .line 1435
+    .line 1441
     :cond_0
     sget-boolean v1, Lcom/android/phone/NotificationMgr;->DBG:Z
 
@@ -3649,7 +3675,7 @@
 
     invoke-direct {p0, v1}, Lcom/android/phone/NotificationMgr;->log(Ljava/lang/String;)V
 
-    .line 1438
+    .line 1444
     :cond_1
     if-ne p1, v3, :cond_3
 
@@ -3659,32 +3685,32 @@
 
     if-nez v1, :cond_3
 
-    .line 1440
+    .line 1446
     iget-boolean v1, p0, Lcom/android/phone/NotificationMgr;->mSelectedUnavailableNotify:Z
 
     if-nez v1, :cond_2
 
-    .line 1441
+    .line 1447
     invoke-direct {p0, v0}, Lcom/android/phone/NotificationMgr;->showNetworkSelection(Ljava/lang/String;)V
 
-    .line 1442
+    .line 1448
     iput-boolean v3, p0, Lcom/android/phone/NotificationMgr;->mSelectedUnavailableNotify:Z
 
-    .line 1451
+    .line 1457
     :cond_2
     :goto_0
     return-void
 
-    .line 1445
+    .line 1451
     :cond_3
     iget-boolean v0, p0, Lcom/android/phone/NotificationMgr;->mSelectedUnavailableNotify:Z
 
     if-eqz v0, :cond_2
 
-    .line 1446
+    .line 1452
     invoke-direct {p0}, Lcom/android/phone/NotificationMgr;->cancelNetworkSelection()V
 
-    .line 1447
+    .line 1453
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/NotificationMgr;->mSelectedUnavailableNotify:Z

@@ -1773,7 +1773,7 @@
 .end method
 
 .method public secAddCompletedDownload(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;JZ)J
-    .locals 7
+    .locals 5
     .parameter "title"
     .parameter "description"
     .parameter "isMediaScannerScannable"
@@ -1783,8 +1783,6 @@
     .parameter "showNotification"
 
     .prologue
-    const/4 v4, 0x2
-
     .line 1596
     const-string/jumbo v3, "title"
 
@@ -1806,9 +1804,9 @@
     invoke-static {v3, p4}, Landroid/app/DownloadManager;->validateArgumentIsNonEmpty(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1600
-    const-wide/16 v5, 0x0
+    const-wide/16 v3, 0x0
 
-    cmp-long v3, p6, v5
+    cmp-long v3, p6, v3
 
     if-gtz v3, :cond_0
 
@@ -1825,9 +1823,9 @@
     :cond_0
     new-instance v3, Landroid/app/DownloadManager$Request;
 
-    const-string/jumbo v5, "non-dwnldmngr-download-dont-retry2download"
+    const-string/jumbo v4, "non-dwnldmngr-download-dont-retry2download"
 
-    invoke-direct {v3, v5}, Landroid/app/DownloadManager$Request;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Landroid/app/DownloadManager$Request;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, p1}, Landroid/app/DownloadManager$Request;->setTitle(Ljava/lang/CharSequence;)Landroid/app/DownloadManager$Request;
 
@@ -1853,13 +1851,13 @@
     .local v2, values:Landroid/content/ContentValues;
     const-string v3, "destination"
 
-    const/4 v5, 0x6
+    const/4 v4, 0x0
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v2, v3, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1612
     const-string v3, "_data"
@@ -1869,49 +1867,49 @@
     .line 1613
     const-string/jumbo v3, "status"
 
-    const/16 v5, 0xc8
+    const/16 v4, 0xc8
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v2, v3, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1614
     const-string/jumbo v3, "state"
 
-    const/16 v5, 0xa
+    const/16 v4, 0xa
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v2, v3, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1615
     const-string/jumbo v3, "storagetype"
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v2, v3, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1616
     const-string/jumbo v3, "total_bytes"
 
     invoke-static {p6, p7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v2, v3, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
     .line 1617
-    const-string/jumbo v5, "scanned"
+    const-string/jumbo v4, "scanned"
 
-    if-eqz p3, :cond_2
+    if-eqz p3, :cond_1
 
     const/4 v3, 0x0
 
@@ -1920,21 +1918,21 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v5, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v4, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1620
-    const-string/jumbo v3, "visibility"
+    const-string/jumbo v4, "visibility"
 
-    if-eqz p8, :cond_1
+    if-eqz p8, :cond_2
 
-    const/4 v4, 0x3
+    const/4 v3, 0x1
 
-    :cond_1
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    :goto_1
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v2, v4, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 1622
     iget-object v3, p0, Landroid/app/DownloadManager;->mResolver:Landroid/content/ContentResolver;
@@ -1953,15 +1951,21 @@
     const-wide/16 v3, -0x1
 
     .line 1626
-    :goto_1
+    :goto_2
     return-wide v3
 
-    .end local v0           #downloadUri:Landroid/net/Uri;
-    :cond_2
-    move v3, v4
-
     .line 1617
+    .end local v0           #downloadUri:Landroid/net/Uri;
+    :cond_1
+    const/4 v3, 0x2
+
     goto :goto_0
+
+    .line 1620
+    :cond_2
+    const/4 v3, 0x2
+
+    goto :goto_1
 
     .line 1626
     .restart local v0       #downloadUri:Landroid/net/Uri;
@@ -1974,7 +1978,7 @@
 
     move-result-wide v3
 
-    goto :goto_1
+    goto :goto_2
 .end method
 
 .method public secenqueue(Landroid/app/DownloadManager$Request;)J

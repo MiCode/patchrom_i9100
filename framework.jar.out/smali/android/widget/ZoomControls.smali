@@ -49,7 +49,7 @@
 
     .line 49
     .local v0, inflater:Landroid/view/LayoutInflater;
-    const v1, 0x10900cf
+    const v1, 0x10900d2
 
     const/4 v2, 0x1
 

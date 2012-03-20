@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9486
+    .line 9521
     iput-object p1, p0, Landroid/webkit/WebView$11;->this$0:Landroid/webkit/WebView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +41,13 @@
     .locals 2
 
     .prologue
-    .line 9492
+    .line 9527
     iget-object v0, p0, Landroid/webkit/WebView$11;->this$0:Landroid/webkit/WebView;
 
     iget-object v1, p0, Landroid/webkit/WebView$11;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
-    invoke-static {v1}, Landroid/webkit/WebView;->access$3300(Landroid/webkit/WebView;)Landroid/graphics/Region;
+    invoke-static {v1}, Landroid/webkit/WebView;->access$3400(Landroid/webkit/WebView;)Landroid/graphics/Region;
 
     move-result-object v1
 
@@ -57,12 +57,12 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->invalidate(Landroid/graphics/Rect;)V
 
-    .line 9493
+    .line 9528
     iget-object v0, p0, Landroid/webkit/WebView$11;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->removeTouchHighlight()V
-    invoke-static {v0}, Landroid/webkit/WebView;->access$3400(Landroid/webkit/WebView;)V
+    invoke-static {v0}, Landroid/webkit/WebView;->access$3500(Landroid/webkit/WebView;)V
 
-    .line 9494
+    .line 9529
     return-void
 .end method

@@ -57,13 +57,6 @@
 
     const/4 v10, 0x1
 
-    .line 285
-    const-string v7, "CallForwardEditPreference"
-
-    const-string v8, "handleGetCFResponse: done"
-
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 287
     iget-object v7, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;
 
@@ -101,31 +94,6 @@
     iget-object v7, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     if-eqz v7, :cond_2
-
-    .line 298
-    const-string v7, "CallForwardEditPreference"
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, "handleGetCFResponse: ar.exception="
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    iget-object v9, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 299
     iget-object v7, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;
@@ -173,13 +141,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 303
-    const-string v7, "CallForwardEditPreference"
-
-    const-string v8, "userObj is Throwable instance !!"
-
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 304
     iget-object v7, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;
 
@@ -204,13 +165,6 @@
     array-length v7, v2
 
     if-nez v7, :cond_4
-
-    .line 308
-    const-string v7, "CallForwardEditPreference"
-
-    const-string v8, "handleGetCFResponse: cfInfoArray.length==0"
-
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 309
     iget-object v7, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;
@@ -238,37 +192,6 @@
     .local v5, length:I
     :goto_2
     if-ge v3, v5, :cond_0
-
-    .line 313
-    const-string v7, "CallForwardEditPreference"
-
-    const-string v8, "handleGetCFResponse, cfInfoArray["
-
-    invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v9, "]="
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    aget-object v9, v2, v3
-
-    invoke-virtual {v9}, Lcom/android/internal/telephony/CallForwardInfo;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 317
     const-string v7, "CallForwardEditPreference"
@@ -404,7 +327,7 @@
     :cond_5
     add-int/lit8 v3, v3, 0x1
 
-    goto/16 :goto_2
+    goto :goto_2
 
     .line 333
     .restart local v4       #info:Lcom/android/internal/telephony/CallForwardInfo;
@@ -445,6 +368,8 @@
     goto :goto_3
 
     .line 331
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -470,43 +395,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 364
-    const-string v1, "CallForwardEditPreference"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "handleSetCFResponse: ar.exception="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, v0, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 367
     :cond_0
     iget-object v1, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;
 
     invoke-virtual {v1, v6}, Lcom/android/phone/CallForwardEditPreference;->setToggled(Z)Lcom/android/phone/EditPhoneNumberPreference;
-
-    .line 368
-    const-string v1, "CallForwardEditPreference"
-
-    const-string v2, "handleSetCFResponse: re get"
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 369
     iget-object v1, p0, Lcom/android/phone/CallForwardEditPreference$MyHandler;->this$0:Lcom/android/phone/CallForwardEditPreference;

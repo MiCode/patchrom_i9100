@@ -46,63 +46,6 @@
 
     iput-object v1, p0, Lcom/android/phone/InCallTouchUi;->mHandler:Landroid/os/Handler;
 
-    .line 82
-    const-string v1, "InCallTouchUi constructor..."
-
-    invoke-direct {p0, v1}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
-    .line 83
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "- this = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
-    .line 84
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "- context "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", attrs "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
     .line 87
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
@@ -127,34 +70,6 @@
 
     iput-boolean v1, p0, Lcom/android/phone/InCallTouchUi;->mAllowIncomingCallTouchUi:Z
 
-    .line 94
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "- incoming call touch UI: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-boolean v1, p0, Lcom/android/phone/InCallTouchUi;->mAllowIncomingCallTouchUi:Z
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "ENABLED"
-
-    :goto_0
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
     .line 96
     invoke-virtual {p0}, Lcom/android/phone/InCallTouchUi;->getResources()Landroid/content/res/Resources;
 
@@ -168,34 +83,6 @@
 
     iput-boolean v1, p0, Lcom/android/phone/InCallTouchUi;->mAllowInCallTouchUi:Z
 
-    .line 97
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "- regular in-call touch UI: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-boolean v1, p0, Lcom/android/phone/InCallTouchUi;->mAllowInCallTouchUi:Z
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "ENABLED"
-
-    :goto_1
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
     .line 100
     iput v3, p0, Lcom/android/phone/InCallTouchUi;->mOrientation:I
 
@@ -206,18 +93,6 @@
 
     .line 102
     return-void
-
-    .line 94
-    :cond_0
-    const-string v1, "DISABLED"
-
-    goto :goto_0
-
-    .line 97
-    :cond_1
-    const-string v1, "DISABLED"
-
-    goto :goto_1
 .end method
 
 .method static synthetic access$002(Lcom/android/phone/InCallTouchUi;Z)Z
@@ -338,38 +213,11 @@
 
 # virtual methods
 .method protected onFinishInflate()V
-    .locals 2
+    .locals 1
 
     .prologue
     .line 110
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
-
-    .line 111
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "InCallTouchUi onFinishInflate(this = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")..."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
 
     .line 112
     const v0, 0x7f090106
@@ -475,27 +323,6 @@
     iget-object v0, p0, Lcom/android/phone/InCallTouchUi;->mIncomingSlidingWidget:Lcom/android/phone/IncomingSlidingWidget;
 
     if-eqz v0, :cond_2
-
-    .line 324
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "setOrientation : "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
 
     .line 325
     iget-object v0, p0, Lcom/android/phone/InCallTouchUi;->mIncomingSlidingWidget:Lcom/android/phone/IncomingSlidingWidget;
@@ -659,29 +486,8 @@
 
     move-result-object v6
 
-    .line 135
-    .local v6, state:Lcom/android/internal/telephony/Phone$State;
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v10, "- updateState: CallManager state is "
-
-    invoke-virtual {v7, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {p0, v7}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
     .line 137
+    .local v6, state:Lcom/android/internal/telephony/Phone$State;
     const/4 v5, 0x0
 
     .line 138
@@ -732,11 +538,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 159
-    const-string v7, "- updateState: RINGING!  Showing incoming call controls..."
-
-    invoke-direct {p0, v7}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
     .line 160
     const/4 v5, 0x1
 
@@ -766,9 +567,9 @@
     .line 202
     :cond_3
     :goto_1
-    if-eqz v5, :cond_6
+    if-eqz v5, :cond_5
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_5
 
     .line 203
     new-instance v7, Ljava/lang/IllegalStateException;
@@ -792,7 +593,7 @@
 
     move-result v7
 
-    if-eqz v7, :cond_5
+    if-eqz v7, :cond_3
 
     .line 191
     const/4 v4, 0x1
@@ -822,68 +623,60 @@
 
     goto :goto_1
 
-    .line 197
-    :cond_5
-    const-string v7, "- updateState: NOT OK to show touch UI; disabling..."
-
-    invoke-direct {p0, v7}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
-    goto :goto_1
-
     .line 206
-    :cond_6
+    :cond_5
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mIncomingSlidingWidget:Lcom/android/phone/IncomingSlidingWidget;
 
-    if-eqz v7, :cond_7
+    if-eqz v7, :cond_6
 
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mIncomingSlidingWidget:Lcom/android/phone/IncomingSlidingWidget;
 
     invoke-virtual {v7, v11}, Lcom/android/phone/IncomingSlidingWidget;->setVisibility(I)V
 
     .line 207
-    :cond_7
+    :cond_6
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mEndCallButtonsView:Lcom/android/phone/EndCallButtonsView;
 
-    if-eqz v7, :cond_8
+    if-eqz v7, :cond_7
 
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mEndCallButtonsView:Lcom/android/phone/EndCallButtonsView;
 
     invoke-virtual {v7, v11}, Lcom/android/phone/EndCallButtonsView;->setVisibility(I)V
 
     .line 208
-    :cond_8
+    :cond_7
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallButtonsView:Lcom/android/phone/InCallButtonsView;
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_8
 
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallButtonsView:Lcom/android/phone/InCallButtonsView;
 
     invoke-virtual {v7, v11}, Lcom/android/phone/InCallButtonsView;->setVisibility(I)V
 
     .line 209
-    :cond_9
+    :cond_8
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mDialpadButtonsView:Lcom/android/phone/DialpadButtonsView;
 
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_9
 
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mDialpadButtonsView:Lcom/android/phone/DialpadButtonsView;
 
     invoke-virtual {v7, v11}, Lcom/android/phone/DialpadButtonsView;->setVisibility(I)V
 
     .line 210
-    :cond_a
+    :cond_9
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     invoke-virtual {v7}, Lcom/android/phone/InCallScreen;->isDialerOpened()Z
 
     move-result v7
 
-    if-eqz v7, :cond_c
+    if-eqz v7, :cond_b
 
     .line 211
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mDialpadButtonsView:Lcom/android/phone/DialpadButtonsView;
 
-    if-nez v7, :cond_b
+    if-nez v7, :cond_a
 
     .line 212
     const v7, 0x7f09010b
@@ -904,12 +697,12 @@
     invoke-virtual {v7, v10}, Lcom/android/phone/DialpadButtonsView;->initialize(Lcom/android/phone/InCallScreen;)V
 
     .line 215
-    :cond_b
+    :cond_a
     invoke-virtual {v3}, Lcom/android/internal/telephony/Call;->isIdle()Z
 
     move-result v7
 
-    if-eqz v7, :cond_d
+    if-eqz v7, :cond_e
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
 
@@ -919,23 +712,23 @@
 
     move-result v7
 
-    if-nez v7, :cond_d
+    if-nez v7, :cond_e
 
     move v1, v8
 
     .line 217
     .local v1, duringCall:Z
     :goto_2
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_f
 
     iget v7, p0, Lcom/android/phone/InCallTouchUi;->mOrientation:I
 
-    if-ne v7, v8, :cond_e
+    if-ne v7, v8, :cond_f
 
     .line 225
     .end local v1           #duringCall:Z
-    :cond_c
-    if-eqz v4, :cond_17
+    :cond_b
+    if-eqz v4, :cond_16
 
     .line 226
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getActiveFgCall()Lcom/android/internal/telephony/Call;
@@ -952,7 +745,7 @@
     .local v0, callState:Lcom/android/internal/telephony/Call$State;
     sget-object v7, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v0, v7, :cond_f
+    if-ne v0, v7, :cond_c
 
     .line 231
     invoke-virtual {p1}, Lcom/android/internal/telephony/CallManager;->getFirstActiveBgCall()Lcom/android/internal/telephony/Call;
@@ -967,58 +760,24 @@
     .line 233
     sget-object v7, Lcom/android/internal/telephony/Call$State;->IDLE:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v0, v7, :cond_f
-
-    .line 234
-    const-string v7, "InCallTouchUi : All calls are IDLE at updateEndCallButton()"
-
-    invoke-direct {p0, v7}, Lcom/android/phone/InCallTouchUi;->log(Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .end local v0           #callState:Lcom/android/internal/telephony/Call$State;
-    .end local v2           #fgCall:Lcom/android/internal/telephony/Call;
-    :cond_d
-    move v1, v9
-
-    .line 215
-    goto :goto_2
-
-    .line 220
-    .restart local v1       #duringCall:Z
-    :cond_e
-    iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mDialpadButtonsView:Lcom/android/phone/DialpadButtonsView;
-
-    iget v8, p0, Lcom/android/phone/InCallTouchUi;->mOrientation:I
-
-    invoke-virtual {v7, p1, v8}, Lcom/android/phone/DialpadButtonsView;->updateState(Lcom/android/internal/telephony/CallManager;I)V
-
-    .line 221
-    iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mDialpadButtonsView:Lcom/android/phone/DialpadButtonsView;
-
-    invoke-virtual {v7, v9}, Lcom/android/phone/DialpadButtonsView;->setVisibility(I)V
-
-    goto/16 :goto_0
+    if-eq v0, v7, :cond_0
 
     .line 239
-    .end local v1           #duringCall:Z
-    .restart local v0       #callState:Lcom/android/internal/telephony/Call$State;
-    .restart local v2       #fgCall:Lcom/android/internal/telephony/Call;
-    :cond_f
+    :cond_c
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallScreen:Lcom/android/phone/InCallScreen;
 
     invoke-virtual {v7}, Lcom/android/phone/InCallScreen;->isCallEndedScreen()Z
 
     move-result v7
 
-    if-eqz v7, :cond_14
+    if-eqz v7, :cond_13
 
     .line 240
     invoke-static {v2}, Lcom/android/phone/PhoneUtils;->isConferenceCall(Lcom/android/internal/telephony/Call;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_11
+    if-eqz v7, :cond_10
 
     .line 241
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallButtonsView:Lcom/android/phone/InCallButtonsView;
@@ -1035,34 +794,61 @@
     .line 243
     sget-object v7, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v0, v7, :cond_10
+    if-eq v0, v7, :cond_d
 
     sget-object v7, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
     if-ne v0, v7, :cond_0
 
     .line 244
-    :cond_10
+    :cond_d
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallButtonsView:Lcom/android/phone/InCallButtonsView;
 
     invoke-virtual {v7}, Lcom/android/phone/InCallButtonsView;->disableInCallControls()V
 
     goto/16 :goto_0
 
+    .end local v0           #callState:Lcom/android/internal/telephony/Call$State;
+    .end local v2           #fgCall:Lcom/android/internal/telephony/Call;
+    :cond_e
+    move v1, v9
+
+    .line 215
+    goto :goto_2
+
+    .line 220
+    .restart local v1       #duringCall:Z
+    :cond_f
+    iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mDialpadButtonsView:Lcom/android/phone/DialpadButtonsView;
+
+    iget v8, p0, Lcom/android/phone/InCallTouchUi;->mOrientation:I
+
+    invoke-virtual {v7, p1, v8}, Lcom/android/phone/DialpadButtonsView;->updateState(Lcom/android/internal/telephony/CallManager;I)V
+
+    .line 221
+    iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mDialpadButtonsView:Lcom/android/phone/DialpadButtonsView;
+
+    invoke-virtual {v7, v9}, Lcom/android/phone/DialpadButtonsView;->setVisibility(I)V
+
+    goto/16 :goto_0
+
     .line 248
-    :cond_11
+    .end local v1           #duringCall:Z
+    .restart local v0       #callState:Lcom/android/internal/telephony/Call$State;
+    .restart local v2       #fgCall:Lcom/android/internal/telephony/Call;
+    :cond_10
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v7, v12}, Landroid/os/Handler;->hasMessages(I)Z
 
     move-result v7
 
-    if-nez v7, :cond_12
+    if-nez v7, :cond_11
 
     .line 249
     iget-boolean v7, p0, Lcom/android/phone/InCallTouchUi;->mIsEndButtonBlankDone:Z
 
-    if-nez v7, :cond_13
+    if-nez v7, :cond_12
 
     .line 250
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mHandler:Landroid/os/Handler;
@@ -1072,20 +858,20 @@
     invoke-virtual {v7, v12, v8, v9}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     .line 264
-    :cond_12
+    :cond_11
     :goto_3
     invoke-virtual {p0}, Lcom/android/phone/InCallTouchUi;->removeIncomingSlidingWidget()V
 
     goto/16 :goto_0
 
     .line 252
-    :cond_13
+    :cond_12
     invoke-direct {p0, p1}, Lcom/android/phone/InCallTouchUi;->updateEndCallButton(Lcom/android/internal/telephony/CallManager;)V
 
     goto :goto_3
 
     .line 256
-    :cond_14
+    :cond_13
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallButtonsView:Lcom/android/phone/InCallButtonsView;
 
     iget v8, p0, Lcom/android/phone/InCallTouchUi;->mOrientation:I
@@ -1100,20 +886,20 @@
     .line 258
     sget-object v7, Lcom/android/internal/telephony/Call$State;->DISCONNECTING:Lcom/android/internal/telephony/Call$State;
 
-    if-eq v0, v7, :cond_15
+    if-eq v0, v7, :cond_14
 
     sget-object v7, Lcom/android/internal/telephony/Call$State;->DISCONNECTED:Lcom/android/internal/telephony/Call$State;
 
-    if-ne v0, v7, :cond_16
+    if-ne v0, v7, :cond_15
 
     .line 259
-    :cond_15
+    :cond_14
     iget-object v7, p0, Lcom/android/phone/InCallTouchUi;->mInCallButtonsView:Lcom/android/phone/InCallButtonsView;
 
     invoke-virtual {v7}, Lcom/android/phone/InCallButtonsView;->disableInCallControls()V
 
     .line 261
-    :cond_16
+    :cond_15
     iput-boolean v9, p0, Lcom/android/phone/InCallTouchUi;->mIsEndButtonBlankDone:Z
 
     goto :goto_3
@@ -1121,7 +907,7 @@
     .line 266
     .end local v0           #callState:Lcom/android/internal/telephony/Call$State;
     .end local v2           #fgCall:Lcom/android/internal/telephony/Call;
-    :cond_17
+    :cond_16
     if-eqz v5, :cond_0
 
     .line 267

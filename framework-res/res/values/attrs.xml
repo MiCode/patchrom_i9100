@@ -1631,6 +1631,8 @@
     </attr>
     <attr name="publicKey" format="string" />
     <attr name="actionModeClipboardDrawable" format="reference" />
+    <attr name="textSelectHandleLeftTop" format="reference" />
+    <attr name="twActionPopup" format="boolean" />
     <attr name="clipboardFormat" format="integer">
         <flag name="text" value="0x00000002" />
         <flag name="all" value="0x00000001" />

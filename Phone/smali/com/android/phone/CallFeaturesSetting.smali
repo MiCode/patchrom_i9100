@@ -324,18 +324,6 @@
     return-object v0
 .end method
 
-.method static synthetic access$1000(Lcom/android/phone/CallFeaturesSetting;I)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 96
-    invoke-direct {p0, p1}, Lcom/android/phone/CallFeaturesSetting;->handleTTYChange(I)V
-
-    return-void
-.end method
-
 .method static synthetic access$200(Lcom/android/phone/CallFeaturesSetting;)Ljava/lang/String;
     .locals 1
     .parameter "x0"
@@ -349,18 +337,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$300(Ljava/lang/String;)V
-    .locals 0
-    .parameter "x0"
-
-    .prologue
-    .line 96
-    invoke-static {p0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method static synthetic access$400(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
+.method static synthetic access$300(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
     .locals 1
     .parameter "x0"
 
@@ -371,7 +348,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/phone/CallFeaturesSetting;)Z
+.method static synthetic access$400(Lcom/android/phone/CallFeaturesSetting;)Z
     .locals 1
     .parameter "x0"
 
@@ -384,7 +361,7 @@
     return v0
 .end method
 
-.method static synthetic access$600(Lcom/android/phone/CallFeaturesSetting;)Ljava/lang/String;
+.method static synthetic access$500(Lcom/android/phone/CallFeaturesSetting;)Ljava/lang/String;
     .locals 1
     .parameter "x0"
 
@@ -397,7 +374,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$700(Lcom/android/phone/CallFeaturesSetting;I)V
+.method static synthetic access$600(Lcom/android/phone/CallFeaturesSetting;I)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
@@ -409,7 +386,7 @@
     return-void
 .end method
 
-.method static synthetic access$800(Lcom/android/phone/CallFeaturesSetting;)V
+.method static synthetic access$700(Lcom/android/phone/CallFeaturesSetting;)V
     .locals 0
     .parameter "x0"
 
@@ -420,7 +397,7 @@
     return-void
 .end method
 
-.method static synthetic access$900(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
+.method static synthetic access$800(Lcom/android/phone/CallFeaturesSetting;)Landroid/preference/ListPreference;
     .locals 1
     .parameter "x0"
 
@@ -429,6 +406,18 @@
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mButtonTTY:Landroid/preference/ListPreference;
 
     return-object v0
+.end method
+
+.method static synthetic access$900(Lcom/android/phone/CallFeaturesSetting;I)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 96
+    invoke-direct {p0, p1}, Lcom/android/phone/CallFeaturesSetting;->handleTTYChange(I)V
+
+    return-void
 .end method
 
 .method private checkForwardingCompleted()Z
@@ -679,27 +668,6 @@
     .parameter
 
     .prologue
-    .line 2569
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Deleting settings for"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 2570
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
@@ -912,25 +880,25 @@
 .end method
 
 .method private handleSetVMOrFwdMessage()V
-    .locals 4
+    .locals 5
 
     .prologue
+    .line 1522
     const/4 v2, 0x1
 
+    .line 1523
+    .local v2, success:Z
     const/4 v1, 0x0
 
-    .line 1520
-    const-string v0, "handleSetVMMessage: set VM request complete"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1524
+    .local v1, fwdFailure:Z
     const-string v0, ""
 
     .line 1525
+    .local v0, exceptionMessage:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingChangeResults:Ljava/util/Map;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_0
 
     .line 1526
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->checkFwdChangeSuccess()Ljava/lang/String;
@@ -938,15 +906,17 @@
     move-result-object v0
 
     .line 1527
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_0
 
-    move v3, v2
+    .line 1528
+    const/4 v2, 0x0
 
-    move v2, v1
+    .line 1529
+    const/4 v1, 0x1
 
     .line 1532
-    :goto_0
-    if-eqz v2, :cond_2
+    :cond_0
+    if-eqz v2, :cond_1
 
     .line 1533
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->checkVMChangeSuccess()Ljava/lang/String;
@@ -954,97 +924,85 @@
     move-result-object v0
 
     .line 1534
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
+
+    .line 1535
+    const/4 v2, 0x0
 
     .line 1538
-    :goto_1
-    if-eqz v1, :cond_0
-
-    .line 1540
-    const-string v0, "change VM success!"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    :cond_1
+    if-eqz v2, :cond_2
 
     .line 1541
-    const/16 v0, 0x258
+    const/16 v3, 0x258
 
-    invoke-direct {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->handleVMAndFwdSetSuccess(I)V
+    invoke-direct {p0, v3}, Lcom/android/phone/CallFeaturesSetting;->handleVMAndFwdSetSuccess(I)V
 
     .line 1542
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->updateVoiceNumberField()V
 
     .line 1552
-    :goto_2
+    :goto_0
     return-void
 
     .line 1544
-    :cond_0
-    if-eqz v3, :cond_1
+    :cond_2
+    if-eqz v1, :cond_3
 
     .line 1545
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "change FW failed: "
+    const-string v4, "change FW failed: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 1546
-    const/16 v0, 0x191
+    const/16 v3, 0x191
 
-    invoke-direct {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->handleVMOrFwdSetError(I)V
+    invoke-direct {p0, v3}, Lcom/android/phone/CallFeaturesSetting;->handleVMOrFwdSetError(I)V
 
-    goto :goto_2
+    goto :goto_0
 
     .line 1548
-    :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
+    :cond_3
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "change VM failed: "
+    const-string v4, "change VM failed: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 1549
-    const/16 v0, 0x190
+    const/16 v3, 0x190
 
-    invoke-direct {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->handleVMOrFwdSetError(I)V
-
-    goto :goto_2
-
-    :cond_2
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_3
-    move v3, v1
+    invoke-direct {p0, v3}, Lcom/android/phone/CallFeaturesSetting;->handleVMOrFwdSetError(I)V
 
     goto :goto_0
 .end method
@@ -1369,7 +1327,7 @@
     .locals 12
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     const/4 v4, 0x0
 
@@ -1378,9 +1336,9 @@
 
     move-result-object v0
 
-    const-string v2, "vm_numbers"
+    const-string v1, "vm_numbers"
 
-    invoke-virtual {v0, v2, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v0, v1, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -1395,27 +1353,22 @@
 
     move-result-object v0
 
-    const-string v2, "com.android.phone.CallFeaturesSetting.ADD_VOICEMAIL"
+    const-string v1, "com.android.phone.CallFeaturesSetting.ADD_VOICEMAIL"
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_7
-
-    .line 2379
-    const-string v0, "ACTION_ADD_VOICEMAIL"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 2380
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const-string v2, "com.android.phone.ProviderToIgnore"
+    const-string v1, "com.android.phone.ProviderToIgnore"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1426,42 +1379,21 @@
 
     move-result-object v0
 
-    const-string v2, "com.android.phone.ProviderToIgnore"
+    const-string v1, "com.android.phone.ProviderToIgnore"
 
-    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2384
-    :goto_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "providerToIgnore="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 2385
+    :goto_0
     if-eqz v0, :cond_0
 
     .line 2386
     invoke-direct {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->deleteSettingsForVoicemailProvider(Ljava/lang/String;)V
 
     :cond_0
-    move-object v2, v0
+    move-object v1, v0
 
     .line 2390
     :goto_1
@@ -1501,7 +1433,7 @@
 
     new-instance v6, Lcom/android/phone/CallFeaturesSetting$VoiceMailProvider;
 
-    invoke-direct {v6, p0, v3, v1}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProvider;-><init>(Lcom/android/phone/CallFeaturesSetting;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-direct {v6, p0, v3, v2}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProvider;-><init>(Lcom/android/phone/CallFeaturesSetting;Ljava/lang/String;Landroid/content/Intent;)V
 
     invoke-interface {v0, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1516,9 +1448,9 @@
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     .line 2407
-    const-string v1, "com.android.phone.CallFeaturesSetting.CONFIGURE_VOICEMAIL"
+    const-string v2, "com.android.phone.CallFeaturesSetting.CONFIGURE_VOICEMAIL"
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 2408
     invoke-virtual {v6, v0, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
@@ -1532,7 +1464,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    move v1, v4
+    move v2, v4
 
     move v5, v0
 
@@ -1542,10 +1474,10 @@
 
     move-result v0
 
-    if-ge v1, v0, :cond_3
+    if-ge v2, v0, :cond_3
 
     .line 2415
-    invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1559,63 +1491,21 @@
 
     move-result-object v9
 
-    .line 2419
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v11, "Loading "
-
-    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-static {v10}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 2420
-    invoke-virtual {v9, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v10
 
     if-eqz v10, :cond_2
-
-    .line 2422
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "Ignoring "
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 2423
     add-int/lit8 v5, v5, -0x1
 
     .line 2414
     :goto_4
-    add-int/lit8 v0, v1, 0x1
+    add-int/lit8 v0, v2, 0x1
 
-    move v1, v0
+    move v2, v0
 
     goto :goto_3
 
@@ -1778,12 +1668,12 @@
     return-void
 
     :cond_6
-    move-object v0, v1
+    move-object v0, v2
 
     goto/16 :goto_0
 
     :cond_7
-    move-object v2, v1
+    move-object v1, v2
 
     goto/16 :goto_1
 .end method
@@ -1879,33 +1769,6 @@
 
     .line 2531
     if-nez v3, :cond_0
-
-    .line 2533
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Settings for "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " not found"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 2561
     :goto_0
@@ -2157,41 +2020,6 @@
 
     invoke-direct {v1, p0, v3, v0}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;-><init>(Lcom/android/phone/CallFeaturesSetting;Ljava/lang/String;[Lcom/android/internal/telephony/CallForwardInfo;)V
 
-    .line 2560
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Loaded settings for "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, ": "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v1}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     move-object v0, v1
 
     .line 2561
@@ -2200,7 +2028,7 @@
 
 .method private static log(Ljava/lang/String;)V
     .locals 1
-    .parameter "msg"
+    .parameter
 
     .prologue
     .line 2319
@@ -2234,14 +2062,15 @@
     .line 2490
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
-    if-nez v1, :cond_0
+    if-nez v1, :cond_1
 
     .line 2519
+    :cond_0
     :goto_0
     return-void
 
     .line 2493
-    :cond_0
+    :cond_1
     invoke-direct {p0, p1}, Lcom/android/phone/CallFeaturesSetting;->loadSettingsForVoiceMailProvider(Ljava/lang/String;)Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;
 
     move-result-object v1
@@ -2251,72 +2080,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
-
-    .line 2496
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Not saving setting for "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " since they have not changed"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 2500
-    :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Saving settings for "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ": "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    if-nez v1, :cond_0
 
     .line 2501
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
@@ -2588,32 +2352,7 @@
     .parameter "newSettings"
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 1135
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "saveVoiceMailAndForwardingNumber: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    const/4 v5, 0x0
 
     .line 1136
     iget-object v1, p2, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;->voicemailNumber:Ljava/lang/String;
@@ -2636,46 +2375,6 @@
 
     iput-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mNewFwdSettings:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    .line 1144
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "newFwdNumber "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mNewFwdSettings:[Lcom/android/internal/telephony/CallForwardInfo;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mNewFwdSettings:[Lcom/android/internal/telephony/CallForwardInfo;
-
-    array-length v1, v1
-
-    :goto_0
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, " settings"
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1149
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -2683,14 +2382,9 @@
 
     move-result v1
 
-    const/4 v3, 0x2
+    const/4 v2, 0x2
 
-    if-ne v1, v3, :cond_1
-
-    .line 1151
-    const-string v1, "ignoring forwarding setting since this is CDMA phone"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    if-ne v1, v2, :cond_1
 
     .line 1152
     sget-object v1, Lcom/android/phone/CallFeaturesSetting;->FWD_SETTINGS_DONT_TOUCH:[Lcom/android/internal/telephony/CallForwardInfo;
@@ -2701,19 +2395,19 @@
     :cond_1
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mNewVMNumber:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mNewFwdSettings:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    sget-object v3, Lcom/android/phone/CallFeaturesSetting;->FWD_SETTINGS_DONT_TOUCH:[Lcom/android/internal/telephony/CallForwardInfo;
+    sget-object v2, Lcom/android/phone/CallFeaturesSetting;->FWD_SETTINGS_DONT_TOUCH:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    if-ne v1, v3, :cond_3
+    if-ne v1, v2, :cond_2
 
     .line 1157
     const/16 v1, 0x2bc
@@ -2721,27 +2415,21 @@
     invoke-direct {p0, v1}, Lcom/android/phone/CallFeaturesSetting;->showVMDialog(I)V
 
     .line 1180
-    :goto_1
+    :goto_0
     return-void
 
-    :cond_2
-    move v1, v2
-
-    .line 1144
-    goto :goto_0
-
     .line 1161
-    :cond_3
+    :cond_2
     invoke-direct {p0, p1, p2}, Lcom/android/phone/CallFeaturesSetting;->maybeSaveSettingsForVoicemailProvider(Ljava/lang/String;Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;)V
 
     .line 1162
-    iput-boolean v2, p0, Lcom/android/phone/CallFeaturesSetting;->mVMChangeCompletedSuccesfully:Z
+    iput-boolean v5, p0, Lcom/android/phone/CallFeaturesSetting;->mVMChangeCompletedSuccesfully:Z
 
     .line 1163
-    iput-boolean v2, p0, Lcom/android/phone/CallFeaturesSetting;->mFwdChangesRequireRollback:Z
+    iput-boolean v5, p0, Lcom/android/phone/CallFeaturesSetting;->mFwdChangesRequireRollback:Z
 
     .line 1164
-    iput v2, p0, Lcom/android/phone/CallFeaturesSetting;->mVMOrFwdSetError:I
+    iput v5, p0, Lcom/android/phone/CallFeaturesSetting;->mVMOrFwdSetError:I
 
     .line 1165
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPreviousVMProviderKey:Ljava/lang/String;
@@ -2750,23 +2438,18 @@
 
     move-result v1
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_4
 
     .line 1166
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPreviousVMProviderKey:Ljava/lang/String;
 
-    const-string v3, ""
+    const-string v2, ""
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/android/phone/CallFeaturesSetting;->mReadingSettingsForDefaultProvider:Z
-
-    .line 1169
-    const-string v1, "Reading current forwarding settings"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 1170
     sget-object v1, Lcom/android/phone/CallFeaturesSetting;->FORWARDING_SETTINGS_REASONS:[I
@@ -2781,65 +2464,65 @@
     const/4 v0, 0x0
 
     .local v0, i:I
-    :goto_2
+    :goto_1
     sget-object v1, Lcom/android/phone/CallFeaturesSetting;->FORWARDING_SETTINGS_REASONS:[I
 
     array-length v1, v1
 
-    if-ge v0, v1, :cond_4
+    if-ge v0, v1, :cond_3
 
     .line 1172
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    aput-object v3, v1, v0
+    aput-object v2, v1, v0
 
     .line 1173
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    sget-object v3, Lcom/android/phone/CallFeaturesSetting;->FORWARDING_SETTINGS_REASONS:[I
+    sget-object v2, Lcom/android/phone/CallFeaturesSetting;->FORWARDING_SETTINGS_REASONS:[I
 
-    aget v3, v3, v0
+    aget v2, v2, v0
 
-    iget-object v4, p0, Lcom/android/phone/CallFeaturesSetting;->mGetOptionComplete:Landroid/os/Handler;
+    iget-object v3, p0, Lcom/android/phone/CallFeaturesSetting;->mGetOptionComplete:Landroid/os/Handler;
 
-    const/16 v5, 0x1f6
+    const/16 v4, 0x1f6
 
-    invoke-virtual {v4, v5, v0, v2}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v3, v4, v0, v5}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-interface {v1, v3, v4}, Lcom/android/internal/telephony/Phone;->getCallForwardingOption(ILandroid/os/Message;)V
+    invoke-interface {v1, v2, v3}, Lcom/android/internal/telephony/Phone;->getCallForwardingOption(ILandroid/os/Message;)V
 
     .line 1171
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_2
+    goto :goto_1
 
     .line 1176
-    :cond_4
+    :cond_3
     const/16 v1, 0x25a
 
     invoke-direct {p0, v1}, Lcom/android/phone/CallFeaturesSetting;->showDialogIfForeground(I)V
 
-    goto :goto_1
+    goto :goto_0
 
     .line 1178
     .end local v0           #i:I
-    :cond_5
+    :cond_4
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->saveVoiceMailAndForwardingNumberStage2()V
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method private saveVoiceMailAndForwardingNumberStage2()V
-    .locals 10
+    .locals 12
 
     .prologue
     const/4 v0, 0x0
 
-    const/4 v7, 0x0
+    const/4 v9, 0x0
 
     .line 1315
     iput-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingChangeResults:Ljava/util/Map;
@@ -2857,76 +2540,44 @@
     .line 1318
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->resetForwardingChangeState()V
 
-    move v6, v7
-
     .line 1319
+    const/4 v8, 0x0
+
+    .local v8, i:I
     :goto_0
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mNewFwdSettings:[Lcom/android/internal/telephony/CallForwardInfo;
 
     array-length v0, v0
 
-    if-ge v6, v0, :cond_2
+    if-ge v8, v0, :cond_2
 
     .line 1320
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mNewFwdSettings:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    aget-object v5, v0, v6
+    aget-object v7, v0, v8
 
     .line 1322
+    .local v7, fi:Lcom/android/internal/telephony/CallForwardInfo;
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    iget v1, v5, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
+    iget v1, v7, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
     invoke-direct {p0, v0, v1}, Lcom/android/phone/CallFeaturesSetting;->infoForReason([Lcom/android/internal/telephony/CallForwardInfo;I)Lcom/android/internal/telephony/CallForwardInfo;
 
     move-result-object v0
 
-    invoke-direct {p0, v0, v5}, Lcom/android/phone/CallFeaturesSetting;->isUpdateRequired(Lcom/android/internal/telephony/CallForwardInfo;Lcom/android/internal/telephony/CallForwardInfo;)Z
+    invoke-direct {p0, v0, v7}, Lcom/android/phone/CallFeaturesSetting;->isUpdateRequired(Lcom/android/internal/telephony/CallForwardInfo;Lcom/android/internal/telephony/CallForwardInfo;)Z
 
-    move-result v0
+    move-result v6
 
     .line 1325
-    if-eqz v0, :cond_0
-
-    .line 1327
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Setting fwd #: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ": "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v5}, Lcom/android/internal/telephony/CallForwardInfo;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    .local v6, doUpdate:Z
+    if-eqz v6, :cond_0
 
     .line 1328
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mExpectedChangeResultReasons:Ljava/util/Collection;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -2935,7 +2586,7 @@
     .line 1330
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    iget v1, v5, Lcom/android/internal/telephony/CallForwardInfo;->status:I
+    iget v1, v7, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
     const/4 v2, 0x1
 
@@ -2944,19 +2595,19 @@
     const/4 v1, 0x3
 
     :goto_1
-    iget v2, v5, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
+    iget v2, v7, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
-    iget-object v3, v5, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
+    iget-object v3, v7, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
 
-    iget v4, v5, Lcom/android/internal/telephony/CallForwardInfo;->timeSeconds:I
+    iget v4, v7, Lcom/android/internal/telephony/CallForwardInfo;->timeSeconds:I
 
-    iget-object v8, p0, Lcom/android/phone/CallFeaturesSetting;->mSetOptionComplete:Landroid/os/Handler;
+    iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting;->mSetOptionComplete:Landroid/os/Handler;
 
-    const/16 v9, 0x1f5
+    const/16 v10, 0x1f5
 
-    iget v5, v5, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
+    iget v11, v7, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
-    invoke-virtual {v8, v9, v5, v7}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
+    invoke-virtual {v5, v10, v11, v9}, Landroid/os/Handler;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v5
 
@@ -2964,35 +2615,31 @@
 
     .line 1319
     :cond_0
-    add-int/lit8 v0, v6, 0x1
-
-    move v6, v0
+    add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
     :cond_1
-    move v1, v7
+    move v1, v9
 
     .line 1330
     goto :goto_1
 
     .line 1337
+    .end local v6           #doUpdate:Z
+    .end local v7           #fi:Lcom/android/internal/telephony/CallForwardInfo;
     :cond_2
     const/16 v0, 0x259
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->showDialogIfForeground(I)V
 
     .line 1343
+    .end local v8           #i:I
     :goto_2
     return-void
 
-    .line 1340
-    :cond_3
-    const-string v0, "Not touching fwd #"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1341
+    :cond_3
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->setVMNumberWithCarrier()V
 
     goto :goto_2
@@ -3146,29 +2793,6 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 912
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "switchToPreviousVoicemailProvider "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPreviousVMProviderKey:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 913
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPreviousVMProviderKey:Ljava/lang/String;
 
@@ -3207,29 +2831,6 @@
 
     iput-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mNewVMNumber:Ljava/lang/String;
 
-    .line 921
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "have to revert VM to "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mNewVMNumber:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 922
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -3261,11 +2862,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 928
-    const-string v0, "have to revert fwd"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 929
     iget-object v8, v9, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;->forwardingSettings:[Lcom/android/internal/telephony/CallForwardInfo;
 
@@ -3292,43 +2888,8 @@
     .line 934
     aget-object v6, v8, v7
 
-    .line 936
-    .local v6, fi:Lcom/android/internal/telephony/CallForwardInfo;
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Reverting fwd #: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ": "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v6}, Lcom/android/internal/telephony/CallForwardInfo;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 939
+    .local v6, fi:Lcom/android/internal/telephony/CallForwardInfo;
     iget v0, v6, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3400,7 +2961,7 @@
     .line 942
     goto :goto_1
 
-    .line 953
+    .line 954
     .end local v6           #fi:Lcom/android/internal/telephony/CallForwardInfo;
     .end local v7           #i:I
     .end local v8           #prevFwdSettings:[Lcom/android/internal/telephony/CallForwardInfo;
@@ -3408,11 +2969,6 @@
     .end local v10           #result:Landroid/os/AsyncResult;
     .end local v11           #results:Ljava/util/Map;,"Ljava/util/Map<Ljava/lang/Integer;Landroid/os/AsyncResult;>;"
     :cond_4
-    const-string v0, "No need to revert"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    .line 954
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->onRevertDone()V
 
     .line 957
@@ -3588,13 +3144,13 @@
 .end method
 
 .method private updateVoiceNumberField()V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 1576
-    iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mSubMenuVoicemailSettings:Lcom/android/phone/EditPhoneNumberPreference;
+    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mSubMenuVoicemailSettings:Lcom/android/phone/EditPhoneNumberPreference;
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
     .line 1588
     :goto_0
@@ -3602,44 +3158,45 @@
 
     .line 1580
     :cond_0
-    iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPhone:Lcom/android/internal/telephony/Phone;
+    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getVoiceMailNumber()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getVoiceMailNumber()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
     .line 1581
-    iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_1
 
     .line 1582
-    const-string v0, ""
+    const-string v1, ""
 
-    iput-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
+    iput-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
     .line 1584
     :cond_1
-    iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mSubMenuVoicemailSettings:Lcom/android/phone/EditPhoneNumberPreference;
+    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mSubMenuVoicemailSettings:Lcom/android/phone/EditPhoneNumberPreference;
 
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
+    iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/android/phone/EditPhoneNumberPreference;->setPhoneNumber(Ljava/lang/String;)Lcom/android/phone/EditPhoneNumberPreference;
+    invoke-virtual {v1, v2}, Lcom/android/phone/EditPhoneNumberPreference;->setPhoneNumber(Ljava/lang/String;)Lcom/android/phone/EditPhoneNumberPreference;
 
     .line 1585
-    iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
+    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v0
+    move-result v1
 
-    if-lez v0, :cond_2
+    if-lez v1, :cond_2
 
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
     .line 1587
+    .local v0, summary:Ljava/lang/String;
     :goto_1
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mSubMenuVoicemailSettings:Lcom/android/phone/EditPhoneNumberPreference;
 
@@ -3648,10 +3205,11 @@
     goto :goto_0
 
     .line 1585
+    .end local v0           #summary:Ljava/lang/String;
     :cond_2
-    const v0, 0x7f0e01fe
+    const v1, 0x7f0e01fe
 
-    invoke-virtual {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/android/phone/CallFeaturesSetting;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3661,429 +3219,232 @@
 
 # virtual methods
 .method handleForwardingSettingsReadResult(Landroid/os/AsyncResult;I)V
-    .locals 7
-    .parameter
-    .parameter
+    .locals 10
+    .parameter "ar"
+    .parameter "idx"
 
     .prologue
     const/16 v6, 0x25a
 
-    const/4 v4, 0x1
+    const/4 v9, 0x0
 
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    .line 1196
-    const-string v0, "CallFeaturesSetting"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "handleForwardingSettingsReadResult: "
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 1197
+    const/4 v2, 0x0
 
     .line 1198
-    iget-object v0, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
-
-    if-eqz v0, :cond_c
-
-    .line 1200
-    const-string v0, "CallFeaturesSetting"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "FwdRead: ar.exception="
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
+    .local v2, error:Ljava/lang/Throwable;
     iget-object v5, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    invoke-virtual {v5}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v5, :cond_0
 
     .line 1201
-    iget-object v0, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
+    iget-object v2, p1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
     .line 1203
-    :goto_0
-    iget-object v2, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
+    :cond_0
+    iget-object v5, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    instance-of v2, v2, Ljava/lang/Throwable;
+    instance-of v5, v5, Ljava/lang/Throwable;
 
-    if-eqz v2, :cond_0
-
-    .line 1205
-    const-string v2, "CallFeaturesSetting"
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "FwdRead: userObj="
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    iget-object v0, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-eqz v5, :cond_1
 
     .line 1206
-    iget-object v0, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
+    iget-object v2, p1, Landroid/os/AsyncResult;->userObj:Ljava/lang/Object;
 
-    check-cast v0, Ljava/lang/Throwable;
+    .end local v2           #error:Ljava/lang/Throwable;
+    check-cast v2, Ljava/lang/Throwable;
 
     .line 1211
-    :cond_0
-    iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
+    .restart local v2       #error:Ljava/lang/Throwable;
+    :cond_1
+    iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    if-nez v2, :cond_1
-
-    .line 1213
-    const-string v0, "CallFeaturesSetting"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "ignoring fwd reading result: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    if-nez v5, :cond_3
 
     .line 1280
-    :goto_1
+    :cond_2
+    :goto_0
     return-void
 
     .line 1218
-    :cond_1
-    if-eqz v0, :cond_2
-
-    .line 1220
-    const-string v0, "CallFeaturesSetting"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Error discovered for fwd read : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_3
+    if-eqz v2, :cond_4
 
     .line 1221
-    iput-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
+    const/4 v5, 0x0
+
+    iput-object v5, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
     .line 1222
     invoke-direct {p0, v6}, Lcom/android/phone/CallFeaturesSetting;->dismissDialogSafely(I)V
 
     .line 1223
-    const/16 v0, 0x192
+    const/16 v5, 0x192
 
-    invoke-direct {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->showVMDialog(I)V
+    invoke-direct {p0, v5}, Lcom/android/phone/CallFeaturesSetting;->showVMDialog(I)V
 
-    goto :goto_1
+    goto :goto_0
 
     .line 1228
-    :cond_2
-    iget-object v0, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+    :cond_4
+    iget-object v5, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
+
+    check-cast v5, [Lcom/android/internal/telephony/CallForwardInfo;
+
+    move-object v0, v5
 
     check-cast v0, [Lcom/android/internal/telephony/CallForwardInfo;
 
-    check-cast v0, [Lcom/android/internal/telephony/CallForwardInfo;
-
-    move v2, v3
+    .line 1229
+    .local v0, cfInfoArray:[Lcom/android/internal/telephony/CallForwardInfo;
+    const/4 v3, 0x0
 
     .line 1230
-    :goto_2
+    .local v3, fi:Lcom/android/internal/telephony/CallForwardInfo;
+    const/4 v4, 0x0
+
+    .local v4, i:I
+    :goto_1
     array-length v5, v0
 
-    if-ge v2, v5, :cond_b
+    if-ge v4, v5, :cond_5
 
     .line 1231
-    aget-object v5, v0, v2
+    aget-object v5, v0, v4
 
     iget v5, v5, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
 
     and-int/lit8 v5, v5, 0x1
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_9
 
     .line 1232
-    aget-object v0, v0, v2
+    aget-object v3, v0, v4
 
     .line 1236
-    :goto_3
-    if-nez v0, :cond_5
-
-    .line 1241
-    const-string v0, "CallFeaturesSetting"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Creating default info for "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_5
+    if-nez v3, :cond_a
 
     .line 1242
-    new-instance v0, Lcom/android/internal/telephony/CallForwardInfo;
+    new-instance v3, Lcom/android/internal/telephony/CallForwardInfo;
 
-    invoke-direct {v0}, Lcom/android/internal/telephony/CallForwardInfo;-><init>()V
+    .end local v3           #fi:Lcom/android/internal/telephony/CallForwardInfo;
+    invoke-direct {v3}, Lcom/android/internal/telephony/CallForwardInfo;-><init>()V
 
     .line 1243
-    iput v3, v0, Lcom/android/internal/telephony/CallForwardInfo;->status:I
+    .restart local v3       #fi:Lcom/android/internal/telephony/CallForwardInfo;
+    iput v9, v3, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
     .line 1244
-    sget-object v1, Lcom/android/phone/CallFeaturesSetting;->FORWARDING_SETTINGS_REASONS:[I
+    sget-object v5, Lcom/android/phone/CallFeaturesSetting;->FORWARDING_SETTINGS_REASONS:[I
 
-    aget v1, v1, p2
+    aget v5, v5, p2
 
-    iput v1, v0, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
+    iput v5, v3, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
     .line 1245
-    iput v4, v0, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
+    const/4 v5, 0x1
+
+    iput v5, v3, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
 
     .line 1256
-    :goto_4
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
+    :cond_6
+    :goto_2
+    iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    aput-object v0, v1, p2
+    aput-object v3, v5, p2
 
-    move v0, v3
+    .line 1259
+    const/4 v1, 0x1
 
     .line 1260
-    :goto_5
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
+    .local v1, done:Z
+    const/4 v4, 0x0
 
-    array-length v1, v1
+    :goto_3
+    iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    if-ge v0, v1, :cond_a
+    array-length v5, v5
+
+    if-ge v4, v5, :cond_7
 
     .line 1261
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
+    iget-object v5, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    aget-object v1, v1, v0
+    aget-object v5, v5, v4
 
-    if-nez v1, :cond_8
+    if-nez v5, :cond_c
 
-    move v0, v3
+    .line 1262
+    const/4 v1, 0x0
 
     .line 1266
-    :goto_6
-    if-eqz v0, :cond_9
-
-    .line 1268
-    const-string v0, "CallFeaturesSetting"
-
-    const-string v1, "Done receiving fwd info"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    :cond_7
+    if-eqz v1, :cond_2
 
     .line 1269
     invoke-direct {p0, v6}, Lcom/android/phone/CallFeaturesSetting;->dismissDialogSafely(I)V
 
     .line 1270
-    iget-boolean v0, p0, Lcom/android/phone/CallFeaturesSetting;->mReadingSettingsForDefaultProvider:Z
+    iget-boolean v5, p0, Lcom/android/phone/CallFeaturesSetting;->mReadingSettingsForDefaultProvider:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v5, :cond_8
 
     .line 1271
-    const-string v0, ""
+    const-string v5, ""
 
-    new-instance v1, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;
+    new-instance v6, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;
 
-    iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
+    iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting;->mOldVmNumber:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
+    iget-object v8, p0, Lcom/android/phone/CallFeaturesSetting;->mForwardingReadResults:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    invoke-direct {v1, p0, v2, v4}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;-><init>(Lcom/android/phone/CallFeaturesSetting;Ljava/lang/String;[Lcom/android/internal/telephony/CallForwardInfo;)V
+    invoke-direct {v6, p0, v7, v8}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;-><init>(Lcom/android/phone/CallFeaturesSetting;Ljava/lang/String;[Lcom/android/internal/telephony/CallForwardInfo;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/android/phone/CallFeaturesSetting;->maybeSaveSettingsForVoicemailProvider(Ljava/lang/String;Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;)V
+    invoke-direct {p0, v5, v6}, Lcom/android/phone/CallFeaturesSetting;->maybeSaveSettingsForVoicemailProvider(Ljava/lang/String;Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;)V
 
     .line 1273
-    iput-boolean v3, p0, Lcom/android/phone/CallFeaturesSetting;->mReadingSettingsForDefaultProvider:Z
+    iput-boolean v9, p0, Lcom/android/phone/CallFeaturesSetting;->mReadingSettingsForDefaultProvider:Z
 
     .line 1275
-    :cond_3
+    :cond_8
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->saveVoiceMailAndForwardingNumberStage2()V
 
-    goto/16 :goto_1
+    goto :goto_0
 
     .line 1230
-    :cond_4
-    add-int/lit8 v2, v2, 0x1
+    .end local v1           #done:Z
+    :cond_9
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    .line 1249
+    :cond_a
+    iget-object v5, v3, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
+
+    if-eqz v5, :cond_b
+
+    iget-object v5, v3, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    .line 1250
+    :cond_b
+    iput v9, v3, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
     goto :goto_2
 
-    .line 1249
-    :cond_5
-    iget-object v1, v0, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
-
-    if-eqz v1, :cond_6
-
-    iget-object v1, v0, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    .line 1250
-    :cond_6
-    iput v3, v0, Lcom/android/internal/telephony/CallForwardInfo;->status:I
-
-    .line 1254
-    :cond_7
-    const-string v1, "CallFeaturesSetting"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Got  "
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Lcom/android/internal/telephony/CallForwardInfo;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v5, " for "
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_4
-
     .line 1260
-    :cond_8
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_5
-
-    .line 1278
-    :cond_9
-    const-string v0, "CallFeaturesSetting"
-
-    const-string v1, "Not done receiving fwd info"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_1
-
-    :cond_a
-    move v0, v4
-
-    goto :goto_6
-
-    :cond_b
-    move-object v0, v1
-
-    goto/16 :goto_3
-
+    .restart local v1       #done:Z
     :cond_c
-    move-object v0, v1
+    add-int/lit8 v4, v4, 0x1
 
-    goto/16 :goto_0
+    goto :goto_3
 .end method
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
@@ -4098,36 +3459,13 @@
 
     move/from16 v0, p1
 
-    if-ne v0, v1, :cond_9
+    if-ne v0, v1, :cond_8
 
     .line 981
     const/4 v8, 0x0
 
-    .line 985
-    .local v8, failure:Z
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "mVMProviderSettingsForced: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-boolean v2, p0, Lcom/android/phone/CallFeaturesSetting;->mVMProviderSettingsForced:Z
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 986
+    .local v8, failure:Z
     iget-boolean v12, p0, Lcom/android/phone/CallFeaturesSetting;->mVMProviderSettingsForced:Z
 
     .line 987
@@ -4145,12 +3483,7 @@
 
     move/from16 v0, p2
 
-    if-eq v0, v1, :cond_1
-
-    .line 992
-    const-string v1, "onActivityResult: vm provider cfg result not OK."
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    if-eq v0, v1, :cond_2
 
     .line 993
     const/4 v8, 0x1
@@ -4160,13 +3493,8 @@
     :goto_0
     if-eqz v8, :cond_7
 
-    .line 1028
-    const-string v1, "Failure in return from voicemail provider"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1029
-    if-eqz v12, :cond_6
+    if-eqz v12, :cond_1
 
     .line 1030
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->switchToPreviousVoicemailProvider()V
@@ -4175,6 +3503,7 @@
     .end local v8           #failure:Z
     .end local v12           #isVMProviderSettingsForced:Z
     .end local v14           #vmNum:Ljava/lang/String;
+    :cond_1
     :goto_1
     return-void
 
@@ -4182,13 +3511,8 @@
     .restart local v8       #failure:Z
     .restart local v12       #isVMProviderSettingsForced:Z
     .restart local v14       #vmNum:Ljava/lang/String;
-    :cond_1
-    if-nez p3, :cond_2
-
-    .line 997
-    const-string v1, "onActivityResult: vm provider cfg result has no data"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    :cond_2
+    if-nez p3, :cond_3
 
     .line 998
     const/4 v8, 0x1
@@ -4196,7 +3520,7 @@
     goto :goto_0
 
     .line 1000
-    :cond_2
+    :cond_3
     const-string v1, "com.android.phone.Signout"
 
     const/4 v2, 0x0
@@ -4207,20 +3531,10 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
-
-    .line 1002
-    const-string v1, "Provider requested signout"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    if-eqz v1, :cond_5
 
     .line 1003
-    if-eqz v12, :cond_3
-
-    .line 1005
-    const-string v1, "Going back to previous provider on signout"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    if-eqz v12, :cond_4
 
     .line 1006
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->switchToPreviousVoicemailProvider()V
@@ -4228,34 +3542,13 @@
     goto :goto_1
 
     .line 1008
-    :cond_3
+    :cond_4
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->getCurrentVoicemailProviderKey()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 1010
-    .local v13, victim:Ljava/lang/String;
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Relaunching activity and ignoring "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1011
+    .local v13, victim:Ljava/lang/String;
     new-instance v11, Landroid/content/Intent;
 
     const-string v1, "com.android.phone.CallFeaturesSetting.ADD_VOICEMAIL"
@@ -4281,7 +3574,7 @@
     .line 1018
     .end local v11           #i:Landroid/content/Intent;
     .end local v13           #victim:Ljava/lang/String;
-    :cond_4
+    :cond_5
     const-string v1, "com.android.phone.VoicemailNumber"
 
     move-object/from16 v0, p3
@@ -4291,7 +3584,7 @@
     move-result-object v14
 
     .line 1019
-    if-eqz v14, :cond_5
+    if-eqz v14, :cond_6
 
     invoke-virtual {v14}, Ljava/lang/String;->length()I
 
@@ -4299,24 +3592,11 @@
 
     if-nez v1, :cond_0
 
-    .line 1021
-    :cond_5
-    const-string v1, "onActivityResult: vm provider cfg result has no vmnum"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1022
+    :cond_6
     const/4 v8, 0x1
 
     goto :goto_0
-
-    .line 1033
-    :cond_6
-    const-string v1, "Not switching back the provider since this is not forced config"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    goto :goto_1
 
     .line 1037
     :cond_7
@@ -4343,40 +3623,8 @@
 
     move-result v10
 
-    .line 1047
-    .local v10, fwdNumTime:I
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onActivityResult: vm provider cfg result "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    if-eqz v9, :cond_8
-
-    const-string v1, "has"
-
-    :goto_2
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " forwarding number"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1049
+    .local v10, fwdNumTime:I
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->getCurrentVoicemailProviderKey()Ljava/lang/String;
 
     move-result-object v1
@@ -4387,13 +3635,7 @@
 
     invoke-direct {p0, v1, v2}, Lcom/android/phone/CallFeaturesSetting;->saveVoiceMailAndForwardingNumber(Ljava/lang/String;Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;)V
 
-    goto/16 :goto_1
-
-    .line 1047
-    :cond_8
-    const-string v1, " does not have"
-
-    goto :goto_2
+    goto :goto_1
 
     .line 1054
     .end local v8           #failure:Z
@@ -4401,22 +3643,14 @@
     .end local v10           #fwdNumTime:I
     .end local v12           #isVMProviderSettingsForced:Z
     .end local v14           #vmNum:Ljava/lang/String;
-    :cond_9
+    :cond_8
     const/4 v1, -0x1
 
     move/from16 v0, p2
 
-    if-eq v0, v1, :cond_a
-
-    .line 1056
-    const-string v1, "onActivityResult: contact picker result not OK."
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    goto/16 :goto_1
+    if-ne v0, v1, :cond_1
 
     .line 1060
-    :cond_a
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
@@ -4439,39 +3673,26 @@
 
     .line 1062
     .local v7, cursor:Landroid/database/Cursor;
-    if-nez v7, :cond_b
-
-    .line 1064
-    const-string v1, "onActivityResult: bad contact data, query return null"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    goto/16 :goto_1
+    if-eqz v7, :cond_1
 
     .line 1067
-    :cond_b
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
-    if-nez v1, :cond_c
-
-    .line 1069
-    const-string v1, "onActivityResult: bad contact data, no results found."
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    if-nez v1, :cond_9
 
     .line 1079
-    :goto_3
+    :goto_2
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_1
 
     .line 1071
-    :cond_c
+    :cond_9
     packed-switch p1, :pswitch_data_0
 
-    goto :goto_3
+    goto :goto_2
 
     .line 1073
     :pswitch_0
@@ -4485,9 +3706,11 @@
 
     invoke-virtual {v1, v2}, Lcom/android/phone/EditPhoneNumberPreference;->onPickActivityResult(Ljava/lang/String;)V
 
-    goto :goto_3
+    goto :goto_2
 
     .line 1071
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4496,8 +3719,8 @@
 
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .parameter
-    .parameter
+    .parameter "dialog"
+    .parameter "which"
 
     .prologue
     const/16 v1, 0x1f6
@@ -4511,6 +3734,7 @@
     .line 1740
     :cond_0
     :goto_0
+    :pswitch_0
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -4535,21 +3759,8 @@
     :goto_1
     return-void
 
-    .line 1708
-    :pswitch_0
-    const-string v0, "Neutral button"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 1712
-    :pswitch_1
-    const-string v0, "Negative button"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1713
+    :pswitch_1
     iget v0, p0, Lcom/android/phone/CallFeaturesSetting;->mCurrentDialogId:I
 
     if-ne v0, v1, :cond_0
@@ -4559,13 +3770,8 @@
 
     goto :goto_0
 
-    .line 1721
-    :pswitch_2
-    const-string v0, "Positive button"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1722
+    :pswitch_2
     iget v0, p0, Lcom/android/phone/CallFeaturesSetting;->mCurrentDialogId:I
 
     if-ne v0, v1, :cond_2
@@ -4603,11 +3809,6 @@
 
     .line 1777
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreate(Landroid/os/Bundle;)V
-
-    .line 1778
-    const-string v0, "Creating activity"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 1779
     invoke-static {}, Lcom/android/phone/PhoneApp;->getPhone()Lcom/android/internal/telephony/Phone;
@@ -5706,32 +4907,11 @@
 .end method
 
 .method public onDialogClosed(Lcom/android/phone/EditPhoneNumberPreference;I)V
-    .locals 3
+    .locals 2
     .parameter "preference"
     .parameter "buttonClicked"
 
     .prologue
-    .line 855
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onPreferenceClick: request preference click on dialog close: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 856
     const/4 v1, -0x2
 
@@ -5775,11 +4955,6 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 878
-    const-string v2, "updating default for voicemail dialog"
-
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 879
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->updateVoiceNumberField()V
 
@@ -5803,11 +4978,6 @@
     move-result v2
 
     if-nez v2, :cond_0
-
-    .line 892
-    const-string v1, "updating default for call forwarding dialogs"
-
-    invoke-static {v1}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
 
     .line 893
     new-instance v1, Ljava/lang/StringBuilder;
@@ -5998,7 +5168,7 @@
     .line 777
     iget-object v10, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
-    if-ne p1, v10, :cond_5
+    if-ne p1, v10, :cond_4
 
     .line 778
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->getCurrentVoicemailProviderKey()Ljava/lang/String;
@@ -6052,17 +5222,9 @@
 
     move-result v9
 
-    if-eqz v9, :cond_3
-
-    .line 783
-    const-string v9, "No change "
-
-    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
-    goto :goto_0
+    if-nez v9, :cond_0
 
     .line 786
-    :cond_3
     invoke-direct {p0, v5}, Lcom/android/phone/CallFeaturesSetting;->updateVMPreferenceWidgets(Ljava/lang/String;)V
 
     .line 788
@@ -6075,12 +5237,7 @@
 
     .line 798
     .local v6, newProviderSettings:Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;
-    if-nez v6, :cond_4
-
-    .line 801
-    const-string v9, "Saved preferences not found - invoking config"
-
-    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
+    if-nez v6, :cond_3
 
     .line 802
     iput-boolean v8, p0, Lcom/android/phone/CallFeaturesSetting;->mVMProviderSettingsForced:Z
@@ -6092,13 +5249,8 @@
 
     goto :goto_0
 
-    .line 806
-    :cond_4
-    const-string v9, "Saved preferences found - switching to them"
-
-    invoke-static {v9}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 809
+    :cond_3
     iput-boolean v8, p0, Lcom/android/phone/CallFeaturesSetting;->mChangingVMorFwdDueToProviderChange:Z
 
     .line 810
@@ -6110,10 +5262,10 @@
     .end local v0           #currentProviderKey:Ljava/lang/String;
     .end local v5           #newProviderKey:Ljava/lang/String;
     .end local v6           #newProviderSettings:Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;
-    :cond_5
+    :cond_4
     iget-object v10, p0, Lcom/android/phone/CallFeaturesSetting;->mButtonSipCallOptions:Landroid/preference/ListPreference;
 
-    if-ne p1, v10, :cond_6
+    if-ne p1, v10, :cond_5
 
     .line 813
     invoke-direct {p0, p2}, Lcom/android/phone/CallFeaturesSetting;->handleSipCallOptionsChange(Ljava/lang/Object;)V
@@ -6121,7 +5273,7 @@
     goto :goto_0
 
     .line 814
-    :cond_6
+    :cond_5
     iget-object v10, p0, Lcom/android/phone/CallFeaturesSetting;->mVoiceCallEqListSetting:Landroid/preference/ListPreference;
 
     if-ne p1, v10, :cond_0
@@ -6164,7 +5316,7 @@
 
     .line 841
     .local v1, eqListEntries:[Ljava/lang/String;
-    if-nez v2, :cond_8
+    if-nez v2, :cond_7
 
     .line 842
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting;->mVoiceCallEqListSetting:Landroid/preference/ListPreference;
@@ -6212,7 +5364,7 @@
 
     move-result v10
 
-    if-nez v10, :cond_7
+    if-nez v10, :cond_6
 
     .line 827
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getContentResolver()Landroid/content/ContentResolver;
@@ -6247,7 +5399,7 @@
 
     .line 832
     .end local v2           #eqListValue:I
-    :cond_7
+    :cond_6
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
@@ -6272,7 +5424,7 @@
     .line 844
     .restart local v1       #eqListEntries:[Ljava/lang/String;
     .restart local v2       #eqListValue:I
-    :cond_8
+    :cond_7
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting;->mVoiceCallEqListSetting:Landroid/preference/ListPreference;
 
     aget-object v10, v1, v2
@@ -6432,35 +5584,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 606
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Invoking cfg intent "
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {p2}, Landroid/preference/Preference;->getIntent()Landroid/content/Intent;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/Intent;->getPackage()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 607
     invoke-virtual {p2}, Landroid/preference/Preference;->getIntent()Landroid/content/Intent;
 
@@ -6468,7 +5591,7 @@
 
     invoke-virtual {p0, v2, v6}, Lcom/android/phone/CallFeaturesSetting;->startActivityForResult(Landroid/content/Intent;I)V
 
-    goto/16 :goto_0
+    goto :goto_0
 
     .line 610
     :cond_6
@@ -7216,29 +6339,6 @@
     .locals 2
 
     .prologue
-    .line 961
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Flipping provider key back to "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPreviousVMProviderKey:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 962
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
@@ -7278,29 +6378,6 @@
     .locals 5
 
     .prologue
-    .line 1347
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "save voicemail #: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mNewVMNumber:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 1348
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPhone:Lcom/android/internal/telephony/Phone;
 
@@ -7348,13 +6425,8 @@
     :goto_0
     return-void
 
-    .line 906
-    :cond_0
-    const-string v0, "startSubActivity: starting requested subactivity"
-
-    invoke-static {v0}, Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-
     .line 907
+    :cond_0
     invoke-super {p0, p1, p2}, Landroid/preference/PreferenceActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0

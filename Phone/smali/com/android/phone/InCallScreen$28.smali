@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 4538
+    .line 4544
     iput-object p1, p0, Lcom/android/phone/InCallScreen$28;->this$0:Lcom/android/phone/InCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InCallScreen$28;->val$inCallUiState:Lcom/android/phone/InCallUiState;
@@ -48,11 +48,11 @@
     .parameter "which"
 
     .prologue
-    .line 4540
+    .line 4546
     iget-object v0, p0, Lcom/android/phone/InCallScreen$28;->val$inCallUiState:Lcom/android/phone/InCallUiState;
 
     invoke-virtual {v0}, Lcom/android/phone/InCallUiState;->clearPendingCallStatusCode()V
 
-    .line 4541
+    .line 4547
     return-void
 .end method

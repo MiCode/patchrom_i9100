@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3126
+    .line 3151
     iput-object p1, p0, Lcom/android/phone/BluetoothHandsfree$20;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
     iput-object p2, p0, Lcom/android/phone/BluetoothHandsfree$20;->val$phone:Lcom/android/internal/telephony/Phone;
@@ -43,14 +43,14 @@
     .locals 3
 
     .prologue
-    .line 3130
+    .line 3155
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$20;->val$phone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v1}, Lcom/android/internal/telephony/Phone;->getSubscriberId()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3131
+    .line 3156
     .local v0, imsi:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -60,7 +60,7 @@
 
     if-nez v1, :cond_1
 
-    .line 3132
+    .line 3157
     :cond_0
     iget-object v1, p0, Lcom/android/phone/BluetoothHandsfree$20;->this$0:Lcom/android/phone/BluetoothHandsfree;
 
@@ -70,7 +70,7 @@
 
     move-result-object v1
 
-    .line 3134
+    .line 3159
     :goto_0
     return-object v1
 

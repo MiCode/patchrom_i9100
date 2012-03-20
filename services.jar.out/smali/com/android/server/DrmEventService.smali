@@ -132,49 +132,49 @@
     .line 95
     iput-boolean v0, p0, Lcom/android/server/DrmEventService;->isRegisteredBootTime:Z
 
-    .line 357
+    .line 360
     new-instance v0, Lcom/android/server/DrmEventService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/DrmEventService$1;-><init>(Lcom/android/server/DrmEventService;)V
 
     iput-object v0, p0, Lcom/android/server/DrmEventService;->mTvOutReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1050
+    .line 1054
     new-instance v0, Lcom/android/server/DrmEventService$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/DrmEventService$2;-><init>(Lcom/android/server/DrmEventService;)V
 
     iput-object v0, p0, Lcom/android/server/DrmEventService;->nitZReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1060
+    .line 1064
     new-instance v0, Lcom/android/server/DrmEventService$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/DrmEventService$3;-><init>(Lcom/android/server/DrmEventService;)V
 
     iput-object v0, p0, Lcom/android/server/DrmEventService;->userUpdatedTimeReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1069
+    .line 1073
     new-instance v0, Lcom/android/server/DrmEventService$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/DrmEventService$4;-><init>(Lcom/android/server/DrmEventService;)V
 
     iput-object v0, p0, Lcom/android/server/DrmEventService;->wapPushReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1176
+    .line 1180
     new-instance v0, Lcom/android/server/DrmEventService$5;
 
     invoke-direct {v0, p0}, Lcom/android/server/DrmEventService$5;-><init>(Lcom/android/server/DrmEventService;)V
 
     iput-object v0, p0, Lcom/android/server/DrmEventService;->drmEventListener:Landroid/drm/DrmManagerClient$OnEventListener;
 
-    .line 1315
+    .line 1319
     new-instance v0, Lcom/android/server/DrmEventService$6;
 
     invoke-direct {v0, p0}, Lcom/android/server/DrmEventService$6;-><init>(Lcom/android/server/DrmEventService;)V
 
     iput-object v0, p0, Lcom/android/server/DrmEventService;->errorListener:Landroid/drm/DrmManagerClient$OnErrorListener;
 
-    .line 1350
+    .line 1354
     return-void
 .end method
 
@@ -183,10 +183,10 @@
     .parameter "roapTrigger"
 
     .prologue
-    .line 1341
+    .line 1345
     if-eqz p0, :cond_0
 
-    .line 1343
+    .line 1347
     const-string v2, "<contentID>"
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
@@ -195,7 +195,7 @@
 
     add-int/lit8 v1, v2, 0xb
 
-    .line 1344
+    .line 1348
     .local v1, startPosition:I
     const-string v2, "</contentID>"
 
@@ -203,13 +203,13 @@
 
     move-result v0
 
-    .line 1345
+    .line 1349
     .local v0, endPostion:I
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1347
+    .line 1351
     .end local v0           #endPostion:I
     .end local v1           #startPosition:I
     :goto_0
@@ -277,10 +277,10 @@
     .parameter "path"
 
     .prologue
-    .line 1391
+    .line 1395
     const/4 v2, 0x1
 
-    .line 1392
+    .line 1396
     .local v2, result:I
     if-eqz p0, :cond_1
 
@@ -294,7 +294,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 1393
+    .line 1397
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -303,7 +303,7 @@
 
     move-result-wide v0
 
-    .line 1394
+    .line 1398
     .local v0, len:J
     const-wide/16 v3, 0x0
 
@@ -311,7 +311,7 @@
 
     if-lez v3, :cond_0
 
-    .line 1395
+    .line 1399
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -334,20 +334,20 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1396
+    .line 1400
     const/4 v2, 0x3
 
-    .line 1404
+    .line 1408
     .end local v0           #len:J
     :goto_0
     return v2
 
-    .line 1398
+    .line 1402
     .restart local v0       #len:J
     :cond_0
     const/4 v2, 0x2
 
-    .line 1399
+    .line 1403
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -372,7 +372,7 @@
 
     goto :goto_0
 
-    .line 1402
+    .line 1406
     .end local v0           #len:J
     :cond_1
     const/4 v2, 0x1
@@ -385,147 +385,147 @@
     .parameter "db"
 
     .prologue
-    .line 572
+    .line 576
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 575
+    .line 579
     :try_start_0
     const-string v0, "CREATE UNIQUE INDEX asset_idx_cid ON drm2asset (c_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 577
+    .line 581
     const-string v0, "CREATE INDEX\tmetering_idx_riid ON drm2meteringReport (ri_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 580
+    .line 584
     const-string v0, "CREATE INDEX  rights_idx_time ON drm2rights (time_t);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 582
+    .line 586
     const-string v0, "CREATE INDEX\trights_idx_play ON drm2rights (play_eval);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 584
+    .line 588
     const-string v0, "CREATE INDEX\trights_idx_display ON drm2rights (display_eval);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 586
+    .line 590
     const-string v0, "CREATE INDEX\trights_idx_execute ON drm2rights (execute_eval);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 588
+    .line 592
     const-string v0, "CREATE INDEX\trights_idx_print ON drm2rights (print_eval);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 590
+    .line 594
     const-string v0, "CREATE INDEX\trights_idx_export ON drm2rights (export_eval);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 592
+    .line 596
     const-string v0, "CREATE INDEX\tcertInfo_idx_dev_id ON drm2certInfo (dev_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 594
+    .line 598
     const-string v0, "CREATE INDEX\tcertChainInfo_idx_no ON drm2certChainInfo (no);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 596
+    .line 600
     const-string v0, "CREATE INDEX\tcertChainInfo_idx_id ON drm2certChainInfo (id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 598
+    .line 602
     const-string v0, "CREATE INDEX\tcertChainInfo_idx_subject ON drm2certChainInfo (subject);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 600
+    .line 604
     const-string v0, "CREATE INDEX\tdoContext_idx_do_id ON drm2doContext (do_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 602
+    .line 606
     const-string v0, "CREATE INDEX\tdoContext_idx_rictx_id ON drm2doContext (rictx_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 604
+    .line 608
     const-string v0, "CREATE INDEX\tdoKeyList_idx_doctx_id ON drm2doKeyList (doctx_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 606
+    .line 610
     const-string v0, "CREATE INDEX\tvalidData_idx_rictx_id ON drm2validData (rictx_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 608
+    .line 612
     const-string v0, "CREATE INDEX\tUCWhiteList_idx_fqdn ON drm2UCWhiteList (ri_fqdn);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 610
+    .line 614
     const-string v0, "CREATE INDEX\tUCWhiteList_idx_riid ON drm2UCWhiteList (ri_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 612
+    .line 616
     const-string v0, "CREATE INDEX\tdoWhiteList_idx_url ON drm2doWhiteList (url);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 614
+    .line 618
     const-string v0, "CREATE INDEX\tdrm2contentInfo_idx_fn ON drm2contentInfo (filepath);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 616
+    .line 620
     const-string v0, "CREATE INDEX\tdrm2contentdir_idx_d_id ON drm2contentdir (d_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 618
+    .line 622
     const-string v0, "CREATE INDEX\tdrm2contentInfo_mmc_idx_fn ON drm2contentInfo_mmc (filepath);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 620
+    .line 624
     const-string v0, "CREATE INDEX\tdrm2contentdir_mmc_idx_d_id ON drm2contentdir_mmc (d_id);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 623
+    .line 627
     const-string v0, "INSERT INTO drm2RegistryInt (Deltasec) VALUES (0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 626
+    .line 630
     const-string v0, "INSERT INTO drm2RegistryString ( Cts ) VALUES (\'NONE\');"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 630
+    .line 634
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 632
+    .line 636
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 634
+    .line 638
     return-void
 
-    .line 632
+    .line 636
     :catchall_0
     move-exception v0
 
@@ -539,147 +539,147 @@
     .parameter "db"
 
     .prologue
-    .line 637
+    .line 641
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 640
+    .line 644
     :try_start_0
     const-string v0, "CREATE TABLE drm2asset (a_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,c_id VARCHAR(256) DEFAULT NULL,digest_method INT DEFAULT 0,digest_value VARCHAR(30) DEFAULT NULL,key_size INT DEFAULT 0,key_value VARCHAR(128) DEFAULT NULL,key_value_hash VARCHAR(30),ro_dnld INT DEFAULT 0,ref INT);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 649
+    .line 653
     const-string v0, "CREATE TABLE drm2meteringReport (m_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,ri_id VARCHAR(30) NOT NULL,c_id VARCHAR(256) NOT NULL,guid VARCHAR(256) DEFAULT NULL,play_curr_duration INT DEFAULT 0,display_curr_duration INT DEFAULT 0,execute_curr_duration INT DEFAULT 0,print_curr_duration INT DEFAULT 0,export_curr_duration INT DEFAULT 0,play_count INT DEFAULT 0,play_duration INT DEFAULT 0,display_count INT DEFAULT 0,display_duration INT DEFAULT 0,execute_count INT DEFAULT 0,execute_duration INT DEFAULT 0,print_count INT DEFAULT 0,print_duration INT DEFAULT 0,export_count INT DEFAULT 0,export_duration INT DEFAULT 0,ref_count INT DEFAULT 0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 670
+    .line 674
     const-string v0, "CREATE TABLE drm2TrackedInfo (ri_id VARCHAR(30) NOT NULL PRIMARY KEY,flag_remind CHAR(1) DEFAULT \'1\' );"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 673
+    .line 677
     const-string v0, "CREATE TABLE drm2rights (r_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,name VARCHAR(256) DEFAULT NULL,ro_alias VARCHAR(100) DEFAULT NULL,guid VARCHAR(256),time_t DATETIME,play_size INT DEFAULT 0,play_concurr_cnt INT DEFAULT 0,play_rights VARCHAR(512) DEFAULT NULL,play_hash VARCHAR(30) DEFAULT NULL,play_eval INT DEFAULT 0,display_size INT DEFAULT 0,display_concurr_cnt INT DEFAULT 0,display_rights VARCHAR(512) DEFAULT NULL,display_hash VARCHAR(30) DEFAULT NULL,display_eval INT DEFAULT 0,execute_size INT DEFAULT 0,execute_concurr_cnt INT DEFAULT 0,execute_rights VARCHAR(512) DEFAULT NULL,execute_hash VARCHAR(30) DEFAULT NULL,execute_eval INT DEFAULT 0,print_size INT DEFAULT 0,print_concurr_cnt INT DEFAULT 0,print_rights VARCHAR(512) DEFAULT NULL,print_hash VARCHAR(30) DEFAULT NULL,print_eval INT DEFAULT 0,export_size INT DEFAULT 0,export_concurr_cnt INT DEFAULT 0,export_rights VARCHAR(512) DEFAULT NULL,export_hash VARCHAR(30) DEFAULT NULL,export_eval INT DEFAULT 0,export_mode INT DEFAULT 0,p_id INT DEFAULT 0,ri_context INT DEFAULT 0,do_context INT DEFAULT 0, disable_ind CHAR(1) DEFAULT \'0\' );"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 706
+    .line 710
     const-string v0, "CREATE TABLE drm2lookup (a_id INT DEFAULT 0,r_id INT DEFAULT 0,dmn_id INT DEFAULT 0,usages CHAR(6));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 709
+    .line 713
     const-string v0, "CREATE TABLE drm2certInfo (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,path VARCHAR(128) DEFAULT NULL,dev_id VARCHAR(30) DEFAULT NULL,dev_offset INT DEFAULT 0,dev_length INT DEFAULT 0,pri_offset INT DEFAULT 0,pri_length INT DEFAULT 0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 716
+    .line 720
     const-string v0, "CREATE TABLE drm2certChainInfo (info_id INT,no INT DEFAULT 0,id VARCHAR(30) DEFAULT NULL,subject VARCHAR(256) DEFAULT NULL,offset INT DEFAULT 0,length INT DEFAULT 0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 721
+    .line 725
     const-string v0, "CREATE TABLE drm2riContext (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,dev_id VARCHAR(30) DEFAULT NULL,ver INT,ri_id VARCHAR(30) ,ri_pkey VARCHAR(512),ri_pkey_modsize INT,ri_pkey_keysize INT,ri_alias VARCHAR(100),ri_url VARCHAR(1024),expiry_time DATETIME,caching_ind CHAR(1),OCSP_id VARCHAR(30),OCSP_pkey VARCHAR(512),OCSP_pkey_modsize INT,OCSP_pkey_keysize INT,OCSP_next_update DATETIME,expiry_time_hash VARCHAR(30),hash VARCHAR(30),selected_algos VARCHAR(20));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 734
+    .line 738
     const-string v0, "CREATE TABLE drm2validData (rictx_id INT NOT NULL,no INT,certid VARCHAR(174),certid_size INT,hash VARCHAR(30));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 738
+    .line 742
     const-string v0, "CREATE TABLE drm2doContext (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,do_id VARCHAR(18),do_no INT,do_alias VARCHAR(100),expiry_time DATETIME,noConsumeAfter DATETIME,hchain_ind char(1),rictx_id INT,hash VARCHAR(30));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 744
+    .line 748
     const-string v0, "CREATE TABLE drm2doKeyList (doctx_id INT,do_no INT,do_key VARCHAR(50),do_key_hash VARCHAR(30));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 747
+    .line 751
     const-string v0, "CREATE TABLE drm2UCWhiteList (ri_fqdn VARCHAR(100) NOT NULL,ri_id VARCHAR(30) NOT NULL,flag_roap CHAR(1) DEFAULT \'0\',flag_meter CHAR(1) DEFAULT \'0\', PRIMARY KEY(ri_fqdn, ri_id) );"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 754
+    .line 758
     const-string v0, "CREATE TABLE drm2doWhiteList (url VARCHAR(100),rictx_id INT,hash VARCHAR(30));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 757
+    .line 761
     const-string v0, "CREATE TABLE drm2replaycache (t_stamp DATETIME,guid VARCHAR(256),hash VARCHAR(30));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 760
+    .line 764
     const-string v0, "CREATE TABLE drm2replaycacheguid (rep_id INT NOT NULL PRIMARY KEY,guid VARCHAR(256),hash VARCHAR(30));"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 763
+    .line 767
     const-string v0, "CREATE TABLE drm2contentInfo (mo_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , filepath VARCHAR(256), location INT, drm_type INT, tr_id CHAR(17), hash VARCHAR(30),no INT, a_id INT, g_id INT, enc_method INT, content_type VARCHAR(32) , DCFIntegrityCheck INT DEFAULT 0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 771
+    .line 775
     const-string v0, "CREATE TABLE drm2contentdir (d_id INTEGER PRIMARY KEY AUTOINCREMENT, d_path VARCHAR(256) );"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 774
+    .line 778
     const-string v0, "CREATE TABLE drm2contentInfo_mmc (mo_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT  , filepath VARCHAR(256), location INT, drm_type INT, tr_id CHAR(17), hash VARCHAR(30), no INT, a_id INT, g_id INT, enc_method INT, content_type VARCHAR(32) , DCFIntegrityCheck INT DEFAULT 0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 782
+    .line 786
     const-string v0, "CREATE TABLE drm2contentdir_mmc (d_id INTEGER PRIMARY KEY AUTOINCREMENT, d_path VARCHAR(256) );"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 785
+    .line 789
     const-string v0, "CREATE TABLE drm2_ro_store(rights_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,domainname VARCHAR(20) DEFAULT \' \',ri_id VARCHAR(50),ro_id VARCHAR(256),ro_type INT,rights_size INT,rights VARCHAR(8000),install_status INT);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 792
+    .line 796
     const-string v0, "CREATE TABLE drm2OnExpiredURLInfo (asset_uid VARCHAR(256) NOT NULL PRIMARY KEY,onexpired_url VARCHAR(1024) NOT NULL);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 795
+    .line 799
     const-string v0, "CREATE TABLE Drm2ExpiryTimeTable( idx int primary key,\tcontainerNo int default 0, szFilePath\t\t\tvarchar(256) not null, expirytime\t\t\tbigint\tnot null, expirytype\t\t\tint default -1, settingCategory \tint default 0, count\t\t\t\tint default 0, context \t\t\tint default 0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 803
+    .line 807
     const-string v0, "CREATE TABLE drm2RegistryInt( \tregint_id INTEGER PRIMARY KEY AUTOINCREMENT, \tDeltasec\t\t\t\tINT \tDEFAULT  0, \tTracking\t\t\t\tINT \tDEFAULT  0, \tNextUID \t\t\t\tINT \tDEFAULT  0, \tVersion \t\t\t\tINT \tDEFAULT  1, \tIMSILen \t\t\t\tINT \tDEFAULT  0, \tIMEILen \t\t\t\tINT \tDEFAULT  0, \tExpiryReminderAlarmID\tINT \tDEFAULT  0, \tExpRemSettingCategory\tINT \tDEFAULT -1, \tExpRemExpiryType\t\tINT \tDEFAULT -1, \tExpiryReminderTime\t\tFLOAT\tDEFAULT  0.00);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 815
+    .line 819
     const-string v0, "CREATE TABLE drm2RegistryString( regstring_id INTEGER PRIMARY KEY AUTOINCREMENT, Cts \t\t\tVARCHAR(256) DEFAULT NONE, IMSI\t\t\tVARCHAR(256) DEFAULT FFFFFFFFFFFFFFF, IMEI\t\t\tVARCHAR(256) DEFAULT FFFFFFFFFFFFFFFFFF, ExpRemFilePath\tVARCHAR(256) DEFAULT NULL);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 821
+    .line 825
     const-string v0, "CREATE TABLE Drm2RunAlarmTable(\tRoID\t\t\t\t\tint , ExpiryDateTime\t\t\tbigint\tnot null);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 824
+    .line 828
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 826
+    .line 830
     invoke-virtual {p1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 829
+    .line 833
     return-void
 
-    .line 826
+    .line 830
     :catchall_0
     move-exception v0
 
@@ -693,7 +693,7 @@
     .parameter "path"
 
     .prologue
-    .line 846
+    .line 850
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -710,7 +710,7 @@
     .parameter "path"
 
     .prologue
-    .line 1413
+    .line 1417
     if-eqz p0, :cond_3
 
     new-instance v0, Ljava/io/File;
@@ -723,19 +723,19 @@
 
     if-eqz v0, :cond_3
 
-    .line 1414
+    .line 1418
     sget-boolean v0, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 1415
+    .line 1419
     const-string v0, "DrmEventService"
 
     const-string v1, "deleteLegacydb DB exists .. so trying to delete "
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1417
+    .line 1421
     :cond_0
     new-instance v0, Ljava/io/File;
 
@@ -747,24 +747,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 1418
+    .line 1422
     sget-boolean v0, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v0, :cond_2
 
-    .line 1420
+    .line 1424
     const-string v0, "DrmEventService"
 
     const-string v1, "deleted old db "
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1431
+    .line 1435
     :cond_1
     :goto_0
     return-void
 
-    .line 1424
+    .line 1428
     :cond_2
     const-string v0, "DrmEventService"
 
@@ -774,7 +774,7 @@
 
     goto :goto_0
 
-    .line 1429
+    .line 1433
     :cond_3
     const-string v0, "DrmEventService"
 
@@ -789,14 +789,14 @@
     .locals 10
 
     .prologue
-    .line 849
+    .line 853
     const-wide/16 v0, 0x0
 
-    .line 850
+    .line 854
     .local v0, beforeTime:J
     const/4 v2, 0x0
 
-    .line 852
+    .line 856
     .local v2, br:Ljava/io/BufferedReader;
     :try_start_0
     new-instance v3, Ljava/io/BufferedReader;
@@ -814,7 +814,7 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 853
+    .line 857
     .end local v2           #br:Ljava/io/BufferedReader;
     .local v3, br:Ljava/io/BufferedReader;
     :try_start_1
@@ -822,24 +822,24 @@
 
     if-eqz v7, :cond_0
 
-    .line 854
+    .line 858
     const-string v7, "DrmEventService"
 
     const-string v8, "FileReading Start"
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 855
+    .line 859
     :cond_0
     const-string v5, ""
 
-    .line 856
+    .line 860
     .local v5, nextLine:Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuffer;
 
     invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 857
+    .line 861
     .local v6, sb:Ljava/lang/StringBuffer;
     :goto_0
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -848,7 +848,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 858
+    .line 862
     invoke-virtual {v6, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -858,7 +858,7 @@
 
     goto :goto_0
 
-    .line 869
+    .line 873
     .end local v5           #nextLine:Ljava/lang/String;
     .end local v6           #sb:Ljava/lang/StringBuffer;
     :catch_0
@@ -866,7 +866,7 @@
 
     move-object v2, v3
 
-    .line 871
+    .line 875
     .end local v3           #br:Ljava/io/BufferedReader;
     .restart local v2       #br:Ljava/io/BufferedReader;
     .local v4, e:Ljava/lang/NumberFormatException;
@@ -876,22 +876,22 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 880
+    .line 884
     if-eqz v2, :cond_1
 
-    .line 882
+    .line 886
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 887
+    .line 891
     .end local v4           #e:Ljava/lang/NumberFormatException;
     :cond_1
     :goto_2
     return-wide v0
 
-    .line 860
+    .line 864
     .end local v2           #br:Ljava/io/BufferedReader;
     .restart local v3       #br:Ljava/io/BufferedReader;
     .restart local v5       #nextLine:Ljava/lang/String;
@@ -902,7 +902,7 @@
 
     if-eqz v7, :cond_3
 
-    .line 861
+    .line 865
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -929,7 +929,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 863
+    .line 867
     :cond_3
     invoke-virtual {v6}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -939,12 +939,12 @@
 
     move-result-wide v0
 
-    .line 865
+    .line 869
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_4
 
-    .line 866
+    .line 870
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -972,11 +972,11 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_7
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_6
 
-    .line 880
+    .line 884
     :cond_4
     if-eqz v3, :cond_5
 
-    .line 882
+    .line 886
     :try_start_5
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -986,18 +986,18 @@
     :goto_3
     move-object v2, v3
 
-    .line 885
+    .line 889
     .end local v3           #br:Ljava/io/BufferedReader;
     .restart local v2       #br:Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 872
+    .line 876
     .end local v5           #nextLine:Ljava/lang/String;
     .end local v6           #sb:Ljava/lang/StringBuffer;
     :catch_1
     move-exception v4
 
-    .line 874
+    .line 878
     .local v4, e:Ljava/io/FileNotFoundException;
     :goto_4
     :try_start_6
@@ -1005,10 +1005,10 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 880
+    .line 884
     if-eqz v2, :cond_1
 
-    .line 882
+    .line 886
     :try_start_7
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_7
@@ -1016,18 +1016,18 @@
 
     goto :goto_2
 
-    .line 883
+    .line 887
     .end local v4           #e:Ljava/io/FileNotFoundException;
     :catch_2
     move-exception v7
 
     goto :goto_2
 
-    .line 875
+    .line 879
     :catch_3
     move-exception v4
 
-    .line 877
+    .line 881
     .local v4, e:Ljava/io/IOException;
     :goto_5
     :try_start_8
@@ -1035,10 +1035,10 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 880
+    .line 884
     if-eqz v2, :cond_1
 
-    .line 882
+    .line 886
     :try_start_9
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_9
@@ -1046,7 +1046,7 @@
 
     goto :goto_2
 
-    .line 880
+    .line 884
     .end local v4           #e:Ljava/io/IOException;
     :catchall_0
     move-exception v7
@@ -1054,18 +1054,18 @@
     :goto_6
     if-eqz v2, :cond_6
 
-    .line 882
+    .line 886
     :try_start_a
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_4
 
-    .line 880
+    .line 884
     :cond_6
     :goto_7
     throw v7
 
-    .line 883
+    .line 887
     :catch_4
     move-exception v8
 
@@ -1080,7 +1080,7 @@
 
     goto :goto_3
 
-    .line 880
+    .line 884
     .end local v5           #nextLine:Ljava/lang/String;
     .end local v6           #sb:Ljava/lang/StringBuffer;
     :catchall_1
@@ -1092,7 +1092,7 @@
     .restart local v2       #br:Ljava/io/BufferedReader;
     goto :goto_6
 
-    .line 875
+    .line 879
     .end local v2           #br:Ljava/io/BufferedReader;
     .restart local v3       #br:Ljava/io/BufferedReader;
     :catch_6
@@ -1104,7 +1104,7 @@
     .restart local v2       #br:Ljava/io/BufferedReader;
     goto :goto_5
 
-    .line 872
+    .line 876
     .end local v2           #br:Ljava/io/BufferedReader;
     .restart local v3       #br:Ljava/io/BufferedReader;
     :catch_7
@@ -1116,7 +1116,7 @@
     .restart local v2       #br:Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 869
+    .line 873
     :catch_8
     move-exception v4
 
@@ -1131,7 +1131,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1436
+    .line 1440
     monitor-enter p0
 
     :try_start_0
@@ -1139,7 +1139,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 1437
+    .line 1441
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1162,20 +1162,20 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1438
+    .line 1442
     :cond_0
     const/4 v1, -0x1
 
-    .line 1440
+    .line 1444
     .local v1, ret:I
     packed-switch p1, :pswitch_data_0
 
-    .line 1491
+    .line 1495
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_1
 
-    .line 1492
+    .line 1496
     const-string v3, "DrmEventService"
 
     const-string v4, "Not a valid operation requested in handleDbOperation"
@@ -1184,33 +1184,33 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1496
+    .line 1500
     :cond_1
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 1444
+    .line 1448
     :pswitch_0
     :try_start_1
     iget-object v3, p0, Lcom/android/server/DrmEventService;->mDrmManagerClient:Landroid/drm/DrmManagerClient;
 
     if-eqz v3, :cond_3
 
-    .line 1446
+    .line 1450
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_2
 
-    .line 1447
+    .line 1451
     const-string v3, "DrmEventService"
 
     const-string v4, "handleDbOperation processDrmInfo "
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1448
+    .line 1452
     :cond_2
     iget-object v3, p0, Lcom/android/server/DrmEventService;->mDrmManagerClient:Landroid/drm/DrmManagerClient;
 
@@ -1218,12 +1218,12 @@
 
     move-result v1
 
-    .line 1450
+    .line 1454
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_1
 
-    .line 1451
+    .line 1455
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1250,7 +1250,7 @@
 
     goto :goto_0
 
-    .line 1436
+    .line 1440
     .end local v1           #ret:I
     :catchall_0
     move-exception v3
@@ -1259,7 +1259,7 @@
 
     throw v3
 
-    .line 1454
+    .line 1458
     .restart local v1       #ret:I
     :cond_3
     :try_start_2
@@ -1267,7 +1267,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 1455
+    .line 1459
     const-string v3, "DrmEventService"
 
     const-string v4, "Failed to Install the rights received. No DRM manager instance"
@@ -1276,33 +1276,33 @@
 
     goto :goto_0
 
-    .line 1460
+    .line 1464
     :pswitch_1
     const/4 v2, 0x0
 
-    .line 1461
+    .line 1465
     .local v2, status:Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 1463
+    .line 1467
     .local v0, result_info:Landroid/drm/DrmInfo;
     iget-object v3, p0, Lcom/android/server/DrmEventService;->mDrmManagerClient:Landroid/drm/DrmManagerClient;
 
     if-eqz v3, :cond_6
 
-    .line 1465
+    .line 1469
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_4
 
-    .line 1466
+    .line 1470
     const-string v3, "DrmEventService"
 
     const-string v4, "handleDbOperation processDrmRequest "
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1467
+    .line 1471
     :cond_4
     iget-object v3, p0, Lcom/android/server/DrmEventService;->mDrmManagerClient:Landroid/drm/DrmManagerClient;
 
@@ -1310,7 +1310,7 @@
 
     move-result-object v0
 
-    .line 1468
+    .line 1472
     const-string v3, "status"
 
     invoke-virtual {v0, v3}, Landroid/drm/DrmInfo;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -1321,12 +1321,12 @@
 
     move-result-object v2
 
-    .line 1470
+    .line 1474
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_5
 
-    .line 1471
+    .line 1475
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1349,7 +1349,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1473
+    .line 1477
     :cond_5
     const-string v3, "success"
 
@@ -1359,18 +1359,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 1474
+    .line 1478
     const/4 v1, 0x0
 
     goto/16 :goto_0
 
-    .line 1478
+    .line 1482
     :cond_6
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_1
 
-    .line 1479
+    .line 1483
     const-string v3, "DrmEventService"
 
     const-string v4, "Failed to Install the rights received. No DRM manager instance"
@@ -1379,7 +1379,7 @@
 
     goto/16 :goto_0
 
-    .line 1485
+    .line 1489
     .end local v0           #result_info:Landroid/drm/DrmInfo;
     .end local v2           #status:Ljava/lang/String;
     :pswitch_2
@@ -1387,13 +1387,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1486
+    .line 1490
     const/4 v1, 0x0
 
-    .line 1488
+    .line 1492
     goto/16 :goto_0
 
-    .line 1440
+    .line 1444
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_0
@@ -1407,28 +1407,28 @@
     .parameter "intent"
 
     .prologue
-    .line 464
+    .line 468
     invoke-direct {p0}, Lcom/android/server/DrmEventService;->setPermissions()V
 
-    .line 465
+    .line 469
     const-string v6, "/data/data/com.sec.android.providers.drm/databases/drmdatabase.db"
 
     invoke-static {v6}, Lcom/android/server/DrmEventService;->deleteLegacydb(Ljava/lang/String;)V
 
-    .line 466
+    .line 470
     const-string v6, "/data/system/databases/drmdatabase.db"
 
     invoke-static {v6}, Lcom/android/server/DrmEventService;->checkForFileorDirectoryExists(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 467
+    .line 471
     .local v5, temp:I
     sget-boolean v6, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v6, :cond_0
 
-    .line 468
+    .line 472
     const-string v6, "DrmEventService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1451,25 +1451,25 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 469
+    .line 473
     :cond_0
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_3
 
-    .line 470
+    .line 474
     sget-boolean v6, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v6, :cond_1
 
-    .line 471
+    .line 475
     const-string v6, "DrmEventService"
 
     const-string v7, "DRM Initialization is Not Yet Done /data/system/databases/drmdatabase.db"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
+    .line 477
     :cond_1
     :try_start_0
     new-instance v3, Lcom/android/server/DrmEventService$OpenDatabaseHelper;
@@ -1480,65 +1480,65 @@
 
     invoke-direct {v3, p0, v6}, Lcom/android/server/DrmEventService$OpenDatabaseHelper;-><init>(Lcom/android/server/DrmEventService;Landroid/content/Context;)V
 
-    .line 475
+    .line 479
     .local v3, mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    .line 477
+    .line 481
     .local v1, db:Landroid/database/sqlite/SQLiteDatabase;
     invoke-direct {p0, v1}, Lcom/android/server/DrmEventService;->createTables(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 479
+    .line 483
     invoke-direct {p0, v1}, Lcom/android/server/DrmEventService;->createIndexData(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 481
+    .line 485
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
-    .line 483
+    .line 487
     invoke-direct {p0}, Lcom/android/server/DrmEventService;->setPermissions()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 569
+    .line 573
     .end local v1           #db:Landroid/database/sqlite/SQLiteDatabase;
     .end local v3           #mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
     :cond_2
     :goto_0
     return-void
 
-    .line 491
+    .line 495
     :catch_0
     move-exception v2
 
-    .line 492
+    .line 496
     .local v2, e:Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 494
+    .line 498
     .end local v2           #e:Ljava/lang/Exception;
     :cond_3
     const/4 v6, 0x2
 
     if-ne v5, v6, :cond_6
 
-    .line 497
+    .line 501
     :try_start_1
     sget-boolean v6, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v6, :cond_4
 
-    .line 498
+    .line 502
     const-string v6, "DrmEventService"
 
     const-string v7, "DRM Initialization is not done:calling initOmaDRM/data/system/databases/drmdatabase.db"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
+    .line 503
     :cond_4
     const-string v6, "/data/system/databases/drmdatabase.db"
 
@@ -1548,7 +1548,7 @@
 
     if-eqz v6, :cond_5
 
-    .line 500
+    .line 504
     new-instance v3, Lcom/android/server/DrmEventService$OpenDatabaseHelper;
 
     invoke-virtual {p0}, Lcom/android/server/DrmEventService;->getApplicationContext()Landroid/content/Context;
@@ -1557,42 +1557,42 @@
 
     invoke-direct {v3, p0, v6}, Lcom/android/server/DrmEventService$OpenDatabaseHelper;-><init>(Lcom/android/server/DrmEventService;Landroid/content/Context;)V
 
-    .line 502
+    .line 506
     .restart local v3       #mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    .line 504
+    .line 508
     .restart local v1       #db:Landroid/database/sqlite/SQLiteDatabase;
     invoke-direct {p0, v1}, Lcom/android/server/DrmEventService;->createTables(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 506
+    .line 510
     invoke-direct {p0, v1}, Lcom/android/server/DrmEventService;->createIndexData(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 508
+    .line 512
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
-    .line 510
+    .line 514
     invoke-direct {p0}, Lcom/android/server/DrmEventService;->setPermissions()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     goto :goto_0
 
-    .line 522
+    .line 526
     .end local v1           #db:Landroid/database/sqlite/SQLiteDatabase;
     .end local v3           #mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
     :catch_1
     move-exception v2
 
-    .line 523
+    .line 527
     .restart local v2       #e:Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 519
+    .line 523
     .end local v2           #e:Ljava/lang/Exception;
     :cond_5
     :try_start_2
@@ -1600,7 +1600,7 @@
 
     if-eqz v6, :cond_2
 
-    .line 520
+    .line 524
     const-string v6, "DrmEventService"
 
     const-string v7, "File could not able to delete "
@@ -1611,25 +1611,25 @@
 
     goto :goto_0
 
-    .line 525
+    .line 529
     :cond_6
     const/4 v6, 0x3
 
     if-ne v5, v6, :cond_2
 
-    .line 526
+    .line 530
     sget-boolean v6, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v6, :cond_7
 
-    .line 527
+    .line 531
     const-string v6, "DrmEventService"
 
     const-string v7, "Verify all tables are created properly or not ?"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 528
+    .line 532
     :cond_7
     new-instance v3, Lcom/android/server/DrmEventService$OpenDatabaseHelper;
 
@@ -1639,13 +1639,13 @@
 
     invoke-direct {v3, p0, v6}, Lcom/android/server/DrmEventService$OpenDatabaseHelper;-><init>(Lcom/android/server/DrmEventService;Landroid/content/Context;)V
 
-    .line 530
+    .line 534
     .restart local v3       #mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    .line 531
+    .line 535
     .restart local v1       #db:Landroid/database/sqlite/SQLiteDatabase;
     const-string v6, "SELECT * FROM sqlite_master WHERE type=\'table\'"
 
@@ -1655,17 +1655,17 @@
 
     move-result-object v0
 
-    .line 532
+    .line 536
     .local v0, cursor:Landroid/database/Cursor;
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v4
 
-    .line 533
+    .line 537
     .local v4, tablesCount:I
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 534
+    .line 538
     sget-object v6, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1688,15 +1688,15 @@
 
     invoke-virtual {v6, v7}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 535
+    .line 539
     const/16 v6, 0x1b
 
     if-ge v4, v6, :cond_9
 
-    .line 537
+    .line 541
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
-    .line 538
+    .line 542
     const-string v6, "/data/system/databases/drmdatabase.db"
 
     invoke-direct {p0, v6}, Lcom/android/server/DrmEventService;->deleteDRMDBFile(Ljava/lang/String;)Z
@@ -1705,7 +1705,7 @@
 
     if-eqz v6, :cond_8
 
-    .line 539
+    .line 543
     new-instance v3, Lcom/android/server/DrmEventService$OpenDatabaseHelper;
 
     .end local v3           #mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
@@ -1715,27 +1715,27 @@
 
     invoke-direct {v3, p0, v6}, Lcom/android/server/DrmEventService$OpenDatabaseHelper;-><init>(Lcom/android/server/DrmEventService;Landroid/content/Context;)V
 
-    .line 541
+    .line 545
     .restart local v3       #mOpenHelper:Landroid/database/sqlite/SQLiteOpenHelper;
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
-    .line 543
+    .line 547
     invoke-direct {p0, v1}, Lcom/android/server/DrmEventService;->createTables(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 545
+    .line 549
     invoke-direct {p0, v1}, Lcom/android/server/DrmEventService;->createIndexData(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 547
+    .line 551
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
-    .line 549
+    .line 553
     invoke-direct {p0}, Lcom/android/server/DrmEventService;->setPermissions()V
 
     goto/16 :goto_0
 
-    .line 558
+    .line 562
     :cond_8
     const-string v6, "DrmEventService"
 
@@ -1745,11 +1745,11 @@
 
     goto/16 :goto_0
 
-    .line 562
+    .line 566
     :cond_9
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteOpenHelper;->close()V
 
-    .line 564
+    .line 568
     invoke-direct {p0}, Lcom/android/server/DrmEventService;->setPermissions()V
 
     goto/16 :goto_0
@@ -1864,13 +1864,13 @@
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 346
+    .line 349
     .local v1, tvOutFilter:Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.HDMI_PLUGGED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 347
+    .line 350
     invoke-virtual {p0}, Lcom/android/server/DrmEventService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
@@ -1879,17 +1879,17 @@
 
     invoke-virtual {v3, v4, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 352
+    .line 355
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/DrmEventService;->isRegisteredBootTime:Z
 
-    .line 353
+    .line 356
     sget-boolean v3, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v3, :cond_2
 
-    .line 354
+    .line 357
     const-string v3, "DrmEventService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1916,7 +1916,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 356
+    .line 359
     :cond_2
     monitor-exit p0
 
@@ -1938,7 +1938,7 @@
     .locals 0
 
     .prologue
-    .line 843
+    .line 847
     return-void
 .end method
 
@@ -1947,7 +1947,7 @@
     .parameter "intent"
 
     .prologue
-    .line 397
+    .line 401
     invoke-virtual {p0}, Lcom/android/server/DrmEventService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v4
@@ -1958,7 +1958,7 @@
 
     move-result-object v2
 
-    .line 398
+    .line 402
     .local v2, nowTimeFormat:Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/server/DrmEventService;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1972,13 +1972,13 @@
 
     move-result v0
 
-    .line 399
+    .line 403
     .local v0, autoEnable:I
     sget-boolean v4, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v4, :cond_0
 
-    .line 401
+    .line 405
     const-string v4, "DrmEventService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2001,7 +2001,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 402
+    .line 406
     const-string v4, "DrmEventService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2026,7 +2026,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 403
+    .line 407
     const-string v4, "DrmEventService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2049,7 +2049,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 405
+    .line 409
     :cond_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -2059,31 +2059,31 @@
 
     move-result-object v1
 
-    .line 408
+    .line 412
     .local v1, now:Ljava/util/Date;
     iget-object v4, p0, Lcom/android/server/DrmEventService;->timeFormat:Ljava/lang/String;
 
     if-nez v4, :cond_1
 
-    .line 410
+    .line 414
     const-string v4, "24"
 
     iput-object v4, p0, Lcom/android/server/DrmEventService;->timeFormat:Ljava/lang/String;
 
-    .line 413
+    .line 417
     :cond_1
     if-nez v2, :cond_2
 
-    .line 415
+    .line 419
     const-string v2, "24"
 
-    .line 417
+    .line 421
     :cond_2
     sget-boolean v4, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v4, :cond_3
 
-    .line 419
+    .line 423
     const-string v4, "DrmEventService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2108,7 +2108,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 420
+    .line 424
     const-string v4, "DrmEventService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2131,7 +2131,7 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
+    .line 428
     :cond_3
     iget-object v4, p0, Lcom/android/server/DrmEventService;->timeFormat:Ljava/lang/String;
 
@@ -2141,50 +2141,50 @@
 
     if-eqz v4, :cond_a
 
-    .line 425
+    .line 429
     sget-boolean v4, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v4, :cond_4
 
-    .line 426
+    .line 430
     const-string v4, "DrmEventService"
 
     const-string v5, "userUpdatedTimeReceiver time format is not changed check if it is NITZ Update"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
+    .line 432
     :cond_4
     if-nez v0, :cond_7
 
-    .line 429
+    .line 433
     sget-boolean v4, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v4, :cond_5
 
-    .line 430
+    .line 434
     const-string v4, "DrmEventService"
 
     const-string v5, "This is a not NITZ update.Time format is also not changed.Update delta"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
+    .line 435
     :cond_5
     invoke-virtual {p0, p1}, Lcom/android/server/DrmEventService;->handleUserUpdatedTimeUpdation(Landroid/content/Intent;)V
 
-    .line 458
+    .line 462
     :cond_6
     :goto_0
     return-void
 
-    .line 435
+    .line 439
     :cond_7
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
 
-    .line 438
+    .line 442
     .local v3, telephonymanager:Landroid/telephony/TelephonyManager;
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getSimState()I
 
@@ -2194,31 +2194,31 @@
 
     if-eq v4, v5, :cond_9
 
-    .line 440
+    .line 444
     sget-boolean v4, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v4, :cond_8
 
-    .line 441
+    .line 445
     const-string v4, "DrmEventService"
 
     const-string v5, "Auto time update is on but sim is not in ready state hence no NITZ update will follow"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
+    .line 446
     :cond_8
     invoke-virtual {p0, p1}, Lcom/android/server/DrmEventService;->handleUserUpdatedTimeUpdation(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 446
+    .line 450
     :cond_9
     sget-boolean v4, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v4, :cond_6
 
-    .line 447
+    .line 451
     const-string v4, "DrmEventService"
 
     const-string v5, "This is a NITZ update.So no need to update delta"
@@ -2227,21 +2227,21 @@
 
     goto :goto_0
 
-    .line 452
+    .line 456
     .end local v3           #telephonymanager:Landroid/telephony/TelephonyManager;
     :cond_a
     sget-boolean v4, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v4, :cond_b
 
-    .line 453
+    .line 457
     const-string v4, "DrmEventService"
 
     const-string v5, "userUpdatedTimeReceiver format is changed no need to udpate Delta"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
+    .line 458
     :cond_b
     iput-object v2, p0, Lcom/android/server/DrmEventService;->timeFormat:Ljava/lang/String;
 
@@ -2256,12 +2256,12 @@
     .parameter "filePath"
 
     .prologue
-    .line 1131
+    .line 1135
     sget-boolean v2, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v2, :cond_0
 
-    .line 1132
+    .line 1136
     const-string v2, "DrmEventService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2284,7 +2284,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1133
+    .line 1137
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -2292,38 +2292,38 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1134
+    .line 1138
     .local v0, contentIntent:Landroid/content/Intent;
     const-string v2, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1135
+    .line 1139
     const-string v2, "application/oma.drm.popup"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1136
+    .line 1140
     const/high16 v2, 0x2000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1137
+    .line 1141
     const/high16 v2, 0x1000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1138
+    .line 1142
     const-string v2, "result"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1139
+    .line 1143
     const-string v2, "filePath"
 
     invoke-virtual {v0, v2, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1142
+    .line 1146
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/DrmEventService;->getApplicationContext()Landroid/content/Context;
 
@@ -2333,22 +2333,22 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1150
+    .line 1154
     :cond_1
     :goto_0
     return-void
 
-    .line 1144
+    .line 1148
     :catch_0
     move-exception v1
 
-    .line 1146
+    .line 1150
     .local v1, e:Landroid/content/ActivityNotFoundException;
     sget-boolean v2, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v2, :cond_1
 
-    .line 1147
+    .line 1151
     const-string v2, "DrmEventService"
 
     const-string v3, "unable to startActivity"
@@ -2363,12 +2363,12 @@
     .parameter "Status"
 
     .prologue
-    .line 1155
+    .line 1159
     sget-boolean v2, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v2, :cond_0
 
-    .line 1156
+    .line 1160
     const-string v2, "DrmEventService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2391,7 +2391,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1158
+    .line 1162
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -2399,33 +2399,33 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1159
+    .line 1163
     .local v0, contentIntent:Landroid/content/Intent;
     const-string v2, "android.intent.action.VIEW"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1160
+    .line 1164
     const-string v2, "application/oma.drm.popup"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1161
+    .line 1165
     const/high16 v2, 0x2000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1162
+    .line 1166
     const/high16 v2, 0x1000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1163
+    .line 1167
     const-string v2, "status"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1166
+    .line 1170
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/DrmEventService;->getApplicationContext()Landroid/content/Context;
 
@@ -2435,22 +2435,22 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1173
+    .line 1177
     :cond_1
     :goto_0
     return-void
 
-    .line 1168
+    .line 1172
     :catch_0
     move-exception v1
 
-    .line 1170
+    .line 1174
     .local v1, e:Landroid/content/ActivityNotFoundException;
     sget-boolean v2, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v2, :cond_1
 
-    .line 1171
+    .line 1175
     const-string v2, "DrmEventService"
 
     const-string v3, "unable to startActivity"
@@ -2465,26 +2465,26 @@
     .parameter "intent"
 
     .prologue
-    .line 914
+    .line 918
     const-wide/16 v4, 0x0
 
-    .line 915
+    .line 919
     .local v4, nitzTime:J
     if-eqz p1, :cond_4
 
-    .line 916
+    .line 920
     const-string v7, "DrmEventService"
 
     const-string v8, "handleNitztimeUpdation"
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 919
+    .line 923
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 920
+    .line 924
     .local v0, c:Ljava/util/Calendar;
     const-string v7, "GMT"
 
@@ -2494,13 +2494,13 @@
 
     invoke-virtual {v0, v7}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 923
+    .line 927
     :try_start_0
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_0
 
-    .line 925
+    .line 929
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2659,7 +2659,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 932
+    .line 936
     :cond_0
     new-instance v2, Landroid/drm/DrmInfoRequest;
 
@@ -2669,7 +2669,7 @@
 
     invoke-direct {v2, v7, v8}, Landroid/drm/DrmInfoRequest;-><init>(ILjava/lang/String;)V
 
-    .line 933
+    .line 937
     .local v2, mDrmInfoRequest:Landroid/drm/DrmInfoRequest;
     const-string v7, "year"
 
@@ -2689,7 +2689,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 934
+    .line 938
     const-string v7, "month"
 
     const/4 v8, 0x2
@@ -2710,7 +2710,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 935
+    .line 939
     const-string v7, "day"
 
     const/4 v8, 0x5
@@ -2729,7 +2729,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 936
+    .line 940
     const-string v7, "hour"
 
     const/16 v8, 0xb
@@ -2748,7 +2748,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 937
+    .line 941
     const-string v7, "minute"
 
     const/16 v8, 0xc
@@ -2767,7 +2767,7 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 938
+    .line 942
     const-string v7, "second"
 
     const/16 v8, 0xd
@@ -2786,19 +2786,19 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 951
+    .line 955
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_1
 
-    .line 952
+    .line 956
     const-string v7, "DrmEventService"
 
     const-string v8, "calling handleDbOperation : TIME_CLOCK_UPDATE "
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 954
+    .line 958
     :cond_1
     const/4 v7, 0x6
 
@@ -2810,13 +2810,13 @@
 
     move-result v6
 
-    .line 956
+    .line 960
     .local v6, ret:I
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_2
 
-    .line 957
+    .line 961
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2839,7 +2839,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 960
+    .line 964
     :cond_2
     new-instance v3, Landroid/drm/DrmInfoRequest;
 
@@ -2849,7 +2849,7 @@
 
     invoke-direct {v3, v7, v8}, Landroid/drm/DrmInfoRequest;-><init>(ILjava/lang/String;)V
 
-    .line 961
+    .line 965
     .local v3, mPRDrmInfoRequest:Landroid/drm/DrmInfoRequest;
     const-string v7, "year"
 
@@ -2869,7 +2869,7 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 962
+    .line 966
     const-string v7, "month"
 
     const/4 v8, 0x2
@@ -2890,7 +2890,7 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 963
+    .line 967
     const-string v7, "day"
 
     const/4 v8, 0x5
@@ -2909,7 +2909,7 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 964
+    .line 968
     const-string v7, "hour"
 
     const/16 v8, 0xb
@@ -2928,7 +2928,7 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 965
+    .line 969
     const-string v7, "minute"
 
     const/16 v8, 0xc
@@ -2947,7 +2947,7 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 966
+    .line 970
     const-string v7, "second"
 
     const/16 v8, 0xd
@@ -2966,19 +2966,19 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 976
+    .line 980
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_3
 
-    .line 977
+    .line 981
     const-string v7, "DrmEventService"
 
     const-string v8, "calling handleDbOperation : TIME_CLOCK_UPDATE "
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 978
+    .line 982
     :cond_3
     const/4 v7, 0x6
 
@@ -2990,12 +2990,12 @@
 
     move-result v6
 
-    .line 980
+    .line 984
     sget-boolean v7, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v7, :cond_4
 
-    .line 981
+    .line 985
     const-string v7, "DrmEventService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3020,7 +3020,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 988
+    .line 992
     .end local v0           #c:Ljava/util/Calendar;
     .end local v2           #mDrmInfoRequest:Landroid/drm/DrmInfoRequest;
     .end local v3           #mPRDrmInfoRequest:Landroid/drm/DrmInfoRequest;
@@ -3029,12 +3029,12 @@
     :goto_0
     return-void
 
-    .line 983
+    .line 987
     .restart local v0       #c:Ljava/util/Calendar;
     :catch_0
     move-exception v1
 
-    .line 984
+    .line 988
     .local v1, e:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3050,14 +3050,14 @@
 
     const/4 v12, 0x6
 
-    .line 993
+    .line 997
     const-wide/16 v2, 0x0
 
-    .line 994
+    .line 998
     .local v2, beforeTime:J
     const-wide/16 v0, 0x0
 
-    .line 995
+    .line 999
     .local v0, afterTime:J
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -3067,7 +3067,7 @@
 
     move-result-object v6
 
-    .line 996
+    .line 1000
     .local v6, now:Ljava/util/Date;
     invoke-virtual {v6}, Ljava/util/Date;->getTime()J
 
@@ -3077,17 +3077,17 @@
 
     div-long v0, v8, v10
 
-    .line 997
+    .line 1001
     invoke-direct {p0}, Lcom/android/server/DrmEventService;->getBeforeTime()J
 
     move-result-wide v2
 
-    .line 999
+    .line 1003
     sget-boolean v8, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v8, :cond_0
 
-    .line 1000
+    .line 1004
     const-string v8, "DrmEventService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -3120,7 +3120,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1002
+    .line 1006
     :cond_0
     new-instance v4, Landroid/drm/DrmInfoRequest;
 
@@ -3128,7 +3128,7 @@
 
     invoke-direct {v4, v12, v8}, Landroid/drm/DrmInfoRequest;-><init>(ILjava/lang/String;)V
 
-    .line 1003
+    .line 1007
     .local v4, mDrmInfoRequest:Landroid/drm/DrmInfoRequest;
     const-string v8, "before"
 
@@ -3142,7 +3142,7 @@
 
     invoke-virtual {v4, v8, v9}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1004
+    .line 1008
     const-string v8, "after"
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -3155,31 +3155,31 @@
 
     invoke-virtual {v4, v8, v9}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1021
+    .line 1025
     sget-boolean v8, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v8, :cond_1
 
-    .line 1022
+    .line 1026
     const-string v8, "DrmEventService"
 
     const-string v9, "calling handleDbOperation : TIME_CLOCK_UPDATE "
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1024
+    .line 1028
     :cond_1
     invoke-direct {p0, v12, v13, v4, v13}, Lcom/android/server/DrmEventService;->handleDbOperation(ILandroid/drm/DrmInfo;Landroid/drm/DrmInfoRequest;Landroid/content/Intent;)I
 
     move-result v7
 
-    .line 1026
+    .line 1030
     .local v7, ret:I
     sget-boolean v8, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v8, :cond_2
 
-    .line 1027
+    .line 1031
     const-string v8, "DrmEventService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -3202,7 +3202,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1030
+    .line 1034
     :cond_2
     new-instance v5, Landroid/drm/DrmInfoRequest;
 
@@ -3210,7 +3210,7 @@
 
     invoke-direct {v5, v12, v8}, Landroid/drm/DrmInfoRequest;-><init>(ILjava/lang/String;)V
 
-    .line 1031
+    .line 1035
     .local v5, mPRDrmInfoRequest:Landroid/drm/DrmInfoRequest;
     const-string v8, "before"
 
@@ -3224,7 +3224,7 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1032
+    .line 1036
     const-string v8, "after"
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -3237,30 +3237,30 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/drm/DrmInfoRequest;->put(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1041
+    .line 1045
     sget-boolean v8, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v8, :cond_3
 
-    .line 1042
+    .line 1046
     const-string v8, "DrmEventService"
 
     const-string v9, "calling handleDbOperation : TIME_CLOCK_UPDATE "
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1044
+    .line 1048
     :cond_3
     invoke-direct {p0, v12, v13, v5, v13}, Lcom/android/server/DrmEventService;->handleDbOperation(ILandroid/drm/DrmInfo;Landroid/drm/DrmInfoRequest;Landroid/content/Intent;)I
 
     move-result v7
 
-    .line 1046
+    .line 1050
     sget-boolean v8, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v8, :cond_4
 
-    .line 1047
+    .line 1051
     const-string v8, "DrmEventService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -3283,7 +3283,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1048
+    .line 1052
     :cond_4
     return-void
 .end method

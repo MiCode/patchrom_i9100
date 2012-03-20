@@ -60,7 +60,7 @@
 
     const/4 v3, 0x0
 
-    .line 543
+    .line 542
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     const-string v1, "Normal"
@@ -69,7 +69,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->Normal:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
-    .line 548
+    .line 547
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     const-string v1, "NetworkLocked"
@@ -78,7 +78,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->NetworkLocked:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
-    .line 553
+    .line 552
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     const-string v1, "SimMissing"
@@ -87,7 +87,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->SimMissing:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
-    .line 559
+    .line 558
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     const-string v1, "SimMissingLocked"
@@ -96,7 +96,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->SimMissingLocked:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
-    .line 565
+    .line 564
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     const-string v1, "SimPukLocked"
@@ -105,7 +105,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->SimPukLocked:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
-    .line 570
+    .line 569
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     const-string v1, "SimLocked"
@@ -116,7 +116,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->SimLocked:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
-    .line 575
+    .line 574
     new-instance v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     const-string v1, "SimPermDisabled"
@@ -127,7 +127,7 @@
 
     sput-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->SimPermDisabled:Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
-    .line 539
+    .line 538
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
@@ -181,13 +181,13 @@
     .end annotation
 
     .prologue
-    .line 579
+    .line 578
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 580
+    .line 579
     iput-boolean p3, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->mShowStatusLines:Z
 
-    .line 581
+    .line 580
     return-void
 .end method
 
@@ -196,7 +196,7 @@
     .parameter "name"
 
     .prologue
-    .line 539
+    .line 538
     const-class v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -212,7 +212,7 @@
     .locals 1
 
     .prologue
-    .line 539
+    .line 538
     sget-object v0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->$VALUES:[Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;
 
     invoke-virtual {v0}, [Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->clone()Ljava/lang/Object;
@@ -230,7 +230,7 @@
     .locals 1
 
     .prologue
-    .line 588
+    .line 587
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager$StatusMode;->mShowStatusLines:Z
 
     return v0

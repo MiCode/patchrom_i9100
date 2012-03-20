@@ -26,32 +26,21 @@
 
 # direct methods
 .method private constructor <init>(Landroid/content/Context;)V
-    .locals 3
+    .locals 2
     .parameter "context"
 
     .prologue
-    const/4 v0, 0x1
-
     const/4 v1, 0x0
 
     .line 94
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-direct {p0, v2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
+    invoke-direct {p0, v0}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
 
     .line 40
-    const-string v2, "ro.debuggable"
-
-    invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
-    iput-boolean v0, p0, Lcom/android/phone/AdditionalCallerInfoAsyncQuery;->DBG:Z
+    iput-boolean v1, p0, Lcom/android/phone/AdditionalCallerInfoAsyncQuery;->DBG:Z
 
     .line 52
     iput v1, p0, Lcom/android/phone/AdditionalCallerInfoAsyncQuery;->mQueryState:I
@@ -61,12 +50,6 @@
 
     .line 97
     return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 40
-    goto :goto_0
 .end method
 
 .method private findAuthenticator([Landroid/accounts/AuthenticatorDescription;Ljava/lang/String;)Landroid/accounts/AuthenticatorDescription;

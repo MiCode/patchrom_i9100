@@ -655,12 +655,6 @@
     .line 692
     :array_0
     .array-data 0x4
-        0x2ct 0x7t 0x8t 0x1t
-        0x2dt 0x7t 0x8t 0x1t
-        0x2et 0x7t 0x8t 0x1t
-        0x2ft 0x7t 0x8t 0x1t
-        0x30t 0x7t 0x8t 0x1t
-        0x31t 0x7t 0x8t 0x1t
         0x32t 0x7t 0x8t 0x1t
         0x33t 0x7t 0x8t 0x1t
         0x34t 0x7t 0x8t 0x1t
@@ -675,6 +669,12 @@
         0x3dt 0x7t 0x8t 0x1t
         0x3et 0x7t 0x8t 0x1t
         0x3ft 0x7t 0x8t 0x1t
+        0x40t 0x7t 0x8t 0x1t
+        0x41t 0x7t 0x8t 0x1t
+        0x42t 0x7t 0x8t 0x1t
+        0x43t 0x7t 0x8t 0x1t
+        0x44t 0x7t 0x8t 0x1t
+        0x45t 0x7t 0x8t 0x1t
     .end array-data
 .end method
 
@@ -2651,7 +2651,7 @@
     .locals 8
 
     .prologue
-    const v7, 0x10806dc
+    const v7, 0x10806e2
 
     const/4 v6, -0x1
 
@@ -2696,7 +2696,7 @@
     .line 152
     iget-object v1, p0, Lcom/android/internal/policy/impl/CircleUnlockView;->mCircleIn:Landroid/widget/ImageView;
 
-    const v2, 0x10806df
+    const v2, 0x10806e5
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2712,7 +2712,7 @@
     .line 156
     iget-object v1, p0, Lcom/android/internal/policy/impl/CircleUnlockView;->mCircleOut:Landroid/widget/ImageView;
 
-    const v2, 0x10806e0
+    const v2, 0x10806e6
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2752,7 +2752,7 @@
     .line 166
     iget-object v1, p0, Lcom/android/internal/policy/impl/CircleUnlockView;->mCircleArrow2:Landroid/widget/ImageView;
 
-    const v2, 0x10806dd
+    const v2, 0x10806e3
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2778,7 +2778,7 @@
     .line 172
     iget-object v1, p0, Lcom/android/internal/policy/impl/CircleUnlockView;->mCircleArrow3:Landroid/widget/ImageView;
 
-    const v2, 0x10806de
+    const v2, 0x10806e4
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2823,7 +2823,7 @@
     .line 182
     iget-object v1, p0, Lcom/android/internal/policy/impl/CircleUnlockView;->mCircleArrow2_1:Landroid/widget/ImageView;
 
-    const v2, 0x10806dd
+    const v2, 0x10806e3
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2844,7 +2844,7 @@
     .line 187
     iget-object v1, p0, Lcom/android/internal/policy/impl/CircleUnlockView;->mCircleArrow3_1:Landroid/widget/ImageView;
 
-    const v2, 0x10806de
+    const v2, 0x10806e4
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -2865,7 +2865,7 @@
     .line 192
     iget-object v1, p0, Lcom/android/internal/policy/impl/CircleUnlockView;->mCircleCenter:Landroid/widget/ImageView;
 
-    const v2, 0x10806e3
+    const v2, 0x10806e9
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 

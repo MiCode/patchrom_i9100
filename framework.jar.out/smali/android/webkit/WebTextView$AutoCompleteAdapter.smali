@@ -44,13 +44,13 @@
     .end annotation
 
     .prologue
-    .line 953
+    .line 955
     .local p2, entries:Ljava/util/ArrayList;,"Ljava/util/ArrayList<Ljava/lang/String;>;"
-    const v0, 0x10900c7
+    const v0, 0x10900ca
 
     invoke-direct {p0, p1, v0, p2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;ILjava/util/List;)V
 
-    .line 955
+    .line 957
     return-void
 .end method
 
@@ -60,7 +60,7 @@
     .parameter "x1"
 
     .prologue
-    .line 949
+    .line 951
     invoke-direct {p0, p1}, Landroid/webkit/WebTextView$AutoCompleteAdapter;->setTextView(Landroid/widget/TextView;)V
 
     return-void
@@ -71,10 +71,10 @@
     .parameter "tv"
 
     .prologue
-    .line 974
+    .line 976
     iput-object p1, p0, Landroid/webkit/WebTextView$AutoCompleteAdapter;->mTextView:Landroid/widget/TextView;
 
-    .line 975
+    .line 977
     return-void
 .end method
 
@@ -87,14 +87,14 @@
     .parameter "parent"
 
     .prologue
-    .line 962
+    .line 964
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ArrayAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 964
+    .line 966
     .local v0, tv:Landroid/widget/TextView;
     if-eqz v0, :cond_0
 
@@ -102,7 +102,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 965
+    .line 967
     const/4 v1, 0x0
 
     iget-object v2, p0, Landroid/webkit/WebTextView$AutoCompleteAdapter;->mTextView:Landroid/widget/TextView;
@@ -113,7 +113,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 967
+    .line 969
     :cond_0
     return-object v0
 .end method

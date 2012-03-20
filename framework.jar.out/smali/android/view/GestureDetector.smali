@@ -38,6 +38,8 @@
 
 .field private static final TAP_TIMEOUT:I
 
+.field private static velocityType:I
+
 
 # instance fields
 .field AngleTemp:[F
@@ -208,6 +210,11 @@
     move-result v0
 
     sput v0, Landroid/view/GestureDetector;->DOUBLE_TAP_TIMEOUT:I
+
+    .line 1208
+    const/4 v0, 0x0
+
+    sput v0, Landroid/view/GestureDetector;->velocityType:I
 
     return-void
 .end method
@@ -675,58 +682,58 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1147
+    .line 1171
     iget-object v0, p0, Landroid/view/GestureDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1148
+    .line 1172
     iget-object v0, p0, Landroid/view/GestureDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1149
+    .line 1173
     iget-object v0, p0, Landroid/view/GestureDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1150
+    .line 1174
     iget-object v0, p0, Landroid/view/GestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 1151
+    .line 1175
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/view/GestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 1152
+    .line 1176
     iput-boolean v2, p0, Landroid/view/GestureDetector;->mIsDoubleTapping:Z
 
-    .line 1153
+    .line 1177
     iput-boolean v2, p0, Landroid/view/GestureDetector;->mStillDown:Z
 
-    .line 1154
+    .line 1178
     iput-boolean v2, p0, Landroid/view/GestureDetector;->mAlwaysInTapRegion:Z
 
-    .line 1155
+    .line 1179
     iput-boolean v2, p0, Landroid/view/GestureDetector;->mAlwaysInBiggerTapRegion:Z
 
-    .line 1156
+    .line 1180
     iget-boolean v0, p0, Landroid/view/GestureDetector;->mInLongPress:Z
 
     if-eqz v0, :cond_0
 
-    .line 1157
+    .line 1181
     iput-boolean v2, p0, Landroid/view/GestureDetector;->mInLongPress:Z
 
-    .line 1159
+    .line 1183
     :cond_0
     return-void
 .end method
@@ -735,26 +742,26 @@
     .locals 2
 
     .prologue
-    .line 1177
+    .line 1201
     iget-object v0, p0, Landroid/view/GestureDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1178
+    .line 1202
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/view/GestureDetector;->mInLongPress:Z
 
-    .line 1179
+    .line 1203
     iget-object v0, p0, Landroid/view/GestureDetector;->mListener:Landroid/view/GestureDetector$OnGestureListener;
 
     iget-object v1, p0, Landroid/view/GestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
 
     invoke-interface {v0, v1}, Landroid/view/GestureDetector$OnGestureListener;->onLongPress(Landroid/view/MotionEvent;)V
 
-    .line 1180
+    .line 1204
     return-void
 .end method
 
@@ -877,17 +884,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1163
+    .line 1187
     iget-boolean v3, p0, Landroid/view/GestureDetector;->mAlwaysInBiggerTapRegion:Z
 
     if-nez v3, :cond_1
 
-    .line 1173
+    .line 1197
     :cond_0
     :goto_0
     return v2
 
-    .line 1167
+    .line 1191
     :cond_1
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getEventTime()J
 
@@ -907,7 +914,7 @@
 
     if-gtz v3, :cond_0
 
-    .line 1171
+    .line 1195
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
@@ -922,7 +929,7 @@
 
     sub-int v0, v3, v4
 
-    .line 1172
+    .line 1196
     .local v0, deltaX:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -938,7 +945,7 @@
 
     sub-int v1, v3, v4
 
-    .line 1173
+    .line 1197
     .local v1, deltaY:I
     mul-int v3, v0, v0
 
@@ -957,6 +964,28 @@
 
 
 # virtual methods
+.method public getVelocityType(Landroid/view/View;)I
+    .locals 1
+    .parameter "view"
+
+    .prologue
+    .line 1212
+    if-eqz p1, :cond_0
+
+    .line 1213
+    invoke-virtual {p1}, Landroid/view/View;->getVelocityPolynomialType()I
+
+    move-result v0
+
+    sput v0, Landroid/view/GestureDetector;->velocityType:I
+
+    .line 1216
+    :cond_0
+    sget v0, Landroid/view/GestureDetector;->velocityType:I
+
+    return v0
+.end method
+
 .method public isLongpressEnabled()Z
     .locals 1
 
@@ -1062,7 +1091,7 @@
 
     packed-switch v19, :pswitch_data_0
 
-    .line 1140
+    .line 1164
     :cond_2
     :goto_0
     :pswitch_0
@@ -1076,7 +1105,7 @@
 
     if-eqz v19, :cond_3
 
-    .line 1141
+    .line 1165
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/view/GestureDetector;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
@@ -1093,7 +1122,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/InputEventConsistencyVerifier;->onUnhandledEvent(Landroid/view/InputEvent;I)V
 
-    .line 1143
+    .line 1167
     :cond_3
     return v10
 
@@ -1905,7 +1934,7 @@
 
     or-int v10, v10, v19
 
-    .line 1123
+    .line 1147
     :cond_f
     :goto_3
     move-object/from16 v0, p0
@@ -1916,7 +1945,7 @@
 
     if-eqz v19, :cond_10
 
-    .line 1124
+    .line 1148
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/view/GestureDetector;->mPreviousUpEvent:Landroid/view/MotionEvent;
@@ -1925,13 +1954,13 @@
 
     invoke-virtual/range {v19 .. v19}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 1127
+    .line 1151
     :cond_10
     move-object/from16 v0, p0
 
     iput-object v5, v0, Landroid/view/GestureDetector;->mPreviousUpEvent:Landroid/view/MotionEvent;
 
-    .line 1128
+    .line 1152
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/view/GestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
@@ -1940,7 +1969,7 @@
 
     invoke-virtual/range {v19 .. v19}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 1129
+    .line 1153
     const/16 v19, 0x0
 
     move-object/from16 v0, v19
@@ -1949,7 +1978,7 @@
 
     iput-object v0, v1, Landroid/view/GestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 1130
+    .line 1154
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -1958,7 +1987,7 @@
 
     iput-boolean v0, v1, Landroid/view/GestureDetector;->mIsDoubleTapping:Z
 
-    .line 1131
+    .line 1155
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/view/GestureDetector;->mHandler:Landroid/os/Handler;
@@ -1969,7 +1998,7 @@
 
     invoke-virtual/range {v19 .. v20}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1132
+    .line 1156
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/view/GestureDetector;->mHandler:Landroid/os/Handler;
@@ -2047,7 +2076,7 @@
 
     iget-object v14, v0, Landroid/view/GestureDetector;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 1114
+    .line 1115
     .local v14, velocityTracker:Landroid/view/VelocityTracker;
     const/16 v19, 0x3e8
 
@@ -2069,18 +2098,44 @@
 
     invoke-virtual {v14, v0, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 1115
+    .line 1118
+    sget v19, Landroid/view/GestureDetector;->velocityType:I
+
+    if-nez v19, :cond_15
+
+    .line 1120
+    const/16 v19, 0x3e8
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/view/GestureDetector;->mMaximumFlingVelocity:I
+
+    move/from16 v20, v0
+
+    move/from16 v0, v20
+
+    int-to-float v0, v0
+
+    move/from16 v20, v0
+
+    move/from16 v0, v19
+
+    move/from16 v1, v20
+
+    invoke-virtual {v14, v0, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
+
+    .line 1122
     invoke-virtual {v14}, Landroid/view/VelocityTracker;->getYVelocity()F
 
     move-result v16
 
-    .line 1116
+    .line 1123
     .local v16, velocityY:F
     invoke-virtual {v14}, Landroid/view/VelocityTracker;->getXVelocity()F
 
     move-result v15
 
-    .line 1118
+    .line 1125
     .local v15, velocityX:F
     invoke-static/range {v16 .. v16}, Ljava/lang/Math;->abs(F)F
 
@@ -2122,7 +2177,7 @@
 
     if-lez v19, :cond_f
 
-    .line 1120
+    .line 1127
     :cond_14
     move-object/from16 v0, p0
 
@@ -2150,7 +2205,112 @@
 
     goto/16 :goto_3
 
+    .line 1132
+    .end local v15           #velocityX:F
+    .end local v16           #velocityY:F
+    :cond_15
+    const/16 v19, 0x3e8
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/view/GestureDetector;->mMaximumFlingVelocity:I
+
+    move/from16 v20, v0
+
+    move/from16 v0, v20
+
+    int-to-float v0, v0
+
+    move/from16 v20, v0
+
+    move/from16 v0, v19
+
+    move/from16 v1, v20
+
+    invoke-virtual {v14, v0, v1}, Landroid/view/VelocityTracker;->computeMonomialCurrentVelocity(IF)V
+
+    .line 1133
+    invoke-virtual {v14}, Landroid/view/VelocityTracker;->getMonomialXVelocity()F
+
+    move-result v16
+
+    .line 1134
+    .restart local v16       #velocityY:F
+    invoke-virtual {v14}, Landroid/view/VelocityTracker;->getMonomialYVelocity()F
+
+    move-result v15
+
     .line 1136
+    .restart local v15       #velocityX:F
+    invoke-static/range {v16 .. v16}, Ljava/lang/Math;->abs(F)F
+
+    move-result v19
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/view/GestureDetector;->mMinimumFlingVelocity:I
+
+    move/from16 v20, v0
+
+    move/from16 v0, v20
+
+    int-to-float v0, v0
+
+    move/from16 v20, v0
+
+    cmpl-float v19, v19, v20
+
+    if-gtz v19, :cond_16
+
+    invoke-static {v15}, Ljava/lang/Math;->abs(F)F
+
+    move-result v19
+
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/view/GestureDetector;->mMinimumFlingVelocity:I
+
+    move/from16 v20, v0
+
+    move/from16 v0, v20
+
+    int-to-float v0, v0
+
+    move/from16 v20, v0
+
+    cmpl-float v19, v19, v20
+
+    if-lez v19, :cond_f
+
+    .line 1138
+    :cond_16
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/view/GestureDetector;->mListener:Landroid/view/GestureDetector$OnGestureListener;
+
+    move-object/from16 v19, v0
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/view/GestureDetector;->mCurrentDownEvent:Landroid/view/MotionEvent;
+
+    move-object/from16 v20, v0
+
+    move-object/from16 v0, v19
+
+    move-object/from16 v1, v20
+
+    move-object/from16 v2, p1
+
+    move/from16 v3, v16
+
+    invoke-interface {v0, v1, v2, v15, v3}, Landroid/view/GestureDetector$OnGestureListener;->onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+
+    move-result v10
+
+    goto/16 :goto_3
+
+    .line 1160
     .end local v5           #currentUpEvent:Landroid/view/MotionEvent;
     .end local v14           #velocityTracker:Landroid/view/VelocityTracker;
     .end local v15           #velocityX:F
@@ -6828,5 +6988,25 @@
     iput-object p1, p0, Landroid/view/GestureDetector;->mDoubleTapListener:Landroid/view/GestureDetector$OnDoubleTapListener;
 
     .line 548
+    return-void
+.end method
+
+.method public setVelocityType(Landroid/view/View;I)V
+    .locals 0
+    .parameter "view"
+    .parameter "type"
+
+    .prologue
+    .line 1222
+    if-eqz p1, :cond_0
+
+    .line 1223
+    sput p2, Landroid/view/GestureDetector;->velocityType:I
+
+    .line 1224
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVelocityPolynomialType(I)V
+
+    .line 1227
+    :cond_0
     return-void
 .end method

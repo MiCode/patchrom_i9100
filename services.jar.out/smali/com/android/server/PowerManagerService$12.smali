@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 2897
+    .line 2899
     iput-object p1, p0, Lcom/android/server/PowerManagerService$12;->this$0:Lcom/android/server/PowerManagerService;
 
     iput-object p2, p0, Lcom/android/server/PowerManagerService$12;->val$finalReason:Ljava/lang/String;
@@ -46,10 +46,10 @@
     .locals 5
 
     .prologue
-    .line 2899
+    .line 2901
     monitor-enter p0
 
-    .line 2900
+    .line 2902
     :try_start_0
     const-string v2, "shutdownlogger"
 
@@ -61,19 +61,19 @@
 
     move-result-object v0
 
-    .line 2901
+    .line 2903
     .local v0, service:Landroid/app/IShutdownLogger;
     new-instance v1, Landroid/app/ShutdownLoggerManager;
 
     invoke-direct {v1, v0}, Landroid/app/ShutdownLoggerManager;-><init>(Landroid/app/IShutdownLogger;)V
 
-    .line 2902
+    .line 2904
     .local v1, slm:Landroid/app/ShutdownLoggerManager;
     const-string v2, "PowerManagerService.reboot()"
 
     invoke-virtual {v1, v2}, Landroid/app/ShutdownLoggerManager;->appendLog(Ljava/lang/String;)V
 
-    .line 2903
+    .line 2905
     iget-object v2, p0, Lcom/android/server/PowerManagerService$12;->this$0:Lcom/android/server/PowerManagerService;
 
     #getter for: Lcom/android/server/PowerManagerService;->mContext:Landroid/content/Context;
@@ -87,13 +87,13 @@
 
     invoke-static {v2, v3, v4}, Lcom/android/internal/app/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 2904
+    .line 2906
     monitor-exit p0
 
-    .line 2906
+    .line 2908
     return-void
 
-    .line 2904
+    .line 2906
     .end local v0           #service:Landroid/app/IShutdownLogger;
     .end local v1           #slm:Landroid/app/ShutdownLoggerManager;
     :catchall_0

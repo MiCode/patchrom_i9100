@@ -166,7 +166,7 @@
     if-eqz v0, :cond_0
 
     .line 337
-    const v1, 0x1080743
+    const v1, 0x1080749
 
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
@@ -203,7 +203,7 @@
     .parameter "icon"
 
     .prologue
-    const v10, 0x1080743
+    const v10, 0x1080749
 
     const/4 v9, 0x0
 

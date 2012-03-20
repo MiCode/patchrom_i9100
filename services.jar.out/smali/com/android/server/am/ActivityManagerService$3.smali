@@ -25,7 +25,7 @@
     .parameter "x0"
 
     .prologue
-    .line 1574
+    .line 1576
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -36,10 +36,10 @@
 
 # virtual methods
 .method public run()V
-    .locals 11
+    .locals 10
 
     .prologue
-    .line 1579
+    .line 1581
     :goto_0
     :try_start_0
     monitor-enter p0
@@ -47,107 +47,98 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1580
+    .line 1582
     :try_start_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v4
 
-    .line 1581
-    .local v5, now:J
-    iget-object v7, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
+    .line 1583
+    .local v4, now:J
+    iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    iget-object v7, v7, Lcom/android/server/am/ActivityManagerService;->mLastCpuTime:Ljava/util/concurrent/atomic/AtomicLong;
+    iget-object v6, v6, Lcom/android/server/am/ActivityManagerService;->mLastCpuTime:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
-    move-result-wide v7
+    move-result-wide v6
 
-    const-wide/32 v9, 0xfffffff
+    const-wide/32 v8, 0xfffffff
 
-    add-long/2addr v7, v9
+    add-long/2addr v6, v8
 
-    sub-long v1, v7, v5
+    sub-long v0, v6, v4
 
-    .line 1582
-    .local v1, nextCpuDelay:J
-    iget-object v7, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
+    .line 1584
+    .local v0, nextCpuDelay:J
+    iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    iget-wide v7, v7, Lcom/android/server/am/ActivityManagerService;->mLastWriteTime:J
+    iget-wide v6, v6, Lcom/android/server/am/ActivityManagerService;->mLastWriteTime:J
 
-    const-wide/32 v9, 0x1b7740
+    const-wide/32 v8, 0x1b7740
 
-    add-long/2addr v7, v9
+    add-long/2addr v6, v8
 
-    sub-long v3, v7, v5
+    sub-long v2, v6, v4
 
-    .line 1585
-    .local v3, nextWriteDelay:J
-    cmp-long v7, v3, v1
+    .line 1587
+    .local v2, nextWriteDelay:J
+    cmp-long v6, v2, v0
 
-    if-gez v7, :cond_0
-
-    .line 1586
-    move-wide v1, v3
+    if-gez v6, :cond_0
 
     .line 1588
-    :cond_0
-    const-wide/16 v7, 0x0
-
-    cmp-long v7, v1, v7
-
-    if-lez v7, :cond_1
-
-    .line 1589
-    iget-object v7, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
-
-    iget-object v7, v7, Lcom/android/server/am/ActivityManagerService;->mProcessStatsMutexFree:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v7, v8}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    move-wide v0, v2
 
     .line 1590
-    invoke-virtual {p0, v1, v2}, Ljava/lang/Object;->wait(J)V
+    :cond_0
+    const-wide/16 v6, 0x0
+
+    cmp-long v6, v0, v6
+
+    if-lez v6, :cond_1
+
+    .line 1591
+    iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v6, v6, Lcom/android/server/am/ActivityManagerService;->mProcessStatsMutexFree:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v7, 0x1
+
+    invoke-virtual {v6, v7}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     .line 1592
+    invoke-virtual {p0, v0, v1}, Ljava/lang/Object;->wait(J)V
+
+    .line 1594
     :cond_1
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1595
-    .end local v1           #nextCpuDelay:J
-    .end local v3           #nextWriteDelay:J
-    .end local v5           #now:J
+    .line 1597
+    .end local v0           #nextCpuDelay:J
+    .end local v2           #nextWriteDelay:J
+    .end local v4           #now:J
     :goto_1
     :try_start_2
-    iget-object v7, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
+    iget-object v6, p0, Lcom/android/server/am/ActivityManagerService$3;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    invoke-virtual {v7}, Lcom/android/server/am/ActivityManagerService;->updateCpuStatsNow()V
+    invoke-virtual {v6}, Lcom/android/server/am/ActivityManagerService;->updateCpuStatsNow()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto :goto_0
 
-    .line 1596
+    .line 1598
     :catch_0
-    move-exception v0
-
-    .line 1597
-    .local v0, e:Ljava/lang/Exception;
-    const-string v7, "ActivityManager"
-
-    const-string v8, "Unexpected exception collecting process stats"
-
-    invoke-static {v7, v8, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    move-exception v6
 
     goto :goto_0
 
-    .line 1592
-    .end local v0           #e:Ljava/lang/Exception;
+    .line 1594
     :catchall_0
-    move-exception v7
+    move-exception v6
 
     :try_start_3
     monitor-exit p0
@@ -155,14 +146,14 @@
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     :try_start_4
-    throw v7
+    throw v6
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 1593
+    .line 1595
     :catch_1
-    move-exception v7
+    move-exception v6
 
     goto :goto_1
 .end method

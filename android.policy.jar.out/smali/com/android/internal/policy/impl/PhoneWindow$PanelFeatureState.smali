@@ -628,7 +628,7 @@
     iput v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->windowAnimations:I
 
     .line 3428
-    const/16 v1, 0xe1
+    const/16 v1, 0xe3
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
@@ -637,7 +637,7 @@
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/PhoneWindow$PanelFeatureState;->isCompact:Z
 
     .line 3430
-    const/16 v1, 0xe3
+    const/16 v1, 0xe5
 
     const v2, 0x10302fd
 

@@ -51,12 +51,13 @@
     packed-switch v2, :pswitch_data_0
 
     .line 1451
+    :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$6;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     iget-boolean v2, v2, Lcom/android/phone/CallFeaturesSetting;->mVMChangeCompletedSuccesfully:Z
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_1
 
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$6;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
@@ -64,35 +65,29 @@
 
     if-eqz v2, :cond_4
 
-    :cond_0
+    :cond_1
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$6;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     iget-boolean v2, v2, Lcom/android/phone/CallFeaturesSetting;->mFwdChangesRequireRollback:Z
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_2
 
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$6;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #calls: Lcom/android/phone/CallFeaturesSetting;->checkForwardingCompleted()Z
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$500(Lcom/android/phone/CallFeaturesSetting;)Z
+    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$400(Lcom/android/phone/CallFeaturesSetting;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    :cond_1
+    :cond_2
     const/4 v0, 0x1
 
     .line 1453
     .local v0, done:Z
     :goto_1
-    if-eqz v0, :cond_2
-
-    .line 1455
-    const-string v2, "All VM reverts done"
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
+    if-eqz v0, :cond_3
 
     .line 1456
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$6;->this$0:Lcom/android/phone/CallFeaturesSetting;
@@ -100,7 +95,7 @@
     const/16 v3, 0x25b
 
     #calls: Lcom/android/phone/CallFeaturesSetting;->dismissDialogSafely(I)V
-    invoke-static {v2, v3}, Lcom/android/phone/CallFeaturesSetting;->access$700(Lcom/android/phone/CallFeaturesSetting;I)V
+    invoke-static {v2, v3}, Lcom/android/phone/CallFeaturesSetting;->access$600(Lcom/android/phone/CallFeaturesSetting;I)V
 
     .line 1457
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$6;->this$0:Lcom/android/phone/CallFeaturesSetting;
@@ -108,7 +103,7 @@
     invoke-virtual {v2}, Lcom/android/phone/CallFeaturesSetting;->onRevertDone()V
 
     .line 1459
-    :cond_2
+    :cond_3
     return-void
 
     .line 1430
@@ -118,12 +113,6 @@
 
     iput-object v1, v2, Lcom/android/phone/CallFeaturesSetting;->mVoicemailChangeResult:Landroid/os/AsyncResult;
 
-    .line 1432
-    const-string v2, "VM revert complete msg"
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
     goto :goto_0
 
     .line 1435
@@ -131,7 +120,7 @@
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting$6;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mForwardingChangeResults:Ljava/util/Map;
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$400(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
+    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$300(Lcom/android/phone/CallFeaturesSetting;)Ljava/util/Map;
 
     move-result-object v2
 
@@ -146,83 +135,9 @@
     .line 1436
     iget-object v2, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
 
-    if-eqz v2, :cond_3
-
-    .line 1438
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Error in reverting fwd# "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget v3, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ": "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, v1, Landroid/os/AsyncResult;->exception:Ljava/lang/Throwable;
-
-    invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
-    .line 1445
-    :goto_2
-    const-string v2, "FWD revert complete msg "
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
+    if-eqz v2, :cond_0
 
     goto :goto_0
-
-    .line 1442
-    :cond_3
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Success in reverting fwd# "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget v3, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    #calls: Lcom/android/phone/CallFeaturesSetting;->log(Ljava/lang/String;)V
-    invoke-static {v2}, Lcom/android/phone/CallFeaturesSetting;->access$300(Ljava/lang/String;)V
-
-    goto :goto_2
 
     .line 1451
     :cond_4

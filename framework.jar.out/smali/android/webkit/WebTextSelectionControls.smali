@@ -193,7 +193,7 @@
 
     move-result-object v2
 
-    const v3, 0x10804d8
+    const v3, 0x10804d5
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -205,7 +205,7 @@
 
     move-result-object v2
 
-    const v3, 0x10804dc
+    const v3, 0x10804d9
 
     invoke-static {v2, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -547,7 +547,7 @@
 
     move-result-object v3
 
-    const v4, 0x10804dc
+    const v4, 0x10804d9
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -620,7 +620,7 @@
 
     move-result-object v3
 
-    const v4, 0x10804da
+    const v4, 0x10804d7
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -637,7 +637,7 @@
 
     move-result-object v3
 
-    const v4, 0x10804db
+    const v4, 0x10804d8
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -654,7 +654,7 @@
 
     move-result-object v3
 
-    const v4, 0x10804d9
+    const v4, 0x10804d6
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -839,9 +839,9 @@
     .parameter "update"
 
     .prologue
-    const v7, 0x10804d8
+    const v7, 0x10804d5
 
-    const v6, 0x10804d7
+    const v6, 0x10804d4
 
     const v5, 0x3e0f5c29
 
@@ -986,7 +986,7 @@
     if-eqz p3, :cond_2
 
     .line 837
-    const v1, 0x10804dd
+    const v1, 0x10804da
 
     iput v1, p0, Landroid/webkit/WebTextSelectionControls;->mLeftHandleId:I
 
@@ -1039,7 +1039,7 @@
     iput v1, p0, Landroid/webkit/WebTextSelectionControls;->mRightHandleState:I
 
     .line 812
-    const v1, 0x10804dd
+    const v1, 0x10804da
 
     iput v1, p0, Landroid/webkit/WebTextSelectionControls;->mRightHandleId:I
 
@@ -1141,7 +1141,7 @@
     if-eqz p3, :cond_2
 
     .line 843
-    const v1, 0x10804de
+    const v1, 0x10804db
 
     iput v1, p0, Landroid/webkit/WebTextSelectionControls;->mLeftHandleId:I
 
@@ -1264,7 +1264,7 @@
     if-eqz p3, :cond_2
 
     .line 874
-    const v1, 0x10804de
+    const v1, 0x10804db
 
     iput v1, p0, Landroid/webkit/WebTextSelectionControls;->mRightHandleId:I
 

@@ -57,13 +57,13 @@
     .parameter "defStyle"
 
     .prologue
+    const/4 v2, 0x0
+
     .line 37
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/CheckBoxPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 31
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference;->DBG:Z
+    iput-boolean v2, p0, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference;->DBG:Z
 
     .line 34
     new-instance v0, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference$MyHandler;
@@ -85,8 +85,6 @@
     iget-object v0, p0, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference;->phone:Lcom/android/internal/telephony/Phone;
 
     iget-object v1, p0, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference;->mHandler:Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference$MyHandler;
-
-    const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/android/phone/CdmaVoicePrivacyCheckBoxPreference$MyHandler;->obtainMessage(I)Landroid/os/Message;
 

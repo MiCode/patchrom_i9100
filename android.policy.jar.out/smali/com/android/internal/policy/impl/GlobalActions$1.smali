@@ -193,7 +193,7 @@
 
     if-ne v0, v2, :cond_0
 
-    const v0, 0x10802e6
+    const v0, 0x10802e5
 
     :goto_0
     iput v0, p0, Lcom/android/internal/policy/impl/GlobalActions$ToggleAction;->mEnabledIconResId:I

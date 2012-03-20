@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1406
+    .line 1413
     iput-object p1, p0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,102 +43,54 @@
     .parameter "dataType"
 
     .prologue
-    .line 1408
+    .line 1415
     const-string v14, "HtmlComposerView"
 
     const-string v15, "SelectionUIPasteListener onPaste"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1409
+    .line 1416
     if-nez p1, :cond_0
 
-    .line 1410
+    .line 1417
     const-string v14, "HtmlComposerView"
 
     const-string v15, "SelectionUIPasteListener onPaste htmlFragment == null"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1525
+    .line 1534
     :goto_0
     return-void
 
-    .line 1414
+    .line 1421
     :cond_0
     const/4 v14, 0x3
 
     move/from16 v0, p2
 
-    if-ne v0, v14, :cond_a
+    if-ne v0, v14, :cond_b
 
-    .line 1416
+    .line 1423
     new-instance v7, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v7}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1417
+    .line 1425
     .local v7, options:Landroid/graphics/BitmapFactory$Options;
-    const-string v14, "HtmlComposerView"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "####################### htmlFragment :"
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1418
     invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 1419
+    .line 1426
     .local v5, imageUri:Landroid/net/Uri;
     invoke-virtual {v5}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1421
+    .line 1430
     .local v1, absoluteFilePath:Ljava/lang/String;
-    const-string v14, "HtmlComposerView"
-
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "####################### absoluteFilePath :"
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 1423
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -151,19 +103,19 @@
 
     move-result-object v2
 
-    .line 1424
+    .line 1431
     .local v2, dstFilePath:Ljava/lang/String;
     new-instance v6, Ljava/io/File;
 
     invoke-direct {v6, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1426
+    .line 1433
     .local v6, mFile:Ljava/io/File;
     new-instance v10, Ljava/io/File;
 
     invoke-direct {v10, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1427
+    .line 1434
     .local v10, originalFile:Ljava/io/File;
     const-wide/32 v14, 0x100000
 
@@ -175,12 +127,12 @@
 
     if-gtz v14, :cond_1
 
-    .line 1429
+    .line 1436
     const/4 v14, 0x4
 
     iput v14, v7, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 1430
+    .line 1437
     const-string v14, "HtmlComposerView"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -207,13 +159,13 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1433
+    .line 1440
     :cond_1
     invoke-static {v1, v7}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v12
 
-    .line 1434
+    .line 1441
     .local v12, src:Landroid/graphics/Bitmap;
     const-string v14, "HtmlComposerView"
 
@@ -263,14 +215,14 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1436
+    .line 1443
     iget v9, v7, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 1437
+    .line 1444
     .local v9, originWidth:I
     iget v8, v7, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 1438
+    .line 1445
     .local v8, originHeight:I
     move-object/from16 v0, p0
 
@@ -281,13 +233,13 @@
 
     move-result v13
 
-    .line 1439
+    .line 1446
     .local v13, width:I
     mul-int v14, v8, v13
 
     div-int v4, v14, v9
 
-    .line 1441
+    .line 1448
     .local v4, height:I
     const-wide/32 v14, 0x100000
 
@@ -297,25 +249,25 @@
 
     cmp-long v14, v14, v16
 
-    if-gtz v14, :cond_8
+    if-gtz v14, :cond_9
 
-    .line 1442
+    .line 1449
     const-string v14, "HtmlComposerView"
 
     const-string v15, "####################### htmlFragment : Big Data"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1444
+    .line 1451
     if-eqz v12, :cond_3
 
-    .line 1447
+    .line 1454
     :try_start_0
     new-instance v11, Ljava/io/FileOutputStream;
 
     invoke-direct {v11, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 1449
+    .line 1456
     .local v11, outStream:Ljava/io/FileOutputStream;
     invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -339,9 +291,9 @@
 
     move-result v14
 
-    if-lez v14, :cond_6
+    if-lez v14, :cond_7
 
-    .line 1451
+    .line 1458
     :cond_2
     const-string v14, "HtmlComposerView"
 
@@ -349,23 +301,23 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1452
+    .line 1459
     sget-object v14, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v15, 0x64
 
     invoke-virtual {v12, v14, v15, v11}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 1453
+    .line 1460
     invoke-virtual {v11}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 1454
+    .line 1461
     invoke-virtual {v11}, Ljava/io/FileOutputStream;->close()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1491
+    .line 1498
     .end local v11           #outStream:Ljava/io/FileOutputStream;
     :cond_3
     :goto_1
@@ -377,7 +329,16 @@
 
     move-result-object p1
 
-    .line 1493
+    .line 1500
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
+
+    iget-boolean v14, v14, Landroid/webkit/HtmlComposerView;->DEBUG:Z
+
+    if-eqz v14, :cond_4
+
+    .line 1501
     const-string v14, "HtmlComposerView"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -402,20 +363,21 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1495
-    if-eqz v13, :cond_9
+    .line 1504
+    :cond_4
+    if-eqz v13, :cond_a
 
-    .line 1497
-    if-le v13, v9, :cond_4
+    .line 1506
+    if-le v13, v9, :cond_5
 
-    .line 1499
+    .line 1508
     move v13, v9
 
-    .line 1500
+    .line 1509
     move v4, v8
 
-    .line 1502
-    :cond_4
+    .line 1511
+    :cond_5
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -424,7 +386,7 @@
 
     invoke-virtual {v14, v0, v13, v4}, Landroid/webkit/HtmlComposerView;->insertImage(Ljava/lang/String;II)V
 
-    .line 1518
+    .line 1527
     .end local v1           #absoluteFilePath:Ljava/lang/String;
     .end local v2           #dstFilePath:Ljava/lang/String;
     .end local v4           #height:I
@@ -445,14 +407,14 @@
 
     invoke-virtual {v14, v15}, Landroid/webkit/HtmlComposerView;->setCaretForEdit(Z)V
 
-    .line 1519
+    .line 1528
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
 
     invoke-virtual {v14}, Landroid/webkit/HtmlComposerView;->drawSelectionControl()V
 
-    .line 1521
+    .line 1530
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -469,9 +431,9 @@
 
     move-result v14
 
-    if-eqz v14, :cond_5
+    if-eqz v14, :cond_6
 
-    .line 1522
+    .line 1531
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -480,8 +442,8 @@
 
     invoke-virtual {v14, v15}, Landroid/webkit/HtmlComposerView;->invokeTexttoSpeech(I)V
 
-    .line 1524
-    :cond_5
+    .line 1533
+    :cond_6
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -492,7 +454,7 @@
 
     goto/16 :goto_0
 
-    .line 1456
+    .line 1463
     .restart local v1       #absoluteFilePath:Ljava/lang/String;
     .restart local v2       #dstFilePath:Ljava/lang/String;
     .restart local v4       #height:I
@@ -505,7 +467,7 @@
     .restart local v11       #outStream:Ljava/io/FileOutputStream;
     .restart local v12       #src:Landroid/graphics/Bitmap;
     .restart local v13       #width:I
-    :cond_6
+    :cond_7
     :try_start_1
     invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -517,26 +479,26 @@
 
     move-result v14
 
-    if-lez v14, :cond_7
+    if-lez v14, :cond_8
 
-    .line 1458
+    .line 1465
     const-string v14, "HtmlComposerView"
 
     const-string v15, "####################### htmlFragment : Bitmap.CompressFormat.PNG"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1459
+    .line 1466
     sget-object v14, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v15, 0x64
 
     invoke-virtual {v12, v14, v15, v11}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 1460
+    .line 1467
     invoke-virtual {v11}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 1461
+    .line 1468
     invoke-virtual {v11}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
@@ -544,21 +506,21 @@
 
     goto/16 :goto_1
 
-    .line 1472
+    .line 1479
     .end local v11           #outStream:Ljava/io/FileOutputStream;
     :catch_0
     move-exception v3
 
-    .line 1473
+    .line 1480
     .local v3, e:Ljava/io/FileNotFoundException;
     invoke-virtual {v3}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 1465
+    .line 1472
     .end local v3           #e:Ljava/io/FileNotFoundException;
     .restart local v11       #outStream:Ljava/io/FileOutputStream;
-    :cond_7
+    :cond_8
     const/4 v14, 0x1
 
     :try_start_2
@@ -573,7 +535,7 @@
 
     if-eq v14, v15, :cond_3
 
-    .line 1467
+    .line 1474
     const-string v14, "HtmlComposerView"
 
     const-string v15, "####################### onPaste : copyFile Fail !!!"
@@ -585,20 +547,20 @@
 
     goto/16 :goto_0
 
-    .line 1476
+    .line 1483
     .end local v11           #outStream:Ljava/io/FileOutputStream;
     :catch_1
     move-exception v3
 
-    .line 1477
+    .line 1484
     .local v3, e:Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 1484
+    .line 1491
     .end local v3           #e:Ljava/io/IOException;
-    :cond_8
+    :cond_9
     const/4 v14, 0x1
 
     move-object/from16 v0, p0
@@ -612,7 +574,7 @@
 
     if-eq v14, v15, :cond_3
 
-    .line 1486
+    .line 1493
     const-string v14, "HtmlComposerView"
 
     const-string v15, "####################### onPaste : copyFile Fail !!!"
@@ -621,8 +583,8 @@
 
     goto/16 :goto_0
 
-    .line 1506
-    :cond_9
+    .line 1515
+    :cond_a
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -633,7 +595,7 @@
 
     goto/16 :goto_2
 
-    .line 1512
+    .line 1521
     .end local v1           #absoluteFilePath:Ljava/lang/String;
     .end local v2           #dstFilePath:Ljava/lang/String;
     .end local v4           #height:I
@@ -645,7 +607,7 @@
     .end local v10           #originalFile:Ljava/io/File;
     .end local v12           #src:Landroid/graphics/Bitmap;
     .end local v13           #width:I
-    :cond_a
+    :cond_b
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -656,7 +618,7 @@
 
     invoke-virtual {v14, v0, v15}, Landroid/webkit/HtmlComposerView;->insertContent(Ljava/lang/CharSequence;Landroid/webkit/HtmlComposerView$InsertionPosition;)V
 
-    .line 1514
+    .line 1523
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;
@@ -665,12 +627,12 @@
 
     iput-object v0, v14, Landroid/webkit/HtmlComposerView;->clpBrdStrg:Ljava/lang/String;
 
-    .line 1515
+    .line 1524
     const v14, 0x102040a
 
     sput v14, Landroid/webkit/HtmlComposerView;->operSel:I
 
-    .line 1516
+    .line 1525
     move-object/from16 v0, p0
 
     iget-object v14, v0, Landroid/webkit/HtmlComposerView$SelectionUIPasteListener;->this$0:Landroid/webkit/HtmlComposerView;

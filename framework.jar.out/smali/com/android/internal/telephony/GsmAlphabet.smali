@@ -54,7 +54,7 @@
     .locals 18
 
     .prologue
-    .line 1112
+    .line 1117
     const/16 v15, 0xe
 
     new-array v15, v15, [Ljava/lang/String;
@@ -145,7 +145,7 @@
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageTables:[Ljava/lang/String;
 
-    .line 1305
+    .line 1310
     const/16 v15, 0xe
 
     new-array v15, v15, [Ljava/lang/String;
@@ -236,22 +236,64 @@
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageShiftTables:[Ljava/lang/String;
 
-    .line 1438
+    .line 1443
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v9
 
-    .line 1440
+    .line 1446
     .local v9, r:Landroid/content/res/Resources;
-    const v15, 0x107002c
+    const-string v15, "TUR"
 
-    invoke-virtual {v9, v15}, Landroid/content/res/Resources;->getIntArray(I)[I
+    const-string/jumbo v16, "ro.csc.sales_code"
 
-    move-result-object v15
+    invoke-static/range {v16 .. v16}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v15
+
+    if-nez v15, :cond_0
+
+    const-string v15, "TRC"
+
+    const-string/jumbo v16, "ro.csc.sales_code"
+
+    invoke-static/range {v16 .. v16}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v15
+
+    if-eqz v15, :cond_3
+
+    .line 1448
+    :cond_0
+    const/4 v15, 0x1
+
+    new-array v15, v15, [I
+
+    const/16 v16, 0x0
+
+    const/16 v17, 0x1
+
+    aput v17, v15, v16
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
 
-    .line 1441
+    .line 1449
+    const-string v15, "GSM"
+
+    const-string/jumbo v16, "sEnabledSingleShiftTables sets as Turkey"
+
+    invoke-static/range {v15 .. v16}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1453
+    :goto_0
     const v15, 0x107002d
 
     invoke-virtual {v9, v15}, Landroid/content/res/Resources;->getIntArray(I)[I
@@ -260,22 +302,22 @@
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledLockingShiftTables:[I
 
-    .line 1442
+    .line 1454
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageTables:[Ljava/lang/String;
 
     array-length v8, v15
 
-    .line 1443
+    .line 1455
     .local v8, numTables:I
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageShiftTables:[Ljava/lang/String;
 
     array-length v7, v15
 
-    .line 1444
+    .line 1456
     .local v7, numShiftTables:I
-    if-eq v8, v7, :cond_0
+    if-eq v8, v7, :cond_1
 
-    .line 1445
+    .line 1457
     const-string v15, "GSM"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -312,15 +354,15 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1449
-    :cond_0
+    .line 1461
+    :cond_1
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
 
     array-length v15, v15
 
-    if-lez v15, :cond_2
+    if-lez v15, :cond_4
 
-    .line 1450
+    .line 1462
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
 
     sget-object v16, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
@@ -337,39 +379,39 @@
 
     sput v15, Lcom/android/internal/telephony/GsmAlphabet;->sHighestEnabledSingleShiftCode:I
 
-    .line 1456
-    :goto_0
+    .line 1468
+    :goto_1
     new-array v15, v8, [Landroid/util/SparseIntArray;
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToGsmTables:[Landroid/util/SparseIntArray;
 
-    .line 1457
+    .line 1469
     const/4 v4, 0x0
 
     .local v4, i:I
-    :goto_1
-    if-ge v4, v8, :cond_4
+    :goto_2
+    if-ge v4, v8, :cond_6
 
-    .line 1458
+    .line 1470
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageTables:[Ljava/lang/String;
 
     aget-object v13, v15, v4
 
-    .line 1460
+    .line 1472
     .local v13, table:Ljava/lang/String;
     invoke-virtual {v13}, Ljava/lang/String;->length()I
 
     move-result v14
 
-    .line 1461
+    .line 1473
     .local v14, tableLen:I
-    if-eqz v14, :cond_1
+    if-eqz v14, :cond_2
 
     const/16 v15, 0x80
 
-    if-eq v14, v15, :cond_1
+    if-eq v14, v15, :cond_2
 
-    .line 1462
+    .line 1474
     const-string v15, "GSM"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -412,100 +454,116 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1466
-    :cond_1
+    .line 1478
+    :cond_2
     new-instance v2, Landroid/util/SparseIntArray;
 
     invoke-direct {v2, v14}, Landroid/util/SparseIntArray;-><init>(I)V
 
-    .line 1467
+    .line 1479
     .local v2, charToGsmTable:Landroid/util/SparseIntArray;
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToGsmTables:[Landroid/util/SparseIntArray;
 
     aput-object v2, v15, v4
 
-    .line 1468
+    .line 1480
     const/4 v6, 0x0
 
     .local v6, j:I
-    :goto_2
-    if-ge v6, v14, :cond_3
+    :goto_3
+    if-ge v6, v14, :cond_5
 
-    .line 1469
+    .line 1481
     invoke-virtual {v13, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 1470
+    .line 1482
     .local v1, c:C
     invoke-virtual {v2, v1, v6}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1468
+    .line 1480
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_2
+    goto :goto_3
 
-    .line 1453
+    .line 1451
     .end local v1           #c:C
     .end local v2           #charToGsmTable:Landroid/util/SparseIntArray;
     .end local v4           #i:I
     .end local v6           #j:I
+    .end local v7           #numShiftTables:I
+    .end local v8           #numTables:I
     .end local v13           #table:Ljava/lang/String;
     .end local v14           #tableLen:I
-    :cond_2
+    :cond_3
+    const v15, 0x107002c
+
+    invoke-virtual {v9, v15}, Landroid/content/res/Resources;->getIntArray(I)[I
+
+    move-result-object v15
+
+    sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
+
+    goto/16 :goto_0
+
+    .line 1465
+    .restart local v7       #numShiftTables:I
+    .restart local v8       #numTables:I
+    :cond_4
     const/4 v15, 0x0
 
     sput v15, Lcom/android/internal/telephony/GsmAlphabet;->sHighestEnabledSingleShiftCode:I
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 1457
+    .line 1469
     .restart local v2       #charToGsmTable:Landroid/util/SparseIntArray;
     .restart local v4       #i:I
     .restart local v6       #j:I
     .restart local v13       #table:Ljava/lang/String;
     .restart local v14       #tableLen:I
-    :cond_3
+    :cond_5
     add-int/lit8 v4, v4, 0x1
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 1474
+    .line 1486
     .end local v2           #charToGsmTable:Landroid/util/SparseIntArray;
     .end local v6           #j:I
     .end local v13           #table:Ljava/lang/String;
     .end local v14           #tableLen:I
-    :cond_4
+    :cond_6
     new-array v15, v8, [Landroid/util/SparseIntArray;
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToShiftTables:[Landroid/util/SparseIntArray;
 
-    .line 1475
+    .line 1487
     const/4 v4, 0x0
 
-    :goto_3
-    if-ge v4, v7, :cond_8
+    :goto_4
+    if-ge v4, v7, :cond_a
 
-    .line 1476
+    .line 1488
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageShiftTables:[Ljava/lang/String;
 
     aget-object v10, v15, v4
 
-    .line 1478
+    .line 1490
     .local v10, shiftTable:Ljava/lang/String;
     invoke-virtual {v10}, Ljava/lang/String;->length()I
 
     move-result v11
 
-    .line 1479
+    .line 1491
     .local v11, shiftTableLen:I
-    if-eqz v11, :cond_5
+    if-eqz v11, :cond_7
 
     const/16 v15, 0x80
 
-    if-eq v11, v15, :cond_5
+    if-eq v11, v15, :cond_7
 
-    .line 1480
+    .line 1492
     const-string v15, "GSM"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -548,89 +606,89 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1484
-    :cond_5
+    .line 1496
+    :cond_7
     new-instance v3, Landroid/util/SparseIntArray;
 
     invoke-direct {v3, v11}, Landroid/util/SparseIntArray;-><init>(I)V
 
-    .line 1485
+    .line 1497
     .local v3, charToShiftTable:Landroid/util/SparseIntArray;
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToShiftTables:[Landroid/util/SparseIntArray;
 
     aput-object v3, v15, v4
 
-    .line 1486
+    .line 1498
     const/4 v6, 0x0
 
     .restart local v6       #j:I
-    :goto_4
-    if-ge v6, v11, :cond_7
+    :goto_5
+    if-ge v6, v11, :cond_9
 
-    .line 1487
+    .line 1499
     invoke-virtual {v10, v6}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 1488
+    .line 1500
     .restart local v1       #c:C
     const/16 v15, 0x20
 
-    if-eq v1, v15, :cond_6
+    if-eq v1, v15, :cond_8
 
-    .line 1489
+    .line 1501
     invoke-virtual {v3, v1, v6}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1486
-    :cond_6
+    .line 1498
+    :cond_8
     add-int/lit8 v6, v6, 0x1
+
+    goto :goto_5
+
+    .line 1487
+    .end local v1           #c:C
+    :cond_9
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 1475
-    .end local v1           #c:C
-    :cond_7
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_3
-
-    .line 1725
+    .line 1959
     .end local v3           #charToShiftTable:Landroid/util/SparseIntArray;
     .end local v6           #j:I
     .end local v10           #shiftTable:Ljava/lang/String;
     .end local v11           #shiftTableLen:I
-    :cond_8
+    :cond_a
     new-instance v15, Landroid/util/SparseIntArray;
 
     invoke-direct {v15}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
-    .line 1726
+    .line 1960
     new-instance v15, Landroid/util/SparseIntArray;
 
     invoke-direct {v15}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->gsmToChar:Landroid/util/SparseIntArray;
 
-    .line 1727
+    .line 1961
     new-instance v15, Landroid/util/SparseIntArray;
 
     invoke-direct {v15}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
-    .line 1728
+    .line 1962
     new-instance v15, Landroid/util/SparseIntArray;
 
     invoke-direct {v15}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v15, Lcom/android/internal/telephony/GsmAlphabet;->gsmExtendedToChar:Landroid/util/SparseIntArray;
 
-    .line 1731
+    .line 1965
     const/4 v4, 0x0
 
-    .line 1733
+    .line 1967
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x40
@@ -643,7 +701,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1734
+    .line 1968
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xa3
@@ -656,7 +714,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1735
+    .line 1969
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x24
@@ -669,7 +727,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1736
+    .line 1970
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xa5
@@ -682,7 +740,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1737
+    .line 1971
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xe8
@@ -695,7 +753,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1738
+    .line 1972
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xe9
@@ -708,7 +766,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1739
+    .line 1973
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xf9
@@ -721,7 +779,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1740
+    .line 1974
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xec
@@ -734,7 +792,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1741
+    .line 1975
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xf2
@@ -747,7 +805,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1742
+    .line 1976
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xc7
@@ -760,7 +818,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1743
+    .line 1977
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xa
@@ -773,7 +831,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1744
+    .line 1978
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xd8
@@ -786,7 +844,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1745
+    .line 1979
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xf8
@@ -799,7 +857,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1746
+    .line 1980
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xd
@@ -812,7 +870,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1747
+    .line 1981
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xc5
@@ -825,7 +883,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1748
+    .line 1982
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xe5
@@ -838,7 +896,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1750
+    .line 1984
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x394
@@ -851,7 +909,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1751
+    .line 1985
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x5f
@@ -864,7 +922,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1752
+    .line 1986
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3a6
@@ -877,7 +935,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1753
+    .line 1987
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x393
@@ -890,7 +948,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1754
+    .line 1988
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x39b
@@ -903,7 +961,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1755
+    .line 1989
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3a9
@@ -916,7 +974,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1756
+    .line 1990
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3a0
@@ -929,7 +987,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1757
+    .line 1991
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3a8
@@ -942,7 +1000,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1758
+    .line 1992
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3a3
@@ -955,7 +1013,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1759
+    .line 1993
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x398
@@ -968,7 +1026,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1760
+    .line 1994
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x39e
@@ -981,7 +1039,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1761
+    .line 1995
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const v16, 0xffff
@@ -994,7 +1052,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1762
+    .line 1996
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xc6
@@ -1007,7 +1065,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1763
+    .line 1997
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xe6
@@ -1020,7 +1078,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1764
+    .line 1998
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xdf
@@ -1033,7 +1091,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1765
+    .line 1999
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xc9
@@ -1046,7 +1104,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1767
+    .line 2001
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x20
@@ -1059,7 +1117,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1768
+    .line 2002
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x21
@@ -1072,7 +1130,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1769
+    .line 2003
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x22
@@ -1085,7 +1143,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1770
+    .line 2004
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x23
@@ -1098,7 +1156,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1771
+    .line 2005
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xa4
@@ -1111,7 +1169,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1772
+    .line 2006
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x25
@@ -1124,7 +1182,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1773
+    .line 2007
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x26
@@ -1137,7 +1195,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1774
+    .line 2008
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x27
@@ -1150,7 +1208,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1775
+    .line 2009
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x28
@@ -1163,7 +1221,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1776
+    .line 2010
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x29
@@ -1176,7 +1234,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1777
+    .line 2011
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x2a
@@ -1189,7 +1247,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1778
+    .line 2012
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x2b
@@ -1202,7 +1260,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1779
+    .line 2013
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x2c
@@ -1215,7 +1273,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1780
+    .line 2014
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x2d
@@ -1228,7 +1286,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1781
+    .line 2015
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x2e
@@ -1241,7 +1299,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1782
+    .line 2016
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x2f
@@ -1254,7 +1312,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1784
+    .line 2018
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x30
@@ -1267,7 +1325,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1785
+    .line 2019
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x31
@@ -1280,7 +1338,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1786
+    .line 2020
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x32
@@ -1293,7 +1351,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1787
+    .line 2021
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x33
@@ -1306,7 +1364,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1788
+    .line 2022
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x34
@@ -1319,7 +1377,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1789
+    .line 2023
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x35
@@ -1332,7 +1390,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1790
+    .line 2024
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x36
@@ -1345,7 +1403,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1791
+    .line 2025
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x37
@@ -1358,7 +1416,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1792
+    .line 2026
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x38
@@ -1371,7 +1429,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1793
+    .line 2027
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x39
@@ -1384,7 +1442,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1794
+    .line 2028
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3a
@@ -1397,7 +1455,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1795
+    .line 2029
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3b
@@ -1410,7 +1468,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1796
+    .line 2030
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3c
@@ -1423,7 +1481,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1797
+    .line 2031
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3d
@@ -1436,7 +1494,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1798
+    .line 2032
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3e
@@ -1449,7 +1507,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1799
+    .line 2033
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x3f
@@ -1462,7 +1520,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1801
+    .line 2035
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xa1
@@ -1475,7 +1533,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1802
+    .line 2036
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x41
@@ -1488,7 +1546,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1803
+    .line 2037
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x42
@@ -1501,7 +1559,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1804
+    .line 2038
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x43
@@ -1514,7 +1572,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1805
+    .line 2039
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x44
@@ -1527,7 +1585,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1806
+    .line 2040
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x45
@@ -1540,7 +1598,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1807
+    .line 2041
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x46
@@ -1553,7 +1611,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1808
+    .line 2042
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x47
@@ -1566,7 +1624,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1809
+    .line 2043
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x48
@@ -1579,7 +1637,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1810
+    .line 2044
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x49
@@ -1592,7 +1650,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1811
+    .line 2045
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x4a
@@ -1605,7 +1663,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1812
+    .line 2046
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x4b
@@ -1618,7 +1676,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1813
+    .line 2047
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x4c
@@ -1631,7 +1689,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1814
+    .line 2048
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x4d
@@ -1644,7 +1702,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1815
+    .line 2049
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x4e
@@ -1657,7 +1715,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1816
+    .line 2050
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x4f
@@ -1670,7 +1728,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1818
+    .line 2052
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x50
@@ -1683,7 +1741,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1819
+    .line 2053
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x51
@@ -1696,7 +1754,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1820
+    .line 2054
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x52
@@ -1709,7 +1767,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1821
+    .line 2055
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x53
@@ -1722,7 +1780,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1822
+    .line 2056
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x54
@@ -1735,7 +1793,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1823
+    .line 2057
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x55
@@ -1748,7 +1806,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1824
+    .line 2058
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x56
@@ -1761,7 +1819,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1825
+    .line 2059
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x57
@@ -1774,7 +1832,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1826
+    .line 2060
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x58
@@ -1787,7 +1845,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1827
+    .line 2061
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x59
@@ -1800,7 +1858,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1828
+    .line 2062
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x5a
@@ -1813,7 +1871,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1829
+    .line 2063
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xc4
@@ -1826,7 +1884,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1830
+    .line 2064
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xd6
@@ -1839,7 +1897,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1831
+    .line 2065
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xd1
@@ -1852,7 +1910,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1832
+    .line 2066
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xdc
@@ -1865,7 +1923,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1833
+    .line 2067
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xa7
@@ -1878,7 +1936,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1835
+    .line 2069
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xbf
@@ -1891,7 +1949,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1836
+    .line 2070
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x61
@@ -1904,7 +1962,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1837
+    .line 2071
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x62
@@ -1917,7 +1975,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1838
+    .line 2072
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x63
@@ -1930,7 +1988,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1839
+    .line 2073
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x64
@@ -1943,7 +2001,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1840
+    .line 2074
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x65
@@ -1956,7 +2014,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1841
+    .line 2075
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x66
@@ -1969,7 +2027,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1842
+    .line 2076
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x67
@@ -1982,7 +2040,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1843
+    .line 2077
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x68
@@ -1995,7 +2053,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1844
+    .line 2078
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x69
@@ -2008,7 +2066,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1845
+    .line 2079
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x6a
@@ -2021,7 +2079,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1846
+    .line 2080
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x6b
@@ -2034,7 +2092,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1847
+    .line 2081
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x6c
@@ -2047,7 +2105,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1848
+    .line 2082
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x6d
@@ -2060,7 +2118,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1849
+    .line 2083
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x6e
@@ -2073,7 +2131,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1850
+    .line 2084
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x6f
@@ -2086,7 +2144,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1852
+    .line 2086
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x70
@@ -2099,7 +2157,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1853
+    .line 2087
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x71
@@ -2112,7 +2170,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1854
+    .line 2088
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x72
@@ -2125,7 +2183,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1855
+    .line 2089
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x73
@@ -2138,7 +2196,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1856
+    .line 2090
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x74
@@ -2151,7 +2209,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1857
+    .line 2091
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x75
@@ -2164,7 +2222,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1858
+    .line 2092
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x76
@@ -2177,7 +2235,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1859
+    .line 2093
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x77
@@ -2190,7 +2248,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1860
+    .line 2094
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x78
@@ -2203,7 +2261,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1861
+    .line 2095
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x79
@@ -2216,7 +2274,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1862
+    .line 2096
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x7a
@@ -2229,7 +2287,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1863
+    .line 2097
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xe4
@@ -2242,7 +2300,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1864
+    .line 2098
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xf6
@@ -2255,7 +2313,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1865
+    .line 2099
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xf1
@@ -2268,7 +2326,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1866
+    .line 2100
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xfc
@@ -2281,7 +2339,7 @@
 
     invoke-virtual {v15, v0, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1867
+    .line 2101
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xe0
@@ -2294,7 +2352,7 @@
 
     invoke-virtual {v15, v0, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1870
+    .line 2104
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0xc
@@ -2303,7 +2361,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1871
+    .line 2105
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x5e
@@ -2312,7 +2370,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1872
+    .line 2106
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x7b
@@ -2321,7 +2379,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1873
+    .line 2107
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x7d
@@ -2330,7 +2388,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1874
+    .line 2108
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x5c
@@ -2339,7 +2397,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1875
+    .line 2109
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x5b
@@ -2348,7 +2406,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1876
+    .line 2110
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x7e
@@ -2357,7 +2415,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1877
+    .line 2111
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x5d
@@ -2366,7 +2424,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1878
+    .line 2112
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x7c
@@ -2375,7 +2433,7 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1879
+    .line 2113
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x20ac
@@ -2384,22 +2442,22 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1901
+    .line 2135
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     invoke-virtual {v15}, Landroid/util/SparseIntArray;->size()I
 
     move-result v12
 
-    .line 1902
+    .line 2136
     .local v12, size:I
     const/4 v6, 0x0
 
     .restart local v6       #j:I
-    :goto_5
-    if-ge v6, v12, :cond_9
+    :goto_6
+    if-ge v6, v12, :cond_b
 
-    .line 1903
+    .line 2137
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->gsmToChar:Landroid/util/SparseIntArray;
 
     sget-object v16, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
@@ -2420,26 +2478,26 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1902
+    .line 2136
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 1906
-    :cond_9
+    .line 2140
+    :cond_b
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
     invoke-virtual {v15}, Landroid/util/SparseIntArray;->size()I
 
     move-result v12
 
-    .line 1907
+    .line 2141
     const/4 v6, 0x0
 
-    :goto_6
-    if-ge v6, v12, :cond_a
+    :goto_7
+    if-ge v6, v12, :cond_c
 
-    .line 1908
+    .line 2142
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->gsmExtendedToChar:Landroid/util/SparseIntArray;
 
     sget-object v16, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
@@ -2460,13 +2518,13 @@
 
     invoke-virtual/range {v15 .. v17}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 1907
+    .line 2141
     add-int/lit8 v6, v6, 0x1
 
-    goto :goto_6
+    goto :goto_7
 
-    .line 1911
-    :cond_a
+    .line 2145
+    :cond_c
     sget-object v15, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     const/16 v16, 0x20
@@ -2477,7 +2535,7 @@
 
     sput v15, Lcom/android/internal/telephony/GsmAlphabet;->sGsmSpaceChar:I
 
-    .line 1912
+    .line 2146
     return-void
 .end method
 
@@ -2497,7 +2555,7 @@
     .parameter "use7bitOnly"
 
     .prologue
-    .line 834
+    .line 839
     sget-object v25, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
 
     move-object/from16 v0, v25
@@ -2518,12 +2576,12 @@
 
     if-nez v25, :cond_3
 
-    .line 835
+    .line 840
     new-instance v22, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;
 
     invoke-direct/range {v22 .. v22}, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;-><init>()V
 
-    .line 836
+    .line 841
     .local v22, ted:Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;
     const/16 v25, 0x0
 
@@ -2541,7 +2599,7 @@
 
     move-result v14
 
-    .line 837
+    .line 842
     .local v14, septets:I
     const/16 v25, -0x1
 
@@ -2549,17 +2607,17 @@
 
     if-ne v14, v0, :cond_1
 
-    .line 838
+    .line 843
     const/16 v22, 0x0
 
-    .line 965
+    .line 970
     .end local v14           #septets:I
     .end local v22           #ted:Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;
     :cond_0
     :goto_0
     return-object v22
 
-    .line 840
+    .line 845
     .restart local v14       #septets:I
     .restart local v22       #ted:Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;
     :cond_1
@@ -2571,19 +2629,19 @@
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->codeUnitSize:I
 
-    .line 841
+    .line 846
     move-object/from16 v0, v22
 
     iput v14, v0, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->codeUnitCount:I
 
-    .line 842
+    .line 847
     const/16 v25, 0xa0
 
     move/from16 v0, v25
 
     if-le v14, v0, :cond_2
 
-    .line 843
+    .line 848
     add-int/lit16 v0, v14, 0x98
 
     move/from16 v25, v0
@@ -2600,7 +2658,7 @@
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->msgCount:I
 
-    .line 845
+    .line 850
     move-object/from16 v0, v22
 
     iget v0, v0, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->msgCount:I
@@ -2621,7 +2679,7 @@
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->codeUnitsRemaining:I
 
-    .line 851
+    .line 856
     :goto_1
     const/16 v25, 0x1
 
@@ -2633,7 +2691,7 @@
 
     goto :goto_0
 
-    .line 848
+    .line 853
     :cond_2
     const/16 v25, 0x1
 
@@ -2643,7 +2701,7 @@
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->msgCount:I
 
-    .line 849
+    .line 854
     rsub-int v0, v14, 0xa0
 
     move/from16 v25, v0
@@ -2656,13 +2714,13 @@
 
     goto :goto_1
 
-    .line 855
+    .line 860
     .end local v14           #septets:I
     .end local v22           #ted:Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;
     :cond_3
     sget v11, Lcom/android/internal/telephony/GsmAlphabet;->sHighestEnabledSingleShiftCode:I
 
-    .line 856
+    .line 861
     .local v11, maxSingleShiftCode:I
     new-instance v10, Ljava/util/ArrayList;
 
@@ -2680,7 +2738,7 @@
 
     invoke-direct {v10, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 860
+    .line 865
     .local v10, lpcList:Ljava/util/List;,"Ljava/util/List<Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;>;"
     new-instance v25, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
 
@@ -2692,7 +2750,7 @@
 
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 861
+    .line 866
     sget-object v4, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledLockingShiftTables:[I
 
     .local v4, arr$:[I
@@ -2707,7 +2765,7 @@
 
     aget v6, v4, v7
 
-    .line 863
+    .line 868
     .local v6, i:I
     if-eqz v6, :cond_4
 
@@ -2721,7 +2779,7 @@
 
     if-nez v25, :cond_4
 
-    .line 864
+    .line 869
     new-instance v25, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
 
     move-object/from16 v0, v25
@@ -2732,20 +2790,20 @@
 
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 861
+    .line 866
     :cond_4
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 868
+    .line 873
     .end local v6           #i:I
     :cond_5
     invoke-interface/range {p0 .. p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v19
 
-    .line 870
+    .line 875
     .local v19, sz:I
     const/4 v6, 0x0
 
@@ -2762,14 +2820,14 @@
 
     if-nez v25, :cond_e
 
-    .line 871
+    .line 876
     move-object/from16 v0, p0
 
     invoke-interface {v0, v6}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v5
 
-    .line 872
+    .line 877
     .local v5, c:C
     const/16 v25, 0x1b
 
@@ -2777,20 +2835,20 @@
 
     if-ne v5, v0, :cond_7
 
-    .line 873
+    .line 878
     const-string v25, "GSM"
 
     const-string v26, "countGsmSeptets() string contains Escape character, ignoring!"
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 870
+    .line 875
     :cond_6
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_3
 
-    .line 877
+    .line 882
     :cond_7
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2810,7 +2868,7 @@
 
     check-cast v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
 
-    .line 878
+    .line 883
     .local v9, lpc:Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
     sget-object v25, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToGsmTables:[Landroid/util/SparseIntArray;
 
@@ -2830,7 +2888,7 @@
 
     move-result v21
 
-    .line 879
+    .line 884
     .local v21, tableIndex:I
     const/16 v25, -0x1
 
@@ -2840,7 +2898,7 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 881
+    .line 886
     const/16 v20, 0x0
 
     .local v20, table:I
@@ -2849,7 +2907,7 @@
 
     if-gt v0, v11, :cond_8
 
-    .line 882
+    .line 887
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->septetCounts:[I
 
     move-object/from16 v25, v0
@@ -2864,7 +2922,7 @@
 
     if-eq v0, v1, :cond_9
 
-    .line 883
+    .line 888
     sget-object v25, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToShiftTables:[Landroid/util/SparseIntArray;
 
     aget-object v25, v25, v20
@@ -2879,7 +2937,7 @@
 
     move-result v18
 
-    .line 884
+    .line 889
     .local v18, shiftTableIndex:I
     const/16 v25, -0x1
 
@@ -2889,10 +2947,10 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 885
+    .line 890
     if-eqz p1, :cond_a
 
-    .line 887
+    .line 892
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->septetCounts:[I
 
     move-object/from16 v25, v0
@@ -2903,7 +2961,7 @@
 
     aput v26, v25, v20
 
-    .line 888
+    .line 893
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->unencodableCounts:[I
 
     move-object/from16 v25, v0
@@ -2914,7 +2972,7 @@
 
     aput v26, v25, v20
 
-    .line 881
+    .line 886
     .end local v18           #shiftTableIndex:I
     :cond_9
     :goto_5
@@ -2922,7 +2980,7 @@
 
     goto :goto_4
 
-    .line 891
+    .line 896
     .restart local v18       #shiftTableIndex:I
     :cond_a
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->septetCounts:[I
@@ -2935,7 +2993,7 @@
 
     goto :goto_5
 
-    .line 895
+    .line 900
     :cond_b
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->septetCounts:[I
 
@@ -2949,7 +3007,7 @@
 
     goto :goto_5
 
-    .line 901
+    .line 906
     .end local v18           #shiftTableIndex:I
     .end local v20           #table:I
     :cond_c
@@ -2961,7 +3019,7 @@
 
     if-gt v0, v11, :cond_8
 
-    .line 902
+    .line 907
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->septetCounts:[I
 
     move-object/from16 v25, v0
@@ -2976,7 +3034,7 @@
 
     if-eq v0, v1, :cond_d
 
-    .line 903
+    .line 908
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->septetCounts:[I
 
     move-object/from16 v25, v0
@@ -2987,13 +3045,13 @@
 
     aput v26, v25, v20
 
-    .line 901
+    .line 906
     :cond_d
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_6
 
-    .line 911
+    .line 916
     .end local v5           #c:C
     .end local v7           #i$:Ljava/util/Iterator;
     .end local v9           #lpc:Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
@@ -3004,7 +3062,7 @@
 
     invoke-direct/range {v22 .. v22}, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;-><init>()V
 
-    .line 912
+    .line 917
     .restart local v22       #ted:Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;
     const v25, 0x7fffffff
 
@@ -3014,7 +3072,7 @@
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->msgCount:I
 
-    .line 913
+    .line 918
     const/16 v25, 0x1
 
     move/from16 v0, v25
@@ -3023,10 +3081,10 @@
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->codeUnitSize:I
 
-    .line 914
+    .line 919
     const v12, 0x7fffffff
 
-    .line 915
+    .line 920
     .local v12, minUnencodableCount:I
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3046,7 +3104,7 @@
 
     check-cast v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
 
-    .line 916
+    .line 921
     .restart local v9       #lpc:Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
     const/16 v17, 0x0
 
@@ -3056,14 +3114,14 @@
 
     if-gt v0, v11, :cond_f
 
-    .line 917
+    .line 922
     iget-object v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->septetCounts:[I
 
     move-object/from16 v25, v0
 
     aget v14, v25, v17
 
-    .line 918
+    .line 923
     .restart local v14       #septets:I
     const/16 v25, -0x1
 
@@ -3071,14 +3129,14 @@
 
     if-ne v14, v0, :cond_11
 
-    .line 916
+    .line 921
     :cond_10
     :goto_8
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_7
 
-    .line 922
+    .line 927
     :cond_11
     iget v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->languageCode:I
 
@@ -3088,10 +3146,10 @@
 
     if-eqz v17, :cond_16
 
-    .line 923
+    .line 928
     const/16 v23, 0x8
 
-    .line 931
+    .line 936
     .local v23, udhLength:I
     :goto_9
     add-int v25, v14, v23
@@ -3104,22 +3162,22 @@
 
     if-le v0, v1, :cond_19
 
-    .line 932
+    .line 937
     if-nez v23, :cond_12
 
-    .line 933
+    .line 938
     const/16 v23, 0x1
 
-    .line 935
+    .line 940
     :cond_12
     add-int/lit8 v23, v23, 0x6
 
-    .line 936
+    .line 941
     move/from16 v0, v23
 
     rsub-int v15, v0, 0xa0
 
-    .line 937
+    .line 942
     .local v15, septetsPerMessage:I
     add-int v25, v14, v15
 
@@ -3127,13 +3185,13 @@
 
     div-int v13, v25, v15
 
-    .line 938
+    .line 943
     .local v13, msgCount:I
     mul-int v25, v13, v15
 
     sub-int v16, v25, v14
 
-    .line 944
+    .line 949
     .end local v15           #septetsPerMessage:I
     .local v16, septetsRemaining:I
     :goto_a
@@ -3143,7 +3201,7 @@
 
     aget v24, v25, v17
 
-    .line 945
+    .line 950
     .local v24, unencodableCount:I
     if-eqz p1, :cond_13
 
@@ -3151,7 +3209,7 @@
 
     if-gt v0, v12, :cond_10
 
-    .line 948
+    .line 953
     :cond_13
     if-eqz p1, :cond_14
 
@@ -3192,28 +3250,28 @@
 
     if-le v0, v1, :cond_10
 
-    .line 951
+    .line 956
     :cond_15
     move/from16 v12, v24
 
-    .line 952
+    .line 957
     move-object/from16 v0, v22
 
     iput v13, v0, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->msgCount:I
 
-    .line 953
+    .line 958
     move-object/from16 v0, v22
 
     iput v14, v0, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->codeUnitCount:I
 
-    .line 954
+    .line 959
     move/from16 v0, v16
 
     move-object/from16 v1, v22
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->codeUnitsRemaining:I
 
-    .line 955
+    .line 960
     iget v0, v9, Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;->languageCode:I
 
     move/from16 v25, v0
@@ -3224,7 +3282,7 @@
 
     iput v0, v1, Lcom/android/internal/telephony/SmsMessageBase$TextEncodingDetails;->languageTable:I
 
-    .line 956
+    .line 961
     move/from16 v0, v17
 
     move-object/from16 v1, v22
@@ -3233,7 +3291,7 @@
 
     goto :goto_8
 
-    .line 924
+    .line 929
     .end local v13           #msgCount:I
     .end local v16           #septetsRemaining:I
     .end local v23           #udhLength:I
@@ -3247,14 +3305,14 @@
 
     if-eqz v17, :cond_18
 
-    .line 925
+    .line 930
     :cond_17
     const/16 v23, 0x5
 
     .restart local v23       #udhLength:I
     goto :goto_9
 
-    .line 927
+    .line 932
     .end local v23           #udhLength:I
     :cond_18
     const/16 v23, 0x0
@@ -3262,11 +3320,11 @@
     .restart local v23       #udhLength:I
     goto :goto_9
 
-    .line 940
+    .line 945
     :cond_19
     const/4 v13, 0x1
 
-    .line 941
+    .line 946
     .restart local v13       #msgCount:I
     move/from16 v0, v23
 
@@ -3279,7 +3337,7 @@
     .restart local v16       #septetsRemaining:I
     goto :goto_a
 
-    .line 961
+    .line 966
     .end local v9           #lpc:Lcom/android/internal/telephony/GsmAlphabet$LanguagePairCount;
     .end local v13           #msgCount:I
     .end local v14           #septets:I
@@ -3301,7 +3359,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 962
+    .line 967
     const/16 v22, 0x0
 
     goto/16 :goto_0
@@ -3492,10 +3550,10 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 1496
+    .line 1508
     move v0, p0
 
-    .line 1499
+    .line 1511
     .local v0, ret:C
     sget-object v1, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
 
@@ -3509,7 +3567,7 @@
 
     if-nez v1, :cond_0
 
-    .line 1502
+    .line 1513
     sget-object v1, Lcom/android/internal/telephony/GsmAlphabet;->charToGsm:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, p0, v3}, Landroid/util/SparseIntArray;->get(II)I
@@ -3518,15 +3576,15 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 1503
+    .line 1514
     move v0, p0
 
-    .line 1512
+    .line 1523
     :cond_0
     :goto_0
     return v0
 
-    .line 1504
+    .line 1515
     :cond_1
     sget-object v1, Lcom/android/internal/telephony/GsmAlphabet;->charToGsmExtended:Landroid/util/SparseIntArray;
 
@@ -3536,12 +3594,12 @@
 
     if-eq v1, v3, :cond_2
 
-    .line 1505
+    .line 1516
     move v0, p0
 
     goto :goto_0
 
-    .line 1508
+    .line 1519
     :cond_2
     invoke-static {p0}, Lcom/android/internal/telephony/GsmAlphabet;->convertNonGSMCharacter(C)C
 
@@ -3557,10 +3615,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1519
+    .line 1530
     move v0, p0
 
-    .line 1520
+    .line 1531
     .local v0, temp:C
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -3584,10 +3642,10 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1521
+    .line 1532
     sparse-switch v0, :sswitch_data_0
 
-    .line 1687
+    .line 1913
     const-string v1, "XEH"
 
     const-string/jumbo v2, "ro.csc.sales_code"
@@ -3644,11 +3702,11 @@
 
     if-ne v1, v4, :cond_2
 
-    .line 1691
+    .line 1917
     :cond_0
     sparse-switch v0, :sswitch_data_1
 
-    .line 1716
+    .line 1950
     :cond_1
     :goto_0
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -3673,716 +3731,829 @@
 
     invoke-virtual {v1, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1718
+    .line 1952
     return v0
 
-    .line 1533
+    .line 1544
     :sswitch_0
     const/16 v0, 0x61
 
-    goto :goto_0
-
-    .line 1534
-    :sswitch_1
-    const/16 v0, 0x61
-
-    goto :goto_0
-
-    .line 1535
-    :sswitch_2
-    const/16 v0, 0x61
-
-    goto :goto_0
-
-    .line 1536
-    :sswitch_3
-    const/16 v0, 0x61
-
-    goto :goto_0
-
-    .line 1537
-    :sswitch_4
-    const/16 v0, 0x61
-
-    goto :goto_0
-
-    .line 1539
-    :sswitch_5
-    const/16 v0, 0x41
-
-    goto :goto_0
-
-    .line 1540
-    :sswitch_6
-    const/16 v0, 0x41
-
-    goto :goto_0
-
-    .line 1541
-    :sswitch_7
-    const/16 v0, 0x41
-
-    goto :goto_0
-
-    .line 1542
-    :sswitch_8
-    const/16 v0, 0x41
-
-    goto :goto_0
-
-    .line 1543
-    :sswitch_9
-    const/16 v0, 0x41
-
-    goto :goto_0
-
-    .line 1544
-    :sswitch_a
-    const/16 v0, 0x41
-
-    goto :goto_0
-
-    .line 1546
-    :sswitch_b
-    const/16 v0, 0x63
-
+    .line 1545
     goto :goto_0
 
     .line 1547
-    :sswitch_c
-    const/16 v0, 0x63
-
-    goto :goto_0
+    :sswitch_1
+    const/16 v0, 0x61
 
     .line 1548
-    :sswitch_d
-    const/16 v0, 0x63
-
     goto :goto_0
 
     .line 1550
-    :sswitch_e
-    const/16 v0, 0x43
-
-    goto :goto_0
+    :sswitch_2
+    const/16 v0, 0x61
 
     .line 1551
-    :sswitch_f
-    const/16 v0, 0x43
-
     goto :goto_0
 
     .line 1553
-    :sswitch_10
-    const/16 v0, 0x64
+    :sswitch_3
+    const/16 v0, 0x61
 
+    .line 1554
     goto :goto_0
 
-    .line 1555
-    :sswitch_11
-    const/16 v0, 0x44
-
-    goto :goto_0
+    .line 1556
+    :sswitch_4
+    const/16 v0, 0x61
 
     .line 1557
-    :sswitch_12
-    const/16 v0, 0x65
-
-    goto :goto_0
-
-    .line 1558
-    :sswitch_13
-    const/16 v0, 0x65
-
-    goto :goto_0
-
-    .line 1559
-    :sswitch_14
-    const/16 v0, 0x65
-
     goto :goto_0
 
     .line 1560
-    :sswitch_15
-    const/16 v0, 0x65
-
-    goto :goto_0
+    :sswitch_5
+    const/16 v0, 0x41
 
     .line 1561
-    :sswitch_16
-    const/16 v0, 0x65
-
     goto :goto_0
 
     .line 1563
-    :sswitch_17
-    const/16 v0, 0x45
-
-    goto :goto_0
+    :sswitch_6
+    const/16 v0, 0x41
 
     .line 1564
-    :sswitch_18
-    const/16 v0, 0x45
-
-    goto :goto_0
-
-    .line 1565
-    :sswitch_19
-    const/16 v0, 0x45
-
     goto :goto_0
 
     .line 1566
-    :sswitch_1a
-    const/16 v0, 0x45
-
-    goto :goto_0
+    :sswitch_7
+    const/16 v0, 0x41
 
     .line 1567
-    :sswitch_1b
-    const/16 v0, 0x45
-
     goto :goto_0
 
-    .line 1568
-    :sswitch_1c
-    const/16 v0, 0x45
-
-    goto :goto_0
+    .line 1569
+    :sswitch_8
+    const/16 v0, 0x41
 
     .line 1570
-    :sswitch_1d
-    const/16 v0, 0x67
-
     goto :goto_0
 
     .line 1572
-    :sswitch_1e
-    const/16 v0, 0x47
+    :sswitch_9
+    const/16 v0, 0x41
 
-    goto :goto_0
-
-    .line 1574
-    :sswitch_1f
-    const/16 v0, 0x69
-
+    .line 1573
     goto :goto_0
 
     .line 1575
+    :sswitch_a
+    const/16 v0, 0x41
+
+    .line 1576
+    goto :goto_0
+
+    .line 1579
+    :sswitch_b
+    const/16 v0, 0x63
+
+    .line 1580
+    goto :goto_0
+
+    .line 1582
+    :sswitch_c
+    const/16 v0, 0x63
+
+    .line 1583
+    goto :goto_0
+
+    .line 1585
+    :sswitch_d
+    const/16 v0, 0x63
+
+    .line 1586
+    goto :goto_0
+
+    .line 1589
+    :sswitch_e
+    const/16 v0, 0x43
+
+    .line 1590
+    goto :goto_0
+
+    .line 1592
+    :sswitch_f
+    const/16 v0, 0x43
+
+    .line 1593
+    goto :goto_0
+
+    .line 1596
+    :sswitch_10
+    const/16 v0, 0x64
+
+    .line 1597
+    goto :goto_0
+
+    .line 1600
+    :sswitch_11
+    const/16 v0, 0x44
+
+    .line 1601
+    goto :goto_0
+
+    .line 1604
+    :sswitch_12
+    const/16 v0, 0x65
+
+    .line 1605
+    goto :goto_0
+
+    .line 1607
+    :sswitch_13
+    const/16 v0, 0x65
+
+    .line 1608
+    goto :goto_0
+
+    .line 1610
+    :sswitch_14
+    const/16 v0, 0x65
+
+    .line 1611
+    goto :goto_0
+
+    .line 1613
+    :sswitch_15
+    const/16 v0, 0x65
+
+    .line 1614
+    goto :goto_0
+
+    .line 1616
+    :sswitch_16
+    const/16 v0, 0x65
+
+    .line 1617
+    goto :goto_0
+
+    .line 1620
+    :sswitch_17
+    const/16 v0, 0x45
+
+    .line 1621
+    goto :goto_0
+
+    .line 1623
+    :sswitch_18
+    const/16 v0, 0x45
+
+    .line 1624
+    goto :goto_0
+
+    .line 1626
+    :sswitch_19
+    const/16 v0, 0x45
+
+    .line 1627
+    goto :goto_0
+
+    .line 1629
+    :sswitch_1a
+    const/16 v0, 0x45
+
+    .line 1630
+    goto :goto_0
+
+    .line 1632
+    :sswitch_1b
+    const/16 v0, 0x45
+
+    .line 1633
+    goto :goto_0
+
+    .line 1635
+    :sswitch_1c
+    const/16 v0, 0x45
+
+    .line 1636
+    goto :goto_0
+
+    .line 1639
+    :sswitch_1d
+    const/16 v0, 0x67
+
+    .line 1640
+    goto :goto_0
+
+    .line 1643
+    :sswitch_1e
+    const/16 v0, 0x47
+
+    .line 1644
+    goto :goto_0
+
+    .line 1647
+    :sswitch_1f
+    const/16 v0, 0x69
+
+    .line 1648
+    goto :goto_0
+
+    .line 1650
     :sswitch_20
     const/16 v0, 0x69
 
+    .line 1651
     goto :goto_0
 
-    .line 1576
+    .line 1653
     :sswitch_21
     const/16 v0, 0x69
 
+    .line 1654
     goto :goto_0
 
-    .line 1577
+    .line 1656
     :sswitch_22
     const/16 v0, 0x69
 
-    goto/16 :goto_0
-
-    .line 1578
-    :sswitch_23
-    const/16 v0, 0x69
-
-    goto/16 :goto_0
-
-    .line 1580
-    :sswitch_24
-    const/16 v0, 0x49
-
-    goto/16 :goto_0
-
-    .line 1581
-    :sswitch_25
-    const/16 v0, 0x49
-
-    goto/16 :goto_0
-
-    .line 1582
-    :sswitch_26
-    const/16 v0, 0x49
-
-    goto/16 :goto_0
-
-    .line 1583
-    :sswitch_27
-    const/16 v0, 0x49
-
-    goto/16 :goto_0
-
-    .line 1584
-    :sswitch_28
-    const/16 v0, 0x49
-
-    goto/16 :goto_0
-
-    .line 1585
-    :sswitch_29
-    const/16 v0, 0x49
-
-    goto/16 :goto_0
-
-    .line 1587
-    :sswitch_2a
-    const/16 v0, 0x6c
-
-    goto/16 :goto_0
-
-    .line 1588
-    :sswitch_2b
-    const/16 v0, 0x6c
-
-    goto/16 :goto_0
-
-    .line 1589
-    :sswitch_2c
-    const/16 v0, 0x6c
-
-    goto/16 :goto_0
-
-    .line 1591
-    :sswitch_2d
-    const/16 v0, 0x4c
-
-    goto/16 :goto_0
-
-    .line 1592
-    :sswitch_2e
-    const/16 v0, 0x4c
-
-    goto/16 :goto_0
-
-    .line 1593
-    :sswitch_2f
-    const/16 v0, 0x4c
-
-    goto/16 :goto_0
-
-    .line 1595
-    :sswitch_30
-    const/16 v0, 0x6e
-
-    goto/16 :goto_0
-
-    .line 1596
-    :sswitch_31
-    const/16 v0, 0x6e
-
-    goto/16 :goto_0
-
-    .line 1598
-    :sswitch_32
-    const/16 v0, 0x4e
-
-    goto/16 :goto_0
-
-    .line 1599
-    :sswitch_33
-    const/16 v0, 0x4e
-
-    goto/16 :goto_0
-
-    .line 1601
-    :sswitch_34
-    const/16 v0, 0x6f
-
-    goto/16 :goto_0
-
-    .line 1602
-    :sswitch_35
-    const/16 v0, 0x6f
-
-    goto/16 :goto_0
-
-    .line 1603
-    :sswitch_36
-    const/16 v0, 0x6f
-
-    goto/16 :goto_0
-
-    .line 1604
-    :sswitch_37
-    const/16 v0, 0x6f
-
-    goto/16 :goto_0
-
-    .line 1605
-    :sswitch_38
-    const/16 v0, 0x6f
-
-    goto/16 :goto_0
-
-    .line 1607
-    :sswitch_39
-    const/16 v0, 0x4f
-
-    goto/16 :goto_0
-
-    .line 1608
-    :sswitch_3a
-    const/16 v0, 0x4f
-
-    goto/16 :goto_0
-
-    .line 1609
-    :sswitch_3b
-    const/16 v0, 0x4f
-
-    goto/16 :goto_0
-
-    .line 1610
-    :sswitch_3c
-    const/16 v0, 0x4f
-
-    goto/16 :goto_0
-
-    .line 1611
-    :sswitch_3d
-    const/16 v0, 0x4f
-
-    goto/16 :goto_0
-
-    .line 1612
-    :sswitch_3e
-    const/16 v0, 0x4f
-
-    goto/16 :goto_0
-
-    .line 1614
-    :sswitch_3f
-    const/16 v0, 0x72
-
-    goto/16 :goto_0
-
-    .line 1615
-    :sswitch_40
-    const/16 v0, 0x72
-
-    goto/16 :goto_0
-
-    .line 1617
-    :sswitch_41
-    const/16 v0, 0x52
-
-    goto/16 :goto_0
-
-    .line 1618
-    :sswitch_42
-    const/16 v0, 0x52
-
-    goto/16 :goto_0
-
-    .line 1620
-    :sswitch_43
-    const/16 v0, 0x73
-
-    goto/16 :goto_0
-
-    .line 1621
-    :sswitch_44
-    const/16 v0, 0x73
-
-    goto/16 :goto_0
-
-    .line 1622
-    :sswitch_45
-    const/16 v0, 0x73
-
-    goto/16 :goto_0
-
-    .line 1624
-    :sswitch_46
-    const/16 v0, 0x53
-
-    goto/16 :goto_0
-
-    .line 1625
-    :sswitch_47
-    const/16 v0, 0x53
-
-    goto/16 :goto_0
-
-    .line 1626
-    :sswitch_48
-    const/16 v0, 0x53
-
-    goto/16 :goto_0
-
-    .line 1628
-    :sswitch_49
-    const/16 v0, 0x74
-
-    goto/16 :goto_0
-
-    .line 1630
-    :sswitch_4a
-    const/16 v0, 0x54
-
-    goto/16 :goto_0
-
-    .line 1632
-    :sswitch_4b
-    const/16 v0, 0x75
-
-    goto/16 :goto_0
-
-    .line 1633
-    :sswitch_4c
-    const/16 v0, 0x75
-
-    goto/16 :goto_0
-
-    .line 1634
-    :sswitch_4d
-    const/16 v0, 0x75
-
-    goto/16 :goto_0
-
-    .line 1635
-    :sswitch_4e
-    const/16 v0, 0x75
-
-    goto/16 :goto_0
-
-    .line 1637
-    :sswitch_4f
-    const/16 v0, 0x55
-
-    goto/16 :goto_0
-
-    .line 1638
-    :sswitch_50
-    const/16 v0, 0x55
-
-    goto/16 :goto_0
-
-    .line 1639
-    :sswitch_51
-    const/16 v0, 0x55
-
-    goto/16 :goto_0
-
-    .line 1640
-    :sswitch_52
-    const/16 v0, 0x55
-
-    goto/16 :goto_0
-
-    .line 1641
-    :sswitch_53
-    const/16 v0, 0x55
-
-    goto/16 :goto_0
-
-    .line 1643
-    :sswitch_54
-    const/16 v0, 0x79
-
-    goto/16 :goto_0
-
-    .line 1644
-    :sswitch_55
-    const/16 v0, 0x79
-
-    goto/16 :goto_0
-
-    .line 1646
-    :sswitch_56
-    const/16 v0, 0x59
-
-    goto/16 :goto_0
-
-    .line 1647
-    :sswitch_57
-    const/16 v0, 0x59
-
-    goto/16 :goto_0
-
-    .line 1649
-    :sswitch_58
-    const/16 v0, 0x7a
-
-    goto/16 :goto_0
-
-    .line 1650
-    :sswitch_59
-    const/16 v0, 0x7a
-
-    goto/16 :goto_0
-
-    .line 1651
-    :sswitch_5a
-    const/16 v0, 0x7a
-
-    goto/16 :goto_0
-
-    .line 1653
-    :sswitch_5b
-    const/16 v0, 0x5a
-
-    goto/16 :goto_0
-
-    .line 1654
-    :sswitch_5c
-    const/16 v0, 0x5a
-
-    goto/16 :goto_0
-
-    .line 1655
-    :sswitch_5d
-    const/16 v0, 0x5a
-
-    goto/16 :goto_0
-
-    .line 1658
-    :sswitch_5e
-    const/16 v0, 0x45
-
+    .line 1657
     goto/16 :goto_0
 
     .line 1659
-    :sswitch_5f
-    const/16 v0, 0x50
-
-    goto/16 :goto_0
+    :sswitch_23
+    const/16 v0, 0x69
 
     .line 1660
-    :sswitch_60
-    const/16 v0, 0x54
-
-    goto/16 :goto_0
-
-    .line 1661
-    :sswitch_61
-    const/16 v0, 0x59
-
-    goto/16 :goto_0
-
-    .line 1662
-    :sswitch_62
-    const/16 v0, 0x49
-
     goto/16 :goto_0
 
     .line 1663
-    :sswitch_63
-    const/16 v0, 0x4f
-
-    goto/16 :goto_0
+    :sswitch_24
+    const/16 v0, 0x49
 
     .line 1664
-    :sswitch_64
-    const/16 v0, 0x41
-
-    goto/16 :goto_0
-
-    .line 1665
-    :sswitch_65
-    const/16 v0, 0x48
-
     goto/16 :goto_0
 
     .line 1666
-    :sswitch_66
-    const/16 v0, 0x4b
-
-    goto/16 :goto_0
+    :sswitch_25
+    const/16 v0, 0x49
 
     .line 1667
-    :sswitch_67
-    const/16 v0, 0x5a
-
-    goto/16 :goto_0
-
-    .line 1668
-    :sswitch_68
-    const/16 v0, 0x58
-
     goto/16 :goto_0
 
     .line 1669
-    :sswitch_69
-    const/16 v0, 0x42
-
-    goto/16 :goto_0
+    :sswitch_26
+    const/16 v0, 0x49
 
     .line 1670
-    :sswitch_6a
-    const/16 v0, 0x4e
-
     goto/16 :goto_0
 
-    .line 1671
-    :sswitch_6b
-    const/16 v0, 0x4d
+    .line 1672
+    :sswitch_27
+    const/16 v0, 0x49
 
+    .line 1673
+    goto/16 :goto_0
+
+    .line 1675
+    :sswitch_28
+    const/16 v0, 0x49
+
+    .line 1676
+    goto/16 :goto_0
+
+    .line 1678
+    :sswitch_29
+    const/16 v0, 0x49
+
+    .line 1679
+    goto/16 :goto_0
+
+    .line 1682
+    :sswitch_2a
+    const/16 v0, 0x6c
+
+    .line 1683
+    goto/16 :goto_0
+
+    .line 1685
+    :sswitch_2b
+    const/16 v0, 0x6c
+
+    .line 1686
+    goto/16 :goto_0
+
+    .line 1688
+    :sswitch_2c
+    const/16 v0, 0x6c
+
+    .line 1689
     goto/16 :goto_0
 
     .line 1692
-    :sswitch_6c
-    const/16 v0, 0x65
-
-    goto/16 :goto_0
+    :sswitch_2d
+    const/16 v0, 0x4c
 
     .line 1693
-    :sswitch_6d
-    const/16 v0, 0x6f
-
-    goto/16 :goto_0
-
-    .line 1694
-    :sswitch_6e
-    const/16 v0, 0x75
-
     goto/16 :goto_0
 
     .line 1695
+    :sswitch_2e
+    const/16 v0, 0x4c
+
+    .line 1696
+    goto/16 :goto_0
+
+    .line 1698
+    :sswitch_2f
+    const/16 v0, 0x4c
+
+    .line 1699
+    goto/16 :goto_0
+
+    .line 1702
+    :sswitch_30
+    const/16 v0, 0x6e
+
+    .line 1703
+    goto/16 :goto_0
+
+    .line 1705
+    :sswitch_31
+    const/16 v0, 0x6e
+
+    .line 1706
+    goto/16 :goto_0
+
+    .line 1709
+    :sswitch_32
+    const/16 v0, 0x4e
+
+    .line 1710
+    goto/16 :goto_0
+
+    .line 1712
+    :sswitch_33
+    const/16 v0, 0x4e
+
+    .line 1713
+    goto/16 :goto_0
+
+    .line 1716
+    :sswitch_34
+    const/16 v0, 0x6f
+
+    .line 1717
+    goto/16 :goto_0
+
+    .line 1719
+    :sswitch_35
+    const/16 v0, 0x6f
+
+    .line 1720
+    goto/16 :goto_0
+
+    .line 1722
+    :sswitch_36
+    const/16 v0, 0x6f
+
+    .line 1723
+    goto/16 :goto_0
+
+    .line 1725
+    :sswitch_37
+    const/16 v0, 0x6f
+
+    .line 1726
+    goto/16 :goto_0
+
+    .line 1728
+    :sswitch_38
+    const/16 v0, 0x6f
+
+    .line 1729
+    goto/16 :goto_0
+
+    .line 1732
+    :sswitch_39
+    const/16 v0, 0x4f
+
+    .line 1733
+    goto/16 :goto_0
+
+    .line 1735
+    :sswitch_3a
+    const/16 v0, 0x4f
+
+    .line 1736
+    goto/16 :goto_0
+
+    .line 1738
+    :sswitch_3b
+    const/16 v0, 0x4f
+
+    .line 1739
+    goto/16 :goto_0
+
+    .line 1741
+    :sswitch_3c
+    const/16 v0, 0x4f
+
+    .line 1742
+    goto/16 :goto_0
+
+    .line 1744
+    :sswitch_3d
+    const/16 v0, 0x4f
+
+    .line 1745
+    goto/16 :goto_0
+
+    .line 1747
+    :sswitch_3e
+    const/16 v0, 0x4f
+
+    .line 1748
+    goto/16 :goto_0
+
+    .line 1751
+    :sswitch_3f
+    const/16 v0, 0x72
+
+    .line 1752
+    goto/16 :goto_0
+
+    .line 1754
+    :sswitch_40
+    const/16 v0, 0x72
+
+    .line 1755
+    goto/16 :goto_0
+
+    .line 1758
+    :sswitch_41
+    const/16 v0, 0x52
+
+    .line 1759
+    goto/16 :goto_0
+
+    .line 1761
+    :sswitch_42
+    const/16 v0, 0x52
+
+    .line 1762
+    goto/16 :goto_0
+
+    .line 1765
+    :sswitch_43
+    const/16 v0, 0x73
+
+    .line 1766
+    goto/16 :goto_0
+
+    .line 1768
+    :sswitch_44
+    const/16 v0, 0x73
+
+    .line 1769
+    goto/16 :goto_0
+
+    .line 1771
+    :sswitch_45
+    const/16 v0, 0x73
+
+    .line 1772
+    goto/16 :goto_0
+
+    .line 1775
+    :sswitch_46
+    const/16 v0, 0x53
+
+    .line 1776
+    goto/16 :goto_0
+
+    .line 1778
+    :sswitch_47
+    const/16 v0, 0x53
+
+    .line 1779
+    goto/16 :goto_0
+
+    .line 1781
+    :sswitch_48
+    const/16 v0, 0x53
+
+    .line 1782
+    goto/16 :goto_0
+
+    .line 1785
+    :sswitch_49
+    const/16 v0, 0x74
+
+    .line 1786
+    goto/16 :goto_0
+
+    .line 1789
+    :sswitch_4a
+    const/16 v0, 0x54
+
+    .line 1790
+    goto/16 :goto_0
+
+    .line 1793
+    :sswitch_4b
+    const/16 v0, 0x75
+
+    .line 1794
+    goto/16 :goto_0
+
+    .line 1796
+    :sswitch_4c
+    const/16 v0, 0x75
+
+    .line 1797
+    goto/16 :goto_0
+
+    .line 1799
+    :sswitch_4d
+    const/16 v0, 0x75
+
+    .line 1800
+    goto/16 :goto_0
+
+    .line 1802
+    :sswitch_4e
+    const/16 v0, 0x75
+
+    .line 1803
+    goto/16 :goto_0
+
+    .line 1806
+    :sswitch_4f
+    const/16 v0, 0x55
+
+    .line 1807
+    goto/16 :goto_0
+
+    .line 1809
+    :sswitch_50
+    const/16 v0, 0x55
+
+    .line 1810
+    goto/16 :goto_0
+
+    .line 1812
+    :sswitch_51
+    const/16 v0, 0x55
+
+    .line 1813
+    goto/16 :goto_0
+
+    .line 1815
+    :sswitch_52
+    const/16 v0, 0x55
+
+    .line 1816
+    goto/16 :goto_0
+
+    .line 1818
+    :sswitch_53
+    const/16 v0, 0x55
+
+    .line 1819
+    goto/16 :goto_0
+
+    .line 1822
+    :sswitch_54
+    const/16 v0, 0x79
+
+    .line 1823
+    goto/16 :goto_0
+
+    .line 1825
+    :sswitch_55
+    const/16 v0, 0x79
+
+    .line 1826
+    goto/16 :goto_0
+
+    .line 1829
+    :sswitch_56
+    const/16 v0, 0x59
+
+    .line 1830
+    goto/16 :goto_0
+
+    .line 1832
+    :sswitch_57
+    const/16 v0, 0x59
+
+    .line 1833
+    goto/16 :goto_0
+
+    .line 1836
+    :sswitch_58
+    const/16 v0, 0x7a
+
+    .line 1837
+    goto/16 :goto_0
+
+    .line 1839
+    :sswitch_59
+    const/16 v0, 0x7a
+
+    .line 1840
+    goto/16 :goto_0
+
+    .line 1842
+    :sswitch_5a
+    const/16 v0, 0x7a
+
+    .line 1843
+    goto/16 :goto_0
+
+    .line 1846
+    :sswitch_5b
+    const/16 v0, 0x5a
+
+    .line 1847
+    goto/16 :goto_0
+
+    .line 1849
+    :sswitch_5c
+    const/16 v0, 0x5a
+
+    .line 1850
+    goto/16 :goto_0
+
+    .line 1852
+    :sswitch_5d
+    const/16 v0, 0x5a
+
+    .line 1853
+    goto/16 :goto_0
+
+    .line 1857
+    :sswitch_5e
+    const/16 v0, 0x45
+
+    .line 1858
+    goto/16 :goto_0
+
+    .line 1860
+    :sswitch_5f
+    const/16 v0, 0x50
+
+    .line 1861
+    goto/16 :goto_0
+
+    .line 1863
+    :sswitch_60
+    const/16 v0, 0x54
+
+    .line 1864
+    goto/16 :goto_0
+
+    .line 1866
+    :sswitch_61
+    const/16 v0, 0x59
+
+    .line 1867
+    goto/16 :goto_0
+
+    .line 1869
+    :sswitch_62
+    const/16 v0, 0x49
+
+    .line 1870
+    goto/16 :goto_0
+
+    .line 1872
+    :sswitch_63
+    const/16 v0, 0x4f
+
+    .line 1873
+    goto/16 :goto_0
+
+    .line 1875
+    :sswitch_64
+    const/16 v0, 0x41
+
+    .line 1876
+    goto/16 :goto_0
+
+    .line 1878
+    :sswitch_65
+    const/16 v0, 0x48
+
+    .line 1879
+    goto/16 :goto_0
+
+    .line 1881
+    :sswitch_66
+    const/16 v0, 0x4b
+
+    .line 1882
+    goto/16 :goto_0
+
+    .line 1884
+    :sswitch_67
+    const/16 v0, 0x5a
+
+    .line 1885
+    goto/16 :goto_0
+
+    .line 1887
+    :sswitch_68
+    const/16 v0, 0x58
+
+    .line 1888
+    goto/16 :goto_0
+
+    .line 1890
+    :sswitch_69
+    const/16 v0, 0x42
+
+    .line 1891
+    goto/16 :goto_0
+
+    .line 1893
+    :sswitch_6a
+    const/16 v0, 0x4e
+
+    .line 1894
+    goto/16 :goto_0
+
+    .line 1896
+    :sswitch_6b
+    const/16 v0, 0x4d
+
+    .line 1897
+    goto/16 :goto_0
+
+    .line 1919
+    :sswitch_6c
+    const/16 v0, 0x65
+
+    .line 1920
+    goto/16 :goto_0
+
+    .line 1922
+    :sswitch_6d
+    const/16 v0, 0x6f
+
+    .line 1923
+    goto/16 :goto_0
+
+    .line 1925
+    :sswitch_6e
+    const/16 v0, 0x75
+
+    .line 1926
+    goto/16 :goto_0
+
+    .line 1928
     :sswitch_6f
     const/16 v0, 0x4f
 
+    .line 1929
     goto/16 :goto_0
 
-    .line 1696
+    .line 1931
     :sswitch_70
     const/16 v0, 0x55
 
+    .line 1932
     goto/16 :goto_0
 
-    .line 1697
+    .line 1934
     :sswitch_71
     const/16 v0, 0x75
 
     goto/16 :goto_0
 
-    .line 1701
+    .line 1939
     :cond_2
     const/16 v1, 0x7f
 
     if-le v0, v1, :cond_1
 
-    .line 1703
+    .line 1940
     const/16 v1, 0x80
 
     if-ne v0, v1, :cond_3
 
-    .line 1706
+    .line 1942
     const/16 v0, 0x20
 
     goto/16 :goto_0
 
-    .line 1710
+    .line 1944
     :cond_3
     const v0, 0xfeff
 
     goto/16 :goto_0
 
-    .line 1521
+    .line 1532
     :sswitch_data_0
     .sparse-switch
         0xc0 -> :sswitch_5
@@ -4495,7 +4666,7 @@
         0x3a7 -> :sswitch_68
     .end sparse-switch
 
-    .line 1691
+    .line 1917
     :sswitch_data_1
     .sparse-switch
         0xe9 -> :sswitch_6c
@@ -4514,7 +4685,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 723
+    .line 728
     const/4 v2, 0x0
 
     :try_start_0
@@ -4524,15 +4695,15 @@
 
     move-result v1
 
-    .line 726
+    .line 731
     :goto_0
     return v1
 
-    .line 724
+    .line 729
     :catch_0
     move-exception v0
 
-    .line 726
+    .line 731
     .local v0, ex:Lcom/android/internal/telephony/EncodeException;
     goto :goto_0
 .end method
@@ -4554,7 +4725,7 @@
 
     const/4 v2, -0x1
 
-    .line 741
+    .line 746
     sget-object v1, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToGsmTables:[Landroid/util/SparseIntArray;
 
     aget-object v1, v1, v3
@@ -4565,12 +4736,12 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 753
+    .line 758
     :cond_0
     :goto_0
     return v0
 
-    .line 745
+    .line 750
     :cond_1
     sget-object v1, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToShiftTables:[Landroid/util/SparseIntArray;
 
@@ -4582,16 +4753,16 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 746
+    .line 751
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 749
+    .line 754
     :cond_2
     if-eqz p1, :cond_0
 
-    .line 750
+    .line 755
     new-instance v0, Lcom/android/internal/telephony/EncodeException;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/EncodeException;-><init>(C)V
@@ -4610,25 +4781,25 @@
     .end annotation
 
     .prologue
-    .line 764
+    .line 769
     const/4 v0, 0x0
 
-    .line 765
+    .line 770
     .local v0, charIndex:I
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v2
 
-    .line 766
+    .line 771
     .local v2, sz:I
     const/4 v1, 0x0
 
-    .line 768
+    .line 773
     .local v1, count:I
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 769
+    .line 774
     invoke-interface {p0, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v3
@@ -4639,12 +4810,12 @@
 
     add-int/2addr v1, v3
 
-    .line 770
+    .line 775
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 773
+    .line 778
     :cond_0
     return v1
 .end method
@@ -4659,28 +4830,28 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 790
+    .line 795
     const/4 v3, 0x0
 
-    .line 791
+    .line 796
     .local v3, count:I
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v5
 
-    .line 792
+    .line 797
     .local v5, sz:I
     sget-object v7, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToGsmTables:[Landroid/util/SparseIntArray;
 
     aget-object v1, v7, p2
 
-    .line 793
+    .line 798
     .local v1, charToLanguageTable:Landroid/util/SparseIntArray;
     sget-object v7, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToShiftTables:[Landroid/util/SparseIntArray;
 
     aget-object v2, v7, p3
 
-    .line 794
+    .line 799
     .local v2, charToShiftTable:Landroid/util/SparseIntArray;
     const/4 v4, 0x0
 
@@ -4688,31 +4859,31 @@
     :goto_0
     if-ge v4, v5, :cond_4
 
-    .line 795
+    .line 800
     invoke-interface {p0, v4}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
-    .line 796
+    .line 801
     .local v0, c:C
     const/16 v7, 0x1b
 
     if-ne v0, v7, :cond_0
 
-    .line 797
+    .line 802
     const-string v7, "GSM"
 
     const-string v8, "countGsmSeptets() string contains Escape character, skipping."
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 794
+    .line 799
     :goto_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 800
+    .line 805
     :cond_0
     invoke-virtual {v1, v0, v6}, Landroid/util/SparseIntArray;->get(II)I
 
@@ -4720,12 +4891,12 @@
 
     if-eq v7, v6, :cond_1
 
-    .line 801
+    .line 806
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 802
+    .line 807
     :cond_1
     invoke-virtual {v2, v0, v6}, Landroid/util/SparseIntArray;->get(II)I
 
@@ -4733,16 +4904,16 @@
 
     if-eq v7, v6, :cond_2
 
-    .line 803
+    .line 808
     add-int/lit8 v3, v3, 0x2
 
     goto :goto_1
 
-    .line 804
+    .line 809
     :cond_2
     if-eqz p1, :cond_3
 
-    .line 805
+    .line 810
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
@@ -4750,7 +4921,7 @@
     :cond_3
     move v3, v6
 
-    .line 810
+    .line 815
     .end local v0           #c:C
     .end local v3           #count:I
     :cond_4
@@ -4768,28 +4939,28 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 985
+    .line 990
     const/4 v0, 0x0
 
-    .line 986
+    .line 991
     .local v0, accumulator:I
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    .line 988
+    .line 993
     .local v5, size:I
     sget-object v6, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToGsmTables:[Landroid/util/SparseIntArray;
 
     aget-object v2, v6, p3
 
-    .line 989
+    .line 994
     .local v2, charToLangTable:Landroid/util/SparseIntArray;
     sget-object v6, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToShiftTables:[Landroid/util/SparseIntArray;
 
     aget-object v1, v6, p4
 
-    .line 990
+    .line 995
     .local v1, charToLangShiftTable:Landroid/util/SparseIntArray;
     move v4, p1
 
@@ -4797,7 +4968,7 @@
     :goto_0
     if-ge v4, v5, :cond_3
 
-    .line 991
+    .line 996
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -4806,11 +4977,11 @@
 
     move-result v3
 
-    .line 992
+    .line 997
     .local v3, encodedSeptet:I
     if-ne v3, v7, :cond_1
 
-    .line 993
+    .line 998
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
@@ -4819,23 +4990,23 @@
 
     move-result v3
 
-    .line 994
+    .line 999
     if-ne v3, v7, :cond_0
 
-    .line 996
+    .line 1001
     add-int/lit8 v0, v0, 0x1
 
-    .line 1003
+    .line 1008
     :goto_1
     if-le v0, p2, :cond_2
 
-    .line 1007
+    .line 1012
     .end local v3           #encodedSeptet:I
     .end local v4           #i:I
     :goto_2
     return v4
 
-    .line 998
+    .line 1003
     .restart local v3       #encodedSeptet:I
     .restart local v4       #i:I
     :cond_0
@@ -4843,13 +5014,13 @@
 
     goto :goto_1
 
-    .line 1001
+    .line 1006
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 990
+    .line 995
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
@@ -4859,15 +5030,15 @@
     :cond_3
     move v4, v5
 
-    .line 1007
+    .line 1012
     goto :goto_2
 .end method
 
-.method static declared-synchronized getEnabledLockingShiftTables()[I
+.method public static declared-synchronized getEnabledLockingShiftTables()[I
     .locals 2
 
     .prologue
-    .line 1057
+    .line 1062
     const-class v0, Lcom/android/internal/telephony/GsmAlphabet;
 
     monitor-enter v0
@@ -4889,11 +5060,11 @@
     throw v1
 .end method
 
-.method static declared-synchronized getEnabledSingleShiftTables()[I
+.method public static declared-synchronized getEnabledSingleShiftTables()[I
     .locals 2
 
     .prologue
-    .line 1046
+    .line 1051
     const-class v0, Lcom/android/internal/telephony/GsmAlphabet;
 
     monitor-enter v0
@@ -5524,7 +5695,7 @@
 .end method
 
 .method public static gsm8BitUnpackedToString([BIILjava/lang/String;)Ljava/lang/String;
-    .locals 14
+    .locals 16
     .parameter "data"
     .parameter "offset"
     .parameter "length"
@@ -5532,42 +5703,42 @@
 
     .prologue
     .line 584
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     .line 585
-    .local v5, isMbcs:Z
+    .local v6, isMbcs:Z
     const/4 v2, 0x0
 
     .line 586
     .local v2, charset:Ljava/nio/charset/Charset;
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     .line 588
-    .local v7, mbcsBuffer:Ljava/nio/ByteBuffer;
+    .local v8, mbcsBuffer:Ljava/nio/ByteBuffer;
     invoke-static/range {p3 .. p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v12
+    move-result v13
 
-    if-nez v12, :cond_0
+    if-nez v13, :cond_0
 
-    const-string/jumbo v12, "us-ascii"
+    const-string/jumbo v13, "us-ascii"
 
     move-object/from16 v0, p3
 
-    invoke-virtual {v0, v12}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-virtual {v0, v13}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    move-result v12
+    move-result v13
 
-    if-nez v12, :cond_0
+    if-nez v13, :cond_0
 
     invoke-static/range {p3 .. p3}, Ljava/nio/charset/Charset;->isSupported(Ljava/lang/String;)Z
 
-    move-result v12
+    move-result v13
 
-    if-eqz v12, :cond_0
+    if-eqz v13, :cond_0
 
     .line 591
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
     .line 592
     invoke-static/range {p3 .. p3}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -5575,218 +5746,283 @@
     move-result-object v2
 
     .line 593
-    const/4 v12, 0x2
+    const/4 v13, 0x2
 
-    invoke-static {v12}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    invoke-static {v13}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    move-result-object v7
+    move-result-object v8
 
     .line 597
     :cond_0
-    sget-object v12, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageTables:[Ljava/lang/String;
+    sget-object v13, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageTables:[Ljava/lang/String;
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    aget-object v6, v12, v13
+    aget-object v7, v13, v14
 
     .line 598
-    .local v6, languageTableToChar:Ljava/lang/String;
-    sget-object v12, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageShiftTables:[Ljava/lang/String;
+    .local v7, languageTableToChar:Ljava/lang/String;
+    sget-object v13, Lcom/android/internal/telephony/GsmAlphabet;->sLanguageShiftTables:[Ljava/lang/String;
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    aget-object v11, v12, v13
+    aget-object v12, v13, v14
 
     .line 600
-    .local v11, shiftTableToChar:Ljava/lang/String;
-    new-instance v9, Ljava/lang/StringBuilder;
+    .local v12, shiftTableToChar:Ljava/lang/String;
+    new-instance v10, Ljava/lang/StringBuilder;
 
     move/from16 v0, p2
 
-    invoke-direct {v9, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v10, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 601
-    .local v9, ret:Ljava/lang/StringBuilder;
-    const/4 v8, 0x0
+    .local v10, ret:Ljava/lang/StringBuilder;
+    const/4 v9, 0x0
 
     .line 602
-    .local v8, prevWasEscape:Z
-    move v3, p1
+    .local v9, prevWasEscape:Z
+    move/from16 v4, p1
 
-    .local v3, i:I
-    move v4, v3
-
-    .end local v3           #i:I
     .local v4, i:I
-    :goto_0
-    add-int v12, p1, p2
+    move v5, v4
 
-    if-ge v4, v12, :cond_1
+    .end local v4           #i:I
+    .local v5, i:I
+    :goto_0
+    add-int v13, p1, p2
+
+    if-ge v5, v13, :cond_1
 
     .line 605
-    aget-byte v12, p0, v4
+    aget-byte v13, p0, v5
 
-    and-int/lit16 v1, v12, 0xff
+    and-int/lit16 v1, v13, 0xff
 
     .line 607
     .local v1, c:I
-    const/16 v12, 0xff
+    const/16 v13, 0xff
 
-    if-ne v1, v12, :cond_2
+    if-ne v1, v13, :cond_2
 
-    .line 643
+    .line 648
     .end local v1           #c:I
     :cond_1
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v12
+    move-result-object v13
 
-    return-object v12
+    return-object v13
 
     .line 609
     .restart local v1       #c:I
     :cond_2
-    const/16 v12, 0x1b
+    const/16 v13, 0x1b
 
-    if-ne v1, v12, :cond_4
+    if-ne v1, v13, :cond_4
 
     .line 610
-    if-eqz v8, :cond_3
+    if-eqz v9, :cond_3
 
     .line 614
-    const/16 v12, 0x20
+    const/16 v13, 0x20
 
-    invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 615
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
-    move v3, v4
+    move v4, v5
 
     .line 602
-    .end local v4           #i:I
-    .restart local v3       #i:I
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    move v4, v3
-
-    .end local v3           #i:I
+    .end local v5           #i:I
     .restart local v4       #i:I
+    :goto_1
+    add-int/lit8 v4, v4, 0x1
+
+    move v5, v4
+
+    .end local v4           #i:I
+    .restart local v5       #i:I
     goto :goto_0
 
     .line 617
     :cond_3
-    const/4 v8, 0x1
+    const/4 v9, 0x1
 
-    move v3, v4
+    move v4, v5
 
-    .end local v4           #i:I
-    .restart local v3       #i:I
+    .end local v5           #i:I
+    .restart local v4       #i:I
     goto :goto_1
 
     .line 620
-    .end local v3           #i:I
-    .restart local v4       #i:I
+    .end local v4           #i:I
+    .restart local v5       #i:I
     :cond_4
-    if-eqz v8, :cond_6
+    if-eqz v9, :cond_6
 
     .line 621
-    invoke-virtual {v11, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v12, v1}, Ljava/lang/String;->charAt(I)C
 
-    move-result v10
+    move-result v11
 
     .line 622
-    .local v10, shiftChar:C
-    const/16 v12, 0x20
+    .local v11, shiftChar:C
+    const/16 v13, 0x20
 
-    if-ne v10, v12, :cond_5
+    if-ne v11, v13, :cond_5
 
     .line 624
-    invoke-virtual {v6, v1}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v7, v1}, Ljava/lang/String;->charAt(I)C
 
-    move-result v12
+    move-result v13
 
-    invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     :goto_2
-    move v3, v4
+    move v4, v5
 
-    .line 639
-    .end local v4           #i:I
-    .end local v10           #shiftChar:C
-    .restart local v3       #i:I
+    .line 644
+    .end local v5           #i:I
+    .end local v11           #shiftChar:C
+    .restart local v4       #i:I
     :goto_3
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     goto :goto_1
 
     .line 626
-    .end local v3           #i:I
-    .restart local v4       #i:I
-    .restart local v10       #shiftChar:C
+    .end local v4           #i:I
+    .restart local v5       #i:I
+    .restart local v11       #shiftChar:C
     :cond_5
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
     .line 629
-    .end local v10           #shiftChar:C
+    .end local v11           #shiftChar:C
     :cond_6
-    if-eqz v5, :cond_7
+    if-eqz v6, :cond_7
 
-    const/16 v12, 0x80
+    const/16 v13, 0x80
 
-    if-lt v1, v12, :cond_7
+    if-lt v1, v13, :cond_7
 
-    add-int/lit8 v12, v4, 0x1
+    add-int/lit8 v13, v5, 0x1
 
-    add-int v13, p1, p2
+    add-int v14, p1, p2
 
-    if-lt v12, v13, :cond_8
+    if-lt v13, v14, :cond_8
 
-    .line 630
+    .line 631
     :cond_7
-    invoke-virtual {v6, v1}, Ljava/lang/String;->charAt(I)C
+    :try_start_0
+    invoke-virtual {v7, v1}, Ljava/lang/String;->charAt(I)C
 
-    move-result v12
+    move-result v13
 
-    invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move v3, v4
-
-    .end local v4           #i:I
-    .restart local v3       #i:I
-    goto :goto_3
-
-    .line 633
-    .end local v3           #i:I
-    .restart local v4       #i:I
-    :cond_8
-    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
-
-    .line 634
-    add-int/lit8 v3, v4, 0x1
-
-    .end local v4           #i:I
-    .restart local v3       #i:I
-    const/4 v12, 0x2
-
-    invoke-virtual {v7, p0, v4, v12}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+    move v4, v5
 
     .line 635
-    invoke-virtual {v7}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    .end local v5           #i:I
+    .restart local v4       #i:I
+    goto :goto_3
 
-    .line 636
-    invoke-virtual {v2, v7}, Ljava/nio/charset/Charset;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
+    .line 632
+    .end local v4           #i:I
+    .restart local v5       #i:I
+    :catch_0
+    move-exception v3
 
-    move-result-object v12
+    .line 633
+    .local v3, e:Ljava/lang/Exception;
+    const-string v13, "GSM"
 
-    invoke-virtual {v12}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
+    new-instance v14, Ljava/lang/StringBuilder;
 
-    move-result-object v12
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v9, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v15, "gsm8BitUnpackedToString : Exception - index("
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, "), char("
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, ")"
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 634
+    const/16 v13, 0x20
+
+    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move v4, v5
+
+    .line 635
+    .end local v5           #i:I
+    .restart local v4       #i:I
+    goto :goto_3
+
+    .line 638
+    .end local v3           #e:Ljava/lang/Exception;
+    .end local v4           #i:I
+    .restart local v5       #i:I
+    :cond_8
+    invoke-virtual {v8}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    .line 639
+    add-int/lit8 v4, v5, 0x1
+
+    .end local v5           #i:I
+    .restart local v4       #i:I
+    const/4 v13, 0x2
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v8, v0, v5, v13}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    .line 640
+    invoke-virtual {v8}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    .line 641
+    invoke-virtual {v2, v8}, Ljava/nio/charset/Charset;->decode(Ljava/nio/ByteBuffer;)Ljava/nio/CharBuffer;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Ljava/nio/CharBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-virtual {v10, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_3
 .end method
@@ -5939,7 +6175,7 @@
     .parameter "tables"
 
     .prologue
-    .line 1035
+    .line 1040
     const-class v0, Lcom/android/internal/telephony/GsmAlphabet;
 
     monitor-enter v0
@@ -5949,12 +6185,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1036
+    .line 1041
     monitor-exit v0
 
     return-void
 
-    .line 1035
+    .line 1040
     :catchall_0
     move-exception v1
 
@@ -5968,7 +6204,7 @@
     .parameter "tables"
 
     .prologue
-    .line 1018
+    .line 1023
     const-class v1, Lcom/android/internal/telephony/GsmAlphabet;
 
     monitor-enter v1
@@ -5976,12 +6212,12 @@
     :try_start_0
     sput-object p0, Lcom/android/internal/telephony/GsmAlphabet;->sEnabledSingleShiftTables:[I
 
-    .line 1020
+    .line 1025
     array-length v0, p0
 
     if-lez v0, :cond_0
 
-    .line 1021
+    .line 1026
     array-length v0, p0
 
     add-int/lit8 v0, v0, -0x1
@@ -5992,13 +6228,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1025
+    .line 1030
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 1023
+    .line 1028
     :cond_0
     const/4 v0, 0x0
 
@@ -6009,7 +6245,7 @@
 
     goto :goto_0
 
-    .line 1018
+    .line 1023
     :catchall_0
     move-exception v0
 
@@ -6378,24 +6614,24 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 656
+    .line 661
     const/4 v2, 0x1
 
     invoke-static {p0, v2, v3, v3}, Lcom/android/internal/telephony/GsmAlphabet;->countGsmSeptetsUsingTables(Ljava/lang/CharSequence;ZII)I
 
     move-result v1
 
-    .line 659
+    .line 664
     .local v1, septets:I
     new-array v0, v1, [B
 
-    .line 661
+    .line 666
     .local v0, ret:[B
     array-length v2, v0
 
     invoke-static {p0, v0, v3, v2}, Lcom/android/internal/telephony/GsmAlphabet;->stringToGsm8BitUnpackedField(Ljava/lang/String;[BII)V
 
-    .line 663
+    .line 668
     return-object v0
 .end method
 
@@ -6413,22 +6649,22 @@
 
     const/4 v9, -0x1
 
-    .line 678
+    .line 683
     move v4, p2
 
-    .line 679
+    .line 684
     .local v4, outByteIndex:I
     sget-object v8, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToGsmTables:[Landroid/util/SparseIntArray;
 
     aget-object v1, v8, v10
 
-    .line 680
+    .line 685
     .local v1, charToLanguageTable:Landroid/util/SparseIntArray;
     sget-object v8, Lcom/android/internal/telephony/GsmAlphabet;->sCharsToShiftTables:[Landroid/util/SparseIntArray;
 
     aget-object v2, v8, v10
 
-    .line 683
+    .line 688
     .local v2, charToShiftTable:Landroid/util/SparseIntArray;
     const/4 v3, 0x0
 
@@ -6440,7 +6676,7 @@
     .local v6, sz:I
     move v5, v4
 
-    .line 684
+    .line 689
     .end local v4           #outByteIndex:I
     .local v5, outByteIndex:I
     :goto_0
@@ -6450,37 +6686,37 @@
 
     if-ge v8, p3, :cond_1
 
-    .line 687
+    .line 692
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 689
+    .line 694
     .local v0, c:C
     invoke-virtual {v1, v0, v9}, Landroid/util/SparseIntArray;->get(II)I
 
     move-result v7
 
-    .line 691
+    .line 696
     .local v7, v:I
     if-ne v7, v9, :cond_4
 
-    .line 692
+    .line 697
     invoke-virtual {v2, v0, v9}, Landroid/util/SparseIntArray;->get(II)I
 
     move-result v7
 
-    .line 693
+    .line 698
     if-ne v7, v9, :cond_0
 
-    .line 694
+    .line 699
     invoke-virtual {v1, v11, v11}, Landroid/util/SparseIntArray;->get(II)I
 
     move-result v7
 
     move v4, v5
 
-    .line 705
+    .line 710
     .end local v5           #outByteIndex:I
     .restart local v4       #outByteIndex:I
     :goto_1
@@ -6492,12 +6728,12 @@
 
     aput-byte v8, p1, v4
 
-    .line 685
+    .line 690
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 697
+    .line 702
     :cond_0
     add-int/lit8 v8, v5, 0x1
 
@@ -6505,7 +6741,7 @@
 
     if-lt v8, p3, :cond_2
 
-    .line 709
+    .line 714
     .end local v0           #c:C
     .end local v7           #v:I
     :cond_1
@@ -6514,7 +6750,7 @@
 
     if-ge v8, p3, :cond_3
 
-    .line 710
+    .line 715
     add-int/lit8 v4, v5, 0x1
 
     .end local v5           #outByteIndex:I
@@ -6527,7 +6763,7 @@
     .restart local v5       #outByteIndex:I
     goto :goto_2
 
-    .line 701
+    .line 706
     .restart local v0       #c:C
     .restart local v7       #v:I
     :cond_2
@@ -6541,7 +6777,7 @@
 
     goto :goto_1
 
-    .line 712
+    .line 717
     .end local v0           #c:C
     .end local v4           #outByteIndex:I
     .end local v7           #v:I

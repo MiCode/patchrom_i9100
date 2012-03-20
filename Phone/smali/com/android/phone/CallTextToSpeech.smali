@@ -57,7 +57,7 @@
     .locals 3
 
     .prologue
-    .line 40
+    .line 41
     const-class v0, Lcom/android/phone/CallTextToSpeech;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -66,7 +66,7 @@
 
     sput-object v0, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
 
-    .line 43
+    .line 44
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/android/phone/CallTextToSpeech;->SRC_TAGS:[Ljava/lang/String;
 
-    .line 48
+    .line 49
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/phone/CallTextToSpeech;->mInstance:Lcom/android/phone/CallTextToSpeech;
@@ -99,46 +99,46 @@
 
     const/4 v3, 0x0
 
-    .line 77
+    .line 78
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
+    .line 45
     iput-object v3, p0, Lcom/android/phone/CallTextToSpeech;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    .line 45
+    .line 46
     iput-object v3, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
 
-    .line 46
+    .line 47
     iput-object v3, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 47
+    .line 48
     iput-object v3, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
-    .line 49
+    .line 50
     iput-object v3, p0, Lcom/android/phone/CallTextToSpeech;->mTtsListener:Lcom/android/phone/CallTextToSpeech$TtsListener;
 
-    .line 52
+    .line 53
     iput v1, p0, Lcom/android/phone/CallTextToSpeech;->INVALID_VOLUME_LEVEL:I
 
-    .line 53
+    .line 54
     iput v1, p0, Lcom/android/phone/CallTextToSpeech;->mOriginTtsVolume:I
 
-    .line 54
+    .line 55
     iput v1, p0, Lcom/android/phone/CallTextToSpeech;->mOriginRingVolume:I
 
-    .line 55
+    .line 56
     iput v1, p0, Lcom/android/phone/CallTextToSpeech;->mOriginNotiVolume:I
 
-    .line 59
+    .line 60
     iput v2, p0, Lcom/android/phone/CallTextToSpeech;->mTtsId:I
 
-    .line 65
+    .line 66
     iput-object v3, p0, Lcom/android/phone/CallTextToSpeech;->incomingCallInfo:Ljava/lang/String;
 
-    .line 66
+    .line 67
     iput-object v3, p0, Lcom/android/phone/CallTextToSpeech;->NewVoicemail:Ljava/lang/String;
 
-    .line 69
+    .line 70
     const/16 v1, 0x9
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -147,7 +147,7 @@
 
     iput-object v1, p0, Lcom/android/phone/CallTextToSpeech;->DEFAULT_TTS_STREAM:Ljava/lang/String;
 
-    .line 71
+    .line 72
     const/4 v1, 0x5
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -156,24 +156,24 @@
 
     iput-object v1, p0, Lcom/android/phone/CallTextToSpeech;->DEFAULT_TTS_STREAM_DURING_CALL:Ljava/lang/String;
 
-    .line 75
+    .line 76
     iput-boolean v2, p0, Lcom/android/phone/CallTextToSpeech;->IsTtsInitiated:Z
 
-    .line 78
+    .line 79
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
 
-    .line 79
+    .line 80
     .local v0, app:Lcom/android/phone/PhoneApp;
     iget-object v1, v0, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
 
     iput-object v1, p0, Lcom/android/phone/CallTextToSpeech;->mCM:Lcom/android/internal/telephony/CallManager;
 
-    .line 80
+    .line 81
     iput-object p1, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
 
-    .line 81
+    .line 82
     iget-object v1, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
 
     const-string v2, "audio"
@@ -186,17 +186,17 @@
 
     iput-object v1, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 84
+    .line 85
     iput p2, p0, Lcom/android/phone/CallTextToSpeech;->mTtsId:I
 
-    .line 85
+    .line 86
     new-instance v1, Lcom/android/phone/CallTextToSpeech$TtsListener;
 
     invoke-direct {v1, p0, v3}, Lcom/android/phone/CallTextToSpeech$TtsListener;-><init>(Lcom/android/phone/CallTextToSpeech;Lcom/android/phone/CallTextToSpeech$1;)V
 
     iput-object v1, p0, Lcom/android/phone/CallTextToSpeech;->mTtsListener:Lcom/android/phone/CallTextToSpeech$TtsListener;
 
-    .line 86
+    .line 87
     new-instance v1, Landroid/speech/tts/TextToSpeech;
 
     iget-object v2, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
@@ -207,74 +207,64 @@
 
     iput-object v1, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
-    .line 88
+    .line 89
     iget-boolean v1, p0, Lcom/android/phone/CallTextToSpeech;->IsTtsInitiated:Z
 
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 89
+    .line 90
     iget v1, p0, Lcom/android/phone/CallTextToSpeech;->mTtsId:I
 
     invoke-direct {p0, v1}, Lcom/android/phone/CallTextToSpeech;->speakTts(I)V
 
-    .line 90
+    .line 91
     :cond_0
     return-void
 .end method
 
-.method static synthetic access$100()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 38
-    sget-object v0, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$200(Lcom/android/phone/CallTextToSpeech;)I
-    .locals 1
-    .parameter "x0"
-
-    .prologue
-    .line 38
-    iget v0, p0, Lcom/android/phone/CallTextToSpeech;->mTtsId:I
-
-    return v0
-.end method
-
-.method static synthetic access$302(Lcom/android/phone/CallTextToSpeech;Z)Z
+.method static synthetic access$102(Lcom/android/phone/CallTextToSpeech;Z)Z
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 38
+    .line 39
     iput-boolean p1, p0, Lcom/android/phone/CallTextToSpeech;->IsTtsInitiated:Z
 
     return p1
 .end method
 
-.method static synthetic access$400(Lcom/android/phone/CallTextToSpeech;)Landroid/speech/tts/TextToSpeech;
+.method static synthetic access$200(Lcom/android/phone/CallTextToSpeech;)Landroid/speech/tts/TextToSpeech;
     .locals 1
     .parameter "x0"
 
     .prologue
-    .line 38
+    .line 39
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     return-object v0
 .end method
 
-.method static synthetic access$500(Lcom/android/phone/CallTextToSpeech;I)V
+.method static synthetic access$300(Lcom/android/phone/CallTextToSpeech;)I
+    .locals 1
+    .parameter "x0"
+
+    .prologue
+    .line 39
+    iget v0, p0, Lcom/android/phone/CallTextToSpeech;->mTtsId:I
+
+    return v0
+.end method
+
+.method static synthetic access$400(Lcom/android/phone/CallTextToSpeech;I)V
     .locals 0
     .parameter "x0"
     .parameter "x1"
 
     .prologue
-    .line 38
+    .line 39
     invoke-direct {p0, p1}, Lcom/android/phone/CallTextToSpeech;->speakTts(I)V
 
     return-void
@@ -286,7 +276,7 @@
     .parameter "TtsId"
 
     .prologue
-    .line 110
+    .line 111
     const-class v1, Lcom/android/phone/CallTextToSpeech;
 
     monitor-enter v1
@@ -296,12 +286,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 111
+    .line 112
     sget-object v0, Lcom/android/phone/CallTextToSpeech;->mInstance:Lcom/android/phone/CallTextToSpeech;
 
     invoke-virtual {v0}, Lcom/android/phone/CallTextToSpeech;->stopTts()V
 
-    .line 113
+    .line 114
     :cond_0
     new-instance v0, Lcom/android/phone/CallTextToSpeech;
 
@@ -309,7 +299,7 @@
 
     sput-object v0, Lcom/android/phone/CallTextToSpeech;->mInstance:Lcom/android/phone/CallTextToSpeech;
 
-    .line 114
+    .line 115
     sget-object v0, Lcom/android/phone/CallTextToSpeech;->mInstance:Lcom/android/phone/CallTextToSpeech;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -318,7 +308,7 @@
 
     return-object v0
 
-    .line 110
+    .line 111
     :catchall_0
     move-exception v0
 
@@ -336,21 +326,21 @@
 
     const/4 v3, -0x1
 
-    .line 302
+    .line 307
     packed-switch p1, :pswitch_data_0
 
-    .line 331
+    .line 336
     :cond_0
     :goto_0
     return-void
 
-    .line 305
+    .line 310
     :pswitch_0
     iget v0, p0, Lcom/android/phone/CallTextToSpeech;->mOriginTtsVolume:I
 
     if-eq v0, v3, :cond_1
 
-    .line 306
+    .line 311
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     const/16 v1, 0x9
@@ -359,16 +349,16 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 308
+    .line 313
     iput v3, p0, Lcom/android/phone/CallTextToSpeech;->mOriginTtsVolume:I
 
-    .line 311
+    .line 316
     :cond_1
     iget v0, p0, Lcom/android/phone/CallTextToSpeech;->mOriginRingVolume:I
 
     if-eq v0, v3, :cond_0
 
-    .line 312
+    .line 317
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x2
@@ -377,43 +367,18 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 314
+    .line 319
     iput v3, p0, Lcom/android/phone/CallTextToSpeech;->mOriginRingVolume:I
 
     goto :goto_0
 
-    .line 320
+    .line 325
     :pswitch_1
     iget v0, p0, Lcom/android/phone/CallTextToSpeech;->mOriginNotiVolume:I
 
     if-eq v0, v3, :cond_0
 
-    .line 321
-    sget-object v0, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "resetVolumeForTts : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/android/phone/CallTextToSpeech;->mOriginNotiVolume:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 322
+    .line 327
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x5
@@ -422,12 +387,12 @@
 
     invoke-virtual {v0, v1, v2, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 324
+    .line 329
     iput v3, p0, Lcom/android/phone/CallTextToSpeech;->mOriginNotiVolume:I
 
     goto :goto_0
 
-    .line 302
+    .line 307
     nop
 
     :pswitch_data_0
@@ -453,15 +418,15 @@
 
     const/4 v2, 0x2
 
-    .line 260
+    .line 265
     packed-switch p1, :pswitch_data_0
 
-    .line 298
+    .line 303
     :cond_0
     :goto_0
     return-void
 
-    .line 263
+    .line 268
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
@@ -471,7 +436,7 @@
 
     iput v0, p0, Lcom/android/phone/CallTextToSpeech;->mOriginTtsVolume:I
 
-    .line 265
+    .line 270
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->getStreamVolume(I)I
@@ -480,7 +445,7 @@
 
     iput v0, p0, Lcom/android/phone/CallTextToSpeech;->mOriginRingVolume:I
 
-    .line 269
+    .line 274
     iget v0, p0, Lcom/android/phone/CallTextToSpeech;->mOriginRingVolume:I
 
     mul-int/lit8 v0, v0, 0x2
@@ -489,7 +454,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 270
+    .line 275
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     iget v1, p0, Lcom/android/phone/CallTextToSpeech;->mOriginRingVolume:I
@@ -498,7 +463,7 @@
 
     invoke-virtual {v0, v4, v1, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
-    .line 278
+    .line 283
     :goto_1
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
@@ -508,7 +473,7 @@
 
     if-le v0, v6, :cond_2
 
-    .line 279
+    .line 284
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     iget v1, p0, Lcom/android/phone/CallTextToSpeech;->mOriginRingVolume:I
@@ -519,7 +484,7 @@
 
     goto :goto_0
 
-    .line 273
+    .line 278
     :cond_1
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
@@ -529,7 +494,7 @@
 
     goto :goto_1
 
-    .line 281
+    .line 286
     :cond_2
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
@@ -547,14 +512,14 @@
 
     if-lez v0, :cond_0
 
-    .line 283
+    .line 288
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v0, v2, v5, v3}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
     goto :goto_0
 
-    .line 290
+    .line 295
     :pswitch_1
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
@@ -566,32 +531,7 @@
 
     iput v0, p0, Lcom/android/phone/CallTextToSpeech;->mOriginNotiVolume:I
 
-    .line 291
-    sget-object v0, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setVolumeForTts : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/android/phone/CallTextToSpeech;->mOriginNotiVolume:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 292
+    .line 297
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mAudioManager:Landroid/media/AudioManager;
 
     const/4 v1, 0x5
@@ -600,7 +540,7 @@
 
     goto :goto_0
 
-    .line 260
+    .line 265
     nop
 
     :pswitch_data_0
@@ -622,14 +562,7 @@
 
     const/4 v8, 0x0
 
-    .line 136
-    sget-object v5, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
-
-    const-string v6, "Getting into speak TTS"
-
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 138
+    .line 139
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     if-eqz v5, :cond_0
@@ -638,7 +571,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 139
+    .line 140
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {v5}, Landroid/speech/tts/TextToSpeech;->isSpeaking()Z
@@ -647,57 +580,32 @@
 
     if-eqz v5, :cond_1
 
-    .line 248
+    .line 253
     :cond_0
     :goto_0
     return-void
 
-    .line 144
+    .line 147
     :cond_1
-    iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
-
-    invoke-virtual {v5}, Landroid/speech/tts/TextToSpeech;->getLanguage()Ljava/util/Locale;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v2
 
-    .line 148
+    .line 149
     .local v2, locale:Ljava/util/Locale;
+    if-nez v2, :cond_4
+
+    .line 150
     sget-object v5, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
 
-    new-instance v6, Ljava/lang/StringBuilder;
+    const-string v6, "Default locale is null, this is problem"
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v7, "onInit...TTS - isLanguageAvailable() : "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    iget-object v7, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
-
-    invoke-virtual {v7, v2}, Landroid/speech/tts/TextToSpeech;->isLanguageAvailable(Ljava/util/Locale;)I
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 151
-    iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
-
-    invoke-virtual {v5, v2}, Landroid/speech/tts/TextToSpeech;->isLanguageAvailable(Ljava/util/Locale;)I
-
-    move-result v5
-
-    if-eqz v5, :cond_2
+    .line 155
+    :cond_2
+    :goto_1
+    if-eqz v2, :cond_5
 
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
@@ -705,7 +613,15 @@
 
     move-result v5
 
-    if-eq v5, v9, :cond_2
+    if-eqz v5, :cond_3
+
+    iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
+
+    invoke-virtual {v5, v2}, Landroid/speech/tts/TextToSpeech;->isLanguageAvailable(Ljava/util/Locale;)I
+
+    move-result v5
+
+    if-eq v5, v9, :cond_3
 
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
@@ -715,26 +631,26 @@
 
     const/4 v6, 0x2
 
-    if-ne v5, v6, :cond_3
+    if-ne v5, v6, :cond_5
 
-    .line 160
-    :cond_2
-    :goto_1
+    .line 165
+    :cond_3
+    :goto_2
     const/4 v1, 0x0
 
-    .line 161
+    .line 166
     .local v1, TtsCallerInfo:Ljava/lang/String;
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 163
+    .line 168
     .local v3, myHashAlarm:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 166
+    .line 171
     :pswitch_0
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mCM:Lcom/android/internal/telephony/CallManager;
 
@@ -746,14 +662,14 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 173
+    .line 178
     const-string v5, "streamType"
 
     iget-object v6, p0, Lcom/android/phone/CallTextToSpeech;->DEFAULT_TTS_STREAM:Ljava/lang/String;
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
+    .line 181
     const-string v5, "utteranceId"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -778,59 +694,58 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
+    .line 183
     invoke-direct {p0, p1}, Lcom/android/phone/CallTextToSpeech;->setVolumeForTts(I)V
 
-    .line 180
+    .line 185
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v5}, Lcom/android/phone/PhoneUtils;->getCallerName(Lcom/android/internal/telephony/CallManager;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 181
-    if-nez v1, :cond_4
+    .line 186
+    if-nez v1, :cond_6
 
-    .line 182
+    .line 187
     sget-object v5, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
 
     const-string v6, "TTS_IDLE : callerinfo is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
+    .line 188
     invoke-virtual {p0}, Lcom/android/phone/CallTextToSpeech;->stopTts()V
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    .line 156
+    .line 151
     .end local v1           #TtsCallerInfo:Ljava/lang/String;
     .end local v3           #myHashAlarm:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    :cond_3
-    sget-object v5, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
+    :cond_4
+    if-eqz v2, :cond_2
 
-    const-string v6, "onInit...TTS - set Locale.US , maybe not configured"
+    goto :goto_1
 
-    invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 157
+    .line 162
+    :cond_5
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {v5, v6}, Landroid/speech/tts/TextToSpeech;->setLanguage(Ljava/util/Locale;)I
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 186
+    .line 191
     .restart local v1       #TtsCallerInfo:Ljava/lang/String;
     .restart local v3       #myHashAlarm:Ljava/util/HashMap;,"Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
-    :cond_4
+    :cond_6
     new-array v4, v9, [Ljava/lang/String;
 
     aput-object v1, v4, v8
 
-    .line 188
+    .line 193
     .local v4, values:[Ljava/lang/String;
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
 
@@ -844,7 +759,7 @@
 
     move-result-object v0
 
-    .line 191
+    .line 196
     .local v0, TTSCombinedString:Ljava/lang/CharSequence;
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
@@ -854,7 +769,7 @@
 
     invoke-virtual {v5, v6, v8, v3}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 193
+    .line 198
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/phone/CallTextToSpeech;->mTtsListener:Lcom/android/phone/CallTextToSpeech$TtsListener;
@@ -863,7 +778,7 @@
 
     goto/16 :goto_0
 
-    .line 199
+    .line 204
     .end local v0           #TTSCombinedString:Ljava/lang/CharSequence;
     .end local v4           #values:[Ljava/lang/String;
     :pswitch_1
@@ -881,13 +796,13 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 200
+    .line 205
     invoke-direct {p0, p1}, Lcom/android/phone/CallTextToSpeech;->setVolumeForTts(I)V
 
-    .line 202
+    .line 207
     const/4 v0, 0x0
 
-    .line 203
+    .line 208
     .restart local v0       #TTSCombinedString:Ljava/lang/CharSequence;
     const-string v5, "streamType"
 
@@ -895,7 +810,7 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
+    .line 210
     const-string v5, "utteranceId"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -920,35 +835,35 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
+    .line 213
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mCM:Lcom/android/internal/telephony/CallManager;
 
     invoke-static {v5}, Lcom/android/phone/PhoneUtils;->getCallerName(Lcom/android/internal/telephony/CallManager;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 209
-    if-nez v1, :cond_5
+    .line 214
+    if-nez v1, :cond_7
 
-    .line 210
+    .line 215
     sget-object v5, Lcom/android/phone/CallTextToSpeech;->LOG_TAG:Ljava/lang/String;
 
     const-string v6, "TTS_DURING_CALL : callerinfo is null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
+    .line 216
     invoke-virtual {p0}, Lcom/android/phone/CallTextToSpeech;->stopTts()V
 
     goto/16 :goto_0
 
-    .line 214
-    :cond_5
+    .line 219
+    :cond_7
     new-array v4, v9, [Ljava/lang/String;
 
     aput-object v1, v4, v8
 
-    .line 216
+    .line 221
     .restart local v4       #values:[Ljava/lang/String;
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
 
@@ -962,7 +877,7 @@
 
     move-result-object v0
 
-    .line 219
+    .line 224
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -971,7 +886,7 @@
 
     invoke-virtual {v5, v6, v8, v3}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 221
+    .line 226
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/phone/CallTextToSpeech;->mTtsListener:Lcom/android/phone/CallTextToSpeech$TtsListener;
@@ -980,7 +895,7 @@
 
     goto/16 :goto_0
 
-    .line 227
+    .line 232
     .end local v0           #TTSCombinedString:Ljava/lang/CharSequence;
     .end local v4           #values:[Ljava/lang/String;
     :pswitch_2
@@ -992,22 +907,22 @@
 
     sget-object v6, Lcom/android/internal/telephony/Phone$State;->OFFHOOK:Lcom/android/internal/telephony/Phone$State;
 
-    if-ne v5, v6, :cond_6
+    if-ne v5, v6, :cond_8
 
-    .line 228
+    .line 233
     iget v5, p0, Lcom/android/phone/CallTextToSpeech;->mTtsId:I
 
     invoke-direct {p0, v5}, Lcom/android/phone/CallTextToSpeech;->setVolumeForTts(I)V
 
-    .line 230
+    .line 235
     const-string v5, "streamType"
 
     iget-object v6, p0, Lcom/android/phone/CallTextToSpeech;->DEFAULT_TTS_STREAM_DURING_CALL:Ljava/lang/String;
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
-    :goto_2
+    .line 241
+    :goto_3
     const-string v5, "utteranceId"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1032,7 +947,7 @@
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
+    .line 243
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0e019e
@@ -1043,14 +958,14 @@
 
     iput-object v5, p0, Lcom/android/phone/CallTextToSpeech;->NewVoicemail:Ljava/lang/String;
 
-    .line 240
+    .line 245
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/phone/CallTextToSpeech;->NewVoicemail:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v8, v3}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 241
+    .line 246
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/phone/CallTextToSpeech;->mTtsListener:Lcom/android/phone/CallTextToSpeech$TtsListener;
@@ -1059,19 +974,17 @@
 
     goto/16 :goto_0
 
-    .line 233
-    :cond_6
+    .line 238
+    :cond_8
     const-string v5, "streamType"
 
     iget-object v6, p0, Lcom/android/phone/CallTextToSpeech;->DEFAULT_TTS_STREAM:Ljava/lang/String;
 
     invoke-virtual {v3, v5, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_2
+    goto :goto_3
 
-    .line 163
-    nop
-
+    .line 168
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -1086,16 +999,16 @@
     .locals 2
 
     .prologue
-    .line 123
+    .line 124
     const/4 v0, 0x0
 
-    .line 125
+    .line 126
     .local v0, IsSpeakingTts:Z
     iget-object v1, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     if-eqz v1, :cond_0
 
-    .line 126
+    .line 127
     iget-object v1, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {v1}, Landroid/speech/tts/TextToSpeech;->isSpeaking()Z
@@ -1104,10 +1017,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 127
+    .line 128
     const/4 v0, 0x1
 
-    .line 130
+    .line 131
     :cond_0
     return v0
 .end method
@@ -1116,27 +1029,27 @@
     .locals 1
 
     .prologue
-    .line 334
+    .line 339
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     if-eqz v0, :cond_0
 
-    .line 335
+    .line 340
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {v0}, Landroid/speech/tts/TextToSpeech;->shutdown()V
 
-    .line 336
+    .line 341
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/CallTextToSpeech;->IsTtsInitiated:Z
 
-    .line 337
+    .line 342
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/phone/CallTextToSpeech;->mInstance:Lcom/android/phone/CallTextToSpeech;
 
-    .line 339
+    .line 344
     :cond_0
     return-void
 .end method
@@ -1145,25 +1058,25 @@
     .locals 1
 
     .prologue
-    .line 251
+    .line 256
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     if-eqz v0, :cond_0
 
-    .line 252
+    .line 257
     iget-object v0, p0, Lcom/android/phone/CallTextToSpeech;->mTts:Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {v0}, Landroid/speech/tts/TextToSpeech;->stop()I
 
-    .line 253
+    .line 258
     iget v0, p0, Lcom/android/phone/CallTextToSpeech;->mTtsId:I
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallTextToSpeech;->resetVolumeForTts(I)V
 
-    .line 254
+    .line 259
     invoke-virtual {p0}, Lcom/android/phone/CallTextToSpeech;->destroy()V
 
-    .line 256
+    .line 261
     :cond_0
     return-void
 .end method

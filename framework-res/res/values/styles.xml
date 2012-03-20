@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Animation"/>
+    <style name="Animation" />
     <style name="Animation.Activity" parent="@style/Animation">
         <item name="activityOpenEnterAnimation">@anim/activity_open_enter</item>
         <item name="activityOpenExitAnimation">@anim/activity_open_exit</item>
@@ -257,7 +257,6 @@
         <item name="textAppearanceListItemSmall">?textAppearanceLarge</item>
         <item name="listPreferredItemPaddingLeft">6.0dip</item>
         <item name="listPreferredItemPaddingRight">6.0dip</item>
-        <item name="actionModeClipboardDrawable">@drawable/ic_menu_clipboard_holo_dark</item>
         <item name="searchWidgetCorpusItemBackground">@color/search_widget_corpus_item_background</item>
         <item name="textAppearanceEasyCorrectSuggestion">@style/TextAppearance.EasyCorrectSuggestion</item>
         <item name="textAppearanceMisspelledSuggestion">@style/TextAppearance.MisspelledSuggestion</item>
@@ -403,7 +402,6 @@
         <item name="editTextColor">@color/primary_text_light</item>
         <item name="actionModeSelectAllDrawable">@drawable/ic_menu_selectall_holo_light</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_holo_light</item>
-        <item name="actionModeClipboardDrawable">@drawable/ic_menu_clipboard_holo_light</item>
         <item name="gestureOverlayViewStyle">@style/Widget.GestureOverlayView.White</item>
         <item name="quickContactBadgeOverlay">@drawable/quickcontact_badge_overlay_light</item>
         <item name="actionModeShareDrawable">@drawable/ic_menu_share_holo_light</item>
@@ -695,12 +693,12 @@
         <item name="textColorHint">?textColorHintInverse</item>
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
-    <style name="TextAppearance.Theme" parent="@style/TextAppearance"/>
+    <style name="TextAppearance.Theme" parent="@style/TextAppearance" />
     <style name="TextAppearance.DialogWindowTitle" parent="@style/TextAppearance">
         <item name="textSize">18.0sp</item>
     </style>
     <style name="TextAppearance.Large" parent="@style/TextAppearance">
-        <item name="textSize">18sp</item>
+        <item name="textSize">22.0sp</item>
     </style>
     <style name="TextAppearance.Large.Inverse" parent="@style/TextAppearance.Large">
         <item name="textColor">?textColorPrimaryInverse</item>
@@ -709,7 +707,7 @@
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
     <style name="TextAppearance.Medium" parent="@style/TextAppearance">
-        <item name="textSize">16sp</item>
+        <item name="textSize">18.0sp</item>
     </style>
     <style name="TextAppearance.Medium.Inverse" parent="@style/TextAppearance.Medium">
         <item name="textColor">?textColorPrimaryInverse</item>
@@ -718,7 +716,7 @@
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
     <style name="TextAppearance.Small" parent="@style/TextAppearance">
-        <item name="textSize">12sp</item>
+        <item name="textSize">14.0sp</item>
         <item name="textColor">?textColorSecondary</item>
     </style>
     <style name="TextAppearance.Small.Inverse" parent="@style/TextAppearance.Small">
@@ -727,8 +725,8 @@
         <item name="textColorHint">?textColorHintInverse</item>
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
-    <style name="TextAppearance.Theme.Dialog" parent="@style/TextAppearance.Theme"/>
-    <style name="TextAppearance.Widget" parent="@style/TextAppearance"/>
+    <style name="TextAppearance.Theme.Dialog" parent="@style/TextAppearance.Theme" />
+    <style name="TextAppearance.Widget" parent="@style/TextAppearance" />
     <style name="TextAppearance.Widget.Button" parent="@style/TextAppearance.Small.Inverse">
         <item name="textColor">@color/primary_text_light_nodisable</item>
     </style>
@@ -872,15 +870,15 @@
     <style name="TextAppearance.StatusBar.Title" parent="@style/TextAppearance.StatusBar">
         <item name="textStyle">bold</item>
     </style>
-    <style name="TextAppearance.StatusBar.Icon" parent="@style/TextAppearance.StatusBar"/>
+    <style name="TextAppearance.StatusBar.Icon" parent="@style/TextAppearance.StatusBar" />
     <style name="TextAppearance.StatusBar.EventContent" parent="@style/TextAppearance.StatusBar">
-        <item name="textSize">13sp</item>
-        <item name="textColor">#ff645750</item>
+        <item name="textSize">12.0sp</item>
+        <item name="textColor">?textColorSecondary</item>
     </style>
     <style name="TextAppearance.StatusBar.EventContent.Title" parent="@style/TextAppearance.StatusBar.EventContent">
-        <item name="textSize">17sp</item>
+        <item name="textSize">16.0sp</item>
         <item name="textStyle">bold</item>
-        <item name="textColor">@*android:color/primary_text_holo_light</item>
+        <item name="textColor">?textColorPrimary</item>
     </style>
     <style name="Theme.WithActionBar" parent="@style/Theme">
         <item name="windowActionBar">true</item>
@@ -1090,7 +1088,6 @@
         <item name="textAppearanceListItemSmall">?textAppearanceMedium</item>
         <item name="listPreferredItemPaddingLeft">8.0dip</item>
         <item name="listPreferredItemPaddingRight">8.0dip</item>
-        <item name="actionModeClipboardDrawable">@drawable/ic_menu_clipboard_holo_dark</item>
         <item name="searchWidgetCorpusItemBackground">@color/search_widget_corpus_item_background</item>
         <item name="errorMessageBackground">@drawable/popup_inline_error_holo_dark</item>
         <item name="errorMessageAboveBackground">@drawable/popup_inline_error_above_holo_dark</item>
@@ -1333,7 +1330,6 @@
         <item name="textAppearanceListItemSmall">?textAppearanceMedium</item>
         <item name="listPreferredItemPaddingLeft">8.0dip</item>
         <item name="listPreferredItemPaddingRight">8.0dip</item>
-        <item name="actionModeClipboardDrawable">@drawable/ic_menu_clipboard_holo_light</item>
         <item name="searchWidgetCorpusItemBackground">@color/search_widget_corpus_item_background</item>
         <item name="errorMessageBackground">@drawable/popup_inline_error_holo_light</item>
         <item name="errorMessageAboveBackground">@drawable/popup_inline_error_above_holo_light</item>
@@ -1427,10 +1423,10 @@
         <item name="windowMinWidthMajor">@dimen/dialog_min_width_major</item>
         <item name="windowMinWidthMinor">@dimen/dialog_min_width_minor</item>
     </style>
-    <style name="Theme.Holo.DialogWhenLarge" parent="@style/Theme.Holo"/>
-    <style name="Theme.Holo.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.NoActionBar"/>
-    <style name="Theme.Holo.Light.DialogWhenLarge" parent="@style/Theme.Holo.Light"/>
-    <style name="Theme.Holo.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.Light.NoActionBar"/>
+    <style name="Theme.Holo.DialogWhenLarge" parent="@style/Theme.Holo" />
+    <style name="Theme.Holo.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.NoActionBar" />
+    <style name="Theme.Holo.Light.DialogWhenLarge" parent="@style/Theme.Holo.Light" />
+    <style name="Theme.Holo.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.Light.NoActionBar" />
     <style name="Theme.Holo.Panel" parent="@style/Theme.Holo">
         <item name="windowBackground">@color/transparent</item>
         <item name="windowFrame">@null</item>
@@ -1507,17 +1503,17 @@
         <item name="dropDownHorizontalOffset">0.0dip</item>
         <item name="dropDownVerticalOffset">-10.0dip</item>
     </style>
-    <style name="Widget.PopupMenu" parent="@style/Widget.ListPopupWindow"/>
+    <style name="Widget.PopupMenu" parent="@style/Widget.ListPopupWindow" />
     <style name="Widget.ActionButton.Overflow" parent="@style/Widget.ActionButton">
         <item name="src">@drawable/ic_menu_more</item>
         <item name="contentDescription">@string/action_menu_overflow_description</item>
     </style>
-    <style name="Widget.ActionButton.CloseMode" parent="@style/Widget.ActionButton"/>
+    <style name="Widget.ActionButton.CloseMode" parent="@style/Widget.ActionButton" />
     <style name="Widget.FragmentBreadCrumbs" parent="@style/Widget">
         <item name="padding">4.0dip</item>
         <item name="animateLayoutChanges">true</item>
     </style>
-    <style name="Widget.Holo" parent="@style/Widget"/>
+    <style name="Widget.Holo" parent="@style/Widget" />
     <style name="Widget.Holo.Button" parent="@style/Widget.Button">
         <item name="textAppearance">?textAppearanceMedium</item>
         <item name="textColor">@color/primary_text_holo_dark</item>
@@ -1543,14 +1539,14 @@
         <item name="textOff">@string/capital_off</item>
         <item name="minHeight">48.0dip</item>
     </style>
-    <style name="Widget.Holo.TextView" parent="@style/Widget.TextView"/>
+    <style name="Widget.Holo.TextView" parent="@style/Widget.TextView" />
     <style name="Widget.Holo.AutoCompleteTextView" parent="@style/Widget.AutoCompleteTextView">
         <item name="dropDownSelector">@drawable/list_selector_holo_dark</item>
         <item name="popupBackground">@drawable/menu_dropdown_panel_holo_dark</item>
     </style>
-    <style name="Widget.Holo.CompoundButton.CheckBox" parent="@style/Widget.CompoundButton.CheckBox"/>
-    <style name="Widget.Holo.ListView.DropDown" parent="@style/Widget.Holo.ListView"/>
-    <style name="Widget.Holo.EditText" parent="@style/Widget.EditText"/>
+    <style name="Widget.Holo.CompoundButton.CheckBox" parent="@style/Widget.CompoundButton.CheckBox" />
+    <style name="Widget.Holo.ListView.DropDown" parent="@style/Widget.Holo.ListView" />
+    <style name="Widget.Holo.EditText" parent="@style/Widget.EditText" />
     <style name="Widget.Holo.ExpandableListView" parent="@style/Widget.Holo.ListView">
         <item name="groupIndicator">@drawable/expander_group_holo_dark</item>
         <item name="indicatorLeft">?expandableListPreferredItemIndicatorLeft</item>
@@ -1567,7 +1563,7 @@
         <item name="listSelector">?listChoiceBackgroundIndicator</item>
         <item name="divider">?listDivider</item>
     </style>
-    <style name="Widget.Holo.PopupWindow" parent="@style/Widget.PopupWindow"/>
+    <style name="Widget.Holo.PopupWindow" parent="@style/Widget.PopupWindow" />
     <style name="Widget.Holo.ProgressBar" parent="@style/Widget.ProgressBar">
         <item name="indeterminateDrawable">@drawable/progress_medium_holo</item>
         <item name="animationResolution">33</item>
@@ -1582,7 +1578,7 @@
         <item name="indeterminateDrawable">@drawable/progress_small_holo</item>
         <item name="animationResolution">33</item>
     </style>
-    <style name="Widget.Holo.ProgressBar.Small.Title" parent="@style/Widget.Holo.ProgressBar.Small"/>
+    <style name="Widget.Holo.ProgressBar.Small.Title" parent="@style/Widget.Holo.ProgressBar.Small" />
     <style name="Widget.Holo.ProgressBar.Large" parent="@style/Widget.ProgressBar.Large">
         <item name="indeterminateDrawable">@drawable/progress_large_holo</item>
         <item name="animationResolution">33</item>
@@ -1615,9 +1611,9 @@
         <item name="progressDrawable">@drawable/ratingbar_small_holo_dark</item>
         <item name="minHeight">16.0dip</item>
     </style>
-    <style name="Widget.Holo.CompoundButton.RadioButton" parent="@style/Widget.CompoundButton.RadioButton"/>
-    <style name="Widget.Holo.ScrollView" parent="@style/Widget.ScrollView"/>
-    <style name="Widget.Holo.HorizontalScrollView" parent="@style/Widget.HorizontalScrollView"/>
+    <style name="Widget.Holo.CompoundButton.RadioButton" parent="@style/Widget.CompoundButton.RadioButton" />
+    <style name="Widget.Holo.ScrollView" parent="@style/Widget.ScrollView" />
+    <style name="Widget.Holo.HorizontalScrollView" parent="@style/Widget.HorizontalScrollView" />
     <style name="Widget.Holo.Spinner" parent="@style/Widget.Spinner.DropDown">
         <item name="gravity">left|center</item>
         <item name="background">@drawable/spinner_background_holo_dark</item>
@@ -1642,14 +1638,14 @@
         <item name="dividerPadding">8.0dip</item>
         <item name="tabLayout">@layout/tab_indicator_holo</item>
     </style>
-    <style name="Widget.Holo.WebTextView" parent="@style/Widget.WebTextView"/>
-    <style name="Widget.Holo.WebView" parent="@style/Widget.WebView"/>
+    <style name="Widget.Holo.WebTextView" parent="@style/Widget.WebTextView" />
+    <style name="Widget.Holo.WebView" parent="@style/Widget.WebView" />
     <style name="Widget.Holo.DropDownItem" parent="@style/Widget.DropDownItem">
         <item name="textAppearance">@style/TextAppearance.Holo.Widget.DropDownItem</item>
         <item name="paddingLeft">8.0dip</item>
         <item name="paddingRight">8.0dip</item>
     </style>
-    <style name="Widget.Holo.DropDownItem.Spinner" parent="@style/Widget.Holo.DropDownItem"/>
+    <style name="Widget.Holo.DropDownItem.Spinner" parent="@style/Widget.Holo.DropDownItem" />
     <style name="Widget.Holo.TextView.SpinnerItem" parent="@style/Widget.TextView.SpinnerItem">
         <item name="textAppearance">@style/TextAppearance.Holo.Widget.TextView.SpinnerItem</item>
         <item name="paddingLeft">8.0dip</item>
@@ -1662,7 +1658,7 @@
         <item name="dropDownHorizontalOffset">0.0dip</item>
         <item name="dropDownVerticalOffset">0.0dip</item>
     </style>
-    <style name="Widget.Holo.PopupMenu" parent="@style/Widget.Holo.ListPopupWindow"/>
+    <style name="Widget.Holo.PopupMenu" parent="@style/Widget.Holo.ListPopupWindow" />
     <style name="Widget.Holo.ActionButton" parent="@style/Widget.ActionButton">
         <item name="gravity">center</item>
         <item name="paddingLeft">12.0dip</item>
@@ -1675,7 +1671,7 @@
         <item name="src">@drawable/ic_menu_moreoverflow_holo_dark</item>
         <item name="contentDescription">@string/action_menu_overflow_description</item>
     </style>
-    <style name="Widget.Holo.ActionButton.TextButton" parent="@style/Widget.Holo.ButtonBar.Button"/>
+    <style name="Widget.Holo.ActionButton.TextButton" parent="@style/Widget.Holo.ButtonBar.Button" />
     <style name="Widget.Holo.ActionMode" parent="@style/Widget.ActionMode">
         <item name="titleTextStyle">@style/TextAppearance.Holo.Widget.ActionMode.Title</item>
         <item name="subtitleTextStyle">@style/TextAppearance.Holo.Widget.ActionMode.Subtitle</item>
@@ -1695,7 +1691,7 @@
         <item name="backgroundStacked">@drawable/ab_stacked_transparent_dark_holo</item>
         <item name="backgroundSplit">@drawable/ab_bottom_transparent_dark_holo</item>
     </style>
-    <style name="Widget.Holo.Light" parent="@style/Widget.Holo"/>
+    <style name="Widget.Holo.Light" parent="@style/Widget.Holo" />
     <style name="Widget.Holo.Light.Button" parent="@style/Widget.Button">
         <item name="textAppearance">?textAppearanceMediumInverse</item>
         <item name="textColor">@color/primary_text_holo_light</item>
@@ -1710,7 +1706,7 @@
         <item name="minWidth">48.0dip</item>
         <item name="minHeight">48.0dip</item>
     </style>
-    <style name="Widget.Holo.Light.Button.Inset" parent="@style/Widget.Holo.Light.Button"/>
+    <style name="Widget.Holo.Light.Button.Inset" parent="@style/Widget.Holo.Light.Button" />
     <style name="Widget.Holo.Light.Button.Toggle" parent="@style/Widget.Holo.Light.Button">
         <item name="disabledAlpha">?disabledAlpha</item>
         <item name="textAppearance">?textAppearanceSmall</item>
@@ -1719,36 +1715,36 @@
         <item name="textOff">@string/capital_off</item>
         <item name="minHeight">48.0dip</item>
     </style>
-    <style name="Widget.Holo.Light.TextView" parent="@style/Widget.TextView"/>
+    <style name="Widget.Holo.Light.TextView" parent="@style/Widget.TextView" />
     <style name="Widget.Holo.Light.AutoCompleteTextView" parent="@style/Widget.AutoCompleteTextView">
         <item name="dropDownSelector">@drawable/list_selector_holo_light</item>
         <item name="popupBackground">@drawable/menu_dropdown_panel_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.CompoundButton.CheckBox" parent="@style/Widget.CompoundButton.CheckBox"/>
-    <style name="Widget.Holo.Light.ListView.DropDown" parent="@style/Widget.Holo.Light.ListView"/>
-    <style name="Widget.Holo.Light.EditText" parent="@style/Widget.Holo.EditText"/>
+    <style name="Widget.Holo.Light.CompoundButton.CheckBox" parent="@style/Widget.CompoundButton.CheckBox" />
+    <style name="Widget.Holo.Light.ListView.DropDown" parent="@style/Widget.Holo.Light.ListView" />
+    <style name="Widget.Holo.Light.EditText" parent="@style/Widget.Holo.EditText" />
     <style name="Widget.Holo.Light.ExpandableListView" parent="@style/Widget.Holo.Light.ListView">
         <item name="groupIndicator">@drawable/expander_group_holo_light</item>
         <item name="indicatorLeft">?expandableListPreferredItemIndicatorLeft</item>
         <item name="indicatorRight">?expandableListPreferredItemIndicatorRight</item>
         <item name="childDivider">?listDivider</item>
     </style>
-    <style name="Widget.Holo.Light.GridView" parent="@style/Widget.Holo.GridView"/>
+    <style name="Widget.Holo.Light.GridView" parent="@style/Widget.Holo.GridView" />
     <style name="Widget.Holo.Light.ImageButton" parent="@style/Widget.Holo.ImageButton">
         <item name="background">@drawable/btn_default_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.ListView" parent="@style/Widget.Holo.ListView"/>
-    <style name="Widget.Holo.Light.PopupWindow" parent="@style/Widget.PopupWindow"/>
-    <style name="Widget.Holo.Light.ProgressBar" parent="@style/Widget.Holo.ProgressBar"/>
+    <style name="Widget.Holo.Light.ListView" parent="@style/Widget.Holo.ListView" />
+    <style name="Widget.Holo.Light.PopupWindow" parent="@style/Widget.PopupWindow" />
+    <style name="Widget.Holo.Light.ProgressBar" parent="@style/Widget.Holo.ProgressBar" />
     <style name="Widget.Holo.Light.ProgressBar.Horizontal" parent="@style/Widget.Holo.ProgressBar.Horizontal">
         <item name="progressDrawable">@drawable/progress_horizontal_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.ProgressBar.Small" parent="@style/Widget.Holo.ProgressBar.Small"/>
-    <style name="Widget.Holo.Light.ProgressBar.Small.Title" parent="@style/Widget.Holo.ProgressBar.Small.Title"/>
-    <style name="Widget.Holo.Light.ProgressBar.Large" parent="@style/Widget.Holo.ProgressBar.Large"/>
-    <style name="Widget.Holo.Light.ProgressBar.Inverse" parent="@style/Widget.Holo.ProgressBar.Inverse"/>
-    <style name="Widget.Holo.Light.ProgressBar.Small.Inverse" parent="@style/Widget.Holo.ProgressBar.Small.Inverse"/>
-    <style name="Widget.Holo.Light.ProgressBar.Large.Inverse" parent="@style/Widget.Holo.ProgressBar.Large.Inverse"/>
+    <style name="Widget.Holo.Light.ProgressBar.Small" parent="@style/Widget.Holo.ProgressBar.Small" />
+    <style name="Widget.Holo.Light.ProgressBar.Small.Title" parent="@style/Widget.Holo.ProgressBar.Small.Title" />
+    <style name="Widget.Holo.Light.ProgressBar.Large" parent="@style/Widget.Holo.ProgressBar.Large" />
+    <style name="Widget.Holo.Light.ProgressBar.Inverse" parent="@style/Widget.Holo.ProgressBar.Inverse" />
+    <style name="Widget.Holo.Light.ProgressBar.Small.Inverse" parent="@style/Widget.Holo.ProgressBar.Small.Inverse" />
+    <style name="Widget.Holo.Light.ProgressBar.Large.Inverse" parent="@style/Widget.Holo.ProgressBar.Large.Inverse" />
     <style name="Widget.Holo.Light.SeekBar" parent="@style/Widget.Holo.SeekBar">
         <item name="indeterminateDrawable">@drawable/scrubber_progress_horizontal_holo_light</item>
         <item name="progressDrawable">@drawable/scrubber_progress_horizontal_holo_light</item>
@@ -1769,9 +1765,9 @@
         <item name="progressDrawable">@drawable/ratingbar_small_holo_light</item>
         <item name="minHeight">16.0dip</item>
     </style>
-    <style name="Widget.Holo.Light.CompoundButton.RadioButton" parent="@style/Widget.CompoundButton.RadioButton"/>
-    <style name="Widget.Holo.Light.ScrollView" parent="@style/Widget.ScrollView"/>
-    <style name="Widget.Holo.Light.HorizontalScrollView" parent="@style/Widget.HorizontalScrollView"/>
+    <style name="Widget.Holo.Light.CompoundButton.RadioButton" parent="@style/Widget.CompoundButton.RadioButton" />
+    <style name="Widget.Holo.Light.ScrollView" parent="@style/Widget.ScrollView" />
+    <style name="Widget.Holo.Light.HorizontalScrollView" parent="@style/Widget.HorizontalScrollView" />
     <style name="Widget.Holo.Light.Spinner" parent="@style/Widget.Holo.Spinner">
         <item name="background">@drawable/spinner_background_holo_light</item>
         <item name="dropDownSelector">@drawable/list_selector_holo_light</item>
@@ -1784,12 +1780,12 @@
     <style name="Widget.Holo.Light.CompoundButton.Star" parent="@style/Widget.CompoundButton.Star">
         <item name="button">@drawable/btn_star_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.TabWidget" parent="@style/Widget.Holo.TabWidget"/>
-    <style name="Widget.Holo.Light.WebTextView" parent="@style/Widget.WebTextView"/>
-    <style name="Widget.Holo.Light.WebView" parent="@style/Widget.WebView"/>
-    <style name="Widget.Holo.Light.DropDownItem" parent="@style/Widget.Holo.DropDownItem"/>
-    <style name="Widget.Holo.Light.DropDownItem.Spinner" parent="@style/Widget.Holo.Light.DropDownItem"/>
-    <style name="Widget.Holo.Light.TextView.SpinnerItem" parent="@style/Widget.Holo.TextView.SpinnerItem"/>
+    <style name="Widget.Holo.Light.TabWidget" parent="@style/Widget.Holo.TabWidget" />
+    <style name="Widget.Holo.Light.WebTextView" parent="@style/Widget.WebTextView" />
+    <style name="Widget.Holo.Light.WebView" parent="@style/Widget.WebView" />
+    <style name="Widget.Holo.Light.DropDownItem" parent="@style/Widget.Holo.DropDownItem" />
+    <style name="Widget.Holo.Light.DropDownItem.Spinner" parent="@style/Widget.Holo.Light.DropDownItem" />
+    <style name="Widget.Holo.Light.TextView.SpinnerItem" parent="@style/Widget.Holo.TextView.SpinnerItem" />
     <style name="Widget.Holo.Light.ListPopupWindow" parent="@style/Widget.ListPopupWindow">
         <item name="dropDownSelector">@drawable/list_selector_holo_light</item>
         <item name="popupBackground">@drawable/menu_dropdown_panel_holo_light</item>
@@ -1797,8 +1793,8 @@
         <item name="dropDownHorizontalOffset">0.0dip</item>
         <item name="dropDownVerticalOffset">0.0dip</item>
     </style>
-    <style name="Widget.Holo.Light.PopupMenu" parent="@style/Widget.Holo.Light.ListPopupWindow"/>
-    <style name="Widget.Holo.Light.ActionButton" parent="@style/Widget.Holo.ActionButton"/>
+    <style name="Widget.Holo.Light.PopupMenu" parent="@style/Widget.Holo.Light.ListPopupWindow" />
+    <style name="Widget.Holo.Light.ActionButton" parent="@style/Widget.Holo.ActionButton" />
     <style name="Widget.Holo.Light.ActionButton.Overflow" parent="@style/Widget.Holo.Light.ActionButton">
         <item name="src">@drawable/ic_menu_moreoverflow_holo_light</item>
         <item name="contentDescription">@string/action_menu_overflow_description</item>
@@ -1847,7 +1843,7 @@
         <item name="showDividers">middle</item>
         <item name="dividerPadding">12.0dip</item>
     </style>
-    <style name="Holo.Light.ButtonBar" parent="@style/Holo.ButtonBar"/>
+    <style name="Holo.Light.ButtonBar" parent="@style/Holo.ButtonBar" />
     <style name="Holo.ButtonBar.AlertDialog" parent="@style/Holo.ButtonBar">
         <item name="background">@null</item>
         <item name="dividerPadding">0.0dip</item>
@@ -1921,7 +1917,7 @@
         <item name="textSize">18.0sp</item>
         <item name="textColor">?textColorPrimaryInverse</item>
     </style>
-    <style name="Widget.ActionBar.TabBar" parent="@style/Widget"/>
+    <style name="Widget.ActionBar.TabBar" parent="@style/Widget" />
     <style name="Widget.Holo.ActionBar.TabView" parent="@style/Widget.ActionBar.TabView">
         <item name="background">@drawable/tab_indicator_ab_holo</item>
         <item name="paddingLeft">16.0dip</item>
@@ -1937,35 +1933,35 @@
         <item name="textAllCaps">true</item>
     </style>
     <style name="Widget.Holo.ActionBar.TabBar" parent="@style/Widget.ActionBar.TabBar">
-        <item name="divider">?android:attr/actionBarDivider</item>
+        <item name="divider">?actionBarDivider</item>
         <item name="showDividers">middle</item>
-        <item name="dividerPadding">0dip</item>
+        <item name="dividerPadding">12.0dip</item>
     </style>
-    <style name="Widget.Holo.Light.ActionBar.TabView" parent="@style/Widget.Holo.ActionBar.TabView"/>
-    <style name="Widget.Holo.Light.ActionBar.TabText" parent="@style/Widget.Holo.ActionBar.TabText"/>
-    <style name="Widget.Holo.Light.ActionBar.TabBar" parent="@style/Widget.Holo.ActionBar.TabBar"/>
-    <style name="TextAppearance.Holo" parent="@style/TextAppearance"/>
+    <style name="Widget.Holo.Light.ActionBar.TabView" parent="@style/Widget.Holo.ActionBar.TabView" />
+    <style name="Widget.Holo.Light.ActionBar.TabText" parent="@style/Widget.Holo.ActionBar.TabText" />
+    <style name="Widget.Holo.Light.ActionBar.TabBar" parent="@style/Widget.Holo.ActionBar.TabBar" />
+    <style name="TextAppearance.Holo" parent="@style/TextAppearance" />
     <style name="TextAppearance.Holo.Inverse" parent="@style/TextAppearance.Inverse">
         <item name="textColor">?textColorPrimaryInverse</item>
         <item name="textColorHighlight">?textColorHighlightInverse</item>
         <item name="textColorHint">?textColorHintInverse</item>
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
-    <style name="TextAppearance.Holo.Large" parent="@style/TextAppearance.Large"/>
+    <style name="TextAppearance.Holo.Large" parent="@style/TextAppearance.Large" />
     <style name="TextAppearance.Holo.Large.Inverse" parent="@style/TextAppearance.Holo.Large">
         <item name="textColor">?textColorPrimaryInverse</item>
         <item name="textColorHighlight">?textColorHighlightInverse</item>
         <item name="textColorHint">?textColorHintInverse</item>
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
-    <style name="TextAppearance.Holo.Medium" parent="@style/TextAppearance.Medium"/>
+    <style name="TextAppearance.Holo.Medium" parent="@style/TextAppearance.Medium" />
     <style name="TextAppearance.Holo.Medium.Inverse" parent="@style/TextAppearance.Holo.Medium">
         <item name="textColor">?textColorPrimaryInverse</item>
         <item name="textColorHighlight">?textColorHighlightInverse</item>
         <item name="textColorHint">?textColorHintInverse</item>
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
-    <style name="TextAppearance.Holo.Small" parent="@style/TextAppearance.Small"/>
+    <style name="TextAppearance.Holo.Small" parent="@style/TextAppearance.Small" />
     <style name="TextAppearance.Holo.Small.Inverse" parent="@style/TextAppearance.Holo.Small">
         <item name="textColor">?textColorPrimaryInverse</item>
         <item name="textColorHighlight">?textColorHighlightInverse</item>
@@ -1979,7 +1975,7 @@
         <item name="textSize">14.0sp</item>
         <item name="textColor">?textColorSecondary</item>
     </style>
-    <style name="TextAppearance.Holo.Widget" parent="@style/TextAppearance.Widget"/>
+    <style name="TextAppearance.Holo.Widget" parent="@style/TextAppearance.Widget" />
     <style name="TextAppearance.Holo.Widget.Button" parent="@style/TextAppearance.Holo.Small.Inverse">
         <item name="textColor">@color/primary_text_light_nodisable</item>
     </style>
@@ -2041,8 +2037,8 @@
         <item name="textColor">#ffffffff</item>
     </style>
     <style name="TextAppearance.Holo.DialogWindowTitle" parent="@style/TextAppearance.Holo">
-        <item name="textSize">22sp</item>
-        <item name="textColor">@android:color/holo_orange_light</item>
+        <item name="textSize">22.0sp</item>
+        <item name="textColor">@color/holo_blue_light</item>
     </style>
     <style name="TextAppearance.SuggestionHighlight" parent="@style/TextAppearance">
         <item name="textSize">18.0sp</item>
@@ -2136,8 +2132,8 @@
         <item name="backgroundStacked">@drawable/ab_stacked_solid_dark_holo</item>
         <item name="backgroundSplit">@drawable/ab_bottom_solid_inverse_holo</item>
     </style>
-    <style name="Widget.Holo.Light.ActionBar.TabBar.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabBar"/>
-    <style name="Widget.Holo.Light.ActionBar.TabView.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabView"/>
+    <style name="Widget.Holo.Light.ActionBar.TabBar.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabBar" />
+    <style name="Widget.Holo.Light.ActionBar.TabView.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabView" />
     <style name="Widget.Holo.Light.ActionBar.TabText.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabText">
         <item name="textColor">?textColorPrimaryInverse</item>
     </style>
@@ -2238,6 +2234,9 @@
         <item name="quickContactBadgeStyleSmallWindowLarge">@style/Widget.DeviceDefault.QuickContactBadgeSmall.WindowLarge</item>
         <item name="expandableListViewWhiteStyle">@style/Widget.DeviceDefault.ExpandableListView.White</item>
         <item name="webTextViewStyle">@style/Widget.DeviceDefault.WebTextView</item>
+        <item name="textSelectHandleLeft">@drawable/tw_text_select_handle_left</item>
+        <item name="textSelectHandleRight">@drawable/tw_text_select_handle_right</item>
+        <item name="textSelectHandle">@drawable/tw_text_select_handle_middle</item>
         <item name="textSelectHandleWindowStyle">@style/Widget.DeviceDefault.TextSelectHandle</item>
         <item name="actionBarStyle">@style/Widget.DeviceDefault.ActionBar</item>
         <item name="dropDownSpinnerStyle">@style/Widget.DeviceDefault.Spinner.DropDown</item>
@@ -2282,7 +2281,9 @@
         <item name="actionModeStyle">@style/Widget.DeviceDefault.ActionMode</item>
         <item name="actionBarDivider">@drawable/tw_divider_vertical_dark</item>
         <item name="textAppearanceListItemSmall">?textAppearanceLarge</item>
-        <item name="actionModeClipboardDrawable">@drawable/ic_menu_clipboard_holo_dark</item>
+        <item name="actionModeClipboardDrawable">@drawable/tw_ic_menu_clipboard_holo_dark</item>
+        <item name="textSelectHandleLeftTop">@drawable/tw_text_select_handle_left_top</item>
+        <item name="twActionPopup">true</item>
         <item name="errorMessageBackground">@drawable/tw_popup_inline_error</item>
         <item name="errorMessageAboveBackground">@drawable/tw_popup_inline_error_above</item>
         <item name="dropdownListPreferredItemHeight">56.0dip</item>
@@ -2408,6 +2409,9 @@
         <item name="quickContactBadgeStyleSmallWindowLarge">@style/Widget.DeviceDefault.QuickContactBadgeSmall.WindowLarge</item>
         <item name="expandableListViewWhiteStyle">@style/Widget.DeviceDefault.Light.ExpandableListView.White</item>
         <item name="webTextViewStyle">@style/Widget.DeviceDefault.Light.WebTextView</item>
+        <item name="textSelectHandleLeft">@drawable/tw_text_select_handle_left</item>
+        <item name="textSelectHandleRight">@drawable/tw_text_select_handle_right</item>
+        <item name="textSelectHandle">@drawable/tw_text_select_handle_middle</item>
         <item name="textSelectHandleWindowStyle">@style/Widget.DeviceDefault.TextSelectHandle</item>
         <item name="actionBarStyle">@style/Widget.DeviceDefault.Light.ActionBar</item>
         <item name="dropDownSpinnerStyle">@style/Widget.DeviceDefault.Light.Spinner.DropDown</item>
@@ -2434,7 +2438,8 @@
         <item name="switchPreferenceStyle">@style/Preference.DeviceDefault.SwitchPreference</item>
         <item name="textSuggestionsWindowStyle">@style/Widget.DeviceDefault.Light.TextSuggestionsPopupWindow</item>
         <item name="actionModeStyle">@style/Widget.DeviceDefault.Light.ActionMode</item>
-        <item name="actionModeClipboardDrawable">@drawable/ic_menu_clipboard_holo_light</item>
+        <item name="textSelectHandleLeftTop">@drawable/tw_text_select_handle_left_top</item>
+        <item name="twActionPopup">true</item>
         <item name="panelMenuListTheme">@style/Theme.DeviceDefault.CompactMenu</item>
         <item name="gestureOverlayViewStyle">@style/Widget.DeviceDefault.Light.GestureOverlayView</item>
         <item name="stackViewStyle">@style/Widget.DeviceDefault.StackView</item>
@@ -2516,13 +2521,13 @@
         <item name="borderlessButtonStyle">@style/Widget.DeviceDefault.Light.Button.Borderless.Small</item>
         <item name="buttonBarStyle">@style/DeviceDefault.Light.ButtonBar.AlertDialog</item>
     </style>
-    <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@style/Theme.Holo.Light.Dialog.MinWidth"/>
-    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@style/Theme.Holo.Light.Dialog.NoActionBar"/>
-    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth"/>
-    <style name="Theme.DeviceDefault.DialogWhenLarge" parent="@style/Theme.Holo.DialogWhenLarge"/>
-    <style name="Theme.DeviceDefault.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.DialogWhenLarge.NoActionBar"/>
-    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@style/Theme.Holo.Light.DialogWhenLarge"/>
-    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.Light.DialogWhenLarge.NoActionBar"/>
+    <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@style/Theme.Holo.Light.Dialog.MinWidth" />
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@style/Theme.Holo.Light.Dialog.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge" parent="@style/Theme.Holo.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.DialogWhenLarge.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@style/Theme.Holo.Light.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.Light.DialogWhenLarge.NoActionBar" />
     <style name="Theme.DeviceDefault.Panel" parent="@style/Theme.DeviceDefault">
         <item name="windowBackground">@color/transparent</item>
         <item name="windowFrame">@null</item>
@@ -2571,16 +2576,18 @@
         <item name="actionModeStyle">@style/Widget.DeviceDefault.Light.ActionMode.Inverse</item>
         <item name="actionModePopupWindowStyle">@style/Widget.DeviceDefault.PopupWindow.ActionMode</item>
     </style>
-    <style name="Widget.DeviceDefault" parent="@style/Widget"/>
+    <style name="Widget.DeviceDefault" parent="@style/Widget" />
     <style name="Widget.DeviceDefault.Button" parent="@style/Widget.Button">
         <item name="textColor">@color/zzz_tw_button_text_inversible</item>
         <item name="background">@drawable/tw_btn_default</item>
     </style>
-    <style name="Widget.DeviceDefault.Button.Small" parent="@style/Widget.Button.Small"/>
-    <style name="Widget.DeviceDefault.Button.Inset" parent="@style/Widget.Button.Inset"/>
-    <style name="Widget.DeviceDefault.Button.Toggle" parent="@style/Widget.Button.Toggle"/>
-    <style name="Widget.DeviceDefault.Button.Borderless.Small" parent="@style/Widget.Holo.Button.Borderless.Small"/>
-    <style name="Widget.DeviceDefault.TextView" parent="@style/Widget.TextView"/>
+    <style name="Widget.DeviceDefault.Button.Small" parent="@style/Widget.Button.Small" />
+    <style name="Widget.DeviceDefault.Button.Inset" parent="@style/Widget.Button.Inset" />
+    <style name="Widget.DeviceDefault.Button.Toggle" parent="@style/Widget.Button.Toggle" />
+    <style name="Widget.DeviceDefault.Button.Borderless.Small" parent="@style/Widget.Holo.Button.Borderless.Small" />
+    <style name="Widget.DeviceDefault.TextView" parent="@style/Widget.TextView">
+        <item name="textSelectHandleLeftTop">?textSelectHandleLeftTop</item>
+    </style>
     <style name="Widget.DeviceDefault.AutoCompleteTextView" parent="@style/Widget.AutoCompleteTextView">
         <item name="textColor">@color/black</item>
         <item name="maxLength">9000</item>
@@ -2628,7 +2635,7 @@
         <item name="indeterminateDrawable">@drawable/tw_progress_small</item>
         <item name="animationResolution">33</item>
     </style>
-    <style name="Widget.DeviceDefault.ProgressBar.Small.Title" parent="@style/Widget.DeviceDefault.ProgressBar.Small"/>
+    <style name="Widget.DeviceDefault.ProgressBar.Small.Title" parent="@style/Widget.DeviceDefault.ProgressBar.Small" />
     <style name="Widget.DeviceDefault.ProgressBar.Large" parent="@style/Widget.ProgressBar.Large">
         <item name="indeterminateDrawable">@drawable/tw_progress_large</item>
         <item name="animationResolution">33</item>
@@ -2643,21 +2650,21 @@
         <item name="thumb">@drawable/tw_scrubber_control_selector</item>
         <item name="thumbOffset">13.0dip</item>
     </style>
-    <style name="Widget.DeviceDefault.RatingBar" parent="@style/Widget.RatingBar"/>
-    <style name="Widget.DeviceDefault.RatingBar.Indicator" parent="@style/Widget.RatingBar.Indicator"/>
-    <style name="Widget.DeviceDefault.RatingBar.Small" parent="@style/Widget.RatingBar.Small"/>
+    <style name="Widget.DeviceDefault.RatingBar" parent="@style/Widget.RatingBar" />
+    <style name="Widget.DeviceDefault.RatingBar.Indicator" parent="@style/Widget.RatingBar.Indicator" />
+    <style name="Widget.DeviceDefault.RatingBar.Small" parent="@style/Widget.RatingBar.Small" />
     <style name="Widget.DeviceDefault.CompoundButton.RadioButton" parent="@style/Widget.CompoundButton.RadioButton">
         <item name="button">@drawable/tw_btn_radio</item>
     </style>
-    <style name="Widget.DeviceDefault.ScrollView" parent="@style/Widget.ScrollView"/>
-    <style name="Widget.DeviceDefault.HorizontalScrollView" parent="@style/Widget.HorizontalScrollView"/>
+    <style name="Widget.DeviceDefault.ScrollView" parent="@style/Widget.ScrollView" />
+    <style name="Widget.DeviceDefault.HorizontalScrollView" parent="@style/Widget.HorizontalScrollView" />
     <style name="Widget.DeviceDefault.Spinner" parent="@style/Widget.Spinner">
         <item name="background">@drawable/tw_btn_dropdown</item>
         <item name="dropDownSelector">@drawable/tw_list_selector_background</item>
         <item name="popupBackground">@drawable/tw_dropdownpopup_bright</item>
         <item name="spinnerMode">dialog</item>
     </style>
-    <style name="Widget.DeviceDefault.CompoundButton.Star" parent="@style/Widget.CompoundButton.Star"/>
+    <style name="Widget.DeviceDefault.CompoundButton.Star" parent="@style/Widget.CompoundButton.Star" />
     <style name="Widget.DeviceDefault.TabWidget" parent="@style/Widget.TabWidget">
         <item name="textAppearance">@style/TextAppearance.Widget.TabWidget</item>
         <item name="scrollbars">none</item>
@@ -2670,7 +2677,7 @@
         <item name="dropDownSelector">@drawable/tw_list_selector_background</item>
         <item name="popupBackground">@drawable/tw_spinner_dropdown_background</item>
     </style>
-    <style name="Widget.DeviceDefault.WebView" parent="@style/Widget.WebView"/>
+    <style name="Widget.DeviceDefault.WebView" parent="@style/Widget.WebView" />
     <style name="Widget.DeviceDefault.DropDownItem" parent="@style/Widget.DropDownItem">
         <item name="textAppearance">@style/TextAppearance.DeviceDefault.Widget.DropDownItem</item>
         <item name="paddingLeft">6.0dip</item>
@@ -2687,14 +2694,14 @@
         <item name="dropDownSelector">@drawable/tw_list_selector_background</item>
         <item name="popupBackground">@drawable/tw_dropdownpopup_bright</item>
     </style>
-    <style name="Widget.DeviceDefault.PopupMenu" parent="@style/Widget.DeviceDefault.ListPopupWindow"/>
-    <style name="Widget.DeviceDefault.ActionButton" parent="@style/Widget.Holo.ActionButton"/>
+    <style name="Widget.DeviceDefault.PopupMenu" parent="@style/Widget.DeviceDefault.ListPopupWindow" />
+    <style name="Widget.DeviceDefault.ActionButton" parent="@style/Widget.Holo.ActionButton" />
     <style name="Widget.DeviceDefault.ActionButton.Overflow" parent="@style/Widget.Holo.ActionButton.Overflow">
         <item name="src">@drawable/tw_ic_menu_moreoverflow_holo_dark</item>
     </style>
-    <style name="Widget.DeviceDefault.ActionButton.TextButton" parent="@style/Widget.Holo.ActionButton.TextButton"/>
-    <style name="Widget.DeviceDefault.ActionMode" parent="@style/Widget.Holo.ActionMode"/>
-    <style name="Widget.DeviceDefault.ActionButton.CloseMode" parent="@style/Widget.Holo.ActionButton.CloseMode"/>
+    <style name="Widget.DeviceDefault.ActionButton.TextButton" parent="@style/Widget.Holo.ActionButton.TextButton" />
+    <style name="Widget.DeviceDefault.ActionMode" parent="@style/Widget.Holo.ActionMode" />
+    <style name="Widget.DeviceDefault.ActionButton.CloseMode" parent="@style/Widget.Holo.ActionButton.CloseMode" />
     <style name="Widget.DeviceDefault.ActionBar" parent="@style/Widget.Holo.ActionBar">
         <item name="progressBarStyle">@style/Widget.DeviceDefault.ProgressBar.Horizontal</item>
         <item name="background">@drawable/tw_ab_transparent_dark_holo</item>
@@ -2703,9 +2710,9 @@
         <item name="indeterminateProgressStyle">@style/Widget.DeviceDefault.ProgressBar.Small</item>
         <item name="backgroundStacked">@drawable/tw_ab_stacked_transparent_dark_holo</item>
     </style>
-    <style name="Widget.DeviceDefault.Button.Borderless" parent="@style/Widget.Holo.Button.Borderless"/>
-    <style name="Widget.DeviceDefault.Tab" parent="@style/Widget.Holo.Tab"/>
-    <style name="Widget.DeviceDefault.CalendarView" parent="@style/Widget.CalendarView"/>
+    <style name="Widget.DeviceDefault.Button.Borderless" parent="@style/Widget.Holo.Button.Borderless" />
+    <style name="Widget.DeviceDefault.Tab" parent="@style/Widget.Holo.Tab" />
+    <style name="Widget.DeviceDefault.CalendarView" parent="@style/Widget.CalendarView" />
     <style name="Widget.DeviceDefault.DatePicker" parent="@style/Widget.DatePicker">
         <item name="layout">@layout/tw_date_picker</item>
     </style>
@@ -2730,104 +2737,104 @@
         <item name="showDividers">middle</item>
         <item name="dividerPadding">0.0dip</item>
     </style>
-    <style name="Widget.DeviceDefault.ActionBar.Solid" parent="@style/Widget.Holo.ActionBar.Solid"/>
-    <style name="Widget.DeviceDefault.Light" parent="@style/Widget.Holo.Light"/>
-    <style name="Widget.DeviceDefault.Light.Button" parent="@style/Widget.Holo.Light.Button"/>
-    <style name="Widget.DeviceDefault.Light.Button.Small" parent="@style/Widget.Holo.Light.Button.Small"/>
-    <style name="Widget.DeviceDefault.Light.Button.Inset" parent="@style/Widget.Holo.Light.Button.Inset"/>
-    <style name="Widget.DeviceDefault.Light.Button.Toggle" parent="@style/Widget.Holo.Light.Button.Toggle"/>
-    <style name="Widget.DeviceDefault.Light.Button.Borderless.Small" parent="@style/Widget.Holo.Light.Button.Borderless.Small"/>
+    <style name="Widget.DeviceDefault.ActionBar.Solid" parent="@style/Widget.Holo.ActionBar.Solid" />
+    <style name="Widget.DeviceDefault.Light" parent="@style/Widget.Holo.Light" />
+    <style name="Widget.DeviceDefault.Light.Button" parent="@style/Widget.Holo.Light.Button" />
+    <style name="Widget.DeviceDefault.Light.Button.Small" parent="@style/Widget.Holo.Light.Button.Small" />
+    <style name="Widget.DeviceDefault.Light.Button.Inset" parent="@style/Widget.Holo.Light.Button.Inset" />
+    <style name="Widget.DeviceDefault.Light.Button.Toggle" parent="@style/Widget.Holo.Light.Button.Toggle" />
+    <style name="Widget.DeviceDefault.Light.Button.Borderless.Small" parent="@style/Widget.Holo.Light.Button.Borderless.Small" />
     <style name="Widget.DeviceDefault.Light.TextView" parent="@style/Widget.Holo.Light.TextView">
         <item name="textCursorDrawable">@drawable/text_cursor_holo_light</item>
+        <item name="textSelectHandleLeftTop">?textSelectHandleLeftTop</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.AutoCompleteTextView" parent="@style/Widget.Holo.Light.AutoCompleteTextView"/>
-    <style name="Widget.DeviceDefault.Light.CompoundButton.CheckBox" parent="@style/Widget.Holo.Light.CompoundButton.CheckBox"/>
+    <style name="Widget.DeviceDefault.Light.AutoCompleteTextView" parent="@style/Widget.Holo.Light.AutoCompleteTextView" />
+    <style name="Widget.DeviceDefault.Light.CompoundButton.CheckBox" parent="@style/Widget.Holo.Light.CompoundButton.CheckBox" />
     <style name="Widget.DeviceDefault.Light.ListView.DropDown" parent="@style/Widget.Holo.Light.ListView.DropDown">
         <item name="listSelector">@drawable/tw_list_selector_background</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.EditText" parent="@style/Widget.Holo.Light.EditText"/>
+    <style name="Widget.DeviceDefault.Light.EditText" parent="@style/Widget.Holo.Light.EditText" />
     <style name="Widget.DeviceDefault.Light.ExpandableListView" parent="@style/Widget.Holo.Light.ExpandableListView">
         <item name="listSelector">@drawable/tw_list_selector_background</item>
         <item name="groupIndicator">@drawable/tw_expander_group_holo_light</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.GridView" parent="@style/Widget.Holo.Light.GridView"/>
-    <style name="Widget.DeviceDefault.Light.ImageButton" parent="@style/Widget.Holo.Light.ImageButton"/>
+    <style name="Widget.DeviceDefault.Light.GridView" parent="@style/Widget.Holo.Light.GridView" />
+    <style name="Widget.DeviceDefault.Light.ImageButton" parent="@style/Widget.Holo.Light.ImageButton" />
     <style name="Widget.DeviceDefault.Light.ListView" parent="@style/Widget.Holo.Light.ListView">
         <item name="listSelector">@drawable/tw_list_selector_background</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.PopupWindow" parent="@style/Widget.Holo.Light.PopupWindow"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar" parent="@style/Widget.DeviceDefault.ProgressBar"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar.Horizontal" parent="@style/Widget.DeviceDefault.ProgressBar.Horizontal"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar.Small" parent="@style/Widget.DeviceDefault.ProgressBar.Small"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar.Small.Title" parent="@style/Widget.DeviceDefault.ProgressBar.Small.Title"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar.Large" parent="@style/Widget.DeviceDefault.ProgressBar.Large"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar.Inverse" parent="@style/Widget.DeviceDefault.Light.ProgressBar"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar.Small.Inverse" parent="@style/Widget.DeviceDefault.Light.ProgressBar.Small"/>
-    <style name="Widget.DeviceDefault.Light.ProgressBar.Large.Inverse" parent="@style/Widget.DeviceDefault.Light.ProgressBar.Large"/>
-    <style name="Widget.DeviceDefault.Light.SeekBar" parent="@style/Widget.DeviceDefault.SeekBar"/>
-    <style name="Widget.DeviceDefault.Light.RatingBar" parent="@style/Widget.Holo.Light.RatingBar"/>
-    <style name="Widget.DeviceDefault.Light.RatingBar.Indicator" parent="@style/Widget.Holo.Light.RatingBar.Indicator"/>
-    <style name="Widget.DeviceDefault.Light.RatingBar.Small" parent="@style/Widget.Holo.Light.RatingBar.Small"/>
-    <style name="Widget.DeviceDefault.Light.CompoundButton.RadioButton" parent="@style/Widget.Holo.Light.CompoundButton.RadioButton"/>
-    <style name="Widget.DeviceDefault.Light.ScrollView" parent="@style/Widget.Holo.Light.ScrollView"/>
-    <style name="Widget.DeviceDefault.Light.HorizontalScrollView" parent="@style/Widget.Holo.Light.HorizontalScrollView"/>
-    <style name="Widget.DeviceDefault.Light.Spinner" parent="@style/Widget.Holo.Light.Spinner"/>
-    <style name="Widget.DeviceDefault.Light.CompoundButton.Star" parent="@style/Widget.Holo.Light.CompoundButton.Star"/>
-    <style name="Widget.DeviceDefault.Light.TabWidget" parent="@style/Widget.Holo.Light.TabWidget"/>
-    <style name="Widget.DeviceDefault.Light.WebTextView" parent="@style/Widget.Holo.Light.WebTextView"/>
-    <style name="Widget.DeviceDefault.Light.WebView" parent="@style/Widget.Holo.Light.WebView"/>
-    <style name="Widget.DeviceDefault.Light.DropDownItem" parent="@style/Widget.Holo.Light.DropDownItem"/>
-    <style name="Widget.DeviceDefault.Light.DropDownItem.Spinner" parent="@style/Widget.Holo.Light.DropDownItem.Spinner"/>
-    <style name="Widget.DeviceDefault.Light.TextView.SpinnerItem" parent="@style/Widget.Holo.Light.TextView.SpinnerItem"/>
-    <style name="Widget.DeviceDefault.Light.ListPopupWindow" parent="@style/Widget.Holo.Light.ListPopupWindow"/>
-    <style name="Widget.DeviceDefault.Light.PopupMenu" parent="@style/Widget.Holo.Light.PopupMenu"/>
-    <style name="Widget.DeviceDefault.Light.Tab" parent="@style/Widget.Holo.Light.Tab"/>
-    <style name="Widget.DeviceDefault.Light.CalendarView" parent="@style/Widget.Holo.Light.CalendarView"/>
-    <style name="Widget.DeviceDefault.Light.ActionButton" parent="@style/Widget.Holo.Light.ActionButton"/>
-    <style name="Widget.DeviceDefault.Light.ActionButton.Overflow" parent="@style/Widget.Holo.Light.ActionButton.Overflow"/>
-    <style name="Widget.DeviceDefault.Light.ActionMode" parent="@style/Widget.Holo.Light.ActionMode"/>
-    <style name="Widget.DeviceDefault.Light.ActionButton.CloseMode" parent="@style/Widget.Holo.Light.ActionButton.CloseMode"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar" parent="@style/Widget.Holo.Light.ActionBar"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.TabView" parent="@style/Widget.Holo.Light.ActionBar.TabView"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.TabText" parent="@style/Widget.Holo.Light.ActionBar.TabText"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.TabBar" parent="@style/Widget.Holo.Light.ActionBar.TabBar"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.Solid" parent="@style/Widget.Holo.Light.ActionBar.Solid"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.Solid.Inverse" parent="@style/Widget.Holo.Light.ActionBar.Solid.Inverse"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.TabBar.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabBar.Inverse"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.TabView.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabView.Inverse"/>
-    <style name="Widget.DeviceDefault.Light.ActionBar.TabText.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabText.Inverse"/>
-    <style name="Widget.DeviceDefault.Light.ActionMode.Inverse" parent="@style/Widget.Holo.Light.ActionMode.Inverse"/>
-    <style name="TextAppearance.DeviceDefault" parent="@style/TextAppearance.Holo"/>
-    <style name="TextAppearance.DeviceDefault.Inverse" parent="@style/TextAppearance.Holo.Inverse"/>
-    <style name="TextAppearance.DeviceDefault.Large" parent="@style/TextAppearance.Holo.Large"/>
-    <style name="TextAppearance.DeviceDefault.Large.Inverse" parent="@style/TextAppearance.Holo.Large.Inverse"/>
-    <style name="TextAppearance.DeviceDefault.Medium" parent="@style/TextAppearance.Holo.Medium"/>
-    <style name="TextAppearance.DeviceDefault.Medium.Inverse" parent="@style/TextAppearance.Holo.Medium.Inverse"/>
-    <style name="TextAppearance.DeviceDefault.Small" parent="@style/TextAppearance.Holo.Small"/>
-    <style name="TextAppearance.DeviceDefault.Small.Inverse" parent="@style/TextAppearance.Holo.Small.Inverse"/>
+    <style name="Widget.DeviceDefault.Light.PopupWindow" parent="@style/Widget.Holo.Light.PopupWindow" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar" parent="@style/Widget.DeviceDefault.ProgressBar" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar.Horizontal" parent="@style/Widget.DeviceDefault.ProgressBar.Horizontal" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar.Small" parent="@style/Widget.DeviceDefault.ProgressBar.Small" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar.Small.Title" parent="@style/Widget.DeviceDefault.ProgressBar.Small.Title" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar.Large" parent="@style/Widget.DeviceDefault.ProgressBar.Large" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar.Inverse" parent="@style/Widget.DeviceDefault.Light.ProgressBar" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar.Small.Inverse" parent="@style/Widget.DeviceDefault.Light.ProgressBar.Small" />
+    <style name="Widget.DeviceDefault.Light.ProgressBar.Large.Inverse" parent="@style/Widget.DeviceDefault.Light.ProgressBar.Large" />
+    <style name="Widget.DeviceDefault.Light.SeekBar" parent="@style/Widget.DeviceDefault.SeekBar" />
+    <style name="Widget.DeviceDefault.Light.RatingBar" parent="@style/Widget.Holo.Light.RatingBar" />
+    <style name="Widget.DeviceDefault.Light.RatingBar.Indicator" parent="@style/Widget.Holo.Light.RatingBar.Indicator" />
+    <style name="Widget.DeviceDefault.Light.RatingBar.Small" parent="@style/Widget.Holo.Light.RatingBar.Small" />
+    <style name="Widget.DeviceDefault.Light.CompoundButton.RadioButton" parent="@style/Widget.Holo.Light.CompoundButton.RadioButton" />
+    <style name="Widget.DeviceDefault.Light.ScrollView" parent="@style/Widget.Holo.Light.ScrollView" />
+    <style name="Widget.DeviceDefault.Light.HorizontalScrollView" parent="@style/Widget.Holo.Light.HorizontalScrollView" />
+    <style name="Widget.DeviceDefault.Light.Spinner" parent="@style/Widget.Holo.Light.Spinner" />
+    <style name="Widget.DeviceDefault.Light.CompoundButton.Star" parent="@style/Widget.Holo.Light.CompoundButton.Star" />
+    <style name="Widget.DeviceDefault.Light.TabWidget" parent="@style/Widget.Holo.Light.TabWidget" />
+    <style name="Widget.DeviceDefault.Light.WebTextView" parent="@style/Widget.Holo.Light.WebTextView" />
+    <style name="Widget.DeviceDefault.Light.WebView" parent="@style/Widget.Holo.Light.WebView" />
+    <style name="Widget.DeviceDefault.Light.DropDownItem" parent="@style/Widget.Holo.Light.DropDownItem" />
+    <style name="Widget.DeviceDefault.Light.DropDownItem.Spinner" parent="@style/Widget.Holo.Light.DropDownItem.Spinner" />
+    <style name="Widget.DeviceDefault.Light.TextView.SpinnerItem" parent="@style/Widget.Holo.Light.TextView.SpinnerItem" />
+    <style name="Widget.DeviceDefault.Light.ListPopupWindow" parent="@style/Widget.Holo.Light.ListPopupWindow" />
+    <style name="Widget.DeviceDefault.Light.PopupMenu" parent="@style/Widget.Holo.Light.PopupMenu" />
+    <style name="Widget.DeviceDefault.Light.Tab" parent="@style/Widget.Holo.Light.Tab" />
+    <style name="Widget.DeviceDefault.Light.CalendarView" parent="@style/Widget.Holo.Light.CalendarView" />
+    <style name="Widget.DeviceDefault.Light.ActionButton" parent="@style/Widget.Holo.Light.ActionButton" />
+    <style name="Widget.DeviceDefault.Light.ActionButton.Overflow" parent="@style/Widget.Holo.Light.ActionButton.Overflow" />
+    <style name="Widget.DeviceDefault.Light.ActionMode" parent="@style/Widget.Holo.Light.ActionMode" />
+    <style name="Widget.DeviceDefault.Light.ActionButton.CloseMode" parent="@style/Widget.Holo.Light.ActionButton.CloseMode" />
+    <style name="Widget.DeviceDefault.Light.ActionBar" parent="@style/Widget.Holo.Light.ActionBar" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.TabView" parent="@style/Widget.Holo.Light.ActionBar.TabView" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.TabText" parent="@style/Widget.Holo.Light.ActionBar.TabText" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.TabBar" parent="@style/Widget.Holo.Light.ActionBar.TabBar" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.Solid" parent="@style/Widget.Holo.Light.ActionBar.Solid" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.Solid.Inverse" parent="@style/Widget.Holo.Light.ActionBar.Solid.Inverse" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.TabBar.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabBar.Inverse" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.TabView.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabView.Inverse" />
+    <style name="Widget.DeviceDefault.Light.ActionBar.TabText.Inverse" parent="@style/Widget.Holo.Light.ActionBar.TabText.Inverse" />
+    <style name="Widget.DeviceDefault.Light.ActionMode.Inverse" parent="@style/Widget.Holo.Light.ActionMode.Inverse" />
+    <style name="TextAppearance.DeviceDefault" parent="@style/TextAppearance.Holo" />
+    <style name="TextAppearance.DeviceDefault.Inverse" parent="@style/TextAppearance.Holo.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Large" parent="@style/TextAppearance.Holo.Large" />
+    <style name="TextAppearance.DeviceDefault.Large.Inverse" parent="@style/TextAppearance.Holo.Large.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Medium" parent="@style/TextAppearance.Holo.Medium" />
+    <style name="TextAppearance.DeviceDefault.Medium.Inverse" parent="@style/TextAppearance.Holo.Medium.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Small" parent="@style/TextAppearance.Holo.Small" />
+    <style name="TextAppearance.DeviceDefault.Small.Inverse" parent="@style/TextAppearance.Holo.Small.Inverse" />
     <style name="TextAppearance.DeviceDefault.SearchResult.Title" parent="@style/TextAppearance.Holo.SearchResult.Title">
         <item name="textColor">@color/tw_primary_text_light</item>
     </style>
     <style name="TextAppearance.DeviceDefault.SearchResult.Subtitle" parent="@style/TextAppearance.Holo.SearchResult.Subtitle">
         <item name="textColor">@color/tw_primary_text_light</item>
     </style>
-    <style name="TextAppearance.DeviceDefault.WindowTitle" parent="@style/TextAppearance.Holo.WindowTitle"/>
-    <style name="TextAppearance.DeviceDefault.DialogWindowTitle" parent="@style/TextAppearance.Holo.DialogWindowTitle"/>
-    <style name="TextAppearance.DeviceDefault.Widget" parent="@style/TextAppearance.Holo.Widget"/>
-    <style name="TextAppearance.DeviceDefault.Widget.Button" parent="@style/TextAppearance.Holo.Widget.Button"/>
-    <style name="TextAppearance.DeviceDefault.Widget.IconMenu.Item" parent="@style/TextAppearance.Holo.Widget.IconMenu.Item"/>
-    <style name="TextAppearance.DeviceDefault.Widget.TabWidget" parent="@style/TextAppearance.Holo.Widget.TabWidget"/>
-    <style name="TextAppearance.DeviceDefault.Widget.TextView" parent="@style/TextAppearance.Holo.Widget.TextView"/>
-    <style name="TextAppearance.DeviceDefault.Widget.TextView.PopupMenu" parent="@style/TextAppearance.Holo.Widget.TextView.PopupMenu"/>
-    <style name="TextAppearance.DeviceDefault.Widget.DropDownHint" parent="@style/TextAppearance.Holo.Widget.DropDownHint"/>
+    <style name="TextAppearance.DeviceDefault.WindowTitle" parent="@style/TextAppearance.Holo.WindowTitle" />
+    <style name="TextAppearance.DeviceDefault.DialogWindowTitle" parent="@style/TextAppearance.Holo.DialogWindowTitle" />
+    <style name="TextAppearance.DeviceDefault.Widget" parent="@style/TextAppearance.Holo.Widget" />
+    <style name="TextAppearance.DeviceDefault.Widget.Button" parent="@style/TextAppearance.Holo.Widget.Button" />
+    <style name="TextAppearance.DeviceDefault.Widget.IconMenu.Item" parent="@style/TextAppearance.Holo.Widget.IconMenu.Item" />
+    <style name="TextAppearance.DeviceDefault.Widget.TabWidget" parent="@style/TextAppearance.Holo.Widget.TabWidget" />
+    <style name="TextAppearance.DeviceDefault.Widget.TextView" parent="@style/TextAppearance.Holo.Widget.TextView" />
+    <style name="TextAppearance.DeviceDefault.Widget.TextView.PopupMenu" parent="@style/TextAppearance.Holo.Widget.TextView.PopupMenu" />
+    <style name="TextAppearance.DeviceDefault.Widget.DropDownHint" parent="@style/TextAppearance.Holo.Widget.DropDownHint" />
     <style name="TextAppearance.DeviceDefault.Widget.DropDownItem" parent="@style/TextAppearance.Widget.DropDownItem">
         <item name="textColor">@color/tw_primary_text_light_disable_only</item>
     </style>
-    <style
-        name="TextAppearance.DeviceDefault.Widget.TextView.SpinnerItem" parent="@style/TextAppearance.Widget.TextView.SpinnerItem">
+    <style name="TextAppearance.DeviceDefault.Widget.TextView.SpinnerItem" parent="@style/TextAppearance.Widget.TextView.SpinnerItem">
         <item name="textColor">@color/tw_primary_text_light_disable_only</item>
     </style>
-    <style name="TextAppearance.DeviceDefault.Widget.EditText" parent="@style/TextAppearance.Holo.Widget.EditText"/>
+    <style name="TextAppearance.DeviceDefault.Widget.EditText" parent="@style/TextAppearance.Holo.Widget.EditText" />
     <style name="TextAppearance.DeviceDefault.Widget.PopupMenu" parent="@style/TextAppearance.Widget.PopupMenu">
         <item name="textSize">18.0sp</item>
         <item name="textColor">?textColorPrimaryInverse</item>
@@ -2836,7 +2843,7 @@
     <style name="TextAppearance.DeviceDefault.Widget.PopupMenu.Large" parent="@style/TextAppearance.DeviceDefault.Widget.PopupMenu">
         <item name="textSize">20.0sp</item>
     </style>
-    <style name="TextAppearance.DeviceDefault.Widget.PopupMenu.Small" parent="@style/TextAppearance.Widget.PopupMenu.Small"/>
+    <style name="TextAppearance.DeviceDefault.Widget.PopupMenu.Small" parent="@style/TextAppearance.Widget.PopupMenu.Small" />
     <style name="TextAppearance.DeviceDefault.Widget.ActionBar.Title" parent="@style/TextAppearance.Holo.Widget.ActionBar.Title">
         <item name="textSize">@dimen/tw_action_bar_title_text_size</item>
         <item name="textColor">#ffebebeb</item>
@@ -2844,27 +2851,22 @@
     <style name="TextAppearance.DeviceDefault.Widget.ActionBar.Subtitle" parent="@style/TextAppearance.Holo.Widget.ActionBar.Subtitle">
         <item name="textColor">#ffebebeb</item>
     </style>
-    <style name="TextAppearance.DeviceDefault.Widget.ActionMode.Title" parent="@style/TextAppearance.Holo.Widget.ActionMode.Title"/>
-    <style
-        name="TextAppearance.DeviceDefault.Widget.ActionMode.Subtitle" parent="@style/TextAppearance.Holo.Widget.ActionMode.Subtitle"/>
-    <style
-        name="TextAppearance.DeviceDefault.Widget.ActionBar.Title.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse"/>
-    <style
-        name="TextAppearance.DeviceDefault.Widget.ActionBar.Subtitle.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionBar.Subtitle.Inverse"/>
-    <style
-        name="TextAppearance.DeviceDefault.Widget.ActionMode.Title.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionMode.Title.Inverse"/>
-    <style
-        name="TextAppearance.DeviceDefault.Widget.ActionMode.Subtitle.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionMode.Subtitle.Inverse"/>
+    <style name="TextAppearance.DeviceDefault.Widget.ActionMode.Title" parent="@style/TextAppearance.Holo.Widget.ActionMode.Title" />
+    <style name="TextAppearance.DeviceDefault.Widget.ActionMode.Subtitle" parent="@style/TextAppearance.Holo.Widget.ActionMode.Subtitle" />
+    <style name="TextAppearance.DeviceDefault.Widget.ActionBar.Title.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Widget.ActionBar.Subtitle.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionBar.Subtitle.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Widget.ActionMode.Title.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionMode.Title.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Widget.ActionMode.Subtitle.Inverse" parent="@style/TextAppearance.Holo.Widget.ActionMode.Subtitle.Inverse" />
     <style name="TextAppearance.DeviceDefault.Widget.ActionBar.Menu" parent="@style/TextAppearance.Holo.Widget.ActionBar.Menu">
         <item name="textSize">17.0dip</item>
         <item name="textAllCaps">false</item>
     </style>
-    <style name="DeviceDefault.ButtonBar" parent="@style/Holo.ButtonBar"/>
-    <style name="DeviceDefault.ButtonBar.AlertDialog" parent="@style/Holo.ButtonBar.AlertDialog"/>
-    <style name="DeviceDefault.SegmentedButton" parent="@style/Holo.SegmentedButton"/>
-    <style name="DeviceDefault.Light.ButtonBar" parent="@style/Holo.Light.ButtonBar"/>
-    <style name="DeviceDefault.Light.ButtonBar.AlertDialog" parent="@style/Holo.Light.ButtonBar.AlertDialog"/>
-    <style name="DeviceDefault.Light.SegmentedButton" parent="@style/Holo.Light.SegmentedButton"/>
+    <style name="DeviceDefault.ButtonBar" parent="@style/Holo.ButtonBar" />
+    <style name="DeviceDefault.ButtonBar.AlertDialog" parent="@style/Holo.ButtonBar.AlertDialog" />
+    <style name="DeviceDefault.SegmentedButton" parent="@style/Holo.SegmentedButton" />
+    <style name="DeviceDefault.Light.ButtonBar" parent="@style/Holo.Light.ButtonBar" />
+    <style name="DeviceDefault.Light.ButtonBar.AlertDialog" parent="@style/Holo.Light.ButtonBar.AlertDialog" />
+    <style name="DeviceDefault.Light.SegmentedButton" parent="@style/Holo.Light.SegmentedButton" />
     <style name="WindowTitleBackground">
         <item name="background">@drawable/title_bar</item>
     </style>
@@ -2947,7 +2949,7 @@
         <item name="windowEnterAnimation">@anim/fade_in</item>
         <item name="windowExitAnimation">@anim/fade_out</item>
     </style>
-    <style name="Animation.PopupWindow" parent="@style/Animation"/>
+    <style name="Animation.PopupWindow" parent="@style/Animation" />
     <style name="Animation.PopupWindow.ActionMode" parent="@style/Animation.PopupWindow">
         <item name="windowEnterAnimation">@anim/fade_in</item>
         <item name="windowExitAnimation">@anim/fade_out</item>
@@ -2957,16 +2959,14 @@
         <item name="windowExitAnimation">@anim/fade_out</item>
     </style>
     <style name="TextAppearance.StatusBar" parent="@style/TextAppearance">
-        <item name="textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="textAppearance">?textAppearanceSmall</item>
     </style>
-    <style name="TextAppearance.StatusBar.Ticker" parent="@style/TextAppearance.StatusBar"/>
+    <style name="TextAppearance.StatusBar.Ticker" parent="@style/TextAppearance.StatusBar" />
     <style name="TextAppearance.StatusBar.EventContent.Line2" parent="@style/TextAppearance.StatusBar.EventContent">
         <item name="textSize">13.0sp</item>
     </style>
-    <style name="TextAppearance.StatusBar.EventContent.Info" parent="@style/TextAppearance.StatusBar.EventContent">
-        <item name="textSize">13sp</item>
-    </style>
-    <style name="TextAppearance.StatusBar.EventContent.Time" parent="@style/TextAppearance.StatusBar.EventContent"/>
+    <style name="TextAppearance.StatusBar.EventContent.Info" parent="@style/TextAppearance.StatusBar.EventContent" />
+    <style name="TextAppearance.StatusBar.EventContent.Time" parent="@style/TextAppearance.StatusBar.EventContent" />
     <style name="TextAppearance.Small.CalendarViewWeekDayView" parent="@style/TextAppearance.Small">
         <item name="textStyle">bold</item>
     </style>
@@ -3172,7 +3172,7 @@
         <item name="switchTextOn">@string/capital_on</item>
         <item name="switchTextOff">@string/capital_off</item>
     </style>
-    <style name="Preference.PreferenceScreen" parent="@style/Preference"/>
+    <style name="Preference.PreferenceScreen" parent="@style/Preference" />
     <style name="Preference.DialogPreference" parent="@style/Preference">
         <item name="positiveButtonText">@string/ok</item>
         <item name="negativeButtonText">@string/cancel</item>
@@ -3214,7 +3214,7 @@
         <item name="switchTextOn">@string/capital_on</item>
         <item name="switchTextOff">@string/capital_off</item>
     </style>
-    <style name="Preference.Holo.PreferenceScreen" parent="@style/Preference.Holo"/>
+    <style name="Preference.Holo.PreferenceScreen" parent="@style/Preference.Holo" />
     <style name="Preference.Holo.DialogPreference" parent="@style/Preference.Holo">
         <item name="positiveButtonText">@string/ok</item>
         <item name="negativeButtonText">@string/cancel</item>
@@ -3231,7 +3231,7 @@
         <item name="showDefault">true</item>
         <item name="showSilent">true</item>
     </style>
-    <style name="PreferencePanel"/>
+    <style name="PreferencePanel" />
     <style name="PreferencePanel.Dialog" parent="@style/PreferencePanel">
         <item name="background">@null</item>
         <item name="layout_marginLeft">0.0dip</item>
@@ -3268,9 +3268,9 @@
         <item name="subtitleTextStyle">@style/TextAppearance.Widget.ActionMode.Subtitle</item>
         <item name="backgroundSplit">?actionModeSplitBackground</item>
     </style>
-    <style name="TextAppearance.Widget.ActionBar.Title" parent="@style/TextAppearance.Medium"/>
-    <style name="TextAppearance.Widget.ActionBar.Subtitle" parent="@style/TextAppearance.Small"/>
-    <style name="TextAppearance.Widget.ActionMode.Title" parent="@style/TextAppearance.Medium"/>
+    <style name="TextAppearance.Widget.ActionBar.Title" parent="@style/TextAppearance.Medium" />
+    <style name="TextAppearance.Widget.ActionBar.Subtitle" parent="@style/TextAppearance.Small" />
+    <style name="TextAppearance.Widget.ActionMode.Title" parent="@style/TextAppearance.Medium" />
     <style name="TextAppearance.Widget.ActionMode.Subtitle" parent="@style/TextAppearance.Small">
         <item name="textColor">?textColorSecondary</item>
     </style>
@@ -3285,21 +3285,21 @@
         <item name="textColor">?textColorPrimary</item>
         <item name="textColorHint">?textColorHint</item>
     </style>
-    <style name="TextAppearance.Holo.Widget.ActionMode" parent="@style/TextAppearance.Holo.Widget"/>
-    <style name="TextAppearance.Holo.Widget.Switch" parent="@style/TextAppearance.Holo.Small"/>
+    <style name="TextAppearance.Holo.Widget.ActionMode" parent="@style/TextAppearance.Holo.Widget" />
+    <style name="TextAppearance.Holo.Widget.Switch" parent="@style/TextAppearance.Holo.Small" />
     <style name="TextAppearance.Holo.CalendarViewWeekDayView" parent="@style/TextAppearance.Small.CalendarViewWeekDayView">
         <item name="textColor">#ff505050</item>
     </style>
-    <style name="TextAppearance.Holo.Light" parent="@style/TextAppearance.Holo"/>
+    <style name="TextAppearance.Holo.Light" parent="@style/TextAppearance.Holo" />
     <style name="TextAppearance.Holo.Light.Inverse" parent="@style/TextAppearance.Holo.Light">
         <item name="textColor">?textColorPrimaryInverse</item>
         <item name="textColorHighlight">?textColorHighlightInverse</item>
         <item name="textColorHint">?textColorHintInverse</item>
         <item name="textColorLink">?textColorLinkInverse</item>
     </style>
-    <style name="TextAppearance.Holo.Light.Large" parent="@style/TextAppearance.Holo.Large"/>
-    <style name="TextAppearance.Holo.Light.Medium" parent="@style/TextAppearance.Holo.Medium"/>
-    <style name="TextAppearance.Holo.Light.Small" parent="@style/TextAppearance.Holo.Small"/>
+    <style name="TextAppearance.Holo.Light.Large" parent="@style/TextAppearance.Holo.Large" />
+    <style name="TextAppearance.Holo.Light.Medium" parent="@style/TextAppearance.Holo.Medium" />
+    <style name="TextAppearance.Holo.Light.Small" parent="@style/TextAppearance.Holo.Small" />
     <style name="TextAppearance.Holo.Light.Large.Inverse" parent="@style/TextAppearance.Holo.Light.Large">
         <item name="textColor">?textColorPrimaryInverse</item>
         <item name="textColorHighlight">?textColorHighlightInverse</item>
@@ -3329,45 +3329,45 @@
         <item name="textSize">14.0sp</item>
         <item name="textColor">?textColorSecondary</item>
     </style>
-    <style name="TextAppearance.Holo.Light.Widget" parent="@style/TextAppearance.Widget"/>
-    <style name="TextAppearance.Holo.Light.Widget.Button" parent="@style/TextAppearance.Holo.Light.Widget"/>
+    <style name="TextAppearance.Holo.Light.Widget" parent="@style/TextAppearance.Widget" />
+    <style name="TextAppearance.Holo.Light.Widget.Button" parent="@style/TextAppearance.Holo.Light.Widget" />
     <style name="TextAppearance.Holo.Light.Widget.EditText" parent="@style/TextAppearance.Holo.Light.Widget">
         <item name="textColor">@color/bright_foreground_dark</item>
         <item name="textColorHint">@color/hint_foreground_holo_dark</item>
     </style>
-    <style name="TextAppearance.Holo.Light.Widget.PopupMenu" parent="@style/TextAppearance.Holo.Widget.PopupMenu"/>
-    <style name="TextAppearance.Holo.Light.Widget.PopupMenu.Large" parent="@style/TextAppearance.Holo.Widget.PopupMenu.Large"/>
-    <style name="TextAppearance.Holo.Light.Widget.PopupMenu.Small" parent="@style/TextAppearance.Holo.Widget.PopupMenu.Small"/>
-    <style name="TextAppearance.Holo.Light.Widget.DropDownHint" parent="@style/TextAppearance.Holo.Widget.DropDownHint"/>
-    <style name="TextAppearance.Holo.Light.Widget.ActionMode.Title" parent="@style/TextAppearance.Widget.ActionMode.Title"/>
-    <style name="TextAppearance.Holo.Light.Widget.ActionMode.Subtitle" parent="@style/TextAppearance.Widget.ActionMode.Subtitle"/>
+    <style name="TextAppearance.Holo.Light.Widget.PopupMenu" parent="@style/TextAppearance.Holo.Widget.PopupMenu" />
+    <style name="TextAppearance.Holo.Light.Widget.PopupMenu.Large" parent="@style/TextAppearance.Holo.Widget.PopupMenu.Large" />
+    <style name="TextAppearance.Holo.Light.Widget.PopupMenu.Small" parent="@style/TextAppearance.Holo.Widget.PopupMenu.Small" />
+    <style name="TextAppearance.Holo.Light.Widget.DropDownHint" parent="@style/TextAppearance.Holo.Widget.DropDownHint" />
+    <style name="TextAppearance.Holo.Light.Widget.ActionMode.Title" parent="@style/TextAppearance.Widget.ActionMode.Title" />
+    <style name="TextAppearance.Holo.Light.Widget.ActionMode.Subtitle" parent="@style/TextAppearance.Widget.ActionMode.Subtitle" />
     <style name="TextAppearance.Holo.Light.WindowTitle" parent="@style/TextAppearance.Holo.Light">
         <item name="textSize">14.0sp</item>
         <item name="textStyle">bold</item>
         <item name="textColor">#ffffffff</item>
     </style>
     <style name="TextAppearance.Holo.Light.DialogWindowTitle" parent="@style/TextAppearance.Holo.Light">
-        <item name="textSize">22sp</item>
-        <item name="textColor">@android:color/holo_orange_light</item>
+        <item name="textSize">22.0sp</item>
+        <item name="textColor">@color/holo_blue_light</item>
     </style>
-    <style name="TextAppearance.Holo.Light.CalendarViewWeekDayView" parent="@style/TextAppearance.Small.CalendarViewWeekDayView"/>
-    <style name="Holo"/>
-    <style name="Holo.Light" parent="@style/Holo"/>
+    <style name="TextAppearance.Holo.Light.CalendarViewWeekDayView" parent="@style/TextAppearance.Small.CalendarViewWeekDayView" />
+    <style name="Holo" />
+    <style name="Holo.Light" parent="@style/Holo" />
     <style name="Widget.Holo.StackView" parent="@style/Widget.Holo">
-        <item name="resOutColor">@android:color/holo_orange_light</item>
-        <item name="clickColor">@android:color/holo_orange_light</item>
+        <item name="resOutColor">@color/holo_blue_light</item>
+        <item name="clickColor">@color/holo_blue_light</item>
     </style>
     <style name="Widget.Holo.TextView.ListSeparator" parent="@style/Widget.TextView.ListSeparator">
         <item name="background">@drawable/list_section_divider_holo_dark</item>
         <item name="textAllCaps">true</item>
     </style>
-    <style name="Widget.Holo.TextSelectHandle" parent="@style/Widget.TextSelectHandle"/>
-    <style name="Widget.Holo.TextSuggestionsPopupWindow" parent="@style/Widget.TextSuggestionsPopupWindow"/>
-    <style name="Widget.Holo.AbsListView" parent="@style/Widget.AbsListView"/>
-    <style name="Widget.Holo.CompoundButton" parent="@style/Widget.CompoundButton"/>
-    <style name="Widget.Holo.ExpandableListView.White" parent="@style/Widget.Holo.ExpandableListView"/>
-    <style name="Widget.Holo.Gallery" parent="@style/Widget.Gallery"/>
-    <style name="Widget.Holo.GestureOverlayView" parent="@style/Widget.GestureOverlayView"/>
+    <style name="Widget.Holo.TextSelectHandle" parent="@style/Widget.TextSelectHandle" />
+    <style name="Widget.Holo.TextSuggestionsPopupWindow" parent="@style/Widget.TextSuggestionsPopupWindow" />
+    <style name="Widget.Holo.AbsListView" parent="@style/Widget.AbsListView" />
+    <style name="Widget.Holo.CompoundButton" parent="@style/Widget.CompoundButton" />
+    <style name="Widget.Holo.ExpandableListView.White" parent="@style/Widget.Holo.ExpandableListView" />
+    <style name="Widget.Holo.Gallery" parent="@style/Widget.Gallery" />
+    <style name="Widget.Holo.GestureOverlayView" parent="@style/Widget.GestureOverlayView" />
     <style name="Widget.Holo.NumberPicker" parent="@style/Widget.NumberPicker">
         <item name="maxHeight">200.0dip</item>
         <item name="minWidth">48.0dip</item>
@@ -3401,34 +3401,34 @@
         <item name="paddingBottom">13.0sp</item>
         <item name="singleLine">true</item>
     </style>
-    <style name="Widget.Holo.ActivityChooserView" parent="@style/Widget.ActivityChooserView"/>
-    <style name="Widget.Holo.ImageWell" parent="@style/Widget.ImageWell"/>
-    <style name="Widget.Holo.ListView.White" parent="@style/Widget.Holo.ListView"/>
+    <style name="Widget.Holo.ActivityChooserView" parent="@style/Widget.ActivityChooserView" />
+    <style name="Widget.Holo.ImageWell" parent="@style/Widget.ImageWell" />
+    <style name="Widget.Holo.ListView.White" parent="@style/Widget.Holo.ListView" />
     <style name="Widget.Holo.PopupWindow.ActionMode" parent="@style/Widget.Holo.PopupWindow">
         <item name="popupBackground">@color/black</item>
         <item name="popupAnimationStyle">@style/Animation.PopupWindow.ActionMode</item>
     </style>
-    <style name="Widget.Holo.ProgressBar.Inverse" parent="@style/Widget.Holo.ProgressBar"/>
-    <style name="Widget.Holo.ProgressBar.Small.Inverse" parent="@style/Widget.Holo.ProgressBar.Small"/>
-    <style name="Widget.Holo.ProgressBar.Large.Inverse" parent="@style/Widget.Holo.ProgressBar.Large"/>
-    <style name="Widget.Holo.Spinner.DropDown" parent="@style/Widget.Holo.Spinner"/>
+    <style name="Widget.Holo.ProgressBar.Inverse" parent="@style/Widget.Holo.ProgressBar" />
+    <style name="Widget.Holo.ProgressBar.Small.Inverse" parent="@style/Widget.Holo.ProgressBar.Small" />
+    <style name="Widget.Holo.ProgressBar.Large.Inverse" parent="@style/Widget.Holo.ProgressBar.Large" />
+    <style name="Widget.Holo.Spinner.DropDown" parent="@style/Widget.Holo.Spinner" />
     <style name="Widget.Holo.Spinner.DropDown.ActionBar" parent="@style/Widget.Holo.Spinner.DropDown">
         <item name="background">@drawable/spinner_ab_holo_dark</item>
     </style>
     <style name="Widget.Holo.TabText" parent="@style/Widget.Holo.ActionBar.TabText">
         <item name="maxWidth">180.0dip</item>
     </style>
-    <style name="Widget.Holo.KeyboardView" parent="@style/Widget.KeyboardView"/>
-    <style name="Widget.Holo.QuickContactBadge.WindowSmall" parent="@style/Widget.QuickContactBadge.WindowSmall"/>
-    <style name="Widget.Holo.QuickContactBadge.WindowMedium" parent="@style/Widget.QuickContactBadge.WindowMedium"/>
-    <style name="Widget.Holo.QuickContactBadge.WindowLarge" parent="@style/Widget.QuickContactBadge.WindowLarge"/>
-    <style name="Widget.Holo.QuickContactBadgeSmall.WindowSmall" parent="@style/Widget.QuickContactBadgeSmall.WindowSmall"/>
-    <style name="Widget.Holo.QuickContactBadgeSmall.WindowMedium" parent="@style/Widget.QuickContactBadgeSmall.WindowMedium"/>
-    <style name="Widget.Holo.QuickContactBadgeSmall.WindowLarge" parent="@style/Widget.QuickContactBadgeSmall.WindowLarge"/>
+    <style name="Widget.Holo.KeyboardView" parent="@style/Widget.KeyboardView" />
+    <style name="Widget.Holo.QuickContactBadge.WindowSmall" parent="@style/Widget.QuickContactBadge.WindowSmall" />
+    <style name="Widget.Holo.QuickContactBadge.WindowMedium" parent="@style/Widget.QuickContactBadge.WindowMedium" />
+    <style name="Widget.Holo.QuickContactBadge.WindowLarge" parent="@style/Widget.QuickContactBadge.WindowLarge" />
+    <style name="Widget.Holo.QuickContactBadgeSmall.WindowSmall" parent="@style/Widget.QuickContactBadgeSmall.WindowSmall" />
+    <style name="Widget.Holo.QuickContactBadgeSmall.WindowMedium" parent="@style/Widget.QuickContactBadgeSmall.WindowMedium" />
+    <style name="Widget.Holo.QuickContactBadgeSmall.WindowLarge" parent="@style/Widget.QuickContactBadgeSmall.WindowLarge" />
     <style name="Widget.Holo.ButtonBar" parent="@style/Widget.Holo">
         <item name="divider">?dividerVertical</item>
     </style>
-    <style name="Widget.Holo.ButtonBar.Button" parent="@style/Widget.Holo.ButtonBar"/>
+    <style name="Widget.Holo.ButtonBar.Button" parent="@style/Widget.Holo.ButtonBar" />
     <style name="Widget.Holo.CompoundButton.Switch" parent="@style/Widget.Holo.CompoundButton">
         <item name="textOn">@string/capital_on</item>
         <item name="textOff">@string/capital_off</item>
@@ -3445,46 +3445,45 @@
         <item name="paddingRight">4.0dip</item>
     </style>
     <style name="Widget.Holo.Light.TextView.ListSeparator" parent="@style/Widget.TextView.ListSeparator">
-        <item name="background">@android:drawable/list_section_divider_holo_light</item>
+        <item name="background">@drawable/list_section_divider_holo_light</item>
         <item name="textAllCaps">true</item>
-        <item name="textColor">@android:color/listseparator_text_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.TextSelectHandle" parent="@style/Widget.TextSelectHandle"/>
-    <style name="Widget.Holo.Light.TextSuggestionsPopupWindow" parent="@style/Widget.TextSuggestionsPopupWindow"/>
-    <style name="Widget.Holo.Light.AbsListView" parent="@style/Widget.AbsListView"/>
-    <style name="Widget.Holo.Light.ExpandableListView.White" parent="@style/Widget.Holo.Light.ExpandableListView"/>
-    <style name="Widget.Holo.Light.Gallery" parent="@style/Widget.Gallery"/>
-    <style name="Widget.Holo.Light.GestureOverlayView" parent="@style/Widget.GestureOverlayView"/>
-    <style name="Widget.Holo.Light.NumberPicker" parent="@style/Widget.Holo.NumberPicker"/>
-    <style name="Widget.Holo.Light.TimePicker" parent="@style/Widget.Holo.TimePicker"/>
-    <style name="Widget.Holo.Light.DatePicker" parent="@style/Widget.Holo.DatePicker"/>
+    <style name="Widget.Holo.Light.TextSelectHandle" parent="@style/Widget.TextSelectHandle" />
+    <style name="Widget.Holo.Light.TextSuggestionsPopupWindow" parent="@style/Widget.TextSuggestionsPopupWindow" />
+    <style name="Widget.Holo.Light.AbsListView" parent="@style/Widget.AbsListView" />
+    <style name="Widget.Holo.Light.ExpandableListView.White" parent="@style/Widget.Holo.Light.ExpandableListView" />
+    <style name="Widget.Holo.Light.Gallery" parent="@style/Widget.Gallery" />
+    <style name="Widget.Holo.Light.GestureOverlayView" parent="@style/Widget.GestureOverlayView" />
+    <style name="Widget.Holo.Light.NumberPicker" parent="@style/Widget.Holo.NumberPicker" />
+    <style name="Widget.Holo.Light.TimePicker" parent="@style/Widget.Holo.TimePicker" />
+    <style name="Widget.Holo.Light.DatePicker" parent="@style/Widget.Holo.DatePicker" />
     <style name="Widget.Holo.Light.ImageButton.NumberPickerUpButton" parent="@style/Widget.Holo.ImageButton.NumberPickerUpButton">
         <item name="src">@drawable/numberpicker_up_btn_holo_light</item>
     </style>
     <style name="Widget.Holo.Light.ImageButton.NumberPickerDownButton" parent="@style/Widget.Holo.ImageButton.NumberPickerDownButton">
         <item name="src">@drawable/numberpicker_down_btn_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.EditText.NumberPickerInputText" parent="@style/Widget.Holo.EditText.NumberPickerInputText"/>
+    <style name="Widget.Holo.Light.EditText.NumberPickerInputText" parent="@style/Widget.Holo.EditText.NumberPickerInputText" />
     <style name="Widget.Holo.Light.ActivityChooserView" parent="@style/Widget.Holo.ActivityChooserView">
         <item name="background">@drawable/ab_share_pack_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.ImageWell" parent="@style/Widget.ImageWell"/>
-    <style name="Widget.Holo.Light.ListView.White" parent="@style/Widget.Holo.Light.ListView"/>
+    <style name="Widget.Holo.Light.ImageWell" parent="@style/Widget.ImageWell" />
+    <style name="Widget.Holo.Light.ListView.White" parent="@style/Widget.Holo.Light.ListView" />
     <style name="Widget.Holo.Light.PopupWindow.ActionMode" parent="@style/Widget.Holo.Light.PopupWindow">
         <item name="popupBackground">@color/white</item>
         <item name="popupAnimationStyle">@style/Animation.PopupWindow.ActionMode</item>
     </style>
-    <style name="Widget.Holo.Light.Spinner.DropDown" parent="@style/Widget.Holo.Light.Spinner"/>
+    <style name="Widget.Holo.Light.Spinner.DropDown" parent="@style/Widget.Holo.Light.Spinner" />
     <style name="Widget.Holo.Light.Spinner.DropDown.ActionBar" parent="@style/Widget.Holo.Light.Spinner.DropDown">
         <item name="background">@drawable/spinner_ab_holo_light</item>
     </style>
-    <style name="Widget.Holo.Light.KeyboardView" parent="@style/Widget.KeyboardView"/>
-    <style name="Widget.Holo.Light.QuickContactBadge.WindowSmall" parent="@style/Widget.QuickContactBadge.WindowSmall"/>
-    <style name="Widget.Holo.Light.QuickContactBadge.WindowMedium" parent="@style/Widget.QuickContactBadge.WindowMedium"/>
-    <style name="Widget.Holo.Light.QuickContactBadge.WindowLarge" parent="@style/Widget.QuickContactBadge.WindowLarge"/>
-    <style name="Widget.Holo.Light.QuickContactBadgeSmall.WindowSmall" parent="@style/Widget.QuickContactBadgeSmall.WindowSmall"/>
-    <style name="Widget.Holo.Light.QuickContactBadgeSmall.WindowMedium" parent="@style/Widget.QuickContactBadgeSmall.WindowMedium"/>
-    <style name="Widget.Holo.Light.QuickContactBadgeSmall.WindowLarge" parent="@style/Widget.QuickContactBadgeSmall.WindowLarge"/>
+    <style name="Widget.Holo.Light.KeyboardView" parent="@style/Widget.KeyboardView" />
+    <style name="Widget.Holo.Light.QuickContactBadge.WindowSmall" parent="@style/Widget.QuickContactBadge.WindowSmall" />
+    <style name="Widget.Holo.Light.QuickContactBadge.WindowMedium" parent="@style/Widget.QuickContactBadge.WindowMedium" />
+    <style name="Widget.Holo.Light.QuickContactBadge.WindowLarge" parent="@style/Widget.QuickContactBadge.WindowLarge" />
+    <style name="Widget.Holo.Light.QuickContactBadgeSmall.WindowSmall" parent="@style/Widget.QuickContactBadgeSmall.WindowSmall" />
+    <style name="Widget.Holo.Light.QuickContactBadgeSmall.WindowMedium" parent="@style/Widget.QuickContactBadgeSmall.WindowMedium" />
+    <style name="Widget.Holo.Light.QuickContactBadgeSmall.WindowLarge" parent="@style/Widget.QuickContactBadgeSmall.WindowLarge" />
     <style name="Widget.Holo.Light.CompoundButton.Switch" parent="@style/Widget.CompoundButton.Switch">
         <item name="textOn">@string/capital_on</item>
         <item name="textOff">@string/capital_off</item>
@@ -3495,9 +3494,9 @@
         <item name="switchPadding">16.0dip</item>
         <item name="thumbTextPadding">12.0dip</item>
     </style>
-    <style name="Animation.Holo" parent="@style/Animation"/>
-    <style name="Animation.Holo.Activity" parent="@style/Animation.Activity"/>
-    <style name="Animation.Holo.Dialog" parent="@style/Animation.Dialog"/>
+    <style name="Animation.Holo" parent="@style/Animation" />
+    <style name="Animation.Holo.Activity" parent="@style/Animation.Activity" />
+    <style name="Animation.Holo.Dialog" parent="@style/Animation.Dialog" />
     <style name="AlertDialog.Holo" parent="@style/AlertDialog">
         <item name="fullDark">@drawable/dialog_full_holo_dark</item>
         <item name="topDark">@drawable/dialog_top_holo_dark</item>
@@ -3601,7 +3600,7 @@
     <style name="Widget.DeviceDefault.Spinner.DropDown.ActionBar" parent="@style/Widget.Holo.Spinner.DropDown.ActionBar">
         <item name="background">@drawable/tw_spinner_ab_holo_dark</item>
     </style>
-    <style name="Widget.DeviceDefault.PopupWindow.ActionMode" parent="@style/Widget.Holo.PopupWindow.ActionMode"/>
+    <style name="Widget.DeviceDefault.PopupWindow.ActionMode" parent="@style/Widget.Holo.PopupWindow.ActionMode" />
     <style name="Widget.DeviceDefault.CompoundButton.Switch" parent="@style/Widget.Holo.CompoundButton.Switch">
         <item name="thumb">@drawable/tw_switch_inner_holo_dark</item>
         <item name="track">@drawable/tw_switch_track_holo_dark</item>
@@ -3614,37 +3613,33 @@
         <item name="listSelector">@drawable/tw_list_selector_background</item>
         <item name="groupIndicator">@drawable/tw_expander_group_holo_dark</item>
     </style>
-    <style name="Widget.DeviceDefault.Gallery" parent="@style/Widget.Gallery"/>
-    <style name="Widget.DeviceDefault.GestureOverlayView" parent="@style/Widget.GestureOverlayView"/>
-    <style
-        name="Widget.DeviceDefault.ImageButton.NumberPickerDownButton" parent="@style/Widget.ImageButton.NumberPickerDownButton">
+    <style name="Widget.DeviceDefault.Gallery" parent="@style/Widget.Gallery" />
+    <style name="Widget.DeviceDefault.GestureOverlayView" parent="@style/Widget.GestureOverlayView" />
+    <style name="Widget.DeviceDefault.ImageButton.NumberPickerDownButton" parent="@style/Widget.ImageButton.NumberPickerDownButton">
         <item name="background">@drawable/tw_numberpicker_down_btn</item>
     </style>
     <style name="Widget.DeviceDefault.ImageButton.NumberPickerUpButton" parent="@style/Widget.ImageButton.NumberPickerUpButton">
         <item name="background">@drawable/tw_numberpicker_up_btn</item>
     </style>
-    <style name="Widget.DeviceDefault.ImageWell" parent="@style/Widget.ImageWell"/>
-    <style name="Widget.DeviceDefault.KeyboardView" parent="@style/Widget.KeyboardView"/>
+    <style name="Widget.DeviceDefault.ImageWell" parent="@style/Widget.ImageWell" />
+    <style name="Widget.DeviceDefault.KeyboardView" parent="@style/Widget.KeyboardView" />
     <style name="Widget.DeviceDefault.ListView.White" parent="@style/Widget.ListView.White">
         <item name="listSelector">@drawable/tw_list_selector_background</item>
     </style>
-    <style name="Widget.DeviceDefault.NumberPicker" parent="@style/Widget.NumberPicker"/>
-    <style name="Widget.DeviceDefault.PreferenceFrameLayout" parent="@style/Widget.PreferenceFrameLayout"/>
-    <style name="Widget.DeviceDefault.ProgressBar.Inverse" parent="@style/Widget.DeviceDefault.ProgressBar"/>
-    <style name="Widget.DeviceDefault.ProgressBar.Large.Inverse" parent="@style/Widget.DeviceDefault.ProgressBar.Large"/>
-    <style name="Widget.DeviceDefault.ProgressBar.Small.Inverse" parent="@style/Widget.DeviceDefault.ProgressBar.Small"/>
-    <style name="Widget.DeviceDefault.QuickContactBadge.WindowLarge" parent="@style/Widget.QuickContactBadge.WindowLarge"/>
-    <style name="Widget.DeviceDefault.QuickContactBadge.WindowMedium" parent="@style/Widget.QuickContactBadge.WindowMedium"/>
-    <style name="Widget.DeviceDefault.QuickContactBadge.WindowSmall" parent="@style/Widget.QuickContactBadge.WindowSmall"/>
-    <style
-        name="Widget.DeviceDefault.QuickContactBadgeSmall.WindowLarge" parent="@style/Widget.QuickContactBadgeSmall.WindowLarge"/>
-    <style
-        name="Widget.DeviceDefault.QuickContactBadgeSmall.WindowMedium" parent="@style/Widget.QuickContactBadgeSmall.WindowMedium"/>
-    <style
-        name="Widget.DeviceDefault.QuickContactBadgeSmall.WindowSmall" parent="@style/Widget.QuickContactBadgeSmall.WindowSmall"/>
-    <style name="Widget.DeviceDefault.Spinner.DropDown" parent="@style/Widget.Spinner.DropDown"/>
-    <style name="Widget.DeviceDefault.StackView" parent="@style/Widget.Holo.StackView"/>
-    <style name="Widget.DeviceDefault.TextSelectHandle" parent="@style/Widget.TextSelectHandle"/>
+    <style name="Widget.DeviceDefault.NumberPicker" parent="@style/Widget.NumberPicker" />
+    <style name="Widget.DeviceDefault.PreferenceFrameLayout" parent="@style/Widget.PreferenceFrameLayout" />
+    <style name="Widget.DeviceDefault.ProgressBar.Inverse" parent="@style/Widget.DeviceDefault.ProgressBar" />
+    <style name="Widget.DeviceDefault.ProgressBar.Large.Inverse" parent="@style/Widget.DeviceDefault.ProgressBar.Large" />
+    <style name="Widget.DeviceDefault.ProgressBar.Small.Inverse" parent="@style/Widget.DeviceDefault.ProgressBar.Small" />
+    <style name="Widget.DeviceDefault.QuickContactBadge.WindowLarge" parent="@style/Widget.QuickContactBadge.WindowLarge" />
+    <style name="Widget.DeviceDefault.QuickContactBadge.WindowMedium" parent="@style/Widget.QuickContactBadge.WindowMedium" />
+    <style name="Widget.DeviceDefault.QuickContactBadge.WindowSmall" parent="@style/Widget.QuickContactBadge.WindowSmall" />
+    <style name="Widget.DeviceDefault.QuickContactBadgeSmall.WindowLarge" parent="@style/Widget.QuickContactBadgeSmall.WindowLarge" />
+    <style name="Widget.DeviceDefault.QuickContactBadgeSmall.WindowMedium" parent="@style/Widget.QuickContactBadgeSmall.WindowMedium" />
+    <style name="Widget.DeviceDefault.QuickContactBadgeSmall.WindowSmall" parent="@style/Widget.QuickContactBadgeSmall.WindowSmall" />
+    <style name="Widget.DeviceDefault.Spinner.DropDown" parent="@style/Widget.Spinner.DropDown" />
+    <style name="Widget.DeviceDefault.StackView" parent="@style/Widget.Holo.StackView" />
+    <style name="Widget.DeviceDefault.TextSelectHandle" parent="@style/Widget.TextSelectHandle" />
     <style name="Widget.DeviceDefault.TextSuggestionsPopupWindow" parent="@style/Widget.TextSuggestionsPopupWindow">
         <item name="dropDownSelector">@drawable/tw_list_selector_background</item>
     </style>
@@ -3662,61 +3657,54 @@
         <item name="maxLines">1</item>
         <item name="textAllCaps">false</item>
     </style>
-    <style name="Widget.DeviceDefault.TimePicker" parent="@style/Widget.TimePicker"/>
+    <style name="Widget.DeviceDefault.TimePicker" parent="@style/Widget.TimePicker" />
     <style name="Widget.DeviceDefault.Light.AbsListView" parent="@style/Widget.Holo.Light.AbsListView">
         <item name="listSelector">@drawable/tw_list_selector_background</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.Spinner.DropDown.ActionBar" parent="@style/Widget.Holo.Light.Spinner.DropDown.ActionBar"/>
-    <style name="Widget.DeviceDefault.Light.PopupWindow.ActionMode" parent="@style/Widget.Holo.Light.PopupWindow.ActionMode"/>
-    <style name="Widget.DeviceDefault.Light.Button.Borderless" parent="@style/Widget.Holo.Light.Button.Borderless"/>
-    <style name="Widget.DeviceDefault.Light.DatePicker" parent="@style/Widget.Holo.Light.DatePicker"/>
-    <style
-        name="Widget.DeviceDefault.Light.EditText.NumberPickerInputText" parent="@style/Widget.Holo.Light.EditText.NumberPickerInputText"/>
+    <style name="Widget.DeviceDefault.Light.Spinner.DropDown.ActionBar" parent="@style/Widget.Holo.Light.Spinner.DropDown.ActionBar" />
+    <style name="Widget.DeviceDefault.Light.PopupWindow.ActionMode" parent="@style/Widget.Holo.Light.PopupWindow.ActionMode" />
+    <style name="Widget.DeviceDefault.Light.Button.Borderless" parent="@style/Widget.Holo.Light.Button.Borderless" />
+    <style name="Widget.DeviceDefault.Light.DatePicker" parent="@style/Widget.Holo.Light.DatePicker" />
+    <style name="Widget.DeviceDefault.Light.EditText.NumberPickerInputText" parent="@style/Widget.Holo.Light.EditText.NumberPickerInputText" />
     <style name="Widget.DeviceDefault.Light.ExpandableListView.White" parent="@style/Widget.Holo.Light.ExpandableListView.White">
         <item name="listSelector">@drawable/tw_list_selector_background</item>
         <item name="groupIndicator">@drawable/tw_expander_group_holo_light</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.Gallery" parent="@style/Widget.Holo.Light.Gallery"/>
-    <style name="Widget.DeviceDefault.Light.GestureOverlayView" parent="@style/Widget.Holo.Light.GestureOverlayView"/>
-    <style
-        name="Widget.DeviceDefault.Light.ImageButton.NumberPickerDownButton" parent="@style/Widget.Holo.Light.ImageButton.NumberPickerDownButton"/>
-    <style
-        name="Widget.DeviceDefault.Light.ImageButton.NumberPickerUpButton" parent="@style/Widget.Holo.Light.ImageButton.NumberPickerUpButton"/>
-    <style name="Widget.DeviceDefault.Light.ImageWell" parent="@style/Widget.Holo.Light.ImageWell"/>
+    <style name="Widget.DeviceDefault.Light.Gallery" parent="@style/Widget.Holo.Light.Gallery" />
+    <style name="Widget.DeviceDefault.Light.GestureOverlayView" parent="@style/Widget.Holo.Light.GestureOverlayView" />
+    <style name="Widget.DeviceDefault.Light.ImageButton.NumberPickerDownButton" parent="@style/Widget.Holo.Light.ImageButton.NumberPickerDownButton" />
+    <style name="Widget.DeviceDefault.Light.ImageButton.NumberPickerUpButton" parent="@style/Widget.Holo.Light.ImageButton.NumberPickerUpButton" />
+    <style name="Widget.DeviceDefault.Light.ImageWell" parent="@style/Widget.Holo.Light.ImageWell" />
     <style name="Widget.DeviceDefault.Light.ListView.White" parent="@style/Widget.Holo.Light.ListView.White">
         <item name="listSelector">@drawable/tw_list_selector_background</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.NumberPicker" parent="@style/Widget.Holo.Light.NumberPicker"/>
-    <style name="Widget.DeviceDefault.Light.Spinner.DropDown" parent="@style/Widget.Holo.Light.Spinner.DropDown"/>
+    <style name="Widget.DeviceDefault.Light.NumberPicker" parent="@style/Widget.Holo.Light.NumberPicker" />
+    <style name="Widget.DeviceDefault.Light.Spinner.DropDown" parent="@style/Widget.Holo.Light.Spinner.DropDown" />
     <style name="Widget.DeviceDefault.Light.TextView.ListSeparator" parent="@style/Widget.DeviceDefault.TextView.ListSeparator">
         <item name="textColor">?textColorPrimaryInverse</item>
         <item name="background">@drawable/tw_light_header_dither</item>
         <item name="textAllCaps">false</item>
     </style>
-    <style name="Widget.DeviceDefault.Light.TimePicker" parent="@style/Widget.Holo.Light.TimePicker"/>
-    <style name="Widget.DeviceDefault.Light.TextSuggestionsPopupWindow" parent="@style/Widget.Holo.Light.TextSuggestionsPopupWindow"/>
-    <style name="TextAppearance.DeviceDefault.Light" parent="@style/TextAppearance.Holo.Light"/>
-    <style name="TextAppearance.DeviceDefault.Light.Inverse" parent="@style/TextAppearance.Holo.Light.Inverse"/>
-    <style name="TextAppearance.DeviceDefault.Light.Large" parent="@style/TextAppearance.Holo.Light.Large"/>
-    <style name="TextAppearance.DeviceDefault.Light.Large.Inverse" parent="@style/TextAppearance.Holo.Light.Large.Inverse"/>
-    <style name="TextAppearance.DeviceDefault.Light.Medium" parent="@style/TextAppearance.Holo.Light.Medium"/>
-    <style name="TextAppearance.DeviceDefault.Light.Medium.Inverse" parent="@style/TextAppearance.Holo.Light.Medium.Inverse"/>
-    <style
-        name="TextAppearance.DeviceDefault.Light.SearchResult.Subtitle" parent="@style/TextAppearance.Holo.Light.SearchResult.Subtitle"/>
-    <style name="TextAppearance.DeviceDefault.Light.SearchResult.Title" parent="@style/TextAppearance.Holo.Light.SearchResult.Title"/>
-    <style name="TextAppearance.DeviceDefault.Light.Small" parent="@style/TextAppearance.Holo.Light.Small"/>
-    <style name="TextAppearance.DeviceDefault.Light.Small.Inverse" parent="@style/TextAppearance.Holo.Light.Small.Inverse"/>
-    <style name="TextAppearance.DeviceDefault.Light.Widget.Button" parent="@style/TextAppearance.Holo.Light.Widget.Button"/>
-    <style
-        name="TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Large" parent="@style/TextAppearance.Holo.Light.Widget.PopupMenu.Large"/>
-    <style
-        name="TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Small" parent="@style/TextAppearance.Holo.Light.Widget.PopupMenu.Small"/>
+    <style name="Widget.DeviceDefault.Light.TimePicker" parent="@style/Widget.Holo.Light.TimePicker" />
+    <style name="Widget.DeviceDefault.Light.TextSuggestionsPopupWindow" parent="@style/Widget.Holo.Light.TextSuggestionsPopupWindow" />
+    <style name="TextAppearance.DeviceDefault.Light" parent="@style/TextAppearance.Holo.Light" />
+    <style name="TextAppearance.DeviceDefault.Light.Inverse" parent="@style/TextAppearance.Holo.Light.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Light.Large" parent="@style/TextAppearance.Holo.Light.Large" />
+    <style name="TextAppearance.DeviceDefault.Light.Large.Inverse" parent="@style/TextAppearance.Holo.Light.Large.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Light.Medium" parent="@style/TextAppearance.Holo.Light.Medium" />
+    <style name="TextAppearance.DeviceDefault.Light.Medium.Inverse" parent="@style/TextAppearance.Holo.Light.Medium.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Light.SearchResult.Subtitle" parent="@style/TextAppearance.Holo.Light.SearchResult.Subtitle" />
+    <style name="TextAppearance.DeviceDefault.Light.SearchResult.Title" parent="@style/TextAppearance.Holo.Light.SearchResult.Title" />
+    <style name="TextAppearance.DeviceDefault.Light.Small" parent="@style/TextAppearance.Holo.Light.Small" />
+    <style name="TextAppearance.DeviceDefault.Light.Small.Inverse" parent="@style/TextAppearance.Holo.Light.Small.Inverse" />
+    <style name="TextAppearance.DeviceDefault.Light.Widget.Button" parent="@style/TextAppearance.Holo.Light.Widget.Button" />
+    <style name="TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Large" parent="@style/TextAppearance.Holo.Light.Widget.PopupMenu.Large" />
+    <style name="TextAppearance.DeviceDefault.Light.Widget.PopupMenu.Small" parent="@style/TextAppearance.Holo.Light.Widget.PopupMenu.Small" />
     <style name="TextAppearance.DeviceDefault.StatusBar.EventContent" parent="@style/TextAppearance.StatusBar.EventContent">
         <item name="textSize">12.0sp</item>
         <item name="textColor">@color/status_bar_event_secondary_text</item>
     </style>
-    <style
-        name="TextAppearance.DeviceDefault.StatusBar.EventContent.Title" parent="@style/TextAppearance.StatusBar.EventContent.Title">
+    <style name="TextAppearance.DeviceDefault.StatusBar.EventContent.Title" parent="@style/TextAppearance.StatusBar.EventContent.Title">
         <item name="textSize">16.0sp</item>
         <item name="textStyle">bold</item>
         <item name="textColor">@color/status_bar_event_primary_text</item>
@@ -3724,19 +3712,17 @@
     <style name="Preference.DeviceDefault" parent="@style/Preference.Holo">
         <item name="layout">@layout/tw_preference</item>
     </style>
-    <style name="Preference.DeviceDefault.Category" parent="@style/Preference.Holo.Category"/>
+    <style name="Preference.DeviceDefault.Category" parent="@style/Preference.Holo.Category" />
     <style name="Preference.DeviceDefault.CheckBoxPreference" parent="@style/Preference.Holo.CheckBoxPreference">
         <item name="layout">@layout/tw_preference</item>
     </style>
     <style name="Preference.DeviceDefault.DialogPreference" parent="@style/Preference.Holo.DialogPreference">
         <item name="layout">@layout/tw_preference</item>
     </style>
-    <style
-        name="Preference.DeviceDefault.DialogPreference.EditTextPreference" parent="@style/Preference.Holo.DialogPreference.EditTextPreference">
+    <style name="Preference.DeviceDefault.DialogPreference.EditTextPreference" parent="@style/Preference.Holo.DialogPreference.EditTextPreference">
         <item name="layout">@layout/tw_preference</item>
     </style>
-    <style
-        name="Preference.DeviceDefault.DialogPreference.YesNoPreference" parent="@style/Preference.Holo.DialogPreference.YesNoPreference">
+    <style name="Preference.DeviceDefault.DialogPreference.YesNoPreference" parent="@style/Preference.Holo.DialogPreference.YesNoPreference">
         <item name="layout">@layout/tw_preference</item>
     </style>
     <style name="Preference.DeviceDefault.Information" parent="@style/Preference.Holo.Information">
@@ -3770,16 +3756,16 @@
         <item name="progressLayout">@layout/tw_progress_dialog_holo</item>
         <item name="horizontalProgressLayout">@layout/tw_alert_dialog_progress_holo</item>
     </style>
-    <style name="AlertDialog.DeviceDefault.Light" parent="@style/AlertDialog.DeviceDefault"/>
+    <style name="AlertDialog.DeviceDefault.Light" parent="@style/AlertDialog.DeviceDefault" />
     <style name="Animation.DeviceDefault.Activity" parent="@style/Animation.Holo.Activity">
         <item name="wallpaperOpenEnterAnimation">@anim/zzz_wallpaper_open_enter</item>
         <item name="wallpaperOpenExitAnimation">@anim/zzz_wallpaper_open_exit</item>
         <item name="wallpaperCloseEnterAnimation">@anim/zzz_wallpaper_close_enter</item>
         <item name="wallpaperCloseExitAnimation">@anim/zzz_wallpaper_close_exit</item>
     </style>
-    <style name="Animation.DeviceDefault.Dialog" parent="@style/Animation.Holo.Dialog"/>
-    <style name="DialogWindowTitle.DeviceDefault" parent="@style/DialogWindowTitle.Holo"/>
-    <style name="DialogWindowTitle.DeviceDefault.Light" parent="@style/DialogWindowTitle.Holo.Light"/>
+    <style name="Animation.DeviceDefault.Dialog" parent="@style/Animation.Holo.Dialog" />
+    <style name="DialogWindowTitle.DeviceDefault" parent="@style/DialogWindowTitle.Holo" />
+    <style name="DialogWindowTitle.DeviceDefault.Light" parent="@style/DialogWindowTitle.Holo.Light" />
     <style name="WindowTitle.DeviceDefault" parent="@style/WindowTitle.Holo">
         <item name="textAppearance">@style/TextAppearance.TwWindowTitle</item>
         <item name="paddingLeft">4.0dip</item>
@@ -3797,8 +3783,8 @@
         <item name="textStyle">bold</item>
         <item name="textColor">#ffebebeb</item>
     </style>
-    <style name="ActiveWallpaperSettings"/>
-    <style name="PreviewWallpaperSettings"/>
+    <style name="ActiveWallpaperSettings" />
+    <style name="PreviewWallpaperSettings" />
     <style name="Theme.Dialog.NoFrame" parent="@style/Theme.Dialog">
         <item name="windowBackground">@color/transparent</item>
         <item name="windowFrame">@null</item>
@@ -3845,10 +3831,10 @@
         <item name="moreIcon">@drawable/ic_menu_more</item>
     </style>
     <style name="Theme.ExpandedMenu" parent="@style/Theme.Holo">
-        <item name="listViewStyle">@android:style/Widget.ListView.Menu</item>
-        <item name="windowAnimationStyle">@android:style/Animation.DropDownUp</item>
+        <item name="listViewStyle">@style/Widget.ListView.Menu</item>
+        <item name="windowAnimationStyle">@style/Animation.OptionsPanel</item>
         <item name="background">@null</item>
-        <item name="itemTextAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="itemTextAppearance">?textAppearanceLarge</item>
     </style>
     <style name="Theme.Holo.CompactMenu" parent="@style/Theme.Holo">
         <item name="listViewStyle">@style/Widget.Holo.ListView</item>
@@ -3933,7 +3919,7 @@
         <item name="actionModeBackground">@drawable/cab_background_top_holo_light</item>
         <item name="actionModeSplitBackground">@drawable/cab_background_bottom_holo_light</item>
     </style>
-    <style name="Theme.DeviceDefault.Dialog.NoFrame" parent="@style/Theme.Dialog.NoFrame"/>
+    <style name="Theme.DeviceDefault.Dialog.NoFrame" parent="@style/Theme.Dialog.NoFrame" />
     <style name="Theme.DeviceDefault.CompactMenu" parent="@style/Theme.DeviceDefault">
         <item name="listPreferredItemHeight">56.0dip</item>
         <item name="listViewStyle">@style/Widget.DeviceDefault.ListView</item>

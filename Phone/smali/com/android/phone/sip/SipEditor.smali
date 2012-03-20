@@ -1748,37 +1748,30 @@
 
     iput-object v5, p0, Lcom/android/phone/sip/SipEditor;->mAdvancedSettings:Lcom/android/phone/sip/SipEditor$AdvancedSettings;
 
-    .line 191
     new-instance v5, Lcom/android/phone/sip/SipEditor$PrimaryAccountSelector;
 
     invoke-direct {v5, p0, v3}, Lcom/android/phone/sip/SipEditor$PrimaryAccountSelector;-><init>(Lcom/android/phone/sip/SipEditor;Landroid/net/sip/SipProfile;)V
 
     iput-object v5, p0, Lcom/android/phone/sip/SipEditor;->mPrimaryAccountSelector:Lcom/android/phone/sip/SipEditor$PrimaryAccountSelector;
 
-    .line 193
     invoke-direct {p0, v3}, Lcom/android/phone/sip/SipEditor;->loadPreferencesFromProfile(Landroid/net/sip/SipProfile;)V
 
-    .line 195
     invoke-virtual {p0}, Lcom/android/phone/sip/SipEditor;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 196
     .local v0, actionBar:Landroid/app/ActionBar;
     if-eqz v0, :cond_2
 
-    .line 198
     const/4 v5, 0x1
 
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setHomeButtonEnabled(Z)V
 
 
-    .line 200
     :cond_2
     return-void
 
-    .line 180
     .end local v0           #actionBar:Landroid/app/ActionBar;
     :cond_3
     const v5, 0x7f090165

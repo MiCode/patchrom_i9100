@@ -384,6 +384,16 @@
     .line 448
     iget-object v9, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
+    #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
+    invoke-static {v9}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$700(Lcom/android/internal/policy/impl/LockPatternKeyguardView;)Lcom/android/internal/widget/LockPatternUtils;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Lcom/android/internal/widget/LockPatternUtils;->reportFailedPasswordAttempt()V
+
+    .line 449
+    iget-object v9, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
+
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
     invoke-static {v9}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$300(Lcom/android/internal/policy/impl/LockPatternKeyguardView;)Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
 
@@ -391,7 +401,7 @@
 
     invoke-virtual {v9}, Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;->reportFailedAttempt()V
 
-    .line 449
+    .line 450
     iget-object v9, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mUpdateMonitor:Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;
@@ -403,7 +413,7 @@
 
     move-result v1
 
-    .line 450
+    .line 451
     .local v1, failedAttempts:I
     const-string v9, "LockPatternKeyguardView"
 
@@ -450,7 +460,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 453
+    .line 454
     iget-object v9, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -468,7 +478,7 @@
 
     move v6, v7
 
-    .line 456
+    .line 457
     .local v6, usingPattern:Z
     :goto_0
     iget-object v9, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
@@ -486,45 +496,35 @@
 
     move-result v2
 
-    .line 459
+    .line 460
     .local v2, failedAttemptsBeforeWipe:I
     const/16 v0, 0xf
 
-    .line 462
+    .line 463
     .local v0, failedAttemptWarning:I
     if-lez v2, :cond_2
 
     sub-int v4, v2, v1
 
-    .line 466
+    .line 467
     .local v4, remainingBeforeWipe:I
     :goto_1
     const/4 v9, 0x5
 
     if-ge v4, v9, :cond_5
 
-    .line 471
+    .line 472
     if-lez v4, :cond_3
 
-    .line 472
+    .line 473
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showAlmostAtWipeDialog(II)V
     invoke-static {v7, v1, v4}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$1700(Lcom/android/internal/policy/impl/LockPatternKeyguardView;II)V
 
-    .line 510
+    .line 511
     :cond_0
     :goto_2
-    iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
-
-    #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
-    invoke-static {v7}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$700(Lcom/android/internal/policy/impl/LockPatternKeyguardView;)Lcom/android/internal/widget/LockPatternUtils;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Lcom/android/internal/widget/LockPatternUtils;->reportFailedPasswordAttempt()V
-
-    .line 511
     return-void
 
     .end local v0           #failedAttemptWarning:I
@@ -534,10 +534,10 @@
     :cond_1
     move v6, v8
 
-    .line 453
+    .line 454
     goto :goto_0
 
-    .line 462
+    .line 463
     .restart local v0       #failedAttemptWarning:I
     .restart local v2       #failedAttemptsBeforeWipe:I
     .restart local v6       #usingPattern:Z
@@ -546,7 +546,7 @@
 
     goto :goto_1
 
-    .line 474
+    .line 475
     .restart local v4       #remainingBeforeWipe:I
     :cond_3
     iget-object v8, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
@@ -566,7 +566,7 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 475
+    .line 476
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -580,7 +580,7 @@
 
     invoke-virtual {v7}, Landroid/app/admin/DevicePolicyManager;->recoverPassword()V
 
-    .line 476
+    .line 477
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showRecovery()V
@@ -588,7 +588,7 @@
 
     goto :goto_2
 
-    .line 479
+    .line 480
     :cond_4
     const-string v7, "LockPatternKeyguardView"
 
@@ -596,7 +596,7 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
+    .line 481
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showWipeDialog(I)V
@@ -604,7 +604,7 @@
 
     goto :goto_2
 
-    .line 484
+    .line 485
     :cond_5
     rem-int/lit8 v9, v1, 0x5
 
@@ -612,7 +612,7 @@
 
     move v5, v7
 
-    .line 486
+    .line 487
     .local v5, showTimeout:Z
     :goto_3
     if-eqz v6, :cond_6
@@ -626,26 +626,26 @@
 
     if-eqz v9, :cond_6
 
-    .line 487
+    .line 488
     const/16 v9, 0xf
 
     if-ne v1, v9, :cond_8
 
-    .line 488
+    .line 489
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showAlmostAtAccountLoginDialog()V
     invoke-static {v7}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$1900(Lcom/android/internal/policy/impl/LockPatternKeyguardView;)V
 
-    .line 489
+    .line 490
     const/4 v5, 0x0
 
-    .line 497
+    .line 498
     :cond_6
     :goto_4
     if-eqz v5, :cond_0
 
-    .line 501
+    .line 502
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->isDeviceDisabledForMaxFailedAttempt()Z
@@ -653,18 +653,18 @@
 
     move-result v3
 
-    .line 502
+    .line 503
     .local v3, lDeviceDisableForMaxFailedAttempt:Z
     if-nez v3, :cond_0
 
-    .line 504
+    .line 505
     const-string v7, "LockPatternKeyguardView"
 
     const-string v8, "showing timeout dialog"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
+    .line 506
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showTimeoutDialog()V
@@ -677,17 +677,17 @@
     :cond_7
     move v5, v8
 
-    .line 484
+    .line 485
     goto :goto_3
 
-    .line 490
+    .line 491
     .restart local v5       #showTimeout:Z
     :cond_8
     const/16 v9, 0x14
 
     if-lt v1, v9, :cond_6
 
-    .line 491
+    .line 492
     iget-object v9, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     #getter for: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -697,7 +697,7 @@
 
     invoke-virtual {v9, v7}, Lcom/android/internal/widget/LockPatternUtils;->setPermanentlyLocked(Z)V
 
-    .line 492
+    .line 493
     iget-object v7, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     iget-object v9, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$3;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
@@ -710,7 +710,7 @@
     #calls: Lcom/android/internal/policy/impl/LockPatternKeyguardView;->updateScreen(Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;Z)V
     invoke-static {v7, v9, v8}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->access$100(Lcom/android/internal/policy/impl/LockPatternKeyguardView;Lcom/android/internal/policy/impl/LockPatternKeyguardView$Mode;Z)V
 
-    .line 494
+    .line 495
     const/4 v5, 0x0
 
     goto :goto_4
