@@ -373,6 +373,8 @@
 
 .field mSeq:I
 
+.field private mSkipResizedMsg:Z
+
 .field mSoftInputMode:I
 
 .field mStopped:Z
@@ -647,6 +649,8 @@
 
     .line 294
     iput-wide v7, p0, Landroid/view/ViewRootImpl;->mFpsPrevTime:J
+
+    iput-boolean v3, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
 
     .line 314
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->bHavePenST:Z
@@ -12840,6 +12844,13 @@
 
     .line 2634
     .local v12, ri:Landroid/view/ViewRootImpl$ResizedInfo;
+
+    invoke-direct {p0, v12, p1}, Landroid/view/ViewRootImpl;->tryToSkipResizedMsg(Landroid/view/ViewRootImpl$ResizedInfo;Landroid/os/Message;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
     iget-object v1, p0, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
