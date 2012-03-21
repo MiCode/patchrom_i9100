@@ -15965,3 +15965,83 @@
     .line 4167
     goto :goto_1
 .end method
+
+.method public skipNextResizedMsg()V
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
+    return-void
+.end method
+
+.method private tryToSkipResizedMsg(Landroid/view/ViewRootImpl$ResizedInfo;Landroid/os/Message;)Z
+    .locals 3
+    .parameter "ri"
+    .parameter "msg"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    iget v2, p2, Landroid/os/Message;->arg1:I
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mWinFrame:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    iget v2, p2, Landroid/os/Message;->arg2:I
+
+    if-ne v0, v2, :cond_0
+
+    iget-object v0, p0, Landroid/view/ViewRootImpl;->mPendingContentInsets:Landroid/graphics/Rect;
+
+    iget-object v2, p1, Landroid/view/ViewRootImpl$ResizedInfo;->coveredInsets:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p2, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/ViewRootImpl$ResizedInfo;
+
+    iget-object v0, v0, Landroid/view/ViewRootImpl$ResizedInfo;->newConfig:Landroid/content/res/Configuration;
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
+    if-eqz v0, :cond_0
+
+    iput-boolean v1, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+.end method
