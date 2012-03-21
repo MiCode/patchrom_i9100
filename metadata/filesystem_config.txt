@@ -1623,6 +1623,4 @@ system/vsc/VSCCert.der 0 0 644
 system/vsc/VSCe.plf 0 0 644
 system/xbin 0 2000 755
 system/xbin/dexdump 0 2000 755
-system/xbin/invoke-as 0 0 6755
-system/xbin/su 0 0 6755
 system/xbin/vfp-crasher 0 2000 755
