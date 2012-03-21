@@ -18,71 +18,7 @@ local-miui-removed-apps := Phone AntiSpam MediaProvider Gallery
 
 local-miui-modified-apps := MiuiHome Settings MiuiSystemUI Mms
 
-# All apps need to be removed from original ZIP file
-local-remove-apps   := Memo TouchWiz30Launcher MusicPlayer FTC FTM FTS TwCalendarAppWidget \
-	SystemUI RootExplorer SetupWizard MyFiles RebootTool Superuser CWMManager GoogleQuickSearchBox \
-	DioPenChineseIME SecDownloadProviderUi SecDownloadProvider VoiceRecorder ClockPackage \
-	JobManager VideoPlayer TouchWizCalculator SecCalendarProvider Gallery3D \
-	AnalogClock  \
-	ApplicationsProvider  \
-	CalendarProvider \
-	CertInstaller  \
-	CloudService  \
-	DeskClock  \
-	DigitalClock  \
-	DrmProvider  \
-	DualClock  \
-	GameHub  \
-	GenieWidget  \
-	Kobo  \
-	MiniDiary \
-	MobilePrint  \
-	MobileTrackerEngineTwo  \
-	PostIt  \
-	PressReader  \
-	ReadersHub  \
-	SamsungApps  \
-	SamsungWidget_ProgramMonitor  \
-	SamsungWidget_StockClock  \
-	SamsungWidget_WeatherClock  \
-	SevenEngine  \
-	SnsAccountFb  \
-	SnsAccountLi \
-	SnsAccountMs  \
-	SnsAccountPk  \
-	SnsAccountTw  \
-	SnsDisclaimer  \
-	SnsImageCache  \
-	SnsProvider \
-	SocialHub  \
-	TouchWizCalendar  \
-	TwWallpaperChooser \
-	VideoEditor  \
-	YouTube  \
-	Dlna \
-	SamsungWidget_News \
-	Zinio \
-	AccuWeatherDaemonService \
-	DSMForwarding \
-	DSMLawmo \
-	Days \
-	FotaClient \
-	Kies \
-	Microbesgl \
-	PlusOne \
-	SamsungAppsUNA3 \
-	SamsungChineseIME \
-	Samsungservice \
-	SocialHubWidget \
-	SyncmlDM \
-	SyncmlDS \
-	Tasks \
-	TasksProvider \
-	TrimApp \
-	TwDVFSApp \
-	kieswifi \
-	talkback
-
+include phoneapps.mk
 
 # To include the local targets before and after zip the final ZIP file, 
 # and the local-targets should:
