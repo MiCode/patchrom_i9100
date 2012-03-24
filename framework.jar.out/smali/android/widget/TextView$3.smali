@@ -25,7 +25,7 @@
     .locals 3
 
     .prologue
-    .line 7104
+    .line 7179
     invoke-static {}, Landroid/text/Layout$Alignment;->values()[Landroid/text/Layout$Alignment;
 
     move-result-object v0
@@ -115,7 +115,7 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_7
 
-    .line 6361
+    .line 6406
     :goto_4
     invoke-static {}, Landroid/widget/TextView$TextAlign;->values()[Landroid/widget/TextView$TextAlign;
 
@@ -276,7 +276,7 @@
 
     goto :goto_5
 
-    .line 7104
+    .line 7179
     :catch_7
     move-exception v0
 

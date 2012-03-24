@@ -230,19 +230,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$202(Lcom/android/phone/PhoneVoiceRecorder;J)J
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 54
-    iput-wide p1, p0, Lcom/android/phone/PhoneVoiceRecorder;->mRecordingTimeInMiliSecond:J
-
-    return-wide p1
-.end method
-
-.method static synthetic access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
+.method static synthetic access$200(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/os/Handler;
     .locals 1
     .parameter "x0"
 
@@ -253,7 +241,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$400(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
+.method static synthetic access$300(Lcom/android/phone/PhoneVoiceRecorder;)Landroid/content/Context;
     .locals 1
     .parameter "x0"
 
@@ -262,6 +250,18 @@
     iget-object v0, p0, Lcom/android/phone/PhoneVoiceRecorder;->mContext:Landroid/content/Context;
 
     return-object v0
+.end method
+
+.method static synthetic access$402(Lcom/android/phone/PhoneVoiceRecorder;J)J
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
+
+    .prologue
+    .line 54
+    iput-wide p1, p0, Lcom/android/phone/PhoneVoiceRecorder;->mRecordingTimeInMiliSecond:J
+
+    return-wide p1
 .end method
 
 .method static synthetic access$500(Lcom/android/phone/PhoneVoiceRecorder;)Lcom/android/phone/CallCard;
@@ -657,7 +657,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e03ba
+    const v1, 0x7f0e03bc
 
     invoke-static {v0, v1, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -690,7 +690,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e03bc
+    const v1, 0x7f0e03be
 
     invoke-static {v0, v1, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -720,7 +720,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e03b7
+    const v1, 0x7f0e03b9
 
     invoke-static {v0, v1, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

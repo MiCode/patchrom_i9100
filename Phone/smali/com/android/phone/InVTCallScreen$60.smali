@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 11692
+    .line 11709
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -45,17 +45,17 @@
 
     const/4 v1, 0x0
 
-    .line 11695
+    .line 11712
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 11721
+    .line 11738
     :cond_0
     :goto_0
     return-void
 
-    .line 11697
+    .line 11714
     :sswitch_0
     iget-object v2, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -68,7 +68,7 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 11698
+    .line 11715
     iget-object v2, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mCallTimer:Landroid/widget/TextView;
@@ -90,7 +90,7 @@
     :goto_1
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 11701
+    .line 11718
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->timerHandler:Landroid/os/Handler;
@@ -100,7 +100,7 @@
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 11702
+    .line 11719
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->timerHandler:Landroid/os/Handler;
@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v4, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 11704
+    .line 11721
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$12108(Lcom/android/phone/InVTCallScreen;)I
@@ -122,10 +122,10 @@
     :cond_1
     move v0, v1
 
-    .line 11698
+    .line 11715
     goto :goto_1
 
-    .line 11706
+    .line 11723
     :cond_2
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -136,7 +136,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 11707
+    .line 11724
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mCallTimer:Landroid/widget/TextView;
@@ -150,7 +150,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0192
+    const v3, 0x7f0e0194
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -158,7 +158,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 11709
+    .line 11726
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #setter for: Lcom/android/phone/InVTCallScreen;->mCallEndTimeBlinkCount:I
@@ -166,7 +166,7 @@
 
     goto :goto_0
 
-    .line 11714
+    .line 11731
     :sswitch_1
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -177,7 +177,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 11715
+    .line 11732
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$60;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mUpperTitleText:Landroid/widget/TextView;
@@ -189,7 +189,7 @@
 
     goto :goto_0
 
-    .line 11695
+    .line 11712
     nop
 
     :sswitch_data_0

@@ -60,7 +60,7 @@
 
     const/4 v3, 0x0
 
-    .line 486
+    .line 490
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "SUCCESS"
@@ -69,7 +69,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->SUCCESS:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 487
+    .line 491
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "VOICEMAIL_NUMBER_MISSING"
@@ -78,7 +78,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->VOICEMAIL_NUMBER_MISSING:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 488
+    .line 492
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "POWER_OFF"
@@ -87,7 +87,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->POWER_OFF:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 489
+    .line 493
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "EMERGENCY_ONLY"
@@ -96,7 +96,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->EMERGENCY_ONLY:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 490
+    .line 494
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "PHONE_NOT_IN_USE"
@@ -105,7 +105,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->PHONE_NOT_IN_USE:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 491
+    .line 495
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "NO_PHONE_NUMBER_SUPPLIED"
@@ -116,7 +116,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->NO_PHONE_NUMBER_SUPPLIED:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 492
+    .line 496
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "DIALED_MMI"
@@ -127,7 +127,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->DIALED_MMI:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 493
+    .line 497
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "CALL_FAILED"
@@ -138,7 +138,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->CALL_FAILED:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 494
+    .line 498
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     const-string v1, "OUT_OF_3G_NETWORK"
@@ -149,7 +149,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->OUT_OF_3G_NETWORK:Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
-    .line 485
+    .line 489
     const/16 v0, 0x9
 
     new-array v0, v0, [Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
@@ -214,7 +214,7 @@
     .end annotation
 
     .prologue
-    .line 485
+    .line 489
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -225,7 +225,7 @@
     .parameter
 
     .prologue
-    .line 485
+    .line 489
     const-class v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -241,7 +241,7 @@
     .locals 1
 
     .prologue
-    .line 485
+    .line 489
     sget-object v0, Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->$VALUES:[Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;
 
     invoke-virtual {v0}, [Lcom/android/phone/InVTCallScreen$InVTCallInitStatus;->clone()Ljava/lang/Object;

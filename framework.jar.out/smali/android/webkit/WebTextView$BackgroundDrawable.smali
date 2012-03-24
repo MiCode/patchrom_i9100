@@ -28,24 +28,10 @@
     .parameter "width"
 
     .prologue
-    .line 234
+    .line 238
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 230
-    new-instance v0, Landroid/graphics/Paint;
-
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    iput-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mPaint:Landroid/graphics/Paint;
-
-    .line 232
-    new-instance v0, Landroid/graphics/Rect;
-
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
-
-    iput-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mInsetRect:Landroid/graphics/Rect;
-
-    .line 235
+    .line 234
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -53,16 +39,30 @@
     iput-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mPaint:Landroid/graphics/Paint;
 
     .line 236
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mInsetRect:Landroid/graphics/Rect;
+
+    .line 239
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mPaint:Landroid/graphics/Paint;
+
+    .line 240
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mPaint:Landroid/graphics/Paint;
 
     int-to-float v1, p1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 237
+    .line 241
     iput p1, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mBorderWidth:I
 
-    .line 238
+    .line 242
     return-void
 .end method
 
@@ -73,14 +73,14 @@
     .parameter "canvas"
 
     .prologue
-    .line 244
+    .line 248
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mPaint:Landroid/graphics/Paint;
 
     const v1, -0x66006ed7
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 245
+    .line 249
     invoke-virtual {p0}, Landroid/webkit/WebTextView$BackgroundDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -89,7 +89,7 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 246
+    .line 250
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mInsetRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/webkit/WebTextView$BackgroundDrawable;->getBounds()Landroid/graphics/Rect;
@@ -104,7 +104,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 247
+    .line 251
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mInsetRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/webkit/WebTextView$BackgroundDrawable;->getBounds()Landroid/graphics/Rect;
@@ -119,7 +119,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 248
+    .line 252
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mInsetRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/webkit/WebTextView$BackgroundDrawable;->getBounds()Landroid/graphics/Rect;
@@ -134,7 +134,7 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 249
+    .line 253
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mInsetRect:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Landroid/webkit/WebTextView$BackgroundDrawable;->getBounds()Landroid/graphics/Rect;
@@ -149,21 +149,21 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 250
+    .line 254
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mPaint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 251
+    .line 255
     iget-object v0, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mInsetRect:Landroid/graphics/Rect;
 
     iget-object v1, p0, Landroid/webkit/WebTextView$BackgroundDrawable;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 252
+    .line 256
     return-void
 .end method
 
@@ -171,7 +171,7 @@
     .locals 1
 
     .prologue
-    .line 264
+    .line 268
     const/4 v0, -0x3
 
     return v0
@@ -182,7 +182,7 @@
     .parameter "alpha"
 
     .prologue
-    .line 256
+    .line 260
     return-void
 .end method
 
@@ -191,6 +191,6 @@
     .parameter "cf"
 
     .prologue
-    .line 260
+    .line 264
     return-void
 .end method

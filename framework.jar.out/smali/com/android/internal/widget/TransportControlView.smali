@@ -1167,7 +1167,7 @@
     invoke-virtual {v5, v7}, Landroid/widget/TextView;->setSelected(Z)V
 
     .line 211
-    const v5, 0x10202ce
+    const v5, 0x10202d0
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 
@@ -1178,7 +1178,7 @@
     iput-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mAlbumArt:Landroid/widget/ImageView;
 
     .line 212
-    const v5, 0x10202cf
+    const v5, 0x10202d1
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 
@@ -1189,7 +1189,7 @@
     iput-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mBtnPrev:Landroid/widget/ImageView;
 
     .line 213
-    const v5, 0x10202d0
+    const v5, 0x10202d2
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 
@@ -1200,7 +1200,7 @@
     iput-object v5, p0, Lcom/android/internal/widget/TransportControlView;->mBtnPlay:Landroid/widget/ImageView;
 
     .line 214
-    const v5, 0x10202d1
+    const v5, 0x10202d3
 
     invoke-virtual {p0, v5}, Lcom/android/internal/widget/TransportControlView;->findViewById(I)Landroid/view/View;
 

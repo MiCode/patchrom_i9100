@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4942
+    .line 4940
     iput-object p1, p0, Lcom/android/phone/InCallScreen$31;->this$0:Lcom/android/phone/InCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,6 @@
     .parameter "arg1"
 
     .prologue
-    .line 4945
+    .line 4943
     return-void
 .end method

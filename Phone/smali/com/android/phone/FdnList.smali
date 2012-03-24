@@ -432,7 +432,7 @@
 
     .line 107
     .local v0, r:Landroid/content/res/Resources;
-    const v1, 0x7f0e0148
+    const v1, 0x7f0e014a
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -449,7 +449,7 @@
     .line 109
     const/4 v1, 0x2
 
-    const v2, 0x7f0e0149
+    const v2, 0x7f0e014b
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -466,7 +466,7 @@
     .line 111
     const/4 v1, 0x3
 
-    const v2, 0x7f0e014a
+    const v2, 0x7f0e014c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

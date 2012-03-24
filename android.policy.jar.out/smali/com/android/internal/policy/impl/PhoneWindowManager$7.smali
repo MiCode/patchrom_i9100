@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1023
+    .line 1021
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$7;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +41,13 @@
     .locals 2
 
     .prologue
-    .line 1025
+    .line 1023
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$7;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/16 v1, 0x54
 
     iput v1, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mShortcutKeyPressed:I
 
-    .line 1027
+    .line 1025
     return-void
 .end method

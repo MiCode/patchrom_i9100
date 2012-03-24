@@ -18,7 +18,7 @@
 
 
 # static fields
-.field private static final POPUP_TEXT_LAYOUT:I = 0x10900c3
+.field private static final POPUP_TEXT_LAYOUT:I = 0x10900c5
 
 
 # instance fields
@@ -150,7 +150,7 @@
     .locals 10
 
     .prologue
-    const v9, 0x10900c3
+    const v9, 0x10900c5
 
     const/4 v8, -0x2
 

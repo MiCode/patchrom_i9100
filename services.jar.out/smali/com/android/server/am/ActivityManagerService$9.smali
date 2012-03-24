@@ -34,7 +34,7 @@
     .parameter
 
     .prologue
-    .line 7497
+    .line 7518
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$9;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p3, p0, Lcom/android/server/am/ActivityManagerService$9;->val$sb:Ljava/lang/StringBuilder;
@@ -54,12 +54,12 @@
     .locals 5
 
     .prologue
-    .line 7501
+    .line 7522
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$9;->val$sb:Ljava/lang/StringBuilder;
 
     monitor-enter v2
 
-    .line 7502
+    .line 7523
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$9;->val$sb:Ljava/lang/StringBuilder;
 
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    .line 7503
+    .line 7524
     .local v0, report:Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$9;->val$sb:Ljava/lang/StringBuilder;
 
@@ -81,35 +81,35 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 7504
+    .line 7525
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$9;->val$sb:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->trimToSize()V
 
-    .line 7505
+    .line 7526
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7506
+    .line 7527
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 7507
+    .line 7528
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$9;->val$dbox:Landroid/os/DropBoxManager;
 
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$9;->val$dropboxTag:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7509
+    .line 7530
     :cond_0
     return-void
 
-    .line 7505
+    .line 7526
     .end local v0           #report:Ljava/lang/String;
     :catchall_0
     move-exception v1

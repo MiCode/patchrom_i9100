@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 3806
+    .line 3857
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$9;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 3809
+    .line 3860
     :try_start_0
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$200()I
 
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 3810
+    .line 3861
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$9;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$300()Ljava/lang/String;
@@ -79,17 +79,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3814
+    .line 3865
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$9;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/InputMethodManagerService;->hideSIPInformationDialog()V
 
-    .line 3815
+    .line 3866
     return-void
 
-    .line 3812
+    .line 3863
     :catch_0
     move-exception v0
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4354
+    .line 4352
     iput-object p1, p0, Lcom/android/phone/InCallScreen$20;->this$0:Lcom/android/phone/InCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "dialog"
 
     .prologue
-    .line 4356
+    .line 4354
     iget-object v0, p0, Lcom/android/phone/InCallScreen$20;->this$0:Lcom/android/phone/InCallScreen;
 
     #getter for: Lcom/android/phone/InCallScreen;->mProgressDialog:Landroid/app/ProgressDialog;
@@ -52,13 +52,13 @@
 
     if-nez v0, :cond_0
 
-    .line 4357
+    .line 4355
     iget-object v0, p0, Lcom/android/phone/InCallScreen$20;->this$0:Lcom/android/phone/InCallScreen;
 
     #calls: Lcom/android/phone/InCallScreen;->bailOutAfterErrorDialog()V
     invoke-static {v0}, Lcom/android/phone/InCallScreen;->access$3400(Lcom/android/phone/InCallScreen;)V
 
-    .line 4358
+    .line 4356
     :cond_0
     return-void
 .end method

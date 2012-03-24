@@ -348,8 +348,8 @@
     <string name="silent_mode_vibrate">Ringer vibrate</string>
     <string name="silent_mode_ring">Ringer on</string>
     <string name="shutdown_progress">Shutting down…</string>
-    <string name="shutdown_confirm">Device will now shut down</string>
-    <string name="restart_confirm">Device will restart</string>
+    <string name="shutdown_confirm">Your device will shut down</string>
+    <string name="restart_confirm">Your device will restart</string>
     <string name="shutdown_confirm_question">Would you like to shut down?</string>
     <string name="restart_confirm_question">Would you like to restart?</string>
     <string name="recent_tasks_title">Recent</string>
@@ -1120,7 +1120,7 @@ Select OK to continue, or Cancel to stay on the current page."</string>
     <string name="capital_off">OFF</string>
     <string name="whichApplication">Complete action using</string>
     <string name="alwaysUse">Use by default for this action.</string>
-    <string name="clearDefaultHintMsg">Clear default in Home Settings > Applications > Manage applications.</string>
+    <string name="clearDefaultHintMsg">Clear default in Home Settings > Applications.</string>
     <string name="chooseActivity">Select an action</string>
     <string name="chooseUsbActivity">Select an application for the USB device</string>
     <string name="noApplications">No applications can perform this action.</string>
@@ -1540,10 +1540,10 @@ for account %s"</string>
     <string name="cmcc_operator_name">CMCC</string>
     <string name="cu_operator_name">China Unicom</string>
     <string name="chunghwa_operator_name">Chunghwa</string>
-    <string name="fareastone_operator_name">FarEasTone</string>
+    <string name="fareastone_operator_name">FET</string>
     <string name="kgt_operator_name">KGT</string>
     <string name="vibo_operator_name">VIBO</string>
-    <string name="twmobile_operator_name">TW Mobile</string>
+    <string name="twmobile_operator_name">TWM</string>
     <string name="smartone_operator_name">SmarTone</string>
     <string name="cmhk_operator_name">CMHK</string>
     <string name="zzz_limited_service">LimitedService</string>

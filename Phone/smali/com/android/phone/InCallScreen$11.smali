@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3137
+    .line 3135
     iput-object p1, p0, Lcom/android/phone/InCallScreen$11;->this$0:Lcom/android/phone/InCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InCallScreen$11;->val$c:Lcom/android/internal/telephony/Connection;
@@ -47,12 +47,12 @@
     .parameter "dialog"
 
     .prologue
-    .line 3140
+    .line 3138
     iget-object v0, p0, Lcom/android/phone/InCallScreen$11;->val$c:Lcom/android/internal/telephony/Connection;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->cancelPostDial()V
 
-    .line 3141
+    .line 3139
     iget-object v0, p0, Lcom/android/phone/InCallScreen$11;->this$0:Lcom/android/phone/InCallScreen;
 
     #getter for: Lcom/android/phone/InCallScreen;->mApp:Lcom/android/phone/PhoneApp;
@@ -62,6 +62,6 @@
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
 
-    .line 3142
+    .line 3140
     return-void
 .end method

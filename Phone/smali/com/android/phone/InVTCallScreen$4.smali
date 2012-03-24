@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1353
+    .line 1357
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$4;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1355
+    .line 1359
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v0
@@ -74,7 +74,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1356
+    .line 1360
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -88,7 +88,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1357
+    .line 1361
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$4;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mIsplayVideo:Z
@@ -107,14 +107,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 1358
+    .line 1362
     const-string v0, "InVTCallScreen"
 
     const-string v1, "Stopping file casting and send live video"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1359
+    .line 1363
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$4;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mVTManager:Lsiso/vt/VTManager;
@@ -124,7 +124,7 @@
 
     invoke-virtual {v0}, Lsiso/vt/VTManager;->sendLiveVideo()V
 
-    .line 1361
+    .line 1365
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$4;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x3
@@ -132,7 +132,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->previousSelectedType:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$5902(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 1362
+    .line 1366
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$4;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x1
@@ -140,7 +140,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mHideCheck:Z
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$4502(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 1365
+    .line 1369
     :cond_1
     return-void
 .end method

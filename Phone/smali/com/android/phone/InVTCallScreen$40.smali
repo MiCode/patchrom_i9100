@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9570
+    .line 9587
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$40;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 9573
+    .line 9590
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$40;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -59,7 +59,7 @@
 
     invoke-static {v0, v1, v1}, Lcom/android/phone/PhoneUtils;->turnOnSpeaker(Landroid/content/Context;ZZ)V
 
-    .line 9575
+    .line 9592
     const-string v0, "InVTCallScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -93,6 +93,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9577
+    .line 9594
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "PasswordUnlockScreen.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 192
+    .line 217
     iput-object p1, p0, Lcom/android/internal/policy/impl/PasswordUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PasswordUnlockScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -37,22 +37,12 @@
 
 
 # virtual methods
-.method public afterTextChanged(Landroid/text/Editable;)V
+.method public onClick(Landroid/view/View;)V
     .locals 1
-    .parameter "s"
+    .parameter "v"
 
     .prologue
-    .line 200
-    iget-object v0, p0, Lcom/android/internal/policy/impl/PasswordUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PasswordUnlockScreen;
-
-    #getter for: Lcom/android/internal/policy/impl/PasswordUnlockScreen;->mResuming:Z
-    invoke-static {v0}, Lcom/android/internal/policy/impl/PasswordUnlockScreen;->access$200(Lcom/android/internal/policy/impl/PasswordUnlockScreen;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 201
+    .line 219
     iget-object v0, p0, Lcom/android/internal/policy/impl/PasswordUnlockScreen$3;->this$0:Lcom/android/internal/policy/impl/PasswordUnlockScreen;
 
     #getter for: Lcom/android/internal/policy/impl/PasswordUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;
@@ -62,31 +52,6 @@
 
     invoke-interface {v0}, Lcom/android/internal/policy/impl/KeyguardScreenCallback;->pokeWakelock()V
 
-    .line 203
-    :cond_0
-    return-void
-.end method
-
-.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-    .parameter "s"
-    .parameter "start"
-    .parameter "count"
-    .parameter "after"
-
-    .prologue
-    .line 197
-    return-void
-.end method
-
-.method public onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-    .parameter "s"
-    .parameter "start"
-    .parameter "before"
-    .parameter "count"
-
-    .prologue
-    .line 194
+    .line 220
     return-void
 .end method

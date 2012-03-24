@@ -1232,7 +1232,7 @@
     .line 297
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mDialpadButton:Landroid/widget/Button;
 
-    const v8, 0x7f0e01c9
+    const v8, 0x7f0e01cb
 
     invoke-virtual {v7, v8}, Landroid/widget/Button;->setText(I)V
 
@@ -1273,7 +1273,7 @@
     .line 309
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mRecordButton:Landroid/widget/Button;
 
-    const v8, 0x7f0e03b0
+    const v8, 0x7f0e03b2
 
     invoke-virtual {v7, v8}, Landroid/widget/Button;->setText(I)V
 
@@ -1377,7 +1377,7 @@
     .line 333
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mHoldButtonLabel:Landroid/widget/TextView;
 
-    const v8, 0x7f0e01c6
+    const v8, 0x7f0e01c8
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(I)V
 
@@ -1433,7 +1433,7 @@
     .line 345
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mMultiCallButtonLabel:Landroid/widget/TextView;
 
-    const v8, 0x7f0e043e
+    const v8, 0x7f0e0440
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(I)V
 
@@ -1887,7 +1887,7 @@
     :cond_1c
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mDialpadButton:Landroid/widget/Button;
 
-    const v8, 0x7f0e01c8
+    const v8, 0x7f0e01ca
 
     invoke-virtual {v7, v8}, Landroid/widget/Button;->setText(I)V
 
@@ -1910,7 +1910,7 @@
     :cond_1d
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mRecordButton:Landroid/widget/Button;
 
-    const v8, 0x7f0e03b1
+    const v8, 0x7f0e03b3
 
     invoke-virtual {v7, v8}, Landroid/widget/Button;->setText(I)V
 
@@ -1952,7 +1952,7 @@
     .line 336
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mHoldButtonLabel:Landroid/widget/TextView;
 
-    const v8, 0x7f0e01c5
+    const v8, 0x7f0e01c7
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(I)V
 
@@ -1978,7 +1978,7 @@
     .line 348
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mMultiCallButtonLabel:Landroid/widget/TextView;
 
-    const v8, 0x7f0e0440
+    const v8, 0x7f0e0442
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(I)V
 
@@ -2019,7 +2019,7 @@
     .line 353
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mMultiCallButtonLabel:Landroid/widget/TextView;
 
-    const v8, 0x7f0e043e
+    const v8, 0x7f0e0440
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(I)V
 
@@ -2045,7 +2045,7 @@
     .line 356
     iget-object v7, p0, Lcom/android/phone/InCallButtonsView;->mMultiCallButtonLabel:Landroid/widget/TextView;
 
-    const v8, 0x7f0e043f
+    const v8, 0x7f0e0441
 
     invoke-virtual {v7, v8}, Landroid/widget/TextView;->setText(I)V
 

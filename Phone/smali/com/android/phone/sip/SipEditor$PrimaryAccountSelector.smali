@@ -43,7 +43,7 @@
 
     move-result-object v2
 
-    const v5, 0x7f0e0271
+    const v5, 0x7f0e0273
 
     invoke-virtual {p1, v5}, Lcom/android/phone/sip/SipEditor;->getString(I)Ljava/lang/String;
 

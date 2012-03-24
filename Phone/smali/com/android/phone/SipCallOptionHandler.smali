@@ -221,7 +221,7 @@
 
     .line 302
     .local v1, makePrimaryCheckBox:Landroid/widget/CheckBox;
-    const v3, 0x7f0e0220
+    const v3, 0x7f0e0222
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckBox;->setText(I)V
 
@@ -242,7 +242,7 @@
     .line 306
     iget-object v3, p0, Lcom/android/phone/SipCallOptionHandler;->mUnsetPriamryHint:Landroid/widget/TextView;
 
-    const v4, 0x7f0e0221
+    const v4, 0x7f0e0223
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(I)V
 
@@ -789,7 +789,7 @@
 
     .line 329
     :cond_1
-    const v1, 0x7f0e0223
+    const v1, 0x7f0e0225
 
     invoke-virtual {p0, v1}, Lcom/android/phone/SipCallOptionHandler;->getString(I)Ljava/lang/String;
 
@@ -1345,7 +1345,7 @@
 
     invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0e021e
+    const v3, 0x7f0e0220
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -1384,7 +1384,7 @@
 
     invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0e021f
+    const v3, 0x7f0e0221
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -1427,13 +1427,13 @@
 
     invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0e0224
+    const v3, 0x7f0e0226
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v2
 
-    const v3, 0x7f0e0225
+    const v3, 0x7f0e0227
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -1443,7 +1443,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0226
+    const v3, 0x7f0e0228
 
     invoke-virtual {v2, v3, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1480,7 +1480,7 @@
 
     if-eqz v1, :cond_1
 
-    const v2, 0x7f0e025f
+    const v2, 0x7f0e0261
 
     :goto_1
     invoke-virtual {v3, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -1489,7 +1489,7 @@
 
     if-eqz v1, :cond_2
 
-    const v2, 0x7f0e0261
+    const v2, 0x7f0e0263
 
     :goto_2
     invoke-virtual {v3, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
@@ -1519,12 +1519,12 @@
     .line 267
     .end local v0           #dialog:Landroid/app/Dialog;
     :cond_1
-    const v2, 0x7f0e025e
+    const v2, 0x7f0e0260
 
     goto :goto_1
 
     :cond_2
-    const v2, 0x7f0e0260
+    const v2, 0x7f0e0262
 
     goto :goto_2
 
@@ -1535,7 +1535,7 @@
 
     invoke-direct {v2, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v3, 0x7f0e0262
+    const v3, 0x7f0e0264
 
     invoke-virtual {v2, v3}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 

@@ -170,6 +170,8 @@
     <string name="sum_voicemail_choose_provider">Select voicemail service</string>
     <string name="voicemail_default">My carrier</string>
     <string name="voicemail_default_vnz">Vodafone NZ</string>
+    <string name="voicemail_default_tnz">Telecom NZ</string>
+    <string name="voicemail_default_nzc">2degrees</string>
     <string name="mobile_networks">Mobile network settings</string>
     <string name="label_available">Available networks</string>
     <string name="load_networks_progress">Searching…</string>
@@ -467,7 +469,7 @@ to decline"</string>
     <string name="onscreenHideDialpadText">Hide</string>
     <string name="onscreenSpeakerText">Speaker</string>
     <string name="onscreenMuteText">Mute</string>
-    <string name="onscreenBluetoothText">bluetooth</string>
+    <string name="onscreenBluetoothText">Headset</string>
     <string name="onscreenAddCallText">Add call</string>
     <string name="onscreenMergeCallsText">Merge</string>
     <string name="onscreenSwapCallsText">Swap</string>
@@ -1166,7 +1168,7 @@ No Service"</string>
     <string name="not_available_num">Invalid number</string>
     <string name="korea">Korea</string>
     <string name="flat_rate_title_org">Data services</string>
-    <string name="flat_rate_message_org">"Mobile data connection enabled by default. Enabling mobile data connection may incur additional charges from operator, if you do not have an unlimited data plan.
+    <string name="flat_rate_message_org">"Mobile data connection enabled by default. Enabling mobile data connection may incur additional charges from your operator, if you do not have an unlimited data plan.
  You can disable mobile data connection at any time in %s (only MMS can be sent and received)"</string>
     <string name="flat_rate_message_menu_path_org">Settings > Wireless and networks > Mobile networks > Use packet data</string>
     <string name="enable_flat_rate_org">Enable mobile data connection</string>
@@ -1233,8 +1235,8 @@ Contact Help Desk"</string>
     <string name="call_save_enable">Voice call protection is enabled</string>
     <string name="call_save_disable">Voice call protection is disabled</string>
     <string name="vtcall_disable_duringwifi">Video call is not possible as Wi-Fi is on now</string>
-    <item type="string" name="APKTOOL_DUMMY_04bb">false</item>
-    <item type="string" name="APKTOOL_DUMMY_04bc">false</item>
     <item type="string" name="APKTOOL_DUMMY_04bd">false</item>
     <item type="string" name="APKTOOL_DUMMY_04be">false</item>
+    <item type="string" name="APKTOOL_DUMMY_04bf">false</item>
+    <item type="string" name="APKTOOL_DUMMY_04c0">false</item>
 </resources>

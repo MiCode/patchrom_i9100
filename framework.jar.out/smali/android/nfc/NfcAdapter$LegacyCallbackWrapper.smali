@@ -28,13 +28,13 @@
     .parameter "legacyCallback"
 
     .prologue
-    .line 861
+    .line 897
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 862
+    .line 898
     iput-object p1, p0, Landroid/nfc/NfcAdapter$LegacyCallbackWrapper;->mLegacyCallback:Landroid/nfc/NfcAdapter$NdefPushCallback;
 
-    .line 863
+    .line 899
     return-void
 .end method
 
@@ -45,7 +45,7 @@
     .parameter "event"
 
     .prologue
-    .line 870
+    .line 906
     iget-object v0, p0, Landroid/nfc/NfcAdapter$LegacyCallbackWrapper;->mLegacyCallback:Landroid/nfc/NfcAdapter$NdefPushCallback;
 
     invoke-interface {v0}, Landroid/nfc/NfcAdapter$NdefPushCallback;->createMessage()Landroid/nfc/NdefMessage;
@@ -60,11 +60,11 @@
     .parameter "event"
 
     .prologue
-    .line 866
+    .line 902
     iget-object v0, p0, Landroid/nfc/NfcAdapter$LegacyCallbackWrapper;->mLegacyCallback:Landroid/nfc/NfcAdapter$NdefPushCallback;
 
     invoke-interface {v0}, Landroid/nfc/NfcAdapter$NdefPushCallback;->onMessagePushed()V
 
-    .line 867
+    .line 903
     return-void
 .end method

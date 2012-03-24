@@ -56,7 +56,7 @@
 
     const/4 v3, 0x0
 
-    .line 441
+    .line 445
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     const-string v1, "NORMAL"
@@ -65,7 +65,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->NORMAL:Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
-    .line 446
+    .line 450
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     const-string v1, "MANAGE_CONFERENCE"
@@ -74,7 +74,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->MANAGE_CONFERENCE:Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
-    .line 451
+    .line 455
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     const-string v1, "CALL_ENDED"
@@ -83,7 +83,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->CALL_ENDED:Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
-    .line 455
+    .line 459
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     const-string v1, "OTA_NORMAL"
@@ -92,7 +92,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->OTA_NORMAL:Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
-    .line 459
+    .line 463
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     const-string v1, "OTA_ENDED"
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->OTA_ENDED:Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
-    .line 463
+    .line 467
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     const-string v1, "UNDEFINED"
@@ -112,7 +112,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->UNDEFINED:Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
-    .line 467
+    .line 471
     new-instance v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     const-string v1, "EMPTY"
@@ -123,7 +123,7 @@
 
     sput-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->EMPTY:Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
-    .line 437
+    .line 441
     const/4 v0, 0x7
 
     new-array v0, v0, [Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
@@ -176,7 +176,7 @@
     .end annotation
 
     .prologue
-    .line 437
+    .line 441
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -187,7 +187,7 @@
     .parameter
 
     .prologue
-    .line 437
+    .line 441
     const-class v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -203,7 +203,7 @@
     .locals 1
 
     .prologue
-    .line 437
+    .line 441
     sget-object v0, Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->$VALUES:[Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;
 
     invoke-virtual {v0}, [Lcom/android/phone/InVTCallScreen$InVTCallScreenMode;->clone()Ljava/lang/Object;

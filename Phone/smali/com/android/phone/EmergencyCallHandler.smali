@@ -49,7 +49,7 @@
 
     if-ne p1, v2, :cond_0
 
-    const v0, 0x7f0e01bb
+    const v0, 0x7f0e01bd
 
     .line 256
     .local v0, msgId:I
@@ -64,7 +64,7 @@
 
     .line 257
     .local v1, pd:Landroid/app/ProgressDialog;
-    const v2, 0x7f0e01ba
+    const v2, 0x7f0e01bc
 
     invoke-virtual {p0, v2}, Lcom/android/phone/EmergencyCallHandler;->getText(I)Ljava/lang/CharSequence;
 
@@ -117,7 +117,7 @@
     .end local v0           #msgId:I
     .end local v1           #pd:Landroid/app/ProgressDialog;
     :cond_0
-    const v0, 0x7f0e01bc
+    const v0, 0x7f0e01be
 
     goto :goto_0
 .end method

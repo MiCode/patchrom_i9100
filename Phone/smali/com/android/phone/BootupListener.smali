@@ -18,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 46
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/phone/BootupListener;->DBG:Z
@@ -33,12 +33,12 @@
     .line 37
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 43
+    .line 44
     const-string v0, "999999999999999"
 
     iput-object v0, p0, Lcom/android/phone/BootupListener;->FACTORYMODE_KEY:Ljava/lang/String;
 
-    .line 44
+    .line 45
     const-string v0, "ro.csc.sales_code"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -55,19 +55,19 @@
     .parameter "tm"
 
     .prologue
-    .line 102
+    .line 103
     const/4 v0, 0x0
 
-    .line 103
+    .line 104
     .local v0, iccid:Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 104
+    .line 105
     invoke-virtual {p1}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 106
+    .line 107
     :cond_0
     return-object v0
 .end method
@@ -79,17 +79,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 95
+    .line 96
     if-eqz p1, :cond_0
 
-    .line 96
+    .line 97
     const-string v1, "sim_iccid"
 
     invoke-interface {p1, v1, v0}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 98
+    .line 99
     :cond_0
     return-object v0
 .end method
@@ -106,7 +106,7 @@
 
     const/4 v2, 0x1
 
-    .line 49
+    .line 50
     const-string v0, "phone"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -115,19 +115,19 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 50
+    .line 51
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 51
+    .line 52
     const-string v4, "ril.FS"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 53
+    .line 54
     const-string v5, "bootup_data_connection_popup"
 
     invoke-static {v5}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -146,13 +146,13 @@
 
     if-ne v3, v2, :cond_0
 
-    const-string v3, "false"
+    const-string v3, "true"
 
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_4
+    if-eq v3, v2, :cond_4
 
     :cond_0
     const-string v3, "android.intent.action.BOOT_COMPLETED"
@@ -167,64 +167,64 @@
 
     if-eqz v3, :cond_4
 
-    .line 56
+    .line 57
     const-string v3, "Receiver IN"
 
     const-string v4, "========= BootupListener ============="
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 59
+    .line 60
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result v3
 
     if-eq v3, v2, :cond_4
 
-    .line 61
+    .line 62
     const-string v3, "pref_first_Time_boot"
 
     invoke-virtual {p1, v3, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
-    .line 62
+    .line 63
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v4
 
-    .line 64
+    .line 65
     invoke-direct {p0, v3}, Lcom/android/phone/BootupListener;->getIccidPreference(Landroid/content/SharedPreferences;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 65
+    .line 66
     if-nez v3, :cond_1
 
-    .line 66
+    .line 67
     const-string v5, "bootupListener"
 
     const-string v6, "========= iccidPref is null ============="
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
+    .line 70
     :cond_1
     invoke-direct {p0, v0}, Lcom/android/phone/BootupListener;->getIccid(Landroid/telephony/TelephonyManager;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 70
+    .line 71
     if-nez v5, :cond_2
 
-    .line 71
+    .line 72
     const-string v0, "bootupListener"
 
     const-string v6, "========= iccid is null ============="
 
     invoke-static {v0, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
+    .line 75
     :cond_2
     if-eqz v3, :cond_3
 
@@ -236,7 +236,7 @@
 
     if-nez v0, :cond_5
 
-    .line 77
+    .line 78
     :cond_3
     const-string v0, "bootupListener"
 
@@ -246,43 +246,43 @@
 
     move v0, v2
 
-    .line 81
+    .line 82
     :goto_0
     if-eqz v0, :cond_4
 
     if-eqz v5, :cond_4
 
-    .line 82
+    .line 83
     const-string v0, "sim_iccid"
 
     invoke-interface {v4, v0, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 83
+    .line 84
     const-string v0, "bootupListener"
 
     const-string v1, "========= New SIM ICCID added to preferences ============="
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
+    .line 85
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 86
+    .line 87
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/android/phone/FlatRateAlertActivity;
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 87
+    .line 88
     const/high16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 88
+    .line 89
     invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 92
+    .line 93
     :cond_4
     return-void
 

@@ -521,7 +521,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "isConsideredDoubleTap() : mAlwaysInBiggerTapRegion = "
+    const-string/jumbo v8, "isConsideredDoubleTap() : mAlwaysInBiggerTapRegion = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -576,7 +576,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "isConsideredDoubleTap() : DoubleTab Time = "
+    const-string/jumbo v8, "isConsideredDoubleTap() : DoubleTab Time = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -645,7 +645,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v8, "isConsideredDoubleTap() : Result = "
+    const-string/jumbo v8, "isConsideredDoubleTap() : Result = "
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

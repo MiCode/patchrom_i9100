@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 8418
+    .line 8433
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +53,7 @@
 
     const/4 v3, 0x0
 
-    .line 8420
+    .line 8435
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isFarEndRecord:Z
@@ -72,19 +72,19 @@
 
     if-nez v0, :cond_0
 
-    .line 8421
+    .line 8436
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 8570
+    .line 8585
     :cond_0
     :goto_0
     return v3
 
-    .line 8424
+    .line 8439
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -95,7 +95,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8425
+    .line 8440
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -104,7 +104,7 @@
 
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$7402(I)I
 
-    .line 8426
+    .line 8441
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
@@ -115,7 +115,7 @@
 
     goto :goto_0
 
-    .line 8430
+    .line 8445
     :pswitch_1
     const-string v0, "InVTCallScreen"
 
@@ -123,10 +123,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8433
+    .line 8448
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$7608()I
 
-    .line 8435
+    .line 8450
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isWXGADevice:Z
@@ -136,7 +136,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 8436
+    .line 8451
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$7600()I
 
     move-result v0
@@ -179,12 +179,12 @@
 
     if-le v0, v2, :cond_0
 
-    .line 8437
+    .line 8452
     invoke-static {v3}, Lcom/android/phone/InVTCallScreen;->access$7702(Z)Z
 
     goto :goto_0
 
-    .line 8441
+    .line 8456
     :cond_1
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$7600()I
 
@@ -192,19 +192,19 @@
 
     if-le v0, v6, :cond_0
 
-    .line 8442
+    .line 8457
     invoke-static {v3}, Lcom/android/phone/InVTCallScreen;->access$7702(Z)Z
 
     goto :goto_0
 
-    .line 8447
+    .line 8462
     :pswitch_2
     invoke-static {v4}, Lcom/android/phone/InVTCallScreen;->access$7702(Z)Z
 
-    .line 8448
+    .line 8463
     invoke-static {v3}, Lcom/android/phone/InVTCallScreen;->access$7602(I)I
 
-    .line 8514
+    .line 8529
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mFirstFarEndViewClicked:Z
@@ -214,7 +214,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 8515
+    .line 8530
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/16 v1, 0x28
@@ -222,7 +222,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->svTopYPos:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$7802(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 8516
+    .line 8531
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -247,7 +247,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->svBottomYPos:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$7902(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 8518
+    .line 8533
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -262,7 +262,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->nvTopYPos:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$8002(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 8519
+    .line 8534
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -287,7 +287,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->nvBottomYPos:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$8102(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 8522
+    .line 8537
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -352,7 +352,7 @@
 
     if-gez v0, :cond_2
 
-    .line 8529
+    .line 8544
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isSurfaceViewSwipe:Z
@@ -362,20 +362,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 8530
+    .line 8545
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #setter for: Lcom/android/phone/InVTCallScreen;->isSurfaceViewSwipe:Z
     invoke-static {v0, v3}, Lcom/android/phone/InVTCallScreen;->access$5402(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 8537
+    .line 8552
     :goto_1
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->swipeSurfaceView()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$8200(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 8565
+    .line 8580
     :cond_2
     :goto_2
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -383,7 +383,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mFirstFarEndViewClicked:Z
     invoke-static {v0, v3}, Lcom/android/phone/InVTCallScreen;->access$7102(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 8566
+    .line 8581
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #setter for: Lcom/android/phone/InVTCallScreen;->mFirstNearEndViewClicked:Z
@@ -391,7 +391,7 @@
 
     goto/16 :goto_0
 
-    .line 8532
+    .line 8547
     :cond_3
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -400,7 +400,7 @@
 
     goto :goto_1
 
-    .line 8542
+    .line 8557
     :cond_4
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -411,7 +411,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 8543
+    .line 8558
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/16 v1, 0x28
@@ -419,7 +419,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->svTopYPos:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$7802(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 8544
+    .line 8559
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -444,7 +444,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->svBottomYPos:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$7902(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 8546
+    .line 8561
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -509,7 +509,7 @@
 
     if-gez v0, :cond_2
 
-    .line 8553
+    .line 8568
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isSurfaceViewSwipe:Z
@@ -519,13 +519,13 @@
 
     if-eqz v0, :cond_5
 
-    .line 8554
+    .line 8569
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #setter for: Lcom/android/phone/InVTCallScreen;->isSurfaceViewSwipe:Z
     invoke-static {v0, v3}, Lcom/android/phone/InVTCallScreen;->access$5402(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 8561
+    .line 8576
     :goto_3
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -534,7 +534,7 @@
 
     goto/16 :goto_2
 
-    .line 8556
+    .line 8571
     :cond_5
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$28;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -543,7 +543,7 @@
 
     goto :goto_3
 
-    .line 8421
+    .line 8436
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

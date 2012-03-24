@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9839
+    .line 9856
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$53;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +42,13 @@
     .parameter "dialog"
 
     .prologue
-    .line 9841
+    .line 9858
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$53;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InVTCallScreen;->removeDialog(I)V
 
-    .line 9842
+    .line 9859
     return-void
 .end method

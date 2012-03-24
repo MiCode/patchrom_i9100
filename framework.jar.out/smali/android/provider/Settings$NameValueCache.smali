@@ -15,6 +15,17 @@
 
 
 # static fields
+.field private static final DISABLED_CACHE:Ljava/util/HashSet; = null
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashSet",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private static final NAME_EQ_PLACEHOLDER:Ljava/lang/String; = "name=?"
 
 .field private static final SELECT_VALUE:[Ljava/lang/String;
@@ -62,6 +73,28 @@
 
     sput-object v0, Landroid/provider/Settings$NameValueCache;->SELECT_VALUE:[Ljava/lang/String;
 
+    .line 729
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    sput-object v0, Landroid/provider/Settings$NameValueCache;->DISABLED_CACHE:Ljava/util/HashSet;
+
+    .line 730
+    sget-object v0, Landroid/provider/Settings$NameValueCache;->DISABLED_CACHE:Ljava/util/HashSet;
+
+    const-string v1, "accelerometer_rotation"
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 731
+    sget-object v0, Landroid/provider/Settings$NameValueCache;->DISABLED_CACHE:Ljava/util/HashSet;
+
+    const-string v1, "airplane_mode_on"
+
+    invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    .line 732
     return-void
 .end method
 
@@ -113,7 +146,7 @@
     .parameter "name"
 
     .prologue
-    .line 727
+    .line 737
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mVersionSystemProperty:Ljava/lang/String;
 
     const-wide/16 v2, 0x0
@@ -122,11 +155,20 @@
 
     move-result-wide v10
 
-    .line 729
+    .line 740
     .local v10, newValuesVersion:J
+    sget-object v1, Landroid/provider/Settings$NameValueCache;->DISABLED_CACHE:Ljava/util/HashSet;
+
+    invoke-virtual {v1, p2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 742
     monitor-enter p0
 
-    .line 730
+    .line 743
     :try_start_0
     iget-wide v1, p0, Landroid/provider/Settings$NameValueCache;->mValuesVersion:J
 
@@ -134,15 +176,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 736
+    .line 749
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 737
+    .line 750
     iput-wide v10, p0, Landroid/provider/Settings$NameValueCache;->mValuesVersion:J
 
-    .line 740
+    .line 753
     :cond_0
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
@@ -152,7 +194,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 741
+    .line 754
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -165,32 +207,33 @@
 
     move-object v12, v1
 
-    .line 797
+    .line 813
     :cond_1
     :goto_0
     return-object v12
 
-    .line 743
+    .line 756
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 745
+    .line 761
+    :cond_3
     const/4 v0, 0x0
 
-    .line 746
+    .line 762
     .local v0, cp:Landroid/content/IContentProvider;
     monitor-enter p0
 
-    .line 747
+    .line 763
     :try_start_1
     iget-object v0, p0, Landroid/provider/Settings$NameValueCache;->mContentProvider:Landroid/content/IContentProvider;
 
-    .line 748
-    if-nez v0, :cond_3
+    .line 764
+    if-nez v0, :cond_4
 
-    .line 749
+    .line 765
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mUri:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
@@ -207,20 +250,20 @@
     .local v8, cp:Landroid/content/IContentProvider;
     move-object v0, v8
 
-    .line 751
+    .line 767
     .end local v8           #cp:Landroid/content/IContentProvider;
     .restart local v0       #cp:Landroid/content/IContentProvider;
-    :cond_3
+    :cond_4
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 757
+    .line 773
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mCallCommand:Ljava/lang/String;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    .line 759
+    .line 775
     :try_start_2
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mCallCommand:Ljava/lang/String;
 
@@ -230,28 +273,28 @@
 
     move-result-object v6
 
-    .line 760
+    .line 776
     .local v6, b:Landroid/os/Bundle;
-    if-eqz v6, :cond_4
+    if-eqz v6, :cond_5
 
-    .line 761
+    .line 777
     invoke-virtual {v6}, Landroid/os/Bundle;->getPairValue()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 762
+    .line 778
     .local v12, value:Ljava/lang/String;
     monitor-enter p0
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 763
+    .line 779
     :try_start_3
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 764
+    .line 780
     monitor-exit p0
 
     goto :goto_0
@@ -268,17 +311,17 @@
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 769
+    .line 785
     .end local v6           #b:Landroid/os/Bundle;
     .end local v12           #value:Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 775
-    :cond_4
+    .line 791
+    :cond_5
     const/4 v7, 0x0
 
-    .line 777
+    .line 793
     .local v7, c:Landroid/database/Cursor;
     :try_start_5
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mUri:Landroid/net/Uri;
@@ -301,10 +344,10 @@
 
     move-result-object v7
 
-    .line 779
-    if-nez v7, :cond_5
+    .line 795
+    if-nez v7, :cond_6
 
-    .line 780
+    .line 796
     const-string v1, "Settings"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -342,17 +385,17 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 781
+    .line 797
     const/4 v12, 0x0
 
-    .line 797
+    .line 813
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 743
+    .line 756
     .end local v0           #cp:Landroid/content/IContentProvider;
     .end local v7           #c:Landroid/database/Cursor;
     :catchall_1
@@ -365,7 +408,7 @@
 
     throw v1
 
-    .line 751
+    .line 767
     .restart local v0       #cp:Landroid/content/IContentProvider;
     :catchall_2
     move-exception v1
@@ -377,15 +420,15 @@
 
     throw v1
 
-    .line 784
+    .line 800
     .restart local v7       #c:Landroid/database/Cursor;
-    :cond_5
+    :cond_6
     :try_start_8
     invoke-interface {v7}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     const/4 v1, 0x0
 
@@ -393,7 +436,7 @@
 
     move-result-object v12
 
-    .line 785
+    .line 801
     .restart local v12       #value:Ljava/lang/String;
     :goto_1
     monitor-enter p0
@@ -401,32 +444,32 @@
     .catchall {:try_start_8 .. :try_end_8} :catchall_4
     .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 786
+    .line 802
     :try_start_9
     iget-object v1, p0, Landroid/provider/Settings$NameValueCache;->mValues:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 787
+    .line 803
     monitor-exit p0
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 797
+    .line 813
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
 
-    .line 784
+    .line 800
     .end local v12           #value:Ljava/lang/String;
-    :cond_6
+    :cond_7
     const/4 v12, 0x0
 
     goto :goto_1
 
-    .line 787
+    .line 803
     .restart local v12       #value:Ljava/lang/String;
     :catchall_3
     move-exception v1
@@ -442,12 +485,12 @@
     .catchall {:try_start_b .. :try_end_b} :catchall_4
     .catch Landroid/os/RemoteException; {:try_start_b .. :try_end_b} :catch_1
 
-    .line 793
+    .line 809
     .end local v12           #value:Ljava/lang/String;
     :catch_1
     move-exception v9
 
-    .line 794
+    .line 810
     .local v9, e:Landroid/os/RemoteException;
     :try_start_c
     const-string v1, "Settings"
@@ -486,10 +529,10 @@
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_4
 
-    .line 795
+    .line 811
     const/4 v12, 0x0
 
-    .line 797
+    .line 813
     if-eqz v7, :cond_1
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
@@ -500,10 +543,10 @@
     :catchall_4
     move-exception v1
 
-    if-eqz v7, :cond_7
+    if-eqz v7, :cond_8
 
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    :cond_7
+    :cond_8
     throw v1
 .end method

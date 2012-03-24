@@ -321,7 +321,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0158
+    const v2, 0x7f0e015a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -383,7 +383,7 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setCancelable(Z)Landroid/app/AlertDialog$Builder;
 
     .line 189
-    const v1, 0x7f0e02cd
+    const v1, 0x7f0e02cf
 
     invoke-virtual {p0, v1}, Lcom/android/phone/DeleteFdnContactScreen;->getString(I)Ljava/lang/String;
 
@@ -392,7 +392,7 @@
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 190
-    const v1, 0x7f0e017d
+    const v1, 0x7f0e017f
 
     invoke-virtual {p0, v1}, Lcom/android/phone/DeleteFdnContactScreen;->getString(I)Ljava/lang/String;
 
@@ -442,7 +442,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0159
+    const v2, 0x7f0e015b
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -611,7 +611,7 @@
 
     move-result-object v0
 
-    const v4, 0x7f0e0157
+    const v4, 0x7f0e0159
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 

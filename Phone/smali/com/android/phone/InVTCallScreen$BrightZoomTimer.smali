@@ -26,13 +26,13 @@
     .parameter "countDownInterval"
 
     .prologue
-    .line 10852
+    .line 10869
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->this$0:Lcom/android/phone/InVTCallScreen;
 
-    .line 10853
+    .line 10870
     invoke-direct {p0, p2, p3, p4, p5}, Landroid/os/CountDownTimer;-><init>(JJ)V
 
-    .line 10855
+    .line 10872
     return-void
 .end method
 
@@ -42,14 +42,14 @@
     .locals 2
 
     .prologue
-    .line 10859
+    .line 10876
     const-string v0, "InVTCallScreen"
 
     const-string v1, "Count down timer is finished"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10860
+    .line 10877
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->SeekBarLayout:Landroid/widget/LinearLayout;
@@ -61,7 +61,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 10861
+    .line 10878
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->duringEndCalllayout:Landroid/widget/LinearLayout;
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 10862
+    .line 10879
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, -0x1
@@ -81,7 +81,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mSeekBarSelection:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$11502(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 10863
+    .line 10880
     return-void
 .end method
 
@@ -90,13 +90,13 @@
     .parameter "millisUntilFinished"
 
     .prologue
-    .line 10867
+    .line 10884
     const-string v0, "InVTCallScreen"
 
     const-string v1, "In onTick of countdown timer"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10869
+    .line 10886
     return-void
 .end method

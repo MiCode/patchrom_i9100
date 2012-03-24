@@ -196,7 +196,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0e02ca
+    const v2, 0x7f0e02cc
 
     invoke-virtual {v0, v2}, Landroid/widget/Toast;->setText(I)V
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0e014c
+    const v2, 0x7f0e014e
 
     invoke-virtual {v0, v2}, Landroid/widget/Toast;->setText(I)V
 
@@ -325,7 +325,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0e0179
+    const v2, 0x7f0e017b
 
     invoke-virtual {v0, v2}, Landroid/widget/Toast;->setText(I)V
 

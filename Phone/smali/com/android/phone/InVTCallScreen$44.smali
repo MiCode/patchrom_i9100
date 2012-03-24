@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9699
+    .line 9716
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$44;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,18 +43,18 @@
     .parameter "whichButton"
 
     .prologue
-    .line 9702
+    .line 9719
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$44;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InVTCallScreen;->removeDialog(I)V
 
-    .line 9703
+    .line 9720
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$44;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen;->finish()V
 
-    .line 9704
+    .line 9721
     return-void
 .end method

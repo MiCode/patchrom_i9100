@@ -80,7 +80,7 @@
     if-nez v0, :cond_0
 
     .line 665
-    const v0, 0x7f0e01bd
+    const v0, 0x7f0e01bf
 
     const/4 v1, 0x1
 
@@ -101,7 +101,7 @@
     return-object v0
 
     :cond_0
-    const v0, 0x7f0e01be
+    const v0, 0x7f0e01c0
 
     invoke-virtual {p0, v0}, Lcom/android/phone/EmergencyDialer;->getText(I)Ljava/lang/CharSequence;
 
@@ -988,7 +988,7 @@
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e01ba
+    const v2, 0x7f0e01bc
 
     invoke-virtual {p0, v2}, Lcom/android/phone/EmergencyDialer;->getText(I)Ljava/lang/CharSequence;
 

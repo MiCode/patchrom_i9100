@@ -1007,7 +1007,7 @@
 
     .line 324
     .local v4, message:Landroid/widget/TextView;
-    const v6, 0x7f0e049c
+    const v6, 0x7f0e049e
 
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setText(I)V
 
@@ -1015,7 +1015,7 @@
     invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
     .line 326
-    const v6, 0x7f0e049d
+    const v6, 0x7f0e049f
 
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -1026,7 +1026,7 @@
 
     .line 335
     .local v5, restartListener:Landroid/content/DialogInterface$OnClickListener;
-    const v6, 0x7f0e049e
+    const v6, 0x7f0e04a0
 
     invoke-virtual {v0, v6, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1078,13 +1078,13 @@
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 358
-    const v6, 0x7f0e04a2
+    const v6, 0x7f0e04a4
 
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v6
 
-    const v7, 0x7f0e04a1
+    const v7, 0x7f0e04a3
 
     new-instance v8, Lcom/android/phone/OverturnTutorialIncallScreen$8;
 
@@ -1094,7 +1094,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f0e017f
+    const v7, 0x7f0e0181
 
     new-instance v8, Lcom/android/phone/OverturnTutorialIncallScreen$7;
 

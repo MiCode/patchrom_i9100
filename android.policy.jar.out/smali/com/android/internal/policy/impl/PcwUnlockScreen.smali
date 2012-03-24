@@ -116,12 +116,12 @@
 
     .line 112
     .local v2, inflater:Landroid/view/LayoutInflater;
-    const v4, 0x10900db
+    const v4, 0x10900dd
 
     invoke-virtual {v2, v4, p0, v7}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 114
-    const v4, 0x102039d
+    const v4, 0x102039f
 
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/PcwUnlockScreen;->findViewById(I)Landroid/view/View;
 
@@ -132,7 +132,7 @@
     iput-object v4, p0, Lcom/android/internal/policy/impl/PcwUnlockScreen;->mLockstr:Landroid/widget/TextView;
 
     .line 115
-    const v4, 0x102039f
+    const v4, 0x10203a1
 
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/PcwUnlockScreen;->findViewById(I)Landroid/view/View;
 
@@ -143,7 +143,7 @@
     iput-object v4, p0, Lcom/android/internal/policy/impl/PcwUnlockScreen;->mLockMessage:Landroid/widget/TextView;
 
     .line 117
-    const v4, 0x10203a1
+    const v4, 0x10203a3
 
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/PcwUnlockScreen;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
     iput-object v4, p0, Lcom/android/internal/policy/impl/PcwUnlockScreen;->mEmergencyCall:Landroid/widget/Button;
 
     .line 120
-    const v4, 0x10203a2
+    const v4, 0x10203a4
 
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/PcwUnlockScreen;->findViewById(I)Landroid/view/View;
 
@@ -539,7 +539,7 @@
     .local v2, inflater2:Landroid/view/LayoutInflater;
     iget-object v8, p0, Lcom/android/internal/policy/impl/PcwUnlockScreen;->mContext:Landroid/content/Context;
 
-    const v9, 0x10900da
+    const v9, 0x10900dc
 
     invoke-static {v8, v9, v11}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -547,7 +547,7 @@
 
     .line 212
     .local v5, layout:Landroid/view/View;
-    const v8, 0x1020397
+    const v8, 0x1020399
 
     invoke-virtual {v5, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -558,7 +558,7 @@
     iput-object v8, p0, Lcom/android/internal/policy/impl/PcwUnlockScreen;->mPassword:Landroid/widget/EditText;
 
     .line 213
-    const v8, 0x1020399
+    const v8, 0x102039b
 
     invoke-virtual {v5, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -569,7 +569,7 @@
     iput-object v8, p0, Lcom/android/internal/policy/impl/PcwUnlockScreen;->mOk:Landroid/widget/Button;
 
     .line 214
-    const v8, 0x102039a
+    const v8, 0x102039c
 
     invoke-virtual {v5, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

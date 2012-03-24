@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 4401
+    .line 4399
     iput-object p1, p0, Lcom/android/phone/InCallScreen$22;->this$0:Lcom/android/phone/InCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +42,12 @@
     .parameter "dialog"
 
     .prologue
-    .line 4403
+    .line 4401
     iget-object v0, p0, Lcom/android/phone/InCallScreen$22;->this$0:Lcom/android/phone/InCallScreen;
 
     #calls: Lcom/android/phone/InCallScreen;->bailOutAfterErrorDialog()V
     invoke-static {v0}, Lcom/android/phone/InCallScreen;->access$3400(Lcom/android/phone/InCallScreen;)V
 
-    .line 4404
+    .line 4402
     return-void
 .end method

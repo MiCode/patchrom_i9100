@@ -70,7 +70,7 @@
 
     .line 43
     .local v2, r:Landroid/content/res/Resources;
-    const v3, 0x7f0e03ad
+    const v3, 0x7f0e03af
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -90,7 +90,7 @@
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e03ae
+    const v5, 0x7f0e03b0
 
     invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -101,7 +101,7 @@
     .line 46
     iget-object v3, v1, Lcom/android/internal/app/AlertController$AlertParams;->mItems:[Ljava/lang/CharSequence;
 
-    const v4, 0x7f0e03af
+    const v4, 0x7f0e03b1
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

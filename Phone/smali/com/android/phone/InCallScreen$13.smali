@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 3379
+    .line 3377
     iput-object p1, p0, Lcom/android/phone/InCallScreen$13;->this$0:Lcom/android/phone/InCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InCallScreen$13;->val$msg2:Landroid/os/Message;
@@ -48,12 +48,12 @@
     .parameter "which"
 
     .prologue
-    .line 3383
+    .line 3381
     iget-object v0, p0, Lcom/android/phone/InCallScreen$13;->val$msg2:Landroid/os/Message;
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3385
+    .line 3383
     iget-object v0, p0, Lcom/android/phone/InCallScreen$13;->this$0:Lcom/android/phone/InCallScreen;
 
     #getter for: Lcom/android/phone/InCallScreen;->mApp:Lcom/android/phone/PhoneApp;
@@ -63,6 +63,6 @@
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
 
-    .line 3386
+    .line 3384
     return-void
 .end method

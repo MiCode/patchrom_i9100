@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 8927
+    .line 8942
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$31$3;->this$1:Lcom/android/phone/InVTCallScreen$31;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 4
 
     .prologue
-    .line 8929
+    .line 8944
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$31$3;->this$1:Lcom/android/phone/InVTCallScreen$31;
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$31;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -91,6 +91,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lsiso/vt/VTManager;->startCamera(Landroid/view/Surface;II)V
 
-    .line 8933
+    .line 8948
     return-void
 .end method

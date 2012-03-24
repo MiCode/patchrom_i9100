@@ -48,23 +48,23 @@
     .prologue
     const-wide v2, -0x7fffffffffffffffL
 
-    .line 9987
+    .line 10014
     iput-object p1, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9988
+    .line 10015
     iput-wide v2, p0, Landroid/webkit/WebView$TouchEventQueue;->mNextTouchSequence:J
 
-    .line 9989
+    .line 10016
     const-wide/high16 v0, -0x8000
 
     iput-wide v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
-    .line 9990
+    .line 10017
     iput-wide v2, p0, Landroid/webkit/WebView$TouchEventQueue;->mIgnoreUntilSequence:J
 
-    .line 10002
+    .line 10029
     const-wide v0, 0x7fffffffffffffffL
 
     iput-wide v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastEventTime:J
@@ -78,7 +78,7 @@
     .parameter "x1"
 
     .prologue
-    .line 9987
+    .line 10014
     invoke-direct {p0, p1}, Landroid/webkit/WebView$TouchEventQueue;-><init>(Landroid/webkit/WebView;)V
 
     return-void
@@ -90,7 +90,7 @@
     .parameter "sequence"
 
     .prologue
-    .line 10226
+    .line 10253
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -110,7 +110,7 @@
 
     if-nez v8, :cond_0
 
-    .line 10231
+    .line 10258
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v8
@@ -128,7 +128,7 @@
 
     sub-int v0, v8, v9
 
-    .line 10232
+    .line 10259
     .local v0, dx:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -147,7 +147,7 @@
 
     sub-int v1, v8, v9
 
-    .line 10233
+    .line 10260
     .local v1, dy:I
     mul-int v8, v0, v0
 
@@ -164,7 +164,7 @@
 
     if-le v8, v9, :cond_0
 
-    .line 10234
+    .line 10261
     iget-object v8, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-object v8, v8, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -173,7 +173,7 @@
 
     invoke-virtual {v8, v9}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 10235
+    .line 10262
     iget-object v8, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-object v8, v8, Landroid/webkit/WebView;->mPrivateHandler:Landroid/os/Handler;
@@ -182,7 +182,7 @@
 
     invoke-virtual {v8, v9}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 10239
+    .line 10266
     .end local v0           #dx:I
     .end local v1           #dy:I
     :cond_0
@@ -190,7 +190,7 @@
 
     if-nez v8, :cond_2
 
-    .line 10240
+    .line 10267
     iget-wide v8, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
     cmp-long v8, p2, v8
@@ -199,17 +199,17 @@
 
     const/4 v8, 0x1
 
-    .line 10287
+    .line 10314
     :goto_0
     return v8
 
-    .line 10240
+    .line 10267
     :cond_1
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 10245
+    .line 10272
     :cond_2
     if-eqz p1, :cond_4
 
@@ -219,16 +219,16 @@
 
     if-nez v8, :cond_4
 
-    .line 10246
+    .line 10273
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v2
 
-    .line 10247
+    .line 10274
     .local v2, eventTime:J
     iget-wide v4, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastEventTime:J
 
-    .line 10248
+    .line 10275
     .local v4, lastHandledEventTime:J
     const-wide/16 v8, 0x3e8
 
@@ -238,20 +238,20 @@
 
     if-lez v8, :cond_4
 
-    .line 10249
+    .line 10276
     const-string/jumbo v8, "webview"
 
     const-string v9, "Got ACTION_DOWN but still waiting on stale event. Catching up."
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10251
+    .line 10278
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->runQueuedAndPreQueuedEvents()V
 
-    .line 10254
+    .line 10281
     iget-object v6, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10255
+    .line 10282
     .local v6, qd:Landroid/webkit/WebView$QueuedTouch;
     :goto_1
     if-eqz v6, :cond_3
@@ -262,31 +262,31 @@
 
     if-gez v8, :cond_3
 
-    .line 10256
+    .line 10283
     move-object v7, v6
 
-    .line 10257
+    .line 10284
     .local v7, recycleMe:Landroid/webkit/WebView$QueuedTouch;
     iget-object v6, v6, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10258
+    .line 10285
     invoke-direct {p0, v7}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
     goto :goto_1
 
-    .line 10260
+    .line 10287
     .end local v7           #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     :cond_3
     iput-object v6, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10261
+    .line 10288
     const-wide/16 v8, 0x1
 
     sub-long v8, p2, v8
 
     iput-wide v8, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
-    .line 10265
+    .line 10292
     .end local v2           #eventTime:J
     .end local v4           #lastHandledEventTime:J
     .end local v6           #qd:Landroid/webkit/WebView$QueuedTouch;
@@ -303,10 +303,10 @@
 
     if-lez v8, :cond_6
 
-    .line 10266
+    .line 10293
     iget-object v6, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10267
+    .line 10294
     .restart local v6       #qd:Landroid/webkit/WebView$QueuedTouch;
     :goto_2
     if-eqz v6, :cond_5
@@ -319,24 +319,24 @@
 
     if-gez v8, :cond_5
 
-    .line 10268
+    .line 10295
     move-object v7, v6
 
-    .line 10269
+    .line 10296
     .restart local v7       #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     iget-object v6, v6, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10270
+    .line 10297
     invoke-direct {p0, v7}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
     goto :goto_2
 
-    .line 10272
+    .line 10299
     .end local v7           #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     :cond_5
     iput-object v6, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10273
+    .line 10300
     iget-wide v8, p0, Landroid/webkit/WebView$TouchEventQueue;->mIgnoreUntilSequence:J
 
     const-wide/16 v10, 0x1
@@ -345,17 +345,17 @@
 
     iput-wide v8, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
-    .line 10276
+    .line 10303
     .end local v6           #qd:Landroid/webkit/WebView$QueuedTouch;
     :cond_6
     iget-object v8, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
     if-eqz v8, :cond_8
 
-    .line 10278
+    .line 10305
     iget-object v6, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10279
+    .line 10306
     .restart local v6       #qd:Landroid/webkit/WebView$QueuedTouch;
     :goto_3
     if-eqz v6, :cond_7
@@ -368,24 +368,24 @@
 
     if-gez v8, :cond_7
 
-    .line 10280
+    .line 10307
     move-object v7, v6
 
-    .line 10281
+    .line 10308
     .restart local v7       #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     iget-object v6, v6, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10282
+    .line 10309
     invoke-direct {p0, v7}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
     goto :goto_3
 
-    .line 10284
+    .line 10311
     .end local v7           #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     :cond_7
     iput-object v6, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10287
+    .line 10314
     .end local v6           #qd:Landroid/webkit/WebView$QueuedTouch;
     :cond_8
     iget-wide v8, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
@@ -409,19 +409,19 @@
     .parameter "ev"
 
     .prologue
-    .line 10300
+    .line 10327
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastEventTime:J
 
-    .line 10301
+    .line 10328
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 10302
+    .line 10329
     .local v0, action:I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -431,16 +431,16 @@
 
     if-le v2, v3, :cond_0
 
-    .line 10303
+    .line 10330
     iget-object v2, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v2, p1}, Landroid/webkit/WebView;->handleMultiTouchInWebView(Landroid/view/MotionEvent;)V
 
-    .line 10315
+    .line 10342
     :goto_0
     return-void
 
-    .line 10305
+    .line 10332
     :cond_0
     iget-object v2, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -453,7 +453,7 @@
 
     move-result-object v1
 
-    .line 10306
+    .line 10333
     .local v1, detector:Landroid/webkit/WebviewScaleGestureDetector;
     if-eqz v1, :cond_1
 
@@ -468,10 +468,10 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 10310
+    .line 10337
     invoke-virtual {v1, p1}, Landroid/webkit/WebviewScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 10313
+    .line 10340
     :cond_1
     iget-object v2, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -502,27 +502,27 @@
     .parameter "qt"
 
     .prologue
-    .line 10291
+    .line 10318
     iget-object v0, p1, Landroid/webkit/WebView$QueuedTouch;->mTed:Landroid/webkit/WebViewCore$TouchEventData;
 
     if-eqz v0, :cond_0
 
-    .line 10292
+    .line 10319
     iget-object v0, p1, Landroid/webkit/WebView$QueuedTouch;->mTed:Landroid/webkit/WebViewCore$TouchEventData;
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView$TouchEventQueue;->handleQueuedTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 10297
+    .line 10324
     :goto_0
     return-void
 
-    .line 10294
+    .line 10321
     :cond_0
     iget-object v0, p1, Landroid/webkit/WebView$QueuedTouch;->mEvent:Landroid/view/MotionEvent;
 
     invoke-direct {p0, v0}, Landroid/webkit/WebView$TouchEventQueue;->handleQueuedMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 10295
+    .line 10322
     iget-object v0, p1, Landroid/webkit/WebView$QueuedTouch;->mEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
@@ -545,12 +545,12 @@
 
     const/4 v3, 0x0
 
-    .line 10318
+    .line 10345
     iget-object v2, p1, Landroid/webkit/WebViewCore$TouchEventData;->mMotionEvent:Landroid/view/MotionEvent;
 
     if-eqz v2, :cond_0
 
-    .line 10319
+    .line 10346
     iget-object v2, p1, Landroid/webkit/WebViewCore$TouchEventData;->mMotionEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v2}, Landroid/view/MotionEvent;->getEventTime()J
@@ -559,13 +559,13 @@
 
     iput-wide v4, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastEventTime:J
 
-    .line 10321
+    .line 10348
     :cond_0
     iget-boolean v2, p1, Landroid/webkit/WebViewCore$TouchEventData;->mReprocess:Z
 
     if-nez v2, :cond_6
 
-    .line 10322
+    .line 10349
     iget v2, p1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
     if-nez v2, :cond_4
@@ -579,7 +579,7 @@
 
     if-ne v2, v6, :cond_4
 
-    .line 10327
+    .line 10354
     iget-object v2, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-boolean v3, p1, Landroid/webkit/WebViewCore$TouchEventData;->mNativeResult:Z
@@ -592,7 +592,7 @@
     #setter for: Landroid/webkit/WebView;->mPreventDefault:I
     invoke-static {v2, v0}, Landroid/webkit/WebView;->access$4102(Landroid/webkit/WebView;I)I
 
-    .line 10337
+    .line 10364
     :cond_2
     :goto_0
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
@@ -604,7 +604,7 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 10341
+    .line 10368
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mTouchHighlightRegion:Landroid/graphics/Region;
@@ -614,12 +614,12 @@
 
     invoke-virtual {v0}, Landroid/graphics/Region;->setEmpty()V
 
-    .line 10420
+    .line 10447
     :cond_3
     :goto_1
     return-void
 
-    .line 10329
+    .line 10356
     :cond_4
     iget v2, p1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
@@ -634,7 +634,7 @@
 
     if-ne v2, v0, :cond_2
 
-    .line 10334
+    .line 10361
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-boolean v2, p1, Landroid/webkit/WebViewCore$TouchEventData;->mNativeResult:Z
@@ -649,7 +649,7 @@
 
     goto :goto_0
 
-    .line 10344
+    .line 10371
     :cond_6
     iget-object v0, p1, Landroid/webkit/WebViewCore$TouchEventData;->mPoints:[Landroid/graphics/Point;
 
@@ -657,7 +657,7 @@
 
     if-le v0, v6, :cond_8
 
-    .line 10345
+    .line 10372
     iget-boolean v0, p1, Landroid/webkit/WebViewCore$TouchEventData;->mNativeResult:Z
 
     if-nez v0, :cond_7
@@ -671,13 +671,13 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 10346
+    .line 10373
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mPreventDefault:I
     invoke-static {v0, v3}, Landroid/webkit/WebView;->access$4102(Landroid/webkit/WebView;I)I
 
-    .line 10347
+    .line 10374
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-object v1, p1, Landroid/webkit/WebViewCore$TouchEventData;->mMotionEvent:Landroid/view/MotionEvent;
@@ -686,7 +686,7 @@
 
     goto :goto_1
 
-    .line 10349
+    .line 10376
     :cond_7
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -695,20 +695,20 @@
 
     goto :goto_1
 
-    .line 10356
+    .line 10383
     :cond_8
     iget-boolean v0, p1, Landroid/webkit/WebViewCore$TouchEventData;->mNativeResult:Z
 
     if-nez v0, :cond_3
 
-    .line 10358
+    .line 10385
     iget v0, p1, Landroid/webkit/WebViewCore$TouchEventData;->mAction:I
 
     sparse-switch v0, :sswitch_data_0
 
     goto :goto_1
 
-    .line 10360
+    .line 10387
     :sswitch_0
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -723,7 +723,7 @@
     #setter for: Landroid/webkit/WebView;->mLastDeferTouchX:F
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4302(Landroid/webkit/WebView;F)F
 
-    .line 10361
+    .line 10388
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-object v1, p1, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -737,7 +737,7 @@
     #setter for: Landroid/webkit/WebView;->mLastDeferTouchY:F
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4402(Landroid/webkit/WebView;F)F
 
-    .line 10362
+    .line 10389
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mDeferTouchMode:I
@@ -745,7 +745,7 @@
 
     goto :goto_1
 
-    .line 10366
+    .line 10393
     :sswitch_1
     iget-object v0, p1, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
@@ -753,7 +753,7 @@
 
     iget v10, v0, Landroid/graphics/Point;->x:I
 
-    .line 10367
+    .line 10394
     .local v10, x:I
     iget-object v0, p1, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
 
@@ -761,7 +761,7 @@
 
     iget v11, v0, Landroid/graphics/Point;->y:I
 
-    .line 10369
+    .line 10396
     .local v11, y:I
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -772,13 +772,13 @@
 
     if-eq v0, v1, :cond_9
 
-    .line 10370
+    .line 10397
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mDeferTouchMode:I
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4502(Landroid/webkit/WebView;I)I
 
-    .line 10371
+    .line 10398
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     int-to-float v1, v10
@@ -786,7 +786,7 @@
     #setter for: Landroid/webkit/WebView;->mLastDeferTouchX:F
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4302(Landroid/webkit/WebView;F)F
 
-    .line 10372
+    .line 10399
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     int-to-float v1, v11
@@ -794,7 +794,7 @@
     #setter for: Landroid/webkit/WebView;->mLastDeferTouchY:F
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4402(Landroid/webkit/WebView;F)F
 
-    .line 10373
+    .line 10400
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     int-to-float v1, v10
@@ -804,13 +804,13 @@
     #calls: Landroid/webkit/WebView;->startScrollingLayer(FF)V
     invoke-static {v0, v1, v2}, Landroid/webkit/WebView;->access$4600(Landroid/webkit/WebView;FF)V
 
-    .line 10374
+    .line 10401
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->startDrag()V
     invoke-static {v0}, Landroid/webkit/WebView;->access$4700(Landroid/webkit/WebView;)V
 
-    .line 10376
+    .line 10403
     :cond_9
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -851,7 +851,7 @@
 
     sub-int v7, v0, v1
 
-    .line 10379
+    .line 10406
     .local v7, deltaX:I
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -892,14 +892,14 @@
 
     sub-int v8, v0, v1
 
-    .line 10382
+    .line 10409
     .local v8, deltaY:I
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #calls: Landroid/webkit/WebView;->doDrag(II)V
     invoke-static {v0, v7, v8}, Landroid/webkit/WebView;->access$5200(Landroid/webkit/WebView;II)V
 
-    .line 10383
+    .line 10410
     if-eqz v7, :cond_a
 
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
@@ -909,7 +909,7 @@
     #setter for: Landroid/webkit/WebView;->mLastDeferTouchX:F
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4302(Landroid/webkit/WebView;F)F
 
-    .line 10384
+    .line 10411
     :cond_a
     if-eqz v8, :cond_3
 
@@ -922,7 +922,7 @@
 
     goto/16 :goto_1
 
-    .line 10389
+    .line 10416
     .end local v7           #deltaX:I
     .end local v8           #deltaY:I
     .end local v10           #x:I
@@ -937,7 +937,7 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 10391
+    .line 10418
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-object v0, v0, Landroid/webkit/WebView;->mScroller:Landroid/widget/OverScroller;
@@ -972,15 +972,15 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/widget/OverScroller;->springBack(IIIIII)Z
 
-    .line 10394
+    .line 10421
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->invalidate()V
 
-    .line 10395
+    .line 10422
     invoke-static {}, Landroid/webkit/WebViewCore;->resumePriority()V
 
-    .line 10396
+    .line 10423
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mWebViewCore:Landroid/webkit/WebViewCore;
@@ -990,7 +990,7 @@
 
     invoke-static {v0}, Landroid/webkit/WebViewCore;->resumeUpdatePicture(Landroid/webkit/WebViewCore;)V
 
-    .line 10398
+    .line 10425
     :cond_b
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -999,7 +999,7 @@
 
     goto/16 :goto_1
 
-    .line 10402
+    .line 10429
     :sswitch_3
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -1014,7 +1014,7 @@
     #setter for: Landroid/webkit/WebView;->mLastDeferTouchX:F
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4302(Landroid/webkit/WebView;F)F
 
-    .line 10403
+    .line 10430
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     iget-object v1, p1, Landroid/webkit/WebViewCore$TouchEventData;->mPointsInView:[Landroid/graphics/Point;
@@ -1028,7 +1028,7 @@
     #setter for: Landroid/webkit/WebView;->mLastDeferTouchY:F
     invoke-static {v0, v1}, Landroid/webkit/WebView;->access$4402(Landroid/webkit/WebView;F)F
 
-    .line 10404
+    .line 10431
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #getter for: Landroid/webkit/WebView;->mZoomManager:Landroid/webkit/ZoomManager;
@@ -1056,7 +1056,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/webkit/ZoomManager;->handleDoubleTap(FF)V
 
-    .line 10405
+    .line 10432
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     #setter for: Landroid/webkit/WebView;->mDeferTouchMode:I
@@ -1064,7 +1064,7 @@
 
     goto/16 :goto_1
 
-    .line 10408
+    .line 10435
     :sswitch_4
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -1072,7 +1072,7 @@
 
     move-result-object v9
 
-    .line 10410
+    .line 10437
     .local v9, hitTest:Landroid/webkit/WebView$HitTestResult;
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -1095,13 +1095,13 @@
 
     if-eqz v0, :cond_d
 
-    .line 10413
+    .line 10440
     :cond_c
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->performLongClick()Z
 
-    .line 10415
+    .line 10442
     :cond_d
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->this$0:Landroid/webkit/WebView;
 
@@ -1110,7 +1110,7 @@
 
     goto/16 :goto_1
 
-    .line 10358
+    .line 10385
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -1126,28 +1126,28 @@
     .locals 2
 
     .prologue
-    .line 10009
+    .line 10036
     iget-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleBin:Landroid/webkit/WebView$QueuedTouch;
 
     if-eqz v1, :cond_0
 
-    .line 10010
+    .line 10037
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleBin:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10011
+    .line 10038
     .local v0, result:Landroid/webkit/WebView$QueuedTouch;
     iget-object v1, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     iput-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleBin:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10012
+    .line 10039
     iget v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleCount:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleCount:I
 
-    .line 10015
+    .line 10042
     .end local v0           #result:Landroid/webkit/WebView$QueuedTouch;
     :goto_0
     return-object v0
@@ -1167,29 +1167,29 @@
     .parameter "qd"
 
     .prologue
-    .line 10077
+    .line 10104
     iget v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleCount:I
 
     const/16 v1, 0xf
 
     if-ge v0, v1, :cond_0
 
-    .line 10078
+    .line 10105
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleBin:Landroid/webkit/WebView$QueuedTouch;
 
     iput-object v0, p1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10079
+    .line 10106
     iput-object p1, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleBin:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10080
+    .line 10107
     iget v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mQueuedTouchRecycleCount:I
 
-    .line 10082
+    .line 10109
     :cond_0
     return-void
 .end method
@@ -1200,10 +1200,10 @@
     .prologue
     const-wide/16 v6, 0x1
 
-    .line 10214
+    .line 10241
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10215
+    .line 10242
     .local v0, qd:Landroid/webkit/WebView$QueuedTouch;
     :goto_0
     if-eqz v0, :cond_0
@@ -1218,20 +1218,20 @@
 
     if-nez v2, :cond_0
 
-    .line 10216
+    .line 10243
     invoke-direct {p0, v0}, Landroid/webkit/WebView$TouchEventQueue;->handleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
-    .line 10217
+    .line 10244
     move-object v1, v0
 
-    .line 10218
+    .line 10245
     .local v1, recycleMe:Landroid/webkit/WebView$QueuedTouch;
     iget-object v0, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10219
+    .line 10246
     invoke-direct {p0, v1}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
-    .line 10220
+    .line 10247
     iget-wide v2, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
     add-long/2addr v2, v6
@@ -1240,12 +1240,12 @@
 
     goto :goto_0
 
-    .line 10222
+    .line 10249
     .end local v1           #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     :cond_0
     iput-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10223
+    .line 10250
     return-void
 .end method
 
@@ -1257,14 +1257,14 @@
 
     const-wide/16 v13, 0x1
 
-    .line 10029
+    .line 10056
     iget-object v5, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10030
+    .line 10057
     .local v5, qd:Landroid/webkit/WebView$QueuedTouch;
     const/4 v0, 0x1
 
-    .line 10031
+    .line 10058
     .local v0, fromPreQueue:Z
     :goto_0
     if-eqz v5, :cond_5
@@ -1279,33 +1279,33 @@
 
     if-nez v9, :cond_5
 
-    .line 10032
+    .line 10059
     invoke-direct {p0, v5}, Landroid/webkit/WebView$TouchEventQueue;->handleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
-    .line 10033
+    .line 10060
     move-object v6, v5
 
-    .line 10034
+    .line 10061
     .local v6, recycleMe:Landroid/webkit/WebView$QueuedTouch;
     if-eqz v0, :cond_0
 
-    .line 10035
+    .line 10062
     iget-object v9, v5, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     iput-object v9, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10039
+    .line 10066
     :goto_1
     invoke-direct {p0, v6}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
-    .line 10040
+    .line 10067
     iget-wide v9, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
     add-long/2addr v9, v13
 
     iput-wide v9, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
-    .line 10042
+    .line 10069
     iget-object v9, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
     if-eqz v9, :cond_1
@@ -1314,7 +1314,7 @@
 
     iget-wide v1, v9, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
 
-    .line 10043
+    .line 10070
     .local v1, nextPre:J
     :goto_2
     iget-object v9, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
@@ -1325,7 +1325,7 @@
 
     iget-wide v3, v9, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
 
-    .line 10045
+    .line 10072
     .local v3, nextQueued:J
     :goto_3
     cmp-long v9, v1, v3
@@ -1334,17 +1334,17 @@
 
     const/4 v0, 0x1
 
-    .line 10046
+    .line 10073
     :goto_4
     if-eqz v0, :cond_4
 
     iget-object v5, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10047
+    .line 10074
     :goto_5
     goto :goto_0
 
-    .line 10037
+    .line 10064
     .end local v1           #nextPre:J
     .end local v3           #nextQueued:J
     :cond_0
@@ -1357,30 +1357,30 @@
     :cond_1
     move-wide v1, v7
 
-    .line 10042
+    .line 10069
     goto :goto_2
 
     .restart local v1       #nextPre:J
     :cond_2
     move-wide v3, v7
 
-    .line 10043
+    .line 10070
     goto :goto_3
 
-    .line 10045
+    .line 10072
     .restart local v3       #nextQueued:J
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_4
 
-    .line 10046
+    .line 10073
     :cond_4
     iget-object v5, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
     goto :goto_5
 
-    .line 10048
+    .line 10075
     .end local v1           #nextPre:J
     .end local v3           #nextQueued:J
     .end local v6           #recycleMe:Landroid/webkit/WebView$QueuedTouch;
@@ -1397,12 +1397,12 @@
     .prologue
     const-wide/16 v5, 0x1
 
-    .line 10190
+    .line 10217
     invoke-virtual {p0}, Landroid/webkit/WebView$TouchEventQueue;->nextTouchSequence()J
 
     move-result-wide v1
 
-    .line 10192
+    .line 10219
     .local v1, sequence:J
     invoke-direct {p0, p1, v1, v2}, Landroid/webkit/WebView$TouchEventQueue;->dropStaleGestures(Landroid/view/MotionEvent;J)Z
 
@@ -1410,15 +1410,15 @@
 
     if-eqz v3, :cond_0
 
-    .line 10211
+    .line 10238
     :goto_0
     return-void
 
-    .line 10198
+    .line 10225
     :cond_0
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->runNextQueuedEvents()V
 
-    .line 10200
+    .line 10227
     iget-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
     add-long/2addr v3, v5
@@ -1427,22 +1427,22 @@
 
     if-nez v3, :cond_1
 
-    .line 10201
+    .line 10228
     invoke-direct {p0, p1}, Landroid/webkit/WebView$TouchEventQueue;->handleQueuedMotionEvent(Landroid/view/MotionEvent;)V
 
-    .line 10203
+    .line 10230
     iget-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
     add-long/2addr v3, v5
 
     iput-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
-    .line 10206
+    .line 10233
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->runNextQueuedEvents()V
 
     goto :goto_0
 
-    .line 10208
+    .line 10235
     :cond_1
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->obtainQueuedTouch()Landroid/webkit/WebView$QueuedTouch;
 
@@ -1452,7 +1452,7 @@
 
     move-result-object v0
 
-    .line 10209
+    .line 10236
     .local v0, qd:Landroid/webkit/WebView$QueuedTouch;
     iget-object v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
@@ -1484,14 +1484,14 @@
 
     const/4 v3, 0x0
 
-    .line 10125
+    .line 10152
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10126
+    .line 10153
     .local v0, preQueue:Landroid/webkit/WebView$QueuedTouch;
     if-eqz v0, :cond_0
 
-    .line 10129
+    .line 10156
     iget-wide v4, v0, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
 
     iget-wide v6, p1, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
@@ -1500,12 +1500,12 @@
 
     if-nez v4, :cond_2
 
-    .line 10130
+    .line 10157
     iget-object v4, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     iput-object v4, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10146
+    .line 10173
     :cond_0
     :goto_0
     iget-wide v4, p1, Landroid/webkit/WebViewCore$TouchEventData;->mSequence:J
@@ -1516,7 +1516,7 @@
 
     if-gez v4, :cond_4
 
-    .line 10148
+    .line 10175
     const-string/jumbo v4, "webview"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1551,26 +1551,26 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10177
+    .line 10204
     :cond_1
     :goto_1
     return v3
 
-    .line 10132
+    .line 10159
     :cond_2
     move-object v1, v0
 
-    .line 10133
+    .line 10160
     .local v1, prev:Landroid/webkit/WebView$QueuedTouch;
     const/4 v0, 0x0
 
-    .line 10134
+    .line 10161
     :goto_2
     iget-object v4, v1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     if-eqz v4, :cond_0
 
-    .line 10135
+    .line 10162
     iget-object v4, v1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     iget-wide v4, v4, Landroid/webkit/WebView$QueuedTouch;->mSequence:J
@@ -1581,23 +1581,23 @@
 
     if-nez v4, :cond_3
 
-    .line 10136
+    .line 10163
     iget-object v0, v1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10137
+    .line 10164
     iget-object v4, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     iput-object v4, v1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     goto :goto_0
 
-    .line 10140
+    .line 10167
     :cond_3
     iget-object v1, v1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     goto :goto_2
 
-    .line 10153
+    .line 10180
     .end local v1           #prev:Landroid/webkit/WebView$QueuedTouch;
     :cond_4
     iget-object v4, p1, Landroid/webkit/WebViewCore$TouchEventData;->mMotionEvent:Landroid/view/MotionEvent;
@@ -1610,10 +1610,10 @@
 
     if-nez v4, :cond_1
 
-    .line 10159
+    .line 10186
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->runNextQueuedEvents()V
 
-    .line 10161
+    .line 10188
     iget-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
     add-long/2addr v3, v8
@@ -1624,42 +1624,42 @@
 
     if-nez v3, :cond_6
 
-    .line 10162
+    .line 10189
     if-eqz v0, :cond_5
 
-    .line 10163
+    .line 10190
     invoke-direct {p0, v0}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
-    .line 10164
+    .line 10191
     const/4 v0, 0x0
 
-    .line 10166
+    .line 10193
     :cond_5
     invoke-direct {p0, p1}, Landroid/webkit/WebView$TouchEventQueue;->handleQueuedTouchEventData(Landroid/webkit/WebViewCore$TouchEventData;)V
 
-    .line 10168
+    .line 10195
     iget-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
     add-long/2addr v3, v8
 
     iput-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
-    .line 10171
+    .line 10198
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->runNextQueuedEvents()V
 
-    .line 10177
+    .line 10204
     :goto_3
     const/4 v3, 0x1
 
     goto :goto_1
 
-    .line 10174
+    .line 10201
     :cond_6
     if-eqz v0, :cond_7
 
     move-object v2, v0
 
-    .line 10175
+    .line 10202
     .local v2, qd:Landroid/webkit/WebView$QueuedTouch;
     :goto_4
     iget-object v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
@@ -1672,7 +1672,7 @@
 
     goto :goto_3
 
-    .line 10174
+    .line 10201
     :cond_7
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->obtainQueuedTouch()Landroid/webkit/WebView$QueuedTouch;
 
@@ -1684,7 +1684,7 @@
 
     goto :goto_4
 
-    .line 10175
+    .line 10202
     .restart local v2       #qd:Landroid/webkit/WebView$QueuedTouch;
     :cond_8
     iget-object v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
@@ -1700,15 +1700,15 @@
     .locals 2
 
     .prologue
-    .line 10022
+    .line 10049
     iget-wide v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mNextTouchSequence:J
 
     iput-wide v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mIgnoreUntilSequence:J
 
-    .line 10025
+    .line 10052
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->runQueuedAndPreQueuedEvents()V
 
-    .line 10026
+    .line 10053
     return-void
 .end method
 
@@ -1716,7 +1716,7 @@
     .locals 4
 
     .prologue
-    .line 10109
+    .line 10136
     iget-wide v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mNextTouchSequence:J
 
     const-wide/16 v2, 0x1
@@ -1733,7 +1733,7 @@
     .parameter "ted"
 
     .prologue
-    .line 10062
+    .line 10089
     invoke-direct {p0}, Landroid/webkit/WebView$TouchEventQueue;->obtainQueuedTouch()Landroid/webkit/WebView$QueuedTouch;
 
     move-result-object v2
@@ -1742,24 +1742,24 @@
 
     move-result-object v1
 
-    .line 10063
+    .line 10090
     .local v1, newTouch:Landroid/webkit/WebView$QueuedTouch;
     iget-object v2, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
     if-nez v2, :cond_0
 
-    .line 10064
+    .line 10091
     iput-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10074
+    .line 10101
     :goto_0
     return-void
 
-    .line 10066
+    .line 10093
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10068
+    .line 10095
     .local v0, insertionPoint:Landroid/webkit/WebView$QueuedTouch;
     :goto_1
     iget-object v2, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
@@ -1776,18 +1776,18 @@
 
     if-gez v2, :cond_1
 
-    .line 10069
+    .line 10096
     iget-object v0, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     goto :goto_1
 
-    .line 10071
+    .line 10098
     :cond_1
     iget-object v2, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     iput-object v2, v1, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10072
+    .line 10099
     iput-object v1, v0, Landroid/webkit/WebView$QueuedTouch;->mNext:Landroid/webkit/WebView$QueuedTouch;
 
     goto :goto_0
@@ -1799,27 +1799,27 @@
     .prologue
     const-wide v3, -0x7fffffffffffffffL
 
-    .line 10089
+    .line 10116
     iput-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mNextTouchSequence:J
 
-    .line 10090
+    .line 10117
     const-wide/high16 v1, -0x8000
 
     iput-wide v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mLastHandledTouchSequence:J
 
-    .line 10091
+    .line 10118
     iput-wide v3, p0, Landroid/webkit/WebView$TouchEventQueue;->mIgnoreUntilSequence:J
 
-    .line 10092
+    .line 10119
     :goto_0
     iget-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
     if-eqz v1, :cond_0
 
-    .line 10093
+    .line 10120
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10094
+    .line 10121
     .local v0, recycleMe:Landroid/webkit/WebView$QueuedTouch;
     iget-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
@@ -1827,12 +1827,12 @@
 
     iput-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mTouchEventQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10095
+    .line 10122
     invoke-direct {p0, v0}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
     goto :goto_0
 
-    .line 10097
+    .line 10124
     .end local v0           #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     :cond_0
     :goto_1
@@ -1840,10 +1840,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 10098
+    .line 10125
     iget-object v0, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10099
+    .line 10126
     .restart local v0       #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     iget-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
@@ -1851,12 +1851,12 @@
 
     iput-object v1, p0, Landroid/webkit/WebView$TouchEventQueue;->mPreQueue:Landroid/webkit/WebView$QueuedTouch;
 
-    .line 10100
+    .line 10127
     invoke-direct {p0, v0}, Landroid/webkit/WebView$TouchEventQueue;->recycleQueuedTouch(Landroid/webkit/WebView$QueuedTouch;)V
 
     goto :goto_1
 
-    .line 10102
+    .line 10129
     .end local v0           #recycleMe:Landroid/webkit/WebView$QueuedTouch;
     :cond_1
     return-void

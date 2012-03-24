@@ -98,7 +98,7 @@
     .line 902
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00c0
+    const v1, 0x7f0e00c2
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -110,7 +110,7 @@
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00b8
+    const v1, 0x7f0e00ba
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -120,7 +120,7 @@
     :pswitch_1
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00b9
+    const v1, 0x7f0e00bb
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -130,7 +130,7 @@
     :pswitch_2
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00ba
+    const v1, 0x7f0e00bc
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -140,7 +140,7 @@
     :pswitch_3
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00bb
+    const v1, 0x7f0e00bd
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -159,7 +159,7 @@
     .line 887
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00bd
+    const v1, 0x7f0e00bf
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -169,7 +169,7 @@
     :pswitch_5
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00bc
+    const v1, 0x7f0e00be
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -179,7 +179,7 @@
     :pswitch_6
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00be
+    const v1, 0x7f0e00c0
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -189,7 +189,7 @@
     :pswitch_7
     iget-object v0, p0, Lcom/android/phone/Settings;->mButtonPreferredNetworkMode:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e00bf
+    const v1, 0x7f0e00c1
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -1298,7 +1298,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e00a8
+    const v2, 0x7f0e00aa
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1687,13 +1687,13 @@
     .line 689
     iget-object v5, p0, Lcom/android/phone/Settings;->mRoamingWarningDialog:Landroid/app/AlertDialog$Builder;
 
-    const v6, 0x7f0e046f
+    const v6, 0x7f0e0471
 
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
     move-result-object v5
 
-    const v6, 0x7f0e046e
+    const v6, 0x7f0e0470
 
     invoke-virtual {v5, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
@@ -1919,7 +1919,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0e00c7
+    const v9, 0x7f0e00c9
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -2021,7 +2021,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0e02c8
+    const v9, 0x7f0e02ca
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

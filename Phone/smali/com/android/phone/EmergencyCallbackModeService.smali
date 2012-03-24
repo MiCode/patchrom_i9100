@@ -178,7 +178,7 @@
 
     const v5, 0x7f020341
 
-    const v6, 0x7f0e01f4
+    const v6, 0x7f0e01f6
 
     invoke-virtual {p0, v6}, Lcom/android/phone/EmergencyCallbackModeService;->getText(I)Ljava/lang/CharSequence;
 
@@ -215,7 +215,7 @@
     if-eqz v5, :cond_0
 
     .line 178
-    const v5, 0x7f0e01f6
+    const v5, 0x7f0e01f8
 
     invoke-virtual {p0, v5}, Lcom/android/phone/EmergencyCallbackModeService;->getText(I)Ljava/lang/CharSequence;
 
@@ -227,7 +227,7 @@
 
     .line 186
     :goto_0
-    const v5, 0x7f0e01f5
+    const v5, 0x7f0e01f7
 
     invoke-virtual {p0, v5}, Lcom/android/phone/EmergencyCallbackModeService;->getText(I)Ljava/lang/CharSequence;
 
@@ -243,7 +243,7 @@
     .line 192
     iget-object v5, p0, Lcom/android/phone/EmergencyCallbackModeService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    const v6, 0x7f0e01f5
+    const v6, 0x7f0e01f7
 
     invoke-virtual {v5, v6, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
@@ -528,7 +528,7 @@
     .line 105
     iget-object v0, p0, Lcom/android/phone/EmergencyCallbackModeService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    const v1, 0x7f0e01f5
+    const v1, 0x7f0e01f7
 
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
 

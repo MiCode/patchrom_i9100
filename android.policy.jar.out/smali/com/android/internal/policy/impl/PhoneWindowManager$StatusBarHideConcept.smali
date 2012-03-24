@@ -35,12 +35,12 @@
     .parameter
 
     .prologue
-    .line 4833
+    .line 4831
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$StatusBarHideConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4834
+    .line 4832
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -56,7 +56,7 @@
     .parameter "x1"
 
     .prologue
-    .line 4833
+    .line 4831
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$StatusBarHideConcept;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -69,21 +69,21 @@
     .parameter "componentName"
 
     .prologue
-    .line 4852
+    .line 4850
     if-nez p1, :cond_0
 
-    .line 4853
+    .line 4851
     const/4 v0, 0x0
 
-    .line 4857
+    .line 4855
     :goto_0
     return v0
 
-    .line 4856
+    .line 4854
     :cond_0
     monitor-enter p0
 
-    .line 4857
+    .line 4855
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$StatusBarHideConcept;->mComponentNames:Ljava/util/HashSet;
 
@@ -95,7 +95,7 @@
 
     goto :goto_0
 
-    .line 4858
+    .line 4856
     :catchall_0
     move-exception v0
 
@@ -112,30 +112,30 @@
     .parameter "canHide"
 
     .prologue
-    .line 4837
+    .line 4835
     if-nez p1, :cond_0
 
-    .line 4838
+    .line 4836
     const/4 v0, 0x0
 
-    .line 4847
+    .line 4845
     :goto_0
     return v0
 
-    .line 4841
+    .line 4839
     :cond_0
     monitor-enter p0
 
-    .line 4842
+    .line 4840
     if-eqz p2, :cond_1
 
-    .line 4843
+    .line 4841
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$StatusBarHideConcept;->mComponentNames:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 4847
+    .line 4845
     :goto_1
     const/4 v0, 0x1
 
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 4848
+    .line 4846
     :catchall_0
     move-exception v0
 
@@ -153,7 +153,7 @@
 
     throw v0
 
-    .line 4845
+    .line 4843
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$StatusBarHideConcept;->mComponentNames:Ljava/util/HashSet;

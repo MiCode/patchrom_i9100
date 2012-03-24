@@ -295,7 +295,7 @@
     if-ne v1, v8, :cond_4
 
     .line 196
-    const v8, 0x7f0e0168
+    const v8, 0x7f0e016a
 
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -318,7 +318,7 @@
     .line 198
     .end local v7           #text:Ljava/lang/CharSequence;
     :cond_4
-    const v8, 0x7f0e0169
+    const v8, 0x7f0e016b
 
     invoke-virtual {v6, v8}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

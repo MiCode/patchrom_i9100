@@ -162,7 +162,7 @@
     <string name="no_change">변경된 내용이 없습니다</string>
     <string name="sum_voicemail_choose_provider">원하는 음성 메시지 서비스를 선택하세요</string>
     <string name="voicemail_default">내 서비스 사업자</string>
-    <string name="mobile_networks">모바일 네트워크 설정</string>
+    <string name="mobile_networks">모바일 네트워크</string>
     <string name="label_available">사용할 수 있는 네트워크</string>
     <string name="load_networks_progress">검색 중...</string>
     <string name="empty_networks_list">네트워크를 찾을 수 없습니다</string>
@@ -180,6 +180,7 @@
     <string name="preferred_network_mode_title">네트워크 모드</string>
     <string name="preferred_network_mode_summary">네트워크 실행 모드 변경</string>
     <string name="preferred_network_mode_dialogtitle">선호 네트워크 모드</string>
+    <string name="preferred_network_mode_wcdma_perf_summary">선호 네트워크 모드: WCDMA만</string>
     <string name="preferred_network_mode_gsm_only_summary">선호 네트워크 모드: GSM만</string>
     <string name="preferred_network_mode_wcdma_only_summary">선호 네트워크 모드: WCDMA만</string>
     <string name="preferred_network_mode_gsm_wcdma_summary">선호 네트워크 모드: GSM/WCDMA</string>
@@ -675,7 +676,7 @@
     <string name="summary_manageAccounts">SIP 계정 및 상태 관리</string>
     <string name="summary_receiveIncomingCalls">더 많은 배터리를 소모합니다</string>
     <string name="summary_sipCallingOption">목적지가 SIP 주소인 경우만</string>
-    <string name="menu_callerID">발신자 번호</string>
+    <string name="menu_callerID">발신자 이미지</string>
     <string name="summary_callserID">전화를 걸 때 네트워크 사업자의 설정에 따라 내 전화번호를 표시하거나 숨깁니다</string>
     <string name="summary_FDN">FDN 연락처 관리</string>
     <string name="callsettings_voicecall_barring">통화제한</string>
@@ -885,7 +886,7 @@
     <string name="callsettings_allcalls_rejectmessage">수신 거절 메시지</string>
     <string name="app_name">영상통화</string>
     <string name="roaming_done">완료</string>
-    <string name="check_country_access_code">국가명/국가접속번호를 입력하세요.</string>
+    <string name="check_country_access_code">국가명/국제접속번호를 입력하세요.</string>
     <string name="roaming_yes">예</string>
     <string name="roaming_no">아니요</string>
     <string name="not_run_menu_vt">사용할 수 없습니다</string>
@@ -913,6 +914,7 @@
     <string name="NetworkMessage_PhoneOff_OutOf3gCoverage">수신인의 휴대폰이 꺼져 있거나 3G 서비스 지역 밖에 있습니다</string>
     <string name="NetworkMessage_Cannot_Receive_VideoCalls">영상통화를 지원하지 않는 전화번호입니다</string>
     <string name="noise_suppression">소음 억제</string>
+    <string name="unknown_number">발신번호 확인불가</string>
     <string name="cannot_make_secondcall_roamingarea">국제로밍 지역에서는 3자통화를 사용할 수 없습니다.</string>
     <string name="cannot_make_secondcall_without_sendbutton">"전화를 발신할 수 없습니다.
 3자통화를 하시려면 통화버튼을 누른 후에 시도해주세요."</string>
@@ -929,6 +931,12 @@
     <string name="incall_error_not_service">서비스 불가능합니다.</string>
     <string name="can_not_update_roaming_country">로밍 지역에서는 로밍국가정보를 업데이트 할 수 없습니다.</string>
     <string name="disable_network_selection">시스템 사정으로 검색이 불가합니다.</string>
+    <string name="category_voiceCallEqSettings">통화 음질 설정</string>
+    <string name="menu_voiceCallEqListSetting">통화 음질 설정</string>
+    <string name="menu_voiceCallEqAnalysisSetting">설정된 이퀄라이저</string>
+    <string name="personalised_eq_dialog_title">설정된 이퀄라이저</string>
+    <string name="personalised_eq_dialog_msg">이 기능을 사용하기 전에 내게 가장 잘 맞는 이퀄라이저를 찾아야 합니다. 지금 찾을까요?</string>
+    <string name="call_personalised_eq_dialog_msg">이 기능을 사용하려면 [통화] 설정에서 이퀄라이저 최적화를 확인해야 합니다</string>
     <string name="overturn_dialog_message">휴대폰을 뒤집어 벨소리, 메시지 알림음, 알람이 울리지 않게 하세요</string>
     <string name="overturn_title">뒤집어서 음소거</string>
     <string name="try_button">연습</string>
@@ -936,6 +944,23 @@
     <string name="overturn_voicecall">음성통화</string>
     <string name="try_again">다시 시도하세요</string>
     <string name="good_job">성공!</string>
+    <string name="card_title_wrong_number">Wrong number</string>
+    <string name="card_title_call_rejected">Call rejected</string>
+    <string name="card_title_call_end">통화 종료</string>
+    <string name="card_title_no_answer">No answer</string>
+    <string name="card_title_user_busy">User busy</string>
+    <string name="card_title_num_busy">Number busy</string>
+    <string name="card_title_no_answer_a">No answer from user</string>
+    <string name="card_title_no_user">No user responding</string>
+    <string name="card_title_no_circuit">Network busy</string>
+    <string name="card_title_unalloc_num">Number not in use</string>
+    <string name="videocallmessage_title">영상통화 품질 정보</string>
+    <string name="videocallmessage_summary">영상통화 품질을 안내하는 팝업 알림창을 표시하려면 선택합니다</string>
+    <string name="toggle_videocall_speaker">Speaker</string>
+    <string name="videocall_speaker_on">영상통화 시 스피커 모드가 설정되었습니다</string>
+    <string name="videocall_speaker_off">영상통화 시 스피커 모드가 해제되었습니다</string>
+    <string name="toggle_videocall_indicator">영상통화 아이콘 표시</string>
+    <string name="videocall_indicator_summary">영상통화가 지원되는 경우 상태 아이콘이 표시됩니다</string>
     <string name="vtcall_disable_duringwifi">영상통화가 불가능합니다. 네트워크 상태를 확인하세요</string>
     <string name="contactsIconLabel">연락처</string>
     <string name="contactsFavoritesLabel">중요 메일</string>

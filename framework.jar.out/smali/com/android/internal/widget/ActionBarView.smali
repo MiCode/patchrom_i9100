@@ -1182,6 +1182,14 @@
 
     if-nez v1, :cond_0
 
+    const-string v1, "he"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
     const-string/jumbo v1, "iw"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2599,7 +2607,7 @@
     .line 326
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mIndeterminateProgressView:Landroid/widget/ProgressBar;
 
-    const v1, 0x1020307
+    const v1, 0x1020309
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setId(I)V
 
@@ -2634,7 +2642,7 @@
     .line 318
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarView;->mProgressView:Landroid/widget/ProgressBar;
 
-    const v1, 0x1020308
+    const v1, 0x102030a
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setId(I)V
 

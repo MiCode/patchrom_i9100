@@ -583,7 +583,7 @@
 
     .line 3183
     :cond_1
-    const v0, 0x1020307
+    const v0, 0x1020309
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -737,7 +737,7 @@
 
     .line 3197
     :cond_1
-    const v0, 0x1020308
+    const v0, 0x102030a
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -1236,7 +1236,7 @@
 
     .line 2949
     :cond_4
-    const v6, 0x102030a
+    const v6, 0x102030c
 
     invoke-virtual {p0, v6}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -1338,7 +1338,7 @@
 
     .line 2973
     :goto_3
-    const v6, 0x102030c
+    const v6, 0x102030e
 
     invoke-virtual {p0, v6}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -1366,7 +1366,7 @@
     invoke-virtual {v6, v4}, Lcom/android/internal/widget/ActionBarView;->setSplitWhenNarrow(Z)V
 
     .line 2980
-    const v6, 0x102030b
+    const v6, 0x102030d
 
     invoke-virtual {p0, v6}, Lcom/android/internal/policy/impl/PhoneWindow;->findViewById(I)Landroid/view/View;
 
@@ -4251,7 +4251,7 @@
     .restart local v7       #features:I
     .restart local v12       #params:Landroid/view/WindowManager$LayoutParams;
     :cond_18
-    const v10, 0x109008c
+    const v10, 0x109008e
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_7
@@ -4270,7 +4270,7 @@
     if-nez v19, :cond_1a
 
     .line 2828
-    const v10, 0x1090088
+    const v10, 0x109008a
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
@@ -4340,7 +4340,7 @@
     .line 2839
     .end local v10           #layoutResource:I
     :cond_1b
-    const v10, 0x1090087
+    const v10, 0x1090089
 
     .restart local v10       #layoutResource:I
     goto :goto_9
@@ -4412,7 +4412,7 @@
     if-eqz v19, :cond_1e
 
     .line 2853
-    const v10, 0x1090086
+    const v10, 0x1090088
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
@@ -4420,7 +4420,7 @@
     .line 2855
     .end local v10           #layoutResource:I
     :cond_1e
-    const v10, 0x1090085
+    const v10, 0x1090087
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
@@ -4428,7 +4428,7 @@
     .line 2858
     .end local v10           #layoutResource:I
     :cond_1f
-    const v10, 0x109008b
+    const v10, 0x109008d
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
@@ -4443,7 +4443,7 @@
     if-eqz v19, :cond_21
 
     .line 2862
-    const v10, 0x109008a
+    const v10, 0x109008c
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
@@ -4451,7 +4451,7 @@
     .line 2865
     .end local v10           #layoutResource:I
     :cond_21
-    const v10, 0x1090089
+    const v10, 0x109008b
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8

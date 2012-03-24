@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9579
+    .line 9596
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$39;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "whichButton"
 
     .prologue
-    .line 9582
+    .line 9599
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$39;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -61,7 +61,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/phone/PhoneUtils;->turnOnSpeaker(Landroid/content/Context;ZZ)V
 
-    .line 9584
+    .line 9601
     const-string v0, "InVTCallScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -95,6 +95,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9586
+    .line 9603
     return-void
 .end method

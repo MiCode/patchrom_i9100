@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 9735
+    .line 9752
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$47;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InVTCallScreen$47;->val$confirmedNumber:Ljava/lang/String;
@@ -48,7 +48,7 @@
     .parameter "whichButton"
 
     .prologue
-    .line 9739
+    .line 9756
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$47;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mHandler:Landroid/os/Handler;
@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 9742
+    .line 9759
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$47;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->isSpeakerOn(Landroid/content/Context;)Z
@@ -71,7 +71,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 9743
+    .line 9760
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$47;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x0
@@ -80,7 +80,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/phone/PhoneUtils;->turnOnSpeaker(Landroid/content/Context;ZZ)V
 
-    .line 9745
+    .line 9762
     :cond_0
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$47;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -102,6 +102,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InVTCallScreen;->startActivity(Landroid/content/Intent;)V
 
-    .line 9748
+    .line 9765
     return-void
 .end method

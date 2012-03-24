@@ -824,7 +824,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 590
-    const v0, 0x102036a
+    const v0, 0x102036c
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->findViewById(I)Landroid/view/View;
 
@@ -835,7 +835,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->mHour01:Landroid/widget/ImageView;
 
     .line 591
-    const v0, 0x102036b
+    const v0, 0x102036d
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->findViewById(I)Landroid/view/View;
 
@@ -846,7 +846,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->mHour02:Landroid/widget/ImageView;
 
     .line 592
-    const v0, 0x102036d
+    const v0, 0x102036f
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->findViewById(I)Landroid/view/View;
 
@@ -857,7 +857,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->mMin01:Landroid/widget/ImageView;
 
     .line 593
-    const v0, 0x102036e
+    const v0, 0x1020370
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->findViewById(I)Landroid/view/View;
 
@@ -868,7 +868,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->mMin02:Landroid/widget/ImageView;
 
     .line 594
-    const v0, 0x102036f
+    const v0, 0x1020371
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->findViewById(I)Landroid/view/View;
 
@@ -879,7 +879,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->mAM:Landroid/widget/TextView;
 
     .line 595
-    const v0, 0x1020371
+    const v0, 0x1020373
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;->findViewById(I)Landroid/view/View;
 

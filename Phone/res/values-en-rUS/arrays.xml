@@ -24,6 +24,13 @@
         <item>0</item>
         <item>1</item>
     </string-array>
+    <string-array name="voicecall_eq_list_entries">
+        <item>Off</item>
+        <item>Boost low tones</item>
+        <item>Boost high tones</item>
+        <item>For left ear</item>
+        <item>For right ear</item>
+    </string-array>
     <string-array name="clir_display_values">
         <item>Network default</item>
         <item>Hide number</item>

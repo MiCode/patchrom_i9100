@@ -160,7 +160,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0e013b
+    const v0, 0x7f0e013d
 
     :goto_0
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
@@ -187,7 +187,7 @@
 
     .line 119
     :cond_1
-    const v0, 0x7f0e013c
+    const v0, 0x7f0e013e
 
     goto :goto_0
 
@@ -204,7 +204,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e016f
+    const v1, 0x7f0e0171
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -372,7 +372,7 @@
 
     if-eqz v1, :cond_1
 
-    const v0, 0x7f0e0138
+    const v0, 0x7f0e013a
 
     .line 75
     .local v0, id:I
@@ -408,7 +408,7 @@
 
     .line 74
     :cond_1
-    const v0, 0x7f0e0139
+    const v0, 0x7f0e013b
 
     goto :goto_1
 .end method

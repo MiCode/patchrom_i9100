@@ -9,12 +9,12 @@
     .parameter "context"
 
     .prologue
-    .line 61
+    .line 66
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 62
+    .line 67
     return-void
 .end method
 
@@ -24,12 +24,12 @@
     .parameter "attrs"
 
     .prologue
-    .line 65
+    .line 70
     const v0, 0x101006c
 
     invoke-direct {p0, p1, p2, v0}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 66
+    .line 71
     return-void
 .end method
 
@@ -40,10 +40,10 @@
     .parameter "defStyle"
 
     .prologue
-    .line 69
+    .line 74
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 70
+    .line 84
     return-void
 .end method
 
@@ -54,17 +54,17 @@
     .parameter "event"
 
     .prologue
-    .line 74
+    .line 88
     invoke-super {p0, p1}, Landroid/widget/CompoundButton;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 75
+    .line 89
     invoke-virtual {p0}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 76
+    .line 90
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
     move-result-object v0
@@ -79,11 +79,11 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 80
+    .line 94
     :goto_0
     return-void
 
-    .line 78
+    .line 92
     :cond_0
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 

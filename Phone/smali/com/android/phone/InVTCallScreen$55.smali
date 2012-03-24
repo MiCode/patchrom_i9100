@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9852
+    .line 9869
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "whichButton"
 
     .prologue
-    .line 9856
+    .line 9873
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isWXGADevice:Z
@@ -53,7 +53,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 9857
+    .line 9874
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isFarEndRecord:Z
@@ -63,7 +63,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 9858
+    .line 9875
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -76,18 +76,18 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mSwitchRecording:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$10702(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 9860
+    .line 9877
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->stopRecordingFarEndView()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$1100(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 9875
+    .line 9892
     :cond_0
     :goto_0
     return-void
 
-    .line 9861
+    .line 9878
     :cond_1
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -98,7 +98,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 9862
+    .line 9879
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -111,7 +111,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mSwitchRecording:I
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$10702(Lcom/android/phone/InVTCallScreen;I)I
 
-    .line 9864
+    .line 9881
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x0
@@ -121,7 +121,7 @@
 
     goto :goto_0
 
-    .line 9869
+    .line 9886
     :cond_2
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -132,13 +132,13 @@
 
     if-eqz v0, :cond_3
 
-    .line 9870
+    .line 9887
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->stopRecordingFarEndView()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$1100(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 9873
+    .line 9890
     :cond_3
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$55;->this$0:Lcom/android/phone/InVTCallScreen;
 

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 6455
+    .line 6470
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$20;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +43,12 @@
     .parameter "which"
 
     .prologue
-    .line 6457
+    .line 6472
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$20;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->delayedCleanupAfterDisconnect()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$3300(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 6458
+    .line 6473
     return-void
 .end method

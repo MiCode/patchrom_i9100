@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="calldiverting_list">
+        <item>ตลอดเวลา</item>
+        <item>ถ้า​ไม่​ว่าง</item>
+        <item>ถ้า​ไม่​ตอบรับ</item>
+        <item>ถ้า​ติดต่อ​ไม่​ได้</item>
+        <item>ยก​เลิก​ทั้ง​หมด</item>
+    </string-array>
+    <string-array name="callbarring_list">
+        <item>การ​โทรออก​ทั้ง​หมด</item>
+        <item>การ​โทรออก​ต่าง​ประเทศ</item>
+        <item>การโทรต่างประเทศยกเว้นบ้าน</item>
+        <item>การ​โทร​เข้า​ทั้ง​หมด</item>
+        <item>การ​โทร​เข้า​ขณะ​โรม​มิ่ง</item>
+        <item>ยก​เลิก​ทั้ง​หมด</item>
+    </string-array>
+    <string-array name="waiting_time">
+        <item>5 ​วินาที</item>
+        <item>10 วินาที</item>
+        <item>15 วินาที</item>
+        <item>20 ​วินาที</item>
+        <item>25 ​วินาที</item>
+        <item>30 ​วินาที</item>
+    </string-array>
+    <string-array name="automatic_time">
+        <item>1 ​วินาที</item>
+        <item>2 ​วินาที</item>
+        <item>3 วินาที</item>
+        <item>4 วินาที</item>
+        <item>5 ​วินาที</item>
+    </string-array>
+    <string-array name="autoreject_alert">
+        <item>บันทึก​ล่า​สุด</item>
+        <item>ราย​ชื่อ</item>
+    </string-array>
+    <string-array name="fakecallerimage_alert">
+        <item>รูป​ภาพ</item>
+        <item>ถ่าย​รูป</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_default">
+        <item>รูป​ภาพ</item>
+        <item>วี​ดี​โอ</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_changed">
+        <item>รูป​ภาพ​พื้น​ฐาน</item>
+        <item>รูป​ภาพ</item>
+        <item>วี​ดี​โอ</item>
+    </string-array>
+    <string-array name="callerimage_alert_default">
+        <item>รูป​ภาพ</item>
+        <item>วี​ดี​โอ</item>
+        <item>ใส่​รูป​ภาพ</item>
+        <item>บันทึก​วี​ดี​โอ</item>
+    </string-array>
+    <string-array name="callerimage_alert_changed">
+        <item>รูป​ภาพ​พื้น​ฐาน</item>
+        <item>รูป​ภาพ</item>
+        <item>วี​ดี​โอ</item>
+        <item>ใส่​รูป​ภาพ</item>
+        <item>บันทึก​วี​ดี​โอ</item>
+    </string-array>
+    <string-array name="entries_list_preference">
+        <item>ปิด</item>
+        <item>หลัง​จาก 1 ​วินาที</item>
+        <item>หลัง​จาก 2 ​วินาที</item>
+        <item>หลัง​จาก 3 ​วินาที</item>
+        <item>หลัง​จาก 4 ​วินาที</item>
+        <item>หลัง​จาก 5 ​วินาที</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="match_criteria_entries">
+        <item>เหมือนกันทั้งหมด</item>
+        <item>เริ่ม​ด้วย</item>
+        <item>ส่วนท้าย</item>
+        <item>ส่วนหนึ่งของเบอร์</item>
+    </string-array>
+    <string-array name="match_criteria_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="auto_reject_mode">
+        <item>ปิด</item>
+        <item>หมาย​เลข​ทั้ง​หมด</item>
+        <item>หมาย​เลข​ปฏิเสธ​อัตโนมัติ</item>
+    </string-array>
+    <string-array name="auto_reject_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

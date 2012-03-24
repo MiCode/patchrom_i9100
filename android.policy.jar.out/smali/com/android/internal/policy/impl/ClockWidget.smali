@@ -71,13 +71,13 @@
     if-eq v2, v3, :cond_1
 
     .line 78
-    const v2, 0x10900d6
+    const v2, 0x10900d8
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 86
     :goto_0
-    const v2, 0x1020372
+    const v2, 0x1020374
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/ClockWidget;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/ClockWidget;->mRoot:Landroid/widget/LinearLayout;
 
     .line 87
-    const v2, 0x1020373
+    const v2, 0x1020375
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/ClockWidget;->findViewById(I)Landroid/view/View;
 
@@ -99,7 +99,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/ClockWidget;->mEmergencyCall:Lcom/android/internal/policy/impl/ClockWidget$EmergencyCall;
 
     .line 88
-    const v2, 0x1020375
+    const v2, 0x1020377
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/ClockWidget;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/ClockWidget;->mClock:Lcom/android/internal/policy/impl/ClockWidget$TimeAndDate;
 
     .line 89
-    const v2, 0x1020376
+    const v2, 0x1020378
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/ClockWidget;->findViewById(I)Landroid/view/View;
 
@@ -121,7 +121,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/ClockWidget;->mWeather:Lcom/android/internal/policy/impl/ClockWidget$Weather;
 
     .line 90
-    const v2, 0x102037d
+    const v2, 0x102037f
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/ClockWidget;->findViewById(I)Landroid/view/View;
 
@@ -198,7 +198,7 @@
     .line 82
     .end local v1           #showClock:Z
     :cond_1
-    const v2, 0x10900d7
+    const v2, 0x10900d9
 
     invoke-virtual {v0, v2, p0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

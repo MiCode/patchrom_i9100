@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1833
+    .line 1824
     iput-object p1, p0, Lcom/android/phone/PhoneApp$2;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 1836
+    .line 1827
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,14 +53,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1837
+    .line 1828
     const-string v0, "PhoneApp"
 
     const-string v1, "Received ACTION_BOOT_COMPLETED"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1839
+    .line 1830
     const-string v0, "restricted_call_for_qc_issue"
 
     invoke-static {v0}, Lcom/android/phone/PhoneFeature;->hasFeature(Ljava/lang/String;)Z
@@ -69,12 +69,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1841
+    .line 1832
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/phone/PhoneApp;->sRestrictedCallForQC:Z
 
-    .line 1842
+    .line 1833
     iget-object v0, p0, Lcom/android/phone/PhoneApp$2;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -85,7 +85,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1845
+    .line 1836
     :cond_0
     return-void
 .end method

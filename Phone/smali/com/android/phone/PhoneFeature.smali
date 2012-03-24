@@ -166,7 +166,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_e
+    if-eqz v3, :cond_c
 
     :cond_0
     move v3, v5
@@ -183,7 +183,7 @@
 
     const-string v7, "write_sleep_checking_file"
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_d
 
     const-string v3, "exynos4"
 
@@ -191,7 +191,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_f
+    if-eqz v3, :cond_d
 
     move v3, v5
 
@@ -279,7 +279,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_10
+    if-eqz v3, :cond_e
 
     :cond_1
     move v3, v5
@@ -405,7 +405,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_11
+    if-eqz v3, :cond_f
 
     :cond_2
     move v3, v5
@@ -484,7 +484,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_10
 
     :cond_3
     move v3, v5
@@ -563,7 +563,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_13
+    if-eqz v3, :cond_11
 
     :cond_4
     move v3, v5
@@ -634,7 +634,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_14
+    if-eqz v3, :cond_12
 
     :cond_5
     move v3, v5
@@ -745,7 +745,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_15
+    if-eqz v3, :cond_13
 
     :cond_6
     move v3, v5
@@ -840,7 +840,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_16
+    if-eqz v3, :cond_14
 
     :cond_7
     move v3, v5
@@ -911,7 +911,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_17
+    if-eqz v3, :cond_15
 
     :cond_8
     move v3, v5
@@ -990,7 +990,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_18
+    if-eqz v3, :cond_16
 
     :cond_9
     move v3, v5
@@ -1061,7 +1061,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_19
+    if-eqz v3, :cond_17
 
     :cond_a
     move v3, v5
@@ -1429,7 +1429,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_1a
+    if-eqz v3, :cond_18
 
     :cond_b
     move v3, v5
@@ -1452,7 +1452,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "VNZ"
 
@@ -1460,7 +1460,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "VNX"
 
@@ -1468,7 +1468,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "NZC"
 
@@ -1476,7 +1476,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "ATO"
 
@@ -1484,7 +1484,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "INU"
 
@@ -1492,7 +1492,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "INS"
 
@@ -1500,7 +1500,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "SLK"
 
@@ -1508,7 +1508,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "NPL"
 
@@ -1516,7 +1516,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "TML"
 
@@ -1524,7 +1524,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "ETR "
 
@@ -1532,7 +1532,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "PH"
 
@@ -1540,7 +1540,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "NO"
 
@@ -1548,7 +1548,7 @@
 
     move-result v7
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_19
 
     const-string v7, "SE"
 
@@ -1556,12 +1556,9 @@
 
     move-result v7
 
-    if-eqz v7, :cond_d
+    if-nez v7, :cond_19
 
-    :cond_c
-    move v4, v5
-
-    :cond_d
+    :goto_d
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
@@ -1571,81 +1568,87 @@
     .line 236
     return-void
 
-    :cond_e
+    :cond_c
     move v3, v4
 
     .line 177
     goto/16 :goto_0
 
-    :cond_f
+    :cond_d
     move v3, v4
 
     .line 182
     goto/16 :goto_1
 
-    :cond_10
+    :cond_e
     move v3, v4
 
     .line 188
     goto/16 :goto_2
 
-    :cond_11
+    :cond_f
     move v3, v4
 
     .line 194
     goto/16 :goto_3
 
-    :cond_12
+    :cond_10
     move v3, v4
 
     .line 195
     goto/16 :goto_4
 
-    :cond_13
+    :cond_11
     move v3, v4
 
     .line 196
     goto/16 :goto_5
 
-    :cond_14
+    :cond_12
     move v3, v4
 
     .line 197
     goto/16 :goto_6
 
-    :cond_15
+    :cond_13
     move v3, v4
 
     .line 198
     goto/16 :goto_7
 
-    :cond_16
+    :cond_14
     move v3, v4
 
     .line 199
     goto/16 :goto_8
 
-    :cond_17
+    :cond_15
     move v3, v4
 
     .line 201
     goto/16 :goto_9
 
-    :cond_18
+    :cond_16
     move v3, v4
 
     .line 202
     goto/16 :goto_a
 
-    :cond_19
+    :cond_17
     move v3, v4
 
     .line 203
     goto/16 :goto_b
 
-    :cond_1a
+    :cond_18
     move v3, v4
 
     .line 230
     goto/16 :goto_c
+
+    :cond_19
+    move v4, v5
+
+    .line 233
+    goto :goto_d
 .end method

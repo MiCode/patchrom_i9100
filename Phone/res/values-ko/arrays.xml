@@ -24,15 +24,22 @@
         <item>0</item>
         <item>1</item>
     </string-array>
+    <string-array name="voicecall_eq_list_entries">
+        <item>해제</item>
+        <item>낮은음 강조</item>
+        <item>높은음 강조</item>
+        <item>왼쪽 귀</item>
+        <item>오른쪽 귀</item>
+    </string-array>
     <string-array name="clir_display_values">
         <item>네트워크 기본값</item>
         <item>발신번호 표시 제한</item>
         <item>발신번호 표시</item>
     </string-array>
     <string-array name="clir_values">
-        <item>DEFAULT</item>
-        <item>HIDE</item>
-        <item>SHOW</item>
+        <item>기본값</item>
+        <item>숨기기</item>
+        <item>보이기</item>
     </string-array>
     <string-array name="preferred_network_mode_choices">
         <item>글로벌</item>

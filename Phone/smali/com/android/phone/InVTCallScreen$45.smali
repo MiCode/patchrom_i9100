@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9708
+    .line 9725
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$45;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,21 +42,21 @@
     .parameter "dialog"
 
     .prologue
-    .line 9710
+    .line 9727
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$45;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InVTCallScreen;->removeDialog(I)V
 
-    .line 9711
+    .line 9728
     const-string v0, "InVTCallScreen"
 
     const-string v1, "Remove DIALOG_NORMAL_VOICE_CALL dialog"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9713
+    .line 9730
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$45;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mIsForegroundActivity:Z
@@ -66,7 +66,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 9714
+    .line 9731
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$45;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mHandler:Landroid/os/Handler;
@@ -80,11 +80,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 9721
+    .line 9738
     :goto_0
     return-void
 
-    .line 9719
+    .line 9736
     :cond_0
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$45;->this$0:Lcom/android/phone/InVTCallScreen;
 

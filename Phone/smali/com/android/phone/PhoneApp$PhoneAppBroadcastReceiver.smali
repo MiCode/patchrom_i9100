@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1851
+    .line 1842
     iput-object p1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1851
+    .line 1842
     invoke-direct {p0, p1}, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;-><init>(Lcom/android/phone/PhoneApp;)V
 
     return-void
@@ -62,12 +62,12 @@
 
     const/4 v1, 0x0
 
-    .line 1854
+    .line 1845
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1855
+    .line 1846
     const-string v3, "android.intent.action.AIRPLANE_MODE"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -76,7 +76,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 1856
+    .line 1847
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
@@ -91,7 +91,7 @@
 
     if-nez v2, :cond_1
 
-    .line 1858
+    .line 1849
     :goto_0
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -99,7 +99,7 @@
 
     invoke-interface {v1, v0}, Lcom/android/internal/telephony/Phone;->setRadioPower(Z)V
 
-    .line 2031
+    .line 2005
     :cond_0
     :goto_1
     return-void
@@ -107,10 +107,10 @@
     :cond_1
     move v0, v1
 
-    .line 1856
+    .line 1847
     goto :goto_0
 
-    .line 1859
+    .line 1850
     :cond_2
     const-string v3, "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"
 
@@ -120,7 +120,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 1860
+    .line 1851
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     const-string v3, "android.bluetooth.profile.extra.STATE"
@@ -131,14 +131,14 @@
 
     iput v1, v2, Lcom/android/phone/PhoneApp;->mBluetoothHeadsetState:I
 
-    .line 1864
+    .line 1855
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v1, v0}, Lcom/android/phone/PhoneApp;->updateBluetoothIndication(Z)V
 
     goto :goto_1
 
-    .line 1865
+    .line 1856
     :cond_3
     const-string v3, "android.bluetooth.headset.profile.action.AUDIO_STATE_CHANGED"
 
@@ -148,7 +148,7 @@
 
     if-eqz v3, :cond_7
 
-    .line 1866
+    .line 1857
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     const-string v3, "android.bluetooth.profile.extra.STATE"
@@ -159,7 +159,7 @@
 
     iput v3, v2, Lcom/android/phone/PhoneApp;->mBluetoothHeadsetAudioState:I
 
-    .line 1869
+    .line 1860
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->isHeadsetPlugged()Z
@@ -180,7 +180,7 @@
 
     if-eq v2, v3, :cond_4
 
-    .line 1871
+    .line 1862
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget v2, v2, Lcom/android/phone/PhoneApp;->mBluetoothHeadsetAudioState:I
@@ -189,7 +189,7 @@
 
     if-ne v2, v3, :cond_5
 
-    .line 1872
+    .line 1863
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
@@ -202,7 +202,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 1873
+    .line 1864
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
@@ -211,7 +211,7 @@
 
     invoke-static {v2, v1, v1}, Lcom/android/phone/PhoneUtils;->turnOnNoiseSuppression(Landroid/content/Context;ZZ)V
 
-    .line 1883
+    .line 1874
     :cond_4
     :goto_2
     const-string v1, "not_update_bt_connecting"
@@ -222,21 +222,21 @@
 
     if-eqz v1, :cond_6
 
-    .line 1884
+    .line 1875
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget v1, v1, Lcom/android/phone/PhoneApp;->mBluetoothHeadsetAudioState:I
 
     if-eq v1, v6, :cond_0
 
-    .line 1885
+    .line 1876
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v1, v0}, Lcom/android/phone/PhoneApp;->updateBluetoothIndication(Z)V
 
     goto :goto_1
 
-    .line 1875
+    .line 1866
     :cond_5
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -244,7 +244,7 @@
 
     if-ne v1, v4, :cond_4
 
-    .line 1876
+    .line 1867
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v1}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
@@ -257,7 +257,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 1877
+    .line 1868
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v1}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
@@ -268,7 +268,7 @@
 
     goto :goto_2
 
-    .line 1887
+    .line 1878
     :cond_6
     iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -276,7 +276,7 @@
 
     goto/16 :goto_1
 
-    .line 1889
+    .line 1880
     :cond_7
     const-string v3, "android.intent.action.ANY_DATA_STATE"
 
@@ -286,7 +286,7 @@
 
     if-eqz v3, :cond_9
 
-    .line 1900
+    .line 1891
     const-string v0, "DISCONNECTED"
 
     const-string v1, "state"
@@ -301,14 +301,14 @@
 
     if-eqz v0, :cond_8
 
-    .line 1901
+    .line 1892
     const-string v0, "reason"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1902
+    .line 1893
     const-string v1, "roamingOn"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -317,14 +317,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1907
+    .line 1898
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1908
+    .line 1899
     const-string v0, "PhoneApp"
 
     const-string v1, "DISCONNECTED/roamingOn - showDataDisconnectedRoaming()"
@@ -333,7 +333,7 @@
 
     goto/16 :goto_1
 
-    .line 1910
+    .line 1901
     :cond_8
     const-string v0, "CONNECTED"
 
@@ -349,14 +349,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1911
+    .line 1902
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v6}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 1912
+    .line 1903
     const-string v0, "PhoneApp"
 
     const-string v1, "CONNECTED - hideDataDisconnectedRoaming()"
@@ -365,7 +365,7 @@
 
     goto/16 :goto_1
 
-    .line 1914
+    .line 1905
     :cond_9
     const-string v3, "android.intent.action.HEADSET_PLUG"
 
@@ -375,14 +375,14 @@
 
     if-eqz v3, :cond_b
 
-    .line 1919
+    .line 1910
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "com.android.phone.HEADSET_PLUG_ACTION"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1920
+    .line 1911
     const-string v3, "state"
 
     const-string v4, "state"
@@ -393,12 +393,12 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1921
+    .line 1912
     iget-object v3, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v3, v2}, Lcom/android/phone/PhoneApp;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1923
+    .line 1914
     iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     const-string v3, "state"
@@ -413,7 +413,7 @@
     #setter for: Lcom/android/phone/PhoneApp;->mIsHeadsetPlugged:Z
     invoke-static {v2, v0}, Lcom/android/phone/PhoneApp;->access$1302(Lcom/android/phone/PhoneApp;Z)Z
 
-    .line 1924
+    .line 1915
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -439,10 +439,10 @@
     :cond_a
     move v0, v1
 
-    .line 1923
+    .line 1914
     goto :goto_3
 
-    .line 1925
+    .line 1916
     :cond_b
     const-string v3, "android.intent.action.BATTERY_LOW"
 
@@ -452,7 +452,7 @@
 
     if-eqz v3, :cond_c
 
-    .line 1927
+    .line 1918
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->notifier:Lcom/android/phone/CallNotifier;
@@ -461,7 +461,7 @@
 
     goto/16 :goto_1
 
-    .line 1928
+    .line 1919
     :cond_c
     const-string v3, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -480,7 +480,7 @@
 
     if-eqz v3, :cond_d
 
-    .line 1934
+    .line 1925
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -505,7 +505,7 @@
 
     goto/16 :goto_1
 
-    .line 1936
+    .line 1927
     :cond_d
     const-string v3, "android.intent.action.RADIO_TECHNOLOGY"
 
@@ -515,14 +515,14 @@
 
     if-eqz v3, :cond_e
 
-    .line 1937
+    .line 1928
     const-string v0, "phoneName"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1938
+    .line 1929
     const-string v1, "PhoneApp"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -551,7 +551,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1939
+    .line 1930
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     #calls: Lcom/android/phone/PhoneApp;->initForNewRadioTechnology()V
@@ -559,7 +559,7 @@
 
     goto/16 :goto_1
 
-    .line 1940
+    .line 1931
     :cond_e
     const-string v3, "android.intent.action.SERVICE_STATE"
 
@@ -569,14 +569,14 @@
 
     if-eqz v3, :cond_f
 
-    .line 1941
+    .line 1932
     const-string v0, "PhoneApp"
 
     const-string v1, "Phone App Receive ACTION_SERVICE_STATE_CHANGED"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1942
+    .line 1933
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     #calls: Lcom/android/phone/PhoneApp;->handleServiceStateChanged(Landroid/content/Intent;)V
@@ -584,7 +584,7 @@
 
     goto/16 :goto_1
 
-    .line 1943
+    .line 1934
     :cond_f
     const-string v3, "android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED"
 
@@ -594,7 +594,7 @@
 
     if-eqz v3, :cond_11
 
-    .line 1944
+    .line 1935
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->phone:Lcom/android/internal/telephony/Phone;
@@ -605,14 +605,14 @@
 
     if-eqz v0, :cond_10
 
-    .line 1945
+    .line 1936
     const-string v0, "PhoneApp"
 
     const-string v2, "Emergency Callback Mode arrived in PhoneApp."
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1947
+    .line 1938
     const-string v0, "phoneinECMState"
 
     invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -621,7 +621,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1948
+    .line 1939
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/android/phone/EmergencyCallbackModeService;
@@ -632,7 +632,7 @@
 
     goto/16 :goto_1
 
-    .line 1954
+    .line 1945
     :cond_10
     const-string v0, "PhoneApp"
 
@@ -666,7 +666,7 @@
 
     goto/16 :goto_1
 
-    .line 1957
+    .line 1948
     :cond_11
     const-string v3, "android.intent.action.DOCK_EVENT"
 
@@ -676,7 +676,7 @@
 
     if-eqz v3, :cond_14
 
-    .line 1958
+    .line 1949
     const-string v2, "android.intent.extra.DOCK_STATE"
 
     invoke-virtual {p2, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -685,7 +685,7 @@
 
     sput v2, Lcom/android/phone/PhoneApp;->mDockState:I
 
-    .line 1960
+    .line 1951
     sget v2, Lcom/android/phone/PhoneApp;->mDockState:I
 
     if-nez v2, :cond_12
@@ -695,7 +695,7 @@
     :goto_4
     sput-boolean v2, Lcom/android/phone/PhoneApp;->mIsDockConnected:Z
 
-    .line 1961
+    .line 1952
     sget v2, Lcom/android/phone/PhoneApp;->mDockState:I
 
     if-ne v2, v5, :cond_13
@@ -703,7 +703,7 @@
     :goto_5
     sput-boolean v0, Lcom/android/phone/PhoneApp;->mIsCarDockConnected:Z
 
-    .line 1963
+    .line 1954
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -729,16 +729,16 @@
     :cond_12
     move v2, v0
 
-    .line 1960
+    .line 1951
     goto :goto_4
 
     :cond_13
     move v0, v1
 
-    .line 1961
+    .line 1952
     goto :goto_5
 
-    .line 1964
+    .line 1955
     :cond_14
     const-string v3, "com.android.internal.telephony.cdma.intent.action.TTY_PREFERRED_MODE_CHANGE"
 
@@ -748,7 +748,7 @@
 
     if-eqz v3, :cond_15
 
-    .line 1965
+    .line 1956
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     const-string v2, "ttyPreferredMode"
@@ -760,7 +760,7 @@
     #setter for: Lcom/android/phone/PhoneApp;->mPreferredTtyMode:I
     invoke-static {v0, v2}, Lcom/android/phone/PhoneApp;->access$1002(Lcom/android/phone/PhoneApp;I)I
 
-    .line 1969
+    .line 1960
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -783,7 +783,7 @@
 
     goto/16 :goto_1
 
-    .line 1970
+    .line 1961
     :cond_15
     const-string v3, "android.media.RINGER_MODE_CHANGED"
 
@@ -793,17 +793,17 @@
 
     if-eqz v3, :cond_16
 
-    .line 1971
+    .line 1962
     const-string v0, "android.media.EXTRA_RINGER_MODE"
 
     invoke-virtual {p2, v0, v5}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1973
+    .line 1964
     if-nez v0, :cond_0
 
-    .line 1974
+    .line 1965
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->notifier:Lcom/android/phone/CallNotifier;
@@ -812,7 +812,7 @@
 
     goto/16 :goto_1
 
-    .line 1976
+    .line 1967
     :cond_16
     const-string v3, "android.intent.action.BATTERY_CHANGED"
 
@@ -822,20 +822,20 @@
 
     if-eqz v3, :cond_18
 
-    .line 1977
+    .line 1968
     const-string v2, "plugged"
 
     invoke-virtual {p2, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 1979
+    .line 1970
     if-nez v2, :cond_17
 
     :goto_6
     sput-boolean v1, Lcom/android/phone/PhoneApp;->mIsUsbConnected:Z
 
-    .line 1980
+    .line 1971
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -857,10 +857,10 @@
     :cond_17
     move v1, v0
 
-    .line 1979
+    .line 1970
     goto :goto_6
 
-    .line 1981
+    .line 1972
     :cond_18
     const-string v3, "android.intent.action.SCREEN_ON"
 
@@ -870,7 +870,7 @@
 
     if-eqz v3, :cond_19
 
-    .line 1982
+    .line 1973
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -889,7 +889,7 @@
 
     goto/16 :goto_1
 
-    .line 1983
+    .line 1974
     :cond_19
     const-string v3, "android.intent.action.SCREEN_OFF"
 
@@ -899,7 +899,7 @@
 
     if-eqz v3, :cond_1a
 
-    .line 1984
+    .line 1975
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v0, v0, Lcom/android/phone/PhoneApp;->mHandler:Landroid/os/Handler;
@@ -918,7 +918,7 @@
 
     goto/16 :goto_1
 
-    .line 1985
+    .line 1976
     :cond_1a
     const-string v3, "android.intent.action.WB_AMR"
 
@@ -928,14 +928,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 1987
+    .line 1978
     const-string v2, "EXTRA_STATE"
 
     invoke-virtual {p2, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 1988
+    .line 1979
     const-string v3, "PhoneApp"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -958,26 +958,15 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2001
+    .line 1980
     if-ne v2, v0, :cond_1c
 
-    .line 2002
+    .line 1981
     sget-object v3, Lcom/android/phone/PhoneUtils$AMRState;->WB:Lcom/android/phone/PhoneUtils$AMRState;
 
     invoke-static {v3}, Lcom/android/phone/PhoneUtils;->setAMRCodec(Lcom/android/phone/PhoneUtils$AMRState;)V
 
-    .line 2003
-    iget-object v3, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
-
-    invoke-virtual {v3}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    const-string v4, "wbamr_mode"
-
-    invoke-static {v3, v4, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
-    .line 2013
+    .line 1990
     :goto_7
     iget-object v3, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -993,19 +982,19 @@
 
     if-ne v2, v0, :cond_1d
 
-    iget-object v3, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
+    iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
-    invoke-virtual {v3}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lcom/android/phone/PhoneUtils;->isNoiseSuppressionOn(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/phone/PhoneUtils;->isNoiseSuppressionOn(Landroid/content/Context;)Z
 
-    move-result v3
+    move-result v2
 
-    if-ne v3, v0, :cond_1d
+    if-ne v2, v0, :cond_1d
 
-    .line 2016
+    .line 1993
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
@@ -1014,7 +1003,7 @@
 
     invoke-static {v0, v1, v1}, Lcom/android/phone/PhoneUtils;->turnOnNoiseSuppression(Landroid/content/Context;ZZ)V
 
-    .line 2017
+    .line 1994
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->isShowingCallScreen()Z
@@ -1023,12 +1012,12 @@
 
     if-eqz v0, :cond_1b
 
-    .line 2018
+    .line 1995
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
-    .line 2029
+    .line 2003
     :cond_1b
     :goto_8
     const-string v0, "PhoneApp"
@@ -1065,47 +1054,36 @@
 
     goto/16 :goto_1
 
-    .line 2005
+    .line 1983
     :cond_1c
     sget-object v3, Lcom/android/phone/PhoneUtils$AMRState;->NB:Lcom/android/phone/PhoneUtils$AMRState;
 
     invoke-static {v3}, Lcom/android/phone/PhoneUtils;->setAMRCodec(Lcom/android/phone/PhoneUtils$AMRState;)V
 
-    .line 2006
-    iget-object v3, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
-
-    invoke-virtual {v3}, Lcom/android/phone/PhoneApp;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v3
-
-    const-string v4, "wbamr_mode"
-
-    invoke-static {v3, v4, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
-
     goto :goto_7
 
-    .line 2020
+    .line 1997
     :cond_1d
-    iget-object v3, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
+    iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
-    invoke-virtual {v3}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v3}, Lcom/android/phone/PhoneUtils;->isSupportedNoiseReductionInWBMode(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/android/phone/PhoneUtils;->isSupportedNoiseReductionInWBMode(Landroid/content/Context;)Z
 
-    move-result v3
+    move-result v2
 
-    if-ne v3, v0, :cond_1e
+    if-ne v2, v0, :cond_1b
 
-    .line 2022
+    .line 1999
     const-string v0, "PhoneApp"
 
     const-string v2, "Set noise reduction again for CP"
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2023
+    .line 2000
     iget-object v0, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
@@ -1123,38 +1101,6 @@
     move-result v2
 
     invoke-static {v0, v2, v1}, Lcom/android/phone/PhoneUtils;->turnOnNoiseSuppression(Landroid/content/Context;ZZ)V
-
-    goto :goto_8
-
-    .line 2024
-    :cond_1e
-    if-nez v2, :cond_1b
-
-    .line 2025
-    const-string v1, "PhoneApp"
-
-    const-string v2, "Set noise reduction because current call is connected via amr-nb "
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 2026
-    iget-object v1, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
-
-    invoke-virtual {v1}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/phone/PhoneApp$PhoneAppBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
-
-    invoke-virtual {v2}, Lcom/android/phone/PhoneApp;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/android/phone/PhoneUtils;->isNoiseSuppressionOn(Landroid/content/Context;)Z
-
-    move-result v2
-
-    invoke-static {v1, v2, v0}, Lcom/android/phone/PhoneUtils;->turnOnNoiseSuppression(Landroid/content/Context;ZZ)V
 
     goto :goto_8
 .end method

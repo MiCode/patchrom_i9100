@@ -837,19 +837,19 @@
 
     const/4 v1, 0x1
 
-    .line 3229
+    .line 3256
     iget v3, p1, Landroid/content/pm/PackageParser$Package;->mSetEnabled:I
 
     if-eqz v3, :cond_2
 
-    .line 3230
+    .line 3257
     iget v3, p1, Landroid/content/pm/PackageParser$Package;->mSetEnabled:I
 
     if-ne v3, v1, :cond_1
 
     move v0, v1
 
-    .line 3231
+    .line 3258
     .local v0, enabled:Z
     :goto_0
     iget-object v3, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -858,7 +858,7 @@
 
     if-eq v3, v0, :cond_2
 
-    .line 3243
+    .line 3270
     .end local v0           #enabled:Z
     :cond_0
     :goto_1
@@ -867,10 +867,10 @@
     :cond_1
     move v0, v2
 
-    .line 3230
+    .line 3257
     goto :goto_0
 
-    .line 3235
+    .line 3262
     :cond_2
     and-int/lit16 v3, p0, 0x80
 
@@ -882,7 +882,7 @@
 
     if-nez v3, :cond_0
 
-    .line 3239
+    .line 3266
     :cond_3
     and-int/lit16 v3, p0, 0x400
 
@@ -895,7 +895,7 @@
     :cond_4
     move v1, v2
 
-    .line 3243
+    .line 3270
     goto :goto_1
 .end method
 
@@ -905,16 +905,16 @@
     .parameter "flags"
 
     .prologue
-    .line 3333
+    .line 3360
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3341
+    .line 3368
     :goto_0
     return-object v0
 
-    .line 3334
+    .line 3361
     :cond_0
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -926,12 +926,12 @@
 
     if-nez v1, :cond_1
 
-    .line 3335
+    .line 3362
     iget-object v0, p0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     goto :goto_0
 
-    .line 3338
+    .line 3365
     :cond_1
     new-instance v0, Landroid/content/pm/ActivityInfo;
 
@@ -939,13 +939,13 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/ActivityInfo;-><init>(Landroid/content/pm/ActivityInfo;)V
 
-    .line 3339
+    .line 3366
     .local v0, ai:Landroid/content/pm/ActivityInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
     iput-object v1, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
-    .line 3340
+    .line 3367
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
     invoke-static {v1, p1}, Landroid/content/pm/PackageParser;->generateApplicationInfo(Landroid/content/pm/PackageParser$Package;I)Landroid/content/pm/ApplicationInfo;
@@ -971,14 +971,14 @@
 
     const v3, -0x200001
 
-    .line 3247
+    .line 3274
     if-nez p0, :cond_0
 
-    .line 3285
+    .line 3312
     :goto_0
     return-object v0
 
-    .line 3248
+    .line 3275
     :cond_0
     invoke-static {p1, p0, v0}, Landroid/content/pm/PackageParser;->copyNeeded(ILandroid/content/pm/PackageParser$Package;Landroid/os/Bundle;)Z
 
@@ -986,23 +986,23 @@
 
     if-nez v1, :cond_3
 
-    .line 3251
+    .line 3278
     sget-boolean v1, Landroid/content/pm/PackageParser;->sCompatibilityModeEnabled:Z
 
     if-nez v1, :cond_1
 
-    .line 3252
+    .line 3279
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     invoke-virtual {v1}, Landroid/content/pm/ApplicationInfo;->disableCompatibilityMode()V
 
-    .line 3254
+    .line 3281
     :cond_1
     iget-boolean v1, p0, Landroid/content/pm/PackageParser$Package;->mSetStopped:Z
 
     if-eqz v1, :cond_2
 
-    .line 3255
+    .line 3282
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v2, v1, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -1011,13 +1011,13 @@
 
     iput v2, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 3259
+    .line 3286
     :goto_1
     iget-object v0, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     goto :goto_0
 
-    .line 3257
+    .line 3284
     :cond_2
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1029,7 +1029,7 @@
 
     goto :goto_1
 
-    .line 3263
+    .line 3290
     :cond_3
     new-instance v0, Landroid/content/pm/ApplicationInfo;
 
@@ -1037,44 +1037,44 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/ApplicationInfo;-><init>(Landroid/content/pm/ApplicationInfo;)V
 
-    .line 3264
+    .line 3291
     .local v0, ai:Landroid/content/pm/ApplicationInfo;
     and-int/lit16 v1, p1, 0x80
 
     if-eqz v1, :cond_4
 
-    .line 3265
+    .line 3292
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->mAppMetaData:Landroid/os/Bundle;
 
     iput-object v1, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
-    .line 3267
+    .line 3294
     :cond_4
     and-int/lit16 v1, p1, 0x400
 
     if-eqz v1, :cond_5
 
-    .line 3268
+    .line 3295
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->usesLibraryFiles:[Ljava/lang/String;
 
     iput-object v1, v0, Landroid/content/pm/ApplicationInfo;->sharedLibraryFiles:[Ljava/lang/String;
 
-    .line 3270
+    .line 3297
     :cond_5
     sget-boolean v1, Landroid/content/pm/PackageParser;->sCompatibilityModeEnabled:Z
 
     if-nez v1, :cond_6
 
-    .line 3271
+    .line 3298
     invoke-virtual {v0}, Landroid/content/pm/ApplicationInfo;->disableCompatibilityMode()V
 
-    .line 3273
+    .line 3300
     :cond_6
     iget-boolean v1, p0, Landroid/content/pm/PackageParser$Package;->mSetStopped:Z
 
     if-eqz v1, :cond_8
 
-    .line 3274
+    .line 3301
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget v2, v1, Landroid/content/pm/ApplicationInfo;->flags:I
@@ -1083,16 +1083,16 @@
 
     iput v2, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 3278
+    .line 3305
     :goto_2
     iget v1, p0, Landroid/content/pm/PackageParser$Package;->mSetEnabled:I
 
     if-ne v1, v4, :cond_9
 
-    .line 3279
+    .line 3306
     iput-boolean v4, v0, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
-    .line 3284
+    .line 3311
     :cond_7
     :goto_3
     iget v1, p0, Landroid/content/pm/PackageParser$Package;->mSetEnabled:I
@@ -1101,7 +1101,7 @@
 
     goto :goto_0
 
-    .line 3276
+    .line 3303
     :cond_8
     iget-object v1, p0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1113,7 +1113,7 @@
 
     goto :goto_2
 
-    .line 3280
+    .line 3307
     :cond_9
     iget v1, p0, Landroid/content/pm/PackageParser$Package;->mSetEnabled:I
 
@@ -1127,7 +1127,7 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 3282
+    .line 3309
     :cond_a
     const/4 v1, 0x0
 
@@ -1142,27 +1142,27 @@
     .parameter "flags"
 
     .prologue
-    .line 3446
+    .line 3473
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3452
+    .line 3479
     :goto_0
     return-object v0
 
-    .line 3447
+    .line 3474
     :cond_0
     and-int/lit16 v1, p1, 0x80
 
     if-nez v1, :cond_1
 
-    .line 3448
+    .line 3475
     iget-object v0, p0, Landroid/content/pm/PackageParser$Instrumentation;->info:Landroid/content/pm/InstrumentationInfo;
 
     goto :goto_0
 
-    .line 3450
+    .line 3477
     :cond_1
     new-instance v0, Landroid/content/pm/InstrumentationInfo;
 
@@ -1170,7 +1170,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/InstrumentationInfo;-><init>(Landroid/content/pm/InstrumentationInfo;)V
 
-    .line 3451
+    .line 3478
     .local v0, ii:Landroid/content/pm/InstrumentationInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
@@ -2171,27 +2171,27 @@
     .parameter "flags"
 
     .prologue
-    .line 3301
+    .line 3328
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3307
+    .line 3334
     :goto_0
     return-object v0
 
-    .line 3302
+    .line 3329
     :cond_0
     and-int/lit16 v1, p1, 0x80
 
     if-nez v1, :cond_1
 
-    .line 3303
+    .line 3330
     iget-object v0, p0, Landroid/content/pm/PackageParser$PermissionGroup;->info:Landroid/content/pm/PermissionGroupInfo;
 
     goto :goto_0
 
-    .line 3305
+    .line 3332
     :cond_1
     new-instance v0, Landroid/content/pm/PermissionGroupInfo;
 
@@ -2199,7 +2199,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/PermissionGroupInfo;-><init>(Landroid/content/pm/PermissionGroupInfo;)V
 
-    .line 3306
+    .line 3333
     .local v0, pgi:Landroid/content/pm/PermissionGroupInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
@@ -2214,27 +2214,27 @@
     .parameter "flags"
 
     .prologue
-    .line 3290
+    .line 3317
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3296
+    .line 3323
     :goto_0
     return-object v0
 
-    .line 3291
+    .line 3318
     :cond_0
     and-int/lit16 v1, p1, 0x80
 
     if-nez v1, :cond_1
 
-    .line 3292
+    .line 3319
     iget-object v0, p0, Landroid/content/pm/PackageParser$Permission;->info:Landroid/content/pm/PermissionInfo;
 
     goto :goto_0
 
-    .line 3294
+    .line 3321
     :cond_1
     new-instance v0, Landroid/content/pm/PermissionInfo;
 
@@ -2242,7 +2242,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/PermissionInfo;-><init>(Landroid/content/pm/PermissionInfo;)V
 
-    .line 3295
+    .line 3322
     .local v0, pi:Landroid/content/pm/PermissionInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
@@ -2259,16 +2259,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3408
+    .line 3435
     if-nez p0, :cond_0
 
     move-object v0, v1
 
-    .line 3421
+    .line 3448
     :goto_0
     return-object v0
 
-    .line 3409
+    .line 3436
     :cond_0
     iget-object v2, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -2290,13 +2290,13 @@
 
     if-nez v2, :cond_2
 
-    .line 3412
+    .line 3439
     :cond_1
     iget-object v0, p0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
     goto :goto_0
 
-    .line 3415
+    .line 3442
     :cond_2
     new-instance v0, Landroid/content/pm/ProviderInfo;
 
@@ -2304,21 +2304,21 @@
 
     invoke-direct {v0, v2}, Landroid/content/pm/ProviderInfo;-><init>(Landroid/content/pm/ProviderInfo;)V
 
-    .line 3416
+    .line 3443
     .local v0, pi:Landroid/content/pm/ProviderInfo;
     iget-object v2, p0, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
     iput-object v2, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
-    .line 3417
+    .line 3444
     and-int/lit16 v2, p1, 0x800
 
     if-nez v2, :cond_3
 
-    .line 3418
+    .line 3445
     iput-object v1, v0, Landroid/content/pm/ProviderInfo;->uriPermissionPatterns:[Landroid/os/PatternMatcher;
 
-    .line 3420
+    .line 3447
     :cond_3
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -2337,16 +2337,16 @@
     .parameter "flags"
 
     .prologue
-    .line 3366
+    .line 3393
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3374
+    .line 3401
     :goto_0
     return-object v0
 
-    .line 3367
+    .line 3394
     :cond_0
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
@@ -2358,12 +2358,12 @@
 
     if-nez v1, :cond_1
 
-    .line 3368
+    .line 3395
     iget-object v0, p0, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
     goto :goto_0
 
-    .line 3371
+    .line 3398
     :cond_1
     new-instance v0, Landroid/content/pm/ServiceInfo;
 
@@ -2371,13 +2371,13 @@
 
     invoke-direct {v0, v1}, Landroid/content/pm/ServiceInfo;-><init>(Landroid/content/pm/ServiceInfo;)V
 
-    .line 3372
+    .line 3399
     .local v0, si:Landroid/content/pm/ServiceInfo;
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
     iput-object v1, v0, Landroid/content/pm/PackageItemInfo;->metaData:Landroid/os/Bundle;
 
-    .line 3373
+    .line 3400
     iget-object v1, p0, Landroid/content/pm/PackageParser$Component;->owner:Landroid/content/pm/PackageParser$Package;
 
     invoke-static {v1, p1}, Landroid/content/pm/PackageParser;->generateApplicationInfo(Landroid/content/pm/PackageParser$Package;I)Landroid/content/pm/ApplicationInfo;
@@ -2573,7 +2573,7 @@
     .end annotation
 
     .prologue
-    .line 1899
+    .line 1904
     sget-object v2, Lcom/android/internal/R$styleable;->AndroidManifestActivity:[I
 
     move-object/from16 v0, p2
@@ -2584,7 +2584,7 @@
 
     move-result-object v16
 
-    .line 1902
+    .line 1907
     .local v16, sa:Landroid/content/res/TypedArray;
     move-object/from16 v0, p0
 
@@ -2592,7 +2592,7 @@
 
     if-nez v2, :cond_0
 
-    .line 1903
+    .line 1908
     new-instance v2, Landroid/content/pm/PackageParser$ParseComponentArgs;
 
     const/4 v5, 0x3
@@ -2623,7 +2623,7 @@
 
     iput-object v2, v0, Landroid/content/pm/PackageParser;->mParseActivityArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
 
-    .line 1914
+    .line 1919
     :cond_0
     move-object/from16 v0, p0
 
@@ -2636,7 +2636,7 @@
     :goto_0
     iput-object v2, v3, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->tag:Ljava/lang/String;
 
-    .line 1915
+    .line 1920
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseActivityArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -2645,7 +2645,7 @@
 
     iput-object v0, v2, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
-    .line 1916
+    .line 1921
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseActivityArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -2654,7 +2654,7 @@
 
     iput v0, v2, Landroid/content/pm/PackageParser$ParseComponentArgs;->flags:I
 
-    .line 1918
+    .line 1923
     new-instance v14, Landroid/content/pm/PackageParser$Activity;
 
     move-object/from16 v0, p0
@@ -2667,7 +2667,7 @@
 
     invoke-direct {v14, v2, v3}, Landroid/content/pm/PackageParser$Activity;-><init>(Landroid/content/pm/PackageParser$ParseComponentArgs;Landroid/content/pm/ActivityInfo;)V
 
-    .line 1919
+    .line 1924
     .local v14, a:Landroid/content/pm/PackageParser$Activity;
     const/4 v2, 0x0
 
@@ -2675,25 +2675,25 @@
 
     if-eqz v2, :cond_3
 
-    .line 1920
+    .line 1925
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 1921
+    .line 1926
     const/4 v14, 0x0
 
-    .line 2106
+    .line 2133
     .end local v14           #a:Landroid/content/pm/PackageParser$Activity;
     :cond_1
     :goto_1
     return-object v14
 
-    .line 1914
+    .line 1919
     :cond_2
     const-string v2, "<activity>"
 
     goto :goto_0
 
-    .line 1924
+    .line 1929
     .restart local v14       #a:Landroid/content/pm/PackageParser$Activity;
     :cond_3
     const/4 v2, 0x6
@@ -2704,11 +2704,11 @@
 
     move-result v17
 
-    .line 1926
+    .line 1931
     .local v17, setExported:Z
     if-eqz v17, :cond_4
 
-    .line 1927
+    .line 1932
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/4 v3, 0x6
@@ -2723,7 +2723,7 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ComponentInfo;->exported:Z
 
-    .line 1931
+    .line 1936
     :cond_4
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
@@ -2739,7 +2739,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->theme:I
 
-    .line 1934
+    .line 1939
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/16 v3, 0x1a
@@ -2758,7 +2758,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->uiOptions:I
 
-    .line 1939
+    .line 1944
     const/4 v2, 0x4
 
     const/4 v3, 0x0
@@ -2769,11 +2769,11 @@
 
     move-result-object v18
 
-    .line 1941
+    .line 1946
     .local v18, str:Ljava/lang/String;
     if-nez v18, :cond_11
 
-    .line 1942
+    .line 1947
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     move-object/from16 v0, p1
@@ -2784,7 +2784,7 @@
 
     iput-object v3, v2, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
 
-    .line 1947
+    .line 1952
     :goto_2
     const/16 v2, 0x8
 
@@ -2796,7 +2796,7 @@
 
     move-result-object v18
 
-    .line 1949
+    .line 1954
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     move-object/from16 v0, p1
@@ -2821,14 +2821,14 @@
 
     iput-object v3, v2, Landroid/content/pm/ActivityInfo;->taskAffinity:Ljava/lang/String;
 
-    .line 1952
+    .line 1957
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/4 v3, 0x0
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1953
+    .line 1958
     const/16 v2, 0x9
 
     const/4 v3, 0x0
@@ -2841,7 +2841,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 1956
+    .line 1961
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -2850,7 +2850,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1959
+    .line 1964
     :cond_5
     const/16 v2, 0xa
 
@@ -2864,7 +2864,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 1962
+    .line 1967
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -2873,7 +2873,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1965
+    .line 1970
     :cond_6
     const/16 v2, 0xb
 
@@ -2887,7 +2887,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 1968
+    .line 1973
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -2896,7 +2896,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1971
+    .line 1976
     :cond_7
     const/16 v2, 0x15
 
@@ -2910,7 +2910,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 1974
+    .line 1979
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -2919,7 +2919,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1977
+    .line 1982
     :cond_8
     const/16 v2, 0x12
 
@@ -2933,7 +2933,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 1980
+    .line 1985
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -2942,7 +2942,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1983
+    .line 1988
     :cond_9
     const/16 v2, 0xc
 
@@ -2956,7 +2956,7 @@
 
     if-eqz v2, :cond_a
 
-    .line 1986
+    .line 1991
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -2965,7 +2965,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1989
+    .line 1994
     :cond_a
     const/16 v2, 0xd
 
@@ -2979,7 +2979,7 @@
 
     if-eqz v2, :cond_b
 
-    .line 1992
+    .line 1997
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -2988,7 +2988,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 1995
+    .line 2000
     :cond_b
     const/16 v3, 0x13
 
@@ -3013,7 +3013,7 @@
 
     if-eqz v2, :cond_c
 
-    .line 1998
+    .line 2003
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -3022,7 +3022,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 2001
+    .line 2006
     :cond_c
     const/16 v2, 0x16
 
@@ -3036,7 +3036,7 @@
 
     if-eqz v2, :cond_d
 
-    .line 2004
+    .line 2009
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -3045,7 +3045,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 2007
+    .line 2012
     :cond_d
     const/16 v2, 0x18
 
@@ -3059,7 +3059,7 @@
 
     if-eqz v2, :cond_e
 
-    .line 2010
+    .line 2015
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -3068,11 +3068,11 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 2013
+    .line 2018
     :cond_e
     if-nez p7, :cond_14
 
-    .line 2014
+    .line 2019
     const/16 v2, 0x19
 
     move-object/from16 v0, v16
@@ -3085,7 +3085,7 @@
 
     if-eqz v2, :cond_f
 
-    .line 2017
+    .line 2022
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
@@ -3094,7 +3094,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 2020
+    .line 2025
     :cond_f
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
@@ -3110,7 +3110,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->launchMode:I
 
-    .line 2023
+    .line 2028
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/16 v3, 0xf
@@ -3125,7 +3125,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->screenOrientation:I
 
-    .line 2026
+    .line 2031
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/16 v3, 0x10
@@ -3140,7 +3140,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->configChanges:I
 
-    .line 2029
+    .line 2034
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/16 v3, 0x14
@@ -3155,11 +3155,11 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->softInputMode:I
 
-    .line 2037
+    .line 2042
     :goto_4
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2039
+    .line 2044
     if-eqz p7, :cond_10
 
     move-object/from16 v0, p1
@@ -3174,7 +3174,7 @@
 
     if-eqz v2, :cond_10
 
-    .line 2042
+    .line 2047
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget-object v2, v2, Landroid/content/pm/ComponentInfo;->processName:Ljava/lang/String;
@@ -3185,14 +3185,14 @@
 
     if-ne v2, v3, :cond_10
 
-    .line 2043
+    .line 2048
     const/4 v2, 0x0
 
     const-string v3, "Heavy-weight applications can not have receivers in main process"
 
     aput-object v3, p6, v2
 
-    .line 2047
+    .line 2052
     :cond_10
     const/4 v2, 0x0
 
@@ -3200,12 +3200,12 @@
 
     if-eqz v2, :cond_15
 
-    .line 2048
+    .line 2053
     const/4 v14, 0x0
 
     goto/16 :goto_1
 
-    .line 1944
+    .line 1949
     :cond_11
     iget-object v3, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
@@ -3233,13 +3233,13 @@
 
     goto :goto_5
 
-    .line 1995
+    .line 2000
     :cond_13
     const/4 v2, 0x0
 
     goto/16 :goto_3
 
-    .line 2033
+    .line 2038
     :cond_14
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
@@ -3247,7 +3247,7 @@
 
     iput v3, v2, Landroid/content/pm/ActivityInfo;->launchMode:I
 
-    .line 2034
+    .line 2039
     iget-object v2, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/4 v3, 0x0
@@ -3256,13 +3256,13 @@
 
     goto :goto_4
 
-    .line 2051
+    .line 2056
     :cond_15
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v15
 
-    .line 2054
+    .line 2059
     .local v15, outerDepth:I
     :cond_16
     :goto_6
@@ -3275,7 +3275,7 @@
 
     move/from16 v0, v19
 
-    if-eq v0, v2, :cond_1d
+    if-eq v0, v2, :cond_22
 
     const/4 v2, 0x3
 
@@ -3287,9 +3287,9 @@
 
     move-result v2
 
-    if-le v2, v15, :cond_1d
+    if-le v2, v15, :cond_22
 
-    .line 2056
+    .line 2061
     :cond_17
     const/4 v2, 0x3
 
@@ -3303,7 +3303,7 @@
 
     if-eq v0, v2, :cond_16
 
-    .line 2060
+    .line 2065
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -3314,14 +3314,14 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1a
+    if-eqz v2, :cond_1c
 
-    .line 2061
+    .line 2066
     new-instance v7, Landroid/content/pm/PackageParser$ActivityIntentInfo;
 
     invoke-direct {v7, v14}, Landroid/content/pm/PackageParser$ActivityIntentInfo;-><init>(Landroid/content/pm/PackageParser$Activity;)V
 
-    .line 2062
+    .line 2067
     .local v7, intent:Landroid/content/pm/PackageParser$ActivityIntentInfo;
     if-nez p7, :cond_18
 
@@ -3346,35 +3346,114 @@
 
     if-nez v2, :cond_19
 
-    .line 2063
+    .line 2068
     const/4 v14, 0x0
 
     goto/16 :goto_1
 
-    .line 2062
+    .line 2067
     :cond_18
     const/4 v9, 0x0
 
     goto :goto_7
 
-    .line 2065
+    .line 2070
     :cond_19
     invoke-virtual {v7}, Landroid/content/pm/PackageParser$ActivityIntentInfo;->countActions()I
 
     move-result v2
 
-    if-eqz v2, :cond_16
+    if-nez v2, :cond_1b
 
-    .line 2070
+    .line 2071
+    sget-boolean v2, Landroid/content/pm/PackageParser;->mIsEngBuild:Z
+
+    if-eqz v2, :cond_1a
+
+    .line 2072
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "No actions in intent filter at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_6
+
+    .line 2076
+    :cond_1a
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "No actions in intent filter at mArchiveSourcePath "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_6
+
+    .line 2081
+    :cond_1b
     iget-object v2, v14, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    goto :goto_6
+    goto/16 :goto_6
 
-    .line 2072
+    .line 2083
     .end local v7           #intent:Landroid/content/pm/PackageParser$ActivityIntentInfo;
-    :cond_1a
+    :cond_1c
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -3385,9 +3464,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1b
+    if-eqz v2, :cond_1d
 
-    .line 2073
+    .line 2084
     iget-object v12, v14, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
     move-object/from16 v8, p0
@@ -3408,26 +3487,310 @@
 
     if-nez v2, :cond_16
 
-    .line 2075
+    .line 2086
     const/4 v14, 0x0
 
     goto/16 :goto_1
 
-    .line 2080
-    :cond_1b
-    if-eqz p7, :cond_1c
+    .line 2090
+    :cond_1d
+    sget-boolean v2, Landroid/content/pm/PackageParser;->mIsEngBuild:Z
 
-    .line 2089
-    :cond_1c
+    if-eqz v2, :cond_1e
+
+    .line 2091
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Problem in package "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ":"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2095
+    :goto_8
+    if-eqz p7, :cond_20
+
+    .line 2096
+    sget-boolean v2, Landroid/content/pm/PackageParser;->mIsEngBuild:Z
+
+    if-eqz v2, :cond_1f
+
+    .line 2097
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <receiver>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2116
+    :goto_9
     invoke-static/range {p3 .. p3}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    goto :goto_6
+    goto/16 :goto_6
 
-    .line 2102
-    :cond_1d
+    .line 2093
+    :cond_1e
+    const-string v2, "PackageParser"
+
+    const-string v3, "Problem in package mArchiveSourcePath:"
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_8
+
+    .line 2101
+    :cond_1f
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <receiver>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "mArchiveSourcePath"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_9
+
+    .line 2106
+    :cond_20
+    sget-boolean v2, Landroid/content/pm/PackageParser;->mIsEngBuild:Z
+
+    if-eqz v2, :cond_21
+
+    .line 2107
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <activity>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_9
+
+    .line 2111
+    :cond_21
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <activity>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "mArchiveSourcePath"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_9
+
+    .line 2129
+    :cond_22
     if-nez v17, :cond_1
 
-    .line 2103
+    .line 2130
     iget-object v3, v14, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget-object v2, v14, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
@@ -3436,19 +3799,19 @@
 
     move-result v2
 
-    if-lez v2, :cond_1e
+    if-lez v2, :cond_23
 
     const/4 v2, 0x1
 
-    :goto_8
+    :goto_a
     iput-boolean v2, v3, Landroid/content/pm/ComponentInfo;->exported:Z
 
     goto/16 :goto_1
 
-    :cond_1e
+    :cond_23
     const/4 v2, 0x0
 
-    goto :goto_8
+    goto :goto_a
 .end method
 
 .method private parseActivityAlias(Landroid/content/pm/PackageParser$Package;Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;I[Ljava/lang/String;)Landroid/content/pm/PackageParser$Activity;
@@ -3467,7 +3830,7 @@
     .end annotation
 
     .prologue
-    .line 2112
+    .line 2139
     sget-object v2, Lcom/android/internal/R$styleable;->AndroidManifestActivityAlias:[I
 
     move-object/from16 v0, p2
@@ -3478,7 +3841,7 @@
 
     move-result-object v19
 
-    .line 2115
+    .line 2142
     .local v19, sa:Landroid/content/res/TypedArray;
     const/4 v2, 0x7
 
@@ -3490,29 +3853,29 @@
 
     move-result-object v24
 
-    .line 2117
+    .line 2144
     .local v24, targetActivity:Ljava/lang/String;
     if-nez v24, :cond_1
 
-    .line 2118
+    .line 2145
     const/4 v2, 0x0
 
     const-string v3, "<activity-alias> does not specify android:targetActivity"
 
     aput-object v3, p6, v2
 
-    .line 2119
+    .line 2146
     invoke-virtual/range {v19 .. v19}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2120
+    .line 2147
     const/4 v15, 0x0
 
-    .line 2253
+    .line 2280
     :cond_0
     :goto_0
     return-object v15
 
-    .line 2123
+    .line 2150
     :cond_1
     move-object/from16 v0, p1
 
@@ -3528,18 +3891,18 @@
 
     move-result-object v24
 
-    .line 2125
+    .line 2152
     if-nez v24, :cond_2
 
-    .line 2126
+    .line 2153
     invoke-virtual/range {v19 .. v19}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2127
+    .line 2154
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 2130
+    .line 2157
     :cond_2
     move-object/from16 v0, p0
 
@@ -3547,7 +3910,7 @@
 
     if-nez v2, :cond_3
 
-    .line 2131
+    .line 2158
     new-instance v2, Landroid/content/pm/PackageParser$ParseComponentArgs;
 
     const/4 v5, 0x2
@@ -3578,7 +3941,7 @@
 
     iput-object v2, v0, Landroid/content/pm/PackageParser;->mParseActivityAliasArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
 
-    .line 2140
+    .line 2167
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseActivityAliasArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -3587,7 +3950,7 @@
 
     iput-object v3, v2, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->tag:Ljava/lang/String;
 
-    .line 2143
+    .line 2170
     :cond_3
     move-object/from16 v0, p0
 
@@ -3597,7 +3960,7 @@
 
     iput-object v0, v2, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
-    .line 2144
+    .line 2171
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseActivityAliasArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -3606,10 +3969,10 @@
 
     iput v0, v2, Landroid/content/pm/PackageParser$ParseComponentArgs;->flags:I
 
-    .line 2146
+    .line 2173
     const/16 v23, 0x0
 
-    .line 2148
+    .line 2175
     .local v23, target:Landroid/content/pm/PackageParser$Activity;
     move-object/from16 v0, p1
 
@@ -3619,7 +3982,7 @@
 
     move-result v14
 
-    .line 2149
+    .line 2176
     .local v14, NA:I
     const/16 v16, 0x0
 
@@ -3629,7 +3992,7 @@
 
     if-ge v0, v14, :cond_4
 
-    .line 2150
+    .line 2177
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->activities:Ljava/util/ArrayList;
@@ -3642,7 +4005,7 @@
 
     check-cast v22, Landroid/content/pm/PackageParser$Activity;
 
-    .line 2151
+    .line 2178
     .local v22, t:Landroid/content/pm/PackageParser$Activity;
     move-object/from16 v0, v22
 
@@ -3658,15 +4021,15 @@
 
     if-eqz v2, :cond_5
 
-    .line 2152
+    .line 2179
     move-object/from16 v23, v22
 
-    .line 2157
+    .line 2184
     .end local v22           #t:Landroid/content/pm/PackageParser$Activity;
     :cond_4
     if-nez v23, :cond_6
 
-    .line 2158
+    .line 2185
     const/4 v2, 0x0
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3697,29 +4060,29 @@
 
     aput-object v3, p6, v2
 
-    .line 2160
+    .line 2187
     invoke-virtual/range {v19 .. v19}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2161
+    .line 2188
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 2149
+    .line 2176
     .restart local v22       #t:Landroid/content/pm/PackageParser$Activity;
     :cond_5
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_1
 
-    .line 2164
+    .line 2191
     .end local v22           #t:Landroid/content/pm/PackageParser$Activity;
     :cond_6
     new-instance v17, Landroid/content/pm/ActivityInfo;
 
     invoke-direct/range {v17 .. v17}, Landroid/content/pm/ActivityInfo;-><init>()V
 
-    .line 2165
+    .line 2192
     .local v17, info:Landroid/content/pm/ActivityInfo;
     move-object/from16 v0, v24
 
@@ -3727,7 +4090,7 @@
 
     iput-object v0, v1, Landroid/content/pm/ActivityInfo;->targetActivity:Ljava/lang/String;
 
-    .line 2166
+    .line 2193
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3738,7 +4101,7 @@
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->configChanges:I
 
-    .line 2167
+    .line 2194
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3749,7 +4112,7 @@
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->flags:I
 
-    .line 2168
+    .line 2195
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3760,7 +4123,7 @@
 
     iput v2, v0, Landroid/content/pm/PackageItemInfo;->icon:I
 
-    .line 2169
+    .line 2196
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3771,7 +4134,7 @@
 
     iput v2, v0, Landroid/content/pm/PackageItemInfo;->logo:I
 
-    .line 2170
+    .line 2197
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3782,7 +4145,7 @@
 
     iput v2, v0, Landroid/content/pm/PackageItemInfo;->labelRes:I
 
-    .line 2171
+    .line 2198
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3793,7 +4156,7 @@
 
     iput-object v2, v0, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 2172
+    .line 2199
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3804,7 +4167,7 @@
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->launchMode:I
 
-    .line 2173
+    .line 2200
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3815,14 +4178,14 @@
 
     iput-object v2, v0, Landroid/content/pm/ComponentInfo;->processName:Ljava/lang/String;
 
-    .line 2174
+    .line 2201
     move-object/from16 v0, v17
 
     iget v2, v0, Landroid/content/pm/ComponentInfo;->descriptionRes:I
 
     if-nez v2, :cond_7
 
-    .line 2175
+    .line 2202
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3833,7 +4196,7 @@
 
     iput v2, v0, Landroid/content/pm/ComponentInfo;->descriptionRes:I
 
-    .line 2177
+    .line 2204
     :cond_7
     move-object/from16 v0, v23
 
@@ -3845,7 +4208,7 @@
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->screenOrientation:I
 
-    .line 2178
+    .line 2205
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3856,7 +4219,7 @@
 
     iput-object v2, v0, Landroid/content/pm/ActivityInfo;->taskAffinity:Ljava/lang/String;
 
-    .line 2179
+    .line 2206
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3867,7 +4230,7 @@
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->theme:I
 
-    .line 2180
+    .line 2207
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3878,7 +4241,7 @@
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->softInputMode:I
 
-    .line 2181
+    .line 2208
     move-object/from16 v0, v23
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
@@ -3889,7 +4252,7 @@
 
     iput v2, v0, Landroid/content/pm/ActivityInfo;->uiOptions:I
 
-    .line 2183
+    .line 2210
     new-instance v15, Landroid/content/pm/PackageParser$Activity;
 
     move-object/from16 v0, p0
@@ -3900,7 +4263,7 @@
 
     invoke-direct {v15, v2, v0}, Landroid/content/pm/PackageParser$Activity;-><init>(Landroid/content/pm/PackageParser$ParseComponentArgs;Landroid/content/pm/ActivityInfo;)V
 
-    .line 2184
+    .line 2211
     .local v15, a:Landroid/content/pm/PackageParser$Activity;
     const/4 v2, 0x0
 
@@ -3908,15 +4271,15 @@
 
     if-eqz v2, :cond_8
 
-    .line 2185
+    .line 2212
     invoke-virtual/range {v19 .. v19}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2186
+    .line 2213
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 2189
+    .line 2216
     :cond_8
     const/4 v2, 0x5
 
@@ -3926,11 +4289,11 @@
 
     move-result v20
 
-    .line 2191
+    .line 2218
     .local v20, setExported:Z
     if-eqz v20, :cond_9
 
-    .line 2192
+    .line 2219
     iget-object v2, v15, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     const/4 v3, 0x5
@@ -3945,7 +4308,7 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ComponentInfo;->exported:Z
 
-    .line 2197
+    .line 2224
     :cond_9
     const/4 v2, 0x3
 
@@ -3957,11 +4320,11 @@
 
     move-result-object v21
 
-    .line 2199
+    .line 2226
     .local v21, str:Ljava/lang/String;
     if-eqz v21, :cond_a
 
-    .line 2200
+    .line 2227
     iget-object v3, v15, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->length()I
@@ -3981,35 +4344,35 @@
     :goto_2
     iput-object v2, v3, Landroid/content/pm/ActivityInfo;->permission:Ljava/lang/String;
 
-    .line 2203
+    .line 2230
     :cond_a
     invoke-virtual/range {v19 .. v19}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2205
+    .line 2232
     const/4 v2, 0x0
 
     aget-object v2, p6, v2
 
     if-eqz v2, :cond_c
 
-    .line 2206
+    .line 2233
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 2200
+    .line 2227
     :cond_b
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 2209
+    .line 2236
     :cond_c
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v18
 
-    .line 2212
+    .line 2239
     .local v18, outerDepth:I
     :cond_d
     :goto_3
@@ -4022,7 +4385,7 @@
 
     move/from16 v0, v25
 
-    if-eq v0, v2, :cond_12
+    if-eq v0, v2, :cond_13
 
     const/4 v2, 0x3
 
@@ -4036,9 +4399,9 @@
 
     move/from16 v0, v18
 
-    if-le v2, v0, :cond_12
+    if-le v2, v0, :cond_13
 
-    .line 2214
+    .line 2241
     :cond_e
     const/4 v2, 0x3
 
@@ -4052,7 +4415,7 @@
 
     if-eq v0, v2, :cond_d
 
-    .line 2218
+    .line 2245
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -4063,14 +4426,14 @@
 
     move-result v2
 
-    if-eqz v2, :cond_10
+    if-eqz v2, :cond_11
 
-    .line 2219
+    .line 2246
     new-instance v7, Landroid/content/pm/PackageParser$ActivityIntentInfo;
 
     invoke-direct {v7, v15}, Landroid/content/pm/PackageParser$ActivityIntentInfo;-><init>(Landroid/content/pm/PackageParser$Activity;)V
 
-    .line 2220
+    .line 2247
     .local v7, intent:Landroid/content/pm/PackageParser$ActivityIntentInfo;
     const/4 v9, 0x1
 
@@ -4092,29 +4455,73 @@
 
     if-nez v2, :cond_f
 
-    .line 2221
+    .line 2248
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 2223
+    .line 2250
     :cond_f
     invoke-virtual {v7}, Landroid/content/pm/PackageParser$ActivityIntentInfo;->countActions()I
 
     move-result v2
 
-    if-eqz v2, :cond_d
+    if-nez v2, :cond_10
 
-    .line 2228
+    .line 2251
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "No actions in intent filter at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_3
+
+    .line 2255
+    :cond_10
     iget-object v2, v15, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 2230
+    .line 2257
     .end local v7           #intent:Landroid/content/pm/PackageParser$ActivityIntentInfo;
-    :cond_10
+    :cond_11
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -4125,9 +4532,9 @@
 
     move-result v2
 
-    if-eqz v2, :cond_11
+    if-eqz v2, :cond_12
 
-    .line 2231
+    .line 2258
     iget-object v12, v15, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
     move-object/from16 v8, p0
@@ -4148,22 +4555,77 @@
 
     if-nez v2, :cond_d
 
-    .line 2233
+    .line 2260
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 2240
-    :cond_11
+    .line 2264
+    :cond_12
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <activity-alias>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2267
     invoke-static/range {p3 .. p3}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    goto :goto_3
+    goto/16 :goto_3
 
-    .line 2249
-    :cond_12
+    .line 2276
+    :cond_13
     if-nez v20, :cond_0
 
-    .line 2250
+    .line 2277
     iget-object v3, v15, Landroid/content/pm/PackageParser$Activity;->info:Landroid/content/pm/ActivityInfo;
 
     iget-object v2, v15, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
@@ -4172,7 +4634,7 @@
 
     move-result v2
 
-    if-lez v2, :cond_13
+    if-lez v2, :cond_14
 
     const/4 v2, 0x1
 
@@ -4181,7 +4643,7 @@
 
     goto/16 :goto_0
 
-    :cond_13
+    :cond_14
     const/4 v2, 0x0
 
     goto :goto_4
@@ -4203,12 +4665,12 @@
     .end annotation
 
     .prologue
-    .line 2638
+    .line 2665
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v6
 
-    .line 2641
+    .line 2668
     .local v6, outerDepth:I
     :cond_0
     :goto_0
@@ -4231,7 +4693,7 @@
 
     if-le v0, v6, :cond_3
 
-    .line 2643
+    .line 2670
     :cond_1
     const/4 v0, 0x3
 
@@ -4241,7 +4703,7 @@
 
     if-eq v7, v0, :cond_0
 
-    .line 2647
+    .line 2674
     invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -4254,7 +4716,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 2648
+    .line 2675
     iget-object v4, p5, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
     move-object v0, p0
@@ -4275,20 +4737,83 @@
 
     if-nez v0, :cond_0
 
-    .line 2650
+    .line 2677
     const/4 v0, 0x0
 
-    .line 2665
+    .line 2692
     :goto_1
     return v0
 
-    .line 2657
+    .line 2681
     :cond_2
+    const-string v0, "PackageParser"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Unknown element under "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ": "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " at "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-interface {p2}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2684
     invoke-static {p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2665
+    .line 2692
     :cond_3
     const/4 v0, 0x1
 
@@ -4391,7 +4916,7 @@
     .line 1557
     const/4 v3, 0x0
 
-    .line 1856
+    .line 1861
     :goto_0
     return v3
 
@@ -5123,7 +5648,7 @@
 
     move/from16 v0, v39
 
-    if-eq v0, v3, :cond_27
+    if-eq v0, v3, :cond_28
 
     const/4 v3, 0x3
 
@@ -5137,7 +5662,7 @@
 
     move/from16 v0, v28
 
-    if-le v3, v0, :cond_27
+    if-le v3, v0, :cond_28
 
     .line 1741
     :cond_15
@@ -5638,15 +6163,116 @@
 
     goto/16 :goto_4
 
-    .line 1846
+    .line 1843
     :cond_26
+    sget-boolean v3, Landroid/content/pm/PackageParser;->mIsEngBuild:Z
+
+    if-eqz v3, :cond_27
+
+    .line 1844
+    const-string v3, "PackageParser"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Unknown element under <application>: "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    move-object/from16 v0, v38
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v6, " at "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v6, " "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1851
+    :goto_6
     invoke-static/range {p3 .. p3}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_4
 
-    .line 1856
-    .end local v38           #tagName:Ljava/lang/String;
+    .line 1848
     :cond_27
+    const-string v3, "PackageParser"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Unknown element under <application>: "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    move-object/from16 v0, v38
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v6, " "
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_6
+
+    .line 1861
+    .end local v38           #tagName:Ljava/lang/String;
+    :cond_28
     const/4 v3, 0x1
 
     goto/16 :goto_0
@@ -5868,7 +6494,7 @@
 .end method
 
 .method private parseIntent(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;ILandroid/content/pm/PackageParser$IntentInfo;[Ljava/lang/String;Z)Z
-    .locals 14
+    .locals 16
     .parameter "res"
     .parameter "parser"
     .parameter "attrs"
@@ -5884,451 +6510,510 @@
     .end annotation
 
     .prologue
-    .line 2798
-    sget-object v12, Lcom/android/internal/R$styleable;->AndroidManifestIntentFilter:[I
+    .line 2825
+    sget-object v13, Lcom/android/internal/R$styleable;->AndroidManifestIntentFilter:[I
 
-    move-object/from16 v0, p3
+    move-object/from16 v0, p1
 
-    invoke-virtual {p1, v0, v12}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    move-object/from16 v1, p3
 
-    move-result-object v7
+    invoke-virtual {v0, v1, v13}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
-    .line 2801
-    .local v7, sa:Landroid/content/res/TypedArray;
-    const/4 v12, 0x2
+    move-result-object v8
 
+    .line 2828
+    .local v8, sa:Landroid/content/res/TypedArray;
+    const/4 v13, 0x2
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getInt(II)I
+
+    move-result v7
+
+    .line 2830
+    .local v7, priority:I
+    move-object/from16 v0, p5
+
+    invoke-virtual {v0, v7}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
+
+    .line 2832
     const/4 v13, 0x0
 
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getInt(II)I
+    invoke-virtual {v8, v13}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
-    move-result v6
+    move-result-object v11
 
-    .line 2803
-    .local v6, priority:I
-    move-object/from16 v0, p5
+    .line 2834
+    .local v11, v:Landroid/util/TypedValue;
+    if-eqz v11, :cond_0
 
-    invoke-virtual {v0, v6}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
-
-    .line 2805
-    const/4 v12, 0x0
-
-    invoke-virtual {v7, v12}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
-
-    move-result-object v10
-
-    .line 2807
-    .local v10, v:Landroid/util/TypedValue;
-    if-eqz v10, :cond_0
-
-    iget v12, v10, Landroid/util/TypedValue;->resourceId:I
+    iget v13, v11, Landroid/util/TypedValue;->resourceId:I
 
     move-object/from16 v0, p5
 
-    iput v12, v0, Landroid/content/pm/PackageParser$IntentInfo;->labelRes:I
+    iput v13, v0, Landroid/content/pm/PackageParser$IntentInfo;->labelRes:I
 
-    if-nez v12, :cond_0
+    if-nez v13, :cond_0
 
-    .line 2808
-    invoke-virtual {v10}, Landroid/util/TypedValue;->coerceToString()Ljava/lang/CharSequence;
+    .line 2835
+    invoke-virtual {v11}, Landroid/util/TypedValue;->coerceToString()Ljava/lang/CharSequence;
 
-    move-result-object v12
+    move-result-object v13
 
     move-object/from16 v0, p5
 
-    iput-object v12, v0, Landroid/content/pm/PackageParser$IntentInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
+    iput-object v13, v0, Landroid/content/pm/PackageParser$IntentInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 2811
+    .line 2838
     :cond_0
-    const/4 v12, 0x1
+    const/4 v13, 0x1
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getResourceId(II)I
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    move-result v12
-
-    move-object/from16 v0, p5
-
-    iput v12, v0, Landroid/content/pm/PackageParser$IntentInfo;->icon:I
-
-    .line 2814
-    const/4 v12, 0x3
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v12
+    move-result v13
 
     move-object/from16 v0, p5
 
-    iput v12, v0, Landroid/content/pm/PackageParser$IntentInfo;->logo:I
+    iput v13, v0, Landroid/content/pm/PackageParser$IntentInfo;->icon:I
 
-    .line 2817
-    invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
+    .line 2841
+    const/4 v13, 0x3
 
-    .line 2819
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v13
+
+    move-object/from16 v0, p5
+
+    iput v13, v0, Landroid/content/pm/PackageParser$IntentInfo;->logo:I
+
+    .line 2844
+    invoke-virtual {v8}, Landroid/content/res/TypedArray;->recycle()V
+
+    .line 2846
     invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    move-result v4
+    move-result v5
 
-    .line 2822
-    .local v4, outerDepth:I
+    .line 2849
+    .local v5, outerDepth:I
     :cond_1
     :goto_0
     invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result v9
+    move-result v10
 
-    .local v9, type:I
-    const/4 v12, 0x1
+    .local v10, type:I
+    const/4 v13, 0x1
 
-    if-eq v9, v12, :cond_10
+    if-eq v10, v13, :cond_10
 
-    const/4 v12, 0x3
+    const/4 v13, 0x3
 
-    if-ne v9, v12, :cond_2
+    if-ne v10, v13, :cond_2
 
     invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    move-result v12
+    move-result v13
 
-    if-le v12, v4, :cond_10
+    if-le v13, v5, :cond_10
 
-    .line 2823
+    .line 2850
     :cond_2
-    const/4 v12, 0x3
+    const/4 v13, 0x3
 
-    if-eq v9, v12, :cond_1
+    if-eq v10, v13, :cond_1
 
-    const/4 v12, 0x4
+    const/4 v13, 0x4
 
-    if-eq v9, v12, :cond_1
+    if-eq v10, v13, :cond_1
 
-    .line 2827
+    .line 2854
     invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    .line 2828
-    .local v3, nodeName:Ljava/lang/String;
-    const-string v12, "action"
+    .line 2855
+    .local v4, nodeName:Ljava/lang/String;
+    const-string v13, "action"
 
-    invoke-virtual {v3, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v13
 
-    if-eqz v12, :cond_5
+    if-eqz v13, :cond_5
 
-    .line 2829
-    const-string v12, "http://schemas.android.com/apk/res/android"
+    .line 2856
+    const-string v13, "http://schemas.android.com/apk/res/android"
 
-    const-string/jumbo v13, "name"
+    const-string/jumbo v14, "name"
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v12, v13}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v13, v14}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v12
 
-    .line 2831
-    .local v11, value:Ljava/lang/String;
-    if-eqz v11, :cond_3
+    .line 2858
+    .local v12, value:Ljava/lang/String;
+    if-eqz v12, :cond_3
 
-    const-string v12, ""
+    const-string v13, ""
 
-    if-ne v11, v12, :cond_4
+    if-ne v12, v13, :cond_4
 
-    .line 2832
+    .line 2859
     :cond_3
-    const/4 v12, 0x0
+    const/4 v13, 0x0
 
-    const-string v13, "No value supplied for <android:name>"
+    const-string v14, "No value supplied for <android:name>"
 
-    aput-object v13, p6, v12
+    aput-object v14, p6, v13
 
-    .line 2833
-    const/4 v12, 0x0
+    .line 2860
+    const/4 v13, 0x0
 
-    .line 2927
-    .end local v3           #nodeName:Ljava/lang/String;
-    .end local v11           #value:Ljava/lang/String;
+    .line 2954
+    .end local v4           #nodeName:Ljava/lang/String;
+    .end local v12           #value:Ljava/lang/String;
     :goto_1
-    return v12
+    return v13
 
-    .line 2835
-    .restart local v3       #nodeName:Ljava/lang/String;
-    .restart local v11       #value:Ljava/lang/String;
+    .line 2862
+    .restart local v4       #nodeName:Ljava/lang/String;
+    .restart local v12       #value:Ljava/lang/String;
     :cond_4
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 2837
+    .line 2864
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v11}, Landroid/content/pm/PackageParser$IntentInfo;->addAction(Ljava/lang/String;)V
+    invoke-virtual {v0, v12}, Landroid/content/pm/PackageParser$IntentInfo;->addAction(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2838
-    .end local v11           #value:Ljava/lang/String;
+    .line 2865
+    .end local v12           #value:Ljava/lang/String;
     :cond_5
-    const-string v12, "category"
+    const-string v13, "category"
 
-    invoke-virtual {v3, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v13
 
-    if-eqz v12, :cond_8
+    if-eqz v13, :cond_8
 
-    .line 2839
-    const-string v12, "http://schemas.android.com/apk/res/android"
+    .line 2866
+    const-string v13, "http://schemas.android.com/apk/res/android"
 
-    const-string/jumbo v13, "name"
+    const-string/jumbo v14, "name"
 
     move-object/from16 v0, p3
 
-    invoke-interface {v0, v12, v13}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0, v13, v14}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v12
 
-    .line 2841
-    .restart local v11       #value:Ljava/lang/String;
-    if-eqz v11, :cond_6
+    .line 2868
+    .restart local v12       #value:Ljava/lang/String;
+    if-eqz v12, :cond_6
 
-    const-string v12, ""
+    const-string v13, ""
 
-    if-ne v11, v12, :cond_7
+    if-ne v12, v13, :cond_7
 
-    .line 2842
+    .line 2869
     :cond_6
-    const/4 v12, 0x0
+    const/4 v13, 0x0
 
-    const-string v13, "No value supplied for <android:name>"
+    const-string v14, "No value supplied for <android:name>"
 
-    aput-object v13, p6, v12
+    aput-object v14, p6, v13
 
-    .line 2843
-    const/4 v12, 0x0
+    .line 2870
+    const/4 v13, 0x0
 
     goto :goto_1
 
-    .line 2845
+    .line 2872
     :cond_7
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 2847
+    .line 2874
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v11}, Landroid/content/pm/PackageParser$IntentInfo;->addCategory(Ljava/lang/String;)V
+    invoke-virtual {v0, v12}, Landroid/content/pm/PackageParser$IntentInfo;->addCategory(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2849
-    .end local v11           #value:Ljava/lang/String;
+    .line 2876
+    .end local v12           #value:Ljava/lang/String;
     :cond_8
-    const-string v12, "data"
+    const-string v13, "data"
 
-    invoke-virtual {v3, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v12
+    move-result v13
 
-    if-eqz v12, :cond_f
+    if-eqz v13, :cond_f
 
-    .line 2850
-    sget-object v12, Lcom/android/internal/R$styleable;->AndroidManifestData:[I
+    .line 2877
+    sget-object v13, Lcom/android/internal/R$styleable;->AndroidManifestData:[I
 
-    move-object/from16 v0, p3
+    move-object/from16 v0, p1
 
-    invoke-virtual {p1, v0, v12}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    move-object/from16 v1, p3
 
-    move-result-object v7
-
-    .line 2853
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+    invoke-virtual {v0, v1, v13}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v8
 
-    .line 2855
-    .local v8, str:Ljava/lang/String;
-    if-eqz v8, :cond_9
+    .line 2880
+    const/4 v13, 0x0
 
-    .line 2857
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 2882
+    .local v9, str:Ljava/lang/String;
+    if-eqz v9, :cond_9
+
+    .line 2884
     :try_start_0
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v8}, Landroid/content/pm/PackageParser$IntentInfo;->addDataType(Ljava/lang/String;)V
+    invoke-virtual {v0, v9}, Landroid/content/pm/PackageParser$IntentInfo;->addDataType(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/content/IntentFilter$MalformedMimeTypeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2865
+    .line 2892
     :cond_9
-    const/4 v12, 0x1
+    const/4 v13, 0x1
 
-    const/4 v13, 0x0
+    const/4 v14, 0x0
 
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
 
-    move-result-object v8
-
-    .line 2867
-    if-eqz v8, :cond_a
-
-    .line 2868
-    move-object/from16 v0, p5
-
-    invoke-virtual {v0, v8}, Landroid/content/pm/PackageParser$IntentInfo;->addDataScheme(Ljava/lang/String;)V
-
-    .line 2871
-    :cond_a
-    const/4 v12, 0x2
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 2873
-    .local v2, host:Ljava/lang/String;
-    const/4 v12, 0x3
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 2875
-    .local v5, port:Ljava/lang/String;
-    if-eqz v2, :cond_b
-
-    .line 2876
-    move-object/from16 v0, p5
-
-    invoke-virtual {v0, v2, v5}, Landroid/content/pm/PackageParser$IntentInfo;->addDataAuthority(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 2879
-    :cond_b
-    const/4 v12, 0x4
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
-
-    move-result-object v8
-
-    .line 2881
-    if-eqz v8, :cond_c
-
-    .line 2882
-    const/4 v12, 0x0
-
-    move-object/from16 v0, p5
-
-    invoke-virtual {v0, v8, v12}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
-
-    .line 2885
-    :cond_c
-    const/4 v12, 0x5
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
-
-    move-result-object v8
-
-    .line 2887
-    if-eqz v8, :cond_d
-
-    .line 2888
-    const/4 v12, 0x1
-
-    move-object/from16 v0, p5
-
-    invoke-virtual {v0, v8, v12}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
-
-    .line 2891
-    :cond_d
-    const/4 v12, 0x6
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v7, v12, v13}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
-
-    move-result-object v8
-
-    .line 2893
-    if-eqz v8, :cond_e
+    move-result-object v9
 
     .line 2894
-    const/4 v12, 0x2
+    if-eqz v9, :cond_a
+
+    .line 2895
+    move-object/from16 v0, p5
+
+    invoke-virtual {v0, v9}, Landroid/content/pm/PackageParser$IntentInfo;->addDataScheme(Ljava/lang/String;)V
+
+    .line 2898
+    :cond_a
+    const/4 v13, 0x2
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 2900
+    .local v3, host:Ljava/lang/String;
+    const/4 v13, 0x3
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 2902
+    .local v6, port:Ljava/lang/String;
+    if-eqz v3, :cond_b
+
+    .line 2903
+    move-object/from16 v0, p5
+
+    invoke-virtual {v0, v3, v6}, Landroid/content/pm/PackageParser$IntentInfo;->addDataAuthority(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2906
+    :cond_b
+    const/4 v13, 0x4
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 2908
+    if-eqz v9, :cond_c
+
+    .line 2909
+    const/4 v13, 0x0
 
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v8, v12}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
+    invoke-virtual {v0, v9, v13}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
 
-    .line 2897
+    .line 2912
+    :cond_c
+    const/4 v13, 0x5
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 2914
+    if-eqz v9, :cond_d
+
+    .line 2915
+    const/4 v13, 0x1
+
+    move-object/from16 v0, p5
+
+    invoke-virtual {v0, v9, v13}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
+
+    .line 2918
+    :cond_d
+    const/4 v13, 0x6
+
+    const/4 v14, 0x0
+
+    invoke-virtual {v8, v13, v14}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
+
+    move-result-object v9
+
+    .line 2920
+    if-eqz v9, :cond_e
+
+    .line 2921
+    const/4 v13, 0x2
+
+    move-object/from16 v0, p5
+
+    invoke-virtual {v0, v9, v13}, Landroid/content/pm/PackageParser$IntentInfo;->addDataPath(Ljava/lang/String;I)V
+
+    .line 2924
     :cond_e
-    invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
+    invoke-virtual {v8}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2898
+    .line 2925
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2858
-    .end local v2           #host:Ljava/lang/String;
-    .end local v5           #port:Ljava/lang/String;
+    .line 2885
+    .end local v3           #host:Ljava/lang/String;
+    .end local v6           #port:Ljava/lang/String;
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    .line 2859
-    .local v1, e:Landroid/content/IntentFilter$MalformedMimeTypeException;
-    const/4 v12, 0x0
+    .line 2886
+    .local v2, e:Landroid/content/IntentFilter$MalformedMimeTypeException;
+    const/4 v13, 0x0
 
-    invoke-virtual {v1}, Landroid/content/IntentFilter$MalformedMimeTypeException;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/IntentFilter$MalformedMimeTypeException;->toString()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v14
 
-    aput-object v13, p6, v12
+    aput-object v14, p6, v13
 
-    .line 2860
-    invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
+    .line 2887
+    invoke-virtual {v8}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2861
-    const/4 v12, 0x0
+    .line 2888
+    const/4 v13, 0x0
 
     goto/16 :goto_1
 
-    .line 2903
-    .end local v1           #e:Landroid/content/IntentFilter$MalformedMimeTypeException;
-    .end local v8           #str:Ljava/lang/String;
+    .line 2927
+    .end local v2           #e:Landroid/content/IntentFilter$MalformedMimeTypeException;
+    .end local v9           #str:Ljava/lang/String;
     :cond_f
+    const-string v13, "PackageParser"
+
+    new-instance v14, Ljava/lang/StringBuilder;
+
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v15, "Unknown element under <intent-filter>: "
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, " at "
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    move-object/from16 v0, p0
+
+    iget-object v15, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, " "
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static {v13, v14}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2930
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2910
-    .end local v3           #nodeName:Ljava/lang/String;
+    .line 2937
+    .end local v4           #nodeName:Ljava/lang/String;
     :cond_10
-    const-string v12, "android.intent.category.DEFAULT"
+    const-string v13, "android.intent.category.DEFAULT"
 
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v12}, Landroid/content/pm/PackageParser$IntentInfo;->hasCategory(Ljava/lang/String;)Z
+    invoke-virtual {v0, v13}, Landroid/content/pm/PackageParser$IntentInfo;->hasCategory(Ljava/lang/String;)Z
 
-    move-result v12
+    move-result v13
 
     move-object/from16 v0, p5
 
-    iput-boolean v12, v0, Landroid/content/pm/PackageParser$IntentInfo;->hasDefault:Z
+    iput-boolean v13, v0, Landroid/content/pm/PackageParser$IntentInfo;->hasDefault:Z
 
-    .line 2927
-    const/4 v12, 0x1
+    .line 2954
+    const/4 v13, 0x1
 
     goto/16 :goto_1
 .end method
@@ -6354,60 +7039,60 @@
 
     const/4 v6, 0x0
 
-    .line 2673
+    .line 2700
     sget-object v7, Lcom/android/internal/R$styleable;->AndroidManifestMetaData:[I
 
     invoke-virtual {p1, p3, v7}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
-    .line 2676
+    .line 2703
     .local v2, sa:Landroid/content/res/TypedArray;
     if-nez p4, :cond_0
 
-    .line 2677
+    .line 2704
     new-instance p4, Landroid/os/Bundle;
 
     .end local p4
     invoke-direct {p4}, Landroid/os/Bundle;-><init>()V
 
-    .line 2680
+    .line 2707
     .restart local p4
     :cond_0
     invoke-virtual {v2, v6, v6}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2682
+    .line 2709
     .local v1, name:Ljava/lang/String;
     if-nez v1, :cond_1
 
-    .line 2683
+    .line 2710
     const-string v5, "<meta-data> requires an android:name attribute"
 
     aput-object v5, p5, v6
 
-    .line 2684
+    .line 2711
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2730
+    .line 2757
     :goto_0
     return-object v4
 
-    .line 2688
+    .line 2715
     :cond_1
     invoke-virtual {v1}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2690
+    .line 2717
     const/4 v7, 0x2
 
     invoke-virtual {v2, v7}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v3
 
-    .line 2692
+    .line 2719
     .local v3, v:Landroid/util/TypedValue;
     if-eqz v3, :cond_2
 
@@ -6415,45 +7100,45 @@
 
     if-eqz v7, :cond_2
 
-    .line 2694
+    .line 2721
     iget v4, v3, Landroid/util/TypedValue;->resourceId:I
 
     invoke-virtual {p4, v1, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2726
+    .line 2753
     :goto_1
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2728
+    .line 2755
     invoke-static {p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     move-object v4, p4
 
-    .line 2730
+    .line 2757
     goto :goto_0
 
-    .line 2696
+    .line 2723
     :cond_2
     invoke-virtual {v2, v5}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v3
 
-    .line 2699
+    .line 2726
     if-eqz v3, :cond_9
 
-    .line 2700
+    .line 2727
     iget v7, v3, Landroid/util/TypedValue;->type:I
 
     const/4 v8, 0x3
 
     if-ne v7, v8, :cond_4
 
-    .line 2701
+    .line 2728
     invoke-virtual {v3}, Landroid/util/TypedValue;->coerceToString()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 2702
+    .line 2729
     .local v0, cs:Ljava/lang/CharSequence;
     if-eqz v0, :cond_3
 
@@ -6470,7 +7155,7 @@
 
     goto :goto_1
 
-    .line 2703
+    .line 2730
     .end local v0           #cs:Ljava/lang/CharSequence;
     :cond_4
     iget v4, v3, Landroid/util/TypedValue;->type:I
@@ -6479,7 +7164,7 @@
 
     if-ne v4, v7, :cond_6
 
-    .line 2704
+    .line 2731
     iget v4, v3, Landroid/util/TypedValue;->data:I
 
     if-eqz v4, :cond_5
@@ -6496,7 +7181,7 @@
 
     goto :goto_2
 
-    .line 2705
+    .line 2732
     :cond_6
     iget v4, v3, Landroid/util/TypedValue;->type:I
 
@@ -6510,14 +7195,14 @@
 
     if-gt v4, v5, :cond_7
 
-    .line 2707
+    .line 2734
     iget v4, v3, Landroid/util/TypedValue;->data:I
 
     invoke-virtual {p4, v1, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_1
 
-    .line 2708
+    .line 2735
     :cond_7
     iget v4, v3, Landroid/util/TypedValue;->type:I
 
@@ -6525,7 +7210,7 @@
 
     if-ne v4, v5, :cond_8
 
-    .line 2709
+    .line 2736
     invoke-virtual {v3}, Landroid/util/TypedValue;->getFloat()F
 
     move-result v4
@@ -6534,7 +7219,7 @@
 
     goto :goto_1
 
-    .line 2712
+    .line 2739
     :cond_8
     const-string v4, "PackageParser"
 
@@ -6590,13 +7275,13 @@
 
     goto/16 :goto_1
 
-    .line 2721
+    .line 2748
     :cond_9
     const-string v4, "<meta-data> requires an android:value or android:resource attribute"
 
     aput-object v4, p5, v6
 
-    .line 2722
+    .line 2749
     const/4 p4, 0x0
 
     goto/16 :goto_1
@@ -8383,8 +9068,63 @@
 
     goto/16 :goto_1
 
-    .line 1196
+    .line 1193
     :cond_30
+    const-string v3, "PackageParser"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "Unknown element under <manifest>: "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-interface/range {p2 .. p2}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, " at "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, " "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-interface/range {p2 .. p2}, Landroid/content/res/XmlResourceParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1196
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_1
@@ -8696,18 +9436,18 @@
     .parameter "logoRes"
 
     .prologue
-    .line 1862
+    .line 1867
     const/4 v5, 0x0
 
     invoke-virtual {p5, p6, v5}, Landroid/content/res/TypedArray;->getNonConfigurationString(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1863
+    .line 1868
     .local v3, name:Ljava/lang/String;
     if-nez v3, :cond_0
 
-    .line 1864
+    .line 1869
     const/4 v5, 0x0
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8730,14 +9470,14 @@
 
     aput-object v6, p3, v5
 
-    .line 1865
+    .line 1870
     const/4 v5, 0x0
 
-    .line 1892
+    .line 1897
     :goto_0
     return v5
 
-    .line 1868
+    .line 1873
     :cond_0
     iget-object v5, p1, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -8749,17 +9489,17 @@
 
     iput-object v5, p2, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
-    .line 1870
+    .line 1875
     iget-object v5, p2, Landroid/content/pm/PackageItemInfo;->name:Ljava/lang/String;
 
     if-nez v5, :cond_1
 
-    .line 1871
+    .line 1876
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 1874
+    .line 1879
     :cond_1
     const/4 v5, 0x0
 
@@ -8769,19 +9509,19 @@
 
     move-result v1
 
-    .line 1875
+    .line 1880
     .local v1, iconVal:I
     if-eqz v1, :cond_2
 
-    .line 1876
+    .line 1881
     iput v1, p2, Landroid/content/pm/PackageItemInfo;->icon:I
 
-    .line 1877
+    .line 1882
     const/4 v5, 0x0
 
     iput-object v5, p2, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 1880
+    .line 1885
     :cond_2
     const/4 v5, 0x0
 
@@ -8791,20 +9531,20 @@
 
     move-result v2
 
-    .line 1881
+    .line 1886
     .local v2, logoVal:I
     if-eqz v2, :cond_3
 
-    .line 1882
+    .line 1887
     iput v2, p2, Landroid/content/pm/PackageItemInfo;->logo:I
 
-    .line 1885
+    .line 1890
     :cond_3
     invoke-virtual {p5, p7}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v4
 
-    .line 1886
+    .line 1891
     .local v4, v:Landroid/util/TypedValue;
     if-eqz v4, :cond_4
 
@@ -8814,20 +9554,20 @@
 
     if-nez v5, :cond_4
 
-    .line 1887
+    .line 1892
     invoke-virtual {v4}, Landroid/util/TypedValue;->coerceToString()Ljava/lang/CharSequence;
 
     move-result-object v5
 
     iput-object v5, p2, Landroid/content/pm/PackageItemInfo;->nonLocalizedLabel:Ljava/lang/CharSequence;
 
-    .line 1890
+    .line 1895
     :cond_4
     iget-object v5, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     iput-object v5, p2, Landroid/content/pm/PackageItemInfo;->packageName:Ljava/lang/String;
 
-    .line 1892
+    .line 1897
     const/4 v5, 0x1
 
     goto :goto_0
@@ -10256,7 +10996,7 @@
     .end annotation
 
     .prologue
-    .line 2259
+    .line 2286
     sget-object v2, Lcom/android/internal/R$styleable;->AndroidManifestProvider:[I
 
     move-object/from16 v0, p2
@@ -10267,7 +11007,7 @@
 
     move-result-object v15
 
-    .line 2262
+    .line 2289
     .local v15, sa:Landroid/content/res/TypedArray;
     move-object/from16 v0, p0
 
@@ -10275,7 +11015,7 @@
 
     if-nez v2, :cond_0
 
-    .line 2263
+    .line 2290
     new-instance v2, Landroid/content/pm/PackageParser$ParseComponentArgs;
 
     const/4 v5, 0x2
@@ -10306,7 +11046,7 @@
 
     iput-object v2, v0, Landroid/content/pm/PackageParser;->mParseProviderArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
 
-    .line 2272
+    .line 2299
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseProviderArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -10315,7 +11055,7 @@
 
     iput-object v3, v2, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->tag:Ljava/lang/String;
 
-    .line 2275
+    .line 2302
     :cond_0
     move-object/from16 v0, p0
 
@@ -10323,7 +11063,7 @@
 
     iput-object v15, v2, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
-    .line 2276
+    .line 2303
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseProviderArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -10332,7 +11072,7 @@
 
     iput v0, v2, Landroid/content/pm/PackageParser$ParseComponentArgs;->flags:I
 
-    .line 2278
+    .line 2305
     new-instance v6, Landroid/content/pm/PackageParser$Provider;
 
     move-object/from16 v0, p0
@@ -10345,7 +11085,7 @@
 
     invoke-direct {v6, v2, v3}, Landroid/content/pm/PackageParser$Provider;-><init>(Landroid/content/pm/PackageParser$ParseComponentArgs;Landroid/content/pm/ProviderInfo;)V
 
-    .line 2279
+    .line 2306
     .local v6, p:Landroid/content/pm/PackageParser$Provider;
     const/4 v2, 0x0
 
@@ -10353,19 +11093,19 @@
 
     if-eqz v2, :cond_2
 
-    .line 2280
+    .line 2307
     invoke-virtual {v15}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2281
+    .line 2308
     const/4 v6, 0x0
 
-    .line 2352
+    .line 2379
     .end local v6           #p:Landroid/content/pm/PackageParser$Provider;
     :cond_1
     :goto_0
     return-object v6
 
-    .line 2284
+    .line 2311
     .restart local v6       #p:Landroid/content/pm/PackageParser$Provider;
     :cond_2
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -10380,7 +11120,7 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ComponentInfo;->exported:Z
 
-    .line 2287
+    .line 2314
     const/16 v2, 0xa
 
     const/4 v3, 0x0
@@ -10389,7 +11129,7 @@
 
     move-result-object v13
 
-    .line 2290
+    .line 2317
     .local v13, cpname:Ljava/lang/String;
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
@@ -10403,7 +11143,7 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ProviderInfo;->isSyncable:Z
 
-    .line 2294
+    .line 2321
     const/4 v2, 0x3
 
     const/4 v3, 0x0
@@ -10412,7 +11152,7 @@
 
     move-result-object v14
 
-    .line 2296
+    .line 2323
     .local v14, permission:Ljava/lang/String;
     const/4 v2, 0x4
 
@@ -10422,18 +11162,18 @@
 
     move-result-object v16
 
-    .line 2298
+    .line 2325
     .local v16, str:Ljava/lang/String;
     if-nez v16, :cond_3
 
-    .line 2299
+    .line 2326
     move-object/from16 v16, v14
 
-    .line 2301
+    .line 2328
     :cond_3
     if-nez v16, :cond_5
 
-    .line 2302
+    .line 2329
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
     move-object/from16 v0, p1
@@ -10444,7 +11184,7 @@
 
     iput-object v3, v2, Landroid/content/pm/ProviderInfo;->readPermission:Ljava/lang/String;
 
-    .line 2307
+    .line 2334
     :goto_1
     const/4 v2, 0x5
 
@@ -10454,17 +11194,17 @@
 
     move-result-object v16
 
-    .line 2309
+    .line 2336
     if-nez v16, :cond_4
 
-    .line 2310
+    .line 2337
     move-object/from16 v16, v14
 
-    .line 2312
+    .line 2339
     :cond_4
     if-nez v16, :cond_7
 
-    .line 2313
+    .line 2340
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
     move-object/from16 v0, p1
@@ -10475,7 +11215,7 @@
 
     iput-object v3, v2, Landroid/content/pm/ProviderInfo;->writePermission:Ljava/lang/String;
 
-    .line 2319
+    .line 2346
     :goto_2
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
@@ -10489,7 +11229,7 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ProviderInfo;->grantUriPermissions:Z
 
-    .line 2323
+    .line 2350
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
     const/16 v3, 0x9
@@ -10502,7 +11242,7 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ProviderInfo;->multiprocess:Z
 
-    .line 2327
+    .line 2354
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
     const/16 v3, 0xc
@@ -10515,10 +11255,10 @@
 
     iput v3, v2, Landroid/content/pm/ProviderInfo;->initOrder:I
 
-    .line 2331
+    .line 2358
     invoke-virtual {v15}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2333
+    .line 2360
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -10531,7 +11271,7 @@
 
     if-eqz v2, :cond_9
 
-    .line 2336
+    .line 2363
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
     iget-object v2, v2, Landroid/content/pm/ComponentInfo;->processName:Ljava/lang/String;
@@ -10542,19 +11282,19 @@
 
     if-ne v2, v3, :cond_9
 
-    .line 2337
+    .line 2364
     const/4 v2, 0x0
 
     const-string v3, "Heavy-weight applications can not have providers in main process"
 
     aput-object v3, p6, v2
 
-    .line 2338
+    .line 2365
     const/4 v6, 0x0
 
     goto/16 :goto_0
 
-    .line 2304
+    .line 2331
     :cond_5
     iget-object v3, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
@@ -10582,7 +11322,7 @@
 
     goto :goto_3
 
-    .line 2315
+    .line 2342
     :cond_7
     iget-object v3, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
@@ -10610,23 +11350,23 @@
 
     goto :goto_4
 
-    .line 2342
+    .line 2369
     :cond_9
     if-nez v13, :cond_a
 
-    .line 2343
+    .line 2370
     const/4 v2, 0x0
 
     const-string v3, "<provider> does not incude authorities attribute"
 
     aput-object v3, p6, v2
 
-    .line 2344
+    .line 2371
     const/4 v6, 0x0
 
     goto/16 :goto_0
 
-    .line 2346
+    .line 2373
     :cond_a
     iget-object v2, v6, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
 
@@ -10646,14 +11386,14 @@
 
     move-object/from16 v7, p6
 
-    .line 2348
+    .line 2375
     invoke-direct/range {v2 .. v7}, Landroid/content/pm/PackageParser;->parseProviderTags(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/pm/PackageParser$Provider;[Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 2349
+    .line 2376
     const/4 v6, 0x0
 
     goto/16 :goto_0
@@ -10674,12 +11414,12 @@
     .end annotation
 
     .prologue
-    .line 2359
+    .line 2386
     invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v11
 
-    .line 2362
+    .line 2389
     .local v11, outerDepth:I
     :cond_0
     :goto_0
@@ -10706,7 +11446,7 @@
 
     if-le v2, v11, :cond_14
 
-    .line 2364
+    .line 2391
     :cond_1
     const/4 v2, 0x3
 
@@ -10720,7 +11460,7 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 2368
+    .line 2395
     invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -10733,7 +11473,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 2369
+    .line 2396
     move-object/from16 v0, p4
 
     iget-object v6, v0, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
@@ -10758,14 +11498,14 @@
 
     if-nez v2, :cond_0
 
-    .line 2371
+    .line 2398
     const/4 v2, 0x0
 
-    .line 2528
+    .line 2555
     :goto_1
     return v2
 
-    .line 2374
+    .line 2401
     :cond_2
     invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -10779,7 +11519,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 2375
+    .line 2402
     sget-object v2, Lcom/android/internal/R$styleable;->AndroidManifestGrantUriPermission:[I
 
     move-object/from16 v0, p1
@@ -10790,11 +11530,11 @@
 
     move-result-object v16
 
-    .line 2378
+    .line 2405
     .local v16, sa:Landroid/content/res/TypedArray;
     const/4 v12, 0x0
 
-    .line 2380
+    .line 2407
     .local v12, pa:Landroid/os/PatternMatcher;
     const/4 v2, 0x0
 
@@ -10806,11 +11546,11 @@
 
     move-result-object v17
 
-    .line 2382
+    .line 2409
     .local v17, str:Ljava/lang/String;
     if-eqz v17, :cond_3
 
-    .line 2383
+    .line 2410
     new-instance v12, Landroid/os/PatternMatcher;
 
     .end local v12           #pa:Landroid/os/PatternMatcher;
@@ -10820,7 +11560,7 @@
 
     invoke-direct {v12, v0, v2}, Landroid/os/PatternMatcher;-><init>(Ljava/lang/String;I)V
 
-    .line 2386
+    .line 2413
     .restart local v12       #pa:Landroid/os/PatternMatcher;
     :cond_3
     const/4 v2, 0x1
@@ -10833,10 +11573,10 @@
 
     move-result-object v17
 
-    .line 2388
+    .line 2415
     if-eqz v17, :cond_4
 
-    .line 2389
+    .line 2416
     new-instance v12, Landroid/os/PatternMatcher;
 
     .end local v12           #pa:Landroid/os/PatternMatcher;
@@ -10846,7 +11586,7 @@
 
     invoke-direct {v12, v0, v2}, Landroid/os/PatternMatcher;-><init>(Ljava/lang/String;I)V
 
-    .line 2392
+    .line 2419
     .restart local v12       #pa:Landroid/os/PatternMatcher;
     :cond_4
     const/4 v2, 0x2
@@ -10859,10 +11599,10 @@
 
     move-result-object v17
 
-    .line 2394
+    .line 2421
     if-eqz v17, :cond_5
 
-    .line 2395
+    .line 2422
     new-instance v12, Landroid/os/PatternMatcher;
 
     .end local v12           #pa:Landroid/os/PatternMatcher;
@@ -10872,15 +11612,15 @@
 
     invoke-direct {v12, v0, v2}, Landroid/os/PatternMatcher;-><init>(Ljava/lang/String;I)V
 
-    .line 2398
+    .line 2425
     .restart local v12       #pa:Landroid/os/PatternMatcher;
     :cond_5
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2400
+    .line 2427
     if-eqz v12, :cond_7
 
-    .line 2401
+    .line 2428
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -10889,7 +11629,7 @@
 
     if-nez v2, :cond_6
 
-    .line 2402
+    .line 2429
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -10900,7 +11640,7 @@
 
     iput-object v3, v2, Landroid/content/pm/ProviderInfo;->uriPermissionPatterns:[Landroid/os/PatternMatcher;
 
-    .line 2403
+    .line 2430
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -10911,7 +11651,7 @@
 
     aput-object v12, v2, v3
 
-    .line 2411
+    .line 2438
     :goto_2
     move-object/from16 v0, p4
 
@@ -10921,12 +11661,12 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ProviderInfo;->grantUriPermissions:Z
 
-    .line 2424
+    .line 2451
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2405
+    .line 2432
     :cond_6
     move-object/from16 v0, p4
 
@@ -10936,13 +11676,13 @@
 
     array-length v8, v2
 
-    .line 2406
+    .line 2433
     .local v8, N:I
     add-int/lit8 v2, v8, 0x1
 
     new-array v10, v2, [Landroid/os/PatternMatcher;
 
-    .line 2407
+    .line 2434
     .local v10, newp:[Landroid/os/PatternMatcher;
     move-object/from16 v0, p4
 
@@ -10956,10 +11696,10 @@
 
     invoke-static {v2, v3, v10, v4, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 2408
+    .line 2435
     aput-object v12, v10, v8
 
-    .line 2409
+    .line 2436
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -10968,15 +11708,70 @@
 
     goto :goto_2
 
-    .line 2417
+    .line 2441
     .end local v8           #N:I
     .end local v10           #newp:[Landroid/os/PatternMatcher;
     :cond_7
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <path-permission>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2444
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2426
+    .line 2453
     .end local v12           #pa:Landroid/os/PatternMatcher;
     .end local v16           #sa:Landroid/content/res/TypedArray;
     .end local v17           #str:Ljava/lang/String;
@@ -10993,7 +11788,7 @@
 
     if-eqz v2, :cond_13
 
-    .line 2427
+    .line 2454
     sget-object v2, Lcom/android/internal/R$styleable;->AndroidManifestPathPermission:[I
 
     move-object/from16 v0, p1
@@ -11004,11 +11799,11 @@
 
     move-result-object v16
 
-    .line 2430
+    .line 2457
     .restart local v16       #sa:Landroid/content/res/TypedArray;
     const/4 v12, 0x0
 
-    .line 2432
+    .line 2459
     .local v12, pa:Landroid/content/pm/PathPermission;
     const/4 v2, 0x0
 
@@ -11020,7 +11815,7 @@
 
     move-result-object v14
 
-    .line 2434
+    .line 2461
     .local v14, permission:Ljava/lang/String;
     const/4 v2, 0x1
 
@@ -11032,14 +11827,14 @@
 
     move-result-object v15
 
-    .line 2436
+    .line 2463
     .local v15, readPermission:Ljava/lang/String;
     if-nez v15, :cond_9
 
-    .line 2437
+    .line 2464
     move-object v15, v14
 
-    .line 2439
+    .line 2466
     :cond_9
     const/4 v2, 0x2
 
@@ -11051,46 +11846,46 @@
 
     move-result-object v19
 
-    .line 2441
+    .line 2468
     .local v19, writePermission:Ljava/lang/String;
     if-nez v19, :cond_a
 
-    .line 2442
+    .line 2469
     move-object/from16 v19, v14
 
-    .line 2445
+    .line 2472
     :cond_a
     const/4 v9, 0x0
 
-    .line 2446
+    .line 2473
     .local v9, havePerm:Z
     if-eqz v15, :cond_b
 
-    .line 2447
+    .line 2474
     invoke-virtual {v15}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v15
 
-    .line 2448
+    .line 2475
     const/4 v9, 0x1
 
-    .line 2450
+    .line 2477
     :cond_b
     if-eqz v19, :cond_c
 
-    .line 2451
+    .line 2478
     invoke-virtual/range {v19 .. v19}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v19
 
-    .line 2452
+    .line 2479
     const/4 v9, 0x1
 
-    .line 2455
+    .line 2482
     :cond_c
     if-nez v9, :cond_d
 
-    .line 2457
+    .line 2484
     const-string v2, "PackageParser"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -11145,12 +11940,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2460
+    .line 2487
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2468
+    .line 2495
     :cond_d
     const/4 v2, 0x3
 
@@ -11162,11 +11957,11 @@
 
     move-result-object v13
 
-    .line 2470
+    .line 2497
     .local v13, path:Ljava/lang/String;
     if-eqz v13, :cond_e
 
-    .line 2471
+    .line 2498
     new-instance v12, Landroid/content/pm/PathPermission;
 
     .end local v12           #pa:Landroid/content/pm/PathPermission;
@@ -11176,7 +11971,7 @@
 
     invoke-direct {v12, v13, v2, v15, v0}, Landroid/content/pm/PathPermission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2475
+    .line 2502
     .restart local v12       #pa:Landroid/content/pm/PathPermission;
     :cond_e
     const/4 v2, 0x4
@@ -11189,10 +11984,10 @@
 
     move-result-object v13
 
-    .line 2477
+    .line 2504
     if-eqz v13, :cond_f
 
-    .line 2478
+    .line 2505
     new-instance v12, Landroid/content/pm/PathPermission;
 
     .end local v12           #pa:Landroid/content/pm/PathPermission;
@@ -11202,7 +11997,7 @@
 
     invoke-direct {v12, v13, v2, v15, v0}, Landroid/content/pm/PathPermission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2482
+    .line 2509
     .restart local v12       #pa:Landroid/content/pm/PathPermission;
     :cond_f
     const/4 v2, 0x5
@@ -11215,10 +12010,10 @@
 
     move-result-object v13
 
-    .line 2484
+    .line 2511
     if-eqz v13, :cond_10
 
-    .line 2485
+    .line 2512
     new-instance v12, Landroid/content/pm/PathPermission;
 
     .end local v12           #pa:Landroid/content/pm/PathPermission;
@@ -11228,15 +12023,15 @@
 
     invoke-direct {v12, v13, v2, v15, v0}, Landroid/content/pm/PathPermission;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2489
+    .line 2516
     .restart local v12       #pa:Landroid/content/pm/PathPermission;
     :cond_10
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2491
+    .line 2518
     if-eqz v12, :cond_12
 
-    .line 2492
+    .line 2519
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -11245,7 +12040,7 @@
 
     if-nez v2, :cond_11
 
-    .line 2493
+    .line 2520
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -11256,7 +12051,7 @@
 
     iput-object v3, v2, Landroid/content/pm/ProviderInfo;->pathPermissions:[Landroid/content/pm/PathPermission;
 
-    .line 2494
+    .line 2521
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -11267,13 +12062,13 @@
 
     aput-object v12, v2, v3
 
-    .line 2513
+    .line 2540
     :goto_3
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2496
+    .line 2523
     :cond_11
     move-object/from16 v0, p4
 
@@ -11283,13 +12078,13 @@
 
     array-length v8, v2
 
-    .line 2497
+    .line 2524
     .restart local v8       #N:I
     add-int/lit8 v2, v8, 0x1
 
     new-array v10, v2, [Landroid/content/pm/PathPermission;
 
-    .line 2498
+    .line 2525
     .local v10, newp:[Landroid/content/pm/PathPermission;
     move-object/from16 v0, p4
 
@@ -11303,10 +12098,10 @@
 
     invoke-static {v2, v3, v10, v4, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 2499
+    .line 2526
     aput-object v12, v10, v8
 
-    .line 2500
+    .line 2527
     move-object/from16 v0, p4
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Provider;->info:Landroid/content/pm/ProviderInfo;
@@ -11315,7 +12110,7 @@
 
     goto :goto_3
 
-    .line 2504
+    .line 2531
     .end local v8           #N:I
     .end local v10           #newp:[Landroid/content/pm/PathPermission;
     :cond_12
@@ -11373,12 +12168,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2507
+    .line 2534
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2520
+    .line 2544
     .end local v9           #havePerm:Z
     .end local v12           #pa:Landroid/content/pm/PathPermission;
     .end local v13           #path:Ljava/lang/String;
@@ -11387,11 +12182,66 @@
     .end local v16           #sa:Landroid/content/res/TypedArray;
     .end local v19           #writePermission:Ljava/lang/String;
     :cond_13
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <provider>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p2 .. p2}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2547
     invoke-static/range {p2 .. p2}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 2528
+    .line 2555
     :cond_14
     const/4 v2, 0x1
 
@@ -11414,7 +12264,7 @@
     .end annotation
 
     .prologue
-    .line 2534
+    .line 2561
     sget-object v2, Lcom/android/internal/R$styleable;->AndroidManifestService:[I
 
     move-object/from16 v0, p2
@@ -11425,7 +12275,7 @@
 
     move-result-object v16
 
-    .line 2537
+    .line 2564
     .local v16, sa:Landroid/content/res/TypedArray;
     move-object/from16 v0, p0
 
@@ -11433,7 +12283,7 @@
 
     if-nez v2, :cond_0
 
-    .line 2538
+    .line 2565
     new-instance v2, Landroid/content/pm/PackageParser$ParseComponentArgs;
 
     const/4 v5, 0x2
@@ -11464,7 +12314,7 @@
 
     iput-object v2, v0, Landroid/content/pm/PackageParser;->mParseServiceArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
 
-    .line 2547
+    .line 2574
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseServiceArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -11473,7 +12323,7 @@
 
     iput-object v3, v2, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->tag:Ljava/lang/String;
 
-    .line 2550
+    .line 2577
     :cond_0
     move-object/from16 v0, p0
 
@@ -11483,7 +12333,7 @@
 
     iput-object v0, v2, Landroid/content/pm/PackageParser$ParsePackageItemArgs;->sa:Landroid/content/res/TypedArray;
 
-    .line 2551
+    .line 2578
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/pm/PackageParser;->mParseServiceArgs:Landroid/content/pm/PackageParser$ParseComponentArgs;
@@ -11492,7 +12342,7 @@
 
     iput v0, v2, Landroid/content/pm/PackageParser$ParseComponentArgs;->flags:I
 
-    .line 2553
+    .line 2580
     new-instance v15, Landroid/content/pm/PackageParser$Service;
 
     move-object/from16 v0, p0
@@ -11505,7 +12355,7 @@
 
     invoke-direct {v15, v2, v3}, Landroid/content/pm/PackageParser$Service;-><init>(Landroid/content/pm/PackageParser$ParseComponentArgs;Landroid/content/pm/ServiceInfo;)V
 
-    .line 2554
+    .line 2581
     .local v15, s:Landroid/content/pm/PackageParser$Service;
     const/4 v2, 0x0
 
@@ -11513,19 +12363,19 @@
 
     if-eqz v2, :cond_2
 
-    .line 2555
+    .line 2582
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2556
+    .line 2583
     const/4 v15, 0x0
 
-    .line 2631
+    .line 2658
     .end local v15           #s:Landroid/content/pm/PackageParser$Service;
     :cond_1
     :goto_0
     return-object v15
 
-    .line 2559
+    .line 2586
     .restart local v15       #s:Landroid/content/pm/PackageParser$Service;
     :cond_2
     const/4 v2, 0x5
@@ -11536,11 +12386,11 @@
 
     move-result v17
 
-    .line 2561
+    .line 2588
     .local v17, setExported:Z
     if-eqz v17, :cond_3
 
-    .line 2562
+    .line 2589
     iget-object v2, v15, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
     const/4 v3, 0x5
@@ -11555,7 +12405,7 @@
 
     iput-boolean v3, v2, Landroid/content/pm/ComponentInfo;->exported:Z
 
-    .line 2566
+    .line 2593
     :cond_3
     const/4 v2, 0x3
 
@@ -11567,11 +12417,11 @@
 
     move-result-object v18
 
-    .line 2568
+    .line 2595
     .local v18, str:Ljava/lang/String;
     if-nez v18, :cond_5
 
-    .line 2569
+    .line 2596
     iget-object v2, v15, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
     move-object/from16 v0, p1
@@ -11582,7 +12432,7 @@
 
     iput-object v3, v2, Landroid/content/pm/ServiceInfo;->permission:Ljava/lang/String;
 
-    .line 2574
+    .line 2601
     :goto_1
     iget-object v2, v15, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
@@ -11590,7 +12440,7 @@
 
     iput v3, v2, Landroid/content/pm/ServiceInfo;->flags:I
 
-    .line 2575
+    .line 2602
     const/16 v2, 0x9
 
     const/4 v3, 0x0
@@ -11603,7 +12453,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 2578
+    .line 2605
     iget-object v2, v15, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
     iget v3, v2, Landroid/content/pm/ServiceInfo;->flags:I
@@ -11612,11 +12462,11 @@
 
     iput v3, v2, Landroid/content/pm/ServiceInfo;->flags:I
 
-    .line 2581
+    .line 2608
     :cond_4
     invoke-virtual/range {v16 .. v16}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2583
+    .line 2610
     move-object/from16 v0, p1
 
     iget-object v2, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -11629,7 +12479,7 @@
 
     if-eqz v2, :cond_7
 
-    .line 2586
+    .line 2613
     iget-object v2, v15, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
     iget-object v2, v2, Landroid/content/pm/ComponentInfo;->processName:Ljava/lang/String;
@@ -11640,19 +12490,19 @@
 
     if-ne v2, v3, :cond_7
 
-    .line 2587
+    .line 2614
     const/4 v2, 0x0
 
     const-string v3, "Heavy-weight applications can not have services in main process"
 
     aput-object v3, p6, v2
 
-    .line 2588
+    .line 2615
     const/4 v15, 0x0
 
     goto :goto_0
 
-    .line 2571
+    .line 2598
     :cond_5
     iget-object v3, v15, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
@@ -11680,13 +12530,13 @@
 
     goto :goto_2
 
-    .line 2592
+    .line 2619
     :cond_7
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v14
 
-    .line 2595
+    .line 2622
     .local v14, outerDepth:I
     :cond_8
     :goto_3
@@ -11713,7 +12563,7 @@
 
     if-le v2, v14, :cond_d
 
-    .line 2597
+    .line 2624
     :cond_9
     const/4 v2, 0x3
 
@@ -11727,7 +12577,7 @@
 
     if-eq v0, v2, :cond_8
 
-    .line 2601
+    .line 2628
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -11740,12 +12590,12 @@
 
     if-eqz v2, :cond_b
 
-    .line 2602
+    .line 2629
     new-instance v7, Landroid/content/pm/PackageParser$ServiceIntentInfo;
 
     invoke-direct {v7, v15}, Landroid/content/pm/PackageParser$ServiceIntentInfo;-><init>(Landroid/content/pm/PackageParser$Service;)V
 
-    .line 2603
+    .line 2630
     .local v7, intent:Landroid/content/pm/PackageParser$ServiceIntentInfo;
     const/4 v9, 0x0
 
@@ -11767,12 +12617,12 @@
 
     if-nez v2, :cond_a
 
-    .line 2604
+    .line 2631
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 2607
+    .line 2634
     :cond_a
     iget-object v2, v15, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
 
@@ -11780,7 +12630,7 @@
 
     goto :goto_3
 
-    .line 2608
+    .line 2635
     .end local v7           #intent:Landroid/content/pm/PackageParser$ServiceIntentInfo;
     :cond_b
     invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -11795,7 +12645,7 @@
 
     if-eqz v2, :cond_c
 
-    .line 2609
+    .line 2636
     iget-object v12, v15, Landroid/content/pm/PackageParser$Component;->metaData:Landroid/os/Bundle;
 
     move-object/from16 v8, p0
@@ -11816,22 +12666,77 @@
 
     if-nez v2, :cond_8
 
-    .line 2611
+    .line 2638
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 2618
+    .line 2642
     :cond_c
+    const-string v2, "PackageParser"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Unknown element under <service>: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " at "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Landroid/content/pm/PackageParser;->mArchiveSourcePath:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface/range {p3 .. p3}, Lorg/xmlpull/v1/XmlPullParser;->getPositionDescription()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 2645
     invoke-static/range {p3 .. p3}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    goto :goto_3
+    goto/16 :goto_3
 
-    .line 2627
+    .line 2654
     :cond_d
     if-nez v17, :cond_1
 
-    .line 2628
+    .line 2655
     iget-object v3, v15, Landroid/content/pm/PackageParser$Service;->info:Landroid/content/pm/ServiceInfo;
 
     iget-object v2, v15, Landroid/content/pm/PackageParser$Component;->intents:Ljava/util/ArrayList;
@@ -11870,14 +12775,14 @@
     .end annotation
 
     .prologue
-    .line 2736
+    .line 2763
     sget-object v8, Lcom/android/internal/R$styleable;->AndroidManifestPackageVerifier:[I
 
     invoke-virtual {p0, p2, v8}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v7
 
-    .line 2739
+    .line 2766
     .local v7, sa:Landroid/content/res/TypedArray;
     const/4 v8, 0x0
 
@@ -11885,7 +12790,7 @@
 
     move-result-object v5
 
-    .line 2742
+    .line 2769
     .local v5, packageName:Ljava/lang/String;
     const/4 v8, 0x1
 
@@ -11893,11 +12798,11 @@
 
     move-result-object v2
 
-    .line 2745
+    .line 2772
     .local v2, encodedPublicKey:Ljava/lang/String;
     invoke-virtual {v7}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2747
+    .line 2774
     if-eqz v5, :cond_0
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -11906,7 +12811,7 @@
 
     if-nez v8, :cond_1
 
-    .line 2748
+    .line 2775
     :cond_0
     const-string v8, "PackageParser"
 
@@ -11914,18 +12819,18 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2749
+    .line 2776
     const/4 v8, 0x0
 
-    .line 2787
+    .line 2814
     :goto_0
     return-object v8
 
-    .line 2750
+    .line 2777
     :cond_1
     if-nez v2, :cond_2
 
-    .line 2751
+    .line 2778
     const-string v8, "PackageParser"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -11954,7 +12859,7 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2756
+    .line 2783
     :cond_2
     const/4 v8, 0x0
 
@@ -11963,7 +12868,7 @@
 
     move-result-object v1
 
-    .line 2757
+    .line 2784
     .local v1, encoded:[B
     new-instance v4, Ljava/security/spec/X509EncodedKeySpec;
 
@@ -11971,7 +12876,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 2765
+    .line 2792
     .local v4, keySpec:Ljava/security/spec/EncodedKeySpec;
     :try_start_1
     const-string v8, "RSA"
@@ -11980,13 +12885,13 @@
 
     move-result-object v3
 
-    .line 2766
+    .line 2793
     .local v3, keyFactory:Ljava/security/KeyFactory;
     invoke-virtual {v3, v4}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
 
     move-result-object v6
 
-    .line 2767
+    .line 2794
     .local v6, publicKey:Ljava/security/PublicKey;
     new-instance v8, Landroid/content/pm/VerifierInfo;
 
@@ -11997,13 +12902,13 @@
 
     goto :goto_0
 
-    .line 2768
+    .line 2795
     .end local v3           #keyFactory:Ljava/security/KeyFactory;
     .end local v6           #publicKey:Ljava/security/PublicKey;
     :catch_0
     move-exception v0
 
-    .line 2769
+    .line 2796
     .local v0, e:Ljava/security/NoSuchAlgorithmException;
     const-string v8, "PackageParser"
 
@@ -12011,19 +12916,19 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2770
+    .line 2797
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 2758
+    .line 2785
     .end local v0           #e:Ljava/security/NoSuchAlgorithmException;
     .end local v1           #encoded:[B
     .end local v4           #keySpec:Ljava/security/spec/EncodedKeySpec;
     :catch_1
     move-exception v0
 
-    .line 2759
+    .line 2786
     .local v0, e:Ljava/lang/IllegalArgumentException;
     const-string v8, "PackageParser"
 
@@ -12053,19 +12958,19 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2760
+    .line 2787
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 2771
+    .line 2798
     .end local v0           #e:Ljava/lang/IllegalArgumentException;
     .restart local v1       #encoded:[B
     .restart local v4       #keySpec:Ljava/security/spec/EncodedKeySpec;
     :catch_2
     move-exception v8
 
-    .line 2777
+    .line 2804
     :try_start_2
     const-string v8, "DSA"
 
@@ -12073,13 +12978,13 @@
 
     move-result-object v3
 
-    .line 2778
+    .line 2805
     .restart local v3       #keyFactory:Ljava/security/KeyFactory;
     invoke-virtual {v3, v4}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
 
     move-result-object v6
 
-    .line 2779
+    .line 2806
     .restart local v6       #publicKey:Ljava/security/PublicKey;
     new-instance v8, Landroid/content/pm/VerifierInfo;
 
@@ -12090,13 +12995,13 @@
 
     goto :goto_0
 
-    .line 2780
+    .line 2807
     .end local v3           #keyFactory:Ljava/security/KeyFactory;
     .end local v6           #publicKey:Ljava/security/PublicKey;
     :catch_3
     move-exception v0
 
-    .line 2781
+    .line 2808
     .local v0, e:Ljava/security/NoSuchAlgorithmException;
     const-string v8, "PackageParser"
 
@@ -12104,17 +13009,17 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2782
+    .line 2809
     const/4 v8, 0x0
 
     goto/16 :goto_0
 
-    .line 2783
+    .line 2810
     .end local v0           #e:Ljava/security/NoSuchAlgorithmException;
     :catch_4
     move-exception v8
 
-    .line 2787
+    .line 2814
     const/4 v8, 0x0
 
     goto/16 :goto_0
@@ -12125,10 +13030,10 @@
     .parameter "compatibilityModeEnabled"
 
     .prologue
-    .line 3495
+    .line 3522
     sput-boolean p0, Landroid/content/pm/PackageParser;->sCompatibilityModeEnabled:Z
 
-    .line 3496
+    .line 3523
     return-void
 .end method
 

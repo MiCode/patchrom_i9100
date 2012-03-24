@@ -720,7 +720,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 278
-    const v0, 0x1020377
+    const v0, 0x1020379
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$Weather;->findViewById(I)Landroid/view/View;
 
@@ -738,7 +738,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 280
-    const v0, 0x1020378
+    const v0, 0x102037a
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$Weather;->findViewById(I)Landroid/view/View;
 
@@ -749,7 +749,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$Weather;->mWeatherDataBox:Landroid/widget/RelativeLayout;
 
     .line 281
-    const v0, 0x102037a
+    const v0, 0x102037c
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$Weather;->findViewById(I)Landroid/view/View;
 
@@ -760,7 +760,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$Weather;->mWeatherCity:Landroid/widget/TextView;
 
     .line 282
-    const v0, 0x102037b
+    const v0, 0x102037d
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$Weather;->findViewById(I)Landroid/view/View;
 
@@ -771,7 +771,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$Weather;->mWeatherTemperature:Landroid/widget/TextView;
 
     .line 283
-    const v0, 0x102037c
+    const v0, 0x102037e
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$Weather;->findViewById(I)Landroid/view/View;
 

@@ -55,15 +55,15 @@
     .parameter "height"
 
     .prologue
-    .line 582
+    .line 592
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 583
+    .line 593
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/view/menu/ActionMenuView$LayoutParams;->isOverflowButton:Z
 
-    .line 584
+    .line 594
     return-void
 .end method
 
@@ -74,13 +74,13 @@
     .parameter "isOverflowButton"
 
     .prologue
-    .line 587
+    .line 597
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 588
+    .line 598
     iput-boolean p3, p0, Lcom/android/internal/view/menu/ActionMenuView$LayoutParams;->isOverflowButton:Z
 
-    .line 589
+    .line 599
     return-void
 .end method
 
@@ -90,10 +90,10 @@
     .parameter "attrs"
 
     .prologue
-    .line 573
+    .line 583
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 574
+    .line 584
     return-void
 .end method
 
@@ -102,14 +102,14 @@
     .parameter "other"
 
     .prologue
-    .line 577
+    .line 587
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 578
+    .line 588
     iget-boolean v0, p1, Lcom/android/internal/view/menu/ActionMenuView$LayoutParams;->isOverflowButton:Z
 
     iput-boolean v0, p0, Lcom/android/internal/view/menu/ActionMenuView$LayoutParams;->isOverflowButton:Z
 
-    .line 579
+    .line 589
     return-void
 .end method

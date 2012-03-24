@@ -545,7 +545,7 @@
 
     iget-object v2, p0, Lcom/android/phone/NetworkModePreference;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f0e02fd
+    const v3, 0x7f0e02ff
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -557,7 +557,7 @@
 
     iget-object v2, p0, Lcom/android/phone/NetworkModePreference;->mContext:Landroid/content/Context;
 
-    const v3, 0x7f0e0300
+    const v3, 0x7f0e0302
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

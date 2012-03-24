@@ -24,17 +24,17 @@
     .parameter
 
     .prologue
-    .line 587
+    .line 630
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$BrightnessContentObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
-    .line 588
+    .line 631
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 589
+    .line 632
     return-void
 .end method
 
@@ -49,7 +49,7 @@
 
     const/4 v2, 0x1
 
-    .line 592
+    .line 635
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$BrightnessContentObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v0, v0, Lcom/android/server/InputMethodManagerService;->mContentResolver:Landroid/content/ContentResolver;
@@ -62,19 +62,19 @@
 
     if-nez v0, :cond_1
 
-    .line 593
+    .line 636
     invoke-static {v3}, Lcom/android/server/InputMethodManagerService;->access$502(Z)Z
 
-    .line 600
+    .line 643
     :cond_0
     :goto_0
     return-void
 
-    .line 595
+    .line 638
     :cond_1
     invoke-static {v2}, Lcom/android/server/InputMethodManagerService;->access$502(Z)Z
 
-    .line 596
+    .line 639
     invoke-static {}, Lcom/android/server/InputMethodManagerService;->access$200()I
 
     move-result v0
@@ -83,7 +83,7 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 597
+    .line 640
     invoke-static {v2}, Lcom/android/server/InputMethodManagerService;->access$402(I)I
 
     goto :goto_0

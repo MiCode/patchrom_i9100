@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 6467
+    .line 6482
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$22;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "dialog"
 
     .prologue
-    .line 6469
+    .line 6484
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$22;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x0
@@ -50,12 +50,12 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mGenericErrorDialog:Landroid/app/AlertDialog;
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$6802(Lcom/android/phone/InVTCallScreen;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    .line 6470
+    .line 6485
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$22;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->bailOutAfterErrorDialog()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$3900(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 6471
+    .line 6486
     return-void
 .end method

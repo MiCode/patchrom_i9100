@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcom/android/phone/GetPin2Screen$3;->this$0:Lcom/android/phone/GetPin2Screen;
 
-    const v2, 0x7f0e014c
+    const v2, 0x7f0e014e
 
     invoke-virtual {v1, v2}, Lcom/android/phone/GetPin2Screen;->getString(I)Ljava/lang/String;
 

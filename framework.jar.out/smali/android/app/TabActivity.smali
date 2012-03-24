@@ -48,7 +48,7 @@
     if-nez v0, :cond_0
 
     .line 140
-    const v0, 0x10900a0
+    const v0, 0x10900a2
 
     invoke-virtual {p0, v0}, Landroid/app/TabActivity;->setContentView(I)V
 

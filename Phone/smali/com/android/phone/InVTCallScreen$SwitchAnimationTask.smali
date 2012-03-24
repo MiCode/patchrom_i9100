@@ -35,7 +35,7 @@
     .parameter
 
     .prologue
-    .line 11093
+    .line 11110
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$SwitchAnimationTask;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -50,13 +50,13 @@
     .parameter "r"
 
     .prologue
-    .line 11096
+    .line 11113
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$SwitchAnimationTask;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->switchCamera()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$12000(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 11097
+    .line 11114
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -71,7 +71,7 @@
     .parameter "x0"
 
     .prologue
-    .line 11093
+    .line 11110
     check-cast p1, [Ljava/lang/String;
 
     .end local p1
@@ -87,7 +87,7 @@
     .parameter "result"
 
     .prologue
-    .line 11107
+    .line 11124
     return-void
 .end method
 
@@ -96,7 +96,7 @@
     .parameter "x0"
 
     .prologue
-    .line 11093
+    .line 11110
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1

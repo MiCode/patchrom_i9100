@@ -26,12 +26,12 @@
     .parameter
 
     .prologue
-    .line 2043
+    .line 2017
     iput-object p1, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 2051
+    .line 2025
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
@@ -45,7 +45,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2043
+    .line 2017
     invoke-direct {p0, p1}, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;-><init>(Lcom/android/phone/PhoneApp;)V
 
     return-void
@@ -65,7 +65,7 @@
 
     const/4 v4, 0x1
 
-    .line 2055
+    .line 2029
     const-string v6, "android.intent.extra.KEY_EVENT"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -74,7 +74,7 @@
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 2058
+    .line 2032
     .local v0, event:Landroid/view/KeyEvent;
     if-eqz v0, :cond_1
 
@@ -90,7 +90,7 @@
 
     if-nez v6, :cond_1
 
-    .line 2062
+    .line 2036
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -103,21 +103,21 @@
 
     if-eq v6, v7, :cond_1
 
-    .line 2063
+    .line 2037
     invoke-virtual {v0}, Landroid/view/KeyEvent;->getRepeatCount()I
 
     move-result v6
 
     if-lez v6, :cond_0
 
-    .line 2066
+    .line 2040
     iput-boolean v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
 
-    .line 2068
+    .line 2042
     :cond_0
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->abortBroadcast()V
 
-    .line 2072
+    .line 2046
     :cond_1
     if-eqz v0, :cond_5
 
@@ -133,7 +133,7 @@
 
     if-ne v6, v4, :cond_5
 
-    .line 2076
+    .line 2050
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -146,7 +146,7 @@
 
     if-eq v6, v7, :cond_4
 
-    .line 2077
+    .line 2051
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -163,7 +163,7 @@
 
     move v2, v4
 
-    .line 2078
+    .line 2052
     .local v2, hasActiveCall:Z
     :goto_0
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
@@ -182,14 +182,14 @@
 
     move v3, v4
 
-    .line 2079
+    .line 2053
     .local v3, hasHoldingCall:Z
     :goto_1
     iget-boolean v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
 
     if-eqz v6, :cond_a
 
-    .line 2081
+    .line 2055
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v6, v6, Lcom/android/phone/PhoneApp;->mCM:Lcom/android/internal/telephony/CallManager;
@@ -202,12 +202,12 @@
 
     if-ne v6, v7, :cond_9
 
-    .line 2082
+    .line 2056
     if-nez v2, :cond_2
 
     if-eqz v3, :cond_8
 
-    .line 2083
+    .line 2057
     :cond_2
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -215,40 +215,40 @@
 
     invoke-static {v4, v0}, Lcom/android/phone/PhoneUtils;->handleHeadsetHook(Lcom/android/internal/telephony/Phone;Landroid/view/KeyEvent;)Z
 
-    .line 2106
+    .line 2080
     :cond_3
     :goto_2
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v4}, Lcom/android/phone/PhoneApp;->updateInCallScreen()V
 
-    .line 2108
+    .line 2082
     invoke-virtual {p0}, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->abortBroadcast()V
 
-    .line 2110
+    .line 2084
     .end local v2           #hasActiveCall:Z
     .end local v3           #hasHoldingCall:Z
     :cond_4
     iput-boolean v5, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->isLongPress:Z
 
-    .line 2112
+    .line 2086
     :cond_5
     return-void
 
     :cond_6
     move v2, v5
 
-    .line 2077
+    .line 2051
     goto :goto_0
 
     .restart local v2       #hasActiveCall:Z
     :cond_7
     move v3, v5
 
-    .line 2078
+    .line 2052
     goto :goto_1
 
-    .line 2085
+    .line 2059
     .restart local v3       #hasHoldingCall:Z
     :cond_8
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
@@ -263,7 +263,7 @@
 
     goto :goto_2
 
-    .line 2088
+    .line 2062
     :cond_9
     iget-object v6, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -273,7 +273,7 @@
 
     move-result-object v1
 
-    .line 2089
+    .line 2063
     .local v1, foregroundCall:Lcom/android/internal/telephony/Call;
     if-eqz v1, :cond_3
 
@@ -299,12 +299,12 @@
 
     if-eq v4, v6, :cond_3
 
-    .line 2094
+    .line 2068
     invoke-static {v1}, Lcom/android/phone/PhoneUtils;->switchHoldingAndActive(Lcom/android/internal/telephony/Call;)Z
 
     goto :goto_2
 
-    .line 2098
+    .line 2072
     .end local v1           #foregroundCall:Lcom/android/internal/telephony/Call;
     :cond_a
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
@@ -323,7 +323,7 @@
 
     if-eqz v3, :cond_c
 
-    .line 2100
+    .line 2074
     :cond_b
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -337,7 +337,7 @@
 
     goto :goto_2
 
-    .line 2102
+    .line 2076
     :cond_c
     iget-object v4, p0, Lcom/android/phone/PhoneApp$MediaButtonBroadcastReceiver;->this$0:Lcom/android/phone/PhoneApp;
 

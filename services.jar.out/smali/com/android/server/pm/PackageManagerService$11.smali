@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 7756
+    .line 7762
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$11;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$11;->val$packageName:Ljava/lang/String;
@@ -51,21 +51,21 @@
     .locals 6
 
     .prologue
-    .line 7758
+    .line 7764
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$11;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v3, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 7759
+    .line 7765
     new-instance v1, Landroid/content/pm/PackageStats;
 
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$11;->val$packageName:Ljava/lang/String;
 
     invoke-direct {v1, v3}, Landroid/content/pm/PackageStats;-><init>(Ljava/lang/String;)V
 
-    .line 7762
+    .line 7768
     .local v1, stats:Landroid/content/pm/PackageStats;
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$11;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -73,7 +73,7 @@
 
     monitor-enter v4
 
-    .line 7763
+    .line 7769
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$11;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -84,13 +84,13 @@
 
     move-result v2
 
-    .line 7764
+    .line 7770
     .local v2, success:Z
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7766
+    .line 7772
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$11;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
@@ -101,7 +101,7 @@
 
     move-result-object v0
 
-    .line 7767
+    .line 7773
     .local v0, msg:Landroid/os/Message;
     new-instance v3, Lcom/android/server/pm/PackageManagerService$MeasureParams;
 
@@ -113,17 +113,17 @@
 
     iput-object v3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 7768
+    .line 7774
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$11;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v3, v0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 7769
+    .line 7775
     return-void
 
-    .line 7764
+    .line 7770
     .end local v0           #msg:Landroid/os/Message;
     .end local v2           #success:Z
     :catchall_0

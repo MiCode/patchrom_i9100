@@ -168,7 +168,7 @@
 
     .line 221
     .local v3, res:Landroid/content/res/Resources;
-    const v4, 0x7f0e027e
+    const v4, 0x7f0e0280
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

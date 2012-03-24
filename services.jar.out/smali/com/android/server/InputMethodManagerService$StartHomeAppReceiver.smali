@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 481
+    .line 524
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$StartHomeAppReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 484
+    .line 527
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 485
+    .line 528
     .local v0, intentAction:Ljava/lang/String;
     const-string v1, "InputManagerService"
 
@@ -83,7 +83,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 487
+    .line 530
     const-string v1, "android.sec.intent.action.CLICKED_HOMEKEY"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -98,7 +98,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 488
+    .line 531
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$StartHomeAppReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const/4 v2, 0x0
@@ -107,11 +107,11 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/InputMethodManagerService;->hideCurrentInputLocked(ILandroid/os/ResultReceiver;)Z
 
-    .line 493
+    .line 536
     :goto_0
     return-void
 
-    .line 491
+    .line 534
     :cond_0
     const-string v1, "InputManagerService"
 

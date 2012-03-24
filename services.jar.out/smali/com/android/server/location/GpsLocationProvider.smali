@@ -5780,9 +5780,9 @@
     .prologue
     const/4 v7, 0x2
 
-    const/4 v6, 0x1
-
     const/4 v2, 0x0
+
+    const/4 v6, 0x1
 
     .line 1098
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider;->mStarted:Z
@@ -5803,7 +5803,7 @@
     iput-boolean p1, p0, Lcom/android/server/location/GpsLocationProvider;->mSingleShot:Z
 
     .line 1102
-    iput v2, p0, Lcom/android/server/location/GpsLocationProvider;->mPositionMode:I
+    iput v6, p0, Lcom/android/server/location/GpsLocationProvider;->mPositionMode:I
 
     .line 1104
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider;->mContext:Landroid/content/Context;

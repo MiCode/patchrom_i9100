@@ -30,15 +30,15 @@
     .parameter "conn"
 
     .prologue
-    .line 2303
+    .line 2277
     iput-object p1, p0, Lcom/android/phone/PhoneApp$AutoAnswerCallThread;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2304
+    .line 2278
     iput-object p2, p0, Lcom/android/phone/PhoneApp$AutoAnswerCallThread;->conn:Lcom/android/internal/telephony/Connection;
 
-    .line 2305
+    .line 2279
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .locals 2
 
     .prologue
-    .line 2307
+    .line 2281
     iget-object v0, p0, Lcom/android/phone/PhoneApp$AutoAnswerCallThread;->conn:Lcom/android/internal/telephony/Connection;
 
     if-eqz v0, :cond_1
@@ -61,7 +61,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 2308
+    .line 2282
     invoke-static {}, Lcom/android/phone/PhoneApp;->access$300()Z
 
     move-result v0
@@ -74,7 +74,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2309
+    .line 2283
     :cond_0
     iget-object v0, p0, Lcom/android/phone/PhoneApp$AutoAnswerCallThread;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -86,7 +86,7 @@
 
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->answerCall(Lcom/android/internal/telephony/Call;)Z
 
-    .line 2318
+    .line 2292
     :cond_1
     return-void
 .end method

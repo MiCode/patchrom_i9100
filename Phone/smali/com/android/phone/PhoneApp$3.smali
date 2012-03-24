@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2343
+    .line 2317
     iput-object p1, p0, Lcom/android/phone/PhoneApp$3;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "accuracy"
 
     .prologue
-    .line 2358
+    .line 2332
     return-void
 .end method
 
@@ -54,12 +54,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2345
+    .line 2319
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v2, v1
 
-    .line 2348
+    .line 2322
     .local v0, distance:F
     float-to-double v2, v0
 
@@ -95,7 +95,7 @@
     :cond_0
     sput-boolean v1, Lcom/android/phone/PhoneApp;->mIsProximityCloseDistance:Z
 
-    .line 2351
+    .line 2325
     const-string v1, "PhoneApp"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -120,9 +120,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2353
+    .line 2327
     invoke-static {}, Lcom/android/phone/PhoneUtils;->updateRAFT()V
 
-    .line 2354
+    .line 2328
     return-void
 .end method

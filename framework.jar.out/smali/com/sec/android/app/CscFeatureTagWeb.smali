@@ -16,6 +16,8 @@
 
 .field public static final CscFeatureTagWeb_Bool_DisableVoiceSearch:Z = false
 
+.field public static final CscFeatureTagWeb_Bool_Disable_Chooser_For_APPLICATION_SDP:Z = false
+
 .field public static final CscFeatureTagWeb_Bool_Disable_Chooser_For_APPLICATION_X_APPLICATIONFOLDER:Z = false
 
 .field public static final CscFeatureTagWeb_Bool_EnableBookmarkOverwrite:Z = false
@@ -28,9 +30,9 @@
 
 .field public static final CscFeatureTagWeb_Bool_EnableUAProfile:Z = false
 
-.field public static final CscFeatureTagWeb_Bool_OverrideUserAgent:Z = false
+.field public static final CscFeatureTagWeb_Bool_ExitBrowserOption:Z = false
 
-.field public static final CscFeatureTagWeb_Bool_RemoveVideoDownload:Z = true
+.field public static final CscFeatureTagWeb_Bool_RemoveVideoDownload:Z = false
 
 .field public static final CscFeatureTagWeb_Bool_SkipSettingDefaultBookmarkImage:Z = false
 
@@ -45,6 +47,8 @@
 .field public static final CscFeatureTag_Web_Bool_DeviceID:Z = false
 
 .field public static final CscFeature_Web_AlignmentForHebrew:Z = false
+
+.field public static final CscFeature_Web_OverrideUserAgent:Z = false
 
 .field public static final Int_NoTag:I = 0x0
 

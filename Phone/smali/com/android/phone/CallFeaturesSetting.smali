@@ -280,7 +280,7 @@
 
     iput-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mRevertOptionComplete:Landroid/os/Handler;
 
-    .line 2608
+    .line 2612
     new-instance v0, Lcom/android/phone/CallFeaturesSetting$9;
 
     invoke-direct {v0, p0}, Lcom/android/phone/CallFeaturesSetting$9;-><init>(Lcom/android/phone/CallFeaturesSetting;)V
@@ -668,16 +668,16 @@
     .parameter
 
     .prologue
-    .line 2570
+    .line 2574
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
     if-nez v0, :cond_0
 
-    .line 2575
+    .line 2579
     :goto_0
     return-void
 
-    .line 2573
+    .line 2577
     :cond_0
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
 
@@ -770,14 +770,14 @@
     .locals 2
 
     .prologue
-    .line 2578
+    .line 2582
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
     invoke-virtual {v1}, Landroid/preference/ListPreference;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2579
+    .line 2583
     .local v0, key:Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -852,30 +852,30 @@
     .parameter
 
     .prologue
-    .line 2601
+    .line 2605
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/android/phone/CallFeaturesSetting;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 2602
+    .line 2606
     const-string v1, "android.intent.action.MAIN"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2603
+    .line 2607
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2604
+    .line 2608
     invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 2605
+    .line 2609
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
-    .line 2606
+    .line 2610
     return-void
 .end method
 
@@ -1359,7 +1359,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_a
 
     .line 2380
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getIntent()Landroid/content/Intent;
@@ -1372,7 +1372,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_9
 
     .line 2381
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getIntent()Landroid/content/Intent;
@@ -1414,9 +1414,24 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
+
+    const-string v0, "VNX"
+
+    const-string v3, "ro.csc.sales_code"
+
+    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
 
     .line 2398
+    :cond_1
     const v0, 0x7f0e00a5
 
     invoke-virtual {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->getString(I)Ljava/lang/String;
@@ -1425,7 +1440,7 @@
 
     move-object v3, v0
 
-    .line 2402
+    .line 2406
     :goto_2
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVMProvidersData:Ljava/util/Map;
 
@@ -1437,27 +1452,27 @@
 
     invoke-interface {v0, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2405
+    .line 2409
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v6
 
-    .line 2406
+    .line 2410
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 2407
+    .line 2411
     const-string v2, "com.android.phone.CallFeaturesSetting.CONFIGURE_VOICEMAIL"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2408
+    .line 2412
     invoke-virtual {v6, v0, v4}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v7
 
-    .line 2409
+    .line 2413
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1468,40 +1483,40 @@
 
     move v5, v0
 
-    .line 2414
+    .line 2418
     :goto_3
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-ge v2, v0, :cond_3
+    if-ge v2, v0, :cond_6
 
-    .line 2415
+    .line 2419
     invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 2416
+    .line 2420
     iget-object v8, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 2417
+    .line 2421
     invoke-direct {p0, v8}, Lcom/android/phone/CallFeaturesSetting;->makeKeyForActivity(Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 2420
+    .line 2424
     invoke-virtual {v9, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v10
 
-    if-eqz v10, :cond_2
+    if-eqz v10, :cond_5
 
-    .line 2423
+    .line 2427
     add-int/lit8 v5, v5, -0x1
 
-    .line 2414
+    .line 2418
     :goto_4
     add-int/lit8 v0, v2, 0x1
 
@@ -1509,8 +1524,62 @@
 
     goto :goto_3
 
+    .line 2399
+    :cond_2
+    const-string v0, "TNZ"
+
+    const-string v3, "ro.csc.sales_code"
+
+    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
     .line 2400
-    :cond_1
+    const v0, 0x7f0e00a6
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    goto :goto_2
+
+    .line 2401
+    :cond_3
+    const-string v0, "NZC"
+
+    const-string v3, "ro.csc.sales_code"
+
+    invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 2402
+    const v0, 0x7f0e00a7
+
+    invoke-virtual {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v3, v0
+
+    goto :goto_2
+
+    .line 2404
+    :cond_4
     const v0, 0x7f0e00a4
 
     invoke-virtual {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->getString(I)Ljava/lang/String;
@@ -1521,8 +1590,8 @@
 
     goto :goto_2
 
-    .line 2426
-    :cond_2
+    .line 2430
+    :cond_5
     invoke-virtual {v0, v6}, Landroid/content/pm/ResolveInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -1531,24 +1600,24 @@
 
     move-result-object v0
 
-    .line 2427
+    .line 2431
     new-instance v10, Landroid/content/Intent;
 
     invoke-direct {v10}, Landroid/content/Intent;-><init>()V
 
-    .line 2428
+    .line 2432
     const-string v11, "com.android.phone.CallFeaturesSetting.CONFIGURE_VOICEMAIL"
 
     invoke-virtual {v10, v11}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2429
+    .line 2433
     iget-object v11, v8, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     iget-object v8, v8, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     invoke-virtual {v10, v11, v8}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2430
+    .line 2434
     iget-object v8, p0, Lcom/android/phone/CallFeaturesSetting;->mVMProvidersData:Ljava/util/Map;
 
     new-instance v11, Lcom/android/phone/CallFeaturesSetting$VoiceMailProvider;
@@ -1559,35 +1628,35 @@
 
     goto :goto_4
 
-    .line 2437
-    :cond_3
+    .line 2441
+    :cond_6
     new-array v2, v5, [Ljava/lang/String;
 
-    .line 2438
+    .line 2442
     new-array v5, v5, [Ljava/lang/String;
 
-    .line 2439
+    .line 2443
     aput-object v3, v2, v4
 
-    .line 2440
+    .line 2444
     const-string v0, ""
 
     aput-object v0, v5, v4
 
-    .line 2441
+    .line 2445
     const/4 v0, 0x1
 
     move v1, v0
 
-    .line 2442
+    .line 2446
     :goto_5
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-ge v4, v0, :cond_5
+    if-ge v4, v0, :cond_8
 
-    .line 2443
+    .line 2447
     invoke-interface {v7, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1600,18 +1669,18 @@
 
     move-result-object v3
 
-    .line 2444
+    .line 2448
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVMProvidersData:Ljava/util/Map;
 
     invoke-interface {v0, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_7
 
     move v0, v1
 
-    .line 2442
+    .line 2446
     :goto_6
     add-int/lit8 v4, v4, 0x1
 
@@ -1619,8 +1688,8 @@
 
     goto :goto_5
 
-    .line 2447
-    :cond_4
+    .line 2451
+    :cond_7
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVMProvidersData:Ljava/util/Map;
 
     invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1633,46 +1702,46 @@
 
     aput-object v0, v2, v1
 
-    .line 2448
+    .line 2452
     aput-object v3, v5, v1
 
-    .line 2449
+    .line 2453
     add-int/lit8 v0, v1, 0x1
 
     goto :goto_6
 
-    .line 2452
-    :cond_5
+    .line 2456
+    :cond_8
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, v2}, Landroid/preference/ListPreference;->setEntries([Ljava/lang/CharSequence;)V
 
-    .line 2453
+    .line 2457
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
     invoke-virtual {v0, v5}, Landroid/preference/ListPreference;->setEntryValues([Ljava/lang/CharSequence;)V
 
-    .line 2455
+    .line 2459
     invoke-direct {p0}, Lcom/android/phone/CallFeaturesSetting;->getCurrentVoicemailProviderKey()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPreviousVMProviderKey:Ljava/lang/String;
 
-    .line 2456
+    .line 2460
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mPreviousVMProviderKey:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->updateVMPreferenceWidgets(Ljava/lang/String;)V
 
-    .line 2457
+    .line 2461
     return-void
 
-    :cond_6
+    :cond_9
     move-object v0, v2
 
     goto/16 :goto_0
 
-    :cond_7
+    :cond_a
     move-object v1, v2
 
     goto/16 :goto_1
@@ -1742,7 +1811,7 @@
 
     const/4 v1, 0x0
 
-    .line 2529
+    .line 2533
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1767,18 +1836,18 @@
 
     move-result-object v3
 
-    .line 2531
+    .line 2535
     if-nez v3, :cond_0
 
-    .line 2561
+    .line 2565
     :goto_0
     return-object v0
 
-    .line 2537
+    .line 2541
     :cond_0
     sget-object v0, Lcom/android/phone/CallFeaturesSetting;->FWD_SETTINGS_DONT_TOUCH:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    .line 2538
+    .line 2542
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1797,7 +1866,7 @@
 
     move-result-object v4
 
-    .line 2539
+    .line 2543
     iget-object v2, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1822,21 +1891,21 @@
 
     move-result v2
 
-    .line 2540
+    .line 2544
     if-lez v2, :cond_2
 
-    .line 2541
+    .line 2545
     new-array v2, v2, [Lcom/android/internal/telephony/CallForwardInfo;
 
     move v0, v1
 
-    .line 2542
+    .line 2546
     :goto_1
     array-length v5, v2
 
     if-ge v0, v5, :cond_1
 
-    .line 2543
+    .line 2547
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1863,14 +1932,14 @@
 
     move-result-object v5
 
-    .line 2544
+    .line 2548
     new-instance v6, Lcom/android/internal/telephony/CallForwardInfo;
 
     invoke-direct {v6}, Lcom/android/internal/telephony/CallForwardInfo;-><init>()V
 
     aput-object v6, v2, v0
 
-    .line 2545
+    .line 2549
     aget-object v6, v2, v0
 
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
@@ -1899,7 +1968,7 @@
 
     iput v7, v6, Lcom/android/internal/telephony/CallForwardInfo;->status:I
 
-    .line 2547
+    .line 2551
     aget-object v6, v2, v0
 
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
@@ -1930,21 +1999,21 @@
 
     iput v7, v6, Lcom/android/internal/telephony/CallForwardInfo;->reason:I
 
-    .line 2549
+    .line 2553
     aget-object v6, v2, v0
 
     const/4 v7, 0x1
 
     iput v7, v6, Lcom/android/internal/telephony/CallForwardInfo;->serviceClass:I
 
-    .line 2550
+    .line 2554
     aget-object v6, v2, v0
 
     const/16 v7, 0x91
 
     iput v7, v6, Lcom/android/internal/telephony/CallForwardInfo;->toa:I
 
-    .line 2551
+    .line 2555
     aget-object v6, v2, v0
 
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
@@ -1975,7 +2044,7 @@
 
     iput-object v7, v6, Lcom/android/internal/telephony/CallForwardInfo;->number:Ljava/lang/String;
 
-    .line 2553
+    .line 2557
     aget-object v6, v2, v0
 
     iget-object v7, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
@@ -2006,7 +2075,7 @@
 
     iput v5, v6, Lcom/android/internal/telephony/CallForwardInfo;->timeSeconds:I
 
-    .line 2542
+    .line 2546
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_1
@@ -2014,7 +2083,7 @@
     :cond_1
     move-object v0, v2
 
-    .line 2558
+    .line 2562
     :cond_2
     new-instance v1, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;
 
@@ -2022,7 +2091,7 @@
 
     move-object v0, v1
 
-    .line 2561
+    .line 2565
     goto/16 :goto_0
 .end method
 
@@ -2045,7 +2114,7 @@
     .parameter "ai"
 
     .prologue
-    .line 2460
+    .line 2464
     iget-object v0, p1, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
     return-object v0
@@ -2059,37 +2128,37 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2490
+    .line 2494
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mVoicemailProviders:Landroid/preference/ListPreference;
 
     if-nez v1, :cond_1
 
-    .line 2519
+    .line 2523
     :cond_0
     :goto_0
     return-void
 
-    .line 2493
+    .line 2497
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/phone/CallFeaturesSetting;->loadSettingsForVoiceMailProvider(Ljava/lang/String;)Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;
 
     move-result-object v1
 
-    .line 2494
+    .line 2498
     invoke-virtual {p2, v1}, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 2501
+    .line 2505
     iget-object v1, p0, Lcom/android/phone/CallFeaturesSetting;->mPerProviderSavedVMNumbers:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 2502
+    .line 2506
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2112,7 +2181,7 @@
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 2503
+    .line 2507
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2131,15 +2200,15 @@
 
     move-result-object v2
 
-    .line 2504
+    .line 2508
     iget-object v3, p2, Lcom/android/phone/CallFeaturesSetting$VoiceMailProviderSettings;->forwardingSettings:[Lcom/android/internal/telephony/CallForwardInfo;
 
-    .line 2505
+    .line 2509
     sget-object v4, Lcom/android/phone/CallFeaturesSetting;->FWD_SETTINGS_DONT_TOUCH:[Lcom/android/internal/telephony/CallForwardInfo;
 
     if-eq v3, v4, :cond_2
 
-    .line 2506
+    .line 2510
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2162,13 +2231,13 @@
 
     invoke-interface {v1, v4, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 2507
+    .line 2511
     :goto_1
     array-length v4, v3
 
     if-ge v0, v4, :cond_3
 
-    .line 2508
+    .line 2512
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2195,10 +2264,10 @@
 
     move-result-object v4
 
-    .line 2509
+    .line 2513
     aget-object v5, v3, v0
 
-    .line 2510
+    .line 2514
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2221,7 +2290,7 @@
 
     invoke-interface {v1, v6, v7}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 2511
+    .line 2515
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2244,7 +2313,7 @@
 
     invoke-interface {v1, v6, v7}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 2512
+    .line 2516
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2267,7 +2336,7 @@
 
     invoke-interface {v1, v6, v7}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 2513
+    .line 2517
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2290,12 +2359,12 @@
 
     invoke-interface {v1, v4, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 2507
+    .line 2511
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_1
 
-    .line 2516
+    .line 2520
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2317,7 +2386,7 @@
 
     invoke-interface {v1, v2, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 2518
+    .line 2522
     :cond_3
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
@@ -2731,7 +2800,7 @@
     .parameter "preference"
 
     .prologue
-    .line 2472
+    .line 2476
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
@@ -2740,7 +2809,7 @@
 
     move-result-object v6
 
-    .line 2473
+    .line 2477
     .local v6, adapter:Landroid/widget/ListAdapter;
     const/4 v3, 0x0
 
@@ -2752,14 +2821,14 @@
 
     if-ge v3, v0, :cond_0
 
-    .line 2474
+    .line 2478
     invoke-interface {v6, v3}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
     if-ne v0, p1, :cond_1
 
-    .line 2475
+    .line 2479
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
 
     move-result-object v0
@@ -2776,11 +2845,11 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/preference/PreferenceScreen;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 2480
+    .line 2484
     :cond_0
     return-void
 
-    .line 2473
+    .line 2477
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
@@ -3116,7 +3185,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e0200
+    const v4, 0x7f0e0202
 
     new-array v5, v7, [Ljava/lang/Object;
 
@@ -3207,7 +3276,7 @@
     .line 1585
     .end local v0           #summary:Ljava/lang/String;
     :cond_2
-    const v1, 0x7f0e01fe
+    const v1, 0x7f0e0200
 
     invoke-virtual {p0, v1}, Lcom/android/phone/CallFeaturesSetting;->getString(I)Ljava/lang/String;
 
@@ -3872,7 +3941,7 @@
     .line 1792
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mSubMenuVoicemailSettings:Lcom/android/phone/EditPhoneNumberPreference;
 
-    const v2, 0x7f0e018a
+    const v2, 0x7f0e018c
 
     invoke-virtual {v0, v2}, Lcom/android/phone/EditPhoneNumberPreference;->setDialogTitle(I)V
 
@@ -4762,12 +4831,12 @@
     const v0, 0x7f0e00a1
 
     .line 1641
-    const v3, 0x7f0e01f9
+    const v3, 0x7f0e01fb
 
     invoke-virtual {v2, v3, p0}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 1642
-    const v3, 0x7f0e01fa
+    const v3, 0x7f0e01fc
 
     invoke-virtual {v2, v3, p0}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -4873,12 +4942,12 @@
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 1687
-    const v1, 0x7f0e0499
+    const v1, 0x7f0e049b
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
 
     .line 1688
-    const v1, 0x7f0e049a
+    const v1, 0x7f0e049c
 
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
@@ -5016,43 +5085,43 @@
     .parameter
 
     .prologue
-    .line 2584
+    .line 2588
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
-    .line 2585
+    .line 2589
     const v1, 0x102002c
 
     if-ne v0, v1, :cond_0
 
-    .line 2586
+    .line 2590
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 2587
+    .line 2591
     const-string v1, "com.android.contacts"
 
     const-string v2, "com.android.contacts.activities.DialtactsActivity"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2588
+    .line 2592
     const/high16 v1, 0x400
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2589
+    .line 2593
     invoke-virtual {p0, v0}, Lcom/android/phone/CallFeaturesSetting;->startActivity(Landroid/content/Intent;)V
 
-    .line 2590
+    .line 2594
     invoke-virtual {p0}, Lcom/android/phone/CallFeaturesSetting;->finish()V
 
-    .line 2591
+    .line 2595
     const/4 v0, 0x1
 
-    .line 2593
+    .line 2597
     :goto_0
     return v0
 
@@ -5321,7 +5390,7 @@
     .line 842
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting;->mVoiceCallEqListSetting:Landroid/preference/ListPreference;
 
-    const v10, 0x7f0e0496
+    const v10, 0x7f0e0498
 
     invoke-virtual {v9, v10}, Landroid/preference/ListPreference;->setSummary(I)V
 
@@ -5723,7 +5792,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0e02ab
+    const v5, 0x7f0e02ad
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -6253,7 +6322,7 @@
     .line 2196
     iget-object v0, p0, Lcom/android/phone/CallFeaturesSetting;->mVoiceCallEqListSetting:Landroid/preference/ListPreference;
 
-    const v1, 0x7f0e0496
+    const v1, 0x7f0e0498
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setSummary(I)V
 

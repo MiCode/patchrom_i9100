@@ -118,7 +118,7 @@
     .line 71
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4817
+    .line 4828
     return-void
 .end method
 
@@ -144,19 +144,19 @@
 
     const/4 v12, 0x0
 
-    .line 5033
+    .line 5044
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 5034
+    .line 5045
     .local v2, callingUid:I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v8
 
-    .line 5035
+    .line 5046
     .local v8, pid:I
     const-string/jumbo v13, "restriction_policy"
 
@@ -168,11 +168,11 @@
 
     move-result-object v10
 
-    .line 5036
+    .line 5047
     .local v10, rp:Landroid/app/enterprise/IRestrictionPolicy;
     if-eqz v10, :cond_3
 
-    .line 5037
+    .line 5048
     const/4 v13, 0x0
 
     invoke-interface {v10, v13}, Landroid/app/enterprise/IRestrictionPolicy;->isSettingsChangesAllowed(Z)Z
@@ -181,7 +181,7 @@
 
     if-nez v13, :cond_2
 
-    .line 5038
+    .line 5049
     const-string/jumbo v13, "package"
 
     invoke-static {v13}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -192,16 +192,16 @@
 
     move-result-object v6
 
-    .line 5039
+    .line 5050
     .local v6, mPM:Landroid/content/pm/IPackageManager;
     if-eqz v6, :cond_3
 
-    .line 5041
+    .line 5052
     invoke-interface {v6, v2}, Landroid/content/pm/IPackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 5042
+    .line 5053
     .local v7, packages:[Ljava/lang/String;
     move-object v1, v7
 
@@ -217,7 +217,7 @@
 
     aget-object v9, v1, v4
 
-    .line 5044
+    .line 5055
     .local v9, pkg:Ljava/lang/String;
     const/16 v13, 0x80
 
@@ -225,7 +225,7 @@
 
     move-result-object v0
 
-    .line 5046
+    .line 5057
     .local v0, app:Landroid/content/pm/ApplicationInfo;
     iget v13, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -233,7 +233,7 @@
 
     if-nez v13, :cond_1
 
-    .line 5060
+    .line 5071
     .end local v0           #app:Landroid/content/pm/ApplicationInfo;
     .end local v1           #arr$:[Ljava/lang/String;
     .end local v2           #callingUid:I
@@ -248,7 +248,7 @@
     :goto_1
     return v11
 
-    .line 5042
+    .line 5053
     .restart local v0       #app:Landroid/content/pm/ApplicationInfo;
     .restart local v1       #arr$:[Ljava/lang/String;
     .restart local v2       #callingUid:I
@@ -264,7 +264,7 @@
 
     goto :goto_0
 
-    .line 5052
+    .line 5063
     .end local v0           #app:Landroid/content/pm/ApplicationInfo;
     .end local v1           #arr$:[Ljava/lang/String;
     .end local v4           #i$:I
@@ -300,14 +300,14 @@
     :goto_2
     move v11, v12
 
-    .line 5060
+    .line 5071
     goto :goto_1
 
-    .line 5057
+    .line 5068
     :catch_0
     move-exception v3
 
-    .line 5058
+    .line 5069
     .local v3, e:Landroid/os/RemoteException;
     invoke-virtual {v3}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -319,7 +319,7 @@
     .parameter "androidId"
 
     .prologue
-    .line 5022
+    .line 5033
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

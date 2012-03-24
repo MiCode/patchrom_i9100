@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2608
+    .line 2612
     iput-object p1, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 2611
+    .line 2615
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2612
+    .line 2616
     .local v0, action:Ljava/lang/String;
     const-string v9, "CallFeaturesSetting"
 
@@ -69,7 +69,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2613
+    .line 2617
     const-string v9, "android.intent.action.AIRPLANE_MODE"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -78,7 +78,7 @@
 
     if-eqz v9, :cond_3
 
-    .line 2614
+    .line 2618
     const-string v9, "state"
 
     const/4 v10, 0x0
@@ -91,7 +91,7 @@
 
     move-result-object v8
 
-    .line 2615
+    .line 2619
     .local v8, state:Ljava/lang/Boolean;
     const-string v9, "CallFeaturesSetting"
 
@@ -125,14 +125,14 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2616
+    .line 2620
     invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 2617
+    .line 2621
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     const-string v10, "sip_settings_category_key"
@@ -141,7 +141,7 @@
 
     move-result-object v7
 
-    .line 2618
+    .line 2622
     .local v7, sipSettings:Landroid/preference/Preference;
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
@@ -149,13 +149,13 @@
 
     move-result-object v6
 
-    .line 2619
+    .line 2623
     .local v6, screen:Landroid/preference/PreferenceScreen;
     invoke-virtual {v6}, Landroid/preference/PreferenceScreen;->getPreferenceCount()I
 
     move-result v1
 
-    .line 2620
+    .line 2624
     .local v1, count:I
     const/4 v3, 0x0
 
@@ -163,27 +163,27 @@
     :goto_0
     if-ge v3, v1, :cond_2
 
-    .line 2621
+    .line 2625
     invoke-virtual {v6, v3}, Landroid/preference/PreferenceScreen;->getPreference(I)Landroid/preference/Preference;
 
     move-result-object v5
 
-    .line 2622
+    .line 2626
     .local v5, pref:Landroid/preference/Preference;
     if-eq v5, v7, :cond_0
 
-    .line 2623
+    .line 2627
     const/4 v9, 0x0
 
     invoke-virtual {v5, v9}, Landroid/preference/Preference;->setEnabled(Z)V
 
-    .line 2620
+    .line 2624
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 2626
+    .line 2630
     .end local v1           #count:I
     .end local v3           #i:I
     .end local v5           #pref:Landroid/preference/Preference;
@@ -200,13 +200,13 @@
 
     invoke-virtual {v9, v10}, Landroid/preference/PreferenceScreen;->setEnabled(Z)V
 
-    .line 2640
+    .line 2644
     .end local v8           #state:Ljava/lang/Boolean;
     :cond_2
     :goto_1
     return-void
 
-    .line 2628
+    .line 2632
     :cond_3
     const-string v9, "com.android.phone.HEADSET_PLUG_ACTION"
 
@@ -216,7 +216,7 @@
 
     if-eqz v9, :cond_4
 
-    .line 2629
+    .line 2633
     const-string v9, "state"
 
     const/4 v10, 0x0
@@ -225,7 +225,7 @@
 
     move-result v2
 
-    .line 2630
+    .line 2634
     .local v2, headset_state:I
     const-string v9, "CallFeaturesSetting"
 
@@ -249,7 +249,7 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2631
+    .line 2635
     if-nez v2, :cond_2
 
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
@@ -261,10 +261,10 @@
 
     if-eqz v9, :cond_2
 
-    .line 2632
+    .line 2636
     const/4 v4, 0x0
 
-    .line 2633
+    .line 2637
     .local v4, mode:I
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
@@ -273,7 +273,7 @@
 
     goto :goto_1
 
-    .line 2635
+    .line 2639
     .end local v2           #headset_state:I
     .end local v4           #mode:I
     :cond_4
@@ -285,7 +285,7 @@
 
     if-eqz v9, :cond_2
 
-    .line 2636
+    .line 2640
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mButtonTTY:Landroid/preference/ListPreference;
@@ -295,7 +295,7 @@
 
     if-eqz v9, :cond_2
 
-    .line 2637
+    .line 2641
     iget-object v9, p0, Lcom/android/phone/CallFeaturesSetting$9;->this$0:Lcom/android/phone/CallFeaturesSetting;
 
     #getter for: Lcom/android/phone/CallFeaturesSetting;->mButtonTTY:Landroid/preference/ListPreference;

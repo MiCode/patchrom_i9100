@@ -74,6 +74,8 @@
 
 .field static final TRANSACTION_getBondState:I = 0x19
 
+.field static final TRANSACTION_getConnectedDeviceCount:I = 0x4b
+
 .field static final TRANSACTION_getConnectedHealthDevices:I = 0x46
 
 .field static final TRANSACTION_getConnectedInputDevices:I = 0x34
@@ -268,7 +270,7 @@
     .line 43
     sparse-switch p1, :sswitch_data_0
 
-    .line 942
+    .line 950
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v7
@@ -3253,7 +3255,29 @@
     .line 935
     goto :goto_21
 
+    .line 943
+    :sswitch_4b
+    const-string v6, "android.bluetooth.IBluetooth"
+
+    invoke-virtual {p2, v6}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    .line 944
+    invoke-virtual {p0}, Landroid/bluetooth/IBluetooth$Stub;->getConnectedDeviceCount()I
+
+    move-result v4
+
+    .line 945
+    .local v4, _result:I
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 946
+    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
+
     .line 43
+    nop
+
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -3330,6 +3354,7 @@
         0x48 -> :sswitch_48
         0x49 -> :sswitch_49
         0x4a -> :sswitch_4a
+        0x4b -> :sswitch_4b
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

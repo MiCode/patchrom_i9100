@@ -40,7 +40,7 @@
     .parameter
 
     .prologue
-    .line 2423
+    .line 2474
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$3;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iput-object p2, p0, Lcom/android/server/InputMethodManagerService$3;->val$pm:Landroid/content/pm/PackageManager;
@@ -58,16 +58,16 @@
     .parameter "imi2"
 
     .prologue
-    .line 2426
+    .line 2477
     if-nez p2, :cond_0
 
     const/4 v2, 0x0
 
-    .line 2433
+    .line 2484
     :goto_0
     return v2
 
-    .line 2427
+    .line 2478
     :cond_0
     if-nez p1, :cond_1
 
@@ -75,13 +75,13 @@
 
     goto :goto_0
 
-    .line 2428
+    .line 2479
     :cond_1
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$3;->val$pm:Landroid/content/pm/PackageManager;
 
     if-nez v2, :cond_2
 
-    .line 2429
+    .line 2480
     invoke-virtual {p1}, Landroid/view/inputmethod/InputMethodInfo;->getId()Ljava/lang/String;
 
     move-result-object v2
@@ -96,7 +96,7 @@
 
     goto :goto_0
 
-    .line 2431
+    .line 2482
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    .line 2432
+    .line 2483
     .local v0, imiId1:Ljava/lang/CharSequence;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -164,7 +164,7 @@
 
     move-result-object v1
 
-    .line 2433
+    .line 2484
     .local v1, imiId2:Ljava/lang/CharSequence;
     invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
 
@@ -187,7 +187,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2423
+    .line 2474
     check-cast p1, Landroid/view/inputmethod/InputMethodInfo;
 
     .end local p1

@@ -18,6 +18,8 @@ then
 	echo "version: 1.4.3" >> "$BUILD_OUT/framework-miui/apktool.yml"
 	echo "apkFileName: framework-miui.jar" >> "$BUILD_OUT/framework-miui/apktool.yml"
 	mv "$BUILD_OUT/framework/smali/miui" "$BUILD_OUT/framework-miui/smali"
+	mkdir -p "$BUILD_OUT/framework-miui/smali/com/samsung"
+	mv "$BUILD_OUT/framework/smali/com/samsung" "$BUILD_OUT/framework-miui/smali/com/samsung"
 
         cd $BUILD_OUT/framework/smali && cat ../../../other/framework.jar_file_not_exist | cpio -o > ../../cpio.nofile
         cd ../../framework-miui/smali && cpio -id < ../../cpio.nofile

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1527
+    .line 1528
     iput-object p1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .parameter "x1"
 
     .prologue
-    .line 1527
+    .line 1528
     invoke-direct {p0, p1}, Lcom/android/server/wm/WindowState$DeathRecipient;-><init>(Lcom/android/server/wm/WindowState;)V
 
     return-void
@@ -53,7 +53,7 @@
     .locals 6
 
     .prologue
-    .line 1530
+    .line 1531
     :try_start_0
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -65,7 +65,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1531
+    .line 1532
     :try_start_1
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
@@ -87,9 +87,38 @@
 
     .line 1533
     .local v0, win:Lcom/android/server/wm/WindowState;
-    if-eqz v0, :cond_0
+    sget-boolean v1, Lcom/android/server/wm/WindowState;->mIsEngBuild:Z
+
+    if-eqz v1, :cond_1
 
     .line 1534
+    const-string v1, "WindowManager"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "WIN DEATH: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1538
+    :goto_0
+    if-eqz v0, :cond_0
+
+    .line 1539
     iget-object v1, p0, Lcom/android/server/wm/WindowState$DeathRecipient;->this$0:Lcom/android/server/wm/WindowState;
 
     iget-object v1, v1, Lcom/android/server/wm/WindowState;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -100,16 +129,28 @@
 
     invoke-virtual {v1, v3, v0}, Lcom/android/server/wm/WindowManagerService;->removeWindowLocked(Lcom/android/server/wm/Session;Lcom/android/server/wm/WindowState;)V
 
-    .line 1536
+    .line 1541
     :cond_0
     monitor-exit v2
 
-    .line 1541
+    .line 1546
     .end local v0           #win:Lcom/android/server/wm/WindowState;
-    :goto_0
+    :goto_1
     return-void
 
     .line 1536
+    .restart local v0       #win:Lcom/android/server/wm/WindowState;
+    :cond_1
+    const-string v1, "WindowManager"
+
+    const-string v3, "WIN DEATH: win"
+
+    invoke-static {v1, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 1541
+    .end local v0           #win:Lcom/android/server/wm/WindowState;
     :catchall_0
     move-exception v1
 
@@ -122,9 +163,9 @@
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1537
+    .line 1542
     :catch_0
     move-exception v1
 
-    goto :goto_0
+    goto :goto_1
 .end method

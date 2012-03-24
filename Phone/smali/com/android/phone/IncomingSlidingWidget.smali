@@ -187,14 +187,14 @@
     .line 91
     iget-object v0, p0, Lcom/android/phone/IncomingSlidingWidget;->mIncomingSlidingTab:Lcom/android/phone/IncomingCallWidget;
 
-    const v1, 0x7f0e02ea
+    const v1, 0x7f0e02ec
 
     invoke-virtual {v0, v1}, Lcom/android/phone/IncomingCallWidget;->setLeftHintText(I)V
 
     .line 92
     iget-object v0, p0, Lcom/android/phone/IncomingSlidingWidget;->mIncomingSlidingTab:Lcom/android/phone/IncomingCallWidget;
 
-    const v1, 0x7f0e02e8
+    const v1, 0x7f0e02ea
 
     invoke-virtual {v0, v1}, Lcom/android/phone/IncomingCallWidget;->setRightHintText(I)V
 

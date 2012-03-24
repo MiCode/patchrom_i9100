@@ -216,10 +216,10 @@
     :sswitch_data_0
     .sparse-switch
         0x1020021 -> :sswitch_0
-        0x10203af -> :sswitch_2
-        0x10203b0 -> :sswitch_1
-        0x10203b1 -> :sswitch_3
-        0x10203b2 -> :sswitch_4
+        0x10203b1 -> :sswitch_2
+        0x10203b2 -> :sswitch_1
+        0x10203b3 -> :sswitch_3
+        0x10203b4 -> :sswitch_4
     .end sparse-switch
 .end method
 

@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 3956
+    .line 3954
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +40,12 @@
     .parameter "intent"
 
     .prologue
-    .line 3958
+    .line 3956
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3966
+    .line 3964
     .local v0, action:Ljava/lang/String;
     const-string v1, "android.intent.action.TOUCH_CAPTURE_BTN"
 
@@ -55,14 +55,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 3967
+    .line 3965
     const-string v1, "WindowManager"
 
     const-string v2, "takeScreenshot by capture button"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3968
+    .line 3966
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$18;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/internal/policy/impl/PhoneWindowManager;->mHandler:Landroid/os/Handler;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 3970
+    .line 3968
     :cond_0
     return-void
 .end method

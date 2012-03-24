@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1388
+    .line 1392
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$6;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -42,12 +42,12 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 1392
+    .line 1396
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1393
+    .line 1397
     .local v0, action:Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -59,7 +59,7 @@
 
     move-result v4
 
-    .line 1395
+    .line 1399
     .local v4, mLowBatteryWarningLevel:I
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
@@ -89,7 +89,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1397
+    .line 1401
     :cond_0
     const-string v5, "android.intent.action.BATTERY_LOW"
 
@@ -99,31 +99,31 @@
 
     if-eqz v5, :cond_2
 
-    .line 1398
+    .line 1402
     const-string v5, "InVTCallScreen"
 
     const-string v6, "Low battery Indication received"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1400
+    .line 1404
     iget-object v5, p0, Lcom/android/phone/InVTCallScreen$6;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #setter for: Lcom/android/phone/InVTCallScreen;->mIsBatteryLow:Z
     invoke-static {v5, v8}, Lcom/android/phone/InVTCallScreen;->access$6302(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 1401
+    .line 1405
     iget-object v5, p0, Lcom/android/phone/InVTCallScreen$6;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->performBatteryLowProcess()V
     invoke-static {v5}, Lcom/android/phone/InVTCallScreen;->access$6400(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 1419
+    .line 1423
     :cond_1
     :goto_0
     return-void
 
-    .line 1402
+    .line 1406
     :cond_2
     const-string v5, "android.intent.action.BATTERY_CHANGED"
 
@@ -133,14 +133,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 1403
+    .line 1407
     const-string v5, "status"
 
     invoke-virtual {p2, v5, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 1404
+    .line 1408
     .local v3, battStatus:I
     const-string v5, "scale"
 
@@ -150,7 +150,7 @@
 
     move-result v2
 
-    .line 1405
+    .line 1409
     .local v2, battScale:I
     const-string v5, "level"
 
@@ -158,7 +158,7 @@
 
     move-result v1
 
-    .line 1406
+    .line 1410
     .local v1, battLevel:I
     const-string v5, "InVTCallScreen"
 
@@ -192,7 +192,7 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1407
+    .line 1411
     const-string v5, "InVTCallScreen"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -215,27 +215,27 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1409
+    .line 1413
     if-ge v1, v4, :cond_3
 
     const/4 v5, 0x2
 
     if-eq v3, v5, :cond_3
 
-    .line 1411
+    .line 1415
     const-string v5, "InVTCallScreen"
 
     const-string v6, "Low battery and not in charging state"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1412
+    .line 1416
     iget-object v5, p0, Lcom/android/phone/InVTCallScreen$6;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #setter for: Lcom/android/phone/InVTCallScreen;->mIsBatteryLow:Z
     invoke-static {v5, v8}, Lcom/android/phone/InVTCallScreen;->access$6302(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 1413
+    .line 1417
     iget-object v5, p0, Lcom/android/phone/InVTCallScreen$6;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->performBatteryLowProcess()V
@@ -243,7 +243,7 @@
 
     goto :goto_0
 
-    .line 1415
+    .line 1419
     :cond_3
     iget-object v5, p0, Lcom/android/phone/InVTCallScreen$6;->this$0:Lcom/android/phone/InVTCallScreen;
 

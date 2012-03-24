@@ -181,7 +181,7 @@
     .local v2, responses:[Ljava/lang/String;
     const-string v3, "canned_response_pref_1"
 
-    const v4, 0x7f0e0275
+    const v4, 0x7f0e0277
 
     invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -198,7 +198,7 @@
 
     const-string v4, "canned_response_pref_2"
 
-    const v5, 0x7f0e0276
+    const v5, 0x7f0e0278
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -215,7 +215,7 @@
 
     const-string v4, "canned_response_pref_3"
 
-    const v5, 0x7f0e0277
+    const v5, 0x7f0e0279
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -232,7 +232,7 @@
 
     const-string v4, "canned_response_pref_4"
 
-    const v5, 0x7f0e0278
+    const v5, 0x7f0e027a
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -395,7 +395,7 @@
 
     move-result-object v8
 
-    const v9, 0x7f0e0279
+    const v9, 0x7f0e027b
 
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

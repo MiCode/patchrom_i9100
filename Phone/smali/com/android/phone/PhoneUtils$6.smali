@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 1633
+    .line 1635
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
@@ -32,17 +32,17 @@
     .parameter "msg"
 
     .prologue
-    .line 1636
+    .line 1638
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1647
+    .line 1649
     :cond_0
     :goto_0
     return-void
 
-    .line 1638
+    .line 1640
     :pswitch_0
     invoke-static {}, Lcom/android/phone/PhoneUtils;->access$800()Landroid/app/AlertDialog;
 
@@ -50,7 +50,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1639
+    .line 1641
     invoke-static {}, Lcom/android/phone/PhoneUtils;->access$900()Lcom/android/internal/telephony/MmiCode;
 
     move-result-object v0
@@ -67,21 +67,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1640
+    .line 1642
     invoke-static {}, Lcom/android/phone/PhoneUtils;->access$900()Lcom/android/internal/telephony/MmiCode;
 
     move-result-object v0
 
     invoke-interface {v0}, Lcom/android/internal/telephony/MmiCode;->cancel()V
 
-    .line 1642
+    .line 1644
     :cond_1
     const-string v0, "[[[DIALOG_TIMEOUT]]] dismiss~"
 
     #calls: Lcom/android/phone/PhoneUtils;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->access$100(Ljava/lang/String;)V
 
-    .line 1643
+    .line 1645
     invoke-static {}, Lcom/android/phone/PhoneUtils;->access$800()Landroid/app/AlertDialog;
 
     move-result-object v0
@@ -90,7 +90,7 @@
 
     goto :goto_0
 
-    .line 1636
+    .line 1638
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

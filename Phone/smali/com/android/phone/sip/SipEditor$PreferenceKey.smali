@@ -67,11 +67,11 @@
 
     const/4 v2, 0x0
 
-    const v3, 0x7f0e0269
+    const v3, 0x7f0e026b
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e0255
+    const v5, 0x7f0e0257
 
     invoke-direct/range {v0 .. v5}, Lcom/android/phone/sip/SipEditor$PreferenceKey;-><init>(Ljava/lang/String;IIII)V
 
@@ -84,11 +84,11 @@
 
     const/4 v2, 0x1
 
-    const v3, 0x7f0e026a
+    const v3, 0x7f0e026c
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e0255
+    const v5, 0x7f0e0257
 
     invoke-direct/range {v0 .. v5}, Lcom/android/phone/sip/SipEditor$PreferenceKey;-><init>(Ljava/lang/String;IIII)V
 
@@ -101,11 +101,11 @@
 
     const/4 v2, 0x2
 
-    const v3, 0x7f0e0268
+    const v3, 0x7f0e026a
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e0255
+    const v5, 0x7f0e0257
 
     invoke-direct/range {v0 .. v5}, Lcom/android/phone/sip/SipEditor$PreferenceKey;-><init>(Ljava/lang/String;IIII)V
 
@@ -118,11 +118,11 @@
 
     const/4 v2, 0x3
 
-    const v3, 0x7f0e026b
+    const v3, 0x7f0e026d
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e0256
+    const v5, 0x7f0e0258
 
     invoke-direct/range {v0 .. v5}, Lcom/android/phone/sip/SipEditor$PreferenceKey;-><init>(Ljava/lang/String;IIII)V
 
@@ -135,11 +135,11 @@
 
     const/4 v2, 0x4
 
-    const v3, 0x7f0e026c
+    const v3, 0x7f0e026e
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e0257
+    const v5, 0x7f0e0259
 
     invoke-direct/range {v0 .. v5}, Lcom/android/phone/sip/SipEditor$PreferenceKey;-><init>(Ljava/lang/String;IIII)V
 
@@ -152,11 +152,11 @@
 
     const/4 v2, 0x5
 
-    const v3, 0x7f0e026d
+    const v3, 0x7f0e026f
 
-    const v4, 0x7f0e0258
+    const v4, 0x7f0e025a
 
-    const v5, 0x7f0e0258
+    const v5, 0x7f0e025a
 
     invoke-direct/range {v0 .. v5}, Lcom/android/phone/sip/SipEditor$PreferenceKey;-><init>(Ljava/lang/String;IIII)V
 
@@ -169,9 +169,9 @@
 
     const/4 v2, 0x6
 
-    const v3, 0x7f0e026e
+    const v3, 0x7f0e0270
 
-    const v4, 0x7f0e0259
+    const v4, 0x7f0e025b
 
     const/4 v5, 0x0
 
@@ -186,9 +186,9 @@
 
     const/4 v2, 0x7
 
-    const v3, 0x7f0e026f
+    const v3, 0x7f0e0271
 
-    const v4, 0x7f0e0263
+    const v4, 0x7f0e0265
 
     const/4 v5, 0x0
 
@@ -203,11 +203,11 @@
 
     const/16 v2, 0x8
 
-    const v3, 0x7f0e0273
+    const v3, 0x7f0e0275
 
     const/4 v4, 0x0
 
-    const v5, 0x7f0e0257
+    const v5, 0x7f0e0259
 
     invoke-direct/range {v0 .. v5}, Lcom/android/phone/sip/SipEditor$PreferenceKey;-><init>(Ljava/lang/String;IIII)V
 

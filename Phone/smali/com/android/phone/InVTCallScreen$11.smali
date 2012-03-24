@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 4971
+    .line 4986
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$11;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InVTCallScreen$11;->val$c:Lcom/android/internal/telephony/Connection;
@@ -48,14 +48,14 @@
     .parameter "whichButton"
 
     .prologue
-    .line 4973
+    .line 4988
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$3400()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4974
+    .line 4989
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$11;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const-string v1, "handle WAIT_PROMPT_CONFIRMED, proceed..."
@@ -63,19 +63,19 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 4975
+    .line 4990
     :cond_0
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$11;->val$c:Lcom/android/internal/telephony/Connection;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->proceedAfterWaitChar()V
 
-    .line 4976
+    .line 4991
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/android/phone/PhoneApp;->pokeUserActivity()V
 
-    .line 4977
+    .line 4992
     return-void
 .end method

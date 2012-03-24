@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 5020
+    .line 5035
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$12;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InVTCallScreen$12;->val$c:Lcom/android/internal/telephony/Connection;
@@ -48,14 +48,14 @@
     .parameter "whichButton"
 
     .prologue
-    .line 5022
+    .line 5037
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5023
+    .line 5038
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$12;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const-string v1, "handle POST_DIAL_CANCELED!"
@@ -63,12 +63,12 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 5024
+    .line 5039
     :cond_0
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$12;->val$c:Lcom/android/internal/telephony/Connection;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/Connection;->cancelPostDial()V
 
-    .line 5025
+    .line 5040
     return-void
 .end method

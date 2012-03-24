@@ -22,7 +22,7 @@
     .locals 0
 
     .prologue
-    .line 1515
+    .line 1517
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,13 +37,13 @@
     .prologue
     const/16 v1, 0x64
 
-    .line 1517
+    .line 1519
     const-string v0, "[DIALOG_TIMEOUT] onDismiss"
 
     #calls: Lcom/android/phone/PhoneUtils;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->access$100(Ljava/lang/String;)V
 
-    .line 1518
+    .line 1520
     invoke-static {}, Lcom/android/phone/PhoneUtils;->access$700()Landroid/os/Handler;
 
     move-result-object v0
@@ -60,7 +60,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1519
+    .line 1521
     :cond_0
     return-void
 .end method

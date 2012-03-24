@@ -169,8 +169,6 @@
     <string name="terabyteShort">TB</string>
     <string name="petabyteShort">PB</string>
     <string name="fileSizeSuffix">%1$s %2$s</string>
-    <string name="ellipsis">...</string>
-    <string name="ellipsis_two_dots">‥</string>
     <string name="mmiError">네트워크 연결에 문제가 발생했거나 MMI 코드가 바르지 않습니다</string>
     <string name="mmiFdnError">발신 허용 번호에서만 수행할 수 있는 작업입니다.</string>
     <string name="serviceEnabled">서비스가 실행되었습니다</string>
@@ -982,7 +980,7 @@
     <string name="capital_off">끄기</string>
     <string name="whichApplication">작업을 실행할 때 사용할 애플리케이션</string>
     <string name="alwaysUse">이 작업에 대해 기본값으로 사용</string>
-    <string name="clearDefaultHintMsg">홈 화면 > [설정] > [애플리케이션] > [애플리케이션 관리]에서 기본값을 삭제하세요</string>
+    <string name="clearDefaultHintMsg">기본 애플리케이션 사용을 해제하려면 [환경설정] > [애플리케이션]으로 이동하세요</string>
     <string name="chooseActivity">작업 선택</string>
     <string name="chooseUsbActivity">USB로 연결 시 사용할 애플리케이션을 선택하세요</string>
     <string name="noApplications">이 작업을 실행할 수 있는 애플리케이션을 찾을 수 없습니다</string>
@@ -1106,7 +1104,6 @@
     <string name="configure_input_methods">입력 방식 설정</string>
     <string name="fast_scroll_alphabet">" ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
     <string name="fast_scroll_numeric_alphabet">" 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"</string>
-    <string name="candidates_style">추천 단어</string>
     <string name="ext_media_checking_notification_title">내장 메모리 준비 중...</string>
     <string name="ext_media_checking_notification_title_sd">SD 카드 준비 중…</string>
     <string name="ext_media_checking_notification_message">오류 확인 중입니다</string>

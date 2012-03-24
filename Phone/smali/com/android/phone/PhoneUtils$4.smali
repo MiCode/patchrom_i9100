@@ -33,7 +33,7 @@
     .parameter
 
     .prologue
-    .line 1568
+    .line 1570
     iput-object p1, p0, Lcom/android/phone/PhoneUtils$4;->val$phone:Lcom/android/internal/telephony/Phone;
 
     iput-object p2, p0, Lcom/android/phone/PhoneUtils$4;->val$inputText:Landroid/widget/EditText;
@@ -53,15 +53,15 @@
     .parameter "whichButton"
 
     .prologue
-    .line 1570
+    .line 1572
     packed-switch p2, :pswitch_data_0
 
-    .line 1581
+    .line 1583
     :cond_0
     :goto_0
     return-void
 
-    .line 1572
+    .line 1574
     :pswitch_0
     iget-object v0, p0, Lcom/android/phone/PhoneUtils$4;->val$phone:Lcom/android/internal/telephony/Phone;
 
@@ -79,7 +79,7 @@
 
     goto :goto_0
 
-    .line 1575
+    .line 1577
     :pswitch_1
     iget-object v0, p0, Lcom/android/phone/PhoneUtils$4;->val$mmiCode:Lcom/android/internal/telephony/MmiCode;
 
@@ -89,14 +89,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1576
+    .line 1578
     iget-object v0, p0, Lcom/android/phone/PhoneUtils$4;->val$mmiCode:Lcom/android/internal/telephony/MmiCode;
 
     invoke-interface {v0}, Lcom/android/internal/telephony/MmiCode;->cancel()V
 
     goto :goto_0
 
-    .line 1570
+    .line 1572
     :pswitch_data_0
     .packed-switch -0x2
         :pswitch_1

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1461
+    .line 1456
     iput-object p1, p0, Lcom/android/phone/InCallScreen$8;->this$0:Lcom/android/phone/InCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 1463
+    .line 1458
     iget-object v0, p0, Lcom/android/phone/InCallScreen$8;->this$0:Lcom/android/phone/InCallScreen;
 
     #getter for: Lcom/android/phone/InCallScreen;->mApp:Lcom/android/phone/PhoneApp;
@@ -53,6 +53,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/phone/PhoneApp;->setIgnoreTouchUserActivity(Z)V
 
-    .line 1464
+    .line 1459
     return-void
 .end method

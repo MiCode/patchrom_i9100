@@ -826,7 +826,7 @@
     :cond_0
     const/4 v2, 0x1
 
-    const v3, 0x7f0e01d3
+    const v3, 0x7f0e01d5
 
     invoke-interface {p1, v4, v2, v4, v3}, Landroid/view/ContextMenu;->add(IIII)Landroid/view/MenuItem;
 
@@ -850,7 +850,7 @@
     .line 260
     const/4 v0, 0x2
 
-    const v1, 0x7f0e01d4
+    const v1, 0x7f0e01d6
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -1022,7 +1022,7 @@
     .line 284
     .end local v0           #intent:Landroid/content/Intent;
     :sswitch_1
-    const v5, 0x7f0e01d4
+    const v5, 0x7f0e01d6
 
     invoke-virtual {p0, v5}, Lcom/android/phone/SimContacts;->getString(I)Ljava/lang/String;
 
@@ -1030,7 +1030,7 @@
 
     .line 285
     .local v3, title:Ljava/lang/CharSequence;
-    const v5, 0x7f0e01d5
+    const v5, 0x7f0e01d7
 
     invoke-virtual {p0, v5}, Lcom/android/phone/SimContacts;->getString(I)Ljava/lang/String;
 

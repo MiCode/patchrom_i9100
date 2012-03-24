@@ -136,7 +136,7 @@
     :cond_0
     iget-object v0, p0, Lcom/android/phone/DataUsage;->mHelpPref:Landroid/preference/Preference;
 
-    const v1, 0x7f0e00d5
+    const v1, 0x7f0e00d7
 
     invoke-virtual {p0, v1}, Lcom/android/phone/DataUsage;->getString(I)Ljava/lang/String;
 

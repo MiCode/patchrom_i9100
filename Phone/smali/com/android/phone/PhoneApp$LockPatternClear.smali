@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 2323
+    .line 2297
     iput-object p1, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 2323
+    .line 2297
     invoke-direct {p0, p1}, Lcom/android/phone/PhoneApp$LockPatternClear;-><init>(Lcom/android/phone/PhoneApp;)V
 
     return-void
@@ -54,12 +54,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2326
+    .line 2300
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2328
+    .line 2302
     .local v0, action:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
 
@@ -72,7 +72,7 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(Z)V
 
-    .line 2329
+    .line 2303
     iget-object v2, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
 
     #getter for: Lcom/android/phone/PhoneApp;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -84,7 +84,7 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/widget/LockPatternUtils;->setPermanentlyLocked(Z)V
 
-    .line 2331
+    .line 2305
     iget-object v2, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
 
     iget-object v3, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
@@ -103,7 +103,7 @@
     #setter for: Lcom/android/phone/PhoneApp;->mKeyguardLock:Landroid/app/KeyguardManager$KeyguardLock;
     invoke-static {v2, v3}, Lcom/android/phone/PhoneApp;->access$1702(Lcom/android/phone/PhoneApp;Landroid/app/KeyguardManager$KeyguardLock;)Landroid/app/KeyguardManager$KeyguardLock;
 
-    .line 2332
+    .line 2306
     iget-object v2, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
 
     #getter for: Lcom/android/phone/PhoneApp;->mKeyguardLock:Landroid/app/KeyguardManager$KeyguardLock;
@@ -113,7 +113,7 @@
 
     invoke-virtual {v2}, Landroid/app/KeyguardManager$KeyguardLock;->disableKeyguard()V
 
-    .line 2333
+    .line 2307
     iget-object v2, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
 
     #getter for: Lcom/android/phone/PhoneApp;->mKeyguardManager:Landroid/app/KeyguardManager;
@@ -123,29 +123,29 @@
 
     invoke-virtual {v2, v5}, Landroid/app/KeyguardManager;->exitKeyguardSecurely(Landroid/app/KeyguardManager$OnKeyguardExitResult;)V
 
-    .line 2335
+    .line 2309
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.MAIN"
 
     invoke-direct {v1, v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 2336
+    .line 2310
     .local v1, mainIntent:Landroid/content/Intent;
     const-string v2, "android.intent.category.HOME"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2337
+    .line 2311
     const/high16 v2, 0x1020
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2339
+    .line 2313
     iget-object v2, p0, Lcom/android/phone/PhoneApp$LockPatternClear;->this$0:Lcom/android/phone/PhoneApp;
 
     invoke-virtual {v2, v1}, Lcom/android/phone/PhoneApp;->startActivity(Landroid/content/Intent;)V
 
-    .line 2340
+    .line 2314
     return-void
 .end method

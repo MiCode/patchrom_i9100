@@ -195,6 +195,8 @@
     <item type="id" name="topDisplayGroup">false</item>
     <item type="id" name="keyPad">false</item>
     <item type="id" name="spacerBottom">false</item>
+    <item type="id" name="telstraText">false</item>
+    <item type="id" name="emergencyCall">false</item>
     <item type="id" name="enter_puk">false</item>
     <item type="id" name="enter_pin">false</item>
     <item type="id" name="pukDisplay">false</item>

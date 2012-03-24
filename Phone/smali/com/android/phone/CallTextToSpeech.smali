@@ -556,7 +556,7 @@
     .parameter "TtsId"
 
     .prologue
-    const v10, 0x7f0e029e
+    const v10, 0x7f0e02a0
 
     const/4 v9, 0x1
 
@@ -950,7 +950,7 @@
     .line 243
     iget-object v5, p0, Lcom/android/phone/CallTextToSpeech;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f0e019e
+    const v6, 0x7f0e01a0
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 9823
+    .line 9840
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$51;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InVTCallScreen$51;->val$mDialogCheckbox:Landroid/widget/CheckBox;
@@ -47,7 +47,7 @@
     .parameter "arg0"
 
     .prologue
-    .line 9825
+    .line 9842
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$51;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen;->getContentResolver()Landroid/content/ContentResolver;
@@ -69,10 +69,10 @@
     :goto_0
     invoke-static {v1, v2, v0}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 9826
+    .line 9843
     return-void
 
-    .line 9825
+    .line 9842
     :cond_0
     const/4 v0, 0x0
 

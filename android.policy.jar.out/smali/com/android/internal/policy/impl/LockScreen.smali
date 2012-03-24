@@ -208,7 +208,7 @@
     if-eq v1, v2, :cond_0
 
     .line 335
-    const v1, 0x1090057
+    const v1, 0x1090059
 
     const/4 v2, 0x1
 
@@ -268,7 +268,7 @@
     iput-boolean v1, p0, Lcom/android/internal/policy/impl/LockScreen;->mSilentMode:Z
 
     .line 350
-    const v1, 0x10202c9
+    const v1, 0x10202cb
 
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/LockScreen;->findViewById(I)Landroid/view/View;
 
@@ -371,7 +371,7 @@
 
     .line 337
     :cond_0
-    const v1, 0x1090058
+    const v1, 0x109005a
 
     const/4 v2, 0x1
 

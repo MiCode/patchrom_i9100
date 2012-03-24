@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 10815
+    .line 10832
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,14 +46,14 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 10819
+    .line 10836
     const-string v0, "InVTCallScreen"
 
     const-string v1, "Inside OnSeekBarChangeListener :: onProgressChanged"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10821
+    .line 10838
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mSeekBarSelection:I
@@ -63,7 +63,7 @@
 
     if-nez v0, :cond_1
 
-    .line 10822
+    .line 10839
     const-string v0, "InVTCallScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -86,7 +86,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10823
+    .line 10840
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mVTManager:Lsiso/vt/VTManager;
@@ -96,7 +96,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 10824
+    .line 10841
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mVTManager:Lsiso/vt/VTManager;
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v1, p2}, Lsiso/vt/VTManager;->SetCameraParams(II)I
 
-    .line 10833
+    .line 10850
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -120,7 +120,7 @@
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->cancel()V
 
-    .line 10834
+    .line 10851
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->brzoomCntDwn:Lcom/android/phone/InVTCallScreen$BrightZoomTimer;
@@ -130,10 +130,10 @@
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->start()Landroid/os/CountDownTimer;
 
-    .line 10835
+    .line 10852
     return-void
 
-    .line 10826
+    .line 10843
     :cond_1
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -144,7 +144,7 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 10827
+    .line 10844
     const-string v0, "InVTCallScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -167,7 +167,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10829
+    .line 10846
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mVTManager:Lsiso/vt/VTManager;
@@ -177,7 +177,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 10830
+    .line 10847
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mVTManager:Lsiso/vt/VTManager;
@@ -195,13 +195,13 @@
     .parameter "seekBar"
 
     .prologue
-    .line 10840
+    .line 10857
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->brightOwnImage()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$11700(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 10841
+    .line 10858
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->brzoomCntDwn:Lcom/android/phone/InVTCallScreen$BrightZoomTimer;
@@ -211,7 +211,7 @@
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->cancel()V
 
-    .line 10843
+    .line 10860
     return-void
 .end method
 
@@ -220,7 +220,7 @@
     .parameter "seekBar"
 
     .prologue
-    .line 10846
+    .line 10863
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$57;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->brzoomCntDwn:Lcom/android/phone/InVTCallScreen$BrightZoomTimer;
@@ -230,6 +230,6 @@
 
     invoke-virtual {v0}, Lcom/android/phone/InVTCallScreen$BrightZoomTimer;->start()Landroid/os/CountDownTimer;
 
-    .line 10847
+    .line 10864
     return-void
 .end method

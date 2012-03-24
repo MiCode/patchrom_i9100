@@ -60,38 +60,38 @@
     .parameter
 
     .prologue
-    .line 4925
+    .line 4923
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4920
+    .line 4918
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mHomeKeyRequestedComponents:Ljava/util/HashSet;
 
-    .line 4921
+    .line 4919
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mPowerKeyRequestedComponents:Ljava/util/HashSet;
 
-    .line 4922
+    .line 4920
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mKeyComponentsMap:Ljava/util/HashMap;
 
-    .line 4923
+    .line 4921
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mTopActivity:Landroid/content/ComponentName;
 
-    .line 4927
+    .line 4925
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mKeyComponentsMap:Ljava/util/HashMap;
 
     const/4 v1, 0x3
@@ -104,7 +104,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4928
+    .line 4926
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mKeyComponentsMap:Ljava/util/HashMap;
 
     const/16 v1, 0x1a
@@ -117,7 +117,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4929
+    .line 4927
     return-void
 .end method
 
@@ -127,10 +127,10 @@
     .locals 1
 
     .prologue
-    .line 4991
+    .line 4989
     monitor-enter p0
 
-    .line 4992
+    .line 4990
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mTopActivity:Landroid/content/ComponentName;
 
@@ -138,7 +138,7 @@
 
     return-object v0
 
-    .line 4993
+    .line 4991
     :catchall_0
     move-exception v0
 
@@ -154,10 +154,10 @@
     .parameter "keyCode"
 
     .prologue
-    .line 4983
+    .line 4981
     monitor-enter p0
 
-    .line 4984
+    .line 4982
     :try_start_0
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->getCurrentTopActivity()Landroid/content/ComponentName;
 
@@ -171,7 +171,7 @@
 
     return v0
 
-    .line 4985
+    .line 4983
     :catchall_0
     move-exception v0
 
@@ -188,10 +188,10 @@
     .parameter "componentName"
 
     .prologue
-    .line 4976
+    .line 4974
     monitor-enter p0
 
-    .line 4977
+    .line 4975
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mKeyComponentsMap:Ljava/util/HashMap;
 
@@ -205,7 +205,7 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 4978
+    .line 4976
     .local v0, components:Ljava/util/HashSet;
     invoke-virtual {v0, p2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -215,7 +215,7 @@
 
     return v1
 
-    .line 4979
+    .line 4977
     .end local v0           #components:Ljava/util/HashSet;
     :catchall_0
     move-exception v1
@@ -234,7 +234,7 @@
     .parameter "request"
 
     .prologue
-    .line 4948
+    .line 4946
     const/16 v1, 0x1a
 
     if-eq p1, v1, :cond_0
@@ -243,21 +243,21 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 4949
+    .line 4947
     const/4 v1, 0x0
 
-    .line 4960
+    .line 4958
     :goto_0
     return v1
 
-    .line 4952
+    .line 4950
     :cond_0
     monitor-enter p0
 
-    .line 4953
+    .line 4951
     if-eqz p3, :cond_1
 
-    .line 4954
+    .line 4952
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mKeyComponentsMap:Ljava/util/HashMap;
 
@@ -271,11 +271,11 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 4955
+    .line 4953
     .local v0, components:Ljava/util/HashSet;
     invoke-virtual {v0, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 4960
+    .line 4958
     :goto_1
     const/4 v1, 0x1
 
@@ -283,7 +283,7 @@
 
     goto :goto_0
 
-    .line 4961
+    .line 4959
     .end local v0           #components:Ljava/util/HashSet;
     :catchall_0
     move-exception v1
@@ -294,7 +294,7 @@
 
     throw v1
 
-    .line 4957
+    .line 4955
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mKeyComponentsMap:Ljava/util/HashMap;
@@ -309,7 +309,7 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 4958
+    .line 4956
     .restart local v0       #components:Ljava/util/HashSet;
     invoke-virtual {v0, p2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
     :try_end_1
@@ -323,20 +323,20 @@
     .parameter "componentName"
 
     .prologue
-    .line 4998
+    .line 4996
     monitor-enter p0
 
-    .line 4999
+    .line 4997
     :try_start_0
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;->mTopActivity:Landroid/content/ComponentName;
 
-    .line 5000
+    .line 4998
     monitor-exit p0
 
-    .line 5001
+    .line 4999
     return-void
 
-    .line 5000
+    .line 4998
     :catchall_0
     move-exception v0
 

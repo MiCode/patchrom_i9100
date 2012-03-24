@@ -238,7 +238,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/ListPopupWindow;->setHeight(I)V
 
     .line 174
-    const v2, 0x1090098
+    const v2, 0x109009a
 
     invoke-virtual {v0, v4, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 

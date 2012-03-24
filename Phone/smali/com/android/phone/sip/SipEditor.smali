@@ -565,7 +565,7 @@
 
     .line 513
     .local v0, pref:Landroid/preference/ListPreference;
-    const v1, 0x7f0e0264
+    const v1, 0x7f0e0266
 
     invoke-virtual {p0, v1}, Lcom/android/phone/sip/SipEditor;->getString(I)Ljava/lang/String;
 
@@ -741,7 +741,7 @@
     .line 480
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0e0264
+    const v0, 0x7f0e0266
 
     :goto_1
     invoke-virtual {p0, v0}, Lcom/android/phone/sip/SipEditor;->getString(I)Ljava/lang/String;
@@ -758,7 +758,7 @@
 
     .line 480
     :cond_0
-    const v0, 0x7f0e0263
+    const v0, 0x7f0e0265
 
     goto :goto_1
 
@@ -1031,7 +1031,7 @@
     invoke-virtual {p0, v1, v0}, Lcom/android/phone/sip/SipEditor;->setResult(ILandroid/content/Intent;)V
 
     .line 284
-    const v0, 0x7f0e022b
+    const v0, 0x7f0e022d
 
     const/4 v1, 0x0
 
@@ -1431,7 +1431,7 @@
 
     .line 340
     :pswitch_2
-    const v8, 0x7f0e0258
+    const v8, 0x7f0e025a
 
     invoke-virtual {p0, v8}, Lcom/android/phone/sip/SipEditor;->getString(I)Ljava/lang/String;
 
@@ -1474,7 +1474,7 @@
 
     .line 350
     :cond_2
-    const v0, 0x7f0e025d
+    const v0, 0x7f0e025f
 
     invoke-virtual {p0, v0}, Lcom/android/phone/sip/SipEditor;->getString(I)Ljava/lang/String;
 
@@ -1505,7 +1505,7 @@
     if-eqz v1, :cond_6
 
     .line 361
-    const v0, 0x7f0e025c
+    const v0, 0x7f0e025e
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -1544,7 +1544,7 @@
     invoke-virtual {p0, v2, v1}, Lcom/android/phone/sip/SipEditor;->setResult(ILandroid/content/Intent;)V
 
     .line 369
-    const v1, 0x7f0e022a
+    const v1, 0x7f0e022c
 
     const/4 v2, 0x0
 
@@ -1736,7 +1736,7 @@
     invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 178
-    const v5, 0x7f0e0243
+    const v5, 0x7f0e0245
 
     invoke-virtual {v4, v5}, Landroid/preference/PreferenceGroup;->setTitle(I)V
 
@@ -1787,7 +1787,7 @@
     .line 182
     iget-object v5, p0, Lcom/android/phone/sip/SipEditor;->mRemoveButton:Landroid/widget/Button;
 
-    const v6, 0x7f0e0228
+    const v6, 0x7f0e022a
 
     invoke-virtual {p0, v6}, Lcom/android/phone/sip/SipEditor;->getString(I)Ljava/lang/String;
 
@@ -1820,7 +1820,7 @@
     invoke-super {p0, p1}, Landroid/preference/PreferenceActivity;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     .line 215
-    const v0, 0x7f0e022c
+    const v0, 0x7f0e022e
 
     invoke-interface {p1, v2, v3, v2, v0}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 
@@ -1833,7 +1833,7 @@
     .line 217
     const/4 v0, 0x2
 
-    const v1, 0x7f0e022d
+    const v1, 0x7f0e022f
 
     invoke-interface {p1, v2, v0, v2, v1}, Landroid/view/Menu;->add(IIII)Landroid/view/MenuItem;
 

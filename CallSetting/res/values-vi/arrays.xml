@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="calldiverting_list">
+        <item>Luôn luôn</item>
+        <item>Khi bận</item>
+        <item>Khi không trả lời</item>
+        <item>Khi ngoài vùng phủ sóng</item>
+        <item>Hủy bỏ tất cả</item>
+    </string-array>
+    <string-array name="callbarring_list">
+        <item>Mọi cuộc gọi đi</item>
+        <item>Các cuộc gọi đi quốc tế</item>
+        <item>Gọi quốc tế trừ gọi về nhà</item>
+        <item>Mọi cuộc gọi đến</item>
+        <item>Cuộc gọi đến khi chuyển vùng</item>
+        <item>Hủy bỏ tất cả</item>
+    </string-array>
+    <string-array name="waiting_time">
+        <item>5 giây</item>
+        <item>10 giây</item>
+        <item>15 giây</item>
+        <item>20 giây</item>
+        <item>25 giây</item>
+        <item>30 giây</item>
+    </string-array>
+    <string-array name="automatic_time">
+        <item>1 giây</item>
+        <item>2 giây</item>
+        <item>3 giây</item>
+        <item>4 giây</item>
+        <item>5 giây</item>
+    </string-array>
+    <string-array name="autoreject_alert">
+        <item>Nhật ký</item>
+        <item>Danh bạ</item>
+    </string-array>
+    <string-array name="fakecallerimage_alert">
+        <item>Hình ảnh</item>
+        <item>Chụp ảnh</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_default">
+        <item>Hình ảnh</item>
+        <item>Video</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_changed">
+        <item>Ảnh mặc định</item>
+        <item>Hình ảnh</item>
+        <item>Video</item>
+    </string-array>
+    <string-array name="callerimage_alert_default">
+        <item>Hình ảnh</item>
+        <item>Video</item>
+        <item>Chụp ảnh</item>
+        <item>Quay video</item>
+    </string-array>
+    <string-array name="callerimage_alert_changed">
+        <item>Ảnh mặc định</item>
+        <item>Hình ảnh</item>
+        <item>Video</item>
+        <item>Chụp ảnh</item>
+        <item>Quay video</item>
+    </string-array>
+    <string-array name="entries_list_preference">
+        <item>Tắt</item>
+        <item>Sau 1 giây</item>
+        <item>Sau 2 giây</item>
+        <item>Sau 3 giây</item>
+        <item>Sau 4 giây</item>
+        <item>Sau 5 giây</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="match_criteria_entries">
+        <item>Chính xác</item>
+        <item>Bắt đầu với</item>
+        <item>Kết thúc với</item>
+        <item>Bao gồm</item>
+    </string-array>
+    <string-array name="match_criteria_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="auto_reject_mode">
+        <item>Tắt</item>
+        <item>Tất cả các số</item>
+        <item>Số tự động từ chối</item>
+    </string-array>
+    <string-array name="auto_reject_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

@@ -500,183 +500,146 @@
 
     const/4 v3, 0x0
 
-    .line 371
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 154
     const-wide/16 v4, 0x0
 
     iput-wide v4, p0, Landroid/view/ViewRootImpl;->mLastTrackballTime:J
 
-    .line 155
     new-instance v0, Landroid/view/ViewRootImpl$TrackballAxis;
 
     invoke-direct {v0}, Landroid/view/ViewRootImpl$TrackballAxis;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTrackballAxisX:Landroid/view/ViewRootImpl$TrackballAxis;
 
-    .line 156
     new-instance v0, Landroid/view/ViewRootImpl$TrackballAxis;
 
     invoke-direct {v0}, Landroid/view/ViewRootImpl$TrackballAxis;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTrackballAxisY:Landroid/view/ViewRootImpl$TrackballAxis;
 
-    .line 163
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTmpLocation:[I
 
-    .line 165
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mTmpValue:Landroid/util/TypedValue;
 
-    .line 168
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingEvents:Landroid/util/SparseArray;
 
-    .line 169
     iput v3, p0, Landroid/view/ViewRootImpl;->mPendingEventSeq:I
 
-    .line 175
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mWindowAttributes:Landroid/view/WindowManager$LayoutParams;
 
-    .line 187
     iput-boolean v2, p0, Landroid/view/ViewRootImpl;->mAppVisible:Z
 
-    .line 188
     iput v6, p0, Landroid/view/ViewRootImpl;->mOrigWindowType:I
 
-    .line 192
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->mStopped:Z
 
-    .line 194
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->mLastInCompatMode:Z
 
-    .line 207
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mCurrentDirty:Landroid/graphics/Rect;
 
-    .line 208
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPreviousDirty:Landroid/graphics/Rect;
 
-    .line 233
     iput-object v1, p0, Landroid/view/ViewRootImpl;->mPendingInputEvents:Landroid/view/ViewRootImpl$InputEventMessage;
 
-    .line 235
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->mWindowAttributesChanged:Z
 
-    .line 236
     iput v3, p0, Landroid/view/ViewRootImpl;->mWindowAttributesChangesFlag:I
 
-    .line 240
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0}, Landroid/view/Surface;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mSurface:Landroid/view/Surface;
 
-    .line 253
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingVisibleInsets:Landroid/graphics/Rect;
 
-    .line 254
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingContentInsets:Landroid/graphics/Rect;
 
-    .line 255
     new-instance v0, Landroid/view/ViewTreeObserver$InternalInsetsInfo;
 
     invoke-direct {v0}, Landroid/view/ViewTreeObserver$InternalInsetsInfo;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastGivenInsets:Landroid/view/ViewTreeObserver$InternalInsetsInfo;
 
-    .line 258
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastConfiguration:Landroid/content/res/Configuration;
 
-    .line 259
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mPendingConfiguration:Landroid/content/res/Configuration;
 
-    .line 285
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mDragPoint:Landroid/graphics/PointF;
 
-    .line 286
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
     iput-object v0, p0, Landroid/view/ViewRootImpl;->mLastTouchPoint:Landroid/graphics/PointF;
 
-    .line 293
     iput-wide v7, p0, Landroid/view/ViewRootImpl;->mFpsStartTime:J
 
-    .line 294
     iput-wide v7, p0, Landroid/view/ViewRootImpl;->mFpsPrevTime:J
 
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->mSkipResizedMsg:Z
 
-    .line 314
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->bHavePenST:Z
 
-    .line 315
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->bPenTouched:Z
 
-    .line 316
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->bPenButtonClicked:Z
 
-    .line 317
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->bKeyDown:Z
 
-    .line 318
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->g_bPalmTouched:Z
 
-    .line 319
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->g_bPalmTouchedKey:Z
 
-    .line 320
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->g_bNotTouched:Z
 
-    .line 321
     iput-boolean v3, p0, Landroid/view/ViewRootImpl;->g_bKeyEventActionUp:Z
 
-    .line 344
     invoke-static {}, Landroid/view/InputEventConsistencyVerifier;->isInstrumentationEnabled()Z
 
     move-result v0

@@ -42,24 +42,24 @@
     .parameter "_pid"
 
     .prologue
-    .line 280
+    .line 283
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$ClientState;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 281
+    .line 284
     iput-object p2, p0, Lcom/android/server/InputMethodManagerService$ClientState;->client:Lcom/android/internal/view/IInputMethodClient;
 
-    .line 282
+    .line 285
     iput-object p3, p0, Lcom/android/server/InputMethodManagerService$ClientState;->inputContext:Lcom/android/internal/view/IInputContext;
 
-    .line 283
+    .line 286
     iput p4, p0, Lcom/android/server/InputMethodManagerService$ClientState;->uid:I
 
-    .line 284
+    .line 287
     iput p5, p0, Lcom/android/server/InputMethodManagerService$ClientState;->pid:I
 
-    .line 285
+    .line 288
     new-instance v0, Landroid/view/inputmethod/InputBinding;
 
     const/4 v1, 0x0
@@ -78,7 +78,7 @@
 
     iput-object v0, p0, Lcom/android/server/InputMethodManagerService$ClientState;->binding:Landroid/view/inputmethod/InputBinding;
 
-    .line 286
+    .line 289
     return-void
 .end method
 
@@ -88,7 +88,7 @@
     .locals 2
 
     .prologue
-    .line 274
+    .line 277
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

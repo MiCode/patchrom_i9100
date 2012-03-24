@@ -102,7 +102,7 @@
     if-eq v0, v1, :cond_1
 
     .line 100
-    const v0, 0x10900dd
+    const v0, 0x10900df
 
     invoke-virtual {v7, v0, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -226,7 +226,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 148
-    const v0, 0x10203a4
+    const v0, 0x10203a6
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/RecoveryUnlockScreen;->findViewById(I)Landroid/view/View;
 
@@ -237,7 +237,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/RecoveryUnlockScreen;->mRecoverButton:Landroid/widget/Button;
 
     .line 149
-    const v0, 0x10203a5
+    const v0, 0x10203a7
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/RecoveryUnlockScreen;->findViewById(I)Landroid/view/View;
 
@@ -314,7 +314,7 @@
     .end local v6           #imm:Landroid/view/inputmethod/InputMethodManager;
     .end local v8           #switchImeButton:Landroid/view/View;
     :cond_1
-    const v0, 0x10900dc
+    const v0, 0x10900de
 
     invoke-virtual {v7, v0, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 

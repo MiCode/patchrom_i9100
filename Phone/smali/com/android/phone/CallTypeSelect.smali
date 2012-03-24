@@ -147,7 +147,7 @@
 
     .end local v0           #actionBar:Landroid/app/ActionBar;
     :cond_1
-    const v2, 0x7f0e02c1
+    const v2, 0x7f0e02c3
 
     invoke-virtual {p0, v2}, Lcom/android/phone/CallTypeSelect;->setTitle(I)V
 

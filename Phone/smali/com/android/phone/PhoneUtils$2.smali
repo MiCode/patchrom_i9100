@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1342
+    .line 1344
     iput-object p1, p0, Lcom/android/phone/PhoneUtils$2;->val$phone:Lcom/android/internal/telephony/Phone;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 1
 
     .prologue
-    .line 1344
+    .line 1346
     iget-object v0, p0, Lcom/android/phone/PhoneUtils$2;->val$phone:Lcom/android/internal/telephony/Phone;
 
     #calls: Lcom/android/phone/PhoneUtils;->notifyMMIOperation(Lcom/android/internal/telephony/Phone;)V
     invoke-static {v0}, Lcom/android/phone/PhoneUtils;->access$600(Lcom/android/internal/telephony/Phone;)V
 
-    .line 1345
+    .line 1347
     return-void
 .end method

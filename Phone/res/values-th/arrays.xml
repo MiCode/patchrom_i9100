@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listCameraEffectMenuArray">
+        <item>ไม่​มี</item>
+        <item>สี​เทา</item>
+        <item>ภาพซีเปีย</item>
+        <item>สี​เขียว</item>
+        <item>น้ำ</item>
+        <item>ภาพ​เน​กา​ที​ฟ</item>
+    </string-array>
+    <string-array name="select_dialog_items">
+        <item>ลบ</item>
+    </string-array>
+    <string-array name="pref_roaming_options_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="default_setup_choices">
+        <item>อัตโนมัติ</item>
+        <item>เลือก​เอง</item>
+    </string-array>
+    <string-array name="default_setup_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="voicecall_eq_list_entries">
+        <item>Off</item>
+        <item>เพิ่ม​เสียง​ต่ำ</item>
+        <item>เพิ่ม​เสียง​สูง</item>
+        <item>สำหรับ​หู​ซ้าย</item>
+        <item>สำหรับ​หู​ขวา</item>
+    </string-array>
+    <string-array name="clir_display_values">
+        <item>ค่าพื้นฐานของเครือข่าย</item>
+        <item>ซ่อน​หมาย​เลข</item>
+        <item>แสดงเบอร์โทร</item>
+    </string-array>
+    <string-array name="clir_values">
+        <item>พื้นฐาน</item>
+        <item>ซ่อน</item>
+        <item>แสดง</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices">
+        <item>Global</item>
+        <item>EVDO ​เท่า​นั้น</item>
+        <item>CDMA w/o EVDO</item>
+        <item>CDMA/EVDO ​อัตโนมัติ</item>
+        <item>GSM/WCDMA ​อัตโนมัติ</item>
+        <item>WCDMA ​เท่า​นั้น</item>
+        <item>GSM ​เท่า​นั้น</item>
+        <item>GSM/WCDMA ​ที่​ต้อง​การ</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values">
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="list_language_entries">
+        <item>English</item>
+        <item>ฝรั่งเศส</item>
+        <item>สเปน</item>
+        <item>ญี่ปุ่น</item>
+        <item>เกาหลี</item>
+        <item>ภาษา​จีน</item>
+        <item>ฮิ​บ​รู</item>
+    </string-array>
+    <string-array name="list_language_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="cdma_system_select_choices">
+        <item>เครือ​ข่าย​หลัก​เท่า​นั้น</item>
+        <item>อัตโนมัติ</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_choices">
+        <item>เครือ​ข่าย​หลัก​เท่า​นั้น</item>
+        <item>เครือ​ข่าย​ใกล้​เคียง</item>
+        <item>เครือ​ข่าย​ใดๆ</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_choices">
+        <item>CDMA/EVDO</item>
+        <item>CDMA ​เท่า​นั้น</item>
+        <item>EVDO ​เท่า​นั้น</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_subscription_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="tty_mode_entries">
+        <item>ปิด​โหมด TTY</item>
+        <item>TTY ​แบบ​เต็ม</item>
+    </string-array>
+    <string-array name="dtmf_tone_entries">
+        <item>ปกติ</item>
+        <item>ยาว</item>
+    </string-array>
+    <string-array name="dtmf_tone_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>

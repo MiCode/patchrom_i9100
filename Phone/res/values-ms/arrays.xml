@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listCameraEffectMenuArray">
+        <item>Tiada</item>
+        <item>Kelabu</item>
+        <item>Sepia</item>
+        <item>Hijau</item>
+        <item>Akua</item>
+        <item>Negatif</item>
+    </string-array>
+    <string-array name="select_dialog_items">
+        <item>Padam</item>
+    </string-array>
+    <string-array name="pref_roaming_options_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="default_setup_choices">
+        <item>Automatik</item>
+        <item>Manual</item>
+    </string-array>
+    <string-array name="default_setup_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="voicecall_eq_list_entries">
+        <item>Off</item>
+        <item>Nada rendah galak</item>
+        <item>Nada tinggi galak</item>
+        <item>Untuk telinga kiri</item>
+        <item>Untuk telinga kanan</item>
+    </string-array>
+    <string-array name="clir_display_values">
+        <item>Lalai rangkaian</item>
+        <item>Sorok nombor</item>
+        <item>Paparkan nombor</item>
+    </string-array>
+    <string-array name="clir_values">
+        <item>Lalai</item>
+        <item>Sorok</item>
+        <item>Papar</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices">
+        <item>Global</item>
+        <item>EVDO sahaja</item>
+        <item>CDMA tanpa EVDO</item>
+        <item>Auto CDMA/EVDO</item>
+        <item>Auto GSM/WCDMA</item>
+        <item>WCDMA sahaja</item>
+        <item>GSM Sahaja</item>
+        <item>GSM/WCDMA pilihan</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values">
+        <item>7</item>
+        <item>6</item>
+        <item>5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="list_language_entries">
+        <item>English</item>
+        <item>Perancis</item>
+        <item>Spanyol</item>
+        <item>Jepun</item>
+        <item>Korea</item>
+        <item>China</item>
+        <item>Hebrew</item>
+    </string-array>
+    <string-array name="list_language_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="cdma_system_select_choices">
+        <item>Rumah sahaja</item>
+        <item>Automatik</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_choices">
+        <item>Rangkaian rumah sahaja</item>
+        <item>Rangkaian tergabung</item>
+        <item>Sebarang rangkaian</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_choices">
+        <item>CDMA/EVDO</item>
+        <item>CDMA sahaja</item>
+        <item>EVDO sahaja</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="cdma_subscription_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="tty_mode_entries">
+        <item>Mod TTY mati</item>
+        <item>TTY penuh</item>
+    </string-array>
+    <string-array name="dtmf_tone_entries">
+        <item>Biasa</item>
+        <item>Panjang</item>
+    </string-array>
+    <string-array name="dtmf_tone_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>

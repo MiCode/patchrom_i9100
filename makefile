@@ -35,7 +35,7 @@ include $(PORT_BUILD)/porting.mk
 # To define any local-target
 updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
 local-pre-zip-misc:
-#	cp other/boot.img $(ZIP_DIR)
+	cp other/boot.img $(ZIP_DIR)
 #	cp other/modem.bin  $(TMP_DIR)/target_files
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop

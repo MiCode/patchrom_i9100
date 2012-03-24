@@ -175,7 +175,7 @@
     .local v2, attributesArray:Landroid/content/res/TypedArray;
     const/4 v5, 0x0
 
-    const v6, 0x10900ac
+    const v6, 0x10900ae
 
     invoke-virtual {v2, v5, v6}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
@@ -201,7 +201,7 @@
     invoke-virtual {v3, v4, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 167
-    const v5, 0x102033f
+    const v5, 0x1020341
 
     invoke-virtual {p0, v5}, Landroid/widget/TimePicker;->findViewById(I)Landroid/view/View;
 
@@ -228,7 +228,7 @@
     .line 182
     iget-object v5, p0, Landroid/widget/TimePicker;->mHourSpinner:Landroid/widget/NumberPicker;
 
-    const v6, 0x10202e9
+    const v6, 0x10202eb
 
     invoke-virtual {v5, v6}, Landroid/widget/NumberPicker;->findViewById(I)Landroid/view/View;
 
@@ -253,7 +253,7 @@
     invoke-virtual {v5, v6}, Landroid/widget/NumberPicker;->twSetMaxInputLength(I)V
 
     .line 187
-    const v5, 0x1020343
+    const v5, 0x1020345
 
     invoke-virtual {p0, v5}, Landroid/widget/TimePicker;->findViewById(I)Landroid/view/View;
 
@@ -277,7 +277,7 @@
 
     .line 193
     :cond_0
-    const v5, 0x1020340
+    const v5, 0x1020342
 
     invoke-virtual {p0, v5}, Landroid/widget/TimePicker;->findViewById(I)Landroid/view/View;
 
@@ -332,7 +332,7 @@
     .line 224
     iget-object v5, p0, Landroid/widget/TimePicker;->mMinuteSpinner:Landroid/widget/NumberPicker;
 
-    const v6, 0x10202e9
+    const v6, 0x10202eb
 
     invoke-virtual {v5, v6}, Landroid/widget/NumberPicker;->findViewById(I)Landroid/view/View;
 
@@ -350,7 +350,7 @@
     invoke-virtual {v5, v6}, Landroid/widget/NumberPicker;->twSetMaxInputLength(I)V
 
     .line 228
-    const v5, 0x1020341
+    const v5, 0x1020343
 
     invoke-virtual {p0, v5}, Landroid/widget/TimePicker;->findViewById(I)Landroid/view/View;
 
@@ -629,7 +629,7 @@
     .line 262
     iget-object v5, p0, Landroid/widget/TimePicker;->mAmPmSpinner:Landroid/widget/NumberPicker;
 
-    const v6, 0x10202e9
+    const v6, 0x10202eb
 
     invoke-virtual {v5, v6}, Landroid/widget/NumberPicker;->findViewById(I)Landroid/view/View;
 
@@ -792,9 +792,9 @@
     .locals 5
 
     .prologue
-    const v4, 0x10202ea
+    const v4, 0x10202ec
 
-    const v3, 0x10202e8
+    const v3, 0x10202ea
 
     .line 584
     iget-object v1, p0, Landroid/view/View;->mContext:Landroid/content/Context;

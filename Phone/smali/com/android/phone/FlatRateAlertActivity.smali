@@ -122,7 +122,7 @@
     if-eqz v3, :cond_0
 
     .line 75
-    const v3, 0x7f0e0484
+    const v3, 0x7f0e0486
 
     invoke-virtual {p0, v3}, Lcom/android/phone/FlatRateAlertActivity;->getString(I)Ljava/lang/String;
 
@@ -186,11 +186,11 @@
     .line 81
     .end local v1           #okButton:Landroid/widget/Button;
     :cond_0
-    const v3, 0x7f0e0480
+    const v3, 0x7f0e0482
 
     new-array v4, v7, [Ljava/lang/Object;
 
-    const v5, 0x7f0e0481
+    const v5, 0x7f0e0483
 
     invoke-virtual {p0, v5}, Lcom/android/phone/FlatRateAlertActivity;->getString(I)Ljava/lang/String;
 
@@ -291,7 +291,7 @@
     if-eqz v1, :cond_0
 
     .line 59
-    const v1, 0x7f0e0483
+    const v1, 0x7f0e0485
 
     invoke-virtual {p0, v1}, Lcom/android/phone/FlatRateAlertActivity;->getString(I)Ljava/lang/String;
 
@@ -320,7 +320,7 @@
 
     .line 61
     :cond_0
-    const v1, 0x7f0e047f
+    const v1, 0x7f0e0481
 
     invoke-virtual {p0, v1}, Lcom/android/phone/FlatRateAlertActivity;->getString(I)Ljava/lang/String;
 

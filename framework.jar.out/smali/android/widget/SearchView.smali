@@ -248,7 +248,7 @@
     if-eqz v8, :cond_5
 
     .line 251
-    const v8, 0x10900bd
+    const v8, 0x10900bf
 
     const/4 v9, 0x1
 
@@ -256,7 +256,7 @@
 
     .line 258
     :goto_0
-    const v8, 0x1020315
+    const v8, 0x1020317
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -265,7 +265,7 @@
     iput-object v8, p0, Landroid/widget/SearchView;->mSearchButton:Landroid/view/View;
 
     .line 259
-    const v8, 0x1020319
+    const v8, 0x102031b
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -281,7 +281,7 @@
     invoke-virtual {v8, p0}, Landroid/widget/SearchView$SearchAutoComplete;->setSearchView(Landroid/widget/SearchView;)V
 
     .line 262
-    const v8, 0x1020316
+    const v8, 0x1020318
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -290,7 +290,7 @@
     iput-object v8, p0, Landroid/widget/SearchView;->mSearchEditFrame:Landroid/view/View;
 
     .line 263
-    const v8, 0x1020318
+    const v8, 0x102031a
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -299,7 +299,7 @@
     iput-object v8, p0, Landroid/widget/SearchView;->mSearchPlate:Landroid/view/View;
 
     .line 264
-    const v8, 0x102031b
+    const v8, 0x102031d
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -308,7 +308,7 @@
     iput-object v8, p0, Landroid/widget/SearchView;->mSubmitArea:Landroid/view/View;
 
     .line 265
-    const v8, 0x102031c
+    const v8, 0x102031e
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -317,7 +317,7 @@
     iput-object v8, p0, Landroid/widget/SearchView;->mSubmitButton:Landroid/view/View;
 
     .line 266
-    const v8, 0x102031a
+    const v8, 0x102031c
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -328,7 +328,7 @@
     iput-object v8, p0, Landroid/widget/SearchView;->mCloseButton:Landroid/widget/ImageView;
 
     .line 267
-    const v8, 0x102031d
+    const v8, 0x102031f
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -337,7 +337,7 @@
     iput-object v8, p0, Landroid/widget/SearchView;->mVoiceButton:Landroid/view/View;
 
     .line 268
-    const v8, 0x1020317
+    const v8, 0x1020319
 
     invoke-virtual {p0, v8}, Landroid/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -644,7 +644,7 @@
     .end local v5           #maxWidth:I
     .end local v7           #queryHint:Ljava/lang/CharSequence;
     :cond_5
-    const v8, 0x1090091
+    const v8, 0x1090093
 
     const/4 v9, 0x1
 

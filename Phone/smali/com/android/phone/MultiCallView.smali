@@ -392,7 +392,7 @@
 
     iget-object v7, p0, Lcom/android/phone/MultiCallView;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f0e02fa
+    const v8, 0x7f0e02fc
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -532,7 +532,7 @@
 
     iget-object v7, p0, Lcom/android/phone/MultiCallView;->mContext:Landroid/content/Context;
 
-    const v8, 0x7f0e02fa
+    const v8, 0x7f0e02fc
 
     invoke-virtual {v7, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

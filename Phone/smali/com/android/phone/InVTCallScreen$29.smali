@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 8575
+    .line 8590
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -50,14 +50,14 @@
 
     const/4 v3, 0x1
 
-    .line 8579
+    .line 8594
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$7700()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 8580
+    .line 8595
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mFirstFarEndViewClicked:Z
@@ -67,7 +67,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 8581
+    .line 8596
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isSurfaceViewSwipe:Z
@@ -77,7 +77,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 8582
+    .line 8597
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mVTcalltype:I
@@ -87,21 +87,21 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 8583
+    .line 8598
     const-string v0, "InVTCallScreen"
 
     const-string v1, "This is inside onLongClick of OnLongClickListener for Own Image and isSurfaceViewSwipe is true"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8587
+    .line 8602
     const-string v0, "InVTCallScreen"
 
     const-string v1, "This is inside onLongClick of OnLongClickListener for Own Image"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8590
+    .line 8605
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mBlur_Off:Z
@@ -111,7 +111,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 8591
+    .line 8606
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -130,11 +130,11 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mContextMenuStrArrayId:[Ljava/lang/String;
     invoke-static {v1, v0}, Lcom/android/phone/InVTCallScreen;->access$8402(Lcom/android/phone/InVTCallScreen;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 8595
+    .line 8610
     :goto_0
     invoke-static {v3}, Lcom/android/phone/InVTCallScreen;->access$8702(Z)Z
 
-    .line 8596
+    .line 8611
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isFarEndRecord:Z
@@ -162,17 +162,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 8597
+    .line 8612
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0, v2}, Lcom/android/phone/InVTCallScreen;->showDialog(I)V
 
-    .line 8669
+    .line 8684
     :cond_0
     :goto_1
     return v4
 
-    .line 8593
+    .line 8608
     :cond_1
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -194,7 +194,7 @@
 
     goto :goto_0
 
-    .line 8601
+    .line 8616
     :cond_2
     const-string v0, "InVTCallScreen"
 
@@ -202,7 +202,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8610
+    .line 8625
     const-string v0, "InVTCallScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -232,7 +232,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8612
+    .line 8627
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -251,10 +251,10 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mContextMenuStrArrayId:[Ljava/lang/String;
     invoke-static {v1, v0}, Lcom/android/phone/InVTCallScreen;->access$8402(Lcom/android/phone/InVTCallScreen;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 8613
+    .line 8628
     invoke-static {v4}, Lcom/android/phone/InVTCallScreen;->access$8702(Z)Z
 
-    .line 8616
+    .line 8631
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isFarEndRecord:Z
@@ -273,14 +273,14 @@
 
     if-nez v0, :cond_0
 
-    .line 8617
+    .line 8632
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0, v3}, Lcom/android/phone/InVTCallScreen;->showDialog(I)V
 
     goto :goto_1
 
-    .line 8624
+    .line 8639
     :cond_3
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -291,7 +291,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8625
+    .line 8640
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isSurfaceViewSwipe:Z
@@ -301,14 +301,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 8626
+    .line 8641
     const-string v0, "InVTCallScreen"
 
     const-string v1, "In onLongClick of far_endsurview "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8635
+    .line 8650
     const-string v0, "InVTCallScreen"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -338,7 +338,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8637
+    .line 8652
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -357,10 +357,10 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mContextMenuStrArrayId:[Ljava/lang/String;
     invoke-static {v1, v0}, Lcom/android/phone/InVTCallScreen;->access$8402(Lcom/android/phone/InVTCallScreen;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 8638
+    .line 8653
     invoke-static {v4}, Lcom/android/phone/InVTCallScreen;->access$8702(Z)Z
 
-    .line 8641
+    .line 8656
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isFarEndRecord:Z
@@ -379,14 +379,14 @@
 
     if-nez v0, :cond_0
 
-    .line 8642
+    .line 8657
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0, v3}, Lcom/android/phone/InVTCallScreen;->showDialog(I)V
 
     goto/16 :goto_1
 
-    .line 8645
+    .line 8660
     :cond_4
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -397,21 +397,21 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 8646
+    .line 8661
     const-string v0, "InVTCallScreen"
 
     const-string v1, "This is inside onLongClick of OnLongClickListener for near end surface view  for Own Image isSurfaceViewSwipe is false"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8649
+    .line 8664
     const-string v0, "InVTCallScreen"
 
     const-string v1, "This is inside onLongClick of OnLongClickListener for Own Image"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8659
+    .line 8674
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -430,10 +430,10 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mContextMenuStrArrayId:[Ljava/lang/String;
     invoke-static {v1, v0}, Lcom/android/phone/InVTCallScreen;->access$8402(Lcom/android/phone/InVTCallScreen;[Ljava/lang/String;)[Ljava/lang/String;
 
-    .line 8661
+    .line 8676
     invoke-static {v3}, Lcom/android/phone/InVTCallScreen;->access$8702(Z)Z
 
-    .line 8662
+    .line 8677
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->isFarEndRecord:Z
@@ -461,7 +461,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 8663
+    .line 8678
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$29;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-virtual {v0, v2}, Lcom/android/phone/InVTCallScreen;->showDialog(I)V

@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 9543
+    .line 9560
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$38;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .parameter "dialog"
 
     .prologue
-    .line 9546
+    .line 9563
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$38;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/16 v1, 0x9
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InVTCallScreen;->removeDialog(I)V
 
-    .line 9549
+    .line 9566
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$38;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x0
@@ -57,6 +57,6 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mAuxiDialogCameraPopup:Z
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$102(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 9550
+    .line 9567
     return-void
 .end method

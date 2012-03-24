@@ -321,7 +321,7 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 815
-    const v0, 0x102037e
+    const v0, 0x1020380
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$Charge;->findViewById(I)Landroid/view/View;
 
@@ -332,7 +332,7 @@
     iput-object v0, p0, Lcom/android/internal/policy/impl/ClockWidget$Charge;->mChargingIcon:Landroid/widget/ImageView;
 
     .line 816
-    const v0, 0x102037f
+    const v0, 0x1020381
 
     invoke-virtual {p0, v0}, Lcom/android/internal/policy/impl/ClockWidget$Charge;->findViewById(I)Landroid/view/View;
 

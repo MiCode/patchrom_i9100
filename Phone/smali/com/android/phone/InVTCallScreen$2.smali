@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 900
+    .line 904
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,7 +39,7 @@
     .parameter "msg"
 
     .prologue
-    .line 904
+    .line 908
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -53,14 +53,14 @@
 
     if-eqz v18, :cond_1
 
-    .line 905
+    .line 909
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v18
 
     if-eqz v18, :cond_0
 
-    .line 906
+    .line 910
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -98,13 +98,13 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1314
+    .line 1318
     :cond_0
     :goto_0
     :sswitch_0
     return-void
 
-    .line 910
+    .line 914
     :cond_1
     move-object/from16 v0, p0
 
@@ -119,14 +119,14 @@
 
     if-nez v18, :cond_2
 
-    .line 911
+    .line 915
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v18
 
     if-eqz v18, :cond_2
 
-    .line 912
+    .line 916
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -164,13 +164,13 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 921
+    .line 925
     :cond_2
     invoke-static {}, Lcom/android/phone/PhoneApp;->getInstance()Lcom/android/phone/PhoneApp;
 
     move-result-object v3
 
-    .line 922
+    .line 926
     .local v3, app:Lcom/android/phone/PhoneApp;
     move-object/from16 v0, p1
 
@@ -182,7 +182,7 @@
 
     goto :goto_0
 
-    .line 1043
+    .line 1047
     :sswitch_1
     move-object/from16 v0, p0
 
@@ -207,7 +207,7 @@
 
     goto :goto_0
 
-    .line 924
+    .line 928
     :sswitch_2
     move-object/from16 v0, p0
 
@@ -231,7 +231,7 @@
 
     goto :goto_0
 
-    .line 929
+    .line 933
     :sswitch_3
     move-object/from16 v0, p0
 
@@ -256,7 +256,7 @@
 
     goto/16 :goto_0
 
-    .line 933
+    .line 937
     :sswitch_4
     move-object/from16 v0, p0
 
@@ -269,7 +269,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 934
+    .line 938
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -281,7 +281,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mIsShowMenu:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$902(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 935
+    .line 939
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -295,7 +295,7 @@
 
     if-eqz v18, :cond_3
 
-    .line 936
+    .line 940
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -305,7 +305,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->stopRecordingFarEndView()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$1100(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 938
+    .line 942
     :cond_3
     move-object/from16 v0, p0
 
@@ -320,7 +320,7 @@
 
     if-eqz v18, :cond_4
 
-    .line 939
+    .line 943
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -332,7 +332,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->stopRecordingNearEndView(Z)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$1300(Lcom/android/phone/InVTCallScreen;Z)V
 
-    .line 941
+    .line 945
     :cond_4
     move-object/from16 v0, p1
 
@@ -340,22 +340,22 @@
 
     check-cast v6, Landroid/os/AsyncResult;
 
-    .line 942
+    .line 946
     .local v6, disconectResult:Landroid/os/AsyncResult;
     iget-object v4, v6, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v4, Lcom/android/internal/telephony/Connection;
 
-    .line 943
+    .line 947
     .local v4, c:Lcom/android/internal/telephony/Connection;
     if-eqz v4, :cond_6
 
-    .line 944
+    .line 948
     invoke-virtual {v4}, Lcom/android/internal/telephony/Connection;->getUserData()Ljava/lang/Object;
 
     move-result-object v10
 
-    .line 945
+    .line 949
     .local v10, o:Ljava/lang/Object;
     instance-of v0, v10, Lcom/android/internal/telephony/CallerInfo;
 
@@ -365,10 +365,10 @@
 
     move-object v7, v10
 
-    .line 946
+    .line 950
     check-cast v7, Lcom/android/internal/telephony/CallerInfo;
 
-    .line 947
+    .line 951
     .local v7, info:Lcom/android/internal/telephony/CallerInfo;
     invoke-virtual {v7}, Lcom/android/internal/telephony/CallerInfo;->isVoiceMailNumber()Z
 
@@ -376,7 +376,7 @@
 
     if-eqz v18, :cond_5
 
-    .line 948
+    .line 952
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -396,7 +396,7 @@
 
     iput-object v0, v7, Lcom/android/internal/telephony/CallerInfo;->phoneNumber:Ljava/lang/String;
 
-    .line 949
+    .line 953
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v18
@@ -429,7 +429,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 951
+    .line 955
     :cond_5
     move-object/from16 v0, p0
 
@@ -444,7 +444,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->phoneForCallNumber:Ljava/lang/String;
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$1502(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 958
+    .line 962
     .end local v7           #info:Lcom/android/internal/telephony/CallerInfo;
     .end local v10           #o:Ljava/lang/Object;
     :cond_6
@@ -461,7 +461,7 @@
 
     if-eqz v18, :cond_7
 
-    .line 959
+    .line 963
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -471,7 +471,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->updateEndCallButton()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$1600(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 961
+    .line 965
     :cond_7
     move-object/from16 v0, p0
 
@@ -484,7 +484,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->isMO_Disconnect:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$1702(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 962
+    .line 966
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -498,7 +498,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->disconnectMsg:Landroid/os/Message;
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$1802(Lcom/android/phone/InVTCallScreen;Landroid/os/Message;)Landroid/os/Message;
 
-    .line 963
+    .line 967
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -522,17 +522,17 @@
 
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 964
+    .line 968
     const/16 v18, 0x0
 
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$1902(Z)Z
 
-    .line 965
+    .line 969
     const/16 v18, 0x0
 
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$2002(Z)Z
 
-    .line 970
+    .line 974
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -552,7 +552,7 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 971
+    .line 975
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -566,7 +566,7 @@
 
     if-nez v18, :cond_8
 
-    .line 973
+    .line 977
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -578,7 +578,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 976
+    .line 980
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -590,7 +590,7 @@
 
     goto/16 :goto_0
 
-    .line 978
+    .line 982
     :cond_8
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$2400()Z
 
@@ -598,7 +598,7 @@
 
     if-nez v18, :cond_0
 
-    .line 979
+    .line 983
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -610,7 +610,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 980
+    .line 984
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -620,7 +620,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->continueOnDisconnection()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$2500(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 981
+    .line 985
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -644,7 +644,7 @@
 
     goto/16 :goto_0
 
-    .line 985
+    .line 989
     :cond_9
     move-object/from16 v0, p0
 
@@ -657,7 +657,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 986
+    .line 990
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -671,7 +671,7 @@
 
     if-eqz v18, :cond_a
 
-    .line 987
+    .line 991
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -685,7 +685,7 @@
 
     invoke-virtual/range {v18 .. v18}, Lsiso/vt/VTManager;->releaseVTManager()V
 
-    .line 988
+    .line 992
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -699,7 +699,7 @@
 
     invoke-virtual/range {v18 .. v18}, Lsiso/vt/VTManager;->deinitVTManager()V
 
-    .line 989
+    .line 993
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -711,7 +711,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mVTManager:Lsiso/vt/VTManager;
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$2702(Lcom/android/phone/InVTCallScreen;Lsiso/vt/VTManager;)Lsiso/vt/VTManager;
 
-    .line 993
+    .line 997
     :cond_a
     if-eqz v4, :cond_b
 
@@ -721,7 +721,7 @@
 
     if-nez v18, :cond_b
 
-    .line 994
+    .line 998
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -731,7 +731,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->continueOnDisconnection()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$2500(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 999
+    .line 1003
     :goto_1
     move-object/from16 v0, p0
 
@@ -756,7 +756,7 @@
 
     goto/16 :goto_0
 
-    .line 997
+    .line 1001
     :cond_b
     const/16 v18, 0x0
 
@@ -764,7 +764,7 @@
 
     goto :goto_1
 
-    .line 1012
+    .line 1016
     .end local v4           #c:Lcom/android/internal/telephony/Connection;
     .end local v6           #disconectResult:Landroid/os/AsyncResult;
     :sswitch_5
@@ -774,7 +774,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1013
+    .line 1017
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -787,7 +787,7 @@
 
     if-nez v18, :cond_0
 
-    .line 1014
+    .line 1018
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg1:I
@@ -802,7 +802,7 @@
 
     if-eq v0, v1, :cond_c
 
-    .line 1022
+    .line 1026
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -811,7 +811,7 @@
 
     invoke-static/range {v18 .. v18}, Lcom/android/phone/PhoneUtils;->restoreSpeakerMode(Landroid/content/Context;)V
 
-    .line 1024
+    .line 1028
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -827,7 +827,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 1025
+    .line 1029
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -851,7 +851,7 @@
 
     if-nez v18, :cond_0
 
-    .line 1027
+    .line 1031
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -866,7 +866,7 @@
 
     goto/16 :goto_0
 
-    .line 1035
+    .line 1039
     :cond_c
     move-object/from16 v0, p0
 
@@ -882,7 +882,7 @@
 
     goto/16 :goto_0
 
-    .line 1047
+    .line 1051
     :sswitch_6
     move-object/from16 v0, p0
 
@@ -895,7 +895,7 @@
 
     goto/16 :goto_0
 
-    .line 1058
+    .line 1062
     :sswitch_7
     move-object/from16 v0, p1
 
@@ -911,7 +911,7 @@
 
     check-cast v9, Lcom/android/internal/telephony/MmiCode;
 
-    .line 1061
+    .line 1065
     .local v9, mmiCode:Lcom/android/internal/telephony/MmiCode;
     move-object/from16 v0, p0
 
@@ -928,7 +928,7 @@
 
     move-result v11
 
-    .line 1062
+    .line 1066
     .local v11, phoneType:I
     const/16 v18, 0x2
 
@@ -936,7 +936,7 @@
 
     if-ne v11, v0, :cond_d
 
-    .line 1063
+    .line 1067
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -962,7 +962,7 @@
 
     goto/16 :goto_0
 
-    .line 1065
+    .line 1069
     :cond_d
     const/16 v18, 0x1
 
@@ -970,7 +970,7 @@
 
     if-ne v11, v0, :cond_0
 
-    .line 1066
+    .line 1070
     invoke-interface {v9}, Lcom/android/internal/telephony/MmiCode;->getState()Lcom/android/internal/telephony/MmiCode$State;
 
     move-result-object v18
@@ -983,7 +983,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1068
+    .line 1072
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1024,7 +1024,7 @@
 
     if-eqz v18, :cond_e
 
-    .line 1069
+    .line 1073
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v18
@@ -1044,7 +1044,7 @@
 
     goto/16 :goto_0
 
-    .line 1072
+    .line 1076
     :cond_e
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
@@ -1063,7 +1063,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1073
+    .line 1077
     :cond_f
     move-object/from16 v0, p0
 
@@ -1075,7 +1075,7 @@
 
     goto/16 :goto_0
 
-    .line 1080
+    .line 1084
     .end local v9           #mmiCode:Lcom/android/internal/telephony/MmiCode;
     .end local v11           #phoneType:I
     :sswitch_8
@@ -1116,7 +1116,7 @@
 
     goto/16 :goto_0
 
-    .line 1092
+    .line 1096
     :sswitch_9
     move-object/from16 v0, p0
 
@@ -1129,7 +1129,7 @@
 
     goto/16 :goto_0
 
-    .line 1097
+    .line 1101
     :sswitch_a
     move-object/from16 v0, p0
 
@@ -1143,7 +1143,7 @@
 
     goto/16 :goto_0
 
-    .line 1101
+    .line 1105
     :sswitch_b
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$3400()Z
 
@@ -1151,7 +1151,7 @@
 
     if-eqz v18, :cond_10
 
-    .line 1102
+    .line 1106
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1163,7 +1163,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1107
+    .line 1111
     :cond_10
     const/16 v18, 0x0
 
@@ -1173,7 +1173,7 @@
 
     goto/16 :goto_0
 
-    .line 1111
+    .line 1115
     :sswitch_c
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$3400()Z
 
@@ -1181,7 +1181,7 @@
 
     if-eqz v18, :cond_0
 
-    .line 1112
+    .line 1116
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1195,7 +1195,7 @@
 
     goto/16 :goto_0
 
-    .line 1117
+    .line 1121
     :sswitch_d
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$3400()Z
 
@@ -1203,7 +1203,7 @@
 
     if-eqz v18, :cond_11
 
-    .line 1118
+    .line 1122
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1215,7 +1215,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1127
+    .line 1131
     :cond_11
     move-object/from16 v0, p0
 
@@ -1241,7 +1241,7 @@
 
     if-nez v18, :cond_0
 
-    .line 1128
+    .line 1132
     :cond_12
     invoke-virtual {v3}, Lcom/android/phone/PhoneApp;->isHeadsetPlugged()Z
 
@@ -1249,14 +1249,14 @@
 
     if-nez v18, :cond_0
 
-    .line 1129
+    .line 1133
     const-string v18, "InVTCallScreen"
 
     const-string v19, "During Call BT or EarPhone is not connected, then switch on the speaker. "
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1130
+    .line 1134
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1271,7 +1271,7 @@
 
     goto/16 :goto_0
 
-    .line 1137
+    .line 1141
     :sswitch_e
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
@@ -1279,7 +1279,7 @@
 
     if-eqz v18, :cond_13
 
-    .line 1138
+    .line 1142
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1291,7 +1291,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1139
+    .line 1143
     :cond_13
     move-object/from16 v0, p0
 
@@ -1312,11 +1312,11 @@
 
     move-result-object v5
 
-    .line 1142
+    .line 1146
     .local v5, cn:Lcom/android/internal/telephony/Connection;
     if-eqz v5, :cond_0
 
-    .line 1145
+    .line 1149
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1328,7 +1328,7 @@
 
     goto/16 :goto_0
 
-    .line 1151
+    .line 1155
     .end local v5           #cn:Lcom/android/internal/telephony/Connection;
     :sswitch_f
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
@@ -1337,7 +1337,7 @@
 
     if-eqz v18, :cond_14
 
-    .line 1152
+    .line 1156
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1349,7 +1349,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1153
+    .line 1157
     :cond_14
     iget-object v0, v3, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
@@ -1367,7 +1367,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1155
+    .line 1159
     iget-object v0, v3, Lcom/android/phone/PhoneApp;->cdmaPhoneCallState:Lcom/android/phone/CdmaPhoneCallState;
 
     move-object/from16 v18, v0
@@ -1376,7 +1376,7 @@
 
     invoke-virtual/range {v18 .. v19}, Lcom/android/phone/CdmaPhoneCallState;->setThreeWayCallOrigState(Z)V
 
-    .line 1158
+    .line 1162
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1388,7 +1388,7 @@
 
     goto/16 :goto_0
 
-    .line 1175
+    .line 1179
     :sswitch_10
     move-object/from16 v0, p0
 
@@ -1403,14 +1403,14 @@
 
     if-eqz v18, :cond_0
 
-    .line 1176
+    .line 1180
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v18
 
     if-eqz v18, :cond_15
 
-    .line 1177
+    .line 1181
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1422,7 +1422,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1178
+    .line 1182
     :cond_15
     move-object/from16 v0, p0
 
@@ -1437,7 +1437,7 @@
 
     invoke-virtual/range {v18 .. v18}, Landroid/app/AlertDialog;->dismiss()V
 
-    .line 1180
+    .line 1184
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1451,7 +1451,7 @@
 
     goto/16 :goto_0
 
-    .line 1185
+    .line 1189
     :sswitch_11
     move-object/from16 v0, p0
 
@@ -1466,7 +1466,7 @@
 
     goto/16 :goto_0
 
-    .line 1190
+    .line 1194
     :sswitch_12
     move-object/from16 v0, p0
 
@@ -1479,7 +1479,7 @@
 
     goto/16 :goto_0
 
-    .line 1193
+    .line 1197
     :sswitch_13
     move-object/from16 v0, p0
 
@@ -1492,7 +1492,7 @@
 
     goto/16 :goto_0
 
-    .line 1197
+    .line 1201
     :sswitch_14
     const-string v18, "InVTCallScreen"
 
@@ -1500,7 +1500,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1198
+    .line 1202
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1510,12 +1510,12 @@
     #calls: Lcom/android/phone/InVTCallScreen;->updateSelectedImageFromGallery()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$4000(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 1199
+    .line 1203
     invoke-static {}, Lcom/android/phone/PickImageFromGallery;->unregisterForImageGalleryResponse()V
 
     goto/16 :goto_0
 
-    .line 1203
+    .line 1207
     :sswitch_15
     const-string v18, "InVTCallScreen"
 
@@ -1523,7 +1523,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1204
+    .line 1208
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1537,7 +1537,7 @@
 
     if-eqz v18, :cond_0
 
-    .line 1205
+    .line 1209
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1551,7 +1551,7 @@
 
     if-eqz v18, :cond_17
 
-    .line 1206
+    .line 1210
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1561,7 +1561,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->stopRecordingFarEndView()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$1100(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 1210
+    .line 1214
     :cond_16
     :goto_2
     move-object/from16 v0, p0
@@ -1577,7 +1577,7 @@
 
     if-eqz v18, :cond_0
 
-    .line 1211
+    .line 1215
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1589,7 +1589,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->updateSwitchCameraButton(Z)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$4200(Lcom/android/phone/InVTCallScreen;Z)V
 
-    .line 1212
+    .line 1216
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1601,7 +1601,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->selectVideo:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$4102(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 1213
+    .line 1217
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1613,7 +1613,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mVideofilePath:Ljava/lang/String;
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$4302(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1214
+    .line 1218
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1623,7 +1623,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->show_camera()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$4400(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 1215
+    .line 1219
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1635,7 +1635,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mHideCheck:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$4502(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 1216
+    .line 1220
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1647,7 +1647,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->isPresetImageEnabled:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$4602(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 1217
+    .line 1221
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1659,7 +1659,7 @@
 
     goto/16 :goto_0
 
-    .line 1207
+    .line 1211
     :cond_17
     move-object/from16 v0, p0
 
@@ -1674,7 +1674,7 @@
 
     if-eqz v18, :cond_16
 
-    .line 1208
+    .line 1212
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1688,7 +1688,7 @@
 
     goto :goto_2
 
-    .line 1222
+    .line 1226
     :sswitch_16
     move-object/from16 v0, p0
 
@@ -1699,12 +1699,12 @@
     #calls: Lcom/android/phone/InVTCallScreen;->updateSelectedVideoFromGallery()V
     invoke-static/range {v18 .. v18}, Lcom/android/phone/InVTCallScreen;->access$4800(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 1223
+    .line 1227
     invoke-static {}, Lcom/android/phone/PickImageFromGallery;->unregisterForImageGalleryResponse()V
 
     goto/16 :goto_0
 
-    .line 1227
+    .line 1231
     :sswitch_17
     const-string v18, "InVTCallScreen"
 
@@ -1781,7 +1781,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1228
+    .line 1232
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1821,7 +1821,7 @@
 
     if-eqz v18, :cond_19
 
-    .line 1229
+    .line 1233
     :cond_18
     move-object/from16 v0, p0
 
@@ -1834,7 +1834,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mSuccessToastNotRequired:Z
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$5002(Lcom/android/phone/InVTCallScreen;Z)Z
 
-    .line 1230
+    .line 1234
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1846,7 +1846,7 @@
 
     goto/16 :goto_0
 
-    .line 1232
+    .line 1236
     :cond_19
     move-object/from16 v0, p0
 
@@ -1864,11 +1864,11 @@
 
     move-result-object v13
 
-    .line 1233
+    .line 1237
     .local v13, preset_name:Ljava/lang/String;
     if-eqz v13, :cond_0
 
-    .line 1234
+    .line 1238
     const-string v18, "photo"
 
     move-object/from16 v0, v18
@@ -1879,7 +1879,7 @@
 
     if-nez v18, :cond_1b
 
-    .line 1235
+    .line 1239
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1896,11 +1896,11 @@
 
     move-result-object v12
 
-    .line 1236
+    .line 1240
     .local v12, presetImageSrc:Ljava/lang/String;
     if-eqz v12, :cond_1a
 
-    .line 1237
+    .line 1241
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1914,7 +1914,7 @@
 
     goto/16 :goto_0
 
-    .line 1239
+    .line 1243
     :cond_1a
     move-object/from16 v0, p0
 
@@ -1929,7 +1929,7 @@
 
     goto/16 :goto_0
 
-    .line 1241
+    .line 1245
     .end local v12           #presetImageSrc:Ljava/lang/String;
     :cond_1b
     const-string v18, "Default"
@@ -1942,7 +1942,7 @@
 
     if-nez v18, :cond_1c
 
-    .line 1242
+    .line 1246
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -1956,7 +1956,7 @@
 
     goto/16 :goto_0
 
-    .line 1243
+    .line 1247
     :cond_1c
     const-string v18, "video"
 
@@ -1968,10 +1968,10 @@
 
     if-nez v18, :cond_20
 
-    .line 1244
+    .line 1248
     const/16 v17, 0x0
 
-    .line 1245
+    .line 1249
     .local v17, videoUri:Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -1989,19 +1989,19 @@
 
     move-result-object v15
 
-    .line 1246
+    .line 1250
     .local v15, uriString:Ljava/lang/String;
     if-eqz v15, :cond_1f
 
-    .line 1247
+    .line 1251
     invoke-static {v15}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v17
 
-    .line 1248
+    .line 1252
     if-eqz v17, :cond_1e
 
-    .line 1249
+    .line 1253
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2017,11 +2017,11 @@
 
     move-result-object v16
 
-    .line 1250
+    .line 1254
     .local v16, videoPath:Ljava/lang/String;
     if-eqz v16, :cond_1d
 
-    .line 1252
+    .line 1256
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2035,7 +2035,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mVideofilePath:Ljava/lang/String;
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$4302(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1253
+    .line 1257
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2058,7 +2058,7 @@
 
     goto/16 :goto_0
 
-    .line 1255
+    .line 1259
     :cond_1d
     move-object/from16 v0, p0
 
@@ -2071,7 +2071,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1256
+    .line 1260
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2085,7 +2085,7 @@
 
     goto/16 :goto_0
 
-    .line 1259
+    .line 1263
     .end local v16           #videoPath:Ljava/lang/String;
     :cond_1e
     move-object/from16 v0, p0
@@ -2101,7 +2101,7 @@
 
     goto/16 :goto_0
 
-    .line 1262
+    .line 1266
     :cond_1f
     move-object/from16 v0, p0
 
@@ -2116,7 +2116,7 @@
 
     goto/16 :goto_0
 
-    .line 1265
+    .line 1269
     .end local v15           #uriString:Ljava/lang/String;
     .end local v17           #videoUri:Landroid/net/Uri;
     :cond_20
@@ -2133,7 +2133,7 @@
 
     goto/16 :goto_0
 
-    .line 1274
+    .line 1278
     .end local v13           #preset_name:Ljava/lang/String;
     :sswitch_18
     new-instance v18, Lcom/android/phone/InVTCallScreen$SwitchAnimationTask;
@@ -2164,7 +2164,7 @@
 
     goto/16 :goto_0
 
-    .line 1277
+    .line 1281
     :sswitch_19
     move-object/from16 v0, p0
 
@@ -2193,7 +2193,7 @@
 
     if-eqz v18, :cond_21
 
-    .line 1279
+    .line 1283
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2212,7 +2212,7 @@
 
     goto/16 :goto_0
 
-    .line 1281
+    .line 1285
     :cond_21
     move-object/from16 v0, p0
 
@@ -2228,7 +2228,7 @@
 
     if-eqz v18, :cond_0
 
-    .line 1283
+    .line 1287
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2247,7 +2247,7 @@
 
     goto/16 :goto_0
 
-    .line 1287
+    .line 1291
     :sswitch_1a
     const-string v18, "InVTCallScreen"
 
@@ -2255,7 +2255,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1288
+    .line 1292
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2272,7 +2272,7 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1289
+    .line 1293
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2288,7 +2288,7 @@
 
     goto/16 :goto_0
 
-    .line 1292
+    .line 1296
     :sswitch_1b
     move-object/from16 v0, p1
 
@@ -2304,7 +2304,7 @@
 
     check-cast v14, Landroid/telephony/ServiceState;
 
-    .line 1293
+    .line 1297
     .local v14, state:Landroid/telephony/ServiceState;
     invoke-virtual {v14}, Landroid/telephony/ServiceState;->getState()I
 
@@ -2312,7 +2312,7 @@
 
     if-nez v18, :cond_0
 
-    .line 1298
+    .line 1302
     .end local v14           #state:Landroid/telephony/ServiceState;
     :sswitch_1c
     move-object/from16 v0, p0
@@ -2334,7 +2334,7 @@
 
     if-eqz v18, :cond_22
 
-    .line 1299
+    .line 1303
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2350,7 +2350,7 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1301
+    .line 1305
     :cond_22
     move-object/from16 v0, p0
 
@@ -2382,7 +2382,7 @@
 
     if-eqz v18, :cond_0
 
-    .line 1302
+    .line 1306
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$500()Z
 
     move-result v18
@@ -2426,7 +2426,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 1303
+    .line 1307
     :cond_23
     move-object/from16 v0, p0
 
@@ -2441,7 +2441,7 @@
 
     invoke-virtual/range {v18 .. v18}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 1304
+    .line 1308
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2453,7 +2453,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mProgressDialog:Landroid/app/ProgressDialog;
     invoke-static/range {v18 .. v19}, Lcom/android/phone/InVTCallScreen;->access$5702(Lcom/android/phone/InVTCallScreen;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
-    .line 1307
+    .line 1311
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2464,7 +2464,7 @@
 
     move-result-object v8
 
-    .line 1308
+    .line 1312
     .local v8, intent:Landroid/content/Intent;
     const/high16 v18, 0x1000
 
@@ -2472,7 +2472,7 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1309
+    .line 1313
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/phone/InVTCallScreen$2;->this$0:Lcom/android/phone/InVTCallScreen;
@@ -2489,7 +2489,7 @@
 
     goto/16 :goto_0
 
-    .line 922
+    .line 926
     :sswitch_data_0
     .sparse-switch
         0x33 -> :sswitch_1

@@ -30,7 +30,7 @@
     .parameter
 
     .prologue
-    .line 2742
+    .line 2747
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$8;->this$0:Lcom/android/phone/InVTCallScreen;
 
     iput-object p2, p0, Lcom/android/phone/InVTCallScreen$8;->val$app:Lcom/android/phone/PhoneApp;
@@ -46,13 +46,13 @@
     .locals 2
 
     .prologue
-    .line 2744
+    .line 2749
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$8;->val$app:Lcom/android/phone/PhoneApp;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/phone/PhoneApp;->setIgnoreTouchUserActivity(Z)V
 
-    .line 2745
+    .line 2750
     return-void
 .end method

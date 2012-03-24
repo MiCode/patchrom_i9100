@@ -500,7 +500,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e03a8
+    const v3, 0x7f0e03aa
 
     const/16 v4, 0x7d0
 

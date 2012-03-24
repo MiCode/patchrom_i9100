@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 874
+    .line 878
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$1;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "intent"
 
     .prologue
-    .line 877
+    .line 881
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$1;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #getter for: Lcom/android/phone/InVTCallScreen;->mAuxiDialogList:Z
@@ -50,14 +50,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 879
+    .line 883
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$1;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InVTCallScreen;->removeDialog(I)V
 
-    .line 882
+    .line 886
     :cond_0
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$1;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -68,26 +68,26 @@
 
     if-eqz v0, :cond_1
 
-    .line 884
+    .line 888
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$1;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/16 v1, 0x9
 
     invoke-virtual {v0, v1}, Lcom/android/phone/InVTCallScreen;->removeDialog(I)V
 
-    .line 886
+    .line 890
     :cond_1
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$1;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->dismissContextDailogBox()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$200(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 887
+    .line 891
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$1;->this$0:Lcom/android/phone/InVTCallScreen;
 
     #calls: Lcom/android/phone/InVTCallScreen;->fillMenuArrayList()V
     invoke-static {v0}, Lcom/android/phone/InVTCallScreen;->access$300(Lcom/android/phone/InVTCallScreen;)V
 
-    .line 888
+    .line 892
     return-void
 .end method

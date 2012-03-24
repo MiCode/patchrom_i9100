@@ -2157,7 +2157,7 @@
 
     .line 1204
     :cond_0
-    const v0, 0x7f0e0192
+    const v0, 0x7f0e0194
 
     .line 1208
     invoke-virtual {p0}, Lcom/android/phone/CallCard;->getContext()Landroid/content/Context;
@@ -2241,7 +2241,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 1289
-    const v0, 0x7f0e0192
+    const v0, 0x7f0e0194
 
     .line 1292
     :goto_1
@@ -2380,15 +2380,15 @@
     .parameter
 
     .prologue
-    const v6, 0x7f0e04ab
+    const v6, 0x7f0e04ad
 
-    const v5, 0x7f0e04a6
+    const v5, 0x7f0e04a8
 
-    const v4, 0x7f0e04a3
+    const v4, 0x7f0e04a5
 
-    const v3, 0x7f0e04a4
+    const v3, 0x7f0e04a6
 
-    const v2, 0x7f0e04a5
+    const v2, 0x7f0e04a7
 
     .line 1298
     invoke-static {}, Lcom/android/internal/telephony/NonstaticTelephonyFeature;->getInstance()Ljava/util/Map;
@@ -2560,7 +2560,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e04a7
+    const v1, 0x7f0e04a9
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3895,7 +3895,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e04ac
+    const v1, 0x7f0e04ae
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3909,7 +3909,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e04a8
+    const v1, 0x7f0e04aa
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3923,7 +3923,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e04aa
+    const v1, 0x7f0e04ac
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -3937,7 +3937,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e04a9
+    const v1, 0x7f0e04ab
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4094,7 +4094,7 @@
 
     .line 2050
     :goto_0
-    const v1, 0x7f0e0196
+    const v1, 0x7f0e0198
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4166,7 +4166,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e0130
+    const v1, 0x7f0e0132
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4246,7 +4246,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0e047a
+    const v1, 0x7f0e047c
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4260,7 +4260,7 @@
     .parameter
 
     .prologue
-    const v5, 0x7f0e02f7
+    const v5, 0x7f0e02f9
 
     .line 987
     const/4 v0, 0x0
@@ -4376,7 +4376,7 @@
     if-eqz v0, :cond_2
 
     .line 1003
-    const v0, 0x7f0e018b
+    const v0, 0x7f0e018d
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4386,7 +4386,7 @@
 
     .line 1005
     :cond_2
-    const v0, 0x7f0e018e
+    const v0, 0x7f0e0190
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4448,7 +4448,7 @@
 
     .line 1024
     :pswitch_3
-    const v0, 0x7f0e033e
+    const v0, 0x7f0e0340
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -4466,7 +4466,7 @@
 
     .line 1033
     :pswitch_5
-    const v0, 0x7f0e0194
+    const v0, 0x7f0e0196
 
     invoke-virtual {v2, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -5484,7 +5484,7 @@
 
     .line 829
     :cond_3
-    const v5, 0x7f0e018d
+    const v5, 0x7f0e018f
 
     invoke-virtual {v1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -5527,7 +5527,7 @@
 
     .line 836
     :cond_6
-    const v5, 0x7f0e018d
+    const v5, 0x7f0e018f
 
     invoke-virtual {v1, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -5935,7 +5935,7 @@
 
     iget-object v2, p0, Lcom/android/phone/CallCard;->mApplication:Lcom/android/phone/PhoneApp;
 
-    const v3, 0x7f0e02fa
+    const v3, 0x7f0e02fc
 
     invoke-virtual {v2, v3}, Lcom/android/phone/PhoneApp;->getString(I)Ljava/lang/String;
 
@@ -6348,7 +6348,7 @@
     .line 1620
     iget-object v0, p0, Lcom/android/phone/CallCard;->mName:Landroid/widget/TextView;
 
-    const v1, 0x7f0e0195
+    const v1, 0x7f0e0197
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -6436,7 +6436,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e03a9
+    const v2, 0x7f0e03ab
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -7162,7 +7162,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e0193
+    const v2, 0x7f0e0195
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -8649,7 +8649,7 @@
     .line 2117
     iget-object v0, p0, Lcom/android/phone/CallCard;->mUpperTitleTextLand:Landroid/widget/TextView;
 
-    const v4, 0x7f0e018b
+    const v4, 0x7f0e018d
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 

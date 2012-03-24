@@ -2588,7 +2588,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "isDataSetupCompleteOk return false, ar.result="
+    const-string/jumbo v2, "isDataSetupCompleteOk return false, ar.result="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2617,7 +2617,7 @@
     if-gtz v1, :cond_1
 
     .line 515
-    const-string v0, "isDataSetupCompleteOk return true"
+    const-string/jumbo v0, "isDataSetupCompleteOk return true"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/DataConnectionTracker;->log(Ljava/lang/String;)V
 
@@ -2637,7 +2637,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "isDataSetupCompleteOk return false mFailDataSetupCounter="
+    const-string/jumbo v2, "isDataSetupCompleteOk return false mFailDataSetupCounter="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

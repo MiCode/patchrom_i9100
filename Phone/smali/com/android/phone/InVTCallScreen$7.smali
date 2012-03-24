@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 2173
+    .line 2178
     iput-object p1, p0, Lcom/android/phone/InVTCallScreen$7;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +45,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2176
+    .line 2181
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$7;->this$0:Lcom/android/phone/InVTCallScreen;
 
     check-cast p2, Landroid/bluetooth/BluetoothHeadset;
@@ -54,7 +54,7 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v1, p2}, Lcom/android/phone/InVTCallScreen;->access$6502(Lcom/android/phone/InVTCallScreen;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
-    .line 2177
+    .line 2182
     invoke-static {}, Lcom/android/phone/InVTCallScreen;->access$3400()Z
 
     move-result v1
@@ -91,7 +91,7 @@
     #calls: Lcom/android/phone/InVTCallScreen;->log(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/phone/InVTCallScreen;->access$600(Lcom/android/phone/InVTCallScreen;Ljava/lang/String;)V
 
-    .line 2178
+    .line 2183
     :cond_0
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$7;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -100,7 +100,7 @@
 
     move-result-object v0
 
-    .line 2181
+    .line 2186
     .local v0, headset:Landroid/bluetooth/BluetoothDevice;
     if-nez v0, :cond_1
 
@@ -114,23 +114,23 @@
 
     if-nez v1, :cond_1
 
-    .line 2182
+    .line 2187
     const-string v1, "InVTCallScreen"
 
     const-string v2, " in onServiceConnected:: headset is null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2183
+    .line 2188
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$7;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-static {v1, v4, v4}, Lcom/android/phone/PhoneUtils;->turnOnSpeaker(Landroid/content/Context;ZZ)V
 
-    .line 2198
+    .line 2203
     :goto_0
     return-void
 
-    .line 2184
+    .line 2189
     :cond_1
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$7;->this$0:Lcom/android/phone/InVTCallScreen;
 
@@ -163,28 +163,28 @@
 
     if-nez v1, :cond_2
 
-    .line 2185
+    .line 2190
     const-string v1, "InVTCallScreen"
 
     const-string v2, "During Call Bluetooth is connected and switching off the speaker. "
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2190
+    .line 2195
     const-string v1, "InVTCallScreen"
 
     const-string v2, "During Call Bluetooth is not connected and switching on the speaker. in IncallScreen"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2191
+    .line 2196
     iget-object v1, p0, Lcom/android/phone/InVTCallScreen$7;->this$0:Lcom/android/phone/InVTCallScreen;
 
     invoke-static {v1, v4, v4}, Lcom/android/phone/PhoneUtils;->turnOnSpeaker(Landroid/content/Context;ZZ)V
 
     goto :goto_0
 
-    .line 2194
+    .line 2199
     :cond_2
     const-string v1, "InVTCallScreen"
 
@@ -200,7 +200,7 @@
     .parameter "profile"
 
     .prologue
-    .line 2201
+    .line 2206
     iget-object v0, p0, Lcom/android/phone/InVTCallScreen$7;->this$0:Lcom/android/phone/InVTCallScreen;
 
     const/4 v1, 0x0
@@ -208,6 +208,6 @@
     #setter for: Lcom/android/phone/InVTCallScreen;->mBluetoothHeadset:Landroid/bluetooth/BluetoothHeadset;
     invoke-static {v0, v1}, Lcom/android/phone/InVTCallScreen;->access$6502(Lcom/android/phone/InVTCallScreen;Landroid/bluetooth/BluetoothHeadset;)Landroid/bluetooth/BluetoothHeadset;
 
-    .line 2202
+    .line 2207
     return-void
 .end method

@@ -35,12 +35,12 @@
     .parameter
 
     .prologue
-    .line 4876
+    .line 4874
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$NavigationBarHideConcept;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4877
+    .line 4875
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -56,7 +56,7 @@
     .parameter "x1"
 
     .prologue
-    .line 4876
+    .line 4874
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$NavigationBarHideConcept;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -69,21 +69,21 @@
     .parameter "componentName"
 
     .prologue
-    .line 4895
+    .line 4893
     if-nez p1, :cond_0
 
-    .line 4896
+    .line 4894
     const/4 v0, 0x0
 
-    .line 4900
+    .line 4898
     :goto_0
     return v0
 
-    .line 4899
+    .line 4897
     :cond_0
     monitor-enter p0
 
-    .line 4900
+    .line 4898
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$NavigationBarHideConcept;->mComponentNames:Ljava/util/HashSet;
 
@@ -95,7 +95,7 @@
 
     goto :goto_0
 
-    .line 4901
+    .line 4899
     :catchall_0
     move-exception v0
 
@@ -112,30 +112,30 @@
     .parameter "canHide"
 
     .prologue
-    .line 4880
+    .line 4878
     if-nez p1, :cond_0
 
-    .line 4881
+    .line 4879
     const/4 v0, 0x0
 
-    .line 4890
+    .line 4888
     :goto_0
     return v0
 
-    .line 4884
+    .line 4882
     :cond_0
     monitor-enter p0
 
-    .line 4885
+    .line 4883
     if-eqz p2, :cond_1
 
-    .line 4886
+    .line 4884
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$NavigationBarHideConcept;->mComponentNames:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 4890
+    .line 4888
     :goto_1
     const/4 v0, 0x1
 
@@ -143,7 +143,7 @@
 
     goto :goto_0
 
-    .line 4891
+    .line 4889
     :catchall_0
     move-exception v0
 
@@ -153,7 +153,7 @@
 
     throw v0
 
-    .line 4888
+    .line 4886
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$NavigationBarHideConcept;->mComponentNames:Ljava/util/HashSet;
