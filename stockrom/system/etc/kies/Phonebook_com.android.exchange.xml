@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SDP version="1.1">
+	<Phonebook>
+		<MaxItemCount value="65535" />
+		<GUITemplate value="ANDROID" />
+		<PhotoSize accessibility="all" value="138*138" />
+		<MultipleAccount value="TRUE" />
+		<SupportSync value="FALSE" />
+
+		<MaxSpeedDialCount count="1000" />
+		<DialChar value="+*#,;" />
+		<Enums>
+			<Enum name="TEL_TYPE">
+				<Element type="Default" name="Mobile" />
+				<Element type="Default" name="Landline.Private" />
+				<Element type="Default" name="Landline.Business" />
+				<Element type="Default" name="Fax.Business" />
+				<Element type="Default" name="Fax.Private" />
+				<Element type="Default" name="Pager" />
+				<Element type="Default" name="Etc" />
+				<Element type="Default" name="Custom" />
+				<Element type="Default" name="Callback" />
+			</Enum>
+
+			<Enum name="GENERAL_TYPE">
+				<Element name="Office" />
+				<Element name="Private" />
+				<Element name="Other" />
+				<Element name="Custom" />
+			</Enum>
+
+			<Enum name="ADDRESS_TYPE" DataLength="1">
+				<Element name="Office" value="2" />
+				<Element name="Private" value="1" />
+				<Element name="Other" value="3" />
+			</Enum>
+
+
+			<Enum name="MESSENGER_TYPE">
+				<Element name="GoogleTalk" />
+				<Element name="AIM" />
+				<Element name="WindowsLive" />
+				<Element name="Yahoo" />
+				<Element name="Skype" />
+				<Element name="QQ" />
+				<Element name="ICQ" />
+				<Element name="Jabber" />
+				<Element name="Custom" />
+			</Enum>
+		</Enums>
+
+		<DataField>
+			<Names>
+				<FirstName type="String" CharSet="65001" MaxLength="255" />
+				<MiddleName type="String" charset="65001" MaxLength="255" />
+				<LastName type="String" CharSet="65001" MaxLength="255" />
+				<TitleName type="String" charset="65001" MaxLength="255" />
+				<SuffixName type="String" charset="65001" MaxLength="255" />
+				<ReadingFirstName type="String" charset="65001"
+					MaxLength="255" />
+				<ReadingMiddleName type="String" charset="65001"
+					MaxLength="255" />
+				<ReadingLastName type="String" charset="65001"
+					MaxLength="255" />
+			</Names>
+
+			<TelNumbers>
+				<TelNumber Count="10">
+					<TelType Type="TEL_TYPE" value="Default" />
+					<TelNum Type="String" CharSet="65001" MaxLength="255" />
+				</TelNumber>
+			</TelNumbers>
+
+			<Emails>
+				<Email Count="3">
+					<EmailType Type="EMAIL_TYPE" value="1" />
+					<EmailAddr Type="String" CharSet="65001" MaxLength="255" />
+				</Email>
+			</Emails>
+
+			<MessengerIDs>
+				<MessengerID count="3">
+					<MessengerType Type="MESSENGER_TYPE" value="1" />
+					<MessengerAddr Type="String" CharSet="65001"
+						MaxLength="255" />
+				</MessengerID>
+			</MessengerIDs>
+
+			<Addresses>
+				<address count="3">
+					<AddrType type="ADDRESS_TYPE" value="1" />
+					<Street type="text" charset="65001" maxLength="255" />
+					<City type="text" charset="65001" maxLength="255" />
+					<state type="text" charset="65001" maxLength="255" />
+					<PostalCode type="text" charset="65001" maxLength="255" />
+					<country type="text" charset="65001" maxLength="255" />
+				</address>
+			</Addresses>
+
+			<Organizations>
+				<Organization count="1">
+					<Company type="String" charset="65001" maxLength="255" />
+					<Position type="String" charset="65001" maxLength="255" />
+				</Organization>
+			</Organizations>
+
+			<Notes>
+				<Note count="1">
+					<Content type="text" charset="65001" maxLength="255" />
+				</Note>
+			</Notes>
+
+			<Nicknames>
+				<Nickname count="1">
+					<Name type="String" charset="65001" maxLength="255" />
+				</Nickname>
+			</Nicknames>
+
+			<Urls>
+				<Url count="1">
+					<UrlAddr type="String" charset="65001" maxLength="255" />
+				</Url>
+			</Urls>
+
+			<Birthday>
+				<Birthday count="1">
+					<BirthdayDate type="Date" />
+				</Birthday>
+			</Birthday>
+
+		</DataField>
+	</Phonebook>
+
+	<PhonebookGroup>
+		<Readonly value="FALSE" />
+		<MultipleAccount value="TRUE" />
+		<MaxItemCount value="65535" />
+		<DataField>
+			<Name Type="String" Charset="65001" MaxLength="255" />
+		</DataField>
+	</PhonebookGroup>
+</SDP>

@@ -1,0 +1,25 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+  <MobileData>
+    <PublicName>GT-I9100</PublicName>
+    <NickName />
+  </MobileData>
+  <CustomerDataSet>
+    <CSCName>I9100OLB</CSCName>
+    <CSCVersion>LP7</CSCVersion>
+    <NbCustomer>13</NbCustomer>
+    <CustomerData src="/Customer/MM1/customer.xml" />
+    <CustomerData src="/Customer/STH/customer.xml" />
+    <CustomerData src="/Customer/GLB/customer.xml" />
+    <CustomerData src="/Customer/XTC/customer.xml" />
+    <CustomerData src="/Customer/SMA/customer.xml" />
+    <CustomerData src="/Customer/XTE/customer.xml" />
+    <CustomerData src="/Customer/XME/customer.xml" />
+    <CustomerData src="/Customer/SIN/customer.xml" />
+    <CustomerData src="/Customer/XSP/customer.xml" />
+    <CustomerData src="/Customer/XXV/customer.xml" />
+    <CustomerData src="/Customer/XEV/customer.xml" />
+    <CustomerData src="/Customer/XSE/customer.xml" />
+    <CustomerData src="/Customer/THL/customer.xml" />
+  </CustomerDataSet>
+</SW-Configuration>

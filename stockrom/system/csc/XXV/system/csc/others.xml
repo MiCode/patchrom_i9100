@@ -1,0 +1,29 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<CustomerData>
+  <SettingsData>
+    <Use24HourFormat>24</Use24HourFormat>
+  </SettingsData>
+  <MMS>
+  	<repeat_notification>off</repeat_notification>
+  	<vibrate>off</vibrate>
+  	<enable_notifications>on</enable_notifications>
+  	<creation_mode>free</creation_mode>
+
+  </MMS>
+  <LatinIME>
+    <VibrateOn>on</VibrateOn>
+    <SoundOn>on</SoundOn>
+  </LatinIME>
+  <FMRadio>
+    <fmradio_region>Vietnam</fmradio_region>
+  </FMRadio>
+  <DefaultInputMethod>
+    
+	<!-- com.samsung.sec.android.inputmethod.axt9 -->
+	<!-- Swype : com.swype.android.inputmethod -->
+	<!-- Android Keyboard : com.android.inputmethod.latin -->
+	
+		<input_method>com.sec.android.inputmethod.axt9</input_method>
+  </DefaultInputMethod>
+   
+</CustomerData>

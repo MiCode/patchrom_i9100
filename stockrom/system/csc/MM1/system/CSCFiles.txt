@@ -1,0 +1,11 @@
+/system/csc/MM1/system/csc/contents.db
+/system/csc/MM1/system/csc/others.xml
+/system/csc/MM1/system/csc/sales_code.dat
+/system/csc/MM1/system/csc/customer.xml
+/system/csc/MM1/system/etc/enforcecopyinglibpackages.txt
+/system/csc/MM1/system/app/M1WorldLink.apk
+/system/csc/MM1/system/app/MyM1AppStore.apk
+/system/csc/MM1/system/app/M1-Smartroam(signed).apk
+/system/csc/MM1/system/app/MyM1Phase2(final).apk
+/system/csc/MM1/system/CSCFiles.txt
+/system/csc/MM1/system/CSCVersion.txt

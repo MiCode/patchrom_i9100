@@ -1,0 +1,12 @@
+/system/csc/SMA/system/csc/contents.db
+/system/csc/SMA/system/csc/others.xml
+/system/csc/SMA/system/csc/sales_code.dat
+/system/csc/SMA/system/csc/customer.xml
+/system/csc/SMA/system/wallpaper/drawable/new smart 960 x 800_small.jpg
+/system/csc/SMA/system/wallpaper/drawable/new smart 960 x 800.jpg
+/system/csc/SMA/system/wallpaper/default_wallpaper/default_wallpaper.jpg
+/system/csc/SMA/system/app/SmartNet_1_0_1476.apk
+/system/csc/SMA/system/media/audio/ringtones/NETPHONERINGTONE.mp3
+/system/csc/SMA/system/media/notifications/NETPHONE MESSAGE ALERT.mp3
+/system/csc/SMA/system/CSCFiles.txt
+/system/csc/SMA/system/CSCVersion.txt

@@ -1,0 +1,25 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<CustomerData>
+  <SettingsData>
+    <ShowPassword>1</ShowPassword>
+  </SettingsData>
+  <BrowserData>
+    <HomePage>
+      <URL>http://wap.portal.globe.com.ph/android</URL>
+    </HomePage>
+  </BrowserData>	
+  <MMS>
+  	<repeat_notification>off</repeat_notification>
+  	<vibrate>off</vibrate>
+  	<enable_notifications>on</enable_notifications>
+  	<creation_mode>free</creation_mode>
+
+  </MMS>
+  <LatinIME>
+    <VibrateOn>on</VibrateOn>
+    <SoundOn>on</SoundOn>
+  </LatinIME>
+  <FMRadio>
+    <fmradio_region>Philippines</fmradio_region>
+  </FMRadio>     
+</CustomerData>

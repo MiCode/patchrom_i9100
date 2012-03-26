@@ -1,0 +1,6 @@
+/system/csc/XME/system/csc/contents.db
+/system/csc/XME/system/csc/others.xml
+/system/csc/XME/system/csc/sales_code.dat
+/system/csc/XME/system/csc/customer.xml
+/system/csc/XME/system/CSCFiles.txt
+/system/csc/XME/system/CSCVersion.txt

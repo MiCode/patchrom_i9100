@@ -1,0 +1,7 @@
+/system/csc/XTE/system/csc/contents.db
+/system/csc/XTE/system/csc/others.xml
+/system/csc/XTE/system/csc/sales_code.dat
+/system/csc/XTE/system/csc/customer.xml
+/system/csc/XTE/system/wallpaper/default_wallpaper/default_wallpaper.jpg
+/system/csc/XTE/system/CSCFiles.txt
+/system/csc/XTE/system/CSCVersion.txt

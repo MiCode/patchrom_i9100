@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<SDP version="0.9" domain="Particular">
+  <Device>
+    <ModelName      value="GT-I9100"/>
+    <BaseModelName  value="GT-I9100"/>
+    <ProjectName  value="U1"/>
+    <FriendlyName  value="U1"/>
+    <ProductLineup value="HHP"/>
+    <OS value="Android"  version="4.0"/>
+    <TargetMarket value= "Europe" />
+    <Platform value="Android" lab="GALAB"/>
+    <Language value= "English" />
+    <SIM accessibility="all">
+        <SupportPhonebook accessibility="all" value="true" />
+        <SupportDualSim value="FALSE" />
+    </SIM>
+    <LCD>
+      <Type value="WVGA"/>
+      <Width  value="480"/>
+      <Height value="800"/>
+      <Color value="16777216"/>
+    </LCD>
+    <Operator value="Open" />
+    <ConnectModes>
+      <USB>
+      <ConnectMode name="PCLink" value= "MODEM">
+      	<SupportApp>
+	        <Calendar/>
+	        <Phonebook/>
+	        <Memo/>
+					<MessageManager/>
+          <MessageSender />			
+					<BackupRestore/>
+			</SupportApp>
+      </ConnectMode>
+      <ConnectMode name="RemovableDisk" value= "UMS" >
+		  	<SupportApp>
+					<FileManagement/>
+		  	</SupportApp>
+	    </ConnectMode>
+      </USB>
+      
+      <WIFI>
+       <ConnectMode name="PCLink" value= "MODEM">
+         <SupportApp>
+           <Phonebook/>
+           <Memo/>
+           <Calendar/>
+           <FileManagement/>
+					 <MessageManager/>
+           <MessageSender />	           
+         </SupportApp>
+       </ConnectMode> 
+       </WIFI>
+    </ConnectModes>
+
+    <SIM>
+      <SupportDualSim value="FALSE" />
+    </SIM>
+    <TwoNumber value="FALSE"/>
+    <Storage>
+      <SupportExternal value="TRUE"/>
+    </Storage>
+    <TimeCoordinate value="UTC"/>
+    <DST value="FALSE"/>
+
+    <MediaSync value="FALSE">
+	</MediaSync>
+    <BackupRestore value="TRUE"/>
+    <FirmwareUpdate value="TRUE"/>
+    <MacSupport value="TRUE"/>
+	<QuickFixes>
+		<ModelDB>
+			<Property name="IgnoreAccount" value="false" /> 
+		</ModelDB>
+	</QuickFixes>    
+  </Device>
+</SDP>

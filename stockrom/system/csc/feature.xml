@@ -1,0 +1,620 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<!-- It can be added for each operators like below form
+
+<ABC> 						-> sales code
+<sapient>true</sapient>			-> feature1
+<burton>false</burton>			-> feature2
+<libtech>true</libtech>			-> feature3
+.
+.
+</ABC>
+
+each name of tags are will be environment variable with "ro.csc."
+ex) "ro.csc.sapient", "ro.csc.burton", "ro.csc.libtech" <== you could use them at any section.
+also, should be added between <feature> and </feature> .
+jhwan.kim@hdlnc.com  -->
+
+<feature>
+
+<!-- Brazil : OPEN | VIVO | Claro | TIM -->
+<ZTO>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<connection_timeout>120</connection_timeout>
+	<imsi_refresh>true</imsi_refresh>
+	<mpdp_nok_hsupa>true</mpdp_nok_hsupa>
+	<fdn_on_mms>true</fdn_on_mms>
+	<fdn_on_mms_recipient>true</fdn_on_mms_recipient>	
+	<auto_csp>true</auto_csp>
+	<remove_gsm_ext>true</remove_gsm_ext>
+</ZTO>
+
+<ZVV>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<connection_timeout>120</connection_timeout>
+	<imsi_refresh>true</imsi_refresh>
+	<mpdp_nok_hsupa>true</mpdp_nok_hsupa>
+	<default_screen>3</default_screen>
+	<fdn_on_mms>true</fdn_on_mms>
+	<fdn_on_mms_recipient>true</fdn_on_mms_recipient>	
+	<auto_csp>true</auto_csp>
+	<remove_gsm_ext>true</remove_gsm_ext>	
+</ZVV>
+
+<ZTA>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://br.m.yahoo.com/p/search/?tsrc=amxbros&org=claro&p=</yahoo_search_url>
+	<connection_timeout>240</connection_timeout>
+	<imsi_refresh>true</imsi_refresh>
+	<mpdp_nok_hsupa>true</mpdp_nok_hsupa>
+	<default_screen>3</default_screen>
+	<fdn_on_mms>true</fdn_on_mms>
+	<fdn_on_mms_recipient>true</fdn_on_mms_recipient>	
+	<auto_csp>true</auto_csp>
+	<remove_gsm_ext>true</remove_gsm_ext>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com.br</email_account_domain>
+</ZTA>
+
+<ZTM>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<connection_timeout>120</connection_timeout>
+	<imsi_refresh>true</imsi_refresh>
+	<mpdp_nok_hsupa>true</mpdp_nok_hsupa>
+	<default_screen>3</default_screen>
+	<fdn_on_mms>true</fdn_on_mms>
+	<fdn_on_mms_recipient>true</fdn_on_mms_recipient>	
+	<auto_csp>true</auto_csp>
+	<disable_autoprofile>true</disable_autoprofile>
+	<remove_gsm_ext>true</remove_gsm_ext>
+	<browser_plugins>ON</browser_plugins>
+</ZTM>
+
+<!-- Mexico : TELCEL | Movistar-->
+<TCE>
+	<gms_exclusion>true</gms_exclusion>
+	<yahoo_search_url>http://z.telcel.mobi/</yahoo_search_url>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<show_ons>true</show_ons>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<force_network_lock>true</force_network_lock>
+	<stk_operator_name>TELCEL</stk_operator_name>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>itelcel.com</email_account_domain>
+</TCE>
+
+<TMM>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>*611</speeddial_service_num>
+	<speeddial_service_name>Atencion a clientes</speeddial_service_name>     
+</TMM>
+
+<IUS>
+	<show_ons>true</show_ons>
+	<clidigit>7</clidigit>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>050</speeddial_service_num>
+	<speeddial_service_name>Atención a clientes</speeddial_service_name>
+	<exception_shortcode>true</exception_shortcode>
+	<ApnisEditable>true</ApnisEditable>
+	<BrowserAPN>web.iusacellgsm.mx</BrowserAPN>
+	<BrowserAPN2>modem.iusacellgsm.mx</BrowserAPN2>
+	<MmsAPN>mms.iusacellgsm.mx</MmsAPN>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>	
+	<default_screen>3</default_screen>
+</IUS>
+
+<UNE>
+	<show_ons>true</show_ons>
+	<clidigit>7</clidigit>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>050</speeddial_service_num>
+	<speeddial_service_name>Atención a clientes</speeddial_service_name>
+	<exception_shortcode>true</exception_shortcode>
+</UNE>
+
+<!-- Argentina : Claro | Personal | Movistar | OPEN -->
+<CTI>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://z.claroar.mobi/claroarg-cw.qpass.com/ndmns/searchresults?q=</yahoo_search_url>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit_on_msg>8</clidigit_on_msg>		
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<clidigit>7</clidigit>
+	<speeddial_emergency_key>9</speeddial_emergency_key>
+	<speeddial_emergency_num>911</speeddial_emergency_num>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</CTI>
+
+<PSN>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit_on_msg>8</clidigit_on_msg>
+	<clidigit>7</clidigit>
+	<speeddial_emergency_key>9</speeddial_emergency_key>
+	<speeddial_emergency_num>911</speeddial_emergency_num>	
+</PSN>
+
+<UFN>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<imsi_refresh>true</imsi_refresh>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit_on_msg>8</clidigit_on_msg>
+	<clidigit>7</clidigit>
+	<speeddial_emergency_key>9</speeddial_emergency_key>
+	<speeddial_emergency_num>911</speeddial_emergency_num>
+</UFN>
+
+<ARO>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<imsi_refresh>true</imsi_refresh>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit_on_msg>8</clidigit_on_msg>
+	<clidigit>7</clidigit>
+	<speeddial_emergency_key>9</speeddial_emergency_key>
+	<speeddial_emergency_num>911</speeddial_emergency_num>			
+</ARO>
+
+<!-- Uruguay : Claro | Ancel | Movistar -->
+<CTU>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://z.clarouy.mobi/claroury-cw.qpass.com/ndmns/searchresults?q=</yahoo_search_url>
+	<cam_antibanding>50</cam_antibanding>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<clidigit>7</clidigit>   
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</CTU>
+
+<ANC>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+</ANC>
+
+<UFU>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>7</clidigit>
+</UFU>
+
+<!-- Colombia : Comcel | Movistar | TIGO -->
+<COM>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://z.comcel.mobi/</yahoo_search_url>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<clidigit>10</clidigit>
+	<unknown_source>true</unknown_source>
+	<contacts_save_position>SIM</contacts_save_position>
+	<email_account_domain>comcel.net</email_account_domain>
+</COM>
+
+<COB>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<smsc_disable_edit>true</smsc_disable_edit> 
+	<clidigit>10</clidigit>
+	<exception_ussd_char>true</exception_ussd_char>
+	<cb_support_alert>true</cb_support_alert>    
+	<default_screen>1</default_screen>
+</COB>
+
+<COL>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>10</clidigit>
+</COL>
+
+<!-- Chile : Entel PCS | Movistar | Claro | OPEN -->
+<CHE>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<browser_plugins>ON</browser_plugins>
+	<cam_antibanding>50</cam_antibanding>
+	<wallpaper_old>true</wallpaper_old>
+	<ApnisEditable>true</ApnisEditable>
+	<BrowserAPN>bam.entelpcs.cl</BrowserAPN>
+	<MmsAPN>mms.entelpcs.cl</MmsAPN>
+</CHE>
+
+<CHT>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<imsi_refresh>true</imsi_refresh>
+	<cam_antibanding>50</cam_antibanding>
+	<default_screen>3</default_screen>
+</CHT>
+	
+<CHL>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://cl.m2.yahoo.com/w/search?.tsrc=amxuyos&.sep=andr_emb&p=</yahoo_search_url>
+	<cam_antibanding>50</cam_antibanding>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<vm_addr_disable_edit>true</vm_addr_disable_edit>	
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<stk_operator_name>Claro</stk_operator_name>
+	<ApnisEditable>true</ApnisEditable>
+	<BrowserAPN>bam.clarochile.cl</BrowserAPN>
+	<MmsAPN>mms.clarochile.cl</MmsAPN>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</CHL>
+
+<CHO>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<imsi_refresh>true</imsi_refresh>
+	<cam_antibanding>50</cam_antibanding>
+</CHO>
+
+<!-- Peru : Claro | Movistar -->
+<PET>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://z.claroperu.mobi/</yahoo_search_url>
+	<show_ons>true</show_ons>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<clidigit>7</clidigit>
+	<unknown_source>true</unknown_source>
+	<contacts_save_position>SIM</contacts_save_position>
+	<email_account_domain>iclaro.com.pe</email_account_domain>
+</PET>
+
+<SAM>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<imsi_refresh>true</imsi_refresh>
+	<clidigit>7</clidigit>
+	<ussd_alert>true</ussd_alert>
+</SAM>
+
+<!-- Venezuela : Digitel | Movistar | Movilnet | OPEN -->
+<DGT>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<clidigit>7</clidigit>
+	<unformatednumber>true</unformatednumber>
+	<stk_operator_name>SIM 412</stk_operator_name>
+	<default_screen>3</default_screen>
+	<sdn_display>true</sdn_display>
+</DGT>
+
+<VMT>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cb_support_alert>true</cb_support_alert>
+	<clidigit>10</clidigit>
+	<unformatednumber>true</unformatednumber>
+	<exception_shortcode>true</exception_shortcode>
+	<sdn_display>true</sdn_display>
+</VMT>
+
+<MVL>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<imsi_refresh>true</imsi_refresh>
+	<clidigit>10</clidigit>
+	<unformatednumber>true</unformatednumber>
+	<default_screen>3</default_screen>    
+	<exception_shortcode>true</exception_shortcode>
+	<stk_operator_name>Tu Chip</stk_operator_name>
+</MVL>
+
+<VNO>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>10</clidigit>
+	<exception_shortcode>true</exception_shortcode> 
+	<unformatednumber>true</unformatednumber>	  	   
+</VNO>
+
+<!-- Paraguy : Claro | Tigo | Personal -->
+<CTP>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://z.claropy.mobi/claropry-cw.qpass.com/ndmns/searchresults?q=</yahoo_search_url>
+	<cam_antibanding>50</cam_antibanding>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<clidigit>7</clidigit>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</CTP>
+
+<TGP>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>7</clidigit>
+</TGP>
+
+<PSP>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>7</clidigit>
+</PSP>
+
+<!-- Miami (UWM/Millicom) : CGU | ETE | CTE | -->
+<CGU>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<msg_strict_comp>true</msg_strict_comp>
+	<disable_show_my_number>true</disable_show_my_number>
+	<exception_shortcode>true</exception_shortcode>        
+</CGU>
+
+<ETE>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<disable_show_my_number>true</disable_show_my_number>
+	<exception_shortcode>true</exception_shortcode>
+</ETE>
+
+<CTE>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<disable_show_my_number>true</disable_show_my_number>
+	<exception_shortcode>true</exception_shortcode>
+	<clidigit>7</clidigit>
+</CTE>
+
+<!-- Miami (UWT) : TGU | SAL | NBS | PBS | EBE | -->
+<TGU>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<exception_shortcode>true</exception_shortcode>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>*611</speeddial_service_num>
+	<speeddial_service_name>Atencion Clientes</speeddial_service_name> 
+	<ussd_alert>true</ussd_alert>
+</TGU>
+
+<SAL>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<exception_shortcode>true</exception_shortcode>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>*611</speeddial_service_num>
+	<speeddial_service_name>Atencion Clientes</speeddial_service_name>    
+	<ussd_alert>true</ussd_alert>
+</SAL>
+
+<NBS>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<exception_shortcode>true</exception_shortcode>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>*611</speeddial_service_num>
+	<speeddial_service_name>Atencion Clientes</speeddial_service_name>
+	<ussd_alert>true</ussd_alert> 
+</NBS>
+
+<PBS>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>7</clidigit>
+	<exception_shortcode>true</exception_shortcode>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>*611</speeddial_service_num>
+	<speeddial_service_name>Atn. Clientes</speeddial_service_name>
+	<ussd_alert>true</ussd_alert>
+</PBS>
+
+<EBE>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<exception_shortcode>true</exception_shortcode>
+	<speeddial_service_key>3</speeddial_service_key>
+	<speeddial_service_num>*001</speeddial_service_num>
+	<speeddial_service_name>Servicios al cliente</speeddial_service_name> 
+	<ussd_alert>true</ussd_alert>    
+</EBE>
+
+<!-- Miami (UWA/AMX) : CPA | PGU | PER | NEN | HME | PCT | CDR | -->
+<CPA>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://z.claropan.mobi/</yahoo_search_url>
+	<clidigit>7</clidigit>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<clidigit>7</clidigit>   
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</CPA>
+
+<PGU>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://wap.wsearch.ideasclaro.com/</yahoo_search_url>
+	<gms_exclusion>true</gms_exclusion>
+	<exception_shortcode>true</exception_shortcode>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<exception_shortcode>true</exception_shortcode>   
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</PGU>
+
+<PER>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://wap.wsearch.ideasclaro.com/</yahoo_search_url>
+	<gms_exclusion>true</gms_exclusion>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</PER>
+
+<NEN>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://wap.wsearch.ideasclaro.com/</yahoo_search_url>
+	<gms_exclusion>true</gms_exclusion>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<clidigit>7</clidigit>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</NEN>
+
+<HME>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://wap.wsearch.ideasclaro.com/</yahoo_search_url>
+	<gms_exclusion>true</gms_exclusion>
+	<clidigit>7</clidigit>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</HME>
+
+<PCT>
+	<gms_exclusion>true</gms_exclusion>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<yahoo_search_url>http://pr.m.yahoo.com/w/search?.tsrc=amxpros&.sep=andr_emb&p=</yahoo_search_url>
+	<clidigit>10</clidigit>
+	<force_network_lock>true</force_network_lock>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<unknown_source>true</unknown_source>
+	<stk_operator_name>Claro</stk_operator_name>
+	<email_account_domain>iclaro.com</email_account_domain>
+</PCT>
+
+<CDR>
+	<gms_exclusion>true</gms_exclusion>
+	<yahoo_search_url>http://do.m2.yahoo.com/w/search?.tsrc=amxuyos&.sep=andr_emb&p=</yahoo_search_url>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>10</clidigit>
+	<force_network_lock>true</force_network_lock>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<unknown_source>true</unknown_source>
+	<stk_operator_name>Claro</stk_operator_name>
+	<email_account_domain>iclaro.com</email_account_domain>
+</CDR>
+
+<CRC>
+	<yahoo_search_url>http://wap.wsearch.ideasclaro.com/</yahoo_search_url>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<gms_exclusion>true</gms_exclusion>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<email_account_domain>iclaro.com</email_account_domain>
+</CRC>
+
+<!-- Miami (UWB) : JDT | JDT | -->
+<JDI>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>7</clidigit>
+</JDI>
+
+<JDT>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>7</clidigit>
+</JDT>
+
+<!-- Miami (UWD) : CWW | -->
+<CWW>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>7</clidigit>
+</CWW>
+
+<!-- Miami (UWH) : PCW | -->
+<PCW>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>7</clidigit>
+</PCW>
+
+<!-- Miami (UWC) : ECO | -->
+<ECO>
+	<gms_exclusion>true</gms_exclusion>
+	<yahoo_search_url>http://z.claroec.mobi/</yahoo_search_url>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<stk_operator_name>Claro</stk_operator_name>
+	<default_screen_count>4</default_screen_count>
+	<default_screen>1</default_screen>
+	<unknown_source>true</unknown_source>
+	<email_account_domain>iclaro.com</email_account_domain>
+</ECO>
+
+<!-- Miami (UWI) : ICE | -->
+<ICE>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+</ICE>
+
+<!-- Miami (UUB) : ALE | DOR | TDR | TPA | PCI | TTT | -->
+<ALE>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+</ALE>
+
+<EON>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+</EON>
+
+<DOR>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>10</clidigit>
+</DOR>
+	
+<TDR>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>10</clidigit>
+</TDR>
+
+<TPA>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>7</clidigit>
+	<exception_shortcode>true</exception_shortcode>
+</TPA>
+
+<PCI>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+</PCI>
+
+<TTT>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<clidigit>7</clidigit>
+	<noise_reduction>false</noise_reduction>
+</TTT>
+
+<!-- Miami (UWJ) : CUE | -->
+<CUE>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+</CUE>
+
+<UPO>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>7</clidigit>
+</UPO>
+
+<VOX>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+	<clidigit>7</clidigit>
+</VOX>
+
+<CHD>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<cam_antibanding>50</cam_antibanding>
+</CHD>
+
+<CHV>
+	<cam_antibanding>50</cam_antibanding>
+	<x_wap_profile>http://wap.samsungmobile.com/uaprof/GT-I9100.xml</x_wap_profile>
+	<ApnisEditable>true</ApnisEditable>
+	<BrowserAPN>movil.vtr.com</BrowserAPN>
+	<BrowserAPN2>wap.vtr.com</BrowserAPN2>
+	<BrowserAPN3>bam.vtr.com</BrowserAPN3>
+	<MmsAPN>mms.vtr.com</MmsAPN>	
+	<smsc_disable_edit>true</smsc_disable_edit>
+	<default_screen>3</default_screen>
+	<unknown_source>true</unknown_source>
+</CHV>
+
+</feature>
