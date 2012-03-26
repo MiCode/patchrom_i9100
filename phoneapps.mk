@@ -63,4 +63,5 @@ local-phone-apps = AxT9IME \
                    minimode-res \
                    serviceModeApp \
                    shutdown \
-                   wssyncmlnps
+                   wssyncmlnps \
+                   ApplicationsProvider
