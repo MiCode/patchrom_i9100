@@ -908,7 +908,7 @@
     invoke-virtual {v0, v3, v4}, Landroid/media/AudioManager;->setParameter(Ljava/lang/String;Ljava/lang/String;)V
 
     # it is a Landroid/app/ProgressDialog object in android.
-    new-instance v2, Lcom/android/internal/app/ProgressDialog;
+    new-instance v2, Landroid/app/ProgressDialog;
 
     const/4 v3, 0x3
 
