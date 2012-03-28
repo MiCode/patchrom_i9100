@@ -14,7 +14,7 @@ local-modified-apps := Phone CallSetting SamsungSettings
 local-modified-jars := framework2
 
 # All apks from MIUI
-local-miui-removed-apps := Phone AntiSpam MediaProvider Gallery
+local-miui-removed-apps := Phone MediaProvider Gallery
 
 local-miui-modified-apps := MiuiHome Settings MiuiSystemUI Mms
 
