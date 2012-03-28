@@ -56,4 +56,3 @@ system/bin/watchprops|system/bin/toolbox
 system/bin/wipe|system/bin/toolbox
 system/fonts/DroidSans-Bold.ttf|system/fonts/Roboto-Bold.ttf
 system/fonts/DroidSans.ttf|system/fonts/Roboto-Regular.ttf
-system/xbin/su|system/bin/su
