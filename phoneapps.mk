@@ -6,7 +6,6 @@ local-phone-apps = AxT9IME \
                    BluetoothMap \
                    BluetoothTest \
                    CSC \
-                   CallSetting \
                    Camera \
                    ChocoEUKor \
                    ClipboardSaveService \

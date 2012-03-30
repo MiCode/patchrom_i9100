@@ -16,7 +16,7 @@ local-modified-jars := framework2
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider Gallery
 
-local-miui-modified-apps := MiuiHome Settings MiuiSystemUI Mms Phone
+local-miui-modified-apps := MiuiHome Settings Phone
 
 include phoneapps.mk
 
@@ -46,14 +46,11 @@ local-update-theme-icon:
 	$(ZIP) -j $(ZIP_DIR)/system/media/theme/default/icons.zip $(TMP_DIR)/default_theme_icons/*
 	mv $(ZIP_DIR)/system/media/theme/default/icons.zip $(ZIP_DIR)/system/media/theme/default/icons
 
+local-rom-zip := MIUI_i9100.zip
 local-put-to-phone:
-	adb shell rm /sdcard/MIUI_i9100.zip
-	adb push out/MIUI_i9100.zip /sdcard/
+	adb shell rm /sdcard/$(local-rom-zip)
+	adb push out/$(local-rom-zip) /sdcard/
 	adb reboot recovery
-	@echo press ener after flash the image
-	@read
-	adb logcat -c
-	adb push ../wpa_supplicant.conf /data/misc/wifi
 
 local-ota-update:
 	rm $(ZIP_DIR)/system/app/SuperMarket.apk
