@@ -1344,13 +1344,20 @@
 
     iget-object v1, v7, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 213
     .local v1, locale:Ljava/util/Locale;
+
+    sget-object v7, Ljava/util/Locale;->CHINA:Ljava/util/Locale;
+
+    invoke-virtual {v7, v1}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :goto_0
+
     sget-object v7, Landroid/text/format/DateFormat;->sLocaleLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 214
     :try_start_0
     sget-object v8, Landroid/text/format/DateFormat;->sIs24HourLocale:Ljava/util/Locale;
 
