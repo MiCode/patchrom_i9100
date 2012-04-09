@@ -124,7 +124,9 @@
     return v2
 
     :cond_0
-    const/4 v2, 0x0
+    invoke-static {p0}, Landroid/app/ExtraActivityManager;->isHighEndGfx(Landroid/view/Display;)Z
+
+    move-result v2
 
     goto :goto_0
 .end method
