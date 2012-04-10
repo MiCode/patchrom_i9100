@@ -1,4 +1,3 @@
-com/miui/server/wm/RoundedCornersSurface.smali
 com/miui/internal/R.smali
 com/miui/internal/R$styleable.smali
 com/miui/internal/R$array.smali
