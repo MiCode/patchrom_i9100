@@ -305,7 +305,7 @@
     <string name="turn_off_radio">关闭无线</string>
     <string name="screen_lock">屏幕锁定</string>
     <string name="power_off">关机</string>
-    <string name="shutdown_progress">天在关机…</string>
+    <string name="shutdown_progress">正在关机…</string>
     <string name="shutdown_confirm">设备现在将关闭</string>
     <string name="restart_confirm">您的手机将重新启动</string>
     <string name="shutdown_confirm_question">您要关机吗？</string>

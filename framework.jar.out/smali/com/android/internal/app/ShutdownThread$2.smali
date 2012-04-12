@@ -67,6 +67,7 @@
     move-result v0
 
     if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
     .line 196
     iget-object v0, p0, Lcom/android/internal/app/ShutdownThread$2;->val$context:Landroid/content/Context;
