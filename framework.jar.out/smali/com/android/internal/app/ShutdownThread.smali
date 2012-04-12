@@ -945,8 +945,7 @@
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
     .line 493
-    invoke-static {p0}, Lcom/android/internal/app/ShutdownThread;->createShutDownDialog(Landroid/con
-tent/Context;)V
+    invoke-static {p0}, Lcom/android/internal/app/ShutdownThread;->createShutDownDialog(Landroid/content/Context;)V
 
     .line 496
     sget-object v3, Lcom/android/internal/app/ShutdownThread;->sInstance:Lcom/android/internal/app/ShutdownThread;
