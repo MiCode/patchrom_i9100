@@ -618,7 +618,7 @@
     if-nez v4, :cond_8
 
     .line 996
-    new-instance v22, Lcom/android/server/am/StrictModeViolationDialog;
+    new-instance v22, Lcom/android/server/am/AppErrorDialog;
 
     move-object/from16 v0, p0
 
