@@ -6531,20 +6531,25 @@
 
     move-result v7
 
-    .line 2830
     .local v7, priority:I
+    move-object/from16 v0, p0
+
+    move/from16 v1, p4
+
+    invoke-direct {v0, v1, v7}, Landroid/content/pm/PackageParser;->checkPriority(II)I
+
+    move-result v13
+
     move-object/from16 v0, p5
 
-    invoke-virtual {v0, v7}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
+    invoke-virtual {v0, v13}, Landroid/content/pm/PackageParser$IntentInfo;->setPriority(I)V
 
-    .line 2832
     const/4 v13, 0x0
 
     invoke-virtual {v8, v13}, Landroid/content/res/TypedArray;->peekValue(I)Landroid/util/TypedValue;
 
     move-result-object v11
 
-    .line 2834
     .local v11, v:Landroid/util/TypedValue;
     if-eqz v11, :cond_0
 
@@ -14714,3 +14719,37 @@
     .line 195
     return-void
 .end method
+
+.method private checkPriority(II)I
+    .locals 1
+    .parameter "flags"
+    .parameter "priority"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    and-int/lit8 v0, p1, 0x1
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0x3e8
+
+    if-lt p2, v0, :cond_1
+
+    const/16 p2, 0x3e7
+
+    :cond_0
+    :goto_0
+    return p2
+
+    :cond_1
+    const/16 v0, -0x3e8
+
+    if-gt p2, v0, :cond_0
+
+    const/16 p2, -0x3e7
+
+    goto :goto_0
+.end method
+
