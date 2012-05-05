@@ -16,7 +16,7 @@ local-modified-jars := framework2
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider Gallery Stk Bluetooth
 
-local-miui-modified-apps := MiuiHome Settings Phone
+local-miui-modified-apps := MiuiHome Settings Phone Mms
 
 include phoneapps.mk
 
