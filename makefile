@@ -24,7 +24,7 @@ include phoneapps.mk
 # and the local-targets should:
 # (1) be defined after including porting.mk if using any global variable(see porting.mk)
 # (2) the name should be leaded with local- to prevent any conflict with global targets
-local-pre-zip := local-pre-zip-misc local-update-theme-icon
+local-pre-zip := local-pre-zip-misc
 local-after-zip:= local-put-to-phone
 
 # The local targets after the zip file is generated, could include 'zip2sd' to 
@@ -39,12 +39,6 @@ local-pre-zip-misc:
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	cp other/AxT9IME.apk $(ZIP_DIR)/system/app
 	rm -rf $(ZIP_DIR)/system/csc
-
-local-update-theme-icon:
-	$(UNZIP) $(ZIP_DIR)/system/media/theme/default/icons -d $(TMP_DIR)/default_theme_icons
-	cp other/default_theme_icons/* $(TMP_DIR)/default_theme_icons
-	$(ZIP) -j $(ZIP_DIR)/system/media/theme/default/icons.zip $(TMP_DIR)/default_theme_icons/*
-	mv $(ZIP_DIR)/system/media/theme/default/icons.zip $(ZIP_DIR)/system/media/theme/default/icons
 
 local-rom-zip := MIUI_i9100.zip
 local-put-to-phone:
