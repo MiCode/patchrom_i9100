@@ -34,19 +34,19 @@
     .parameter
 
     .prologue
-    .line 5399
+    .line 5401
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 5403
+    .line 5405
     invoke-static {}, Landroid/view/ViewConfiguration;->getGlobalActionKeyTimeout()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->DURATION_LONG_PRESS:J
 
-    .line 5404
+    .line 5406
     const-wide/16 v0, 0x32
 
     iput-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->DURATION_REPEAT:J
@@ -60,7 +60,7 @@
     .parameter "x1"
 
     .prologue
-    .line 5399
+    .line 5401
     invoke-direct {p0, p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;-><init>(Lcom/android/internal/policy/impl/PhoneWindowManager;)V
 
     return-void
@@ -72,16 +72,16 @@
     .locals 5
 
     .prologue
-    .line 5468
+    .line 5470
     invoke-static {}, Lcom/android/internal/policy/impl/PhoneWindowManager;->getTelephonyService()Lcom/android/internal/telephony/ITelephony;
 
     move-result-object v1
 
-    .line 5469
+    .line 5471
     .local v1, telephonyService:Lcom/android/internal/telephony/ITelephony;
     if-eqz v1, :cond_1
 
-    .line 5471
+    .line 5473
     :try_start_0
     invoke-interface {v1}, Lcom/android/internal/telephony/ITelephony;->isOffhook()Z
 
@@ -104,14 +104,14 @@
 
     if-nez v2, :cond_1
 
-    .line 5472
+    .line 5474
     const-string v2, "SamsungVolumeControl"
 
     const-string v3, "in run(), now adjust call volume."
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5473
+    .line 5475
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v3, 0x0
@@ -120,7 +120,7 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager;->handleVolumeKey(II)V
 
-    .line 5474
+    .line 5476
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v3, 0x6
@@ -131,16 +131,16 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5480
+    .line 5482
     :cond_1
     :goto_0
     return-void
 
-    .line 5476
+    .line 5478
     :catch_0
     move-exception v0
 
-    .line 5477
+    .line 5479
     .local v0, ex:Landroid/os/RemoteException;
     const-string v2, "SamsungVolumeControl"
 
@@ -155,7 +155,7 @@
     .locals 3
 
     .prologue
-    .line 5461
+    .line 5463
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->isFMActive()Z
@@ -180,7 +180,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 5462
+    .line 5464
     :cond_0
     const-string v0, "SamsungVolumeControl"
 
@@ -188,7 +188,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5463
+    .line 5465
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/16 v1, 0xa
@@ -197,7 +197,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->handleVolumeKey(II)V
 
-    .line 5465
+    .line 5467
     :cond_1
     return-void
 .end method
@@ -206,7 +206,7 @@
     .locals 3
 
     .prologue
-    .line 5454
+    .line 5456
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->isMusicActive()Z
@@ -223,14 +223,14 @@
 
     if-nez v0, :cond_0
 
-    .line 5455
+    .line 5457
     const-string v0, "SamsungVolumeControl"
 
     const-string v1, "in run(), now adjust music volume."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5456
+    .line 5458
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const/4 v1, 0x3
@@ -239,7 +239,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->handleVolumeKey(II)V
 
-    .line 5458
+    .line 5460
     :cond_0
     return-void
 .end method
@@ -250,7 +250,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5483
+    .line 5485
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -263,23 +263,23 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 5484
+    .line 5486
     .local v0, am:Landroid/media/AudioManager;
     if-nez v0, :cond_1
 
-    .line 5485
+    .line 5487
     const-string v2, "WindowManager"
 
     const-string v3, "isVoipCallActive: couldn\'t get AudioManager reference"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5490
+    .line 5492
     :cond_0
     :goto_0
     return v1
 
-    .line 5488
+    .line 5490
     :cond_1
     const-string v2, "WindowManager"
 
@@ -321,7 +321,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5490
+    .line 5492
     invoke-virtual {v0}, Landroid/media/AudioManager;->isVoiceCallActive()Z
 
     move-result v2
@@ -343,31 +343,31 @@
     .locals 4
 
     .prologue
-    .line 5421
+    .line 5423
     const-string v0, "SamsungVolumeControl"
 
     const-string v1, "run() is called."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5422
+    .line 5424
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBroadcastWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 5425
+    .line 5427
     :goto_0
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->controlMusicVolume()V
 
-    .line 5428
+    .line 5430
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->controlFMRadioVolume()V
 
-    .line 5431
+    .line 5433
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->controlCallAndRingingVolume()V
 
-    .line 5434
+    .line 5436
     :try_start_0
     const-string v0, "SamsungVolumeControl"
 
@@ -393,46 +393,46 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5435
+    .line 5437
     iget-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mSleepDuration:J
 
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5439
+    .line 5441
     :goto_1
     monitor-enter p0
 
-    .line 5440
+    .line 5442
     :try_start_1
     iget-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mNeedToRun:Z
 
     if-nez v0, :cond_0
 
-    .line 5441
+    .line 5443
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5449
+    .line 5451
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mBroadcastWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 5450
+    .line 5452
     const-string v0, "SamsungVolumeControl"
 
     const-string v1, "in run(), Now finish thread."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5451
+    .line 5453
     return-void
 
-    .line 5444
+    .line 5446
     :cond_0
     :try_start_2
     iget-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mSleepDuration:J
@@ -443,12 +443,12 @@
 
     if-nez v0, :cond_1
 
-    .line 5445
+    .line 5447
     const-wide/16 v0, 0x32
 
     iput-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mSleepDuration:J
 
-    .line 5447
+    .line 5449
     :cond_1
     monitor-exit p0
 
@@ -463,7 +463,7 @@
 
     throw v0
 
-    .line 5436
+    .line 5438
     :catch_0
     move-exception v0
 
@@ -477,10 +477,10 @@
     .parameter "canceled"
 
     .prologue
-    .line 5407
+    .line 5409
     monitor-enter p0
 
-    .line 5408
+    .line 5410
     :try_start_0
     const-string v0, "SamsungVolumeControl"
 
@@ -488,18 +488,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5410
+    .line 5412
     iput p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mKeyCode:I
 
-    .line 5411
+    .line 5413
     iput-boolean p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mNeedToRun:Z
 
-    .line 5412
+    .line 5414
     iget-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->DURATION_LONG_PRESS:J
 
     iput-wide v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mSleepDuration:J
 
-    .line 5414
+    .line 5416
     if-nez p3, :cond_0
 
     const/16 v0, 0x18
@@ -510,20 +510,20 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 5415
+    .line 5417
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$SamsungVolumeControlThread;->mNeedToRun:Z
 
-    .line 5417
+    .line 5419
     :cond_1
     monitor-exit p0
 
-    .line 5418
+    .line 5420
     return-void
 
-    .line 5417
+    .line 5419
     :catchall_0
     move-exception v0
 

@@ -1,7 +1,0 @@
-/system/csc/SIN/system/csc/contents.db
-/system/csc/SIN/system/csc/others.xml
-/system/csc/SIN/system/csc/sales_code.dat
-/system/csc/SIN/system/csc/customer.xml
-/system/csc/SIN/system/etc/enforcecopyinglibpackages.txt
-/system/csc/SIN/system/CSCFiles.txt
-/system/csc/SIN/system/CSCVersion.txt

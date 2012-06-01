@@ -1,0 +1,15 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<CustomerData>
+  <BrowserData>
+      <HomePage>
+          <URL>http://m.match.net.tw</URL>
+      </HomePage>
+  </BrowserData>
+  <DefaultApn>
+    <ProfileName>VIBO Internet</ProfileName>
+  </DefaultApn>
+  <LatinIME>
+    <VibrateOn>on</VibrateOn>
+    <SoundOn>on</SoundOn>
+  </LatinIME>
+</CustomerData>

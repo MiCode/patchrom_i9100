@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final DBG:Z = true
+.field private static final DBG:Z = false
 
 .field private static final DNS_KEY:Ljava/lang/String; = "dns"
 
@@ -3032,15 +3032,10 @@
 .end method
 
 .method static initialize(Landroid/content/Context;)V
-    .locals 1
+    .locals 0
     .parameter "context"
 
     .prologue
-    .line 150
-    const-string v0, "Loading config and enabling all networks"
-
-    invoke-static {v0}, Landroid/net/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
-
     .line 151
     sput-object p0, Landroid/net/wifi/WifiConfigStore;->sContext:Landroid/content/Context;
 
@@ -4136,25 +4131,7 @@
     .restart local v8       #in:Ljava/io/DataInputStream;
     :goto_7
     :try_start_b
-    new-instance v19, Ljava/lang/StringBuilder;
-
-    invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v20, "Error parsing configuration"
-
-    invoke-virtual/range {v19 .. v20}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v19
-
-    move-object/from16 v0, v19
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v19
-
-    invoke-virtual/range {v19 .. v19}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v19
+    const-string v19, "Error parsing configuration"
 
     invoke-static/range {v19 .. v19}, Landroid/net/wifi/WifiConfigStore;->loge(Ljava/lang/String;)V
     :try_end_b
@@ -4601,8 +4578,6 @@
     goto/16 :goto_5
 
     .line 876
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -7470,31 +7445,6 @@
 
     invoke-static {v8, v0}, Landroid/net/wifi/WifiConfigStore;->addIpSettingsFromConfig(Landroid/net/LinkProperties;Landroid/net/wifi/WifiConfiguration;)V
 
-    .line 1283
-    new-instance v15, Ljava/lang/StringBuilder;
-
-    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v16, "IP config changed linkProperties: "
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v8}, Landroid/net/LinkProperties;->toString()Ljava/lang/String;
-
-    move-result-object v16
-
-    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v15
-
-    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v15
-
-    invoke-static {v15}, Landroid/net/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
-
     goto/16 :goto_2
 
     .line 1291
@@ -7517,11 +7467,6 @@
     move-result-object v15
 
     invoke-virtual {v8, v15}, Landroid/net/LinkProperties;->setHttpProxy(Landroid/net/ProxyProperties;)V
-
-    .line 1293
-    const-string/jumbo v15, "proxy changed"
-
-    invoke-static {v15}, Landroid/net/wifi/WifiConfigStore;->log(Ljava/lang/String;)V
 
     .line 1294
     invoke-virtual {v8}, Landroid/net/LinkProperties;->getHttpProxy()Landroid/net/ProxyProperties;

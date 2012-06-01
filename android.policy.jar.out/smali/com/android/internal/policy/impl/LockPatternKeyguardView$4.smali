@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 1272
+    .line 1265
     iput-object p1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$4;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .parameter "which"
 
     .prologue
-    .line 1275
+    .line 1268
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView$4;->this$0:Lcom/android/internal/policy/impl/LockPatternKeyguardView;
 
@@ -56,15 +56,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1279
+    .line 1272
     :goto_0
     return-void
 
-    .line 1276
+    .line 1269
     :catch_0
     move-exception v0
 
-    .line 1277
+    .line 1270
     .local v0, e:Ljava/lang/Exception;
     const-string v1, "LockPatternKeyguardView"
 

@@ -38,10 +38,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6437
+    .line 6431
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 6438
+    .line 6432
     const/16 v3, 0x8
 
     move-object v0, p0
@@ -54,10 +54,10 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService$InstallArgs;-><init>(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;Landroid/content/pm/ManifestDigest;)V
 
-    .line 6439
+    .line 6433
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
-    .line 6440
+    .line 6434
     return-void
 .end method
 
@@ -67,10 +67,10 @@
     .parameter "params"
 
     .prologue
-    .line 6416
+    .line 6410
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 6417
+    .line 6411
     iget-object v1, p2, Lcom/android/server/pm/PackageManagerService$InstallParams;->packageURI:Landroid/net/Uri;
 
     iget-object v2, p2, Lcom/android/server/pm/PackageManagerService$InstallParams;->observer:Landroid/content/pm/IPackageInstallObserver;
@@ -85,7 +85,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService$InstallArgs;-><init>(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;Landroid/content/pm/ManifestDigest;)V
 
-    .line 6419
+    .line 6413
     return-void
 .end method
 
@@ -97,10 +97,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6431
+    .line 6425
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 6432
+    .line 6426
     const/16 v3, 0x8
 
     move-object v0, p0
@@ -113,17 +113,17 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService$InstallArgs;-><init>(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;Landroid/content/pm/ManifestDigest;)V
 
-    .line 6433
+    .line 6427
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
-    .line 6434
+    .line 6428
     invoke-static {p2}, Lcom/android/internal/content/PackageHelper;->getSdDir(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->setCachePath(Ljava/lang/String;)V
 
-    .line 6435
+    .line 6429
     return-void
 .end method
 
@@ -137,10 +137,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6421
+    .line 6415
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
-    .line 6422
+    .line 6416
     const/16 v3, 0x8
 
     move-object v0, p0
@@ -153,14 +153,14 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/pm/PackageManagerService$InstallArgs;-><init>(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;Landroid/content/pm/ManifestDigest;)V
 
-    .line 6424
+    .line 6418
     const-string v0, "/"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 6425
+    .line 6419
     .local v6, eidx:I
     const/4 v0, 0x0
 
@@ -168,7 +168,7 @@
 
     move-result-object v8
 
-    .line 6426
+    .line 6420
     .local v8, subStr1:Ljava/lang/String;
     const-string v0, "/"
 
@@ -176,7 +176,7 @@
 
     move-result v7
 
-    .line 6427
+    .line 6421
     .local v7, sidx:I
     add-int/lit8 v0, v7, 0x1
 
@@ -186,10 +186,10 @@
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
-    .line 6428
+    .line 6422
     invoke-direct {p0, v8}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->setCachePath(Ljava/lang/String;)V
 
-    .line 6429
+    .line 6423
     return-void
 .end method
 
@@ -197,12 +197,12 @@
     .locals 1
 
     .prologue
-    .line 6585
+    .line 6579
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/android/internal/content/PackageHelper;->destroySdDir(Ljava/lang/String;)Z
 
-    .line 6586
+    .line 6580
     return-void
 .end method
 
@@ -211,12 +211,12 @@
     .parameter "newCachePath"
 
     .prologue
-    .line 6565
+    .line 6559
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 6566
+    .line 6560
     .local v0, cachePath:Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
@@ -230,7 +230,7 @@
 
     iput-object v1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->libraryPath:Ljava/lang/String;
 
-    .line 6567
+    .line 6561
     new-instance v1, Ljava/io/File;
 
     const-string v2, "pkg.apk"
@@ -243,7 +243,7 @@
 
     iput-object v1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->packagePath:Ljava/lang/String;
 
-    .line 6568
+    .line 6562
     return-void
 .end method
 
@@ -261,7 +261,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 6448
+    .line 6442
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -275,7 +275,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 6450
+    .line 6444
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->packageURI:Landroid/net/Uri;
 
     invoke-interface {p1, v0}, Lcom/android/internal/app/IMediaContainerService;->checkExternalFreeStorage(Landroid/net/Uri;)Z
@@ -284,7 +284,7 @@
 
     move-result v0
 
-    .line 6452
+    .line 6446
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -293,10 +293,10 @@
 
     invoke-virtual {v1, v2, v4}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 6450
+    .line 6444
     return v0
 
-    .line 6452
+    .line 6446
     :catchall_0
     move-exception v0
 
@@ -315,12 +315,12 @@
     .locals 5
 
     .prologue
-    .line 6589
+    .line 6583
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->getCodePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6591
+    .line 6585
     .local v1, sourceFile:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -330,11 +330,11 @@
 
     move-result v0
 
-    .line 6592
+    .line 6586
     .local v0, retCode:I
     if-gez v0, :cond_0
 
-    .line 6593
+    .line 6587
     const-string v2, "PackageManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -371,11 +371,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6598
+    .line 6592
     :cond_0
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cleanUp()V
 
-    .line 6599
+    .line 6593
     return-void
 .end method
 
@@ -392,13 +392,13 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 6457
+    .line 6451
     if-eqz p2, :cond_0
 
-    .line 6458
+    .line 6452
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->createCopyFile()V
 
-    .line 6469
+    .line 6463
     :goto_0
     :try_start_0
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -413,7 +413,7 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
 
-    .line 6471
+    .line 6465
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$InstallArgs;->packageURI:Landroid/net/Uri;
 
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
@@ -433,7 +433,7 @@
 
     move-result-object v0
 
-    .line 6474
+    .line 6468
     .local v0, newCachePath:Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -443,17 +443,17 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 6477
+    .line 6471
     if-eqz v0, :cond_1
 
-    .line 6478
+    .line 6472
     invoke-direct {p0, v0}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->setCachePath(Ljava/lang/String;)V
 
-    .line 6481
+    .line 6475
     :goto_1
     return v1
 
-    .line 6464
+    .line 6458
     .end local v0           #newCachePath:Ljava/lang/String;
     :cond_0
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
@@ -462,7 +462,7 @@
 
     goto :goto_0
 
-    .line 6474
+    .line 6468
     :catchall_0
     move-exception v2
 
@@ -476,7 +476,7 @@
 
     throw v2
 
-    .line 6481
+    .line 6475
     .restart local v0       #newCachePath:Ljava/lang/String;
     :cond_1
     const/16 v1, -0x12
@@ -488,14 +488,14 @@
     .locals 1
 
     .prologue
-    .line 6443
+    .line 6437
     invoke-static {}, Lcom/android/server/pm/PackageManagerService;->getTempContainerId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
-    .line 6444
+    .line 6438
     return-void
 .end method
 
@@ -504,10 +504,10 @@
     .parameter "delete"
 
     .prologue
-    .line 6617
+    .line 6611
     const/4 v1, 0x0
 
-    .line 6618
+    .line 6612
     .local v1, ret:Z
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
@@ -515,27 +515,27 @@
 
     move-result v0
 
-    .line 6619
+    .line 6613
     .local v0, mounted:Z
     if-eqz v0, :cond_0
 
-    .line 6621
+    .line 6615
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     invoke-static {v2}, Lcom/android/internal/content/PackageHelper;->unMountSdDir(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 6623
+    .line 6617
     :cond_0
     if-eqz v1, :cond_1
 
     if-eqz p1, :cond_1
 
-    .line 6624
+    .line 6618
     invoke-virtual {p0}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cleanUpResourcesLI()V
 
-    .line 6626
+    .line 6620
     :cond_1
     return v1
 .end method
@@ -545,20 +545,20 @@
     .parameter "status"
 
     .prologue
-    .line 6571
+    .line 6565
     const/4 v1, 0x1
 
     if-eq p1, v1, :cond_1
 
-    .line 6572
+    .line 6566
     invoke-direct {p0}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cleanUp()V
 
-    .line 6580
+    .line 6574
     :cond_0
     :goto_0
     return p1
 
-    .line 6574
+    .line 6568
     :cond_1
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
@@ -566,11 +566,11 @@
 
     move-result v0
 
-    .line 6575
+    .line 6569
     .local v0, mounted:Z
     if-nez v0, :cond_0
 
-    .line 6576
+    .line 6570
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -594,23 +594,23 @@
     .parameter "status"
 
     .prologue
-    .line 6501
+    .line 6495
     const/4 v2, 0x1
 
     if-eq p1, v2, :cond_1
 
-    .line 6503
+    .line 6497
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     invoke-static {v2}, Lcom/android/internal/content/PackageHelper;->destroySdDir(Ljava/lang/String;)Z
 
-    .line 6516
+    .line 6510
     .end local p1
     :cond_0
     :goto_0
     return p1
 
-    .line 6505
+    .line 6499
     .restart local p1
     :cond_1
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
@@ -619,11 +619,11 @@
 
     move-result v0
 
-    .line 6506
+    .line 6500
     .local v0, mounted:Z
     if-nez v0, :cond_0
 
-    .line 6507
+    .line 6501
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
@@ -639,16 +639,16 @@
 
     move-result-object v1
 
-    .line 6509
+    .line 6503
     .local v1, newCachePath:Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 6510
+    .line 6504
     invoke-direct {p0, v1}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->setCachePath(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 6512
+    .line 6506
     :cond_2
     const/16 p1, -0x12
 
@@ -664,7 +664,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6521
+    .line 6515
     const-string v3, "/pkg.apk"
 
     #calls: Lcom/android/server/pm/PackageManagerService;->getNextCodePath(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -672,11 +672,11 @@
 
     move-result-object v0
 
-    .line 6522
+    .line 6516
     .local v0, newCacheId:Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 6523
+    .line 6517
     .local v1, newCachePath:Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
@@ -686,7 +686,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 6525
+    .line 6519
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     invoke-static {v3}, Lcom/android/internal/content/PackageHelper;->unMountSdDir(Ljava/lang/String;)Z
@@ -695,7 +695,7 @@
 
     if-nez v3, :cond_0
 
-    .line 6526
+    .line 6520
     const-string v3, "PackageManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -726,11 +726,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6561
+    .line 6555
     :goto_0
     return v2
 
-    .line 6530
+    .line 6524
     :cond_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
@@ -740,7 +740,7 @@
 
     if-nez v3, :cond_2
 
-    .line 6531
+    .line 6525
     const-string v3, "PackageManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -781,14 +781,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6534
+    .line 6528
     invoke-static {v0}, Lcom/android/internal/content/PackageHelper;->destroySdDir(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 6535
+    .line 6529
     const-string v3, "PackageManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -813,7 +813,7 @@
 
     goto :goto_0
 
-    .line 6539
+    .line 6533
     :cond_1
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
@@ -823,7 +823,7 @@
 
     if-nez v3, :cond_2
 
-    .line 6540
+    .line 6534
     const-string v3, "PackageManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -866,7 +866,7 @@
 
     goto/16 :goto_0
 
-    .line 6545
+    .line 6539
     :cond_2
     invoke-static {v0}, Lcom/android/internal/content/PackageHelper;->isContainerMounted(Ljava/lang/String;)Z
 
@@ -874,7 +874,7 @@
 
     if-nez v3, :cond_3
 
-    .line 6546
+    .line 6540
     const-string v3, "PackageManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -897,7 +897,7 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6547
+    .line 6541
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     #calls: Lcom/android/server/pm/PackageManagerService;->getEncryptKey()Ljava/lang/String;
@@ -911,11 +911,11 @@
 
     move-result-object v1
 
-    .line 6552
+    .line 6546
     :goto_1
     if-nez v1, :cond_4
 
-    .line 6553
+    .line 6547
     const-string v3, "PackageManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -940,7 +940,7 @@
 
     goto/16 :goto_0
 
-    .line 6550
+    .line 6544
     :cond_3
     invoke-static {v0}, Lcom/android/internal/content/PackageHelper;->getSdDir(Ljava/lang/String;)Ljava/lang/String;
 
@@ -948,7 +948,7 @@
 
     goto :goto_1
 
-    .line 6556
+    .line 6550
     :cond_4
     const-string v2, "PackageManager"
 
@@ -994,13 +994,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6559
+    .line 6553
     iput-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
-    .line 6560
+    .line 6554
     invoke-direct {p0, v1}, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->setCachePath(Ljava/lang/String;)V
 
-    .line 6561
+    .line 6555
     const/4 v2, 0x1
 
     goto/16 :goto_0
@@ -1010,7 +1010,7 @@
     .locals 1
 
     .prologue
-    .line 6487
+    .line 6481
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->packagePath:Ljava/lang/String;
 
     return-object v0
@@ -1020,7 +1020,7 @@
     .locals 1
 
     .prologue
-    .line 6497
+    .line 6491
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->libraryPath:Ljava/lang/String;
 
     return-object v0
@@ -1030,7 +1030,7 @@
     .locals 3
 
     .prologue
-    .line 6609
+    .line 6603
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     const-string v2, "-"
@@ -1039,16 +1039,16 @@
 
     move-result v0
 
-    .line 6610
+    .line 6604
     .local v0, idx:I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 6611
+    .line 6605
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
-    .line 6613
+    .line 6607
     :goto_0
     return-object v1
 
@@ -1068,7 +1068,7 @@
     .locals 1
 
     .prologue
-    .line 6492
+    .line 6486
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->packagePath:Ljava/lang/String;
 
     return-object v0
@@ -1079,7 +1079,7 @@
     .parameter "app"
 
     .prologue
-    .line 6602
+    .line 6596
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$SdInstallArgs;->cid:Ljava/lang/String;
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -1088,10 +1088,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 6603
+    .line 6597
     const/4 v0, 0x1
 
-    .line 6605
+    .line 6599
     :goto_0
     return v0
 

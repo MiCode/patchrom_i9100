@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 814
+    .line 816
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +49,7 @@
 
     const/4 v10, 0x0
 
-    .line 818
+    .line 820
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     #getter for: Lcom/android/internal/policy/impl/PhoneWindowManager;->mHoldKeyConcept:Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;
@@ -65,7 +65,7 @@
 
     if-eqz v7, :cond_0
 
-    .line 819
+    .line 821
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     #getter for: Lcom/android/internal/policy/impl/PhoneWindowManager;->mHoldKeyConcept:Lcom/android/internal/policy/impl/PhoneWindowManager$HoldKeyConcept;
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    .line 820
+    .line 822
     .local v0, componentName:Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
@@ -93,20 +93,20 @@
 
     if-eqz v7, :cond_0
 
-    .line 821
+    .line 823
     const-string v7, "WindowManager"
 
     const-string v8, "Skip power key behavior by FactoryTest application"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
+    .line 904
     .end local v0           #componentName:Landroid/content/ComponentName;
     :goto_0
     :pswitch_0
     return-void
 
-    .line 826
+    .line 828
     :cond_0
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -115,7 +115,7 @@
 
     move-result v2
 
-    .line 827
+    .line 829
     .local v2, enableFactoryMode:Z
     const-string v7, "shutdownlogger"
 
@@ -127,13 +127,13 @@
 
     move-result-object v4
 
-    .line 828
+    .line 830
     .local v4, service:Landroid/app/IShutdownLogger;
     new-instance v5, Landroid/app/ShutdownLoggerManager;
 
     invoke-direct {v5, v4}, Landroid/app/ShutdownLoggerManager;-><init>(Landroid/app/IShutdownLogger;)V
 
-    .line 832
+    .line 834
     .local v5, slm:Landroid/app/ShutdownLoggerManager;
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -141,7 +141,7 @@
 
     if-gez v7, :cond_1
 
-    .line 833
+    .line 835
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v8, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
@@ -160,7 +160,7 @@
 
     iput v8, v7, Lcom/android/internal/policy/impl/PhoneWindowManager;->mLongPressOnPowerBehavior:I
 
-    .line 836
+    .line 838
     :cond_1
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -170,32 +170,32 @@
 
     goto :goto_0
 
-    .line 840
+    .line 842
     :pswitch_1
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v11, v7, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerKeyHandled:Z
 
-    .line 841
+    .line 843
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v7, v13, v10, v10}, Lcom/android/internal/policy/impl/PhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 842
+    .line 844
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const-string v8, "globalactions"
 
     invoke-virtual {v7, v8}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
 
-    .line 846
+    .line 848
     const-string v7, "vold.encrypt_progress"
 
     invoke-static {v7}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 847
+    .line 849
     .local v6, state:Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
@@ -203,10 +203,10 @@
 
     if-lez v7, :cond_2
 
-    .line 849
+    .line 851
     const/4 v3, 0x0
 
-    .line 851
+    .line 853
     .local v3, progress:I
     :try_start_0
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -215,13 +215,13 @@
 
     move-result v3
 
-    .line 855
+    .line 857
     :goto_1
     if-lez v3, :cond_2
 
     if-ge v3, v12, :cond_2
 
-    .line 857
+    .line 859
     const-string v7, "WindowManager"
 
     const-string v8, "Ignore Power Off Key!!"
@@ -230,11 +230,11 @@
 
     goto :goto_0
 
-    .line 852
+    .line 854
     :catch_0
     move-exception v1
 
-    .line 853
+    .line 855
     .local v1, e:Ljava/lang/Exception;
     const-string v7, "WindowManager"
 
@@ -264,25 +264,25 @@
 
     goto :goto_1
 
-    .line 865
+    .line 867
     .end local v1           #e:Ljava/lang/Exception;
     .end local v3           #progress:I
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 866
+    .line 868
     const-string v7, "PhoneWindowManager.mPowerLongPress.LONG_PRESS_POWER_GLOBAL_ACTIONS"
 
     invoke-virtual {v5, v7}, Landroid/app/ShutdownLoggerManager;->appendLog(Ljava/lang/String;)V
 
-    .line 867
+    .line 869
     const-string v7, "WindowManager"
 
     const-string v8, "FACTORY MODE CONCEPT : global action dialog - not showing because automatic shutdown is enabled"
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 868
+    .line 870
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v7, v7, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -291,7 +291,7 @@
 
     goto/16 :goto_0
 
-    .line 871
+    .line 873
     :cond_3
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
@@ -299,33 +299,33 @@
 
     goto/16 :goto_0
 
-    .line 874
+    .line 876
     .end local v6           #state:Ljava/lang/String;
     :pswitch_2
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iput-boolean v11, v7, Lcom/android/internal/policy/impl/PhoneWindowManager;->mPowerKeyHandled:Z
 
-    .line 875
+    .line 877
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v7, v13, v10, v10}, Lcom/android/internal/policy/impl/PhoneWindowManager;->performHapticFeedbackLw(Landroid/view/WindowManagerPolicy$WindowState;IZ)Z
 
-    .line 876
+    .line 878
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     const-string v8, "globalactions"
 
     invoke-virtual {v7, v8}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V
 
-    .line 880
+    .line 882
     const-string v7, "vold.encrypt_progress"
 
     invoke-static {v7}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 881
+    .line 883
     .restart local v6       #state:Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
@@ -333,10 +333,10 @@
 
     if-lez v7, :cond_4
 
-    .line 883
+    .line 885
     const/4 v3, 0x0
 
-    .line 885
+    .line 887
     .restart local v3       #progress:I
     :try_start_1
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -345,13 +345,13 @@
 
     move-result v3
 
-    .line 889
+    .line 891
     :goto_2
     if-lez v3, :cond_4
 
     if-ge v3, v12, :cond_4
 
-    .line 891
+    .line 893
     const-string v7, "WindowManager"
 
     const-string v8, "Ignore Power Off Key!!"
@@ -360,11 +360,11 @@
 
     goto/16 :goto_0
 
-    .line 886
+    .line 888
     :catch_1
     move-exception v1
 
-    .line 887
+    .line 889
     .restart local v1       #e:Ljava/lang/Exception;
     const-string v7, "WindowManager"
 
@@ -394,7 +394,7 @@
 
     goto :goto_2
 
-    .line 898
+    .line 900
     .end local v1           #e:Ljava/lang/Exception;
     .end local v3           #progress:I
     :cond_4
@@ -402,7 +402,7 @@
 
     invoke-virtual {v5, v7}, Landroid/app/ShutdownLoggerManager;->appendLog(Ljava/lang/String;)V
 
-    .line 899
+    .line 901
     iget-object v7, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$4;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v7, v7, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -411,7 +411,7 @@
 
     goto/16 :goto_0
 
-    .line 836
+    .line 838
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

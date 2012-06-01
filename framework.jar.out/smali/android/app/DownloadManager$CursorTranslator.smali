@@ -381,10 +381,8 @@
     .parameter "status"
 
     .prologue
-    .line 1797
     packed-switch p0, :pswitch_data_0
 
-    .line 1814
     :pswitch_0
     sget-boolean v0, Landroid/app/DownloadManager$CursorTranslator;->$assertionsDisabled:Z
 

@@ -30,15 +30,15 @@
     .parameter "keyEvent"
 
     .prologue
-    .line 3915
+    .line 3917
     iput-object p1, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassHeadsetKey;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3916
+    .line 3918
     iput-object p2, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassHeadsetKey;->mKeyEvent:Landroid/view/KeyEvent;
 
-    .line 3917
+    .line 3919
     return-void
 .end method
 
@@ -50,21 +50,21 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3920
+    .line 3922
     invoke-static {}, Landroid/app/ActivityManagerNative;->isSystemReady()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3921
+    .line 3923
     new-instance v1, Landroid/content/Intent;
 
     const-string v0, "android.intent.action.MEDIA_BUTTON"
 
     invoke-direct {v1, v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 3922
+    .line 3924
     .local v1, intent:Landroid/content/Intent;
     const-string v0, "android.intent.extra.KEY_EVENT"
 
@@ -72,7 +72,7 @@
 
     invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 3923
+    .line 3925
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$PassHeadsetKey;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mContext:Landroid/content/Context;
@@ -93,7 +93,7 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/content/Context;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 3926
+    .line 3928
     .end local v1           #intent:Landroid/content/Intent;
     :cond_0
     return-void

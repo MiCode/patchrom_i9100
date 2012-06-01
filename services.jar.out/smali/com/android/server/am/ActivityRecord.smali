@@ -3083,17 +3083,8 @@
 
     invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 626
-    :cond_0
-    const-string v0, "ActivityManager"
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     .line 628
+    :cond_0
     invoke-static {}, Landroid/util/GateConfig;->isGateEnabled()Z
 
     move-result v0

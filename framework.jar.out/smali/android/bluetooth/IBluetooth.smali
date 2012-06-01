@@ -207,14 +207,6 @@
     .end annotation
 .end method
 
-.method public abstract getConnectedDeviceCount()I
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
-.end method
-
 .method public abstract getConnectedHealthDevices()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {

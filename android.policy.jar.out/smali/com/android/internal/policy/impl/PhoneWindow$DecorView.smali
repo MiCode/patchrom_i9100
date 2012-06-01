@@ -595,10 +595,12 @@
 
     move-result v2
 
+    .line 1959
     .restart local v2       #handled:Z
     :goto_2
     if-nez v2, :cond_0
 
+    .line 1964
     .end local v1           #cb:Landroid/view/Window$Callback;
     .end local v2           #handled:Z
     :cond_4
@@ -2311,7 +2313,7 @@
 
     .line 2370
     :cond_7
-    const v5, 0x1020306
+    const v5, 0x1020304
 
     invoke-virtual {p0, v5}, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->findViewById(I)Landroid/view/View;
 

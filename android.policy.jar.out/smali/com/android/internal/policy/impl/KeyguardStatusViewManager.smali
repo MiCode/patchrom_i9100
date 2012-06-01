@@ -227,7 +227,7 @@
     iput-object v5, p0, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->mAlarmStatusView:Landroid/widget/TextView;
 
     .line 181
-    const v5, 0x10202ca
+    const v5, 0x10202c8
 
     invoke-direct {p0, v5}, Lcom/android/internal/policy/impl/KeyguardStatusViewManager;->findViewById(I)Landroid/view/View;
 

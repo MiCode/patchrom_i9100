@@ -135,7 +135,4 @@ examples:
 <!-- PAN -->
     <spnOverride numeric="21601" spn_display_rule="SPN_RULE_SHOW_PLMN" spn_override_only_on="21601"/>
 
-<!-- SEA -->
-    <spnOverride numeric="45205" spn_display_rule="SPN_RULE_SHOW_PLMN" spn_override_only_on="45205"/>  <!-- VIETNAMOBILE -->
-
 </spnOverrides>

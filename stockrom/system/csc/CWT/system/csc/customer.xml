@@ -1,0 +1,329 @@
+﻿<?xml  version="1.0" encoding="UTF-8" ?>
+<CustomerData>
+  <GeneralInfo>
+    <CSCEdition>ED002</CSCEdition>
+    <Country>Taiwan</Country>
+    <SalesCode>CWT</SalesCode>
+    <NbNetworkInfo>7</NbNetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>46692</MCCMNC>
+      <NetworkName>Chunghwa</NetworkName>
+      <SPName>Chunghwa</SPName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>46601</MCCMNC>
+      <NetworkName>FarEasTone</NetworkName>
+      <SPName>FarEasTone</SPName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>46688</MCCMNC>
+      <NetworkName>KGT</NetworkName>
+      <SPName>KGT-ONLINE</SPName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>46697</MCCMNC>
+      <NetworkName>TW Mobile</NetworkName>
+      <SPName>TW Mobile</SPName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>46699</MCCMNC>
+      <NetworkName>TW Mobile</NetworkName>
+      <SPName>TW Mobile</SPName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>46693</MCCMNC>
+      <NetworkName>TW Mobile</NetworkName>
+      <SPName>TW Mobile</SPName>
+    </NetworkInfo>
+    <NetworkInfo>
+      <MCCMNC>46689</MCCMNC>
+      <NetworkName>VIBO</NetworkName>
+      <SPName>VIBO</SPName>
+    </NetworkInfo>
+  </GeneralInfo>
+  <Settings>
+    <Main>
+      <Network>
+        <NbSOSNumber>2</NbSOSNumber>
+        <SOSNumber>112</SOSNumber>
+        <SOSNumber>911</SOSNumber>
+        <NbSOSNumberNoSIM>8</NbSOSNumberNoSIM>
+        <SOSNumberNoSIM>112</SOSNumberNoSIM>
+        <SOSNumberNoSIM>911</SOSNumberNoSIM>
+        <SOSNumberNoSIM>08</SOSNumberNoSIM>
+        <SOSNumberNoSIM>000</SOSNumberNoSIM>
+        <SOSNumberNoSIM>110</SOSNumberNoSIM>
+        <SOSNumberNoSIM>999</SOSNumberNoSIM>
+        <SOSNumberNoSIM>118</SOSNumberNoSIM>
+        <SOSNumberNoSIM>119</SOSNumberNoSIM>
+        <AutoProfile>on</AutoProfile>
+        <AutoVoicemail>off</AutoVoicemail>
+        <AutoEmailAccount>off</AutoEmailAccount>
+        <AutoBookmark>off</AutoBookmark>
+        <AutoLink>off</AutoLink>
+        <AutoSyncML>off</AutoSyncML>
+        <AutoFastDormancy>off</AutoFastDormancy>
+      </Network>
+      <Phone>
+        <DefLanguage>chinese_traditional_taiwan</DefLanguage>
+        <DefLanguageNoSIM>chinese_traditional_taiwan</DefLanguageNoSIM>
+        <DateTimeFormat>
+          <DateFormat>yyyymmdd</DateFormat>
+          <TimeFormat>24h</TimeFormat>
+        </DateTimeFormat>
+      </Phone>
+      <Security />
+    </Main>
+    <Messages>
+      <SMS>
+        <ReplyPath>off</ReplyPath>
+        <DeliveryReport>off</DeliveryReport>
+        <CharSupport>automatic</CharSupport>
+        <CharSupport>Automatic</CharSupport>
+        <SSMS>off</SSMS>
+      </SMS>      
+      <MMS>
+        <MmsSending>
+          <ReqDeliveryRep>off</ReqDeliveryRep>
+          <ReqReadRep>off</ReqReadRep>
+        </MmsSending>
+        <MmsReceiving>
+          <Home>auto</Home>
+        </MmsReceiving>
+      </MMS>
+    </Messages>
+    <Connections>
+      <NbProfileHandle>9</NbProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>Chunghwa</NetworkName>
+        <ProfBrowser>CHT Internet</ProfBrowser>
+        <ProfMMS>CHT MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>1</NbNetProfile>
+        <NetworkName>Chunghwa</NetworkName>
+        <ProfBrowser>CHT emome</ProfBrowser>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>TW Mobile</NetworkName>
+        <ProfBrowser>TWM match</ProfBrowser>
+        <ProfMMS>TWM MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>1</NbNetProfile>
+        <NetworkName>TW Mobile</NetworkName>
+        <ProfBrowser>TWM Internet</ProfBrowser>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>FarEasTone</NetworkName>
+        <ProfBrowser>FET Internet</ProfBrowser>
+        <ProfMMS>FET MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>VIBO</NetworkName>
+        <ProfBrowser>VIBO GPRS</ProfBrowser>
+        <ProfMMS>VIBO MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>1</NbNetProfile>
+        <NetworkName>VIBO</NetworkName>
+        <ProfBrowser>VIBO Internet</ProfBrowser>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>2</NbNetProfile>
+        <NetworkName>KGT</NetworkName>
+        <ProfBrowser>KGT GPRS</ProfBrowser>
+        <ProfMMS>KGT MMS</ProfMMS>
+      </ProfileHandle>
+      <ProfileHandle>
+        <NbNetProfile>1</NbNetProfile>
+        <NetworkName>KGT</NetworkName>
+        <ProfBrowser>KGT Internet</ProfBrowser>
+      </ProfileHandle>
+
+      <NbProfile>15</NbProfile>
+      <Profile>
+        <NetworkName>Chunghwa</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>CHT emome</ProfileName>
+        <PSparam>
+          <APN>emome</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Chunghwa</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>CHT MMS</ProfileName>
+        <URL>http://mms.emome.net:8002</URL>
+        <Proxy>
+          <ServAddr>10.1.1.1</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>emome</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>Chunghwa</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>CHT Internet</ProfileName>
+        <PSparam>
+          <APN>internet</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TW Mobile</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>TWM Internet</ProfileName>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>off</EnableFlag>
+        </Proxy>
+        <PSparam>
+          <APN>internet</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TW Mobile</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>TWM MMS</ProfileName>
+        <URL>http://mms.catch.net.tw/</URL>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>10.1.1.2</ServAddr>
+          <Port>80</Port>
+        </Proxy>
+        <PSparam>
+          <APN>mms</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>TW Mobile</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>TWM match</ProfileName>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>off</EnableFlag>
+        </Proxy>
+        <PSparam>
+          <APN>twm</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>FarEasTone</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>FET Internet</ProfileName>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>off</EnableFlag>
+        </Proxy>
+        <PSparam>
+          <APN>internet</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>FarEasTone</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>FET MMS</ProfileName>
+        <URL>http://mms</URL>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>210.241.199.199</ServAddr>
+          <Port>9201</Port>
+        </Proxy>
+        <PSparam>
+          <APN>fetnet01</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>KGT</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>KGT Internet</ProfileName>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>off</EnableFlag>
+        </Proxy>
+        <PSparam>
+          <APN>internet</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>KGT</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>KGT GPRS</ProfileName>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>210.241.199.199</ServAddr>
+          <Port>9201</Port>
+        </Proxy>
+        <PSparam>
+          <APN>fetnet01</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>KGT</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>KGT MMS</ProfileName>
+        <URL>http://mms.kgtmms.net.tw/mms/wapenc</URL>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>172.28.33.5</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>kgtmms</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>VIBO</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>VIBO Internet</ProfileName>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>off</EnableFlag>
+        </Proxy>
+        <PSparam>
+          <APN>vibo</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>VIBO</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>VIBO GPRS</ProfileName>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>172.24.128.36</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>vibo</APN>
+        </PSparam>
+      </Profile>
+      <Profile>
+        <NetworkName>VIBO</NetworkName>
+        <EnableStatus>enable</EnableStatus>
+        <ProfileName>VIBO MMS</ProfileName>
+        <URL>http://mms</URL>
+        <Protocol>http</Protocol>
+        <Proxy>
+          <EnableFlag>on</EnableFlag>
+          <ServAddr>172.24.128.36</ServAddr>
+          <Port>8080</Port>
+        </Proxy>
+        <PSparam>
+          <APN>vibo</APN>
+        </PSparam>
+      </Profile>
+
+    </Connections>
+  </Settings>
+</CustomerData>

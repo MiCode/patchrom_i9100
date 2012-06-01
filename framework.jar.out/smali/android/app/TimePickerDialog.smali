@@ -116,7 +116,7 @@
 
     .line 105
     .local v0, inflater:Landroid/view/LayoutInflater;
-    const v3, 0x10900af
+    const v3, 0x10900ad
 
     invoke-virtual {v0, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -127,7 +127,7 @@
     invoke-virtual {p0, v2}, Landroid/app/TimePickerDialog;->setView(Landroid/view/View;)V
 
     .line 107
-    const v3, 0x1020344
+    const v3, 0x1020342
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -51,7 +51,7 @@
 
     .prologue
     .line 85
-    const v0, 0x1090065
+    const v0, 0x1090063
 
     const v1, 0x102017d
 

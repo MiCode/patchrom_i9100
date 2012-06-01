@@ -40,7 +40,7 @@
         <!--Recipients number format-->
         <Recipient Type="String" charset="utf-8" maxLength="255"/>
       </Recipients>
-      <Content Type="String" charset="utf-8" maxLength="80"/>
+      <Content Type="String" charset="utf-8" maxLength="800"/>
     </SMS>
   </Message>
 </SDP>

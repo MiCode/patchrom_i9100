@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 463
+    .line 472
     iput-object p1, p0, Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;->this$0:Lcom/android/internal/widget/ScrollingTabContainerView;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
@@ -38,7 +38,7 @@
     .parameter "x1"
 
     .prologue
-    .line 463
+    .line 472
     invoke-direct {p0, p1}, Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;-><init>(Lcom/android/internal/widget/ScrollingTabContainerView;)V
 
     return-void
@@ -50,7 +50,7 @@
     .locals 1
 
     .prologue
-    .line 466
+    .line 475
     iget-object v0, p0, Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;->this$0:Lcom/android/internal/widget/ScrollingTabContainerView;
 
     #getter for: Lcom/android/internal/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
@@ -70,7 +70,7 @@
     .parameter "position"
 
     .prologue
-    .line 471
+    .line 480
     iget-object v0, p0, Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;->this$0:Lcom/android/internal/widget/ScrollingTabContainerView;
 
     #getter for: Lcom/android/internal/widget/ScrollingTabContainerView;->mTabLayout:Landroid/widget/LinearLayout;
@@ -96,7 +96,7 @@
     .parameter "position"
 
     .prologue
-    .line 476
+    .line 485
     int-to-long v0, p1
 
     return-wide v0
@@ -109,10 +109,10 @@
     .parameter "parent"
 
     .prologue
-    .line 481
+    .line 490
     if-nez p2, :cond_0
 
-    .line 482
+    .line 491
     iget-object v1, p0, Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;->this$0:Lcom/android/internal/widget/ScrollingTabContainerView;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;->getItem(I)Ljava/lang/Object;
@@ -128,14 +128,14 @@
 
     move-result-object p2
 
-    .line 486
+    .line 495
     :goto_0
     return-object p2
 
     :cond_0
     move-object v0, p2
 
-    .line 484
+    .line 493
     check-cast v0, Lcom/android/internal/widget/ScrollingTabContainerView$TabView;
 
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/ScrollingTabContainerView$TabAdapter;->getItem(I)Ljava/lang/Object;

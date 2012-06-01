@@ -4245,7 +4245,7 @@
     .line 521
     const-string v0, "CDMA"
 
-    const-string/jumbo v1, "isCphsMwiMessage: is not supported in CDMA mode."
+    const-string v1, "isCphsMwiMessage: is not supported in CDMA mode."
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

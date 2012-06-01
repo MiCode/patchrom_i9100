@@ -1,17 +1,0 @@
-<?xml  version="1.0" encoding="UTF-8" ?>
-<CustomerData>  <SettingsData>    <ShowPassword>1</ShowPassword>  </SettingsData>
-  <MMS>
-  	<repeat_notification>off</repeat_notification>
-  	<vibrate>off</vibrate>
-  	<enable_notifications>on</enable_notifications>
-  	<creation_mode>free</creation_mode>
-  	<ringtone>content://settings/system/notification_sound</ringtone>
-  </MMS>
-  <LatinIME>
-    <VibrateOn>on</VibrateOn>
-    <SoundOn>on</SoundOn>
-  </LatinIME>
-  <FMRadio>
-    <fmradio_region>Singapore</fmradio_region>
-  </FMRadio>   
-</CustomerData>

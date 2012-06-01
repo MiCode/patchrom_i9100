@@ -36,7 +36,7 @@
     .parameter
 
     .prologue
-    .line 7301
+    .line 7295
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$8;->val$packageName:Ljava/lang/String;
@@ -58,17 +58,17 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 7303
+    .line 7297
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v3, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 7305
+    .line 7299
     const/4 v2, 0x1
 
-    .line 7306
+    .line 7300
     .local v2, returnCode:I
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -82,7 +82,7 @@
 
     check-cast v1, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 7308
+    .line 7302
     .local v1, edm:Landroid/app/enterprise/EnterpriseDeviceManager;
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->getApplicationPolicy()Landroid/app/enterprise/ApplicationPolicy;
 
@@ -96,23 +96,23 @@
 
     if-nez v3, :cond_1
 
-    .line 7309
+    .line 7303
     const-string v3, "PackageManager"
 
     const-string v4, "This app uninstallation is not allowed"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7310
+    .line 7304
     const/4 v2, -0x2
 
-    .line 7316
+    .line 7310
     :goto_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
     if-eqz v3, :cond_0
 
-    .line 7318
+    .line 7312
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->val$observer:Landroid/content/pm/IPackageDeleteObserver;
 
@@ -122,12 +122,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7323
+    .line 7317
     :cond_0
     :goto_1
     return-void
 
-    .line 7313
+    .line 7307
     :cond_1
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$8;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -142,11 +142,11 @@
 
     goto :goto_0
 
-    .line 7319
+    .line 7313
     :catch_0
     move-exception v0
 
-    .line 7320
+    .line 7314
     .local v0, e:Landroid/os/RemoteException;
     const-string v3, "PackageManager"
 

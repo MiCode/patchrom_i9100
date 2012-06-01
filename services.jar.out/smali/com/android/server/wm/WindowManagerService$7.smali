@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 10302
+    .line 10294
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$7;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,16 +40,16 @@
     .parameter "intent"
 
     .prologue
-    .line 10305
+    .line 10297
     const/4 v15, 0x0
 
-    .line 10307
+    .line 10299
     .local v15, win:Lcom/android/server/wm/WindowState;
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 10308
+    .line 10300
     .local v9, action:Ljava/lang/String;
     const-string v1, "statusbar_height"
 
@@ -61,7 +61,7 @@
 
     move-result v14
 
-    .line 10309
+    .line 10301
     .local v14, statusbarHeight:I
     const-string v1, "samsunghandwrite"
 
@@ -71,7 +71,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 10310
+    .line 10302
     const-string v1, "M"
 
     move-object/from16 v0, p2
@@ -82,18 +82,18 @@
 
     check-cast v13, Landroid/view/MotionEvent;
 
-    .line 10311
+    .line 10303
     .local v13, me:Landroid/view/MotionEvent;
     const/4 v12, 0x1
 
-    .line 10312
+    .line 10304
     .local v12, isM:Z
     if-nez v13, :cond_1
 
-    .line 10313
+    .line 10305
     const/4 v12, 0x0
 
-    .line 10314
+    .line 10306
     const-string v1, "N"
 
     move-object/from16 v0, p2
@@ -105,18 +105,18 @@
     .end local v13           #me:Landroid/view/MotionEvent;
     check-cast v13, Landroid/view/MotionEvent;
 
-    .line 10315
+    .line 10307
     .restart local v13       #me:Landroid/view/MotionEvent;
     if-nez v13, :cond_1
 
-    .line 10346
+    .line 10338
     .end local v12           #isM:Z
     .end local v13           #me:Landroid/view/MotionEvent;
     :cond_0
     :goto_0
     return-void
 
-    .line 10318
+    .line 10310
     .restart local v12       #isM:Z
     .restart local v13       #me:Landroid/view/MotionEvent;
     :cond_1
@@ -129,10 +129,10 @@
 
     move-result-object v15
 
-    .line 10319
+    .line 10311
     if-eqz v15, :cond_0
 
-    .line 10322
+    .line 10314
     invoke-virtual {v13}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
@@ -145,7 +145,7 @@
 
     sub-float v6, v1, v2
 
-    .line 10324
+    .line 10316
     .local v6, xPos:F
     invoke-virtual {v13}, Landroid/view/MotionEvent;->getY()F
 
@@ -159,11 +159,11 @@
 
     sub-float v7, v1, v2
 
-    .line 10333
+    .line 10325
     .local v7, yPos:F
     if-eqz v12, :cond_0
 
-    .line 10334
+    .line 10326
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -183,7 +183,7 @@
 
     move-result-object v10
 
-    .line 10336
+    .line 10328
     .local v10, evDown:Landroid/view/MotionEvent;
     invoke-virtual {v13}, Landroid/view/MotionEvent;->getSource()I
 
@@ -191,14 +191,14 @@
 
     invoke-virtual {v10, v1}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 10337
+    .line 10329
     iget-object v1, v15, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
 
     const/4 v2, 0x1
 
     invoke-interface {v1, v10, v2}, Landroid/view/IWindow;->dispatchMotion(Landroid/view/MotionEvent;Z)V
 
-    .line 10339
+    .line 10331
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
@@ -217,7 +217,7 @@
 
     move-result-object v11
 
-    .line 10341
+    .line 10333
     .local v11, evUp:Landroid/view/MotionEvent;
     invoke-virtual {v13}, Landroid/view/MotionEvent;->getSource()I
 
@@ -225,7 +225,7 @@
 
     invoke-virtual {v11, v1}, Landroid/view/MotionEvent;->setSource(I)V
 
-    .line 10342
+    .line 10334
     iget-object v1, v15, Lcom/android/server/wm/WindowState;->mClient:Landroid/view/IWindow;
 
     const/4 v2, 0x1
@@ -236,7 +236,7 @@
 
     goto :goto_0
 
-    .line 10344
+    .line 10336
     .end local v10           #evDown:Landroid/view/MotionEvent;
     .end local v11           #evUp:Landroid/view/MotionEvent;
     :catch_0

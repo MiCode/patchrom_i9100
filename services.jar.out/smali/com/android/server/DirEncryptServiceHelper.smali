@@ -1455,7 +1455,7 @@
     .parameter "progress"
 
     .prologue
-    const v4, 0x102030f
+    const v4, 0x102030d
 
     .line 1129
     const-string v0, ""
@@ -1475,7 +1475,7 @@
 
     move-result-object v2
 
-    const v3, 0x109008f
+    const v3, 0x109008d
 
     invoke-direct {v1, v2, v3}, Landroid/widget/RemoteViews;-><init>(Ljava/lang/String;I)V
 
@@ -1511,7 +1511,7 @@
     :goto_0
     iget-object v1, p0, Lcom/android/server/DirEncryptServiceHelper;->mRemoteProgressView:Landroid/widget/RemoteViews;
 
-    const v2, 0x1020310
+    const v2, 0x102030e
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1546,7 +1546,7 @@
     .line 1142
     iget-object v1, p0, Lcom/android/server/DirEncryptServiceHelper;->mRemoteProgressView:Landroid/widget/RemoteViews;
 
-    const v2, 0x1020311
+    const v2, 0x102030f
 
     const/16 v3, 0x64
 

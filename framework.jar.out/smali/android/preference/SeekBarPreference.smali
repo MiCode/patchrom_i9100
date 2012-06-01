@@ -87,7 +87,7 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 46
-    const v1, 0x109007c
+    const v1, 0x109007a
 
     invoke-virtual {p0, v1}, Landroid/preference/SeekBarPreference;->setLayoutResource(I)V
 
@@ -170,7 +170,7 @@
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 60
-    const v1, 0x10202fc
+    const v1, 0x10202fa
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

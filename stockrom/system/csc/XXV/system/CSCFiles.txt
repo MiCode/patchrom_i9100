@@ -1,6 +1,0 @@
-/system/csc/XXV/system/csc/contents.db
-/system/csc/XXV/system/csc/others.xml
-/system/csc/XXV/system/csc/sales_code.dat
-/system/csc/XXV/system/csc/customer.xml
-/system/csc/XXV/system/CSCFiles.txt
-/system/csc/XXV/system/CSCVersion.txt

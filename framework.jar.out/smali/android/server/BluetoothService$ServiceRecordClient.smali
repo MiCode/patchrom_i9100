@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 185
+    .line 183
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +38,7 @@
     .parameter "x0"
 
     .prologue
-    .line 185
+    .line 183
     invoke-direct {p0}, Landroid/server/BluetoothService$ServiceRecordClient;-><init>()V
 
     return-void

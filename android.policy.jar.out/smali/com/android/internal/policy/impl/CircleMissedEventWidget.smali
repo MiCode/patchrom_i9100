@@ -149,7 +149,7 @@
 
     .line 108
     .local v1, inflater:Landroid/view/LayoutInflater;
-    const v2, 0x10900d6
+    const v2, 0x10900d4
 
     invoke-virtual {v1, v2, p0, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -159,7 +159,7 @@
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->setGravity(I)V
 
     .line 115
-    const v2, 0x1020367
+    const v2, 0x1020365
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->findViewById(I)Landroid/view/View;
 
@@ -170,7 +170,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->mMissedCall:Landroid/widget/LinearLayout;
 
     .line 116
-    const v2, 0x1020369
+    const v2, 0x1020367
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->findViewById(I)Landroid/view/View;
 
@@ -181,7 +181,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->mMissedMsg:Landroid/widget/LinearLayout;
 
     .line 117
-    const v2, 0x1020366
+    const v2, 0x1020364
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->mMissedCallMsg:Landroid/widget/LinearLayout;
 
     .line 121
-    const v2, 0x1020368
+    const v2, 0x1020366
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->findViewById(I)Landroid/view/View;
 
@@ -203,7 +203,7 @@
     iput-object v2, p0, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->mMissedCallTextView:Landroid/widget/TextView;
 
     .line 122
-    const v2, 0x102036a
+    const v2, 0x1020368
 
     invoke-virtual {p0, v2}, Lcom/android/internal/policy/impl/CircleMissedEventWidget;->findViewById(I)Landroid/view/View;
 

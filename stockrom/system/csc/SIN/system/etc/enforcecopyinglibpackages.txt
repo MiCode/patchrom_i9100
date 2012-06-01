@@ -1,3 +1,0 @@
-2
-com.singtel.mysingtel
-sg.sonar

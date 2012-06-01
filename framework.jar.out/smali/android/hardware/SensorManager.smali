@@ -893,7 +893,7 @@
     .parameter "prevR"
 
     .prologue
-    .line 2131
+    .line 2130
     const/4 v11, 0x0
 
     .local v11, rd1:F
@@ -908,7 +908,7 @@
     .local v14, rd7:F
     const/4 v15, 0x0
 
-    .line 2132
+    .line 2131
     .local v15, rd8:F
     const/16 v16, 0x0
 
@@ -936,7 +936,7 @@
     .local v23, ri7:F
     const/16 v24, 0x0
 
-    .line 2133
+    .line 2132
     .local v24, ri8:F
     const/4 v2, 0x0
 
@@ -964,7 +964,7 @@
     .local v9, pri7:F
     const/4 v10, 0x0
 
-    .line 2136
+    .line 2135
     .local v10, pri8:F
     move-object/from16 v0, p0
 
@@ -980,7 +980,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2137
+    .line 2136
     new-instance v25, Ljava/lang/IllegalArgumentException;
 
     const-string v26, "R array length must be 3"
@@ -989,7 +989,7 @@
 
     throw v25
 
-    .line 2139
+    .line 2138
     :cond_0
     move-object/from16 v0, p1
 
@@ -1005,52 +1005,52 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2140
+    .line 2139
     const/16 v25, 0x0
 
     aget v16, p1, v25
 
-    .line 2141
+    .line 2140
     const/16 v25, 0x1
 
     aget v17, p1, v25
 
-    .line 2142
+    .line 2141
     const/16 v25, 0x2
 
     aget v18, p1, v25
 
-    .line 2143
+    .line 2142
     const/16 v25, 0x3
 
     aget v19, p1, v25
 
-    .line 2144
+    .line 2143
     const/16 v25, 0x4
 
     aget v20, p1, v25
 
-    .line 2145
+    .line 2144
     const/16 v25, 0x5
 
     aget v21, p1, v25
 
-    .line 2146
+    .line 2145
     const/16 v25, 0x6
 
     aget v22, p1, v25
 
-    .line 2147
+    .line 2146
     const/16 v25, 0x7
 
     aget v23, p1, v25
 
-    .line 2148
+    .line 2147
     const/16 v25, 0x8
 
     aget v24, p1, v25
 
-    .line 2165
+    .line 2164
     :goto_0
     move-object/from16 v0, p2
 
@@ -1066,52 +1066,52 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 2166
+    .line 2165
     const/16 v25, 0x0
 
     aget v2, p2, v25
 
-    .line 2167
+    .line 2166
     const/16 v25, 0x1
 
     aget v3, p2, v25
 
-    .line 2168
+    .line 2167
     const/16 v25, 0x2
 
     aget v4, p2, v25
 
-    .line 2169
+    .line 2168
     const/16 v25, 0x3
 
     aget v5, p2, v25
 
-    .line 2170
+    .line 2169
     const/16 v25, 0x4
 
     aget v6, p2, v25
 
-    .line 2171
+    .line 2170
     const/16 v25, 0x5
 
     aget v7, p2, v25
 
-    .line 2172
+    .line 2171
     const/16 v25, 0x6
 
     aget v8, p2, v25
 
-    .line 2173
+    .line 2172
     const/16 v25, 0x7
 
     aget v9, p2, v25
 
-    .line 2174
+    .line 2173
     const/16 v25, 0x8
 
     aget v10, p2, v25
 
-    .line 2194
+    .line 2193
     :goto_1
     mul-float v25, v2, v17
 
@@ -1123,7 +1123,7 @@
 
     add-float v11, v25, v26
 
-    .line 2195
+    .line 2194
     mul-float v25, v3, v17
 
     mul-float v26, v6, v20
@@ -1134,7 +1134,7 @@
 
     add-float v12, v25, v26
 
-    .line 2196
+    .line 2195
     mul-float v25, v4, v16
 
     mul-float v26, v7, v19
@@ -1145,7 +1145,7 @@
 
     add-float v13, v25, v26
 
-    .line 2197
+    .line 2196
     mul-float v25, v4, v17
 
     mul-float v26, v7, v20
@@ -1156,7 +1156,7 @@
 
     add-float v14, v25, v26
 
-    .line 2198
+    .line 2197
     mul-float v25, v4, v18
 
     mul-float v26, v7, v21
@@ -1167,7 +1167,7 @@
 
     add-float v15, v25, v26
 
-    .line 2200
+    .line 2199
     const/16 v25, 0x0
 
     float-to-double v0, v11
@@ -1190,7 +1190,7 @@
 
     aput v26, p0, v25
 
-    .line 2201
+    .line 2200
     const/16 v25, 0x1
 
     neg-float v0, v14
@@ -1215,7 +1215,7 @@
 
     aput v26, p0, v25
 
-    .line 2202
+    .line 2201
     const/16 v25, 0x2
 
     neg-float v0, v13
@@ -1244,10 +1244,10 @@
 
     aput v26, p0, v25
 
-    .line 2204
+    .line 2203
     return-void
 
-    .line 2149
+    .line 2148
     :cond_1
     move-object/from16 v0, p1
 
@@ -1263,54 +1263,54 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 2150
+    .line 2149
     const/16 v25, 0x0
 
     aget v16, p1, v25
 
-    .line 2151
+    .line 2150
     const/16 v25, 0x1
 
     aget v17, p1, v25
 
-    .line 2152
+    .line 2151
     const/16 v25, 0x2
 
     aget v18, p1, v25
 
-    .line 2153
+    .line 2152
     const/16 v25, 0x4
 
     aget v19, p1, v25
 
-    .line 2154
+    .line 2153
     const/16 v25, 0x5
 
     aget v20, p1, v25
 
-    .line 2155
+    .line 2154
     const/16 v25, 0x6
 
     aget v21, p1, v25
 
-    .line 2156
+    .line 2155
     const/16 v25, 0x8
 
     aget v22, p1, v25
 
-    .line 2157
+    .line 2156
     const/16 v25, 0x9
 
     aget v23, p1, v25
 
-    .line 2158
+    .line 2157
     const/16 v25, 0xa
 
     aget v24, p1, v25
 
     goto/16 :goto_0
 
-    .line 2162
+    .line 2161
     :cond_2
     new-instance v25, Ljava/lang/IllegalArgumentException;
 
@@ -1320,7 +1320,7 @@
 
     throw v25
 
-    .line 2175
+    .line 2174
     :cond_3
     move-object/from16 v0, p2
 
@@ -1336,54 +1336,54 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 2176
+    .line 2175
     const/16 v25, 0x0
 
     aget v2, p2, v25
 
-    .line 2177
+    .line 2176
     const/16 v25, 0x1
 
     aget v3, p2, v25
 
-    .line 2178
+    .line 2177
     const/16 v25, 0x2
 
     aget v4, p2, v25
 
-    .line 2179
+    .line 2178
     const/16 v25, 0x4
 
     aget v5, p2, v25
 
-    .line 2180
+    .line 2179
     const/16 v25, 0x5
 
     aget v6, p2, v25
 
-    .line 2181
+    .line 2180
     const/16 v25, 0x6
 
     aget v7, p2, v25
 
-    .line 2182
+    .line 2181
     const/16 v25, 0x8
 
     aget v8, p2, v25
 
-    .line 2183
+    .line 2182
     const/16 v25, 0x9
 
     aget v9, p2, v25
 
-    .line 2184
+    .line 2183
     const/16 v25, 0xa
 
     aget v10, p2, v25
 
     goto/16 :goto_1
 
-    .line 2188
+    .line 2187
     :cond_4
     new-instance v25, Ljava/lang/IllegalArgumentException;
 
@@ -1660,7 +1660,7 @@
 
     const/4 v3, 0x0
 
-    .line 2298
+    .line 2297
     array-length v0, p1
 
     if-eq v0, v6, :cond_0
@@ -1669,7 +1669,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 2299
+    .line 2298
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "rv array length must be 9 or 16"
@@ -1678,13 +1678,13 @@
 
     throw v0
 
-    .line 2300
+    .line 2299
     :cond_0
     array-length v0, p0
 
     if-eq v0, v1, :cond_1
 
-    .line 2301
+    .line 2300
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Q array length must be 4"
@@ -1693,37 +1693,37 @@
 
     throw v0
 
-    .line 2303
+    .line 2302
     :cond_1
     array-length v0, p1
 
     if-ne v0, v1, :cond_2
 
-    .line 2304
+    .line 2303
     aget v0, p1, v6
 
     aput v0, p0, v3
 
-    .line 2309
+    .line 2308
     :goto_0
     aget v0, p1, v3
 
     aput v0, p0, v4
 
-    .line 2310
+    .line 2309
     aget v0, p1, v4
 
     aput v0, p0, v5
 
-    .line 2311
+    .line 2310
     aget v0, p1, v5
 
     aput v0, p0, v6
 
-    .line 2312
+    .line 2311
     return-void
 
-    .line 2306
+    .line 2305
     :cond_2
     const/high16 v0, 0x3f80
 
@@ -1753,7 +1753,7 @@
 
     aput v0, p0, v3
 
-    .line 2307
+    .line 2306
     aget v0, p0, v3
 
     const/4 v1, 0x0
@@ -2421,7 +2421,7 @@
     .parameter "rotationVector"
 
     .prologue
-    .line 2228
+    .line 2227
     move-object/from16 v0, p1
 
     array-length v14, v0
@@ -2438,7 +2438,7 @@
 
     if-eq v14, v15, :cond_0
 
-    .line 2229
+    .line 2228
     new-instance v14, Ljava/lang/IllegalArgumentException;
 
     const-string v15, "R array length must be 3 or 4"
@@ -2447,25 +2447,25 @@
 
     throw v14
 
-    .line 2232
+    .line 2231
     :cond_0
     const/4 v14, 0x0
 
     aget v2, p1, v14
 
-    .line 2233
+    .line 2232
     .local v2, q1:F
     const/4 v14, 0x1
 
     aget v6, p1, v14
 
-    .line 2234
+    .line 2233
     .local v6, q2:F
     const/4 v14, 0x2
 
     aget v9, p1, v14
 
-    .line 2236
+    .line 2235
     .local v9, q3:F
     move-object/from16 v0, p1
 
@@ -2475,12 +2475,12 @@
 
     if-ne v14, v15, :cond_1
 
-    .line 2237
+    .line 2236
     const/4 v14, 0x3
 
     aget v1, p1, v14
 
-    .line 2243
+    .line 2242
     .local v1, q0:F
     :goto_0
     const/high16 v14, 0x4000
@@ -2489,7 +2489,7 @@
 
     mul-float v11, v14, v2
 
-    .line 2244
+    .line 2243
     .local v11, sq_q1:F
     const/high16 v14, 0x4000
 
@@ -2497,7 +2497,7 @@
 
     mul-float v12, v14, v6
 
-    .line 2245
+    .line 2244
     .local v12, sq_q2:F
     const/high16 v14, 0x4000
 
@@ -2505,7 +2505,7 @@
 
     mul-float v13, v14, v9
 
-    .line 2246
+    .line 2245
     .local v13, sq_q3:F
     const/high16 v14, 0x4000
 
@@ -2513,7 +2513,7 @@
 
     mul-float v4, v14, v6
 
-    .line 2247
+    .line 2246
     .local v4, q1_q2:F
     const/high16 v14, 0x4000
 
@@ -2521,7 +2521,7 @@
 
     mul-float v10, v14, v1
 
-    .line 2248
+    .line 2247
     .local v10, q3_q0:F
     const/high16 v14, 0x4000
 
@@ -2529,7 +2529,7 @@
 
     mul-float v5, v14, v9
 
-    .line 2249
+    .line 2248
     .local v5, q1_q3:F
     const/high16 v14, 0x4000
 
@@ -2537,7 +2537,7 @@
 
     mul-float v7, v14, v1
 
-    .line 2250
+    .line 2249
     .local v7, q2_q0:F
     const/high16 v14, 0x4000
 
@@ -2545,7 +2545,7 @@
 
     mul-float v8, v14, v9
 
-    .line 2251
+    .line 2250
     .local v8, q2_q3:F
     const/high16 v14, 0x4000
 
@@ -2553,7 +2553,7 @@
 
     mul-float v3, v14, v1
 
-    .line 2253
+    .line 2252
     .local v3, q1_q0:F
     move-object/from16 v0, p0
 
@@ -2563,7 +2563,7 @@
 
     if-ne v14, v15, :cond_3
 
-    .line 2254
+    .line 2253
     const/4 v14, 0x0
 
     const/high16 v15, 0x3f80
@@ -2574,28 +2574,28 @@
 
     aput v15, p0, v14
 
-    .line 2255
+    .line 2254
     const/4 v14, 0x1
 
     sub-float v15, v4, v10
 
     aput v15, p0, v14
 
-    .line 2256
+    .line 2255
     const/4 v14, 0x2
 
     add-float v15, v5, v7
 
     aput v15, p0, v14
 
-    .line 2258
+    .line 2257
     const/4 v14, 0x3
 
     add-float v15, v4, v10
 
     aput v15, p0, v14
 
-    .line 2259
+    .line 2258
     const/4 v14, 0x4
 
     const/high16 v15, 0x3f80
@@ -2606,28 +2606,28 @@
 
     aput v15, p0, v14
 
-    .line 2260
+    .line 2259
     const/4 v14, 0x5
 
     sub-float v15, v8, v3
 
     aput v15, p0, v14
 
-    .line 2262
+    .line 2261
     const/4 v14, 0x6
 
     sub-float v15, v5, v7
 
     aput v15, p0, v14
 
-    .line 2263
+    .line 2262
     const/4 v14, 0x7
 
     add-float v15, v8, v3
 
     aput v15, p0, v14
 
-    .line 2264
+    .line 2263
     const/16 v14, 0x8
 
     const/high16 v15, 0x3f80
@@ -2638,11 +2638,11 @@
 
     aput v15, p0, v14
 
-    .line 2288
+    .line 2287
     :goto_1
     return-void
 
-    .line 2239
+    .line 2238
     .end local v1           #q0:F
     .end local v3           #q1_q0:F
     .end local v4           #q1_q2:F
@@ -2668,7 +2668,7 @@
 
     sub-float v1, v14, v15
 
-    .line 2240
+    .line 2239
     .restart local v1       #q0:F
     const/4 v14, 0x0
 
@@ -2692,7 +2692,7 @@
 
     goto :goto_2
 
-    .line 2265
+    .line 2264
     .restart local v3       #q1_q0:F
     .restart local v4       #q1_q2:F
     .restart local v5       #q1_q3:F
@@ -2711,7 +2711,7 @@
 
     if-ne v14, v15, :cond_4
 
-    .line 2266
+    .line 2265
     const/4 v14, 0x0
 
     const/high16 v15, 0x3f80
@@ -2722,35 +2722,35 @@
 
     aput v15, p0, v14
 
-    .line 2267
+    .line 2266
     const/4 v14, 0x1
 
     sub-float v15, v4, v10
 
     aput v15, p0, v14
 
-    .line 2268
+    .line 2267
     const/4 v14, 0x2
 
     add-float v15, v5, v7
 
     aput v15, p0, v14
 
-    .line 2269
+    .line 2268
     const/4 v14, 0x3
 
     const/4 v15, 0x0
 
     aput v15, p0, v14
 
-    .line 2271
+    .line 2270
     const/4 v14, 0x4
 
     add-float v15, v4, v10
 
     aput v15, p0, v14
 
-    .line 2272
+    .line 2271
     const/4 v14, 0x5
 
     const/high16 v15, 0x3f80
@@ -2761,35 +2761,35 @@
 
     aput v15, p0, v14
 
-    .line 2273
+    .line 2272
     const/4 v14, 0x6
 
     sub-float v15, v8, v3
 
     aput v15, p0, v14
 
-    .line 2274
+    .line 2273
     const/4 v14, 0x7
 
     const/4 v15, 0x0
 
     aput v15, p0, v14
 
-    .line 2276
+    .line 2275
     const/16 v14, 0x8
 
     sub-float v15, v5, v7
 
     aput v15, p0, v14
 
-    .line 2277
+    .line 2276
     const/16 v14, 0x9
 
     add-float v15, v8, v3
 
     aput v15, p0, v14
 
-    .line 2278
+    .line 2277
     const/16 v14, 0xa
 
     const/high16 v15, 0x3f80
@@ -2800,14 +2800,14 @@
 
     aput v15, p0, v14
 
-    .line 2279
+    .line 2278
     const/16 v14, 0xb
 
     const/4 v15, 0x0
 
     aput v15, p0, v14
 
-    .line 2281
+    .line 2280
     const/16 v14, 0xc
 
     const/16 v15, 0xd
@@ -2822,7 +2822,7 @@
 
     aput v17, p0, v14
 
-    .line 2282
+    .line 2281
     const/16 v14, 0xf
 
     const/high16 v15, 0x3f80
@@ -2831,7 +2831,7 @@
 
     goto :goto_1
 
-    .line 2286
+    .line 2285
     :cond_4
     new-instance v14, Ljava/lang/IllegalArgumentException;
 
@@ -4201,14 +4201,14 @@
     .locals 2
 
     .prologue
-    .line 1897
+    .line 1896
     const-string v0, "SensorManager"
 
     const-string/jumbo v1, "sensors_get_supported_func"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1898
+    .line 1897
     invoke-static {}, Landroid/hardware/SensorManager;->sensors_get_supported_func()I
 
     move-result v0
@@ -4975,16 +4975,6 @@
 
     const-string v5, "GT-I9100"
 
-    const-string v6, "GT-I9100T"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    const-string v5, "GT-I9100"
-
     const-string v6, "GT-N7000"
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5013,11 +5003,11 @@
 
     if-eqz v5, :cond_3
 
-    .line 1839
+    .line 1838
     :cond_0
     const/4 v2, 0x0
 
-    .line 1842
+    .line 1841
     .local v2, out:Ljava/io/OutputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
@@ -5033,12 +5023,12 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1848
+    .line 1847
     .end local v2           #out:Ljava/io/OutputStream;
     .local v3, out:Ljava/io/OutputStream;
     if-nez v3, :cond_2
 
-    .line 1849
+    .line 1848
     :try_start_1
     const-string v5, "SensorManager"
 
@@ -5048,17 +5038,17 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 1870
+    .line 1869
     .end local v3           #out:Ljava/io/OutputStream;
     :goto_0
     return v4
 
-    .line 1843
+    .line 1842
     .restart local v2       #out:Ljava/io/OutputStream;
     :catch_0
     move-exception v0
 
-    .line 1844
+    .line 1843
     .local v0, e:Ljava/io/FileNotFoundException;
     :try_start_2
     const-string v5, "SensorManager"
@@ -5067,33 +5057,33 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1845
+    .line 1844
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_0
 
-    .line 1856
+    .line 1855
     .end local v0           #e:Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 1857
+    .line 1856
     .local v0, e:Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1858
+    .line 1857
     if-eqz v2, :cond_1
 
-    .line 1860
+    .line 1859
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 1865
+    .line 1864
     :cond_1
     :goto_2
     const-string v5, "SensorManager"
@@ -5104,7 +5094,7 @@
 
     goto :goto_0
 
-    .line 1852
+    .line 1851
     .end local v0           #e:Ljava/io/IOException;
     .end local v2           #out:Ljava/io/OutputStream;
     .restart local v3       #out:Ljava/io/OutputStream;
@@ -5114,10 +5104,10 @@
     :try_start_4
     invoke-virtual {v3, v5}, Ljava/io/OutputStream;->write(I)V
 
-    .line 1853
+    .line 1852
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
 
-    .line 1854
+    .line 1853
     const-string v5, "SensorManager"
 
     const-string/jumbo v6, "runAccCalibration Complete!!"
@@ -5126,25 +5116,25 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 1855
+    .line 1854
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1861
+    .line 1860
     .end local v3           #out:Ljava/io/OutputStream;
     .restart local v0       #e:Ljava/io/IOException;
     .restart local v2       #out:Ljava/io/OutputStream;
     :catch_2
     move-exception v1
 
-    .line 1862
+    .line 1861
     .local v1, err:Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 1870
+    .line 1869
     .end local v0           #e:Ljava/io/IOException;
     .end local v1           #err:Ljava/lang/Exception;
     .end local v2           #out:Ljava/io/OutputStream;
@@ -5155,7 +5145,7 @@
 
     goto :goto_0
 
-    .line 1856
+    .line 1855
     .restart local v3       #out:Ljava/io/OutputStream;
     :catch_3
     move-exception v0
@@ -5210,14 +5200,14 @@
     .parameter "result3"
 
     .prologue
-    .line 1879
+    .line 1878
     const-string v0, "SensorManager"
 
     const-string v1, "Gyro sensor FactoryTest"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1880
+    .line 1879
     invoke-static {p1, p2, p3}, Landroid/hardware/SensorManager;->gyro_factory_test([I[S[F)I
 
     move-result v0
@@ -5232,14 +5222,14 @@
     .parameter "result3"
 
     .prologue
-    .line 1888
+    .line 1887
     const-string v0, "SensorManager"
 
     const-string v1, "Mag sensor FactoryTest"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1889
+    .line 1888
     invoke-static {p1, p2, p3}, Landroid/hardware/SensorManager;->mag_factory_test([I[I[I)I
 
     move-result v0

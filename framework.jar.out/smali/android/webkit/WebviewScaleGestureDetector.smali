@@ -171,22 +171,22 @@
     .parameter "oldIndex"
 
     .prologue
-    .line 507
+    .line 519
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v5
 
-    .line 510
+    .line 522
     .local v5, pointerCount:I
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v4
 
-    .line 511
+    .line 523
     .local v4, otherActiveIndex:I
     const/4 v3, -0x1
 
-    .line 514
+    .line 526
     .local v3, newActiveIndex:I
     const/4 v2, 0x0
 
@@ -194,35 +194,35 @@
     :goto_0
     if-ge v2, v5, :cond_0
 
-    .line 515
+    .line 527
     if-eq v2, p3, :cond_1
 
     if-eq v2, v4, :cond_1
 
-    .line 516
+    .line 528
     iget v1, p0, Landroid/webkit/WebviewScaleGestureDetector;->mEdgeSlop:F
 
-    .line 517
+    .line 529
     .local v1, edgeSlop:F
     iget v6, p0, Landroid/webkit/WebviewScaleGestureDetector;->mRightSlopEdge:F
 
-    .line 518
+    .line 530
     .local v6, rightSlop:F
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mBottomSlopEdge:F
 
-    .line 519
+    .line 531
     .local v0, bottomSlop:F
     invoke-static {p1, v2}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
 
     move-result v7
 
-    .line 520
+    .line 532
     .local v7, x:F
     invoke-static {p1, v2}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
 
     move-result v8
 
-    .line 521
+    .line 533
     .local v8, y:F
     cmpl-float v9, v7, v1
 
@@ -240,10 +240,10 @@
 
     if-gtz v9, :cond_1
 
-    .line 522
+    .line 534
     move v3, v2
 
-    .line 528
+    .line 540
     .end local v0           #bottomSlop:F
     .end local v1           #edgeSlop:F
     .end local v6           #rightSlop:F
@@ -252,7 +252,7 @@
     :cond_0
     return v3
 
-    .line 514
+    .line 526
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
@@ -265,16 +265,16 @@
     .parameter "pointerIndex"
 
     .prologue
-    .line 535
+    .line 547
     if-gez p1, :cond_0
 
     const/4 v1, 0x1
 
-    .line 538
+    .line 550
     :goto_0
     return v1
 
-    .line 536
+    .line 548
     :cond_0
     if-nez p1, :cond_1
 
@@ -284,7 +284,7 @@
 
     goto :goto_0
 
-    .line 537
+    .line 549
     :cond_1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -296,7 +296,7 @@
 
     sub-float v0, v1, v2
 
-    .line 538
+    .line 550
     .local v0, offset:F
     invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->getX(I)F
 
@@ -313,16 +313,16 @@
     .parameter "pointerIndex"
 
     .prologue
-    .line 545
+    .line 557
     if-gez p1, :cond_0
 
     const/4 v1, 0x1
 
-    .line 548
+    .line 560
     :goto_0
     return v1
 
-    .line 546
+    .line 558
     :cond_0
     if-nez p1, :cond_1
 
@@ -332,7 +332,7 @@
 
     goto :goto_0
 
-    .line 547
+    .line 559
     :cond_1
     invoke-virtual {p0}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -344,7 +344,7 @@
 
     sub-float v0, v1, v2
 
-    .line 548
+    .line 560
     .local v0, offset:F
     invoke-virtual {p0, p1}, Landroid/view/MotionEvent;->getY(I)F
 
@@ -381,50 +381,50 @@
 
     const/4 v1, 0x0
 
-    .line 603
+    .line 615
     iget-object v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_0
 
-    .line 604
+    .line 616
     iget-object v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 605
+    .line 617
     iput-object v3, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
-    .line 607
+    .line 619
     :cond_0
     iget-object v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrEvent:Landroid/view/MotionEvent;
 
     if-eqz v0, :cond_1
 
-    .line 608
+    .line 620
     iget-object v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 609
+    .line 621
     iput-object v3, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrEvent:Landroid/view/MotionEvent;
 
-    .line 611
+    .line 623
     :cond_1
     iput-boolean v1, p0, Landroid/webkit/WebviewScaleGestureDetector;->mSloppyGesture:Z
 
-    .line 612
+    .line 624
     iput-boolean v1, p0, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
 
-    .line 613
+    .line 625
     iput v2, p0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    .line 614
+    .line 626
     iput v2, p0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    .line 615
+    .line 627
     iput-boolean v1, p0, Landroid/webkit/WebviewScaleGestureDetector;->mInvalidGesture:Z
 
-    .line 616
+    .line 628
     return-void
 .end method
 
@@ -433,7 +433,7 @@
     .parameter "curr"
 
     .prologue
-    .line 552
+    .line 564
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrEvent:Landroid/view/MotionEvent;
@@ -442,7 +442,7 @@
 
     if-eqz v20, :cond_0
 
-    .line 553
+    .line 565
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrEvent:Landroid/view/MotionEvent;
@@ -451,7 +451,7 @@
 
     invoke-virtual/range {v20 .. v20}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 555
+    .line 567
     :cond_0
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
@@ -463,7 +463,7 @@
 
     iput-object v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mCurrEvent:Landroid/view/MotionEvent;
 
-    .line 557
+    .line 569
     const/high16 v20, -0x4080
 
     move/from16 v0, v20
@@ -472,7 +472,7 @@
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mCurrLen:F
 
-    .line 558
+    .line 570
     const/high16 v20, -0x4080
 
     move/from16 v0, v20
@@ -481,7 +481,7 @@
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mPrevLen:F
 
-    .line 559
+    .line 571
     const/high16 v20, -0x4080
 
     move/from16 v0, v20
@@ -490,12 +490,12 @@
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mScaleFactor:F
 
-    .line 561
+    .line 573
     move-object/from16 v0, p0
 
     iget-object v11, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
-    .line 563
+    .line 575
     .local v11, prev:Landroid/view/MotionEvent;
     move-object/from16 v0, p0
 
@@ -509,7 +509,7 @@
 
     move-result v12
 
-    .line 564
+    .line 576
     .local v12, prevIndex0:I
     move-object/from16 v0, p0
 
@@ -523,7 +523,7 @@
 
     move-result v13
 
-    .line 565
+    .line 577
     .local v13, prevIndex1:I
     move-object/from16 v0, p0
 
@@ -539,7 +539,7 @@
 
     move-result v3
 
-    .line 566
+    .line 578
     .local v3, currIndex0:I
     move-object/from16 v0, p0
 
@@ -555,7 +555,7 @@
 
     move-result v4
 
-    .line 568
+    .line 580
     .local v4, currIndex1:I
     if-ltz v12, :cond_1
 
@@ -565,7 +565,7 @@
 
     if-gez v4, :cond_3
 
-    .line 569
+    .line 581
     :cond_1
     const/16 v20, 0x1
 
@@ -575,7 +575,7 @@
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mInvalidGesture:Z
 
-    .line 570
+    .line 582
     const-string v20, "WebviewScaleGestureDetector"
 
     const-string v21, "Invalid MotionEvent stream detected."
@@ -586,7 +586,7 @@
 
     invoke-static/range {v20 .. v22}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 571
+    .line 583
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
@@ -595,7 +595,7 @@
 
     if-eqz v20, :cond_2
 
-    .line 572
+    .line 584
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
@@ -608,36 +608,36 @@
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
 
-    .line 600
+    .line 612
     :cond_2
     :goto_0
     return-void
 
-    .line 577
+    .line 589
     :cond_3
     invoke-virtual {v11, v12}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v16
 
-    .line 578
+    .line 590
     .local v16, px0:F
     invoke-virtual {v11, v12}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v18
 
-    .line 579
+    .line 591
     .local v18, py0:F
     invoke-virtual {v11, v13}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v17
 
-    .line 580
+    .line 592
     .local v17, px1:F
     invoke-virtual {v11, v13}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v19
 
-    .line 581
+    .line 593
     .local v19, py1:F
     move-object/from16 v0, p1
 
@@ -645,7 +645,7 @@
 
     move-result v7
 
-    .line 582
+    .line 594
     .local v7, cx0:F
     move-object/from16 v0, p1
 
@@ -653,7 +653,7 @@
 
     move-result v9
 
-    .line 583
+    .line 595
     .local v9, cy0:F
     move-object/from16 v0, p1
 
@@ -661,7 +661,7 @@
 
     move-result v8
 
-    .line 584
+    .line 596
     .local v8, cx1:F
     move-object/from16 v0, p1
 
@@ -669,44 +669,44 @@
 
     move-result v10
 
-    .line 586
+    .line 598
     .local v10, cy1:F
     sub-float v14, v17, v16
 
-    .line 587
+    .line 599
     .local v14, pvx:F
     sub-float v15, v19, v18
 
-    .line 588
+    .line 600
     .local v15, pvy:F
     sub-float v5, v8, v7
 
-    .line 589
+    .line 601
     .local v5, cvx:F
     sub-float v6, v10, v9
 
-    .line 590
+    .line 602
     .local v6, cvy:F
     move-object/from16 v0, p0
 
     iput v14, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevFingerDiffX:F
 
-    .line 591
+    .line 603
     move-object/from16 v0, p0
 
     iput v15, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevFingerDiffY:F
 
-    .line 592
+    .line 604
     move-object/from16 v0, p0
 
     iput v5, v0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrFingerDiffX:F
 
-    .line 593
+    .line 605
     move-object/from16 v0, p0
 
     iput v6, v0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrFingerDiffY:F
 
-    .line 595
+    .line 607
     const/high16 v20, 0x3f00
 
     mul-float v20, v20, v5
@@ -719,7 +719,7 @@
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
 
-    .line 596
+    .line 608
     const/high16 v20, 0x3f00
 
     mul-float v20, v20, v6
@@ -732,7 +732,7 @@
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
 
-    .line 597
+    .line 609
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v20
@@ -749,7 +749,7 @@
 
     iput-wide v0, v2, Landroid/webkit/WebviewScaleGestureDetector;->mTimeDelta:J
 
-    .line 598
+    .line 610
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v3}, Landroid/view/MotionEvent;->getPressure(I)F
@@ -770,7 +770,7 @@
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mCurrPressure:F
 
-    .line 599
+    .line 611
     invoke-virtual {v11, v12}, Landroid/view/MotionEvent;->getPressure(I)F
 
     move-result v20
@@ -806,7 +806,7 @@
     .locals 4
 
     .prologue
-    .line 663
+    .line 675
     iget v2, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrLen:F
 
     const/high16 v3, -0x4080
@@ -815,14 +815,14 @@
 
     if-nez v2, :cond_0
 
-    .line 664
+    .line 676
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrFingerDiffX:F
 
-    .line 665
+    .line 677
     .local v0, cvx:F
     iget v1, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrFingerDiffY:F
 
-    .line 666
+    .line 678
     .local v1, cvy:F
     mul-float v2, v0, v0
 
@@ -836,7 +836,7 @@
 
     iput v2, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrLen:F
 
-    .line 668
+    .line 680
     .end local v0           #cvx:F
     .end local v1           #cvy:F
     :cond_0
@@ -849,7 +849,7 @@
     .locals 1
 
     .prologue
-    .line 678
+    .line 690
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrFingerDiffX:F
 
     return v0
@@ -859,7 +859,7 @@
     .locals 1
 
     .prologue
-    .line 688
+    .line 700
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrFingerDiffY:F
 
     return v0
@@ -869,7 +869,7 @@
     .locals 2
 
     .prologue
-    .line 756
+    .line 768
     iget-object v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrEvent:Landroid/view/MotionEvent;
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getEventTime()J
@@ -883,7 +883,7 @@
     .locals 1
 
     .prologue
-    .line 638
+    .line 650
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
 
     return v0
@@ -893,7 +893,7 @@
     .locals 1
 
     .prologue
-    .line 653
+    .line 665
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
 
     return v0
@@ -955,7 +955,7 @@
     .locals 4
 
     .prologue
-    .line 698
+    .line 710
     iget v2, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevLen:F
 
     const/high16 v3, -0x4080
@@ -964,14 +964,14 @@
 
     if-nez v2, :cond_0
 
-    .line 699
+    .line 711
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevFingerDiffX:F
 
-    .line 700
+    .line 712
     .local v0, pvx:F
     iget v1, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevFingerDiffY:F
 
-    .line 701
+    .line 713
     .local v1, pvy:F
     mul-float v2, v0, v0
 
@@ -985,7 +985,7 @@
 
     iput v2, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevLen:F
 
-    .line 703
+    .line 715
     .end local v0           #pvx:F
     .end local v1           #pvy:F
     :cond_0
@@ -998,7 +998,7 @@
     .locals 1
 
     .prologue
-    .line 713
+    .line 725
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevFingerDiffX:F
 
     return v0
@@ -1008,7 +1008,7 @@
     .locals 1
 
     .prologue
-    .line 723
+    .line 735
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevFingerDiffY:F
 
     return v0
@@ -1018,7 +1018,7 @@
     .locals 2
 
     .prologue
-    .line 734
+    .line 746
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mScaleFactor:F
 
     const/high16 v1, -0x4080
@@ -1027,7 +1027,7 @@
 
     if-nez v0, :cond_0
 
-    .line 735
+    .line 747
     invoke-virtual {p0}, Landroid/webkit/WebviewScaleGestureDetector;->getCurrentSpan()F
 
     move-result v0
@@ -1040,7 +1040,7 @@
 
     iput v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mScaleFactor:F
 
-    .line 737
+    .line 749
     :cond_0
     iget v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mScaleFactor:F
 
@@ -1061,7 +1061,7 @@
     .locals 2
 
     .prologue
-    .line 747
+    .line 759
     iget-wide v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mTimeDelta:J
 
     return-wide v0
@@ -1071,7 +1071,7 @@
     .locals 1
 
     .prologue
-    .line 623
+    .line 635
     iget-boolean v0, p0, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
 
     return v0
@@ -1142,7 +1142,7 @@
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 30
+    .locals 31
     .parameter "event"
 
     .prologue
@@ -1151,24 +1151,24 @@
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    if-eqz v27, :cond_0
+    if-eqz v28, :cond_0
 
     .line 193
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    const/16 v28, 0x0
+    const/16 v29, 0x0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v28
+    move/from16 v2, v29
 
     invoke-virtual {v0, v1, v2}, Landroid/view/InputEventConsistencyVerifier;->onTouchEvent(Landroid/view/MotionEvent;I)V
 
@@ -1187,57 +1187,57 @@
 
     .line 202
     :cond_1
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
     .line 203
-    .local v10, handled:Z
+    .local v11, handled:Z
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mInvalidGesture:Z
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    if-eqz v27, :cond_4
+    if-eqz v28, :cond_4
 
     .line 204
-    const/4 v10, 0x0
+    const/4 v11, 0x0
 
-    .line 500
+    .line 512
     :cond_2
     :goto_0
-    if-nez v10, :cond_3
+    if-nez v11, :cond_3
 
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    if-eqz v27, :cond_3
+    if-eqz v28, :cond_3
 
-    .line 501
+    .line 513
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mInputEventConsistencyVerifier:Landroid/view/InputEventConsistencyVerifier;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    const/16 v28, 0x0
+    const/16 v29, 0x0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v28
+    move/from16 v2, v29
 
     invoke-virtual {v0, v1, v2}, Landroid/view/InputEventConsistencyVerifier;->onUnhandledEvent(Landroid/view/InputEvent;I)V
 
     :cond_3
-    move/from16 v27, v10
+    move/from16 v28, v11
 
-    .line 503
+    .line 515
     :goto_1
-    return v27
+    return v28
 
     .line 205
     :cond_4
@@ -1245,9 +1245,9 @@
 
     iget-boolean v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    if-nez v27, :cond_1e
+    if-nez v28, :cond_1e
 
     .line 206
     packed-switch v3, :pswitch_data_0
@@ -1257,26 +1257,26 @@
 
     .line 208
     :pswitch_1
-    const/16 v27, 0x0
+    const/16 v28, 0x0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
     .line 209
-    const/16 v27, 0x1
+    const/16 v28, 0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -1296,62 +1296,62 @@
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mContext:Landroid/content/Context;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    invoke-virtual/range {v27 .. v27}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual/range {v28 .. v28}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v27
+    move-result-object v28
 
-    invoke-virtual/range {v27 .. v27}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual/range {v28 .. v28}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v14
+    move-result-object v15
 
     .line 222
-    .local v14, metrics:Landroid/util/DisplayMetrics;
-    iget v0, v14, Landroid/util/DisplayMetrics;->widthPixels:I
+    .local v15, metrics:Landroid/util/DisplayMetrics;
+    iget v0, v15, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     int-to-float v0, v0
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mEdgeSlop:F
 
-    move/from16 v28, v0
+    move/from16 v29, v0
 
-    sub-float v27, v27, v28
+    sub-float v28, v28, v29
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mRightSlopEdge:F
 
     .line 223
-    iget v0, v14, Landroid/util/DisplayMetrics;->heightPixels:I
+    iget v0, v15, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     int-to-float v0, v0
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mEdgeSlop:F
 
-    move/from16 v28, v0
+    move/from16 v29, v0
 
-    sub-float v27, v27, v28
+    sub-float v28, v28, v29
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -1362,34 +1362,34 @@
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    if-eqz v27, :cond_5
+    if-eqz v28, :cond_5
 
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    invoke-virtual/range {v27 .. v27}, Landroid/view/MotionEvent;->recycle()V
+    invoke-virtual/range {v28 .. v28}, Landroid/view/MotionEvent;->recycle()V
 
     .line 226
     :cond_5
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    move-result-object v27
+    move-result-object v28
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
     .line 227
-    const-wide/16 v27, 0x0
+    const-wide/16 v28, 0x0
 
-    move-wide/from16 v0, v27
+    move-wide/from16 v0, v28
 
     move-object/from16 v2, p0
 
@@ -1398,209 +1398,230 @@
     .line 229
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
-    move-result v13
+    move-result v14
 
     .line 230
-    .local v13, index1:I
+    .local v14, index1:I
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
-    move-result v12
+    move-result v13
 
     .line 231
-    .local v12, index0:I
+    .local v13, index0:I
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getPointerId(I)I
+    invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
     .line 232
-    if-ltz v12, :cond_6
+    if-ltz v13, :cond_6
 
-    if-ne v12, v13, :cond_7
+    if-ne v13, v14, :cond_7
 
     .line 234
     :cond_6
-    if-ne v12, v13, :cond_a
+    if-ne v13, v14, :cond_a
 
-    const/16 v27, -0x1
+    const/16 v28, -0x1
 
     :goto_2
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v27
+    move/from16 v2, v28
 
-    invoke-direct {v0, v1, v2, v12}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
+    invoke-direct {v0, v1, v2, v13}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
 
-    move-result v12
+    move-result v13
 
-    .line 235
+    .line 238
+    :try_start_0
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getPointerId(I)I
+    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 244
+    const/4 v13, 0x0
+
+    .line 245
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v28
+
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    .line 237
+    .line 249
     :cond_7
-    const/16 v27, 0x0
+    :goto_3
+    const/16 v28, 0x0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
 
-    .line 239
+    .line 251
     invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
 
-    .line 245
+    .line 257
     move-object/from16 v0, p0
 
-    iget v8, v0, Landroid/webkit/WebviewScaleGestureDetector;->mEdgeSlop:F
+    iget v9, v0, Landroid/webkit/WebviewScaleGestureDetector;->mEdgeSlop:F
 
-    .line 246
-    .local v8, edgeSlop:F
+    .line 258
+    .local v9, edgeSlop:F
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mRightSlopEdge:F
 
-    move/from16 v21, v0
+    move/from16 v22, v0
 
-    .line 247
-    .local v21, rightSlop:F
+    .line 259
+    .local v22, rightSlop:F
     move-object/from16 v0, p0
 
     iget v7, v0, Landroid/webkit/WebviewScaleGestureDetector;->mBottomSlopEdge:F
 
-    .line 248
+    .line 260
     .local v7, bottomSlop:F
-    move-object/from16 v0, p1
-
-    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
-
-    move-result v23
-
-    .line 249
-    .local v23, x0:F
-    move-object/from16 v0, p1
-
-    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
-
-    move-result v25
-
-    .line 250
-    .local v25, y0:F
     move-object/from16 v0, p1
 
     invoke-static {v0, v13}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
 
     move-result v24
 
-    .line 251
-    .local v24, x1:F
+    .line 261
+    .local v24, x0:F
     move-object/from16 v0, p1
 
     invoke-static {v0, v13}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
 
     move-result v26
 
-    .line 253
-    .local v26, y1:F
-    cmpg-float v27, v23, v8
+    .line 262
+    .local v26, y0:F
+    move-object/from16 v0, p1
 
-    if-ltz v27, :cond_8
+    invoke-static {v0, v14}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
 
-    cmpg-float v27, v25, v8
+    move-result v25
 
-    if-ltz v27, :cond_8
+    .line 263
+    .local v25, x1:F
+    move-object/from16 v0, p1
 
-    cmpl-float v27, v23, v21
+    invoke-static {v0, v14}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
 
-    if-gtz v27, :cond_8
+    move-result v27
 
-    cmpl-float v27, v25, v7
+    .line 265
+    .local v27, y1:F
+    cmpg-float v28, v24, v9
 
-    if-lez v27, :cond_b
+    if-ltz v28, :cond_8
+
+    cmpg-float v28, v26, v9
+
+    if-ltz v28, :cond_8
+
+    cmpl-float v28, v24, v22
+
+    if-gtz v28, :cond_8
+
+    cmpl-float v28, v26, v7
+
+    if-lez v28, :cond_b
 
     :cond_8
-    const/16 v18, 0x1
-
-    .line 255
-    .local v18, p0sloppy:Z
-    :goto_3
-    cmpg-float v27, v24, v8
-
-    if-ltz v27, :cond_9
-
-    cmpg-float v27, v26, v8
-
-    if-ltz v27, :cond_9
-
-    cmpl-float v27, v24, v21
-
-    if-gtz v27, :cond_9
-
-    cmpl-float v27, v26, v7
-
-    if-lez v27, :cond_c
-
-    :cond_9
     const/16 v19, 0x1
 
-    .line 258
-    .local v19, p1sloppy:Z
+    .line 267
+    .local v19, p0sloppy:Z
     :goto_4
-    if-eqz v18, :cond_d
+    cmpg-float v28, v25, v9
 
+    if-ltz v28, :cond_9
+
+    cmpg-float v28, v27, v9
+
+    if-ltz v28, :cond_9
+
+    cmpl-float v28, v25, v22
+
+    if-gtz v28, :cond_9
+
+    cmpl-float v28, v27, v7
+
+    if-lez v28, :cond_c
+
+    :cond_9
+    const/16 v20, 0x1
+
+    .line 270
+    .local v20, p1sloppy:Z
+    :goto_5
     if-eqz v19, :cond_d
 
-    .line 259
-    const/high16 v27, -0x4080
+    if-eqz v20, :cond_d
 
-    move/from16 v0, v27
+    .line 271
+    const/high16 v28, -0x4080
+
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
 
-    .line 260
-    const/high16 v27, -0x4080
+    .line 272
+    const/high16 v28, -0x4080
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
 
-    .line 261
-    const/16 v27, 0x1
+    .line 273
+    const/16 v28, 0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -1610,78 +1631,170 @@
 
     .line 234
     .end local v7           #bottomSlop:F
-    .end local v8           #edgeSlop:F
-    .end local v18           #p0sloppy:Z
-    .end local v19           #p1sloppy:Z
-    .end local v21           #rightSlop:F
-    .end local v23           #x0:F
-    .end local v24           #x1:F
-    .end local v25           #y0:F
-    .end local v26           #y1:F
+    .end local v9           #edgeSlop:F
+    .end local v19           #p0sloppy:Z
+    .end local v20           #p1sloppy:Z
+    .end local v22           #rightSlop:F
+    .end local v24           #x0:F
+    .end local v25           #x1:F
+    .end local v26           #y0:F
+    .end local v27           #y1:F
     :cond_a
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     goto/16 :goto_2
 
-    .line 253
+    .line 240
+    :catch_0
+    move-exception v8
+
+    .line 241
+    .local v8, e:Ljava/lang/IllegalArgumentException;
+    :try_start_1
+    invoke-virtual {v8}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 244
+    const/4 v13, 0x0
+
+    .line 245
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+
+    goto/16 :goto_3
+
+    .line 244
+    .end local v8           #e:Ljava/lang/IllegalArgumentException;
+    :catchall_0
+    move-exception v28
+
+    const/4 v13, 0x0
+
+    .line 245
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v29
+
+    move/from16 v0, v29
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+
+    throw v28
+
+    .line 265
     .restart local v7       #bottomSlop:F
-    .restart local v8       #edgeSlop:F
-    .restart local v21       #rightSlop:F
-    .restart local v23       #x0:F
-    .restart local v24       #x1:F
-    .restart local v25       #y0:F
-    .restart local v26       #y1:F
+    .restart local v9       #edgeSlop:F
+    .restart local v22       #rightSlop:F
+    .restart local v24       #x0:F
+    .restart local v25       #x1:F
+    .restart local v26       #y0:F
+    .restart local v27       #y1:F
     :cond_b
-    const/16 v18, 0x0
-
-    goto :goto_3
-
-    .line 255
-    .restart local v18       #p0sloppy:Z
-    :cond_c
     const/16 v19, 0x0
 
     goto :goto_4
 
-    .line 262
-    .restart local v19       #p1sloppy:Z
-    :cond_d
-    if-eqz v18, :cond_e
+    .line 267
+    .restart local v19       #p0sloppy:Z
+    :cond_c
+    const/16 v20, 0x0
 
-    .line 263
+    goto :goto_5
+
+    .line 274
+    .restart local v20       #p1sloppy:Z
+    :cond_d
+    if-eqz v19, :cond_e
+
+    .line 275
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->getX(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
+
+    .line 276
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
+
+    .line 277
+    const/16 v28, 0x1
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mSloppyGesture:Z
+
+    goto/16 :goto_0
+
+    .line 278
+    :cond_e
+    if-eqz v20, :cond_f
+
+    .line 279
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getX(I)F
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
 
-    .line 264
+    .line 280
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getY(I)F
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
 
-    .line 265
-    const/16 v27, 0x1
+    .line 281
+    const/16 v28, 0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -1689,73 +1802,32 @@
 
     goto/16 :goto_0
 
-    .line 266
-    :cond_e
-    if-eqz v19, :cond_f
-
-    .line 267
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getX(I)F
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
-
-    .line 268
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
-
-    .line 269
-    const/16 v27, 0x1
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mSloppyGesture:Z
-
-    goto/16 :goto_0
-
-    .line 271
+    .line 283
     :cond_f
-    const/16 v27, 0x0
+    const/16 v28, 0x0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mSloppyGesture:Z
 
-    .line 272
+    .line 284
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleBegin(Landroid/webkit/WebviewScaleGestureDetector;)Z
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -1763,266 +1835,207 @@
 
     goto/16 :goto_0
 
-    .line 278
+    .line 290
     .end local v7           #bottomSlop:F
-    .end local v8           #edgeSlop:F
-    .end local v12           #index0:I
-    .end local v13           #index1:I
-    .end local v14           #metrics:Landroid/util/DisplayMetrics;
-    .end local v18           #p0sloppy:Z
-    .end local v19           #p1sloppy:Z
-    .end local v21           #rightSlop:F
-    .end local v23           #x0:F
-    .end local v24           #x1:F
-    .end local v25           #y0:F
-    .end local v26           #y1:F
+    .end local v9           #edgeSlop:F
+    .end local v13           #index0:I
+    .end local v14           #index1:I
+    .end local v15           #metrics:Landroid/util/DisplayMetrics;
+    .end local v19           #p0sloppy:Z
+    .end local v20           #p1sloppy:Z
+    .end local v22           #rightSlop:F
+    .end local v24           #x0:F
+    .end local v25           #x1:F
+    .end local v26           #y0:F
+    .end local v27           #y1:F
     :pswitch_4
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mSloppyGesture:Z
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    if-eqz v27, :cond_2
+    if-eqz v28, :cond_2
 
-    .line 280
+    .line 292
     move-object/from16 v0, p0
 
-    iget v8, v0, Landroid/webkit/WebviewScaleGestureDetector;->mEdgeSlop:F
+    iget v9, v0, Landroid/webkit/WebviewScaleGestureDetector;->mEdgeSlop:F
 
-    .line 281
-    .restart local v8       #edgeSlop:F
+    .line 293
+    .restart local v9       #edgeSlop:F
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mRightSlopEdge:F
 
-    move/from16 v21, v0
+    move/from16 v22, v0
 
-    .line 282
-    .restart local v21       #rightSlop:F
+    .line 294
+    .restart local v22       #rightSlop:F
     move-object/from16 v0, p0
 
     iget v7, v0, Landroid/webkit/WebviewScaleGestureDetector;->mBottomSlopEdge:F
 
-    .line 283
+    .line 295
     .restart local v7       #bottomSlop:F
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v27
-
-    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
-
-    move-result v12
-
-    .line 284
-    .restart local v12       #index0:I
-    move-object/from16 v0, p0
-
-    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
-
-    move/from16 v27, v0
-
-    move-object/from16 v0, p1
-
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v13
 
-    .line 286
-    .restart local v13       #index1:I
+    .line 296
+    .restart local v13       #index0:I
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
+
+    move/from16 v28, v0
+
     move-object/from16 v0, p1
 
-    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
+    move/from16 v1, v28
 
-    move-result v23
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
-    .line 287
-    .restart local v23       #x0:F
-    move-object/from16 v0, p1
+    move-result v14
 
-    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
-
-    move-result v25
-
-    .line 288
-    .restart local v25       #y0:F
+    .line 298
+    .restart local v14       #index1:I
     move-object/from16 v0, p1
 
     invoke-static {v0, v13}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
 
     move-result v24
 
-    .line 289
-    .restart local v24       #x1:F
+    .line 299
+    .restart local v24       #x0:F
     move-object/from16 v0, p1
 
     invoke-static {v0, v13}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
 
     move-result v26
 
-    .line 291
-    .restart local v26       #y1:F
-    cmpg-float v27, v23, v8
+    .line 300
+    .restart local v26       #y0:F
+    move-object/from16 v0, p1
 
-    if-ltz v27, :cond_10
+    invoke-static {v0, v14}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
 
-    cmpg-float v27, v25, v8
+    move-result v25
 
-    if-ltz v27, :cond_10
+    .line 301
+    .restart local v25       #x1:F
+    move-object/from16 v0, p1
 
-    cmpl-float v27, v23, v21
+    invoke-static {v0, v14}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
 
-    if-gtz v27, :cond_10
+    move-result v27
 
-    cmpl-float v27, v25, v7
+    .line 303
+    .restart local v27       #y1:F
+    cmpg-float v28, v24, v9
 
-    if-lez v27, :cond_14
+    if-ltz v28, :cond_10
+
+    cmpg-float v28, v26, v9
+
+    if-ltz v28, :cond_10
+
+    cmpl-float v28, v24, v22
+
+    if-gtz v28, :cond_10
+
+    cmpl-float v28, v26, v7
+
+    if-lez v28, :cond_14
 
     :cond_10
-    const/16 v18, 0x1
-
-    .line 293
-    .restart local v18       #p0sloppy:Z
-    :goto_5
-    cmpg-float v27, v24, v8
-
-    if-ltz v27, :cond_11
-
-    cmpg-float v27, v26, v8
-
-    if-ltz v27, :cond_11
-
-    cmpl-float v27, v24, v21
-
-    if-gtz v27, :cond_11
-
-    cmpl-float v27, v26, v7
-
-    if-lez v27, :cond_15
-
-    :cond_11
     const/16 v19, 0x1
 
-    .line 296
-    .restart local v19       #p1sloppy:Z
+    .line 305
+    .restart local v19       #p0sloppy:Z
     :goto_6
-    if-eqz v18, :cond_12
+    cmpg-float v28, v25, v9
 
-    .line 298
+    if-ltz v28, :cond_11
+
+    cmpg-float v28, v27, v9
+
+    if-ltz v28, :cond_11
+
+    cmpl-float v28, v25, v22
+
+    if-gtz v28, :cond_11
+
+    cmpl-float v28, v27, v7
+
+    if-lez v28, :cond_15
+
+    :cond_11
+    const/16 v20, 0x1
+
+    .line 308
+    .restart local v20       #p1sloppy:Z
+    :goto_7
+    if-eqz v19, :cond_12
+
+    .line 310
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v27
+    move/from16 v2, v28
 
-    invoke-direct {v0, v1, v2, v12}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
+    invoke-direct {v0, v1, v2, v13}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
 
-    move-result v11
+    move-result v12
 
-    .line 299
-    .local v11, index:I
-    if-ltz v11, :cond_12
+    .line 311
+    .local v12, index:I
+    if-ltz v12, :cond_12
 
-    .line 300
-    move v12, v11
+    .line 312
+    move v13, v12
 
-    .line 301
+    .line 313
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v11}, Landroid/view/MotionEvent;->getPointerId(I)I
+    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    .line 302
-    move-object/from16 v0, p1
-
-    invoke-static {v0, v11}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
-
-    move-result v23
-
-    .line 303
-    move-object/from16 v0, p1
-
-    invoke-static {v0, v11}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
-
-    move-result v25
-
-    .line 304
-    const/16 v18, 0x0
-
-    .line 308
-    .end local v11           #index:I
-    :cond_12
-    if-eqz v19, :cond_13
-
-    .line 310
-    move-object/from16 v0, p0
-
-    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
-
-    move/from16 v27, v0
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move/from16 v2, v27
-
-    invoke-direct {v0, v1, v2, v13}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
-
-    move-result v11
-
-    .line 311
-    .restart local v11       #index:I
-    if-ltz v11, :cond_13
-
-    .line 312
-    move v13, v11
-
-    .line 313
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v11}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
-
     .line 314
     move-object/from16 v0, p1
 
-    invoke-static {v0, v11}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
+    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
 
     move-result v24
 
     .line 315
     move-object/from16 v0, p1
 
-    invoke-static {v0, v11}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
+    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
 
     move-result v26
 
@@ -2030,105 +2043,84 @@
     const/16 v19, 0x0
 
     .line 320
-    .end local v11           #index:I
-    :cond_13
-    if-eqz v18, :cond_16
-
-    if-eqz v19, :cond_16
-
-    .line 321
-    const/high16 v27, -0x4080
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
+    .end local v12           #index:I
+    :cond_12
+    if-eqz v20, :cond_13
 
     .line 322
-    const/high16 v27, -0x4080
+    move-object/from16 v0, p0
 
-    move/from16 v0, v27
+    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move-object/from16 v1, p0
+    move/from16 v28, v0
 
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
+    move-object/from16 v0, p0
 
-    goto/16 :goto_0
+    move-object/from16 v1, p1
 
-    .line 291
-    .end local v18           #p0sloppy:Z
-    .end local v19           #p1sloppy:Z
-    :cond_14
-    const/16 v18, 0x0
+    move/from16 v2, v28
 
-    goto/16 :goto_5
+    invoke-direct {v0, v1, v2, v14}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
 
-    .line 293
-    .restart local v18       #p0sloppy:Z
-    :cond_15
-    const/16 v19, 0x0
-
-    goto :goto_6
+    move-result v12
 
     .line 323
-    .restart local v19       #p1sloppy:Z
-    :cond_16
-    if-eqz v18, :cond_17
+    .restart local v12       #index:I
+    if-ltz v12, :cond_13
 
     .line 324
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getX(I)F
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
+    move v14, v12
 
     .line 325
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getY(I)F
+    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
-
-    goto/16 :goto_0
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
     .line 326
-    :cond_17
-    if-eqz v19, :cond_18
+    move-object/from16 v0, p1
+
+    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawX(Landroid/view/MotionEvent;I)F
+
+    move-result v25
 
     .line 327
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getX(I)F
+    invoke-static {v0, v12}, Landroid/webkit/WebviewScaleGestureDetector;->getRawY(Landroid/view/MotionEvent;I)F
 
     move-result v27
 
-    move/from16 v0, v27
+    .line 328
+    const/16 v20, 0x0
+
+    .line 332
+    .end local v12           #index:I
+    :cond_13
+    if-eqz v19, :cond_16
+
+    if-eqz v20, :cond_16
+
+    .line 333
+    const/high16 v28, -0x4080
+
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
 
-    .line 328
-    move-object/from16 v0, p1
+    .line 334
+    const/high16 v28, -0x4080
 
-    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result v27
-
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -2136,32 +2128,112 @@
 
     goto/16 :goto_0
 
-    .line 330
-    :cond_18
-    const/16 v27, 0x0
+    .line 303
+    .end local v19           #p0sloppy:Z
+    .end local v20           #p1sloppy:Z
+    :cond_14
+    const/16 v19, 0x0
 
-    move/from16 v0, v27
+    goto/16 :goto_6
+
+    .line 305
+    .restart local v19       #p0sloppy:Z
+    :cond_15
+    const/16 v20, 0x0
+
+    goto :goto_7
+
+    .line 335
+    .restart local v20       #p1sloppy:Z
+    :cond_16
+    if-eqz v19, :cond_17
+
+    .line 336
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->getX(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
+
+    .line 337
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
+
+    goto/16 :goto_0
+
+    .line 338
+    :cond_17
+    if-eqz v20, :cond_18
+
+    .line 339
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getX(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
+
+    .line 340
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
+
+    goto/16 :goto_0
+
+    .line 342
+    :cond_18
+    const/16 v28, 0x0
+
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mSloppyGesture:Z
 
-    .line 331
+    .line 343
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleBegin(Landroid/webkit/WebviewScaleGestureDetector;)Z
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -2169,39 +2241,39 @@
 
     goto/16 :goto_0
 
-    .line 337
+    .line 349
     .end local v7           #bottomSlop:F
-    .end local v8           #edgeSlop:F
-    .end local v12           #index0:I
-    .end local v13           #index1:I
-    .end local v18           #p0sloppy:Z
-    .end local v19           #p1sloppy:Z
-    .end local v21           #rightSlop:F
-    .end local v23           #x0:F
-    .end local v24           #x1:F
-    .end local v25           #y0:F
-    .end local v26           #y1:F
+    .end local v9           #edgeSlop:F
+    .end local v13           #index0:I
+    .end local v14           #index1:I
+    .end local v19           #p0sloppy:Z
+    .end local v20           #p1sloppy:Z
+    .end local v22           #rightSlop:F
+    .end local v24           #x0:F
+    .end local v25           #x1:F
+    .end local v26           #y0:F
+    .end local v27           #y1:F
     :pswitch_5
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mSloppyGesture:Z
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    if-eqz v27, :cond_2
+    if-eqz v28, :cond_2
 
-    .line 338
+    .line 350
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    move-result v20
+    move-result v21
 
-    .line 339
-    .local v20, pointerCount:I
+    .line 351
+    .local v21, pointerCount:I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v5
 
-    .line 340
+    .line 352
     .local v5, actionIndex:I
     move-object/from16 v0, p1
 
@@ -2209,55 +2281,57 @@
 
     move-result v4
 
-    .line 342
+    .line 354
     .local v4, actionId:I
-    const/16 v27, 0x2
+    const/16 v28, 0x2
 
-    move/from16 v0, v20
+    move/from16 v0, v21
 
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     if-le v0, v1, :cond_1a
 
-    .line 343
+    .line 355
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     if-ne v4, v0, :cond_19
 
-    .line 344
+    .line 356
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v27
+    move/from16 v2, v28
 
     invoke-direct {v0, v1, v2, v5}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
 
-    move-result v15
+    move-result v16
 
-    .line 345
-    .local v15, newIndex:I
-    if-ltz v15, :cond_2
+    .line 357
+    .local v16, newIndex:I
+    if-ltz v16, :cond_2
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v15}, Landroid/view/MotionEvent;->getPointerId(I)I
+    move/from16 v1, v16
 
-    move-result v27
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move/from16 v0, v27
+    move-result v28
+
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -2265,47 +2339,49 @@
 
     goto/16 :goto_0
 
-    .line 346
-    .end local v15           #newIndex:I
+    .line 358
+    .end local v16           #newIndex:I
     :cond_19
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     if-ne v4, v0, :cond_2
 
-    .line 347
+    .line 359
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v27
+    move/from16 v2, v28
 
     invoke-direct {v0, v1, v2, v5}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
 
-    move-result v15
+    move-result v16
 
-    .line 348
-    .restart local v15       #newIndex:I
-    if-ltz v15, :cond_2
+    .line 360
+    .restart local v16       #newIndex:I
+    if-ltz v16, :cond_2
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v15}, Landroid/view/MotionEvent;->getPointerId(I)I
+    move/from16 v1, v16
 
-    move-result v27
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move/from16 v0, v27
+    move-result v28
+
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -2313,16 +2389,16 @@
 
     goto/16 :goto_0
 
-    .line 352
-    .end local v15           #newIndex:I
+    .line 364
+    .end local v16           #newIndex:I
     :cond_1a
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     if-ne v4, v0, :cond_1c
 
@@ -2330,134 +2406,134 @@
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    :goto_7
+    :goto_8
     move-object/from16 v0, p1
 
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
-    move-result v11
+    move-result v12
 
-    .line 354
-    .restart local v11       #index:I
-    if-gez v11, :cond_1d
+    .line 366
+    .restart local v12       #index:I
+    if-gez v12, :cond_1d
 
-    .line 355
-    const/16 v27, 0x1
+    .line 367
+    const/16 v28, 0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mInvalidGesture:Z
 
-    .line 356
-    const-string v27, "WebviewScaleGestureDetector"
+    .line 368
+    const-string v28, "WebviewScaleGestureDetector"
 
-    const-string v28, "Invalid MotionEvent stream detected."
+    const-string v29, "Invalid MotionEvent stream detected."
 
-    new-instance v29, Ljava/lang/Throwable;
+    new-instance v30, Ljava/lang/Throwable;
 
-    invoke-direct/range {v29 .. v29}, Ljava/lang/Throwable;-><init>()V
+    invoke-direct/range {v30 .. v30}, Ljava/lang/Throwable;-><init>()V
 
-    invoke-static/range {v27 .. v29}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static/range {v28 .. v30}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 357
+    .line 369
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    if-eqz v27, :cond_1b
+    if-eqz v28, :cond_1b
 
-    .line 358
+    .line 370
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
 
-    .line 360
+    .line 372
     :cond_1b
-    const/16 v27, 0x0
+    const/16 v28, 0x0
 
     goto/16 :goto_1
 
-    .line 352
-    .end local v11           #index:I
+    .line 364
+    .end local v12           #index:I
     :cond_1c
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    goto :goto_7
+    goto :goto_8
 
-    .line 363
-    .restart local v11       #index:I
+    .line 375
+    .restart local v12       #index:I
     :cond_1d
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v11}, Landroid/view/MotionEvent;->getPointerId(I)I
+    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    .line 365
-    const/16 v27, 0x1
+    .line 377
+    const/16 v28, 0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
 
-    .line 366
-    const/16 v27, -0x1
+    .line 378
+    const/16 v28, -0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    .line 367
+    .line 379
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v11}, Landroid/view/MotionEvent;->getX(I)F
+    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getX(I)F
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
 
-    .line 368
+    .line 380
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v11}, Landroid/view/MotionEvent;->getY(I)F
+    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getY(I)F
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -2465,268 +2541,268 @@
 
     goto/16 :goto_0
 
-    .line 375
+    .line 387
     .end local v4           #actionId:I
     .end local v5           #actionIndex:I
-    .end local v11           #index:I
-    .end local v20           #pointerCount:I
+    .end local v12           #index:I
+    .end local v21           #pointerCount:I
     :cond_1e
     packed-switch v3, :pswitch_data_1
 
     :pswitch_6
     goto/16 :goto_0
 
-    .line 478
+    .line 490
     :pswitch_7
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebviewScaleGestureDetector;->reset()V
 
     goto/16 :goto_0
 
-    .line 378
+    .line 390
     :pswitch_8
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
 
-    .line 379
+    .line 391
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v16, v0
+    move/from16 v17, v0
 
-    .line 380
-    .local v16, oldActive0:I
+    .line 392
+    .local v17, oldActive0:I
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v17, v0
+    move/from16 v18, v0
 
-    .line 381
-    .local v17, oldActive1:I
+    .line 393
+    .local v18, oldActive1:I
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebviewScaleGestureDetector;->reset()V
 
-    .line 383
+    .line 395
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    move-result-object v27
+    move-result-object v28
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
-    .line 384
+    .line 396
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    if-eqz v27, :cond_21
+    if-eqz v28, :cond_21
 
-    .end local v16           #oldActive0:I
-    :goto_8
-    move/from16 v0, v16
+    .end local v17           #oldActive0:I
+    :goto_9
+    move/from16 v0, v17
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    .line 385
+    .line 397
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
-    move-result v27
+    move-result v28
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    .line 386
-    const/16 v27, 0x0
+    .line 398
+    const/16 v28, 0x0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
 
-    .line 388
+    .line 400
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
-    move-result v12
+    move-result v13
 
-    .line 389
-    .restart local v12       #index0:I
-    if-ltz v12, :cond_1f
+    .line 401
+    .restart local v13       #index0:I
+    if-ltz v13, :cond_1f
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v28, v0
+    move/from16 v29, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
-    move/from16 v1, v28
+    move/from16 v1, v29
 
     if-ne v0, v1, :cond_20
 
-    .line 391
+    .line 403
     :cond_1f
-    const-string v27, "WebviewScaleGestureDetector"
+    const-string v28, "WebviewScaleGestureDetector"
 
-    new-instance v28, Ljava/lang/StringBuilder;
+    new-instance v29, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v29 .. v29}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v29, "Got "
+    const-string v30, "Got "
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v28
-
-    invoke-static {v3}, Landroid/view/MotionEvent;->actionToString(I)Ljava/lang/String;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v29
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Landroid/view/MotionEvent;->actionToString(I)Ljava/lang/String;
 
-    move-result-object v28
+    move-result-object v30
 
-    const-string v29, " with bad state while a gesture was in progress. "
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v29
 
-    move-result-object v28
+    const-string v30, " with bad state while a gesture was in progress. "
 
-    const-string v29, "Did you forget to pass an event to "
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v29
 
-    move-result-object v28
+    const-string v30, "Did you forget to pass an event to "
 
-    const-string v29, "ScaleGestureDetector#onTouchEvent?"
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v29
 
-    move-result-object v28
+    const-string v30, "ScaleGestureDetector#onTouchEvent?"
 
-    invoke-virtual/range {v28 .. v28}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    invoke-static/range {v27 .. v28}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual/range {v29 .. v29}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 395
+    move-result-object v29
+
+    invoke-static/range {v28 .. v29}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 407
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v28, v0
+    move/from16 v29, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
-    move/from16 v1, v28
+    move/from16 v1, v29
 
     if-ne v0, v1, :cond_22
 
-    const/16 v27, -0x1
+    const/16 v28, -0x1
 
-    :goto_9
+    :goto_a
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v27
+    move/from16 v2, v28
 
-    invoke-direct {v0, v1, v2, v12}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
+    invoke-direct {v0, v1, v2, v13}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
 
-    move-result v12
+    move-result v13
 
-    .line 397
-    const/16 v27, -0x1
+    .line 409
+    const/16 v28, -0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
-    if-le v12, v0, :cond_23
+    if-le v13, v0, :cond_23
 
-    .line 398
+    .line 410
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getPointerId(I)I
+    invoke-virtual {v0, v13}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    .line 409
+    .line 421
     :cond_20
-    :goto_a
+    :goto_b
     invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
 
-    .line 411
+    .line 423
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleBegin(Landroid/webkit/WebviewScaleGestureDetector;)Z
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -2734,157 +2810,157 @@
 
     goto/16 :goto_0
 
-    .end local v12           #index0:I
-    .restart local v16       #oldActive0:I
+    .end local v13           #index0:I
+    .restart local v17       #oldActive0:I
     :cond_21
-    move/from16 v16, v17
+    move/from16 v17, v18
 
-    .line 384
-    goto/16 :goto_8
+    .line 396
+    goto/16 :goto_9
 
-    .line 395
-    .end local v16           #oldActive0:I
-    .restart local v12       #index0:I
+    .line 407
+    .end local v17           #oldActive0:I
+    .restart local v13       #index0:I
     :cond_22
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    goto :goto_9
+    goto :goto_a
 
-    .line 400
+    .line 412
     :cond_23
-    const-string v27, "WebviewScaleGestureDetector"
+    const-string v28, "WebviewScaleGestureDetector"
 
-    new-instance v28, Ljava/lang/StringBuilder;
+    new-instance v29, Ljava/lang/StringBuilder;
 
-    invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct/range {v29 .. v29}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v29, "(mActiveId0="
+    const-string v30, "(mActiveId0="
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v29, v0
+    move/from16 v30, v0
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    const-string v29, ", mActiveId1="
+    const-string v30, ", mActiveId1="
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v29, v0
+    move/from16 v30, v0
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    const-string v29, ", event.getPointerId(event.getActionIndex())="
+    const-string v30, ", event.getPointerId(event.getActionIndex())="
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
-    move-result v29
+    move-result v30
 
     move-object/from16 v0, p1
 
-    move/from16 v1, v29
+    move/from16 v1, v30
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move-result v29
+    move-result v30
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    const-string v29, ", event.getPointerCount()="
+    const-string v30, ", event.getPointerCount()="
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    move-result v29
+    move-result v30
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    const-string v29, ") Got "
+    const-string v30, ") Got "
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    move-object/from16 v0, v28
+    move-object/from16 v0, v29
 
     move-object/from16 v1, p1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    const-string v29, " with bad state. "
+    const-string v30, " with bad state. "
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    const-string v29, "Did you forget to pass an event to "
+    const-string v30, "Did you forget to pass an event to "
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    const-string v29, "ScaleGestureDetector#onTouchEvent?"
+    const-string v30, "ScaleGestureDetector#onTouchEvent?"
 
-    invoke-virtual/range {v28 .. v29}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {v29 .. v30}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v28
+    move-result-object v29
 
-    invoke-virtual/range {v28 .. v28}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v29 .. v29}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v28
+    move-result-object v29
 
-    invoke-static/range {v27 .. v28}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static/range {v28 .. v29}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto/16 :goto_a
+    goto/16 :goto_b
 
-    .line 416
-    .end local v12           #index0:I
-    .end local v17           #oldActive1:I
+    .line 428
+    .end local v13           #index0:I
+    .end local v18           #oldActive1:I
     :pswitch_9
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
-    move-result v20
+    move-result v21
 
-    .line 417
-    .restart local v20       #pointerCount:I
+    .line 429
+    .restart local v21       #pointerCount:I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v5
 
-    .line 418
+    .line 430
     .restart local v5       #actionIndex:I
     move-object/from16 v0, p1
 
@@ -2892,289 +2968,60 @@
 
     move-result v4
 
-    .line 420
+    .line 432
     .restart local v4       #actionId:I
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
-    .line 421
-    .local v9, gestureEnded:Z
-    const/16 v27, 0x2
+    .line 433
+    .local v10, gestureEnded:Z
+    const/16 v28, 0x2
 
-    move/from16 v0, v20
+    move/from16 v0, v21
 
-    move/from16 v1, v27
+    move/from16 v1, v28
 
     if-le v0, v1, :cond_28
 
-    .line 422
+    .line 434
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     if-ne v4, v0, :cond_26
-
-    .line 423
-    move-object/from16 v0, p0
-
-    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
-
-    move/from16 v27, v0
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    move/from16 v2, v27
-
-    invoke-direct {v0, v1, v2, v5}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
-
-    move-result v15
-
-    .line 424
-    .restart local v15       #newIndex:I
-    if-ltz v15, :cond_25
-
-    .line 425
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
-
-    move-object/from16 v27, v0
-
-    move-object/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
-
-    .line 426
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v15}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
-
-    .line 427
-    const/16 v27, 0x1
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
-
-    .line 428
-    invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
-
-    move-result-object v27
-
-    move-object/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput-object v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
-
-    .line 429
-    invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
-
-    .line 430
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
-
-    move-object/from16 v27, v0
-
-    move-object/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleBegin(Landroid/webkit/WebviewScaleGestureDetector;)Z
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
-
-    .line 447
-    .end local v15           #newIndex:I
-    :cond_24
-    :goto_b
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
-
-    move-object/from16 v27, v0
-
-    invoke-virtual/range {v27 .. v27}, Landroid/view/MotionEvent;->recycle()V
-
-    .line 448
-    invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
-
-    move-result-object v27
-
-    move-object/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput-object v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
-
-    .line 449
-    invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
-
-    .line 454
-    :goto_c
-    if-eqz v9, :cond_2
-
-    .line 456
-    invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
-
-    .line 459
-    move-object/from16 v0, p0
-
-    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
-
-    move/from16 v27, v0
-
-    move/from16 v0, v27
-
-    if-ne v4, v0, :cond_29
-
-    move-object/from16 v0, p0
-
-    iget v6, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
-
-    .line 460
-    .local v6, activeId:I
-    :goto_d
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v6}, Landroid/view/MotionEvent;->findPointerIndex(I)I
-
-    move-result v11
-
-    .line 461
-    .restart local v11       #index:I
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v11}, Landroid/view/MotionEvent;->getX(I)F
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
-
-    .line 462
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v11}, Landroid/view/MotionEvent;->getY(I)F
-
-    move-result v27
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
-
-    .line 464
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
-
-    move-object/from16 v27, v0
-
-    move-object/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
-
-    .line 465
-    invoke-direct/range {p0 .. p0}, Landroid/webkit/WebviewScaleGestureDetector;->reset()V
-
-    .line 466
-    move-object/from16 v0, p0
-
-    iput v6, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
-
-    .line 467
-    const/16 v27, 0x1
-
-    move/from16 v0, v27
-
-    move-object/from16 v1, p0
-
-    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
-
-    goto/16 :goto_0
-
-    .line 432
-    .end local v6           #activeId:I
-    .end local v11           #index:I
-    .restart local v15       #newIndex:I
-    :cond_25
-    const/4 v9, 0x1
-
-    goto :goto_b
-
-    .line 434
-    .end local v15           #newIndex:I
-    :cond_26
-    move-object/from16 v0, p0
-
-    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
-
-    move/from16 v27, v0
-
-    move/from16 v0, v27
-
-    if-ne v4, v0, :cond_24
 
     .line 435
     move-object/from16 v0, p0
 
-    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
 
-    move/from16 v2, v27
+    move/from16 v2, v28
 
     invoke-direct {v0, v1, v2, v5}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
 
-    move-result v15
+    move-result v16
 
     .line 436
-    .restart local v15       #newIndex:I
-    if-ltz v15, :cond_27
+    .restart local v16       #newIndex:I
+    if-ltz v16, :cond_25
 
     .line 437
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -3183,20 +3030,22 @@
     .line 438
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v15}, Landroid/view/MotionEvent;->getPointerId(I)I
+    move/from16 v1, v16
 
-    move-result v27
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
-    move/from16 v0, v27
+    move-result v28
+
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
-    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
 
     .line 439
-    const/16 v27, 0x0
+    const/16 v28, 0x1
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -3205,9 +3054,9 @@
     .line 440
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    move-result-object v27
+    move-result-object v28
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -3221,127 +3070,358 @@
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleBegin(Landroid/webkit/WebviewScaleGestureDetector;)Z
 
-    move-result v27
+    move-result v28
 
-    move/from16 v0, v27
+    move/from16 v0, v28
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
 
-    goto/16 :goto_b
-
-    .line 444
-    :cond_27
-    const/4 v9, 0x1
-
-    goto/16 :goto_b
-
-    .line 451
-    .end local v15           #newIndex:I
-    :cond_28
-    const/4 v9, 0x1
-
-    goto/16 :goto_c
-
     .line 459
-    :cond_29
+    .end local v16           #newIndex:I
+    :cond_24
+    :goto_c
     move-object/from16 v0, p0
 
-    iget v6, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
-    goto/16 :goto_d
+    move-object/from16 v28, v0
+
+    invoke-virtual/range {v28 .. v28}, Landroid/view/MotionEvent;->recycle()V
+
+    .line 460
+    invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
+
+    move-result-object v28
+
+    move-object/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput-object v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
+
+    .line 461
+    invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
+
+    .line 466
+    :goto_d
+    if-eqz v10, :cond_2
+
+    .line 468
+    invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
+
+    .line 471
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+
+    move/from16 v28, v0
+
+    move/from16 v0, v28
+
+    if-ne v4, v0, :cond_29
+
+    move-object/from16 v0, p0
+
+    iget v6, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
+
+    .line 472
+    .local v6, activeId:I
+    :goto_e
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v6}, Landroid/view/MotionEvent;->findPointerIndex(I)I
+
+    move-result v12
 
     .line 473
-    .end local v4           #actionId:I
-    .end local v5           #actionIndex:I
-    .end local v9           #gestureEnded:Z
-    .end local v20           #pointerCount:I
-    :pswitch_a
+    .restart local v12       #index:I
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getX(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusX:F
+
+    .line 474
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v12}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mFocusY:F
+
+    .line 476
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
 
-    .line 474
+    .line 477
+    invoke-direct/range {p0 .. p0}, Landroid/webkit/WebviewScaleGestureDetector;->reset()V
+
+    .line 478
+    move-object/from16 v0, p0
+
+    iput v6, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+
+    .line 479
+    const/16 v28, 0x1
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
+
+    goto/16 :goto_0
+
+    .line 444
+    .end local v6           #activeId:I
+    .end local v12           #index:I
+    .restart local v16       #newIndex:I
+    :cond_25
+    const/4 v10, 0x1
+
+    goto :goto_c
+
+    .line 446
+    .end local v16           #newIndex:I
+    :cond_26
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
+
+    move/from16 v28, v0
+
+    move/from16 v0, v28
+
+    if-ne v4, v0, :cond_24
+
+    .line 447
+    move-object/from16 v0, p0
+
+    iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+
+    move/from16 v28, v0
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, v28
+
+    invoke-direct {v0, v1, v2, v5}, Landroid/webkit/WebviewScaleGestureDetector;->findNewActiveIndex(Landroid/view/MotionEvent;II)I
+
+    move-result v16
+
+    .line 448
+    .restart local v16       #newIndex:I
+    if-ltz v16, :cond_27
+
+    .line 449
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
+
+    move-object/from16 v28, v0
+
+    move-object/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
+
+    .line 450
+    move-object/from16 v0, p1
+
+    move/from16 v1, v16
+
+    invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId1:I
+
+    .line 451
+    const/16 v28, 0x0
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mActive0MostRecent:Z
+
+    .line 452
+    invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
+
+    move-result-object v28
+
+    move-object/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput-object v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
+
+    .line 453
+    invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
+
+    .line 454
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
+
+    move-object/from16 v28, v0
+
+    move-object/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleBegin(Landroid/webkit/WebviewScaleGestureDetector;)Z
+
+    move-result v28
+
+    move/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    iput-boolean v0, v1, Landroid/webkit/WebviewScaleGestureDetector;->mGestureInProgress:Z
+
+    goto/16 :goto_c
+
+    .line 456
+    :cond_27
+    const/4 v10, 0x1
+
+    goto/16 :goto_c
+
+    .line 463
+    .end local v16           #newIndex:I
+    :cond_28
+    const/4 v10, 0x1
+
+    goto/16 :goto_d
+
+    .line 471
+    :cond_29
+    move-object/from16 v0, p0
+
+    iget v6, v0, Landroid/webkit/WebviewScaleGestureDetector;->mActiveId0:I
+
+    goto/16 :goto_e
+
+    .line 485
+    .end local v4           #actionId:I
+    .end local v5           #actionIndex:I
+    .end local v10           #gestureEnded:Z
+    .end local v21           #pointerCount:I
+    :pswitch_a
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
+
+    move-object/from16 v28, v0
+
+    move-object/from16 v0, v28
+
+    move-object/from16 v1, p0
+
+    invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScaleEnd(Landroid/webkit/WebviewScaleGestureDetector;)V
+
+    .line 486
     invoke-direct/range {p0 .. p0}, Landroid/webkit/WebviewScaleGestureDetector;->reset()V
 
     goto/16 :goto_0
 
-    .line 482
+    .line 494
     :pswitch_b
     invoke-direct/range {p0 .. p1}, Landroid/webkit/WebviewScaleGestureDetector;->setContext(Landroid/view/MotionEvent;)V
 
-    .line 487
+    .line 499
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mCurrPressure:F
 
-    move/from16 v27, v0
+    move/from16 v28, v0
 
     move-object/from16 v0, p0
 
     iget v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevPressure:F
 
-    move/from16 v28, v0
+    move/from16 v29, v0
 
-    div-float v27, v27, v28
+    div-float v28, v28, v29
 
-    const v28, 0x3f2b851f
+    const v29, 0x3f2b851f
 
-    cmpl-float v27, v27, v28
+    cmpl-float v28, v28, v29
 
-    if-lez v27, :cond_2
+    if-lez v28, :cond_2
 
-    .line 488
+    .line 500
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mListener:Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
     invoke-interface {v0, v1}, Landroid/webkit/WebviewScaleGestureDetector$OnScaleGestureListener;->onScale(Landroid/webkit/WebviewScaleGestureDetector;)Z
 
-    move-result v22
+    move-result v23
 
-    .line 490
-    .local v22, updatePrevious:Z
-    if-eqz v22, :cond_2
+    .line 502
+    .local v23, updatePrevious:Z
+    if-eqz v23, :cond_2
 
-    .line 491
+    .line 503
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/webkit/WebviewScaleGestureDetector;->mPrevEvent:Landroid/view/MotionEvent;
 
-    move-object/from16 v27, v0
+    move-object/from16 v28, v0
 
-    invoke-virtual/range {v27 .. v27}, Landroid/view/MotionEvent;->recycle()V
+    invoke-virtual/range {v28 .. v28}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 492
+    .line 504
     invoke-static/range {p1 .. p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    move-result-object v27
+    move-result-object v28
 
-    move-object/from16 v0, v27
+    move-object/from16 v0, v28
 
     move-object/from16 v1, p0
 
@@ -3350,8 +3430,6 @@
     goto/16 :goto_0
 
     .line 206
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -3363,7 +3441,7 @@
         :pswitch_5
     .end packed-switch
 
-    .line 375
+    .line 387
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_7

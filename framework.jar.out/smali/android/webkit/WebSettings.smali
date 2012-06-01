@@ -3617,11 +3617,6 @@
     .line 841
     iput p1, p0, Landroid/webkit/WebSettings;->mDoubleTapZoom:I
 
-    .line 843
-    iget-object v0, p0, Landroid/webkit/WebSettings;->mWebView:Landroid/webkit/WebView;
-
-    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->updateDoubleTapZoom(I)V
-
     .line 845
     :cond_0
     return-void

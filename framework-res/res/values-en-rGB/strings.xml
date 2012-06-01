@@ -169,6 +169,8 @@
     <string name="terabyteShort">TB</string>
     <string name="petabyteShort">PB</string>
     <string name="fileSizeSuffix">%1$s%2$s</string>
+    <string name="ellipsis">…</string>
+    <string name="ellipsis_two_dots">‥</string>
     <string name="mmiError">Connection problem or invalid MMI code.</string>
     <string name="mmiFdnError">Operation is restricted to fixed dialling numbers only.</string>
     <string name="serviceEnabled">Service was enabled.</string>
@@ -875,7 +877,7 @@ Select OK to continue or Cancel to stay on the current page."</string>
     <string name="capital_off">OFF</string>
     <string name="whichApplication">Complete action using</string>
     <string name="alwaysUse">Use by default for this action.</string>
-    <string name="clearDefaultHintMsg">Clear default in Home Settings > Applications.</string>
+    <string name="clearDefaultHintMsg">Clear default in Home Settings > Applications > Manage applications.</string>
     <string name="chooseActivity">Select an action</string>
     <string name="chooseUsbActivity">Select an application for the USB device</string>
     <string name="noApplications">No applications can perform this action.</string>

@@ -5230,7 +5230,7 @@
 
     move-object/from16 v0, v30
 
-    invoke-virtual {v0, v3}, Landroid/view/VelocityTracker;->getMonomialYVelocity(I)F
+    invoke-virtual {v0, v3}, Landroid/view/VelocityTracker;->getMonomialXVelocity(I)F
 
     move-result v3
 
@@ -5335,7 +5335,7 @@
 
     move-object/from16 v0, v30
 
-    invoke-virtual {v0, v3}, Landroid/view/VelocityTracker;->getYVelocity(I)F
+    invoke-virtual {v0, v3}, Landroid/view/VelocityTracker;->getXVelocity(I)F
 
     move-result v3
 

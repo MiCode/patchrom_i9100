@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="calldiverting_list">
+        <item>總是轉駁</item>
+        <item>線路繁忙時轉駁</item>
+        <item>無人接聽轉駁</item>
+        <item>無法接通轉駁</item>
+        <item>全部取消</item>
+    </string-array>
+    <string-array name="callbarring_list">
+        <item>全部撥出電話</item>
+        <item>撥出的國際長途電話</item>
+        <item>國際（本地除外）</item>
+        <item>所有來電</item>
+        <item>國際漫遊時來電</item>
+        <item>全部取消</item>
+    </string-array>
+    <string-array name="waiting_time">
+        <item>5 秒</item>
+        <item>10 秒</item>
+        <item>15 秒</item>
+        <item>20 秒</item>
+        <item>25 秒</item>
+        <item>30 秒</item>
+    </string-array>
+    <string-array name="automatic_time">
+        <item>1 秒</item>
+        <item>2 秒</item>
+        <item>3 秒</item>
+        <item>4 秒</item>
+        <item>5 秒</item>
+    </string-array>
+    <string-array name="autoreject_alert">
+        <item>記錄</item>
+        <item>聯絡人</item>
+    </string-array>
+    <string-array name="fakecallerimage_alert">
+        <item>圖像</item>
+        <item>拍照</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_default">
+        <item>圖片</item>
+        <item>影片</item>
+    </string-array>
+    <string-array name="callerimage_alert_video_changed">
+        <item>預設圖像</item>
+        <item>圖片</item>
+        <item>影片</item>
+    </string-array>
+    <string-array name="callerimage_alert_default">
+        <item>圖片</item>
+        <item>影片</item>
+        <item>拍照</item>
+        <item>錄影</item>
+    </string-array>
+    <string-array name="callerimage_alert_changed">
+        <item>預設圖像</item>
+        <item>圖片</item>
+        <item>影片</item>
+        <item>拍照</item>
+        <item>錄影</item>
+    </string-array>
+    <string-array name="entries_list_preference">
+        <item>關</item>
+        <item>後 1 秒</item>
+        <item>後 2 秒</item>
+        <item>後 3 秒</item>
+        <item>後 4 秒</item>
+        <item>後 5 秒</item>
+    </string-array>
+    <string-array name="entryvalues_list_preference">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="match_criteria_entries">
+        <item>完全相同於</item>
+        <item>開始以</item>
+        <item>結束以</item>
+        <item>包括</item>
+    </string-array>
+    <string-array name="match_criteria_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="auto_reject_mode">
+        <item>關</item>
+        <item>全部號碼</item>
+        <item>自動拒絕號碼</item>
+    </string-array>
+    <string-array name="auto_reject_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

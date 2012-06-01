@@ -177,6 +177,7 @@
     .parameter "context"
 
     .prologue
+    .line 63
     new-instance v0, Lcom/android/internal/policy/impl/PhoneWindow;
 
     invoke-direct {v0, p1}, Lcom/android/internal/policy/impl/PhoneWindow;-><init>(Landroid/content/Context;)V

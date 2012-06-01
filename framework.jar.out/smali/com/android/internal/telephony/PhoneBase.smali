@@ -1681,7 +1681,7 @@
 
     .prologue
     .line 1185
-    const-string/jumbo v0, "isCspPlmnEnabled"
+    const-string v0, "isCspPlmnEnabled"
 
     invoke-static {v0}, Lcom/android/internal/telephony/PhoneBase;->logUnexpectedGsmMethodCall(Ljava/lang/String;)V
 

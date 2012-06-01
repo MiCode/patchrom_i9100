@@ -1774,7 +1774,7 @@
 
     iget-object v9, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    const v10, 0x104064d
+    const v10, 0x104064e
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1792,7 +1792,7 @@
 
     iget-object v9, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    const v10, 0x104064e
+    const v10, 0x104064f
 
     invoke-virtual {v9, v10}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -7291,7 +7291,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v6, "isCtrlPressed and keyCode = "
+    const-string v6, "isCtrlPressed and keyCode = "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7491,8 +7491,6 @@
     goto/16 :goto_3
 
     .line 620
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x1d -> :sswitch_0
@@ -7617,7 +7615,7 @@
 
     iget-object v3, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    const v4, 0x104064d
+    const v4, 0x104064e
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -7635,7 +7633,7 @@
 
     iget-object v3, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    const v4, 0x104064e
+    const v4, 0x104064f
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -10962,7 +10960,7 @@
 
     iget-object v6, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    const v7, 0x104064d
+    const v7, 0x104064e
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -10980,7 +10978,7 @@
 
     iget-object v6, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
-    const v7, 0x104064e
+    const v7, 0x104064f
 
     invoke-virtual {v6, v7}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

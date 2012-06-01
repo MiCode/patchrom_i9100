@@ -2521,13 +2521,13 @@
         <item name="borderlessButtonStyle">@style/Widget.DeviceDefault.Light.Button.Borderless.Small</item>
         <item name="buttonBarStyle">@style/DeviceDefault.Light.ButtonBar.AlertDialog</item>
     </style>
-    <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@style/Theme.DeviceDefault.Light.Dialog" />
+    <style name="Theme.DeviceDefault.Light.Dialog.MinWidth" parent="@style/Theme.Holo.Light.Dialog.MinWidth" />
     <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar" parent="@style/Theme.Holo.Light.Dialog.NoActionBar" />
-    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@style/Theme.DeviceDefault.Light.Dialog.NoActionBar" />
-    <style name="Theme.DeviceDefault.DialogWhenLarge" parent="@style/Theme.DeviceDefault" />
-    <style name="Theme.DeviceDefault.DialogWhenLarge.NoActionBar" parent="@style/Theme.DeviceDefault.NoActionBar" />
-    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@style/Theme.DeviceDefault.Light" />
-    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.DeviceDefault.Light.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.Dialog.NoActionBar.MinWidth" parent="@style/Theme.Holo.Light.Dialog.NoActionBar.MinWidth" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge" parent="@style/Theme.Holo.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.DialogWhenLarge.NoActionBar" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge" parent="@style/Theme.Holo.Light.DialogWhenLarge" />
+    <style name="Theme.DeviceDefault.Light.DialogWhenLarge.NoActionBar" parent="@style/Theme.Holo.Light.DialogWhenLarge.NoActionBar" />
     <style name="Theme.DeviceDefault.Panel" parent="@style/Theme.DeviceDefault">
         <item name="windowBackground">@color/transparent</item>
         <item name="windowFrame">@null</item>

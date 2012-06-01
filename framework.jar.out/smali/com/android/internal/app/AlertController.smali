@@ -164,7 +164,7 @@
     .line 195
     const/16 v1, 0xb
 
-    const v2, 0x1090095
+    const v2, 0x1090093
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 

@@ -90,10 +90,10 @@
 
     const/4 v5, 0x0
 
-    .line 11142
+    .line 10896
     iput-object p1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
-    .line 11143
+    .line 10897
     #getter for: Landroid/view/View;->mContext:Landroid/content/Context;
     invoke-static {p1}, Landroid/widget/TextView;->access$6800(Landroid/widget/TextView;)Landroid/content/Context;
 
@@ -101,34 +101,34 @@
 
     invoke-direct {p0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 11131
+    .line 10885
     const/4 v1, -0x1
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mPreviousOffset:I
 
-    .line 11133
+    .line 10887
     iput-boolean v6, p0, Landroid/widget/TextView$HandleView;->mPositionHasChanged:Z
 
-    .line 11138
+    .line 10892
     iput-boolean v5, p0, Landroid/widget/TextView$HandleView;->mOnTop:Z
 
-    .line 11186
+    .line 10940
     new-array v1, v2, [J
 
     iput-object v1, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetsTimes:[J
 
-    .line 11187
+    .line 10941
     new-array v1, v2, [I
 
     iput-object v1, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsets:[I
 
-    .line 11188
+    .line 10942
     iput v5, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetIndex:I
 
-    .line 11189
+    .line 10943
     iput v5, p0, Landroid/widget/TextView$HandleView;->mNumberPreviousOffsets:I
 
-    .line 11144
+    .line 10898
     new-instance v1, Landroid/widget/PopupWindow;
 
     #getter for: Landroid/view/View;->mContext:Landroid/content/Context;
@@ -144,54 +144,54 @@
 
     iput-object v1, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
-    .line 11146
+    .line 10900
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
     invoke-virtual {v1, v6}, Landroid/widget/PopupWindow;->setSplitTouchEnabled(Z)V
 
-    .line 11147
+    .line 10901
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
     invoke-virtual {v1, v5}, Landroid/widget/PopupWindow;->setClippingEnabled(Z)V
 
-    .line 11150
+    .line 10904
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
     const/16 v2, 0x3e8
 
     invoke-virtual {v1, v2}, Landroid/widget/PopupWindow;->setWindowLayoutType(I)V
 
-    .line 11152
+    .line 10906
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
     invoke-virtual {v1, p0}, Landroid/widget/PopupWindow;->setContentView(Landroid/view/View;)V
 
-    .line 11154
+    .line 10908
     iput-object p2, p0, Landroid/widget/TextView$HandleView;->mDrawableLtr:Landroid/graphics/drawable/Drawable;
 
-    .line 11155
+    .line 10909
     iput-object p3, p0, Landroid/widget/TextView$HandleView;->mDrawableRtl:Landroid/graphics/drawable/Drawable;
 
-    .line 11157
+    .line 10911
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->updateDrawable()V
 
-    .line 11159
+    .line 10913
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    .line 11161
+    .line 10915
     .local v0, handleHeight:I
     iput-boolean p4, p0, Landroid/widget/TextView$HandleView;->mOnTop:Z
 
-    .line 11163
+    .line 10917
     iget-boolean v1, p0, Landroid/widget/TextView$HandleView;->mOnTop:Z
 
     if-nez v1, :cond_0
 
-    .line 11164
+    .line 10918
     const v1, -0x41666666
 
     int-to-float v2, v0
@@ -200,7 +200,7 @@
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mTouchOffsetY:F
 
-    .line 11165
+    .line 10919
     const v1, 0x3f333333
 
     int-to-float v2, v0
@@ -209,11 +209,11 @@
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mIdealVerticalOffset:F
 
-    .line 11171
+    .line 10925
     :goto_0
     return-void
 
-    .line 11167
+    .line 10921
     :cond_0
     const v1, 0x3e99999a
 
@@ -223,7 +223,7 @@
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mTouchOffsetY:F
 
-    .line 11168
+    .line 10922
     const v1, -0x40cccccd
 
     int-to-float v2, v0
@@ -240,7 +240,7 @@
     .parameter "offset"
 
     .prologue
-    .line 11197
+    .line 10951
     iget v0, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetIndex:I
 
     add-int/lit8 v0, v0, 0x1
@@ -249,14 +249,14 @@
 
     iput v0, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetIndex:I
 
-    .line 11198
+    .line 10952
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsets:[I
 
     iget v1, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetIndex:I
 
     aput p1, v0, v1
 
-    .line 11199
+    .line 10953
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetsTimes:[J
 
     iget v1, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetIndex:I
@@ -267,14 +267,14 @@
 
     aput-wide v2, v0, v1
 
-    .line 11200
+    .line 10954
     iget v0, p0, Landroid/widget/TextView$HandleView;->mNumberPreviousOffsets:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Landroid/widget/TextView$HandleView;->mNumberPreviousOffsets:I
 
-    .line 11201
+    .line 10955
     return-void
 .end method
 
@@ -282,20 +282,20 @@
     .locals 9
 
     .prologue
-    .line 11204
+    .line 10958
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v3
 
-    .line 11205
+    .line 10959
     .local v3, now:J
     const/4 v0, 0x0
 
-    .line 11206
+    .line 10960
     .local v0, i:I
     iget v2, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetIndex:I
 
-    .line 11207
+    .line 10961
     .local v2, index:I
     iget v5, p0, Landroid/widget/TextView$HandleView;->mNumberPreviousOffsets:I
 
@@ -305,7 +305,7 @@
 
     move-result v1
 
-    .line 11208
+    .line 10962
     .local v1, iMax:I
     :goto_0
     if-ge v0, v1, :cond_0
@@ -322,10 +322,10 @@
 
     if-gez v5, :cond_0
 
-    .line 11209
+    .line 10963
     add-int/lit8 v0, v0, 0x1
 
-    .line 11210
+    .line 10964
     iget v5, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsetIndex:I
 
     sub-int/2addr v5, v0
@@ -336,7 +336,7 @@
 
     goto :goto_0
 
-    .line 11213
+    .line 10967
     :cond_0
     if-lez v0, :cond_1
 
@@ -354,7 +354,7 @@
 
     if-lez v5, :cond_1
 
-    .line 11215
+    .line 10969
     iget-object v5, p0, Landroid/widget/TextView$HandleView;->mPreviousOffsets:[I
 
     aget v5, v5, v2
@@ -363,7 +363,7 @@
 
     invoke-virtual {p0, v5, v6}, Landroid/widget/TextView$HandleView;->positionAtCursorOffset(IZ)V
 
-    .line 11217
+    .line 10971
     :cond_1
     return-void
 .end method
@@ -372,19 +372,19 @@
     .locals 3
 
     .prologue
-    .line 11283
+    .line 11037
     iget-boolean v0, p0, Landroid/widget/TextView$HandleView;->mIsDragging:Z
 
     if-eqz v0, :cond_0
 
-    .line 11284
+    .line 11038
     const/4 v0, 0x1
 
-    .line 11291
+    .line 11045
     :goto_0
     return v0
 
-    .line 11287
+    .line 11041
     :cond_0
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -394,12 +394,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 11288
+    .line 11042
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 11291
+    .line 11045
     :cond_1
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -424,15 +424,15 @@
     .parameter "offset"
 
     .prologue
-    .line 11192
+    .line 10946
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/widget/TextView$HandleView;->mNumberPreviousOffsets:I
 
-    .line 11193
+    .line 10947
     invoke-direct {p0, p1}, Landroid/widget/TextView$HandleView;->addPositionToTouchUpFilter(I)V
 
-    .line 11194
+    .line 10948
     return-void
 .end method
 
@@ -442,20 +442,20 @@
     .locals 1
 
     .prologue
-    .line 11241
+    .line 10995
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/TextView$HandleView;->mIsDragging:Z
 
-    .line 11242
+    .line 10996
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 11243
+    .line 10997
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->onDetached()V
 
-    .line 11244
+    .line 10998
     return-void
 .end method
 
@@ -469,10 +469,10 @@
     .locals 1
 
     .prologue
-    .line 11247
+    .line 11001
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->dismiss()V
 
-    .line 11249
+    .line 11003
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->getPositionListener()Landroid/widget/TextView$PositionListener;
@@ -482,7 +482,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView$PositionListener;->removeSubscriber(Landroid/widget/TextView$TextViewPositionListener;)V
 
-    .line 11250
+    .line 11004
     return-void
 .end method
 
@@ -490,30 +490,30 @@
     .locals 2
 
     .prologue
-    .line 11269
+    .line 11023
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mActionPopupShower:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 11270
+    .line 11024
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->mActionPopupShower:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 11272
+    .line 11026
     :cond_0
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mActionPopupWindow:Landroid/widget/TextView$ActionPopupWindow;
 
     if-eqz v0, :cond_1
 
-    .line 11273
+    .line 11027
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mActionPopupWindow:Landroid/widget/TextView$ActionPopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/TextView$ActionPopupWindow;->hide()V
 
-    .line 11275
+    .line 11029
     :cond_1
     return-void
 .end method
@@ -522,7 +522,7 @@
     .locals 1
 
     .prologue
-    .line 11445
+    .line 11199
     iget-boolean v0, p0, Landroid/widget/TextView$HandleView;->mIsDragging:Z
 
     return v0
@@ -532,7 +532,7 @@
     .locals 1
 
     .prologue
-    .line 11278
+    .line 11032
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
@@ -548,7 +548,7 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 11220
+    .line 10974
     iget v1, p0, Landroid/widget/TextView$HandleView;->mNumberPreviousOffsets:I
 
     if-le v1, v0, :cond_0
@@ -566,10 +566,10 @@
     .locals 0
 
     .prologue
-    .line 11453
+    .line 11207
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->hideActionPopupWindow()V
 
-    .line 11454
+    .line 11208
     return-void
 .end method
 
@@ -580,7 +580,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 11376
+    .line 11130
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Landroid/view/View;->mRight:I
@@ -597,12 +597,12 @@
 
     invoke-virtual {v0, v4, v4, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 11377
+    .line 11131
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 11378
+    .line 11132
     return-void
 .end method
 
@@ -610,10 +610,10 @@
     .locals 0
 
     .prologue
-    .line 11449
+    .line 11203
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->hideActionPopupWindow()V
 
-    .line 11450
+    .line 11204
     return-void
 .end method
 
@@ -623,7 +623,7 @@
     .parameter "heightMeasureSpec"
 
     .prologue
-    .line 11225
+    .line 10979
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -638,7 +638,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/TextView$HandleView;->setMeasuredDimension(II)V
 
-    .line 11226
+    .line 10980
     return-void
 .end method
 
@@ -651,18 +651,18 @@
 
     const/4 v11, 0x0
 
-    .line 11382
+    .line 11136
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v10
 
     packed-switch v10, :pswitch_data_0
 
-    .line 11441
+    .line 11195
     :goto_0
     return v12
 
-    .line 11384
+    .line 11138
     :pswitch_0
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->getCurrentCursorOffset()I
 
@@ -670,7 +670,7 @@
 
     invoke-direct {p0, v10}, Landroid/widget/TextView$HandleView;->startTouchUpFilter(I)V
 
-    .line 11385
+    .line 11139
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v10
@@ -683,7 +683,7 @@
 
     iput v10, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetX:F
 
-    .line 11386
+    .line 11140
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v10
@@ -696,7 +696,7 @@
 
     iput v10, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetY:F
 
-    .line 11388
+    .line 11142
     iget-object v10, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->getPositionListener()Landroid/widget/TextView$PositionListener;
@@ -704,7 +704,7 @@
 
     move-result-object v4
 
-    .line 11389
+    .line 11143
     .local v4, positionListener:Landroid/widget/TextView$PositionListener;
     invoke-virtual {v4}, Landroid/widget/TextView$PositionListener;->getPositionX()I
 
@@ -712,32 +712,32 @@
 
     iput v10, p0, Landroid/widget/TextView$HandleView;->mLastParentX:I
 
-    .line 11390
+    .line 11144
     invoke-virtual {v4}, Landroid/widget/TextView$PositionListener;->getPositionY()I
 
     move-result v10
 
     iput v10, p0, Landroid/widget/TextView$HandleView;->mLastParentY:I
 
-    .line 11391
+    .line 11145
     iput-boolean v12, p0, Landroid/widget/TextView$HandleView;->mIsDragging:Z
 
     goto :goto_0
 
-    .line 11396
+    .line 11150
     .end local v4           #positionListener:Landroid/widget/TextView$PositionListener;
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v6
 
-    .line 11397
+    .line 11151
     .local v6, rawX:F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v7
 
-    .line 11400
+    .line 11154
     .local v7, rawY:F
     iget v10, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetY:F
 
@@ -747,7 +747,7 @@
 
     sub-float v5, v10, v11
 
-    .line 11401
+    .line 11155
     .local v5, previousVerticalOffset:F
     iget v10, p0, Landroid/widget/TextView$HandleView;->mPositionY:I
 
@@ -761,7 +761,7 @@
 
     sub-float v0, v10, v11
 
-    .line 11403
+    .line 11157
     .local v0, currentVerticalOffset:F
     iget v10, p0, Landroid/widget/TextView$HandleView;->mIdealVerticalOffset:F
 
@@ -769,20 +769,20 @@
 
     if-gez v10, :cond_0
 
-    .line 11404
+    .line 11158
     iget v10, p0, Landroid/widget/TextView$HandleView;->mIdealVerticalOffset:F
 
     invoke-static {v0, v10}, Ljava/lang/Math;->min(FF)F
 
     move-result v3
 
-    .line 11405
+    .line 11159
     .local v3, newVerticalOffset:F
     invoke-static {v3, v5}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
-    .line 11410
+    .line 11164
     :goto_1
     iget v10, p0, Landroid/widget/TextView$HandleView;->mLastParentY:I
 
@@ -792,7 +792,7 @@
 
     iput v10, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetY:F
 
-    .line 11412
+    .line 11166
     iget v10, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetX:F
 
     sub-float v10, v6, v10
@@ -803,7 +803,7 @@
 
     add-float v1, v10, v11
 
-    .line 11413
+    .line 11167
     .local v1, newPosX:F
     iget v10, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetY:F
 
@@ -813,13 +813,13 @@
 
     add-float v2, v10, v11
 
-    .line 11415
+    .line 11169
     .local v2, newPosY:F
     invoke-virtual {p0, v1, v2}, Landroid/widget/TextView$HandleView;->updatePosition(FF)V
 
     goto :goto_0
 
-    .line 11407
+    .line 11161
     .end local v1           #newPosX:F
     .end local v2           #newPosY:F
     .end local v3           #newVerticalOffset:F
@@ -830,7 +830,7 @@
 
     move-result v3
 
-    .line 11408
+    .line 11162
     .restart local v3       #newVerticalOffset:F
     invoke-static {v3, v5}, Ljava/lang/Math;->min(FF)F
 
@@ -838,7 +838,7 @@
 
     goto :goto_1
 
-    .line 11421
+    .line 11175
     .end local v0           #currentVerticalOffset:F
     .end local v3           #newVerticalOffset:F
     .end local v5           #previousVerticalOffset:F
@@ -853,14 +853,14 @@
 
     if-eqz v10, :cond_1
 
-    .line 11422
+    .line 11176
     iget-object v10, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     invoke-virtual {v10}, Landroid/widget/TextView;->getSelectionStart()I
 
     move-result v9
 
-    .line 11423
+    .line 11177
     .local v9, selectionStart:I
     iget-object v10, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -868,29 +868,29 @@
 
     move-result v8
 
-    .line 11425
+    .line 11179
     .local v8, selectionEnd:I
     if-le v9, v8, :cond_2
 
-    .line 11426
+    .line 11180
     iget-object v10, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->swapSelectionControllers()V
     invoke-static {v10}, Landroid/widget/TextView;->access$7300(Landroid/widget/TextView;)V
 
-    .line 11433
+    .line 11187
     .end local v8           #selectionEnd:I
     .end local v9           #selectionStart:I
     :cond_1
     :goto_2
     invoke-direct {p0}, Landroid/widget/TextView$HandleView;->filterOnTouchUp()V
 
-    .line 11434
+    .line 11188
     iput-boolean v11, p0, Landroid/widget/TextView$HandleView;->mIsDragging:Z
 
     goto/16 :goto_0
 
-    .line 11428
+    .line 11182
     .restart local v8       #selectionEnd:I
     .restart local v9       #selectionStart:I
     :cond_2
@@ -901,7 +901,7 @@
 
     goto :goto_2
 
-    .line 11438
+    .line 11192
     .end local v8           #selectionEnd:I
     .end local v9           #selectionStart:I
     :pswitch_3
@@ -909,7 +909,7 @@
 
     goto/16 :goto_0
 
-    .line 11382
+    .line 11136
     nop
 
     :pswitch_data_0
@@ -927,25 +927,25 @@
     .parameter "parentScrolled"
 
     .prologue
-    .line 11302
+    .line 11056
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     iget-object v1, v1, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
 
     if-nez v1, :cond_1
 
-    .line 11304
+    .line 11058
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     #calls: Landroid/widget/TextView;->prepareCursorControllers()V
     invoke-static {v1}, Landroid/widget/TextView;->access$7200(Landroid/widget/TextView;)V
 
-    .line 11329
+    .line 11083
     :cond_0
     :goto_0
     return-void
 
-    .line 11308
+    .line 11062
     :cond_1
     iget v1, p0, Landroid/widget/TextView$HandleView;->mPreviousOffset:I
 
@@ -953,14 +953,14 @@
 
     if-eqz p2, :cond_0
 
-    .line 11309
+    .line 11063
     :cond_2
     invoke-virtual {p0, p1}, Landroid/widget/TextView$HandleView;->updateSelection(I)V
 
-    .line 11310
+    .line 11064
     invoke-direct {p0, p1}, Landroid/widget/TextView$HandleView;->addPositionToTouchUpFilter(I)V
 
-    .line 11311
+    .line 11065
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     iget-object v1, v1, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
@@ -969,7 +969,7 @@
 
     move-result v0
 
-    .line 11313
+    .line 11067
     .local v0, line:I
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -993,12 +993,12 @@
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mPositionX:I
 
-    .line 11315
+    .line 11069
     iget-boolean v1, p0, Landroid/widget/TextView$HandleView;->mOnTop:Z
 
     if-nez v1, :cond_3
 
-    .line 11316
+    .line 11070
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
     iget-object v1, v1, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
@@ -1009,7 +1009,7 @@
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mPositionY:I
 
-    .line 11323
+    .line 11077
     :goto_1
     iget v1, p0, Landroid/widget/TextView$HandleView;->mPositionX:I
 
@@ -1024,7 +1024,7 @@
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mPositionX:I
 
-    .line 11324
+    .line 11078
     iget v1, p0, Landroid/widget/TextView$HandleView;->mPositionY:I
 
     iget-object v2, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
@@ -1038,17 +1038,17 @@
 
     iput v1, p0, Landroid/widget/TextView$HandleView;->mPositionY:I
 
-    .line 11326
+    .line 11080
     iput p1, p0, Landroid/widget/TextView$HandleView;->mPreviousOffset:I
 
-    .line 11327
+    .line 11081
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/widget/TextView$HandleView;->mPositionHasChanged:Z
 
     goto :goto_0
 
-    .line 11318
+    .line 11072
     :cond_3
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -1067,18 +1067,18 @@
     .locals 2
 
     .prologue
-    .line 11229
+    .line 10983
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 11238
+    .line 10992
     :goto_0
     return-void
 
-    .line 11231
+    .line 10985
     :cond_0
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -1091,12 +1091,12 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/widget/TextView$PositionListener;->addSubscriber(Landroid/widget/TextView$TextViewPositionListener;Z)V
 
-    .line 11234
+    .line 10988
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/widget/TextView$HandleView;->mPreviousOffset:I
 
-    .line 11235
+    .line 10989
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->getCurrentCursorOffset()I
 
     move-result v0
@@ -1105,7 +1105,7 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/widget/TextView$HandleView;->positionAtCursorOffset(IZ)V
 
-    .line 11237
+    .line 10991
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->hideActionPopupWindow()V
 
     goto :goto_0
@@ -1116,12 +1116,12 @@
     .parameter "delay"
 
     .prologue
-    .line 11253
+    .line 11007
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mActionPopupWindow:Landroid/widget/TextView$ActionPopupWindow;
 
     if-nez v0, :cond_0
 
-    .line 11254
+    .line 11008
     new-instance v0, Landroid/widget/TextView$ActionPopupWindow;
 
     iget-object v1, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
@@ -1132,20 +1132,20 @@
 
     iput-object v0, p0, Landroid/widget/TextView$HandleView;->mActionPopupWindow:Landroid/widget/TextView$ActionPopupWindow;
 
-    .line 11256
+    .line 11010
     :cond_0
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->mActionPopupShower:Ljava/lang/Runnable;
 
     if-nez v0, :cond_1
 
-    .line 11257
+    .line 11011
     new-instance v0, Landroid/widget/TextView$HandleView$1;
 
     invoke-direct {v0, p0}, Landroid/widget/TextView$HandleView$1;-><init>(Landroid/widget/TextView$HandleView;)V
 
     iput-object v0, p0, Landroid/widget/TextView$HandleView;->mActionPopupShower:Ljava/lang/Runnable;
 
-    .line 11265
+    .line 11019
     :goto_0
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -1155,10 +1155,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/TextView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 11266
+    .line 11020
     return-void
 
-    .line 11263
+    .line 11017
     :cond_1
     iget-object v0, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -1173,12 +1173,12 @@
     .locals 3
 
     .prologue
-    .line 11174
+    .line 10928
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->getCurrentCursorOffset()I
 
     move-result v1
 
-    .line 11175
+    .line 10929
     .local v1, offset:I
     iget-object v2, p0, Landroid/widget/TextView$HandleView;->this$0:Landroid/widget/TextView;
 
@@ -1188,7 +1188,7 @@
 
     move-result v0
 
-    .line 11176
+    .line 10930
     .local v0, isRtlCharAtOffset:Z
     if-eqz v0, :cond_0
 
@@ -1197,7 +1197,7 @@
     :goto_0
     iput-object v2, p0, Landroid/widget/TextView$HandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 11177
+    .line 10931
     iget-object v2, p0, Landroid/widget/TextView$HandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v2, v0}, Landroid/widget/TextView$HandleView;->getHotspotX(Landroid/graphics/drawable/Drawable;Z)I
@@ -1206,10 +1206,10 @@
 
     iput v2, p0, Landroid/widget/TextView$HandleView;->mHotspotX:I
 
-    .line 11178
+    .line 10932
     return-void
 
-    .line 11176
+    .line 10930
     :cond_0
     iget-object v2, p0, Landroid/widget/TextView$HandleView;->mDrawableLtr:Landroid/graphics/drawable/Drawable;
 
@@ -1231,27 +1231,27 @@
 
     const/4 v4, -0x1
 
-    .line 11333
+    .line 11087
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->getCurrentCursorOffset()I
 
     move-result v2
 
     invoke-virtual {p0, v2, p4}, Landroid/widget/TextView$HandleView;->positionAtCursorOffset(IZ)V
 
-    .line 11334
+    .line 11088
     if-nez p3, :cond_0
 
     iget-boolean v2, p0, Landroid/widget/TextView$HandleView;->mPositionHasChanged:Z
 
     if-eqz v2, :cond_5
 
-    .line 11335
+    .line 11089
     :cond_0
     iget-boolean v2, p0, Landroid/widget/TextView$HandleView;->mIsDragging:Z
 
     if-eqz v2, :cond_3
 
-    .line 11337
+    .line 11091
     iget v2, p0, Landroid/widget/TextView$HandleView;->mLastParentX:I
 
     if-ne p1, v2, :cond_1
@@ -1260,7 +1260,7 @@
 
     if-eq p2, v2, :cond_2
 
-    .line 11338
+    .line 11092
     :cond_1
     iget v2, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetX:F
 
@@ -1274,7 +1274,7 @@
 
     iput v2, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetX:F
 
-    .line 11339
+    .line 11093
     iget v2, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetY:F
 
     iget v3, p0, Landroid/widget/TextView$HandleView;->mLastParentY:I
@@ -1287,17 +1287,17 @@
 
     iput v2, p0, Landroid/widget/TextView$HandleView;->mTouchToWindowOffsetY:F
 
-    .line 11340
+    .line 11094
     iput p1, p0, Landroid/widget/TextView$HandleView;->mLastParentX:I
 
-    .line 11341
+    .line 11095
     iput p2, p0, Landroid/widget/TextView$HandleView;->mLastParentY:I
 
-    .line 11344
+    .line 11098
     :cond_2
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->onHandleMoved()V
 
-    .line 11347
+    .line 11101
     :cond_3
     invoke-direct {p0}, Landroid/widget/TextView$HandleView;->isVisible()Z
 
@@ -1305,23 +1305,23 @@
 
     if-eqz v2, :cond_8
 
-    .line 11348
+    .line 11102
     iget v2, p0, Landroid/widget/TextView$HandleView;->mPositionX:I
 
     add-int v0, p1, v2
 
-    .line 11351
+    .line 11105
     .local v0, positionX:I
     iget-boolean v2, p0, Landroid/widget/TextView$HandleView;->mOnTop:Z
 
     if-nez v2, :cond_6
 
-    .line 11352
+    .line 11106
     iget v2, p0, Landroid/widget/TextView$HandleView;->mPositionY:I
 
     add-int v1, p2, v2
 
-    .line 11358
+    .line 11112
     .local v1, positionY:I
     :goto_0
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->isShowing()Z
@@ -1330,23 +1330,23 @@
 
     if-eqz v2, :cond_7
 
-    .line 11359
+    .line 11113
     iget-object v2, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
     invoke-virtual {v2, v0, v1, v4, v4}, Landroid/widget/PopupWindow;->update(IIII)V
 
-    .line 11370
+    .line 11124
     .end local v0           #positionX:I
     .end local v1           #positionY:I
     :cond_4
     :goto_1
     iput-boolean v5, p0, Landroid/widget/TextView$HandleView;->mPositionHasChanged:Z
 
-    .line 11372
+    .line 11126
     :cond_5
     return-void
 
-    .line 11354
+    .line 11108
     .restart local v0       #positionX:I
     :cond_6
     iget v2, p0, Landroid/widget/TextView$HandleView;->mPositionY:I
@@ -1364,7 +1364,7 @@
     .restart local v1       #positionY:I
     goto :goto_0
 
-    .line 11361
+    .line 11115
     :cond_7
     iget-object v2, p0, Landroid/widget/TextView$HandleView;->mContainer:Landroid/widget/PopupWindow;
 
@@ -1374,7 +1374,7 @@
 
     goto :goto_1
 
-    .line 11365
+    .line 11119
     .end local v0           #positionX:I
     .end local v1           #positionY:I
     :cond_8
@@ -1384,7 +1384,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 11366
+    .line 11120
     invoke-virtual {p0}, Landroid/widget/TextView$HandleView;->dismiss()V
 
     goto :goto_1

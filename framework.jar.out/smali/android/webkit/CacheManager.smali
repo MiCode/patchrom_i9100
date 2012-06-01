@@ -139,7 +139,7 @@
     .parameter "ret"
 
     .prologue
-    .line 781
+    .line 773
     sget-boolean v1, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v1, :cond_0
@@ -156,13 +156,13 @@
 
     throw v1
 
-    .line 783
+    .line 775
     :cond_0
     invoke-static {p0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 784
+    .line 776
     .local v0, hex:Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -170,14 +170,14 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 807
+    .line 799
     :goto_0
     invoke-virtual {p1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 808
+    .line 800
     return-void
 
-    .line 786
+    .line 778
     :pswitch_0
     const-string v1, "0000000"
 
@@ -185,7 +185,7 @@
 
     goto :goto_0
 
-    .line 789
+    .line 781
     :pswitch_1
     const-string v1, "000000"
 
@@ -193,7 +193,7 @@
 
     goto :goto_0
 
-    .line 792
+    .line 784
     :pswitch_2
     const-string v1, "00000"
 
@@ -201,7 +201,7 @@
 
     goto :goto_0
 
-    .line 795
+    .line 787
     :pswitch_3
     const-string v1, "0000"
 
@@ -209,7 +209,7 @@
 
     goto :goto_0
 
-    .line 798
+    .line 790
     :pswitch_4
     const-string v1, "000"
 
@@ -217,7 +217,7 @@
 
     goto :goto_0
 
-    .line 801
+    .line 793
     :pswitch_5
     const-string v1, "00"
 
@@ -225,7 +225,7 @@
 
     goto :goto_0
 
-    .line 804
+    .line 796
     :pswitch_6
     const-string v1, "0"
 
@@ -233,7 +233,7 @@
 
     goto :goto_0
 
-    .line 784
+    .line 776
     nop
 
     :pswitch_data_0
@@ -265,7 +265,7 @@
     .parameter "cacheRet"
 
     .prologue
-    .line 592
+    .line 590
     sget-boolean v1, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v1, :cond_0
@@ -282,7 +282,7 @@
 
     throw v1
 
-    .line 595
+    .line 593
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/webkit/CacheManager$CacheResult;->outStream:Ljava/io/OutputStream;
@@ -291,7 +291,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 599
+    .line 597
     iget-object v1, p0, Landroid/webkit/CacheManager$CacheResult;->outFile:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
@@ -301,11 +301,11 @@
     :goto_0
     return v1
 
-    .line 596
+    .line 594
     :catch_0
     move-exception v0
 
-    .line 597
+    .line 595
     .local v0, e:Ljava/io/IOException;
     const/4 v1, 0x0
 
@@ -316,7 +316,7 @@
     .locals 1
 
     .prologue
-    .line 689
+    .line 681
     sget-boolean v0, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -333,13 +333,13 @@
 
     throw v0
 
-    .line 692
+    .line 684
     :cond_0
     sget-object v0, Landroid/webkit/CacheManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v0}, Landroid/webkit/WebViewDatabase;->clearCache()V
 
-    .line 693
+    .line 685
     return-void
 .end method
 
@@ -1131,7 +1131,7 @@
     .parameter "postIdentifier"
 
     .prologue
-    .line 705
+    .line 697
     sget-boolean v0, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v0, :cond_0
@@ -1148,7 +1148,7 @@
 
     throw v0
 
-    .line 707
+    .line 699
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -1156,7 +1156,7 @@
 
     if-nez v0, :cond_1
 
-    .line 708
+    .line 700
     .end local p0
     :goto_0
     return-object p0
@@ -1278,7 +1278,7 @@
     .parameter "statusCode"
 
     .prologue
-    .line 696
+    .line 688
     const/16 v0, 0x12d
 
     if-eq p0, v0, :cond_0
@@ -1291,11 +1291,11 @@
 
     if-ne p0, v0, :cond_1
 
-    .line 698
+    .line 690
     :cond_0
     const/4 v0, 0x1
 
-    .line 700
+    .line 692
     :goto_0
     return v0
 
@@ -1315,7 +1315,7 @@
     .parameter "mimeType"
 
     .prologue
-    .line 812
+    .line 804
     sget-boolean v18, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v18, :cond_0
@@ -1332,7 +1332,7 @@
 
     throw v18
 
-    .line 815
+    .line 807
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getContentLength()J
 
@@ -1346,12 +1346,12 @@
 
     const/4 v13, 0x0
 
-    .line 968
+    .line 960
     :cond_1
     :goto_0
     return-object v13
 
-    .line 824
+    .line 816
     :cond_2
     const-string/jumbo v18, "text/cache-manifest"
 
@@ -1369,19 +1369,19 @@
 
     goto :goto_0
 
-    .line 827
+    .line 819
     :cond_3
     new-instance v13, Landroid/webkit/CacheManager$CacheResult;
 
     invoke-direct {v13}, Landroid/webkit/CacheManager$CacheResult;-><init>()V
 
-    .line 828
+    .line 820
     .local v13, ret:Landroid/webkit/CacheManager$CacheResult;
     move/from16 v0, p0
 
     iput v0, v13, Landroid/webkit/CacheManager$CacheResult;->httpStatusCode:I
 
-    .line 830
+    .line 822
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getLocation()Ljava/lang/String;
 
     move-result-object v18
@@ -1390,14 +1390,14 @@
 
     iput-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->location:Ljava/lang/String;
 
-    .line 832
+    .line 824
     const-wide/16 v18, -0x1
 
     move-wide/from16 v0, v18
 
     iput-wide v0, v13, Landroid/webkit/CacheManager$CacheResult;->expires:J
 
-    .line 833
+    .line 825
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getExpires()Ljava/lang/String;
 
     move-result-object v18
@@ -1406,14 +1406,14 @@
 
     iput-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->expiresString:Ljava/lang/String;
 
-    .line 834
+    .line 826
     iget-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->expiresString:Ljava/lang/String;
 
     move-object/from16 v18, v0
 
     if-eqz v18, :cond_4
 
-    .line 836
+    .line 828
     :try_start_0
     iget-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->expiresString:Ljava/lang/String;
 
@@ -1429,7 +1429,7 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 849
+    .line 841
     :cond_4
     :goto_1
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getContentDisposition()Ljava/lang/String;
@@ -1440,7 +1440,7 @@
 
     iput-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->contentdisposition:Ljava/lang/String;
 
-    .line 851
+    .line 843
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getXPermittedCrossDomainPolicies()Ljava/lang/String;
 
     move-result-object v18
@@ -1449,12 +1449,12 @@
 
     iput-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->crossDomain:Ljava/lang/String;
 
-    .line 855
+    .line 847
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getLastModified()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 856
+    .line 848
     .local v9, lastModified:Ljava/lang/String;
     if-eqz v9, :cond_5
 
@@ -1464,16 +1464,16 @@
 
     if-lez v18, :cond_5
 
-    .line 857
+    .line 849
     iput-object v9, v13, Landroid/webkit/CacheManager$CacheResult;->lastModified:Ljava/lang/String;
 
-    .line 860
+    .line 852
     :cond_5
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getEtag()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 861
+    .line 853
     .local v6, etag:Ljava/lang/String;
     if-eqz v6, :cond_6
 
@@ -1483,20 +1483,20 @@
 
     if-lez v18, :cond_6
 
-    .line 862
+    .line 854
     iput-object v6, v13, Landroid/webkit/CacheManager$CacheResult;->etag:Ljava/lang/String;
 
-    .line 865
+    .line 857
     :cond_6
     invoke-virtual/range {p1 .. p1}, Landroid/net/http/Headers;->getCacheControl()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 866
+    .line 858
     .local v2, cacheControl:Ljava/lang/String;
     if-eqz v2, :cond_e
 
-    .line 867
+    .line 859
     invoke-virtual {v2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v18
@@ -1507,11 +1507,11 @@
 
     move-result-object v3
 
-    .line 868
+    .line 860
     .local v3, controls:[Ljava/lang/String;
     const/4 v12, 0x0
 
-    .line 869
+    .line 861
     .local v12, noCache:Z
     const/4 v8, 0x0
 
@@ -1525,7 +1525,7 @@
 
     if-ge v8, v0, :cond_e
 
-    .line 870
+    .line 862
     const-string/jumbo v18, "no-store"
 
     aget-object v19, v3, v8
@@ -1536,12 +1536,12 @@
 
     if-eqz v18, :cond_9
 
-    .line 871
+    .line 863
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 837
+    .line 829
     .end local v2           #cacheControl:Ljava/lang/String;
     .end local v3           #controls:[Ljava/lang/String;
     .end local v6           #etag:Ljava/lang/String;
@@ -1551,7 +1551,7 @@
     :catch_0
     move-exception v7
 
-    .line 839
+    .line 831
     .local v7, ex:Ljava/lang/IllegalArgumentException;
     const-string v18, "-1"
 
@@ -1577,7 +1577,7 @@
 
     if-eqz v18, :cond_8
 
-    .line 842
+    .line 834
     :cond_7
     const-wide/16 v18, 0x0
 
@@ -1587,7 +1587,7 @@
 
     goto :goto_1
 
-    .line 844
+    .line 836
     :cond_8
     const-string v18, "cache"
 
@@ -1617,7 +1617,7 @@
 
     goto/16 :goto_1
 
-    .line 877
+    .line 869
     .end local v7           #ex:Ljava/lang/IllegalArgumentException;
     .restart local v2       #cacheControl:Ljava/lang/String;
     .restart local v3       #controls:[Ljava/lang/String;
@@ -1636,24 +1636,24 @@
 
     if-eqz v18, :cond_b
 
-    .line 878
+    .line 870
     const-wide/16 v18, 0x0
 
     move-wide/from16 v0, v18
 
     iput-wide v0, v13, Landroid/webkit/CacheManager$CacheResult;->expires:J
 
-    .line 879
+    .line 871
     const/4 v12, 0x1
 
-    .line 869
+    .line 861
     :cond_a
     :goto_3
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 884
+    .line 876
     :cond_b
     aget-object v18, v3, v8
 
@@ -1667,7 +1667,7 @@
 
     if-nez v12, :cond_a
 
-    .line 885
+    .line 877
     aget-object v18, v3, v8
 
     const/16 v19, 0x3d
@@ -1676,11 +1676,11 @@
 
     move-result v17
 
-    .line 886
+    .line 878
     .local v17, separator:I
     if-gez v17, :cond_c
 
-    .line 887
+    .line 879
     aget-object v18, v3, v8
 
     const/16 v19, 0x3a
@@ -1689,11 +1689,11 @@
 
     move-result v17
 
-    .line 889
+    .line 881
     :cond_c
     if-lez v17, :cond_a
 
-    .line 890
+    .line 882
     aget-object v18, v3, v8
 
     add-int/lit8 v19, v17, 0x1
@@ -1702,14 +1702,14 @@
 
     move-result-object v14
 
-    .line 892
+    .line 884
     .local v14, s:Ljava/lang/String;
     :try_start_1
     invoke-static {v14}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v15
 
-    .line 893
+    .line 885
     .local v15, sec:J
     const-wide/16 v18, 0x0
 
@@ -1717,7 +1717,7 @@
 
     if-ltz v18, :cond_a
 
-    .line 894
+    .line 886
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v18
@@ -1736,12 +1736,12 @@
 
     goto :goto_3
 
-    .line 897
+    .line 889
     .end local v15           #sec:J
     :catch_1
     move-exception v7
 
-    .line 898
+    .line 890
     .local v7, ex:Ljava/lang/NumberFormatException;
     const-string v18, "1d"
 
@@ -1753,7 +1753,7 @@
 
     if-eqz v18, :cond_d
 
-    .line 900
+    .line 892
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v18
@@ -1768,7 +1768,7 @@
 
     goto :goto_3
 
-    .line 902
+    .line 894
     :cond_d
     const-string v18, "cache"
 
@@ -1800,7 +1800,7 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
+    .line 897
     const-wide/16 v18, 0x0
 
     move-wide/from16 v0, v18
@@ -1809,7 +1809,7 @@
 
     goto/16 :goto_3
 
-    .line 916
+    .line 908
     .end local v3           #controls:[Ljava/lang/String;
     .end local v7           #ex:Ljava/lang/NumberFormatException;
     .end local v8           #i:I
@@ -1829,14 +1829,14 @@
 
     if-eqz v18, :cond_f
 
-    .line 917
+    .line 909
     const-wide/16 v18, 0x0
 
     move-wide/from16 v0, v18
 
     iput-wide v0, v13, Landroid/webkit/CacheManager$CacheResult;->expires:J
 
-    .line 922
+    .line 914
     :cond_f
     iget-wide v0, v13, Landroid/webkit/CacheManager$CacheResult;->expires:J
 
@@ -1848,7 +1848,7 @@
 
     if-nez v18, :cond_1
 
-    .line 923
+    .line 915
     iget v0, v13, Landroid/webkit/CacheManager$CacheResult;->httpStatusCode:I
 
     move/from16 v18, v0
@@ -1861,7 +1861,7 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 926
+    .line 918
     const-wide v18, 0x7fffffffffffffffL
 
     move-wide/from16 v0, v18
@@ -1870,7 +1870,7 @@
 
     goto/16 :goto_0
 
-    .line 927
+    .line 919
     :cond_10
     iget v0, v13, Landroid/webkit/CacheManager$CacheResult;->httpStatusCode:I
 
@@ -1896,7 +1896,7 @@
 
     if-ne v0, v1, :cond_12
 
-    .line 929
+    .line 921
     :cond_11
     const-wide/16 v18, 0x0
 
@@ -1906,7 +1906,7 @@
 
     goto/16 :goto_0
 
-    .line 930
+    .line 922
     :cond_12
     iget-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->lastModified:Ljava/lang/String;
 
@@ -1914,7 +1914,7 @@
 
     if-nez v18, :cond_14
 
-    .line 937
+    .line 929
     const-string/jumbo v18, "text/html"
 
     move-object/from16 v0, p2
@@ -1927,7 +1927,7 @@
 
     if-nez v18, :cond_13
 
-    .line 938
+    .line 930
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v18
@@ -1942,7 +1942,7 @@
 
     goto/16 :goto_0
 
-    .line 942
+    .line 934
     :cond_13
     const-wide/16 v18, 0x0
 
@@ -1952,7 +1952,7 @@
 
     goto/16 :goto_0
 
-    .line 951
+    .line 943
     :cond_14
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1962,7 +1962,7 @@
 
     add-long v10, v18, v20
 
-    .line 953
+    .line 945
     .local v10, lastmod:J
     :try_start_2
     iget-object v0, v13, Landroid/webkit/CacheManager$CacheResult;->lastModified:Ljava/lang/String;
@@ -1975,7 +1975,7 @@
 
     move-result-wide v10
 
-    .line 957
+    .line 949
     :goto_4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1983,7 +1983,7 @@
 
     sub-long v4, v18, v10
 
-    .line 958
+    .line 950
     .local v4, difference:J
     const-wide/16 v18, 0x0
 
@@ -1991,7 +1991,7 @@
 
     if-lez v18, :cond_15
 
-    .line 959
+    .line 951
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v18
@@ -2008,12 +2008,12 @@
 
     goto/16 :goto_0
 
-    .line 954
+    .line 946
     .end local v4           #difference:J
     :catch_2
     move-exception v7
 
-    .line 955
+    .line 947
     .local v7, ex:Ljava/lang/IllegalArgumentException;
     const-string v18, "cache"
 
@@ -2043,7 +2043,7 @@
 
     goto :goto_4
 
-    .line 963
+    .line 955
     .end local v7           #ex:Ljava/lang/IllegalArgumentException;
     .restart local v4       #difference:J
     :cond_15
@@ -2058,12 +2058,12 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 610
+    .line 608
     sget-object v1, Landroid/webkit/CacheManager;->mBaseDir:Ljava/io/File;
 
     if-nez v1, :cond_1
 
-    .line 613
+    .line 611
     sget-boolean v1, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v1, :cond_0
@@ -2080,16 +2080,16 @@
 
     throw v1
 
-    .line 616
+    .line 614
     :cond_0
     sput-boolean v3, Landroid/webkit/CacheManager;->mClearCacheOnInit:Z
 
-    .line 646
+    .line 642
     .local v0, clearCache:Ljava/lang/Runnable;
     :goto_0
     return v3
 
-    .line 620
+    .line 618
     .end local v0           #clearCache:Ljava/lang/Runnable;
     :cond_1
     invoke-static {}, Landroid/webkit/JniUtil;->useChromiumHttpStack()Z
@@ -2098,7 +2098,7 @@
 
     if-nez v1, :cond_2
 
-    .line 621
+    .line 619
     invoke-static {}, Landroid/webkit/WebViewWorker;->getHandler()Landroid/webkit/WebViewWorker;
 
     move-result-object v1
@@ -2107,13 +2107,13 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebViewWorker;->sendEmptyMessage(I)Z
 
-    .line 624
+    .line 622
     :cond_2
     new-instance v0, Landroid/webkit/CacheManager$1;
 
     invoke-direct {v0}, Landroid/webkit/CacheManager$1;-><init>()V
 
-    .line 645
+    .line 641
     .restart local v0       #clearCache:Ljava/lang/Runnable;
     new-instance v1, Ljava/lang/Thread;
 
@@ -2125,13 +2125,13 @@
 .end method
 
 .method static saveCacheFile(Ljava/lang/String;JLandroid/webkit/CacheManager$CacheResult;)V
-    .locals 6
+    .locals 7
     .parameter "url"
     .parameter "postIdentifier"
     .parameter "cacheRet"
 
     .prologue
-    const-wide/16 v4, 0x0
+    const-wide/16 v5, 0x0
 
     .line 545
     :try_start_0
@@ -2163,7 +2163,7 @@
     :catch_0
     move-exception v0
 
-    .line 589
+    .line 587
     :cond_0
     :goto_0
     return-void
@@ -2190,7 +2190,7 @@
     if-eqz v1, :cond_2
 
     .line 571
-    iput-wide v4, p3, Landroid/webkit/CacheManager$CacheResult;->contentLength:J
+    iput-wide v5, p3, Landroid/webkit/CacheManager$CacheResult;->contentLength:J
 
     .line 572
     const-string v2, ""
@@ -2203,7 +2203,7 @@
 
     iget-wide v2, p3, Landroid/webkit/CacheManager$CacheResult;->contentLength:J
 
-    cmp-long v2, v2, v4
+    cmp-long v2, v2, v5
 
     if-nez v2, :cond_4
 
@@ -2216,15 +2216,44 @@
 
     if-nez v2, :cond_4
 
-    .line 580
+    .line 576
+    const-string v2, "cache"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v4, p3, Landroid/webkit/CacheManager$CacheResult;->outFile:Ljava/io/File;
+
+    invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " delete failed."
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 578
     :cond_4
     iget-wide v2, p3, Landroid/webkit/CacheManager$CacheResult;->contentLength:J
 
-    cmp-long v2, v2, v4
+    cmp-long v2, v2, v5
 
     if-eqz v2, :cond_0
 
-    .line 584
+    .line 582
     sget-object v2, Landroid/webkit/CacheManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     invoke-static {p0, p1, p2}, Landroid/webkit/CacheManager;->getDatabaseKey(Ljava/lang/String;J)Ljava/lang/String;
@@ -2309,7 +2338,7 @@
     .prologue
     const/16 v10, 0x8
 
-    .line 713
+    .line 705
     sget-boolean v6, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v6, :cond_0
@@ -2326,28 +2355,28 @@
 
     throw v6
 
-    .line 723
+    .line 715
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v2
 
-    .line 724
+    .line 716
     .local v2, hashCode:I
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5, v10}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 725
+    .line 717
     .local v5, ret:Ljava/lang/StringBuffer;
     invoke-static {v2, v5}, Landroid/webkit/CacheManager;->appendAsHex(ILjava/lang/StringBuffer;)V
 
-    .line 726
+    .line 718
     invoke-virtual {v5}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 727
+    .line 719
     .local v4, path:Ljava/lang/String;
     new-instance v1, Ljava/io/File;
 
@@ -2355,11 +2384,11 @@
 
     invoke-direct {v1, v6, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 729
+    .line 721
     .local v1, file:Ljava/io/File;
     const/4 v0, 0x1
 
-    .line 736
+    .line 728
     .local v0, checkOldPath:Z
     :goto_0
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -2368,17 +2397,17 @@
 
     if-eqz v6, :cond_1
 
-    .line 737
+    .line 729
     if-eqz v0, :cond_4
 
-    .line 738
+    .line 730
     sget-object v6, Landroid/webkit/CacheManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     invoke-virtual {v6, p0}, Landroid/webkit/WebViewDatabase;->getCache(Ljava/lang/String;)Landroid/webkit/CacheManager$CacheResult;
 
     move-result-object v3
 
-    .line 739
+    .line 731
     .local v3, oldResult:Landroid/webkit/CacheManager$CacheResult;
     if-eqz v3, :cond_3
 
@@ -2390,7 +2419,7 @@
 
     if-lez v6, :cond_3
 
-    .line 740
+    .line 732
     iget-object v6, v3, Landroid/webkit/CacheManager$CacheResult;->localPath:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2399,27 +2428,27 @@
 
     if-eqz v6, :cond_2
 
-    .line 741
+    .line 733
     iget-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->localPath:Ljava/lang/String;
 
-    .line 756
+    .line 748
     .end local v3           #oldResult:Landroid/webkit/CacheManager$CacheResult;
     :cond_1
     :goto_1
     iput-object v4, p1, Landroid/webkit/CacheManager$CacheResult;->localPath:Ljava/lang/String;
 
-    .line 757
+    .line 749
     iput-object v1, p1, Landroid/webkit/CacheManager$CacheResult;->outFile:Ljava/io/File;
 
-    .line 778
+    .line 770
     return-void
 
-    .line 743
+    .line 735
     .restart local v3       #oldResult:Landroid/webkit/CacheManager$CacheResult;
     :cond_2
     iget-object v4, v3, Landroid/webkit/CacheManager$CacheResult;->localPath:Ljava/lang/String;
 
-    .line 744
+    .line 736
     new-instance v1, Ljava/io/File;
 
     .end local v1           #file:Ljava/io/File;
@@ -2427,15 +2456,15 @@
 
     invoke-direct {v1, v6, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 746
+    .line 738
     .restart local v1       #file:Ljava/io/File;
     goto :goto_1
 
-    .line 748
+    .line 740
     :cond_3
     const/4 v0, 0x0
 
-    .line 750
+    .line 742
     .end local v3           #oldResult:Landroid/webkit/CacheManager$CacheResult;
     :cond_4
     new-instance v5, Ljava/lang/StringBuffer;
@@ -2443,18 +2472,18 @@
     .end local v5           #ret:Ljava/lang/StringBuffer;
     invoke-direct {v5, v10}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 751
+    .line 743
     .restart local v5       #ret:Ljava/lang/StringBuffer;
     add-int/lit8 v2, v2, 0x1
 
     invoke-static {v2, v5}, Landroid/webkit/CacheManager;->appendAsHex(ILjava/lang/StringBuffer;)V
 
-    .line 752
+    .line 744
     invoke-virtual {v5}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 753
+    .line 745
     new-instance v1, Ljava/io/File;
 
     .end local v1           #file:Ljava/io/File;
@@ -2514,7 +2543,7 @@
     .locals 10
 
     .prologue
-    .line 650
+    .line 646
     sget-boolean v6, Landroid/webkit/CacheManager;->$assertionsDisabled:Z
 
     if-nez v6, :cond_0
@@ -2531,7 +2560,7 @@
 
     throw v6
 
-    .line 652
+    .line 648
     :cond_0
     sget-object v6, Landroid/webkit/CacheManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
@@ -2545,7 +2574,7 @@
 
     if-lez v6, :cond_3
 
-    .line 653
+    .line 649
     sget-object v6, Landroid/webkit/CacheManager;->mDataBase:Landroid/webkit/WebViewDatabase;
 
     sget-wide v7, Landroid/webkit/CacheManager;->CACHE_TRIM_AMOUNT:J
@@ -2554,13 +2583,13 @@
 
     move-result-object v3
 
-    .line 654
+    .line 650
     .local v3, pathList:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 655
+    .line 651
     .local v4, size:I
     const/4 v2, 0x0
 
@@ -2568,7 +2597,7 @@
     :goto_0
     if-ge v2, v4, :cond_2
 
-    .line 656
+    .line 652
     new-instance v0, Ljava/io/File;
 
     sget-object v7, Landroid/webkit/CacheManager;->mBaseDir:Ljava/io/File;
@@ -2581,7 +2610,7 @@
 
     invoke-direct {v0, v7, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 657
+    .line 653
     .local v0, f:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -2589,13 +2618,40 @@
 
     if-nez v6, :cond_1
 
-    .line 655
+    .line 654
+    const-string v6, "cache"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, " delete failed."
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 651
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 664
+    .line 658
     .end local v0           #f:Ljava/io/File;
     :cond_2
     sget-object v6, Landroid/webkit/CacheManager;->mDataBase:Landroid/webkit/WebViewDatabase;
@@ -2604,15 +2660,15 @@
 
     move-result-object v1
 
-    .line 665
+    .line 659
     .local v1, fileList:Ljava/util/List;,"Ljava/util/List<Ljava/lang/String;>;"
     if-nez v1, :cond_4
 
-    .line 686
+    .line 678
     :cond_3
     return-void
 
-    .line 666
+    .line 660
     :cond_4
     sget-object v6, Landroid/webkit/CacheManager;->mBaseDir:Ljava/io/File;
 
@@ -2624,20 +2680,20 @@
 
     move-result-object v5
 
-    .line 675
+    .line 669
     .local v5, toDelete:[Ljava/lang/String;
     if-eqz v5, :cond_3
 
-    .line 676
+    .line 670
     array-length v4, v5
 
-    .line 677
+    .line 671
     const/4 v2, 0x0
 
     :goto_1
     if-ge v2, v4, :cond_3
 
-    .line 678
+    .line 672
     new-instance v0, Ljava/io/File;
 
     sget-object v6, Landroid/webkit/CacheManager;->mBaseDir:Ljava/io/File;
@@ -2646,7 +2702,7 @@
 
     invoke-direct {v0, v6, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 679
+    .line 673
     .restart local v0       #f:Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -2654,7 +2710,34 @@
 
     if-nez v6, :cond_5
 
-    .line 677
+    .line 674
+    const-string v6, "cache"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, " delete failed."
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 671
     :cond_5
     add-int/lit8 v2, v2, 0x1
 

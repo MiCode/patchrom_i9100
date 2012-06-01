@@ -34,8 +34,6 @@
 
 .field static final TRANSACTION_enableNdefPush:I = 0x6
 
-.field static final TRANSACTION_getDefaultSelectedSecureElement:I = 0xe
-
 .field static final TRANSACTION_getNfcAdapterExtrasInterface:I = 0x2
 
 .field static final TRANSACTION_getNfcTagInterface:I = 0x1
@@ -47,8 +45,6 @@
 .field static final TRANSACTION_readerDisable:I = 0x9
 
 .field static final TRANSACTION_readerEnable:I = 0xa
-
-.field static final TRANSACTION_selectDefaultSecureElement:I = 0xf
 
 .field static final TRANSACTION_setForegroundDispatch:I = 0xb
 
@@ -152,7 +148,7 @@
     .line 41
     sparse-switch p1, :sswitch_data_0
 
-    .line 196
+    .line 179
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v5
@@ -604,47 +600,6 @@
     .line 173
     goto :goto_5
 
-    .line 180
-    :sswitch_e
-    const-string v4, "android.nfc.INfcAdapter"
-
-    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 181
-    invoke-virtual {p0}, Landroid/nfc/INfcAdapter$Stub;->getDefaultSelectedSecureElement()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 182
-    .local v3, _result:Ljava/lang/String;
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    .line 183
-    invoke-virtual {p3, v3}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 188
-    .end local v3           #_result:Ljava/lang/String;
-    :sswitch_f
-    const-string v4, "android.nfc.INfcAdapter"
-
-    invoke-virtual {p2, v4}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    .line 190
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 191
-    .local v0, _arg0:Ljava/lang/String;
-    invoke-virtual {p0, v0}, Landroid/nfc/INfcAdapter$Stub;->selectDefaultSecureElement(Ljava/lang/String;)V
-
-    .line 192
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    goto/16 :goto_0
-
     .line 41
     nop
 
@@ -663,8 +618,6 @@
         0xb -> :sswitch_b
         0xc -> :sswitch_c
         0xd -> :sswitch_d
-        0xe -> :sswitch_e
-        0xf -> :sswitch_f
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method

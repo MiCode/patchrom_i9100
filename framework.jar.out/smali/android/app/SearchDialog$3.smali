@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 679
+    .line 678
     iput-object p1, p0, Landroid/app/SearchDialog$3;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 1
 
     .prologue
-    .line 682
+    .line 681
     iget-object v0, p0, Landroid/app/SearchDialog$3;->this$0:Landroid/app/SearchDialog;
 
     #calls: Landroid/app/SearchDialog;->onClosePressed()Z

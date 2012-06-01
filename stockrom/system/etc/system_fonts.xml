@@ -17,6 +17,16 @@
     in /vendor/etc/fallback_fonts.xml.
 -->
 <familyset>
+    <family>
+        <fileset>
+            <file>DroidSans.ttf</file>
+        </fileset>
+    </family>
+    <family>
+        <fileset>
+            <file>DroidIndia.ttf</file>
+        </fileset>
+    </family>
 
     <family>
         <nameset>
@@ -74,12 +84,6 @@
         </nameset>
         <fileset>
             <file>DroidSansMono.ttf</file>
-        </fileset>
-    </family>
-
-    <family>
-        <fileset>
-            <file>DroidIndia.ttf</file>
         </fileset>
     </family>
 

@@ -152,7 +152,7 @@
     if-nez v1, :cond_0
 
     .line 88
-    const v1, 0x10900a4
+    const v1, 0x10900a2
 
     iput v1, p0, Landroid/widget/TabHost;->mTabLayoutId:I
 

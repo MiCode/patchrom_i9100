@@ -1282,7 +1282,7 @@
     if-eqz v6, :cond_0
 
     .line 89
-    const v6, 0x10900b2
+    const v6, 0x10900b0
 
     invoke-super {p0, v6}, Lcom/android/internal/view/menu/BaseMenuPresenter;->setMenuLayoutRes(I)V
 

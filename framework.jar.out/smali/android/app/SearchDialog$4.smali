@@ -27,7 +27,7 @@
     .parameter
 
     .prologue
-    .line 687
+    .line 686
     iput-object p1, p0, Landroid/app/SearchDialog$4;->this$0:Landroid/app/SearchDialog;
 
     invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
     .parameter "newText"
 
     .prologue
-    .line 695
+    .line 694
     const/4 v0, 0x0
 
     return v0
@@ -53,12 +53,12 @@
     .parameter "query"
 
     .prologue
-    .line 690
+    .line 689
     iget-object v0, p0, Landroid/app/SearchDialog$4;->this$0:Landroid/app/SearchDialog;
 
     invoke-virtual {v0}, Landroid/app/SearchDialog;->dismiss()V
 
-    .line 691
+    .line 690
     const/4 v0, 0x0
 
     return v0
