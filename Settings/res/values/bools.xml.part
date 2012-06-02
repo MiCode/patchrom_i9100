@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="has_button">false</bool>
+    <bool name="disable_move_to_sd">true</bool>
 </resources>
