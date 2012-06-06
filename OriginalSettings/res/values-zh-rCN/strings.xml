@@ -231,8 +231,8 @@
     <string name="sd_card_settings_label">USB存储器</string>
     <string name="proxy_settings_label">代理设置</string>
     <string name="cancel">取消</string>
-    <string name="settings_label">设定</string>
-    <string name="settings_label_launcher">设定</string>
+    <string name="settings_label">原厂设置</string>
+    <string name="settings_label_launcher">原厂设置</string>
     <string name="settings_shortcut">设定</string>
     <string name="airplane_mode">飞行模式</string>
     <string name="radio_controls_title">更多</string>

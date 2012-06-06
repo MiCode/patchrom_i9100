@@ -958,6 +958,15 @@
 
     invoke-virtual/range {v20 .. v21}, Landroid/preference/CheckBoxPreference;->setPersistent(Z)V
 
+
+    # start remove this preference
+    invoke-virtual/range {p0 .. p0}, Lcom/android/OriginalSettings/DisplaySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+
+    move-result-object v19
+
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
+
     .line 165
     const-string v20, "weather"
 
@@ -987,6 +996,9 @@
     const/16 v21, 0x0
 
     invoke-virtual/range {v20 .. v21}, Landroid/preference/CheckBoxPreference;->setPersistent(Z)V
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 168
     const-string v20, "clock_position"
@@ -1019,6 +1031,9 @@
     move-object/from16 v1, p0
 
     invoke-virtual {v0, v1}, Landroid/preference/ListPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 171
     const-string v20, "homescreen_wallpaper"
@@ -1038,6 +1053,9 @@
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/OriginalSettings/DisplaySettings;->mHomeScreenWallpaper:Landroid/preference/PreferenceScreen;
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 172
     const-string v20, "lockscreen_wallpaper"
@@ -1057,6 +1075,9 @@
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/OriginalSettings/DisplaySettings;->mLockScreenWallpaper:Landroid/preference/PreferenceScreen;
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 173
     const-string v20, "weather_settings"
@@ -1076,6 +1097,9 @@
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/OriginalSettings/DisplaySettings;->mWeatherSettings:Landroid/preference/PreferenceScreen;
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 174
     const-string v20, "accelerometer"
@@ -1106,6 +1130,9 @@
     const/16 v21, 0x0
 
     invoke-virtual/range {v20 .. v21}, Landroid/preference/CheckBoxPreference;->setPersistent(Z)V
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 177
     const-string v20, "brightness"
@@ -1125,6 +1152,9 @@
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/OriginalSettings/DisplaySettings;->mBrightnessPreference:Lcom/android/OriginalSettings/BrightnessPreference;
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 179
     const-string v20, "screen_timeout"
@@ -1144,6 +1174,9 @@
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/OriginalSettings/DisplaySettings;->mScreenTimeoutPreference:Landroid/preference/ListPreference;
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 180
     const-string v20, "screen_off_timeout"
@@ -1223,6 +1256,9 @@
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/OriginalSettings/DisplaySettings;->mFontSizePref:Landroid/preference/ListPreference;
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     .line 188
     const-string v20, "GT-I9100"
@@ -1281,6 +1317,9 @@
     invoke-virtual {v0, v1}, Lcom/android/OriginalSettings/DisplaySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v20
+    # start remove this preference
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     check-cast v20, Landroid/preference/CheckBoxPreference;
 
@@ -1637,6 +1676,12 @@
     invoke-virtual {v0, v1}, Lcom/android/OriginalSettings/DisplaySettings;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
 
     move-result-object v20
+    # start remove this preference
+    invoke-virtual/range {p0 .. p0}, Lcom/android/OriginalSettings/DisplaySettings;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+
+    move-result-object v19
+    invoke-virtual/range {v19 .. v20}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+    # end remove this preference
 
     new-instance v21, Ljava/lang/StringBuilder;
 
