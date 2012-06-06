@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/button_layout" android:background="#ff888888" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <Button android:textAppearance="?android:textAppearanceMedium" android:gravity="center" android:id="@id/connection_End" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="50.0dip" android:text="@string/wifi_p2p_end_connection" android:layout_alignParentBottom="true" />
+        <Button android:textAppearance="?android:textAppearanceMedium" android:gravity="center" android:id="@id/create_Group" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="50.0dip" android:text="@string/wifi_p2p_create_group" android:layout_alignParentBottom="true" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/ListLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/button_layout" android:layout_alignParentTop="true">
+        <ListView android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="10.0" />
+        <TextView android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="30.0dip" android:layout_weight="10.0" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/imageLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:layout_gravity="center" android:id="@id/no_device_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/noitems_device_based" />
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:layout_gravity="center_horizontal" android:id="@id/no_device" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wifi_p2p_no_device" />
+    </LinearLayout>
+</RelativeLayout>

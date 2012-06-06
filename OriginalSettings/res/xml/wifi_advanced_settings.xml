@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wifi_advanced_titlebar"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="@string/wifi_notify_open_networks" android:key="notify_open_networks" android:summary="@string/wifi_notify_open_networks_summary" />
+    <ListPreference android:persistent="false" android:entries="@array/wifi_sleep_policy_entries" android:title="@string/wifi_setting_sleep_policy_title" android:key="sleep_policy" android:entryValues="@array/wifi_sleep_policy_values" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/wifi_enable_watchdog_service" android:key="wifi_enable_watchdog_service" android:summary="@string/wifi_enable_watchdog_service_summary" />
+    <ListPreference android:persistent="false" android:entries="@array/wifi_frequency_band_entries" android:title="@string/wifi_setting_frequency_band_title" android:key="frequency_band" android:summary="@string/wifi_setting_frequency_band_summary" android:entryValues="@array/wifi_frequency_band_values" />
+    <Preference android:title="@string/wifi_advanced_mac_address_title" android:key="mac_address" style="?android:attr/preferenceInformationStyle" />
+    <Preference android:title="@string/wifi_advanced_ip_address_title" android:key="current_ip_address" style="?android:attr/preferenceInformationStyle" />
+    <PreferenceCategory android:persistent="false" android:title="@string/iwlan" android:key="iwlan_enabled_category">
+        <CheckBoxPreference android:persistent="false" android:enabled="false" android:title="@string/iwlan" android:key="iwlan_enabled" android:summary="@string/iwlan_ready" />
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/iwlan_network" android:key="iwlan_networks" />
+    <Preference android:persistent="false" android:title="@string/iwlan_add_network" android:key="add_other_iwlan" android:dependency="iwlan_enabled" />
+    <PreferenceCategory android:persistent="false" android:title="@string/iwlan" android:key="mwlan_enabled_category" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/mwlan_permission_title_2" android:key="mwlan_permission_allowed_2" android:summary="@string/mwlan_permission_summary_2" android:defaultValue="false" />
+</PreferenceScreen>

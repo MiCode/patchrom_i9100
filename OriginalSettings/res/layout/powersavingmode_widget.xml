@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:layout_width="fill_parent" android:layout_height="200.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/area_one_line" android:layout_width="wrap_content" android:layout_height="97.29999dip" android:layout_marginLeft="3.3299866dip" android:layout_marginTop="2.669983dip" android:layout_marginRight="3.3299866dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_wifi" android:background="@drawable/panel_bg_left" android:layout_width="78.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_wifi" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:ellipsize="marquee" android:id="@id/text_wifi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.599976dip" android:text="@string/wifi_quick_toggle_title" />
+            <ImageView android:id="@id/ind_wifi" android:layout_width="77.29999dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:scaleType="fitXY" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_bluetooth" android:background="@drawable/panel_bg_center" android:layout_width="78.599976dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_bluetooth" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:ellipsize="marquee" android:id="@id/text_bluetooth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.599976dip" android:text="@string/bluetooth" />
+            <ImageView android:id="@id/ind_bluetooth" android:layout_width="77.29999dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:scaleType="fitXY" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_gps" android:background="@drawable/panel_bg_center" android:layout_width="78.599976dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_gps" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:ellipsize="marquee" android:id="@id/text_gps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.599976dip" android:text="@string/usage_type_gps" />
+            <ImageView android:id="@id/ind_gps" android:layout_width="77.29999dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:scaleType="fitXY" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_sync" android:background="@drawable/panel_bg_right" android:visibility="gone" android:layout_width="78.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_sync" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/text_sync" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.599976dip" android:text="@string/sync" />
+            <ImageView android:id="@id/ind_sync" android:layout_width="77.29999dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/area_two_line" android:layout_width="wrap_content" android:layout_height="97.29999dip" android:layout_marginLeft="3.3299866dip" android:layout_marginRight="3.3299866dip" android:layout_marginBottom="2.669983dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_brightness" android:background="@drawable/panel_bg2_left" android:layout_width="78.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_brightness" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:ellipsize="marquee" android:gravity="center" android:id="@id/text_brightness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.599976dip" android:text="@string/brightness" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_screentimeout" android:background="@drawable/panel_bg2_center" android:visibility="gone" android:layout_width="78.599976dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_screentimeout" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/text_screentimeout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/screen_timeout_widget" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_powersavingtips" android:background="@drawable/panel_bg2_center" android:visibility="gone" android:layout_width="78.599976dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_powersavingtips" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" android:src="@drawable/icon_tips_on" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:textColor="@color/panel_on" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/text_powersavingtips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.599976dip" android:text="@string/powersavingtips" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_settings" android:background="@drawable/panel_bg2_right" android:layout_width="78.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/img_settings" android:layout_width="31.299988dip" android:layout_height="31.299988dip" android:layout_marginTop="18.599976dip" android:src="@drawable/icon_setting_on" />
+            <TextView android:textSize="14.0sp" android:typeface="sans" android:textColor="@color/panel_on" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/text_settings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.599976dip" android:text="@string/settings_label" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

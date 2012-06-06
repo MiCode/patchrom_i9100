@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_format_entries">
+        <item>月/日/年</item>
+        <item>日/月/年</item>
+        <item>年/月/日</item>
+    </string-array>
+    <string-array name="screen_timeout_entries">
+        <item>15 秒</item>
+        <item>30 秒</item>
+        <item>1 分鐘</item>
+        <item>2 分鐘</item>
+        <item>5 分鐘</item>
+        <item>10分鐘</item>
+    </string-array>
+    <string-array name="dream_timeout_entries">
+        <item>永不</item>
+        <item>15 秒</item>
+        <item>30 秒</item>
+        <item>1 分鐘</item>
+        <item>2 分鐘</item>
+        <item>5 分鐘</item>
+        <item>10分鐘</item>
+        <item>30 分鐘</item>
+    </string-array>
+    <string-array name="lock_after_timeout_entries">
+        <item>立即</item>
+        <item>5 秒</item>
+        <item>15 秒</item>
+        <item>30 秒</item>
+        <item>1 分鐘</item>
+        <item>2 分鐘</item>
+        <item>5 分鐘</item>
+        <item>10分鐘</item>
+        <item>30 分鐘</item>
+    </string-array>
+    <string-array name="entries_font_size">
+        <item>細小</item>
+        <item>小</item>
+        <item>正常</item>
+        <item>大</item>
+        <item>超大</item>
+    </string-array>
+    <string-array name="tts_rate_entries">
+        <item>非常緩慢</item>
+        <item>慢</item>
+        <item>正常</item>
+        <item>快</item>
+        <item>非常快速</item>
+    </string-array>
+    <string-array name="tts_rate_values">
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+    </string-array>
+    <string-array name="wifi_status">
+        <item></item>
+        <item>掃描中...</item>
+        <item>連線中...</item>
+        <item>正在驗證...</item>
+        <item>正在取得 IP 位址...</item>
+        <item>已連線</item>
+        <item>已暫停</item>
+        <item>正在中斷連線...</item>
+        <item>已中斷連線</item>
+        <item>不成功</item>
+    </string-array>
+    <string-array name="wifi_status_with_ssid">
+        <item></item>
+        <item>掃描中...</item>
+        <item>正連線到 %s...</item>
+        <item>正在與 %s 進行認證...</item>
+        <item>取得 IP地址從％s ..</item>
+        <item>已連接至 %1$s</item>
+        <item>已暫停</item>
+        <item>正在中斷與 %s 的連線...</item>
+        <item>已中斷連線</item>
+        <item>不成功</item>
+    </string-array>
+    <string-array name="wifi_ap_security">
+        <item>Open</item>
+        <item>WPA PSK</item>
+        <item>WPA2 PSK</item>
+    </string-array>
+    <string-array name="wifi_eap_method">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>SIM</item>
+        <item>AKA</item>
+    </string-array>
+    <string-array name="wifi_eap_method_kor">
+        <item>PEAP</item>
+        <item>TLS</item>
+        <item>TTLS</item>
+        <item>AKA</item>
+    </string-array>
+    <string-array name="wifi_p2p_wps_setup">
+        <item>按鈕</item>
+        <item>來自對方裝置的PIN碼</item>
+        <item>來自此裝置的 PIN 碼</item>
+    </string-array>
+    <string-array name="wifi_p2p_status">
+        <item>已連線</item>
+        <item>已邀請</item>
+        <item>連線失敗</item>
+        <item>輕觸以連接</item>
+        <item>超出範圍</item>
+        <item>Connecting with others</item>
+    </string-array>
+    <string-array name="bluetooth_visibility_timeout_entries">
+        <item>2 分鐘</item>
+        <item>5 分鐘</item>
+        <item>1 小時</item>
+        <item>永不逾時</item>
+    </string-array>
+    <string-array name="wifi_signal">
+        <item>差</item>
+        <item>良</item>
+        <item>良好</item>
+        <item>棒極了</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries">
+        <item>永遠連線</item>
+        <item>只在充電時連線</item>
+        <item>一律不連線(增加數據連線用量)</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_entries_wifi_only">
+        <item>永遠連線</item>
+        <item>只在充電時連線</item>
+        <item>永不</item>
+    </string-array>
+    <string-array name="wifi_sleep_policy_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_entries">
+        <item>自動</item>
+        <item>僅限 5 GHz</item>
+        <item>僅限 2.4 GHz</item>
+    </string-array>
+    <string-array name="wifi_frequency_band_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="usage_stats_display_order_types">
+        <item>使用時間</item>
+        <item>啟動計數</item>
+        <item>應用程式名稱</item>
+    </string-array>
+    <string-array name="wifi_phase2_entries">
+        <item>無</item>
+        <item>PAP</item>
+        <item>MSCHAP</item>
+        <item>MSCHAPV2</item>
+        <item>GTC</item>
+    </string-array>
+    <string-array name="wifi_network_setup">
+        <item>關</item>
+        <item>按鈕</item>
+        <item>來自存取點的 PIN</item>
+        <item>來自此裝置的 PIN 碼</item>
+    </string-array>
+    <string-array name="wifi_ip_settings">
+        <item>DHCP</item>
+        <item>靜態</item>
+    </string-array>
+    <string-array name="wifi_proxy_settings">
+        <item>無</item>
+        <item>手動</item>
+    </string-array>
+    <string-array name="emergency_tone_entries">
+        <item>關</item>
+        <item>提醒</item>
+        <item>震動</item>
+    </string-array>
+    <string-array name="emergency_tone_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="apn_auth_entries">
+        <item>無</item>
+        <item>PAP</item>
+        <item>CHAP</item>
+        <item>PAP或CHAP</item>
+    </string-array>
+    <string-array name="apn_protocol_entries">
+        <item>IPv4</item>
+        <item>IPv6</item>
+        <item>IPv4/IPv6</item>
+    </string-array>
+    <string-array name="bearer_entries">
+        <item>LTE</item>
+        <item>eHRPD</item>
+        <item>未指定</item>
+    </string-array>
+    <string-array name="app_install_location_entries">
+        <item>內部儲存空間</item>
+        <item>移除SD卡</item>
+        <item>預設值</item>
+    </string-array>
+    <string-array name="silent_mode_entries">
+        <item>關</item>
+        <item>震動</item>
+        <item>靜音</item>
+    </string-array>
+    <string-array name="long_press_timeout_selector_titles">
+        <item>短</item>
+        <item>適中</item>
+        <item>長</item>
+    </string-array>
+    <string-array name="hdcp_checking_titles">
+        <item>永不檢查</item>
+        <item>僅檢查 DRM 內容</item>
+        <item>每次檢查</item>
+    </string-array>
+    <string-array name="hdcp_checking_summaries">
+        <item>永不使用 HDCP 檢查</item>
+        <item>僅使用 HDCP 檢查 DRM 內容</item>
+        <item>一律使用 HDCP 檢查</item>
+    </string-array>
+    <string-array name="window_animation_scale_entries">
+        <item>已關閉動畫</item>
+        <item>動畫比例 0.5x</item>
+        <item>動畫比例 1x</item>
+        <item>動畫比例 1.5x</item>
+        <item>動畫比例 2x</item>
+        <item>動畫比例 5x</item>
+        <item>動畫比例 10x</item>
+    </string-array>
+    <string-array name="transition_animation_scale_entries">
+        <item>已關閉動畫</item>
+        <item>動畫比例 0.5x</item>
+        <item>動畫比例 1x</item>
+        <item>動畫比例 1.5x</item>
+        <item>動畫比例 2x</item>
+        <item>動畫比例 5x</item>
+        <item>動畫比例 10x</item>
+    </string-array>
+    <string-array name="app_process_limit_entries">
+        <item>標準限制</item>
+        <item>無背景程序</item>
+        <item>最多 1 個程序</item>
+        <item>最多 2 個程序</item>
+        <item>最多 3 個程序</item>
+        <item>最多 4 個程序</item>
+    </string-array>
+    <string-array name="vpn_types_long">
+        <item>PPTP VPN</item>
+        <item>含共享金鑰的 L2TP/IPSec VPN</item>
+        <item>含憑證的 L2TP/IPSec VPN</item>
+        <item>含共享金鑰與 XAuth 認證的 IPSec VPN</item>
+        <item>含憑證與 XAuth 認證的 IPSec VPN</item>
+        <item>含憑證與混合式認證的 IPSec VPN</item>
+    </string-array>
+    <string-array name="vpn_states">
+        <item>已中斷連線</item>
+        <item>正在初始化...</item>
+        <item>連線中...</item>
+        <item>已連線</item>
+        <item>逾時</item>
+        <item>不成功</item>
+    </string-array>
+    <string-array name="psm_values_new">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="psm_brightness_entries">
+        <item>10%</item>
+        <item>30%</item>
+        <item>50%</item>
+        <item>70%</item>
+        <item>100%</item>
+    </string-array>
+    <string-array name="psm_brightness_values">
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>70</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="pen_hand_side_entries">
+        <item>左手</item>
+        <item>右手</item>
+    </string-array>
+    <string-array name="touch_key_light_entries">
+        <item>1.5 秒</item>
+        <item>6 秒</item>
+        <item>保持關閉</item>
+        <item>一律開啟</item>
+    </string-array>
+    <string-array name="psm_entries_new">
+        <item>10% 電力</item>
+        <item>20% 電力</item>
+        <item>30% 電力</item>
+        <item>40% 電力</item>
+        <item>50% 電力</item>
+    </string-array>
+    <string-array name="clock_position_entries">
+        <item>頂部</item>
+        <item>中間</item>
+        <item>底部</item>
+    </string-array>
+    <string-array name="bluetooth_class_of_device_entries">
+        <item>耳機</item>
+        <item>個人電腦</item>
+        <item>電話</item>
+        <item>HID (鍵盤、滑鼠等)</item>
+        <item>所有裝置</item>
+    </string-array>
+    <string-array name="entries_font_size_q1">
+        <item>超大</item>
+        <item>大</item>
+        <item>正常</item>
+        <item>小</item>
+        <item>細小</item>
+    </string-array>
+    <string-array name="apn_ently_key">
+        <item>網際網路 + 多媒體訊息</item>
+        <item>網際網路</item>
+        <item>多媒體訊息</item>
+    </string-array>
+    <string-array name="apn_type_key">
+        <item>default,supl,mms</item>
+        <item>default,supl</item>
+        <item>多媒體訊息</item>
+    </string-array>
+</resources>

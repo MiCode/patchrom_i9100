@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:persistent="false" android:title="@string/sim_lock_settings_title" android:key="sim_lock">
+        <Preference android:persistent="false" android:title="@string/sim_lock_settings_category">
+            <intent android:targetPackage="com.android.OriginalSettings" android:action="android.intent.action.MAIN" android:targetClass="com.android.OriginalSettings.IccLockSettings" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/security_passwords_title">
+        <CheckBoxPreference android:persistent="false" android:title="@string/show_password" android:key="show_password" />
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/device_admin_title">
+        <Preference android:persistent="false" android:title="@string/manage_device_admin" android:summary="@string/manage_device_admin_summary" android:fragment="com.android.OriginalSettings.DeviceAdminSettings" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/install_applications" android:key="toggle_install_applications" android:summaryOn="@string/install_unknown_applications" android:summaryOff="@string/install_unknown_applications" />
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/credentials_title">
+        <Preference android:persistent="false" android:title="@string/trusted_credentials" android:summary="@string/trusted_credentials_summary" android:fragment="com.android.OriginalSettings.TrustedCredentialsSettings" />
+        <Preference android:persistent="false" android:title="@string/credentials_install" android:summary="@string/credentials_install_summary">
+            <intent android:targetPackage="com.android.certinstaller" android:action="android.credentials.INSTALL" android:targetClass="com.android.certinstaller.CertInstallerMain" />
+        </Preference>
+        <Preference android:persistent="false" android:title="@string/credentials_reset" android:key="reset_credentials" android:summary="@string/credentials_reset_summary">
+            <intent android:targetPackage="com.android.OriginalSettings" android:action="com.android.credentials.RESET" android:targetClass="com.android.OriginalSettings.CredentialStorage" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

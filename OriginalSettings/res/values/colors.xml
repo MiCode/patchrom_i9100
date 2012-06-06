@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="memory_avail">#ff333333</color>
+    <color name="memory_apps_usage">#ff77831a</color>
+    <color name="memory_downloads">#ff476093</color>
+    <color name="memory_dcim">#ff793a7f</color>
+    <color name="memory_music">#ff8e562a</color>
+    <color name="memory_misc">#ff7c3030</color>
+    <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
+    <color name="crypt_keeper_clock_foreground">#ff666666</color>
+    <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
+    <color name="divider_color">#20ffffff</color>
+    <color name="title_color">@android:color/holo_blue_light</color>
+    <color name="panel_on">#ffffffff</color>
+    <color name="panel_off">#ffb6b1a8</color>
+    <color name="p2p_scanning">#ff0099ff</color>
+</resources>

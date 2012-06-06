@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/social_hub_accounts" android:key="socialHub" />
+    <PreferenceCategory android:title="@string/synchronize_account" android:key="synchronize" />
+    <PreferenceCategory android:title="@string/more_accounts" android:key="etc" />
+</PreferenceScreen>
