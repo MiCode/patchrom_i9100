@@ -119,7 +119,7 @@ name="SelfTestMode.apk" certificate="build/target/product/security/platform.x509
 name="SerialNumberLabelIndicator.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="serviceModeApp.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="Settings.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
-name="SamsungSettings.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
+name="OriginalSettings.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="SettingsProvider.apk" certificate="build/target/product/security/platform.x509.pem" private_key="build/target/product/security/platform.pk8"
 name="SetupWizard.apk" certificate="PRESIGNED" private_key=""
 name="SevenEngine.apk" certificate="PRESIGNED" private_key=""
