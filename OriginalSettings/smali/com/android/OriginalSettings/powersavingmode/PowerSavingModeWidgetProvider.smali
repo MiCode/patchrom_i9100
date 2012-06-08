@@ -55,9 +55,9 @@
     .line 56
     new-instance v0, Landroid/content/ComponentName;
 
-    const-string v1, "com.android.settings"
+    const-string v1, "com.android.OriginalSettings"
 
-    const-string v2, "com.android.settings.powersavingmode.PowerSavingModeWidgetProvider"
+    const-string v2, "com.android.OriginalSettings.powersavingmode.PowerSavingModeWidgetProvider"
 
     invoke-direct {v0, v1, v2}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -261,9 +261,9 @@
     .line 605
     new-instance v2, Landroid/content/ComponentName;
 
-    const-string v3, "com.android.settings"
+    const-string v3, "com.android.OriginalSettings"
 
-    const-string v4, "com.android.settings.powersavingmode.PowerSavingModeTips"
+    const-string v4, "com.android.OriginalSettings.powersavingmode.PowerSavingModeTips"
 
     invoke-direct {v2, v3, v4}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1957,7 +1957,7 @@
     .line 566
     new-instance v1, Landroid/content/ComponentName;
 
-    const-string v2, "com.android.settings"
+    const-string v2, "com.android.OriginalSettings"
 
     const-string v3, ".powersavingmode.PowerSavingModeWidgetProvider"
 
@@ -2014,7 +2014,7 @@
     .line 554
     new-instance v1, Landroid/content/ComponentName;
 
-    const-string v2, "com.android.settings"
+    const-string v2, "com.android.OriginalSettings"
 
     const-string v3, ".powersavingmode.PowerSavingModeWidgetProvider"
 

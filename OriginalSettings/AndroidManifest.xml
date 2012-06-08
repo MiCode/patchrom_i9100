@@ -918,7 +918,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.powersavingmode.MenuPowerSavingModeSettings" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.powersavingmode.MenuPowerSavingModeSettings" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/power_saving_mode" />
         </activity>
         <activity-alias android:label="@string/power_saving_mode_title" android:name=".powersavingmode.MenuPowerSavingModeSettings" android:exported="true" android:clearTaskOnLaunch="true" android:targetActivity="Settings$MenuPowerSavingModeSettingsActivity">
@@ -926,7 +926,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.settings.powersavingmode.MenuPowerSavingModeSettings" />
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS" android:value="com.android.OriginalSettings.powersavingmode.MenuPowerSavingModeSettings" />
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID" android:resource="@id/power_saving_mode" />
         </activity-alias>
         <activity android:label="@string/power_saving_tips" android:name=".powersavingmode.PowerSavingModeTips" android:excludeFromRecents="true" android:configChanges="keyboardHidden|orientation" />
