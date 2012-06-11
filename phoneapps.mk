@@ -37,7 +37,6 @@ local-phone-apps = AxT9IME \
                    Personalization \
                    PhoneErrService \
                    Phone_Util \
-                   Phonesky \
                    PopupuiReceiver \
                    Preconfig \
                    PreloadInstaller \
