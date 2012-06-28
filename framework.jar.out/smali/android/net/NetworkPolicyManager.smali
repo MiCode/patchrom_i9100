@@ -60,23 +60,17 @@
 
     const/4 v4, 0x1
 
-    .line 134
     new-instance v2, Landroid/text/format/Time;
 
-    const-string v3, "UTC"
+    invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
-    invoke-direct {v2, v3}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
-
-    .line 135
     .local v2, now:Landroid/text/format/Time;
     invoke-virtual {v2, p0, p1}, Landroid/text/format/Time;->set(J)V
 
-    .line 138
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0, v2}, Landroid/text/format/Time;-><init>(Landroid/text/format/Time;)V
 
-    .line 139
     .local v0, cycle:Landroid/text/format/Time;
     iput v5, v0, Landroid/text/format/Time;->second:I
 
@@ -150,23 +144,17 @@
 
     const/4 v4, 0x1
 
-    .line 160
-    new-instance v2, Landroid/text/format/Time;
-
-    const-string v3, "UTC"
+    invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
     invoke-direct {v2, v3}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
 
-    .line 161
     .local v2, now:Landroid/text/format/Time;
     invoke-virtual {v2, p0, p1}, Landroid/text/format/Time;->set(J)V
 
-    .line 164
     new-instance v0, Landroid/text/format/Time;
 
     invoke-direct {v0, v2}, Landroid/text/format/Time;-><init>(Landroid/text/format/Time;)V
 
-    .line 165
     .local v0, cycle:Landroid/text/format/Time;
     iput v5, v0, Landroid/text/format/Time;->second:I
 
