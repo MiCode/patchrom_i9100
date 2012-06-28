@@ -144,9 +144,9 @@
 
     const/4 v4, 0x1
 
-    invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
+    new-instance v2, Landroid/text/format/Time;
 
-    invoke-direct {v2, v3}, Landroid/text/format/Time;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2}, Landroid/text/format/Time;-><init>()V
 
     .local v2, now:Landroid/text/format/Time;
     invoke-virtual {v2, p0, p1}, Landroid/text/format/Time;->set(J)V
