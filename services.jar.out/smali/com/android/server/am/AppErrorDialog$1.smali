@@ -35,61 +35,17 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 5
+    .locals 3
     .parameter "msg"
 
     .prologue
-
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
-
-    #getter for: Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
-    invoke-static {v1}, Lcom/android/server/am/AppErrorDialog;->access$000(Lcom/android/server/am/AppErrorDialog;)Lcom/android/server/am/ProcessRecord;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
-
-    #getter for: Lcom/android/server/am/AppErrorDialog;->mCrashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
-    invoke-static {v1}, Lcom/android/server/am/AppErrorDialog;->access$200(Lcom/android/server/am/AppErrorDialog;)Landroid/app/ApplicationErrorReport$CrashInfo;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
-
-    invoke-virtual {v1}, Lcom/android/server/am/AppErrorDialog;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
-
-    #getter for: Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
-    invoke-static {v2}, Lcom/android/server/am/AppErrorDialog;->access$000(Lcom/android/server/am/AppErrorDialog;)Lcom/android/server/am/ProcessRecord;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
-
-    #getter for: Lcom/android/server/am/AppErrorDialog;->mCrashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
-    invoke-static {v3}, Lcom/android/server/am/AppErrorDialog;->access$200(Lcom/android/server/am/AppErrorDialog;)Landroid/app/ApplicationErrorReport$CrashInfo;
-
-    move-result-object v3
-
-    iget v4, p1, Landroid/os/Message;->what:I
-
-    if-ne v4, v0, :cond_2
-
-    :goto_0
-    invoke-static {v1, v2, v3, v0}, Lcom/android/server/am/MiuiErrorReport;->sendFcErrorReport(Landroid/content/Context;Lcom/android/server/am/ProcessRecord;Landroid/app/ApplicationErrorReport$CrashInfo;Z)V
-
-    :cond_3
+    .line 216
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
+    invoke-virtual {v0, p1}, Lcom/android/server/am/AppErrorDialog;->handleMessageHelper(Landroid/os/Message;)V
+
+    .line 96
+    iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
     #getter for: Lcom/android/server/am/AppErrorDialog;->mProc:Lcom/android/server/am/ProcessRecord;
     invoke-static {v0}, Lcom/android/server/am/AppErrorDialog;->access$000(Lcom/android/server/am/AppErrorDialog;)Lcom/android/server/am/ProcessRecord;
 
@@ -151,17 +107,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
+    .line 225
     iget-object v0, p0, Lcom/android/server/am/AppErrorDialog$1;->this$0:Lcom/android/server/am/AppErrorDialog;
 
     invoke-virtual {v0}, Lcom/android/server/am/AppErrorDialog;->dismiss()V
 
+    .line 226
     return-void
 
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-
+    .line 220
     :catchall_0
     move-exception v0
 
