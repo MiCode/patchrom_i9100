@@ -2,4 +2,5 @@
 <resources>
     <bool name="has_button">false</bool>
     <bool name="disable_move_to_sd">true</bool>
+    <bool name="has_volume_wake">false</bool>
 </resources>
