@@ -16,7 +16,7 @@ local-modified-jars := framework2
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider Stk
 
-local-miui-modified-apps := MiuiHome Settings Phone Mms
+local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
 
 include phoneapps.mk
 
