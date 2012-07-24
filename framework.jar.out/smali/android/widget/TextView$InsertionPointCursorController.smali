@@ -37,18 +37,6 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/widget/TextView;Landroid/widget/TextView$1;)V
-    .locals 0
-    .parameter "x0"
-    .parameter "x1"
-
-    .prologue
-    .line 11491
-    invoke-direct {p0, p1}, Landroid/widget/TextView$InsertionPointCursorController;-><init>(Landroid/widget/TextView;)V
-
-    return-void
-.end method
-
 .method private getHandle()Landroid/widget/TextView$InsertionHandleView;
     .locals 3
 
