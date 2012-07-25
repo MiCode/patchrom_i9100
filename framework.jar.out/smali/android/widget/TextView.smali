@@ -5899,6 +5899,14 @@
 
     if-eqz v1, :cond_0
 
+    # add isClipContainDate
+    invoke-virtual {p0}, Landroid/widget/TextView;->isClipContainDate()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+    # end
+
     .line 9098
     const/4 v1, 0x1
 
@@ -11594,7 +11602,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
-    invoke-direct {p0}, Landroid/widget/TextView;->setStartHandle()V
+    #invoke-direct {p0}, Landroid/widget/TextView;->setStartHandle()V
 
     if-lez v0, :cond_0
 
@@ -11782,7 +11790,7 @@
 
     invoke-static {v13, v8, v7}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
-    invoke-direct {p0}, Landroid/widget/TextView;->setStartHandle()V
+    #invoke-direct {p0}, Landroid/widget/TextView;->setStartHandle()V
 
     if-le v7, v8, :cond_c
 
@@ -32894,3 +32902,54 @@
 
     return v0
 .end method
+
+#    boolean isClipContainDate() {
+#        ClipboardManager cm = (ClipboardManager) mContext.getSystemService(Context.CLIPBOARD_SERVICE);
+#        if (cm.getPrimaryClip() == null) {
+#            return false;
+#        }
+#        return cm.getPrimaryClip().getItemCount() > 0;
+#    }
+.method isClipContainDate()Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Landroid/widget/TextView;->mContext:Landroid/content/Context;
+
+    const-string v3, "clipboard"
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/ClipboardManager;
+
+    .local v0, cm:Landroid/content/ClipboardManager;
+    invoke-virtual {v0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v1
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/ClipData;->getItemCount()I
+
+    move-result v2
+
+    if-lez v2, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+.end method
+
