@@ -2081,84 +2081,72 @@
     .parameter "event"
 
     .prologue
-    .line 784
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v8
 
     packed-switch v8, :pswitch_data_0
 
-    .line 865
     :goto_0
     const/4 v8, 0x1
 
     :goto_1
     return v8
 
-    .line 786
     :pswitch_0
     invoke-super {p0, p1}, Landroid/widget/AutoCompleteTextView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 789
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v8
 
     iput v8, p0, Landroid/webkit/WebTextView;->mDragStartX:F
 
-    .line 790
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v8
 
     iput v8, p0, Landroid/webkit/WebTextView;->mDragStartY:F
 
-    .line 791
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v8
 
     iput-wide v8, p0, Landroid/webkit/WebTextView;->mDragStartTime:J
 
-    .line 792
     const/4 v8, 0x0
 
     iput-boolean v8, p0, Landroid/webkit/WebTextView;->mDragSent:Z
 
-    .line 793
     const/4 v8, 0x0
 
     iput-boolean v8, p0, Landroid/webkit/WebTextView;->mScrolled:Z
 
-    .line 794
     const/4 v8, 0x1
 
     iput-boolean v8, p0, Landroid/webkit/WebTextView;->mGotTouchDown:Z
 
-    .line 795
     const/4 v8, 0x0
 
     iput-boolean v8, p0, Landroid/webkit/WebTextView;->mHasPerformedLongClick:Z
 
     goto :goto_0
 
-    .line 798
     :pswitch_1
     iget-boolean v8, p0, Landroid/webkit/WebTextView;->mHasPerformedLongClick:Z
 
     if-eqz v8, :cond_0
 
-    .line 799
     const/4 v8, 0x0
 
     iput-boolean v8, p0, Landroid/webkit/WebTextView;->mGotTouchDown:Z
 
-    .line 800
+    invoke-super {p0, p1}, Landroid/widget/AutoCompleteTextView;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
     const/4 v8, 0x0
 
     goto :goto_1
 
-    .line 802
     :cond_0
     iget-object v8, p0, Landroid/view/View;->mContext:Landroid/content/Context;
 
