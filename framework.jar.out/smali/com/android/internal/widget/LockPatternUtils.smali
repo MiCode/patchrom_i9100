@@ -1373,7 +1373,7 @@
 
     .line 379
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHash(Ljava/lang/String;)[B
+    invoke-direct {p0, v5, p1}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHash([BLjava/lang/String;)[B
 
     move-result-object v7
 
@@ -6098,4 +6098,63 @@
 
 .end method
 
+.method private passwordToHash([BLjava/lang/String;)[B
+    .locals 4
+    .parameter "stored"
+    .parameter "password"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
+    .prologue
+    invoke-virtual {p0, p2}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHash(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    .local v1, pwd:[B
+    if-eqz v1, :cond_0
+
+    array-length v2, p1
+
+    const/16 v3, 0x48
+
+    if-ne v2, v3, :cond_1
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    .local v0, hashed:[B
+    :try_start_0
+    const-string v2, "MD5"
+
+    invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/security/MessageDigest;->digest([B)[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/android/internal/widget/LockPatternUtils;->toHex([B)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    goto :goto_0
+.end method
