@@ -156,7 +156,7 @@
 
 .field private mButtonOffTimeoutSetting:I
 
-.field private mContext:Landroid/content/Context;
+.field mContext:Landroid/content/Context;
 
 .field private mCurrentDVFSMaxLock:Lcom/android/server/PowerManagerService$DVFSLock;
 
@@ -656,7 +656,7 @@
 
     new-instance v2, Lcom/android/server/PowerManagerService$SendReleaseProximitySensorBroadCast;
 
-    invoke-direct {v2, p0, v8}, Lcom/android/server/PowerManagerService$SendReleaseProximitySensorBroadCast;-><init>(Lcom/android/server/PowerManagerService;Lcom/android/server/PowerManagerService$1;)V
+    invoke-direct {v2, p0}, Lcom/android/server/PowerManagerService$SendReleaseProximitySensorBroadCast;-><init>(Lcom/android/server/PowerManagerService;)V
 
     iput-object v2, p0, Lcom/android/server/PowerManagerService;->mReleaseProximitySensorRunnable:Ljava/lang/Runnable;
 
