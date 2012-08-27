@@ -17,6 +17,7 @@ then
 	touch "$BUILD_OUT/framework-miui/apktool.yml"
 	echo "version: 1.4.3" >> "$BUILD_OUT/framework-miui/apktool.yml"
 	echo "apkFileName: framework-miui.jar" >> "$BUILD_OUT/framework-miui/apktool.yml"
+    rm -rf "$BUILD_OUT/framework-miui/smali" "$BUILD_OUT/framework-miui/smali/com/samsung" "$BUILD_OUT/framework-miui/smali/android/widget"
 	mv "$BUILD_OUT/framework/smali/miui" "$BUILD_OUT/framework-miui/smali"
 	mkdir -p "$BUILD_OUT/framework-miui/smali/com/samsung"
 	mv "$BUILD_OUT/framework/smali/com/samsung" "$BUILD_OUT/framework-miui/smali/com/samsung"

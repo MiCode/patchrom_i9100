@@ -86,3 +86,4 @@ dalvik.vm.dexopt-flags=m=y
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
+ro.telephony.call_ring.multiple=false

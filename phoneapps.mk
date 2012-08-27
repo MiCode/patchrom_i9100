@@ -6,6 +6,7 @@ local-phone-apps = AxT9IME \
                    BluetoothTest \
                    CSC \
                    Camera \
+				   CertInstaller \
                    ChocoEUKor \
                    ClipboardSaveService \
                    DataCreate \
