@@ -134,7 +134,7 @@
     sput-object v0, Lcom/android/internal/widget/LockPatternUtils;->sHaveNonZeroRecoveryPasswordFile:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 161
-    const/16 v0, 0x48
+    const/16 v0, 0x20
 
     sput v0, Lcom/android/internal/widget/LockPatternUtils;->ORIGINAL_PASSWORD_HASH_SIZE:I
 
@@ -1359,10 +1359,9 @@
     sget v7, Lcom/android/internal/widget/LockPatternUtils;->ORIGINAL_PASSWORD_HASH_SIZE:I
 
     if-ne v3, v7, :cond_1
-    if-eq v3, v7, :cond_1
 
     .line 377
-    invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHashOriginal(Ljava/lang/String;)[B
+    invoke-direct {p0, v5, p1}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHash([BLjava/lang/String;)[B
 
     move-result-object v7
 
@@ -1374,7 +1373,7 @@
 
     .line 379
     :cond_1
-    invoke-direct {p0, v5, p1}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHash([BLjava/lang/String;)[B
+    invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils;->passwordToHash(Ljava/lang/String;)[B
 
     move-result-object v7
 
