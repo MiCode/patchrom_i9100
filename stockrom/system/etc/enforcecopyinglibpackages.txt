@@ -1,2 +1,5 @@
 1
 com.cht
+com.xiaomi.gamecenter
+com.sogou.inputmethod.mi
+com.miui.voiceassist
