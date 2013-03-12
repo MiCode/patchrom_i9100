@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/buttonPanelContainer" android:background="@drawable/zzzz_webselect_bg_topbar" android:paddingLeft="5.0dip" android:paddingTop="6.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="43.0dip" android:baselineAligned="true">
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/buttonPanel" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:textSize="13.5sp" android:textColor="@color/zzzz_btn_text_color" android:layout_gravity="left" android:id="@id/WebSelectPrev" android:background="@drawable/zzzz_webselect_topbar_key_bg_option_xml" android:layout_width="wrap_content" android:layout_height="31.0dip" android:layout_marginRight="1.0dip" android:minWidth="49.0dip" android:text="@string/ime_action_previous" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.5" />
+            <Button android:textSize="13.5sp" android:textColor="@color/zzzz_btn_text_color" android:layout_gravity="left" android:id="@id/WebSelectNext" android:background="@drawable/zzzz_webselect_topbar_key_bg_option_xml" android:layout_width="wrap_content" android:layout_height="31.0dip" android:minWidth="49.0dip" android:text="@string/ime_action_next" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.5" />
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@id/buttonPanelDone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textSize="13.5sp" android:textColor="@color/zzzz_btn_text_color" android:layout_gravity="right" android:id="@id/WebSelectDone" android:background="@drawable/zzzz_webselect_topbar_key_bg_option_xml" android:layout_width="wrap_content" android:layout_height="31.0dip" android:minWidth="49.0dip" android:text="@string/ime_action_done" android:shadowColor="#ff000000" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@id/selectContentPanelOut" android:background="@drawable/zzzz_webselect_dialog_bg" android:layout_width="fill_parent" android:layout_height="230.0dip">
+        <LinearLayout android:id="@id/selectContentPanel" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

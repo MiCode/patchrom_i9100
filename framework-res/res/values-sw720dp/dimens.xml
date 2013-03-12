@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="thumbnail_height">135.0dip</dimen>
+    <dimen name="thumbnail_width">230.0dip</dimen>
+    <dimen name="preference_screen_side_margin">0.0dip</dimen>
+    <dimen name="preference_screen_side_margin_negative">-4.0dip</dimen>
+    <dimen name="preference_fragment_padding_bottom">16.0dip</dimen>
+    <dimen name="preference_fragment_padding_side">32.0dip</dimen>
+    <dimen name="preference_breadcrumb_paddingLeft">32.0dip</dimen>
+    <dimen name="preference_breadcrumb_paddingRight">32.0dip</dimen>
+    <dimen name="preference_icon_minWidth">56.0dip</dimen>
+    <item type="dimen" name="dialog_fixed_width_major">50.0%</item>
+    <item type="dimen" name="dialog_fixed_width_minor">70.00001%</item>
+    <item type="dimen" name="dialog_fixed_height_major">60.000004%</item>
+    <item type="dimen" name="dialog_fixed_height_minor">90.0%</item>
+    <dimen name="preference_screen_header_vertical_padding">32.0dip</dimen>
+    <dimen name="preference_screen_header_padding_side">0.0dip</dimen>
+    <dimen name="default_app_widget_padding_left">12.0dip</dimen>
+    <dimen name="default_app_widget_padding_top">4.0dip</dimen>
+    <dimen name="default_app_widget_padding_right">12.0dip</dimen>
+    <dimen name="default_app_widget_padding_bottom">20.0dip</dimen>
+    <dimen name="multiwindow_gap">50.0dip</dimen>
+    <dimen name="multiwindow_def_width">640.0dip</dimen>
+    <dimen name="multiwindow_def_height">400.0dip</dimen>
+    <dimen name="multiwindow_minimized_width">394.0dip</dimen>
+    <dimen name="multiwindow_minimized_height">39.0dip</dimen>
+    <dimen name="multiwindow_default_center_bar_width">14.0dip</dimen>
+    <dimen name="multiwindow_default_center_bar_inner_padding">0.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_padding_width">27.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_icon_width">98.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_icon_height">72.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_fontsize_default">22.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_fontsize_small">18.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_icon_centerXOffset">4.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_icon_topToTopOffset">-2.0dip</dimen>
+    <dimen name="navigation_bar_height_portrait">@dimen/navigation_bar_height</dimen>
+</resources>

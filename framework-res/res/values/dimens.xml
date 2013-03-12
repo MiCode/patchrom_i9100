@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_icon_size">48.0dip</dimen>
+    <dimen name="thumbnail_height">145.0dip</dimen>
+    <dimen name="thumbnail_width">164.0dip</dimen>
+    <item type="dimen" name="dialog_min_width_major">65.0%</item>
+    <item type="dimen" name="dialog_min_width_minor">95.00001%</item>
+    <dimen name="notification_large_icon_width">55.0dip</dimen>
+    <dimen name="notification_large_icon_height">64.0dip</dimen>
+    <dimen name="config_prefDialogWidth">320.0dip</dimen>
+    <dimen name="config_viewConfigurationTouchSlop">16.0dip</dimen>
+    <dimen name="toast_y_offset">64.0dip</dimen>
+    <dimen name="status_bar_height">25.0dip</dimen>
+    <dimen name="navigation_bar_height">48.0dip</dimen>
+    <dimen name="navigation_bar_height_landscape">48.0dip</dimen>
+    <dimen name="navigation_bar_width">42.0dip</dimen>
+    <dimen name="status_bar_icon_size">24.0dip</dimen>
+    <dimen name="status_bar_content_number_size">48.0sp</dimen>
+    <dimen name="system_bar_height">@dimen/navigation_bar_height</dimen>
+    <dimen name="system_bar_icon_size">32.0dip</dimen>
+    <dimen name="status_bar_edge_ignore">5.0dip</dimen>
+    <dimen name="fastscroll_overlay_size">104.0dip</dimen>
+    <dimen name="fastscroll_thumb_width">64.0dip</dimen>
+    <dimen name="fastscroll_thumb_height">52.0dip</dimen>
+    <dimen name="min_xlarge_screen_width">800.0dip</dimen>
+    <dimen name="password_keyboard_key_height_alpha">56.0dip</dimen>
+    <dimen name="password_keyboard_key_height_numeric">56.0dip</dimen>
+    <dimen name="password_keyboard_spacebar_vertical_correction">4.0dip</dimen>
+    <dimen name="password_keyboard_horizontalGap">3.0dip</dimen>
+    <dimen name="password_keyboard_verticalGap">9.0dip</dimen>
+    <dimen name="keyguard_lockscreen_outerring_diameter">270.0dip</dimen>
+    <dimen name="glowpadview_target_placement_radius">135.0dip</dimen>
+    <dimen name="glowpadview_glow_radius">75.0dip</dimen>
+    <dimen name="glowpadview_snap_margin">40.0dip</dimen>
+    <dimen name="glowpadview_inner_radius">15.0dip</dimen>
+    <dimen name="preference_screen_side_margin">0.0dip</dimen>
+    <dimen name="preference_screen_side_margin_negative">0.0dip</dimen>
+    <dimen name="preference_screen_top_margin">0.0dip</dimen>
+    <dimen name="preference_screen_bottom_margin">0.0dip</dimen>
+    <dimen name="preference_widget_width">48.0dip</dimen>
+    <dimen name="preference_fragment_padding_bottom">0.0dip</dimen>
+    <dimen name="preference_fragment_padding_side">16.0dip</dimen>
+    <dimen name="preference_breadcrumb_paddingLeft">0.0dip</dimen>
+    <dimen name="preference_breadcrumb_paddingRight">0.0dip</dimen>
+    <dimen name="preference_icon_minWidth">0.0dip</dimen>
+    <dimen name="dialog_fixed_width_major">320.0dip</dimen>
+    <dimen name="dialog_fixed_width_minor">320.0dip</dimen>
+    <item type="dimen" name="dialog_fixed_height_major">80.00001%</item>
+    <item type="dimen" name="dialog_fixed_height_minor">100.0%</item>
+    <dimen name="preference_screen_header_vertical_padding">0.0dip</dimen>
+    <dimen name="preference_screen_header_padding_side">16.0dip</dimen>
+    <dimen name="preference_item_padding_side">8.0dip</dimen>
+    <dimen name="preference_item_padding_inner">8.0dip</dimen>
+    <dimen name="preference_child_padding_side">16.0dip</dimen>
+    <dimen name="search_view_text_min_width">160.0dip</dimen>
+    <dimen name="search_view_preferred_width">320.0dip</dimen>
+    <dimen name="alert_dialog_title_height">64.0dip</dimen>
+    <dimen name="alert_dialog_button_bar_height">48.0dip</dimen>
+    <dimen name="action_bar_default_height">48.0dip</dimen>
+    <dimen name="action_bar_icon_vertical_padding">8.0dip</dimen>
+    <dimen name="action_bar_title_text_size">18.0dip</dimen>
+    <dimen name="action_bar_subtitle_text_size">14.0dip</dimen>
+    <dimen name="action_bar_subtitle_top_margin">-3.0dip</dimen>
+    <dimen name="action_bar_subtitle_bottom_margin">5.0dip</dimen>
+    <dimen name="keyguard_lockscreen_clock_font_size">80.0dip</dimen>
+    <dimen name="keyguard_lockscreen_status_line_font_size">14.0dip</dimen>
+    <dimen name="keyguard_lockscreen_status_line_font_right_margin">42.0dip</dimen>
+    <dimen name="keyguard_lockscreen_status_line_clockfont_top_margin">22.0dip</dimen>
+    <dimen name="keyguard_lockscreen_status_line_clockfont_bottom_margin">12.0dip</dimen>
+    <dimen name="keyguard_lockscreen_pin_margin_left">40.0dip</dimen>
+    <dimen name="activity_chooser_popup_min_width">200.0dip</dimen>
+    <dimen name="default_gap">8.0dip</dimen>
+    <dimen name="dropdownitem_text_padding_left">8.0dip</dimen>
+    <dimen name="dropdownitem_text_padding_right">8.0dip</dimen>
+    <dimen name="dropdownitem_icon_width">32.0dip</dimen>
+    <dimen name="textview_error_popup_default_width">240.0dip</dimen>
+    <dimen name="volume_panel_top">80.0dip</dimen>
+    <dimen name="default_app_widget_padding_left">8.0dip</dimen>
+    <dimen name="default_app_widget_padding_top">8.0dip</dimen>
+    <dimen name="default_app_widget_padding_right">8.0dip</dimen>
+    <dimen name="default_app_widget_padding_bottom">8.0dip</dimen>
+    <dimen name="action_button_min_width">56.0dip</dimen>
+    <dimen name="action_bar_stacked_max_height">48.0dip</dimen>
+    <dimen name="action_bar_stacked_tab_max_width">180.0dip</dimen>
+    <dimen name="tw_searchview_text_size">18.0dip</dimen>
+    <dimen name="notification_text_size">14.0dip</dimen>
+    <dimen name="notification_title_text_size">18.0dip</dimen>
+    <dimen name="notification_subtext_size">12.0dip</dimen>
+    <dimen name="multiwindow_gap">30.0dip</dimen>
+    <dimen name="multiwindow_def_width">270.0dip</dimen>
+    <dimen name="multiwindow_def_height">350.0dip</dimen>
+    <dimen name="multiwindow_minimized_width">130.0dip</dimen>
+    <dimen name="multiwindow_minimized_height">39.0dip</dimen>
+    <dimen name="multiwindow_default_center_bar_width">20.0dip</dimen>
+    <dimen name="multiwindow_default_center_bar_inner_padding">0.0dip</dimen>
+    <dimen name="hover_tooltip_text_size">13.0sp</dimen>
+    <dimen name="hover_fulltext_text_size">18.0sp</dimen>
+    <dimen name="hover_tooltip_popup_width">90.0dip</dimen>
+    <dimen name="hover_tooltip_popup_padding_left">10.0dip</dimen>
+    <dimen name="hover_tooltip_popup_padding_right">10.0dip</dimen>
+    <dimen name="hover_tooltip_popup_padding_top">7.0dip</dimen>
+    <dimen name="hover_tooltip_popup_padding_bottom">9.0dip</dimen>
+    <dimen name="tw_notification_large_icon_margin_left">7.0dip</dimen>
+    <dimen name="tw_notification_large_icon_margin_top">12.0dip</dimen>
+    <dimen name="tw_notification_large_icon_margin_right">8.0dip</dimen>
+    <dimen name="tw_notification_large_icon_margin_bottom">13.0dip</dimen>
+    <dimen name="tw_notification_large_icon_size">40.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_padding_width">6.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_icon_width">68.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_icon_height">48.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_fontsize_default">16.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_fontsize_small">12.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_icon_centerXOffset">6.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_icon_topToTopOffset">-2.5dip</dimen>
+    <dimen name="webmagnifier_width">133.29999dip</dimen>
+    <dimen name="webmagnifier_height">66.599976dip</dimen>
+    <dimen name="webmagnifier_tail_width">20.0dip</dimen>
+    <dimen name="webmagnifier_tail_height">13.299988dip</dimen>
+    <dimen name="webselect_port_content_height">221.33398dip</dimen>
+    <dimen name="webselect_land_content_height">192.0dip</dimen>
+    <dimen name="webselect_popup_land_content_height">180.0dip</dimen>
+    <dimen name="tw_alert_dialog_title_height">48.0dip</dimen>
+    <dimen name="tw_alert_dialog_button_bar_height">39.0dip</dimen>
+    <dimen name="tw_alert_dialog_padding">17.0dip</dimen>
+    <dimen name="tw_action_bar_title_text_size">19.0dip</dimen>
+    <dimen name="tw_action_bar_subtitle_text_size">14.0dip</dimen>
+    <dimen name="tw_action_bar_subtitle_bottom_margin">4.0dip</dimen>
+    <dimen name="tw_action_bar_menu_text_size">19.0dip</dimen>
+    <dimen name="tw_action_bar_up_margin">7.0dip</dimen>
+    <dimen name="tw_action_bar_stacked_max_height">64.0dip</dimen>
+    <dimen name="tw_compactmenu_width">315.0dip</dimen>
+    <dimen name="tw_option_menu_maxheight">391.0dip</dimen>
+    <item type="dimen" name="tw_action_bar_title_shadow_dx_holo_dark">1.0</item>
+    <item type="dimen" name="tw_action_bar_title_shadow_dy_holo_dark">1.0</item>
+    <item type="dimen" name="tw_action_bar_title_shadow_dx_holo_light">0.0</item>
+    <item type="dimen" name="tw_action_bar_title_shadow_dy_holo_light">1.0</item>
+    <dimen name="tw_dropdownitem_text_padding_left">4.0dip</dimen>
+    <dimen name="tw_dropdownitem_text_padding_right">4.0dip</dimen>
+    <dimen name="tw_clipboard_port_height">230.0dip</dimen>
+    <dimen name="tw_clipboard_land_height">166.0dip</dimen>
+    <dimen name="tw_clipboard_panel_port_height">199.0dip</dimen>
+    <dimen name="tw_clipboard_panel_land_height">135.0dip</dimen>
+    <dimen name="tw_clipitem_width">172.0dip</dimen>
+    <dimen name="tw_clipitem_height">98.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_width">82.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_height">81.0dip</dimen>
+    <dimen name="tw_clipitem_width_land">141.0dip</dimen>
+    <dimen name="tw_clipitem_height_land">66.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_width_land">52.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_height_land">52.0dip</dimen>
+    <dimen name="tw_progressbar_horizontal_height_size">16.0dip</dimen>
+    <dimen name="tw_seekbar_height_size">13.0dip</dimen>
+    <dimen name="tw_flashboard_panel_height">40.0dip</dimen>
+    <dimen name="tw_smartswitcher_thumbnail_width">260.0dip</dimen>
+    <dimen name="tw_smartswitcher_thumbnail_height">260.0dip</dimen>
+    <item type="dimen" name="APKTOOL_DUMMY_0056">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_009f">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a0">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a1">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a2">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a3">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a4">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a5">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a6">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a7">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a8">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a9">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00aa">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00ab">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00ac">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00ad">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00ae">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00af">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b0">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b1">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b2">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b3">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b4">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b5">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b6">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b7">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b8">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00b9">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00ba">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00bb">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00bc">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00bd">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00be">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00bf">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00c0">false</item>
+</resources>

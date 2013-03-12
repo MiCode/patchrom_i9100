@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:paddingBottom="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="#ffe6e6e6" android:gravity="left" android:id="@id/ticker_stock_name_text_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:cursorVisible="false" android:layout_weight="0.1" />
+    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="#ffe6e6e6" android:id="@id/ticker_stock_price_text_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:cursorVisible="false" />
+    <TextView android:textSize="14.0dip" android:textColor="#ff48ff00" android:id="@id/ticker_stock_price_change_text_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:cursorVisible="false" />
+</LinearLayout>

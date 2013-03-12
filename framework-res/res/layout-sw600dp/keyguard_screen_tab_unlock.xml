@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tabunlock="http://schemas.android.com/apk/res/com.android.tabunlock">
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.42">
+        <RelativeLayout android:gravity="center" android:id="@id/transport_bg_protect" android:layout_width="512.0dip" android:layout_height="wrap_content">
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="50.0dip" android:layout_marginTop="50.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" layout="@layout/keyguard_screen_status_port" />
+            <include android:layout_gravity="fill" android:id="@id/transport" android:layout_width="fill_parent" android:layout_height="512.0dip" android:layout_column="0" android:layout_row="0" android:layout_rowSpan="3" android:layout_columnSpan="1" layout="@layout/keyguard_transport_control" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="0.58">
+        <TextView android:textAppearance="?textAppearanceMedium" android:id="@id/screenLocked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:layout_marginTop="12.0dip" android:drawablePadding="4.0dip" />
+        <com.android.internal.widget.multiwaveview.GlowPadView android:gravity="center" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/unlock_widget" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:innerRadius="@dimen/glowpadview_inner_radius" android:targetDescriptions="@array/lockscreen_target_descriptions_with_camera" android:directionDescriptions="@array/lockscreen_direction_descriptions" android:outerRingDrawable="@drawable/ic_lockscreen_outerring" android:pointDrawable="@drawable/ic_lockscreen_glowdot" android:glowRadius="@dimen/glowpadview_glow_radius" android:targetDrawables="@array/lockscreen_targets_with_camera" android:handleDrawable="@drawable/ic_lockscreen_handle" android:outerRadius="@dimen/glowpadview_target_placement_radius" android:vibrationDuration="20" android:snapMargin="@dimen/glowpadview_snap_margin" android:feedbackCount="1" />
+        <Button android:id="@id/emergencyCallButton" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="90.0dip" android:drawableLeft="@drawable/ic_emergency" android:drawablePadding="8.0dip" android:layout_alignParentBottom="true" android:layout_centerInParent="true" style="@style/Widget.Button.Transparent" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/clock_root" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="17.0dip">
+        <view android:gravity="center" android:id="@id/clock_emergency" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.android.internal.policy.impl.sec.ClockWidget$EmergencyCall">
+            <TextView android:textSize="12.0dip" android:textColor="#ffebebeb" android:ellipsize="none" android:gravity="center" android:id="@id/clock_emergency_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.25" />
+        </view>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/clock_weather_charge_total_info" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/clock_total_info" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="21.0">
+            <view android:gravity="left" android:id="@id/clock_clock" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" class="com.android.internal.policy.impl.sec.ClockWidget$Clock">
+                <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@id/clock_time_and_date" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center" android:id="@id/clock_time" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/zzz_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" />
+                            <ImageView android:id="@id/zzz_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <ImageView android:id="@id/zzz_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_easy_time_dot" />
+                            <ImageView android:id="@id/zzz_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" />
+                            <ImageView android:id="@id/zzz_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/clock_time" android:layout_alignBottom="@id/clock_time">
+                            <TextView android:textSize="17.0dip" android:textColor="#fff8f8f8" android:id="@id/zzz_ampm" android:paddingLeft="3.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <TextView android:textSize="30.0dip" android:textStyle="bold" android:textColor="#fff6f7c9" android:gravity="bottom" android:id="@id/zzz_date_month" android:layout_width="fill_parent" android:layout_height="34.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="7.0dip" android:shadowColor="#aa000000" android:shadowDy="2.0" android:shadowRadius="1.0" />
+                </LinearLayout>
+                <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@id/dualClock_time_and_date" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/dual_clock_local" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="18.0dip" android:textColor="#ffdcdcdc" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_local_locale" android:layout_width="fill_parent" android:layout_height="22.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/zzz_local_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                            <ImageView android:id="@id/zzz_local_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <ImageView android:id="@id/zzz_local_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_dual_time_dot" />
+                            <ImageView android:id="@id/zzz_local_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                            <ImageView android:id="@id/zzz_local_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <TextView android:textSize="17.0dip" android:textColor="#fff8f8f8" android:ellipsize="none" android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/local_am_pm" android:layout_width="wrap_content" android:layout_height="29.0dip" android:layout_marginBottom="3.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                        </LinearLayout>
+                        <TextView android:textSize="20.0dip" android:textColor="#fff6f7c9" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_local_date_month" android:layout_width="fill_parent" android:layout_height="25.0dip" android:singleLine="true" android:shadowColor="#aa000000" android:shadowDy="2.0" android:shadowRadius="1.0" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/dual_clock_home" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_ic_home" />
+                            <TextView android:textSize="18.0dip" android:textColor="#ffdcdcdc" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_home_locale" android:layout_width="fill_parent" android:layout_height="22.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/zzz_home_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                            <ImageView android:id="@id/zzz_home_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <ImageView android:id="@id/zzz_home_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_dual_time_dot" />
+                            <ImageView android:id="@id/zzz_home_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                            <ImageView android:id="@id/zzz_home_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <TextView android:textSize="17.0dip" android:textColor="#fff8f8f8" android:ellipsize="none" android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/home_am_pm" android:layout_width="wrap_content" android:layout_height="29.0dip" android:layout_marginBottom="3.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                        </LinearLayout>
+                        <TextView android:textSize="20.0dip" android:textColor="#fff6f7c9" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_home_date_month" android:layout_width="fill_parent" android:layout_height="25.0dip" android:singleLine="true" android:shadowColor="#aa000000" android:shadowDy="2.0" android:shadowRadius="1.0" />
+                    </LinearLayout>
+                </LinearLayout>
+            </view>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/weather_charge_total_info" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="11.0">
+            <view android:orientation="vertical" android:id="@id/clock_weather" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.android.internal.policy.impl.sec.ClockWidget$Weather">
+                <TextView android:textSize="16.0dip" android:textColor="#ffebebeb" android:ellipsize="none" android:gravity="center" android:id="@id/clock_weather_no_service" android:padding="15.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/clock_weather_data_box" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="74.0dip">
+                        <LinearLayout android:gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true">
+                            <TextView android:textSize="39.0dip" android:typeface="sans" android:textColor="#fff9f9f9" android:gravity="bottom" android:id="@id/clock_weather_temp" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginTop="3.0dip" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                            <ImageView android:id="@id/clock_weather_temp_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_ic_celsius" />
+                            <ImageView android:id="@id/clock_weather_icon" android:layout_width="83.0dip" android:layout_height="49.0dip" android:scaleType="fitXY" />
+                        </LinearLayout>
+                        <TextView android:textSize="22.0dip" android:textColor="#fff9f9f9" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/clock_weather_city" android:layout_width="wrap_content" android:layout_height="30.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:marqueeRepeatLimit="marquee_forever" />
+                    </RelativeLayout>
+                    <ImageView android:id="@id/clock_weather_logo_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_ic_weather_logo" />
+                </LinearLayout>
+            </view>
+            <view android:gravity="center" android:id="@id/clock_charge" android:paddingTop="5.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="24.0dip" class="com.android.internal.policy.impl.sec.ClockWidget$Charge">
+                <ImageView android:id="@id/clock_charge_icon" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_ic_charging" />
+                <ImageView android:id="@id/clock_cmas_icon" android:paddingRight="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_ic_cmas" />
+                <TextView android:textSize="17.0dip" android:textColor="#fff9f9f9" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/clock_charge_text" android:layout_width="wrap_content" android:layout_height="24.0dip" android:singleLine="true" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.5" />
+            </view>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

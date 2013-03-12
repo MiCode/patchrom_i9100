@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="668.0dip" android:layout_height="fill_parent">
+        <com.android.internal.policy.impl.sec.TickerSlidingDrawer android:id="@id/ticker_sliding_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:bottomOffset="-65.0dip" android:topOffset="718.0dip" android:handle="@id/ticker_sliding_handle" android:content="@id/ticker_sliding_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ticker_sliding_handle" android:background="@drawable/keyguard_ticker_handler" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <FrameLayout android:background="#ff434343" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <LinearLayout android:gravity="left|center" android:paddingLeft="12.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <ImageView android:id="@id/ticker_sliding_handle_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_ticker_stock_ic_yahoo2" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.1">
+                        <ImageView android:id="@id/ticker_sliding_handle_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_ticker_handler_ic_arrow_up" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="right|center" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="20.0dip" android:textColor="#ffffffff" android:id="@id/ticker_sliding_handle_update_date" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <FrameLayout android:id="@id/ticker_sliding_handle_refresh_icon" android:paddingLeft="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ProgressBar android:layout_gravity="center" android:id="@id/ticker_sliding_handle_refresh_progress" android:padding="4.0dip" android:visibility="gone" android:layout_width="32.0dip" android:layout_height="32.0dip" style="@android:style/Widget.ProgressBar" />
+                            <ImageView android:layout_gravity="center" android:id="@id/ticker_sliding_handle_refresh_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_ticker_handler_ic_refresh" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <com.android.internal.policy.impl.sec.TickerScrollView android:id="@id/ticker_sliding_content" android:background="@color/black" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:overScrollMode="always" />
+        </com.android.internal.policy.impl.sec.TickerSlidingDrawer>
+        <LinearLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="65.0dip">
+            <com.android.internal.policy.impl.sec.TickerHorizontalScrollView android:id="@id/ticker_horizontal_scroll_view" android:background="@color/black" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="always" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

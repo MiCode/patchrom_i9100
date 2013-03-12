@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/ticker_stock_infomation" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="left" android:orientation="vertical" android:paddingLeft="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.1">
+        <TextView android:textSize="20.0dip" android:textColor="#ffffffff" android:gravity="bottom" android:id="@id/ticker_stock_name_text_vertical" android:layout_width="wrap_content" android:layout_height="22.0dip" android:layout_marginTop="13.0dip" android:layout_marginBottom="4.0dip" android:cursorVisible="false" />
+        <TextView android:textSize="32.0dip" android:textStyle="bold" android:textColor="#ffffffff" android:gravity="bottom" android:id="@id/ticker_stock_price_text_vertical" android:layout_width="wrap_content" android:layout_height="34.0dip" android:layout_marginBottom="6.0dip" android:cursorVisible="false" />
+    </LinearLayout>
+    <LinearLayout android:gravity="bottom|right|center" android:orientation="vertical" android:paddingRight="16.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <TextView android:textSize="20.0dip" android:textColor="#ff808080" android:gravity="bottom" android:id="@id/ticker_stock_quotes_delayed_text_vertical" android:layout_width="wrap_content" android:layout_height="22.0dip" android:text="@string/lockscreen_ticker_quotes_delayed" android:cursorVisible="false" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="25.0dip" android:baselineAligned="true">
+            <TextView android:textSize="20.0dip" android:textColor="#ff48ff00" android:id="@id/ticker_stock_price_change_text_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:cursorVisible="false" />
+            <TextView android:textSize="20.0dip" android:textColor="#ff48ff00" android:id="@id/ticker_stock_price_change_rate_text_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:cursorVisible="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

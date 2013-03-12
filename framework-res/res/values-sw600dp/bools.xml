@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="preferences_prefer_dual_pane">true</bool>
+    <bool name="target_honeycomb_needs_options_menu">false</bool>
+    <bool name="config_allowAllRotations">true</bool>
+    <bool name="config_enableLockScreenRotation">true</bool>
+    <bool name="config_multiWindowControlbar">true</bool>
+    <bool name="config_isHelpOverlayEnabled">false</bool>
+    <bool name="config_isWhiteThemeEnabled">true</bool>
+</resources>

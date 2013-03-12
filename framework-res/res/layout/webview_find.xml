@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="18.0dip" android:textColor="@color/tw_ic_find_text_holo_light" android:id="@id/edit" android:background="@drawable/tw_textfield_searchview_holo_light" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" android:hint="@string/find_on_page" android:scrollHorizontally="true" android:maxLength="@integer/config_findOnPageMaxLength" android:layout_weight="1.0" android:inputType="text" android:imeOptions="actionDone|flagNoFullscreen|flagNoExtractUi" android:textCursorDrawable="@drawable/text_cursor_holo_light" />
+    <TextView android:textSize="12.0dip" android:textColor="?actionModeFindTextColor" android:layout_gravity="center_vertical" android:id="@id/matches" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

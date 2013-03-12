@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/sdcard_enc_icon" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/divider_vertical_bright" android:layout_toRightOf="@id/sdcard_enc_icon" />
+        <TextView android:id="@id/sdcard_enc_text" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/sdcard_enc_icon" />
+        <ProgressBar android:id="@id/sdcard_enc_progress" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/sdcard_enc_icon" android:layout_below="@id/sdcard_enc_text" style="?android:attr/progressBarStyleHorizontal" />
+    </RelativeLayout>
+</LinearLayout>

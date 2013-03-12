@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="password_keyboard_key_height_alpha">47.0dip</dimen>
+    <dimen name="password_keyboard_key_height_numeric">50.0dip</dimen>
+    <dimen name="password_keyboard_spacebar_vertical_correction">2.0dip</dimen>
+    <dimen name="preference_widget_width">72.0dip</dimen>
+    <dimen name="action_bar_default_height">40.0dip</dimen>
+    <dimen name="action_bar_icon_vertical_padding">4.0dip</dimen>
+    <dimen name="action_bar_title_text_size">16.0dip</dimen>
+    <dimen name="action_bar_subtitle_text_size">12.0dip</dimen>
+    <dimen name="action_bar_subtitle_top_margin">-2.0dip</dimen>
+    <dimen name="action_bar_subtitle_bottom_margin">4.0dip</dimen>
+    <dimen name="keyguard_lockscreen_clock_font_size">75.0dip</dimen>
+    <dimen name="tw_action_bar_title_text_size">17.0dip</dimen>
+    <dimen name="tw_action_bar_subtitle_text_size">12.0dip</dimen>
+    <dimen name="tw_action_bar_subtitle_bottom_margin">2.0dip</dimen>
+    <dimen name="tw_action_bar_menu_text_size">17.0dip</dimen>
+    <dimen name="tw_option_menu_maxheight">244.0dip</dimen>
+</resources>

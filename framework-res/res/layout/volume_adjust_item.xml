@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="top|left|center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?textAppearanceMedium" android:textSize="15.0dip" android:textColor="?textColorSecondary" android:gravity="top" android:id="@id/volume_title" android:paddingLeft="12.0dip" android:paddingTop="7.0dip" android:paddingRight="12.0dip" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+    <LinearLayout android:gravity="left|center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/stream_icon" android:background="?selectableItemBackground" android:paddingLeft="16.0dip" android:paddingTop="19.0dip" android:paddingRight="12.0dip" android:paddingBottom="18.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ExtSeekBar android:id="@id/seekbar" android:paddingLeft="18.0dip" android:paddingTop="14.0dip" android:paddingRight="18.0dip" android:paddingBottom="13.0dip" android:layout_width="203.0dip" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:layout_weight="1.0" style="@android:style/Widget.DeviceDefault.SeekBar" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="top" android:id="@id/expand_volume_divider" android:layout_width="342.0dip" android:layout_height="wrap_content" android:src="?dividerVertical" android:scaleType="fitXY" />
+</LinearLayout>

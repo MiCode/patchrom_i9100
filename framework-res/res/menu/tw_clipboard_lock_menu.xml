@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/lock_unlock_in_clipboard" android:title="@string/tw_ids_com_body_unlock_in_clipboard" />
+</menu>

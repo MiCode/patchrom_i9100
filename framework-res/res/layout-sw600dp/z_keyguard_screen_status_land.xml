@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="?textAppearanceMedium" android:textSize="20.0dip" android:ellipsize="marquee" android:id="@id/carrier" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:singleLine="true" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.25" android:drawablePadding="4.0dip" />
+    <include android:id="@id/securelock_clock" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/keyguard_circlelock_clockwidget_sub_land" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_below="@id/time">
+        <TextView android:textAppearance="?textAppearanceMedium" android:textSize="16.0sp" android:id="@id/alarm_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:drawablePadding="4.0dip" />
+    </LinearLayout>
+    <TextView android:textAppearance="?textAppearanceMedium" android:textSize="24.0sp" android:id="@id/status1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" />
+    <TextView android:textAppearance="?textAppearanceMedium" android:textSize="16.0sp" android:textColor="#fff9f9f9" android:ellipsize="end" android:id="@id/propertyOf" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:maxLines="6" android:singleLine="false" android:shadowColor="#99000000" android:shadowDx="1.5" android:shadowDy="1.5" android:shadowRadius="1.0" android:lineSpacingExtra="8.0dip" />
+</LinearLayout>

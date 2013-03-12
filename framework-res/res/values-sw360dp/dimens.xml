@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="multiwindow_gap">25.0dip</dimen>
+    <dimen name="multiwindow_def_width">344.0dip</dimen>
+    <dimen name="multiwindow_def_height">268.0dip</dimen>
+    <dimen name="multiwindow_minimized_width">170.0dip</dimen>
+    <dimen name="multiwindow_minimized_height">29.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_padding_width">1.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_icon_width">70.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_icon_height">48.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_fontsize_default">16.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_fontsize_small">12.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_icon_centerXOffset">6.0dip</dimen>
+    <dimen name="keyguard_lockscreen_application_shortcut_badge_icon_topToTopOffset">-2.5dip</dimen>
+    <dimen name="tw_compactmenu_width">315.0dip</dimen>
+</resources>

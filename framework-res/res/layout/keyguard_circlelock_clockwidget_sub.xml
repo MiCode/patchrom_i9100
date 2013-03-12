@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/clock_root" android:paddingTop="4.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/secure_clock" android:layout_width="fill_parent" android:layout_height="wrap_content" android:permanentClock="true" class="com.android.internal.policy.impl.sec.ClockWidget$Clock">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/clock_time_and_date" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="27.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:id="@id/clock_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <ImageView android:id="@id/zzz_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/zzz_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/zzz_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_time_dot" />
+                    <ImageView android:id="@id/zzz_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/zzz_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/clock_time" android:layout_alignBottom="@id/clock_time">
+                    <TextView android:textSize="23.0dip" android:textColor="#fff8f8f8" android:id="@id/zzz_ampm" android:paddingLeft="3.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="#fff6f7c9" android:gravity="bottom|center" android:id="@id/zzz_date_month" android:layout_width="fill_parent" android:layout_height="24.0dip" android:layout_marginTop="2.0dip" android:shadowColor="#aa000000" android:shadowDy="2.0" android:shadowRadius="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/dualClock_time_and_date" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip">
+            <LinearLayout android:orientation="vertical" android:id="@id/dual_clock_local" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="18.0dip" android:textColor="#ffdcdcdc" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_local_locale" android:layout_width="fill_parent" android:layout_height="22.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/zzz_local_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                    <ImageView android:id="@id/zzz_local_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/zzz_local_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_dual_time_dot" />
+                    <ImageView android:id="@id/zzz_local_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                    <ImageView android:id="@id/zzz_local_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="17.0dip" android:textColor="#fff8f8f8" android:ellipsize="none" android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/local_am_pm" android:layout_width="wrap_content" android:layout_height="29.0dip" android:layout_marginBottom="3.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                </LinearLayout>
+                <TextView android:textSize="20.0dip" android:textColor="#fff6f7c9" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_local_date_month" android:layout_width="fill_parent" android:layout_height="25.0dip" android:singleLine="true" android:shadowColor="#aa000000" android:shadowDy="2.0" android:shadowRadius="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/dual_clock_home" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_ic_home" />
+                    <TextView android:textSize="18.0dip" android:textColor="#ffdcdcdc" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_home_locale" android:layout_width="fill_parent" android:layout_height="22.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/zzz_home_hour01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                    <ImageView android:id="@id/zzz_home_hour02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <ImageView android:id="@id/zzz_home_colon01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_dual_time_dot" />
+                    <ImageView android:id="@id/zzz_home_minute01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-4.0dip" />
+                    <ImageView android:id="@id/zzz_home_minute02" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="17.0dip" android:textColor="#fff8f8f8" android:ellipsize="none" android:gravity="bottom" android:layout_gravity="bottom" android:id="@id/home_am_pm" android:layout_width="wrap_content" android:layout_height="29.0dip" android:layout_marginBottom="3.0dip" android:singleLine="true" android:shadowColor="#55000000" android:shadowDx="3.0" android:shadowDy="3.0" android:shadowRadius="1.0" />
+                </LinearLayout>
+                <TextView android:textSize="20.0dip" android:textColor="#fff6f7c9" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/zzz_home_date_month" android:layout_width="fill_parent" android:layout_height="25.0dip" android:singleLine="true" android:shadowColor="#aa000000" android:shadowDy="2.0" android:shadowRadius="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </view>
+</LinearLayout>

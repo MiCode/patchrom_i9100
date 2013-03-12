@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/voiceunlock_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/voiceunlock_main" android:background="#ff212121" android:layout_width="fill_parent" android:layout_height="325.0dip" android:layout_marginTop="110.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="57.0dip" android:src="@drawable/keyguard_lockscreen_voice_bg_frame" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="19.0dip" android:textColor="#ffe6e6e6" android:gravity="bottom|center" android:id="@id/voiceunlock_msg" android:layout_width="239.0dip" android:layout_height="69.0dip" android:layout_marginTop="65.0dip" android:shadowColor="#e6000000" android:shadowDx="2.0" android:shadowDy="2.0" android:shadowRadius="2.0" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/voiceunlock_level" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="137.0dip" android:src="@drawable/keyguard_lockscreen_voice_level0" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/voiceunlock_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="161.0dip" android:src="@drawable/keyguard_lockscreen_ic_voice" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="19.0dip" android:textColor="#ffe6e6e6" android:gravity="center" android:id="@id/voiceunlock_msg2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="257.0dip" android:shadowColor="#e6000000" android:shadowDx="2.0" android:shadowDy="2.0" android:shadowRadius="2.0" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</LinearLayout>

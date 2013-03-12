@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tw_clipboard_port_height">222.0dip</dimen>
+    <dimen name="tw_clipboard_land_height">158.0dip</dimen>
+    <dimen name="tw_clipboard_panel_port_height">191.0dip</dimen>
+    <dimen name="tw_clipboard_panel_land_height">127.0dip</dimen>
+    <dimen name="tw_clipitem_width">172.0dip</dimen>
+    <dimen name="tw_clipitem_height">93.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_width">82.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_height">76.0dip</dimen>
+    <dimen name="tw_clipitem_width_land">141.0dip</dimen>
+    <dimen name="tw_clipitem_height_land">60.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_width_land">52.0dip</dimen>
+    <dimen name="tw_clipboard_html_image_height_land">48.0dip</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.internal.widget.ActionBarOverlayLayout android:id="@id/action_bar_overlay_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="top" android:id="@id/top_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.android.internal.widget.ActionBarContainer android:gravity="top" android:id="@id/action_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" style="?android:attr/actionBarStyle">
+            <com.android.internal.widget.ActionBarView android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/actionBarStyle" />
+            <com.android.internal.widget.ActionBarContextView android:id="@id/action_context_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/actionModeStyle" />
+        </com.android.internal.widget.ActionBarContainer>
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="?windowContentOverlay" android:scaleType="fitXY" />
+    </LinearLayout>
+    <com.android.internal.widget.ActionBarContainer android:gravity="center" android:layout_gravity="bottom" android:id="@id/split_action_bar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:attr/actionBarSplitStyle" />
+</com.android.internal.widget.ActionBarOverlayLayout>

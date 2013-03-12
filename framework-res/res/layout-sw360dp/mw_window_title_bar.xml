@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/windowTitleBar" android:background="@drawable/mw_border" android:layout_width="fill_parent" android:layout_height="29.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/header_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+        <ImageButton android:id="@id/pinupButton" android:background="@drawable/multi_window_header_ic_bg_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/multi_window_header_ic_fix" android:contentDescription="@string/SS_ALWAYS_ON_TOP" />
+        <View android:id="@id/dividor1" android:background="@drawable/multi_window_header_divider" android:layout_width="1.0dip" android:layout_height="29.0dip" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/header_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <View android:id="@id/dividor2" android:background="@drawable/multi_window_header_divider" android:layout_width="1.0dip" android:layout_height="29.0dip" />
+        <ImageButton android:id="@id/minimizeButton" android:background="@drawable/multi_window_header_ic_bg_center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/multi_window_header_ic_minimize" android:contentDescription="@string/SS_MINIMISE" />
+        <View android:background="@drawable/multi_window_header_divider" android:layout_width="1.0dip" android:layout_height="29.0dip" />
+        <ImageButton android:id="@id/multiwindowButton" android:background="@drawable/multi_window_header_ic_bg_center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/multi_window_header_ic_cascade" android:contentDescription="@string/SS_SWITCH_TO_PREVIOUS_SIZE" />
+        <ImageButton android:id="@id/maximizeButton" android:background="@drawable/multi_window_header_ic_bg_center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/multi_window_header_ic_fullscreen" android:contentDescription="@string/SS_MAXIMISE" />
+        <View android:background="@drawable/multi_window_header_divider" android:layout_width="1.0dip" android:layout_height="29.0dip" />
+        <ImageButton android:id="@id/exitButton" android:background="@drawable/multi_window_header_ic_bg_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/multi_window_header_ic_close" android:contentDescription="@string/SS_CLOSE_APPLICATION" />
+    </LinearLayout>
+    <TextView android:textSize="20.0sp" android:textStyle="bold" android:gravity="center_vertical" android:id="@id/titleText" android:paddingLeft="9.0dip" android:layout_width="wrap_content" android:layout_height="29.0dip" android:singleLine="true" android:layout_toLeftOf="@id/header_btn" android:layout_alignParentLeft="true" />
+</RelativeLayout>

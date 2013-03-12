@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout android:orientation="vertical" android:id="@id/root" android:layout_width="fill_parent" android:layout_height="fill_parent" android:rowCount="7"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="right" android:orientation="vertical" style="?android:attr/buttonBarStyle">
+        <Button android:textSize="@dimen/keyguard_lockscreen_status_line_font_size" android:layout_gravity="right" android:id="@id/emergencyCallButton" android:layout_width="wrap_content" android:layout_height="0.0dip" android:text="@string/lockscreen_emergency_call" android:drawableLeft="@drawable/lockscreen_emergency_button" android:drawablePadding="0.0dip" android:layout_weight="1.0" style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+    <TextView android:textSize="20.0sp" android:gravity="center" android:layout_gravity="center" android:id="@id/locktitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/status_bar_device_locked" android:layout_weight="1.0" />
+    <include android:layout_gravity="fill" android:id="@id/transport" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_column="0" android:layout_row="0" android:layout_rowSpan="5" android:layout_columnSpan="1" layout="@layout/keyguard_transport_control" />
+    <TextView android:layout_gravity="fill" android:id="@id/faceLockAreaView" android:background="@color/facelock_color_background" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginLeft="8.0dip" android:layout_column="1" android:layout_row="0" android:layout_rowSpan="7" android:layout_columnSpan="1" />
+</GridLayout>

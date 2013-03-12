@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="config_tether_apndata">Orange Internet,orange.fr,,,,,,orange,orange,,208,01,,DUN</string>
+</resources>

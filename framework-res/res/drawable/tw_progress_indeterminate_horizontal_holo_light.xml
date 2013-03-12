@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/tw_progressbar_indeterminate1_light" />
+    <item android:duration="100" android:drawable="@drawable/tw_progressbar_indeterminate2_light" />
+    <item android:duration="100" android:drawable="@drawable/tw_progressbar_indeterminate3_light" />
+    <item android:duration="100" android:drawable="@drawable/tw_progressbar_indeterminate4_light" />
+</animation-list>

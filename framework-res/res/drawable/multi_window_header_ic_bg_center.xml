@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/multi_window_header_ic_press_bg_03" />
+    <item android:state_focused="true" android:drawable="@drawable/multi_window_header_ic_press_bg_03" />
+    <item android:state_pressed="false" android:drawable="@drawable/mw_background_null" />
+    <item android:drawable="@drawable/mw_background_null" />
+</selector>

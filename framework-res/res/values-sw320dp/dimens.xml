@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="multiwindow_gap">25.0dip</dimen>
+    <dimen name="multiwindow_def_width">306.0dip</dimen>
+    <dimen name="multiwindow_def_height">234.0dip</dimen>
+    <dimen name="multiwindow_minimized_width">170.0dip</dimen>
+    <dimen name="multiwindow_minimized_height">29.0dip</dimen>
+    <dimen name="tw_compactmenu_width">274.0dip</dimen>
+</resources>

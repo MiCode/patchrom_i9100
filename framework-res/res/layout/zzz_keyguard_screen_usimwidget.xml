@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/usim_root" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <view android:id="@id/usim_emergency" android:layout_width="fill_parent" android:layout_height="wrap_content" class="com.android.internal.policy.impl.sec.UsimWidget$EmergencyCall">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0dip" android:textColor="#ffebebeb" android:ellipsize="none" android:gravity="top|center" android:id="@id/usim_emergency_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.25" />
+        </LinearLayout>
+    </view>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="14.0dip" android:gravity="center" android:id="@id/emergencyCallButton" android:layout_width="wrap_content" android:layout_height="37.0dip" android:shadowColor="@color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="0.25" android:drawableLeft="@drawable/zzz_ic_emergency_small" android:drawablePadding="7.0dip" style="@style/Widget.Holo.Button" />
+    </LinearLayout>
+</LinearLayout>

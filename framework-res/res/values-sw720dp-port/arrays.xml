@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="lockscreen_chevron_drawables">
+        <item>@drawable/ic_lockscreen_chevron_right</item>
+        <item>@null</item>
+        <item>@null</item>
+        <item>@null</item>
+    </array>
+</resources>

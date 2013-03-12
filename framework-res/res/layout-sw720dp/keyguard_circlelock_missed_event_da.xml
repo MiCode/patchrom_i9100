@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="404.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center" android:id="@id/help_text_for_waterlock" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/upper_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+                <LinearLayout android:id="@id/missed_event_call_background_layout" android:background="@drawable/keyguard_lockscreen_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/missed_event_call_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/missed_event_call_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_missed_event_ic_missedcall" />
+                    <TextView android:textSize="42.0dip" android:textStyle="bold" android:textColor="#ffebebeb" android:gravity="center" android:id="@id/missed_event_call_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.2" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <LinearLayout android:id="@id/missed_event_vvm_background_layout" android:background="@drawable/keyguard_lockscreen_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/missed_event_vvm_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/missed_event_vvm_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_missed_event_ic_missedvvm" />
+                    <TextView android:textSize="42.0dip" android:textStyle="bold" android:textColor="#ffebebeb" android:gravity="center" android:id="@id/missed_event_vvm_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.2" />
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <LinearLayout android:id="@id/missed_event_msg_background_layout" android:background="@drawable/keyguard_lockscreen_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/missed_event_msg_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/missed_event_msg_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/keyguard_lockscreen_missed_event_ic_mms" />
+                    <TextView android:textSize="42.0dip" android:textStyle="bold" android:textColor="#ffebebeb" android:gravity="center" android:id="@id/missed_event_msg_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="#ff000000" android:shadowDx="1.2" android:shadowDy="1.2" android:shadowRadius="1.2" />
+                </LinearLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

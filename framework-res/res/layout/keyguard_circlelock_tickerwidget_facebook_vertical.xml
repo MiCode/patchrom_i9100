@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ticker_facebook_article" android:paddingTop="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="19.0dip" android:textColor="#ffe6e6e6" android:id="@id/ticker_facebook_title_text_vertical" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cursorVisible="false" android:maxLines="2" />
+    <LinearLayout android:gravity="right" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="28.0dip">
+        <TextView android:textSize="14.0dip" android:textColor="#ff818181" android:ellipsize="marquee" android:layout_gravity="center_vertical" android:id="@id/ticker_facebook_attribution_text_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:cursorVisible="false" android:singleLine="true" />
+        <TextView android:textSize="14.0dip" android:textColor="#ff5397c7" android:layout_gravity="center_vertical" android:id="@id/ticker_facebook_time_text_vertical" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:cursorVisible="false" />
+    </LinearLayout>
+    <ImageView android:layout_width="fill_parent" android:layout_height="1.0dip" android:src="@drawable/keyguard_ticker_list_line" android:scaleType="fitXY" />
+</LinearLayout>

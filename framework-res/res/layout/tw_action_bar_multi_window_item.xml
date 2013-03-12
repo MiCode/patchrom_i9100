@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton android:layout_gravity="center" android:id="@id/action_bar_multi_window_button" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16.0dip" android:src="?actionMultiWindowButtonDrawable" android:contentDescription="@string/SS_SWITCH_TO_PREVIOUS_SIZE" style="?android:attr/actionMultiWindowButtonStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

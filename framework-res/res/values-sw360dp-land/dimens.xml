@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="keyguard_lockscreen_application_shortcut_padding_width">19.0dip</dimen>
+</resources>

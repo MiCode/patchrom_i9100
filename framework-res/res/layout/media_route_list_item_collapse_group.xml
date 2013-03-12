@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="?selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:background="#19ffffff" android:paddingLeft="?listPreferredItemPaddingLeft" android:paddingRight="?listPreferredItemPaddingRight" android:layout_width="fill_parent" android:layout_height="?listPreferredItemHeightSmall">
+        <TextView android:textAppearance="?textAppearanceMedium" android:ellipsize="marquee" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/media_route_chooser_grouping_done" android:singleLine="true" android:layout_weight="1.0" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_media_group_collapse" android:scaleType="center" />
+    </LinearLayout>
+</FrameLayout>
