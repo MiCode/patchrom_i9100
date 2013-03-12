@@ -1,0 +1,10 @@
+/hidden/CWT/hidden_app/Hami.apk
+/hidden/CWT/hidden_app/Hami_Apps_V2.03.apk
+/hidden/CWT/hidden_app/Hamibook_Preload.apk
+/hidden/CWT/hidden_app/Hamimusic2.2_H.apk
+/hidden/CWT/hidden_app/Hami_ringtone.apk
+/hidden/CWT/hidden_app/Hami_videocenter.apk
+/hidden/CWT/hidden_app/KKBOX_Andorid_HAMI_4.0.27.apk
+/hidden/CWT/hidden_app/MusicFly-20120928-hami-1-3-2.apk
+/hidden/CWT/hidden_app/navigation_2_0_0_2.apk
+/hidden/CWT/hidden_app/stock_1_23_38.apk

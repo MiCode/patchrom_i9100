@@ -1,0 +1,15 @@
+<?xml  version="1.0" encoding="UTF-8" ?>
+<SW-Configuration>
+	<MobileData>
+	<PublicName>GT-I9100</PublicName>
+	</MobileData>
+	<CustomerDataSet>
+	<CSCName>I9100OZS</CSCName>
+	<CSCVersion>LSH</CSCVersion>
+	<NbCustomer>4</NbCustomer>
+	<CustomerData src="/Customer/TGY/customer.xml" />
+	<CustomerData src="/Customer/BRI/customer.xml" />
+	<CustomerData src="/Customer/CWT/customer.xml" />
+	<CustomerData src="/Customer/TWM/customer.xml" />
+	</CustomerDataSet>
+</SW-Configuration>

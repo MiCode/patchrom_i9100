@@ -1,0 +1,49 @@
+-----BEGIN CERTIFICATE-----
+MIICPDCCAaUCEC0b/EoXjaOR6+f/9YtFvgswDQYJKoZIhvcNAQECBQAwXzELMAkG
+A1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMTcwNQYDVQQLEy5DbGFz
+cyAyIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTk2
+MDEyOTAwMDAwMFoXDTI4MDgwMTIzNTk1OVowXzELMAkGA1UEBhMCVVMxFzAVBgNV
+BAoTDlZlcmlTaWduLCBJbmMuMTcwNQYDVQQLEy5DbGFzcyAyIFB1YmxpYyBQcmlt
+YXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIGfMA0GCSqGSIb3DQEBAQUAA4GN
+ADCBiQKBgQC2WoujDWojg4BrzzmH9CETMwZMJaLtVRKXxaeAufqDwSCg+i8VDXyh
+YGt+eSz6Bg86rvYbb7HS/y8oUl+DfUvEerf4Zh+AVPy3wo5ZShRXRtGak75BkQO7
+FYCTXOvnzAhsPz6zSvz/S2wj1VCCJkQZjiPDceoZJEcEnnW/yKYAHwIDAQABMA0G
+CSqGSIb3DQEBAgUAA4GBAIobK/o5wXTXXtgZZKJYSi034DNHD6zt96rbHuSLBlxg
+J8pFUs4W7z8GZOeUaHxgMxURaa+dYo2jA1Rrpr7l7gUYYAS/QoD90KioHgE796Nc
+r6Pc5iaAIzy4RHT3Cq5Ji2F4zCS/iIqnDupzGUH9TQPwiNHleI2lKk/2lw0Xd8rY
+-----END CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            2d:1b:fc:4a:17:8d:a3:91:eb:e7:ff:f5:8b:45:be:0b
+        Signature Algorithm: md2WithRSAEncryption
+        Issuer: C=US, O=VeriSign, Inc., OU=Class 2 Public Primary Certification Authority
+        Validity
+            Not Before: Jan 29 00:00:00 1996 GMT
+            Not After : Aug  1 23:59:59 2028 GMT
+        Subject: C=US, O=VeriSign, Inc., OU=Class 2 Public Primary Certification Authority
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:b6:5a:8b:a3:0d:6a:23:83:80:6b:cf:39:87:f4:
+                    21:13:33:06:4c:25:a2:ed:55:12:97:c5:a7:80:b9:
+                    fa:83:c1:20:a0:fa:2f:15:0d:7c:a1:60:6b:7e:79:
+                    2c:fa:06:0f:3a:ae:f6:1b:6f:b1:d2:ff:2f:28:52:
+                    5f:83:7d:4b:c4:7a:b7:f8:66:1f:80:54:fc:b7:c2:
+                    8e:59:4a:14:57:46:d1:9a:93:be:41:91:03:bb:15:
+                    80:93:5c:eb:e7:cc:08:6c:3f:3e:b3:4a:fc:ff:4b:
+                    6c:23:d5:50:82:26:44:19:8e:23:c3:71:ea:19:24:
+                    47:04:9e:75:bf:c8:a6:00:1f
+                Exponent: 65537 (0x10001)
+    Signature Algorithm: md2WithRSAEncryption
+        8a:1b:2b:fa:39:c1:74:d7:5e:d8:19:64:a2:58:4a:2d:37:e0:
+        33:47:0f:ac:ed:f7:aa:db:1e:e4:8b:06:5c:60:27:ca:45:52:
+        ce:16:ef:3f:06:64:e7:94:68:7c:60:33:15:11:69:af:9d:62:
+        8d:a3:03:54:6b:a6:be:e5:ee:05:18:60:04:bf:42:80:fd:d0:
+        a8:a8:1e:01:3b:f7:a3:5c:af:a3:dc:e6:26:80:23:3c:b8:44:
+        74:f7:0a:ae:49:8b:61:78:cc:24:bf:88:8a:a7:0e:ea:73:19:
+        41:fd:4d:03:f0:88:d1:e5:78:8d:a5:2a:4f:f6:97:0d:17:77:
+        ca:d8
+SHA1 Fingerprint=67:82:AA:E0:ED:EE:E2:1A:58:39:D3:C0:CD:14:68:0A:4F:60:14:2A

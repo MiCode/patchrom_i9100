@@ -1,0 +1,63 @@
+-----BEGIN CERTIFICATE-----
+MIICqjCCAhOgAwIBAgIBADANBgkqhkiG9w0BAQUFADBEMRwwGgYDVQQKExNFVW5l
+dCBJbnRlcm5hdGlvbmFsMSQwIgYDVQQDExtFVW5ldCBJbnRlcm5hdGlvbmFsIFJv
+b3QgQ0EwHhcNOTkwMTE1MTUwMDU0WhcNMTgxMDAyMTUwMDU0WjBEMRwwGgYDVQQK
+ExNFVW5ldCBJbnRlcm5hdGlvbmFsMSQwIgYDVQQDExtFVW5ldCBJbnRlcm5hdGlv
+bmFsIFJvb3QgQ0EwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJ5BO9lBSYso
+nFkU91BoKHtNCFxn/4UeC6bPOjICsHx8Sp+2iQIhDEqZi8tkUX54WrZeqVO37+/H
+36UhWZdO4gflLXwZ1SrKyDPTlhAu3aAAn/3K6GGpU8q2HRg+nBHgY+cqZ1vIRJXw
+E1VIu75VuGc3zcsAEw38T2kUalGU7LwnAgMBAAGjgaswgagwHQYDVR0OBBYEFPfn
+3cvO2zj5trJnDlTQWQwyP929MGwGA1UdIwRlMGOAFPfn3cvO2zj5trJnDlTQWQwy
+P929oUikRjBEMRwwGgYDVQQKExNFVW5ldCBJbnRlcm5hdGlvbmFsMSQwIgYDVQQD
+ExtFVW5ldCBJbnRlcm5hdGlvbmFsIFJvb3QgQ0GCAQAwDAYDVR0TBAUwAwEB/zAL
+BgNVHQ8EBAMCAQYwDQYJKoZIhvcNAQEFBQADgYEAXpHCGSGnCQkOM8Gomr2Y+bLy
+sWDElw2lMJtfOwnfTXSsMhZ2C9PcIZ8iDwl2B8ulk0L4tG5cEo8Ur46QG2oD/ykx
+HjNKFxz3N40fgMCDZsQAplYV+qAyVROqS/5J8Nqa09a+pahKzWjs/3O2qwuj22FE
+mmRjCbEnB7VAjxcALlA=
+-----END CERTIFICATE-----
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 0 (0x0)
+        Signature Algorithm: sha1WithRSAEncryption
+        Issuer: O=EUnet International, CN=EUnet International Root CA
+        Validity
+            Not Before: Jan 15 15:00:54 1999 GMT
+            Not After : Oct  2 15:00:54 2018 GMT
+        Subject: O=EUnet International, CN=EUnet International Root CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+            RSA Public Key: (1024 bit)
+                Modulus (1024 bit):
+                    00:9e:41:3b:d9:41:49:8b:28:9c:59:14:f7:50:68:
+                    28:7b:4d:08:5c:67:ff:85:1e:0b:a6:cf:3a:32:02:
+                    b0:7c:7c:4a:9f:b6:89:02:21:0c:4a:99:8b:cb:64:
+                    51:7e:78:5a:b6:5e:a9:53:b7:ef:ef:c7:df:a5:21:
+                    59:97:4e:e2:07:e5:2d:7c:19:d5:2a:ca:c8:33:d3:
+                    96:10:2e:dd:a0:00:9f:fd:ca:e8:61:a9:53:ca:b6:
+                    1d:18:3e:9c:11:e0:63:e7:2a:67:5b:c8:44:95:f0:
+                    13:55:48:bb:be:55:b8:67:37:cd:cb:00:13:0d:fc:
+                    4f:69:14:6a:51:94:ec:bc:27
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                F7:E7:DD:CB:CE:DB:38:F9:B6:B2:67:0E:54:D0:59:0C:32:3F:DD:BD
+            X509v3 Authority Key Identifier: 
+                keyid:F7:E7:DD:CB:CE:DB:38:F9:B6:B2:67:0E:54:D0:59:0C:32:3F:DD:BD
+                DirName:/O=EUnet International/CN=EUnet International Root CA
+                serial:00
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+            X509v3 Key Usage: 
+                Certificate Sign, CRL Sign
+    Signature Algorithm: sha1WithRSAEncryption
+        5e:91:c2:19:21:a7:09:09:0e:33:c1:a8:9a:bd:98:f9:b2:f2:
+        b1:60:c4:97:0d:a5:30:9b:5f:3b:09:df:4d:74:ac:32:16:76:
+        0b:d3:dc:21:9f:22:0f:09:76:07:cb:a5:93:42:f8:b4:6e:5c:
+        12:8f:14:af:8e:90:1b:6a:03:ff:29:31:1e:33:4a:17:1c:f7:
+        37:8d:1f:80:c0:83:66:c4:00:a6:56:15:fa:a0:32:55:13:aa:
+        4b:fe:49:f0:da:9a:d3:d6:be:a5:a8:4a:cd:68:ec:ff:73:b6:
+        ab:0b:a3:db:61:44:9a:64:63:09:b1:27:07:b5:40:8f:17:00:
+        2e:50
+SHA1 Fingerprint=5B:4E:0E:C2:8E:BD:82:92:A5:17:82:24:12:81:AD:9F:EE:DD:4E:4C

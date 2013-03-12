@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<appOrder xmlns:launcher="http://schemas.android.com/apk/res/com.sec.android.app.launcher">
+			
+	<favorite
+        launcher:packageName="com.android.cwt.Hami"
+        launcher:className="com.android.cwt.Hami.Hami"
+        launcher:screen="0" />
+		
+	<favorite
+        launcher:packageName="net.emome.hamiapps.am"
+        launcher:className="net.emome.hamiapps.am.MainActivity"
+        launcher:screen="0" />
+    <favorite
+        launcher:packageName="com.she.eReader"
+        launcher:className="com.she.hami.reader.LoginActivity"
+        launcher:screen="0" />
+    <favorite
+        launcher:packageName="com.she.hamimusic"
+        launcher:className="com.she.hamimusic.activity.CheckLicense"
+        launcher:screen="0" />
+      
+	<favorite
+        launcher:packageName="com.android.cwt.videocenter"
+        launcher:className="com.android.cwt.videocenter.videocenter"
+        launcher:screen="0" />
+	
+    <favorite
+        launcher:packageName="com.android.cwt.Hamiringtone"
+        launcher:className="com.android.cwt.Hamiringtone.Hamiringtone"
+        launcher:screen="0" />  
+        
+    <favorite
+        launcher:packageName="com.chttl.android.music"
+        launcher:className="com.chttl.android.music.CheckLicense"
+        launcher:screen="0" />
+        
+    <favorite
+        launcher:packageName="com.skysoft.kkbox.android"
+        launcher:className="com.skysoft.kkbox.android.HomeActivity"
+        launcher:screen="0" />
+    
+    <favorite
+        launcher:packageName="com.cht"
+        launcher:className="com.cht.MyMitake"
+        launcher:screen="0" /> 
+            
+    <favorite
+        launcher:packageName="com.kingwaytek"
+        launcher:className="com.kingwaytek.OpeningActivity"
+        launcher:screen="0" />
+        
+       
+        
+</appOrder>
