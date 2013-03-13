@@ -19737,6 +19737,7 @@
     move v6, v7
 
     :cond_2
+    const/4 v6, 0x0
     iput-boolean v6, p0, Lcom/android/server/wm/WindowManagerService;->mSafeMode:Z
 
     .line 8134

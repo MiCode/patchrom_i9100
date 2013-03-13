@@ -548,6 +548,9 @@
 
 .method private initTitle()V
     .locals 9
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     const/16 v6, 0x8
@@ -556,12 +559,21 @@
 
     const/4 v5, 0x0
 
-    .line 233
+    invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarContextView;->miuiInitTitle()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_3
 
-    .line 234
     invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarContextView;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -617,12 +629,10 @@
 
     iput-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitleView:Landroid/widget/TextView;
 
-    .line 239
     iget v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleStyleRes:I
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_2
 
-    .line 240
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
 
     iget-object v7, p0, Lcom/android/internal/widget/ActionBarContextView;->mContext:Landroid/content/Context;
@@ -631,13 +641,11 @@
 
     invoke-virtual {v3, v7, v8}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
 
-    .line 242
-    :cond_0
+    :cond_2
     iget v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitleStyleRes:I
 
-    if-eqz v3, :cond_1
+    if-eqz v3, :cond_3
 
-    .line 243
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitleView:Landroid/widget/TextView;
 
     iget-object v7, p0, Lcom/android/internal/widget/ActionBarContextView;->mContext:Landroid/content/Context;
@@ -648,7 +656,7 @@
 
     .line 247
     .end local v2           #inflater:Landroid/view/LayoutInflater;
-    :cond_1
+    :cond_3
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
 
     iget-object v7, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitle:Ljava/lang/CharSequence;
@@ -669,46 +677,46 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     move v1, v4
 
     .line 251
     .local v1, hasTitle:Z
-    :goto_0
+    :goto_1
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitle:Ljava/lang/CharSequence;
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_7
 
     move v0, v4
 
     .line 252
     .local v0, hasSubtitle:Z
-    :goto_1
+    :goto_2
     iget-object v4, p0, Lcom/android/internal/widget/ActionBarContextView;->mSubtitleView:Landroid/widget/TextView;
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     move v3, v5
 
-    :goto_2
+    :goto_3
     invoke-virtual {v4, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 253
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_4
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
-    :cond_2
+    :cond_4
     move v6, v5
 
-    :cond_3
+    :cond_5
     invoke-virtual {v3, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     .line 254
@@ -718,38 +726,32 @@
 
     move-result-object v3
 
-    if-nez v3, :cond_4
+    if-nez v3, :cond_0
 
-    .line 255
     iget-object v3, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v3}, Lcom/android/internal/widget/ActionBarContextView;->addView(Landroid/view/View;)V
 
-    .line 257
-    :cond_4
-    return-void
+    goto/16 :goto_0
 
     .end local v0           #hasSubtitle:Z
     .end local v1           #hasTitle:Z
-    :cond_5
+    :cond_6
     move v1, v5
 
-    .line 250
-    goto :goto_0
-
-    .restart local v1       #hasTitle:Z
-    :cond_6
-    move v0, v5
-
-    .line 251
     goto :goto_1
 
-    .restart local v0       #hasSubtitle:Z
+    .restart local v1       #hasTitle:Z
     :cond_7
+    move v0, v5
+
+    goto :goto_2
+
+    .restart local v0       #hasSubtitle:Z
+    :cond_8
     move v3, v6
 
-    .line 252
-    goto :goto_2
+    goto :goto_3
 .end method
 
 .method private makeInAnimation()Landroid/animation/Animator;
@@ -1139,6 +1141,18 @@
     return-object v0
 .end method
 
+.method protected getAnimationMode()I
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mAnimationMode:I
+
+    return v0
+.end method
+
 .method public getSubtitle()Ljava/lang/CharSequence;
     .locals 1
 
@@ -1155,6 +1169,42 @@
     .prologue
     .line 225
     iget-object v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitle:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public getTitleLayout()Landroid/widget/LinearLayout;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
+
+    return-object v0
+.end method
+
+.method public getTitleStyleRes()I
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleStyleRes:I
+
+    return v0
+.end method
+
+.method public getTitleView()Landroid/widget/TextView;
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -1574,6 +1624,18 @@
 
     .line 469
     return-void
+.end method
+
+.method protected miuiInitTitle()Z
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public onAnimationCancel(Landroid/animation/Animator;)V
@@ -2708,6 +2770,19 @@
     goto :goto_9
 .end method
 
+.method protected setAnimationMode(I)V
+    .locals 0
+    .parameter "mode"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iput p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mAnimationMode:I
+
+    return-void
+.end method
+
 .method public setContentHeight(I)V
     .locals 0
     .parameter "height"
@@ -2963,6 +3038,19 @@
     return-void
 .end method
 
+.method public setTitleLayout(Landroid/widget/LinearLayout;)V
+    .locals 0
+    .parameter "titleLayout"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleLayout:Landroid/widget/LinearLayout;
+
+    return-void
+.end method
+
 .method public setTitleOptional(Z)V
     .locals 1
     .parameter "titleOptional"
@@ -2981,6 +3069,19 @@
     iput-boolean p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleOptional:Z
 
     .line 742
+    return-void
+.end method
+
+.method public setTitleView(Landroid/widget/TextView;)V
+    .locals 0
+    .parameter "titleView"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iput-object p1, p0, Lcom/android/internal/widget/ActionBarContextView;->mTitleView:Landroid/widget/TextView;
+
     return-void
 .end method
 

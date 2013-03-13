@@ -1,0 +1,14 @@
+diff a/framework2.jar.out/smali/android/widget/NumberPicker.smali b/framework2.jar.out/smali/android/widget/NumberPicker.smali	(rejected hunks)
+@@ -327,6 +332,12 @@
+ 
+     iput v14, v0, Landroid/widget/NumberPicker;->mScrollState:I
+ 
++    const/4 v14, 0x0
++
++    move-object/from16 v0, p0
++
++    iput-boolean v14, v0, Landroid/widget/NumberPicker;->mIsV5:Z
++
+     sget-object v14, Lcom/android/internal/R$styleable;->NumberPicker:[I
+ 
+     const/4 v15, 0x0

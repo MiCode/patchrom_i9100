@@ -633,7 +633,7 @@
     .prologue
     const/4 v8, 0x0
 
-    const v7, 0x1030128
+    const v7, 0x103006e
 
     .line 184
     iget-object v4, p0, Lcom/android/internal/policy/impl/sec/PcwUnlockScreen;->mCallback:Lcom/android/internal/policy/impl/KeyguardScreenCallback;

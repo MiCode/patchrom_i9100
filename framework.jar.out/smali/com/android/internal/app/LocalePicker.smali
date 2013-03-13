@@ -124,6 +124,10 @@
     .parameter "context"
     .parameter "layoutId"
     .parameter "fieldId"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -158,6 +162,12 @@
 
     .line 103
     .local v13, locales:[Ljava/lang/String;
+    move-object/from16 v0, v16
+
+    invoke-static {v0, v13}, Lmiui/util/ExtraLocalePicker;->filterLocale(Landroid/content/res/Resources;[Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v13
+
     const v20, 0x1070009
 
     move-object/from16 v0, v16
@@ -454,28 +464,25 @@
     :cond_3
     new-array v12, v7, [Lcom/android/internal/app/LocalePicker$LocaleInfo;
 
-    .line 164
     .local v12, localeInfos:[Lcom/android/internal/app/LocalePicker$LocaleInfo;
     const/4 v8, 0x0
 
     :goto_3
     if-ge v8, v7, :cond_4
 
-    .line 165
     aget-object v20, v15, v8
 
     aput-object v20, v12, v8
 
-    .line 164
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_3
 
-    .line 167
     :cond_4
     invoke-static {v12}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 168
+    invoke-static {v12}, Lmiui/util/ExtraLocalePicker;->adjustLocaleOrder([Lcom/android/internal/app/LocalePicker$LocaleInfo;)V
+
     new-instance v20, Landroid/widget/ArrayAdapter;
 
     move-object/from16 v0, v20

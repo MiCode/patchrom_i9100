@@ -238,7 +238,7 @@
     .line 134
     new-instance v3, Landroid/view/ContextThemeWrapper;
 
-    const v6, 0x103012b
+    const v6, 0x103006e
 
     invoke-direct {v3, p1, v6}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
@@ -380,7 +380,7 @@
     :cond_0
     new-instance v3, Landroid/view/ContextThemeWrapper;
 
-    const v6, 0x1030128
+    const v6, 0x103006e
 
     invoke-direct {v3, p1, v6}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 

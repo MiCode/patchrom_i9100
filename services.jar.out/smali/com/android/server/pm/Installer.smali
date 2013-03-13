@@ -811,6 +811,21 @@
 
 
 # virtual methods
+.method public callExecute(Ljava/lang/String;)I
+    .locals 1
+    .parameter "cmd"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    invoke-direct {p0, p1}, Lcom/android/server/pm/Installer;->execute(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public clearUserData(Ljava/lang/String;I)I
     .locals 3
     .parameter "name"

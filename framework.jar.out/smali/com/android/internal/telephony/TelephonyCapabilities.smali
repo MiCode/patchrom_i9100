@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method protected constructor <init>()V
     .locals 0
 
     .prologue

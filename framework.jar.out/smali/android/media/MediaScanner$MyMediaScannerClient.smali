@@ -324,6 +324,10 @@
     .parameter "alarms"
     .parameter "music"
     .parameter "podcasts"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -884,31 +888,41 @@
 
     invoke-static {v6, v7, v8}, Landroid/media/MediaScanner;->access$3114(Landroid/media/MediaScanner;J)J
 
-    .line 1233
     if-eqz v42, :cond_10
 
-    .line 1234
     invoke-static/range {v42 .. v42}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
     move-result-wide v45
 
-    .line 1235
     move-wide/from16 v0, v45
 
     move-object/from16 v2, p1
 
     iput-wide v0, v2, Landroid/media/MediaScanner$FileEntry;->mRowId:J
 
-    .line 1274
     :cond_10
     :goto_6
     if-eqz v38, :cond_31
 
-    .line 1275
+    #start
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Landroid/media/MediaScanner$MyMediaScannerClient;->this$0:Landroid/media/MediaScanner;
+
+    move-object/from16 v1, p1
+
+    move/from16 v2, p2
+
+    move/from16 v3, p4
+
+    move/from16 v4, p5
+
+    invoke-static {v6, v1, v2, v3, v4}, Landroid/media/MediaScanner$Injector;->setAllSettingsIfNotSet(Landroid/media/MediaScanner;Landroid/media/MediaScanner$FileEntry;ZZZ)V
+    #end
+
     if-eqz p4, :cond_32
 
-    .line 1276
-    const-string/jumbo v6, "notification_sound"
+    const-string v6, "notification_sound"
 
     move-object/from16 v0, p0
 

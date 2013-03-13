@@ -1560,7 +1560,7 @@
 
     .line 647
     :cond_0
-    invoke-virtual {v1, p1}, Landroid/media/Ringtone;->setUri(Landroid/net/Uri;)Z
+    invoke-virtual {v1, p1}, Landroid/media/Ringtone;->setUriOrig(Landroid/net/Uri;)Z
 
     move-result v3
 

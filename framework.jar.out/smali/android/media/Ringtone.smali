@@ -665,15 +665,12 @@
     .parameter "streamType"
 
     .prologue
-    .line 85
     iput p1, p0, Landroid/media/Ringtone;->mStreamType:I
 
-    .line 89
     iget-object v0, p0, Landroid/media/Ringtone;->mUri:Landroid/net/Uri;
 
-    invoke-virtual {p0, v0}, Landroid/media/Ringtone;->setUri(Landroid/net/Uri;)Z
+    invoke-virtual {p0, v0}, Landroid/media/Ringtone;->setUriOrig(Landroid/net/Uri;)Z
 
-    .line 90
     return-void
 .end method
 
@@ -689,7 +686,18 @@
     return-void
 .end method
 
-.method public setUri(Landroid/net/Uri;)Z
+.method public setUri(Landroid/net/Uri;)V
+    .locals 0
+    .parameter "uri"
+
+    .prologue
+
+    invoke-virtual {p0, p1}, Landroid/media/Ringtone;->setUriOrig(Landroid/net/Uri;)Z
+
+    return-void
+.end method
+
+.method public setUriOrig(Landroid/net/Uri;)Z
     .locals 6
     .parameter "uri"
 

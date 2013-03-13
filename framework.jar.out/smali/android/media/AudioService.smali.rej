@@ -1,0 +1,14 @@
+diff a/framework.jar.out/smali/android/media/AudioService.smali b/framework.jar.out/smali/android/media/AudioService.smali	(rejected hunks)
+@@ -9045,9 +9046,10 @@
+     and-int/lit8 p4, p4, -0x1
+ 
+     :cond_3
+-    iget-object v5, p0, Landroid/media/AudioService;->mVolumePanel:Landroid/view/VolumePanel;
+ 
+-    invoke-virtual {v5, p1, p4}, Landroid/view/VolumePanel;->postVolumeChanged(II)V
++    iget-object v5, p0, Landroid/media/AudioService;->mVolumePanel:Lmiui/view/VolumePanel;
++
++    invoke-virtual {v5, p1, p4}, Lmiui/view/VolumePanel;->postVolumeChanged(II)V
+ 
+     add-int/lit8 v5, p2, 0x5
+ 

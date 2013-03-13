@@ -4557,10 +4557,9 @@
     .locals 1
 
     .prologue
-    .line 714
-    const-string v0, "gsm.sim.operator.numeric"
+    sget-object v0, Landroid/telephony/TelephonyManager;->sContext:Landroid/content/Context;
 
-    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lmiui/telephony/ExtraTelephonyManager;->getSimOperator(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 

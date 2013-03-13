@@ -1,0 +1,48 @@
+diff a/framework2.jar.out/smali/com/android/internal/widget/ActionBarView$HomeView.smali b/framework2.jar.out/smali/com/android/internal/widget/ActionBarView$HomeView.smali	(rejected hunks)
+@@ -15,6 +15,18 @@
+ 
+ 
+ # instance fields
++.field mCompactMode:Z
++    .annotation build Landroid/annotation/MiuiHook;
++        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
++    .end annotation
++.end field
++
++.field mIconDrawable:Landroid/graphics/drawable/Drawable;
++    .annotation build Landroid/annotation/MiuiHook;
++        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
++    .end annotation
++.end field
++
+ .field public mIconView:Landroid/widget/ImageView;
+ 
+ .field private mUpMargin:I
+@@ -94,6 +106,8 @@
+ 
+     const/4 v1, 0x0
+ 
++    goto :goto_0
++
+     new-instance v0, Landroid/util/TypedValue;
+ 
+     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+@@ -117,7 +131,7 @@
+ 
+     iget-object v2, p0, Lcom/android/internal/widget/ActionBarView$HomeView;->mUpView:Landroid/view/View;
+ 
+-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
++    invoke-static {p0, v2}, Lcom/android/internal/widget/ActionBarView$Injector;->getUpViewVisibility(Lcom/android/internal/widget/ActionBarView$HomeView;Landroid/view/View;)I
+ 
+     move-result v2
+ 
+@@ -205,6 +219,9 @@
+ 
+     .end local v1           #upLp:Landroid/widget/FrameLayout$LayoutParams;
+     :cond_0
++
++    invoke-static {p0}, Lcom/android/internal/widget/ActionBarView$Injector;->switchToCompactMode(Lcom/android/internal/widget/ActionBarView$HomeView;)V
++
+     return-void
+ .end method
+ 

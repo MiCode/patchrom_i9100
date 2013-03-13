@@ -235,41 +235,47 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 7
     .parameter "canvas"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
-    .line 240
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->onDrawMiui(Landroid/graphics/Canvas;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     invoke-super {p0, p1}, Landroid/widget/Button;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 242
     iget-object v0, p0, Landroid/widget/CompoundButton;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 243
     .local v0, buttonDrawable:Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_0
 
-    .line 244
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getGravity()I
 
     move-result v4
 
     and-int/lit8 v2, v4, 0x70
 
-    .line 245
     .local v2, verticalGravity:I
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v1
 
-    .line 247
     .local v1, height:I
     const/4 v3, 0x0
 
-    .line 249
     .local v3, y:I
     sparse-switch v2, :sswitch_data_0
 
-    .line 258
-    :goto_0
+    :goto_1
     const/4 v4, 0x0
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -280,20 +286,10 @@
 
     invoke-virtual {v0, v4, v3, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 259
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 261
-    .end local v1           #height:I
-    .end local v2           #verticalGravity:I
-    .end local v3           #y:I
-    :cond_0
-    return-void
+    goto :goto_0
 
-    .line 251
-    .restart local v1       #height:I
-    .restart local v2       #verticalGravity:I
-    .restart local v3       #y:I
     :sswitch_0
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
 
@@ -301,10 +297,8 @@
 
     sub-int v3, v4, v1
 
-    .line 252
-    goto :goto_0
+    goto :goto_1
 
-    .line 254
     :sswitch_1
     invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
 
@@ -314,13 +308,153 @@
 
     div-int/lit8 v3, v4, 0x2
 
-    goto :goto_0
+    goto :goto_1
+
+    nop
 
     .line 249
     :sswitch_data_0
     .sparse-switch
         0x10 -> :sswitch_1
         0x50 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method onDrawMiui(Landroid/graphics/Canvas;)Z
+    .locals 6
+    .parameter "canvas"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/CompoundButton;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+    .local v0, buttonDrawable:Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    :cond_0
+    const/4 v4, 0x0
+
+    :goto_0
+    return v4
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingLeft()I
+
+    move-result v2
+
+    .local v2, x:I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingTop()I
+
+    move-result v3
+
+    .local v3, y:I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v1
+
+    .local v1, height:I
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    instance-of v4, v4, Landroid/graphics/drawable/NinePatchDrawable;
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
+
+    move-result v4
+
+    sub-int/2addr v4, v3
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getPaddingBottom()I
+
+    move-result v5
+
+    sub-int v1, v4, v5
+
+    :goto_1
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    add-int/2addr v4, v2
+
+    add-int v5, v3, v1
+
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    const/4 v5, 0x0
+
+    invoke-virtual {p1, v4, v5}, Landroid/graphics/Canvas;->translate(FF)V
+
+    invoke-super {p0, p1}, Landroid/widget/Button;->onDraw(Landroid/graphics/Canvas;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    const/4 v4, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getGravity()I
+
+    move-result v4
+
+    and-int/lit8 v4, v4, 0x70
+
+    sparse-switch v4, :sswitch_data_0
+
+    goto :goto_1
+
+    :sswitch_0
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
+
+    move-result v4
+
+    sub-int/2addr v4, v1
+
+    div-int/lit8 v3, v4, 0x2
+
+    goto :goto_1
+
+    :sswitch_1
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getHeight()I
+
+    move-result v4
+
+    sub-int v3, v4, v1
+
+    goto :goto_1
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x10 -> :sswitch_0
+        0x50 -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -379,6 +513,70 @@
 
     .line 236
     return-void
+.end method
+
+.method protected onMeasure(II)V
+    .locals 5
+    .parameter "widthMeasureSpec"
+    .parameter "heightMeasureSpec"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    invoke-super {p0, p1, p2}, Landroid/widget/Button;->onMeasure(II)V
+
+    iget-object v0, p0, Landroid/widget/CompoundButton;->mButtonDrawable:Landroid/graphics/drawable/Drawable;
+
+    .local v0, buttonDrawable:Landroid/graphics/drawable/Drawable;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result v2
+
+    .local v2, widthMode:I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getMeasuredWidth()I
+
+    move-result v3
+
+    .local v3, widthSize:I
+    move v1, v3
+
+    .local v1, width:I
+    const/high16 v4, 0x4000
+
+    if-eq v2, v4, :cond_2
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    add-int v1, v3, v4
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getMeasuredHeight()I
+
+    move-result v4
+
+    invoke-virtual {p0, v1, v4}, Landroid/widget/CompoundButton;->setMeasuredDimension(II)V
+
+    goto :goto_0
 .end method
 
 .method public onRestoreInstanceState(Landroid/os/Parcelable;)V

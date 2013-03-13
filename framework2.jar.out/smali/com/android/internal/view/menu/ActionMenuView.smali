@@ -11,7 +11,8 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/android/internal/view/menu/ActionMenuView$LayoutParams;,
-        Lcom/android/internal/view/menu/ActionMenuView$ActionMenuChildView;
+        Lcom/android/internal/view/menu/ActionMenuView$ActionMenuChildView;,
+        Lcom/android/internal/view/menu/ActionMenuView$Injector;
     }
 .end annotation
 
@@ -2322,6 +2323,9 @@
     .parameter "top"
     .parameter "right"
     .parameter "bottom"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     .line 474
@@ -2641,6 +2645,18 @@
     move/from16 v3, v29
 
     invoke-virtual {v0, v11, v1, v2, v3}, Landroid/view/View;->layout(IIII)V
+
+    move-object/from16 v0, v25
+
+    move/from16 v1, p2
+
+    move/from16 v2, v24
+
+    move/from16 v3, p4
+
+    move/from16 v4, p5
+
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/android/internal/view/menu/ActionMenuView$Injector;->layout(Landroid/view/View;IIII)V
 
     goto/16 :goto_0
 

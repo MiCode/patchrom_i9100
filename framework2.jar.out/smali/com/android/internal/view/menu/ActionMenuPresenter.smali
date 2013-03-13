@@ -15,7 +15,8 @@
         Lcom/android/internal/view/menu/ActionMenuPresenter$ActionButtonSubmenu;,
         Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowPopup;,
         Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;,
-        Lcom/android/internal/view/menu/ActionMenuPresenter$SavedState;
+        Lcom/android/internal/view/menu/ActionMenuPresenter$SavedState;,
+        Lcom/android/internal/view/menu/ActionMenuPresenter$Injector;
     }
 .end annotation
 
@@ -1418,94 +1419,82 @@
     .locals 8
     .parameter "context"
     .parameter "menu"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     const/4 v7, 0x0
 
     const/4 v6, 0x0
 
-    .line 114
     invoke-super {p0, p1, p2}, Lcom/android/internal/view/menu/BaseMenuPresenter;->initForMenu(Landroid/content/Context;Lcom/android/internal/view/menu/MenuBuilder;)V
 
-    .line 118
     iget-boolean v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mIsParentThemeDeviceDefault:Z
 
     if-eqz v4, :cond_0
 
-    .line 119
     const v4, 0x1090101
 
     const v5, 0x1090100
 
     invoke-super {p0, v4, v5}, Lcom/android/internal/view/menu/BaseMenuPresenter;->setMenuLayoutRes(II)V
 
-    .line 124
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 126
     .local v1, res:Landroid/content/res/Resources;
     invoke-static {p1}, Lcom/android/internal/view/ActionBarPolicy;->get(Landroid/content/Context;)Lcom/android/internal/view/ActionBarPolicy;
 
     move-result-object v0
 
-    .line 127
     .local v0, abp:Lcom/android/internal/view/ActionBarPolicy;
     iget-boolean v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mReserveOverflowSet:Z
 
     if-nez v4, :cond_1
 
-    .line 128
-    invoke-virtual {v0}, Lcom/android/internal/view/ActionBarPolicy;->showsOverflowMenuButton()Z
+    invoke-static {v0}, Lcom/android/internal/view/menu/ActionMenuPresenter$Injector;->showsOverflowMenuButton(Lcom/android/internal/view/ActionBarPolicy;)Z
 
     move-result v4
 
     iput-boolean v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mReserveOverflow:Z
 
-    .line 138
     :cond_1
     iget-boolean v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mWidthLimitSet:Z
 
     if-nez v4, :cond_2
 
-    .line 139
     invoke-virtual {v0}, Lcom/android/internal/view/ActionBarPolicy;->getEmbeddedMenuWidthLimit()I
 
     move-result v4
 
     iput v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mWidthLimit:I
 
-    .line 143
     :cond_2
     iget-boolean v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mMaxItemsSet:Z
 
     if-nez v4, :cond_3
 
-    .line 144
     invoke-virtual {v0}, Lcom/android/internal/view/ActionBarPolicy;->getMaxActionButtons()I
 
     move-result v4
 
     iput v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mMaxItems:I
 
-    .line 147
     :cond_3
     iget v3, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mWidthLimit:I
 
-    .line 148
     .local v3, width:I
     iget-boolean v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mReserveOverflow:Z
 
     if-eqz v4, :cond_5
 
-    .line 149
     iget-object v4, p0, Lcom/android/internal/view/menu/ActionMenuPresenter;->mOverflowButton:Landroid/view/View;
 
     if-nez v4, :cond_4
 
-    .line 150
     new-instance v4, Lcom/android/internal/view/menu/ActionMenuPresenter$OverflowMenuButton;
 
     iget-object v5, p0, Lcom/android/internal/view/menu/BaseMenuPresenter;->mSystemContext:Landroid/content/Context;

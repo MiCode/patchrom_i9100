@@ -1,0 +1,11 @@
+diff a/framework.jar.out/smali/com/android/internal/telephony/cdma/SmsMessage.smali b/framework.jar.out/smali/com/android/internal/telephony/cdma/SmsMessage.smali	(rejected hunks)
+@@ -1147,7 +1147,8 @@
+     return-object v0
+ .end method
+ 
+-.method private static declared-synchronized getNextMessageId()I
++#TODO change access from private
++.method static declared-synchronized getNextMessageId()I
+     .locals 6
+ 
+     .prologue

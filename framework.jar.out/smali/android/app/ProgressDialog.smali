@@ -3,6 +3,14 @@
 .source "ProgressDialog.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/app/ProgressDialog$Injector;
+    }
+.end annotation
+
+
 # static fields
 .field public static final STYLE_HORIZONTAL:I = 0x1
 
@@ -494,6 +502,9 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 9
     .parameter "savedInstanceState"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     const v8, 0x102000d
@@ -729,7 +740,13 @@
     .line 169
     invoke-virtual {p0, v2}, Landroid/app/ProgressDialog;->setView(Landroid/view/View;)V
 
-    goto :goto_0
+    iget-object v3, p0, Landroid/app/ProgressDialog;->mContext:Landroid/content/Context;
+
+    iget-object v4, p0, Landroid/app/ProgressDialog;->mMessageView:Landroid/widget/TextView;
+
+    invoke-static {p0, v3, v4}, Landroid/app/ProgressDialog$Injector;->usingV5Style(Landroid/app/ProgressDialog;Landroid/content/Context;Landroid/widget/TextView;)V
+
+    goto/16 :goto_0
 .end method
 
 .method public onStart()V

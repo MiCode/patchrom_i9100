@@ -1,0 +1,10 @@
+diff a/services.jar.out/smali/com/android/server/am/BaseErrorDialog.smali b/services.jar.out/smali/com/android/server/am/BaseErrorDialog.smali	(rejected hunks)
+@@ -17,7 +17,7 @@
+     .prologue
+     const/high16 v2, 0x2
+ 
+-    const v0, 0x60d0020
++    const v0, 0x60d003e
+ 
+     invoke-direct {p0, p1, v0}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;I)V
+ 

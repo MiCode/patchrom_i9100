@@ -12,7 +12,8 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/graphics/drawable/AnimatedRotateDrawable$1;,
-        Landroid/graphics/drawable/AnimatedRotateDrawable$AnimatedRotateState;
+        Landroid/graphics/drawable/AnimatedRotateDrawable$AnimatedRotateState;,
+        Landroid/graphics/drawable/AnimatedRotateDrawable$Injector;
     }
 .end annotation
 
@@ -408,6 +409,10 @@
     .parameter "r"
     .parameter "parser"
     .parameter "attrs"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lorg/xmlpull/v1/XmlPullParserException;,
@@ -528,6 +533,14 @@
 
     invoke-virtual {v0, v14}, Landroid/graphics/drawable/AnimatedRotateDrawable;->setFramesDuration(I)V
 
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p1
+
+    move-object/from16 v2, p3
+
+    invoke-static {v0, v1, v2}, Landroid/graphics/drawable/AnimatedRotateDrawable$Injector;->init(Landroid/graphics/drawable/AnimatedRotateDrawable;Landroid/content/res/Resources;Landroid/util/AttributeSet;)V
+
     .line 239
     const/4 v14, 0x1
 
@@ -647,16 +660,14 @@
 
     move-result v6
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 233
     .restart local v6       #pivotX:F
     :cond_5
     const/4 v9, 0x0
 
-    goto :goto_2
+    goto/16 :goto_2
 
-    .line 234
     .restart local v9       #pivotYRel:Z
     :cond_6
     invoke-virtual {v12}, Landroid/util/TypedValue;->getFloat()F

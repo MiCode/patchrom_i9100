@@ -1922,6 +1922,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_5
 
     move-result-object v10
 
@@ -1933,18 +1934,15 @@
 
     if-ne v3, v12, :cond_1
 
-    .line 427
     .end local v10           #pkg:Ljava/lang/String;
     :cond_3
     if-eqz v4, :cond_4
 
-    .line 429
     :try_start_1
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_5
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
 
-    .line 434
     .end local v3           #eventType:I
     .end local v9           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .end local v11           #tagName:Ljava/lang/String;
@@ -1994,6 +1992,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_5
 
     move-result-object v7
 
@@ -2019,6 +2018,7 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_3 .. :try_end_3} :catch_5
 
     .line 404
     :try_start_4
@@ -2074,6 +2074,7 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_5 .. :try_end_5} :catch_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_5 .. :try_end_5} :catch_1
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_5 .. :try_end_5} :catch_5
 
     .line 411
     .end local v5           #lastResumeTime:J
@@ -2104,6 +2105,7 @@
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_6 .. :try_end_6} :catch_1
     .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_6 .. :try_end_6} :catch_5
 
     move-result v12
 
@@ -2209,35 +2211,74 @@
 
     goto/16 :goto_2
 
-    .line 430
     :catch_4
     move-exception v12
 
     goto/16 :goto_2
 
-    .line 427
     .end local v2           #e:Ljava/io/IOException;
+    :catch_5
+    move-exception v2
+
+    .local v2, e:Ljava/lang/IndexOutOfBoundsException;
+    :try_start_b
+    const-string v12, "UsageStats"
+
+    new-instance v13, Ljava/lang/StringBuilder;
+
+    invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v14, "Error reading history stats: "
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    invoke-virtual {v13, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
+
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v13
+
+    invoke-static {v12, v13}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_1
+
+    if-eqz v4, :cond_4
+
+    :try_start_c
+    invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
+    :try_end_c
+    .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_6
+
+    goto/16 :goto_2
+
+    :catch_6
+    move-exception v12
+
+    goto/16 :goto_2
+
+    .end local v2           #e:Ljava/lang/IndexOutOfBoundsException;
     :catchall_1
     move-exception v12
 
     if-eqz v4, :cond_8
 
-    .line 429
-    :try_start_b
+    :try_start_d
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
-    :try_end_b
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_6
+    :try_end_d
+    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_8
 
-    .line 431
     :cond_8
     :goto_3
     throw v12
 
-    .line 430
     .restart local v3       #eventType:I
     .restart local v9       #parser:Lorg/xmlpull/v1/XmlPullParser;
     .restart local v11       #tagName:Ljava/lang/String;
-    :catch_5
+    :catch_7
     move-exception v12
 
     goto/16 :goto_2
@@ -2245,7 +2286,7 @@
     .end local v3           #eventType:I
     .end local v9           #parser:Lorg/xmlpull/v1/XmlPullParser;
     .end local v11           #tagName:Ljava/lang/String;
-    :catch_6
+    :catch_8
     move-exception v13
 
     goto :goto_3

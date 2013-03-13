@@ -172,6 +172,9 @@
 .method public addPreference(Landroid/preference/Preference;)Z
     .locals 4
     .parameter "preference"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     const/4 v2, 0x1
@@ -255,51 +258,43 @@
 
     if-nez v1, :cond_4
 
-    .line 156
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 159
     :cond_4
     monitor-enter p0
 
-    .line 160
     :try_start_0
     iget-object v1, p0, Landroid/preference/PreferenceGroup;->mPreferenceList:Ljava/util/List;
 
     invoke-interface {v1, v0, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 161
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 163
     invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->getPreferenceManager()Landroid/preference/PreferenceManager;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Landroid/preference/Preference;->onAttachedToHierarchy(Landroid/preference/PreferenceManager;)V
 
-    .line 165
     iget-boolean v1, p0, Landroid/preference/PreferenceGroup;->mAttachedToActivity:Z
 
     if-eqz v1, :cond_5
 
-    .line 166
     invoke-virtual {p1}, Landroid/preference/Preference;->onAttachedToActivity()V
 
-    .line 169
     :cond_5
     invoke-virtual {p0}, Landroid/preference/PreferenceGroup;->notifyHierarchyChanged()V
 
+    invoke-virtual {p1, p0}, Landroid/preference/Preference;->setParent(Landroid/preference/PreferenceGroup;)V
+
     move v1, v2
 
-    .line 171
     goto :goto_0
 
-    .line 161
     :catchall_0
     move-exception v1
 

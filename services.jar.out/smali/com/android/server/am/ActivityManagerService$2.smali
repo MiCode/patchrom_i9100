@@ -180,6 +180,19 @@
 
     if-nez v4, :cond_3
 
+    # add miui ErrorDialog
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/android/server/am/ActivityManagerService$2;->this$0:Lcom/android/server/am/ActivityManagerService;
+
+    move-object/from16 v0, v26
+
+    invoke-static {v4, v0}, Lcom/android/server/am/ActivityManagerService$Injector;->showAppCrashDialog(Lcom/android/server/am/ActivityManagerService;Ljava/util/HashMap;)Z
+
+    move-result v4
+
+    if-nez v4, :goto_2
+
     .line 988
     new-instance v25, Lcom/android/server/am/AppErrorDialog;
 
@@ -222,13 +235,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 997
     if-eqz v24, :cond_2
+    if-nez v24, :cond_2
 
-    .line 998
     invoke-virtual/range {v24 .. v24}, Landroid/app/AlertDialog;->show()V
 
-    .line 1000
     :cond_2
     move-object/from16 v0, p0
 

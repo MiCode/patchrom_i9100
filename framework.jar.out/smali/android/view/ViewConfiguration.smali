@@ -3,6 +3,15 @@
 .source "ViewConfiguration.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/view/ViewConfiguration$1;,
+        Landroid/view/ViewConfiguration$Injector;
+    }
+.end annotation
+
+
 # static fields
 .field public static final ALPHA_THRESHOLD:F = 0.020833334f
 
@@ -210,6 +219,9 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 13
     .parameter "context"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     const/4 v8, 0x1
@@ -368,6 +380,10 @@
 
     float-to-int v10, v10
 
+    invoke-static {p1, v10}, Landroid/view/ViewConfiguration$Injector;->getOverScrollDistance(Landroid/content/Context;I)I
+
+    move-result v10
+
     iput v10, p0, Landroid/view/ViewConfiguration;->mOverscrollDistance:I
 
     .line 303
@@ -378,6 +394,10 @@
     add-float/2addr v10, v12
 
     float-to-int v10, v10
+
+    invoke-static {p1, v10}, Landroid/view/ViewConfiguration$Injector;->getOverFlingDistance(Landroid/content/Context;I)I
+
+    move-result v10
 
     iput v10, p0, Landroid/view/ViewConfiguration;->mOverflingDistance:I
 
@@ -480,59 +500,81 @@
     goto :goto_2
 .end method
 
-.method public static get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-    .locals 5
-    .parameter "context"
+.method synthetic constructor <init>(Landroid/content/Context;Landroid/view/ViewConfiguration$1;)V
+    .locals 0
+    .parameter "x0"
+    .parameter "x1"
 
     .prologue
-    .line 332
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-direct {p0, p1}, Landroid/view/ViewConfiguration;-><init>(Landroid/content/Context;)V
 
-    move-result-object v3
+    return-void
+.end method
 
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+.method public static get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    .locals 6
+    .parameter "context"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
-    move-result-object v2
-
-    .line 333
-    .local v2, metrics:Landroid/util/DisplayMetrics;
-    const/high16 v3, 0x42c8
-
-    iget v4, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v4
-
-    float-to-int v1, v3
-
-    .line 335
-    .local v1, density:I
-    sget-object v3, Landroid/view/ViewConfiguration;->sConfigurations:Landroid/util/SparseArray;
-
-    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    .prologue
+    invoke-static {p0}, Landroid/view/ViewConfiguration$Injector;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/ViewConfiguration;
+    .local v0, cfg:Landroid/view/ViewConfiguration;
+    if-eqz v0, :cond_0
 
-    .line 336
-    .local v0, configuration:Landroid/view/ViewConfiguration;
-    if-nez v0, :cond_0
-
-    .line 337
-    new-instance v0, Landroid/view/ViewConfiguration;
-
-    .end local v0           #configuration:Landroid/view/ViewConfiguration;
-    invoke-direct {v0, p0}, Landroid/view/ViewConfiguration;-><init>(Landroid/content/Context;)V
-
-    .line 338
-    .restart local v0       #configuration:Landroid/view/ViewConfiguration;
-    sget-object v3, Landroid/view/ViewConfiguration;->sConfigurations:Landroid/util/SparseArray;
-
-    invoke-virtual {v3, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 341
-    :cond_0
+    .end local v0           #cfg:Landroid/view/ViewConfiguration;
+    :goto_0
     return-object v0
+
+    .restart local v0       #cfg:Landroid/view/ViewConfiguration;
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    .local v3, metrics:Landroid/util/DisplayMetrics;
+    const/high16 v4, 0x42c8
+
+    iget v5, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v5
+
+    float-to-int v2, v4
+
+    .local v2, density:I
+    sget-object v4, Landroid/view/ViewConfiguration;->sConfigurations:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/ViewConfiguration;
+
+    .local v1, configuration:Landroid/view/ViewConfiguration;
+    if-nez v1, :cond_1
+
+    new-instance v1, Landroid/view/ViewConfiguration;
+
+    .end local v1           #configuration:Landroid/view/ViewConfiguration;
+    invoke-direct {v1, p0}, Landroid/view/ViewConfiguration;-><init>(Landroid/content/Context;)V
+
+    .restart local v1       #configuration:Landroid/view/ViewConfiguration;
+    sget-object v4, Landroid/view/ViewConfiguration;->sConfigurations:Landroid/util/SparseArray;
+
+    invoke-virtual {v4, v2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_1
+    move-object v0, v1
+
+    goto :goto_0
 .end method
 
 .method public static getDoubleTapSlop()I

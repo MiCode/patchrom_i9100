@@ -183,6 +183,9 @@
     .parameter "spanned"
     .parameter "start"
     .parameter "limit"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     .line 46
@@ -225,66 +228,67 @@
 
     iput-object v7, p0, Landroid/text/SpanSet;->spans:[Ljava/lang/Object;
 
-    .line 52
     new-array v7, v2, [I
 
     iput-object v7, p0, Landroid/text/SpanSet;->spanStarts:[I
 
-    .line 53
     new-array v7, v2, [I
 
     iput-object v7, p0, Landroid/text/SpanSet;->spanEnds:[I
 
-    .line 54
     new-array v7, v2, [I
 
     iput-object v7, p0, Landroid/text/SpanSet;->spanFlags:[I
 
-    .line 57
-    :cond_1
+    :goto_0
     const/4 v7, 0x0
 
     iput v7, p0, Landroid/text/SpanSet;->numberOfSpans:I
 
-    .line 58
     const/4 v1, 0x0
 
     .local v1, i:I
-    :goto_0
+    :goto_1
     if-ge v1, v2, :cond_3
 
-    .line 59
     aget-object v3, v0, v1
 
-    .line 61
     .local v3, span:Ljava/lang/Object;,"TE;"
     invoke-interface {p1, v3}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v6
 
-    .line 62
     .local v6, spanStart:I
     invoke-interface {p1, v3}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v4
 
-    .line 63
     .local v4, spanEnd:I
     if-ne v6, v4, :cond_2
 
-    .line 58
-    :goto_1
+    :goto_2
     add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    .end local v1           #i:I
+    .end local v3           #span:Ljava/lang/Object;,"TE;"
+    .end local v4           #spanEnd:I
+    .end local v6           #spanStart:I
+    :cond_1
+    invoke-virtual {p0}, Landroid/text/SpanSet;->recycle()V
 
     goto :goto_0
 
-    .line 65
+    .restart local v1       #i:I
+    .restart local v3       #span:Ljava/lang/Object;,"TE;"
+    .restart local v4       #spanEnd:I
+    .restart local v6       #spanStart:I
     :cond_2
     invoke-interface {p1, v3}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
 
     move-result v5
 
-    .line 67
     .local v5, spanFlag:I
     iget-object v7, p0, Landroid/text/SpanSet;->spans:[Ljava/lang/Object;
 
@@ -320,7 +324,7 @@
 
     iput v7, p0, Landroid/text/SpanSet;->numberOfSpans:I
 
-    goto :goto_1
+    goto :goto_2
 
     .line 74
     .end local v3           #span:Ljava/lang/Object;,"TE;"

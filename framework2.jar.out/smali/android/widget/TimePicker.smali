@@ -9,7 +9,8 @@
         Landroid/widget/TimePicker$TwTextWatcher;,
         Landroid/widget/TimePicker$TwKeyListener;,
         Landroid/widget/TimePicker$SavedState;,
-        Landroid/widget/TimePicker$OnTimeChangedListener;
+        Landroid/widget/TimePicker$OnTimeChangedListener;,
+        Landroid/widget/TimePicker$OnMinuteChangeListener;
     }
 .end annotation
 
@@ -802,6 +803,40 @@
     return-object v0
 .end method
 
+.method private changePositionState(Z)V
+    .locals 2
+    .parameter "is24HourView"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/TimePicker;->mMinuteSpinner:Landroid/widget/NumberPicker;
+
+    instance-of v0, v0, Lmiui/widget/NumberPicker;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/widget/TimePicker;->mMinuteSpinner:Landroid/widget/NumberPicker;
+
+    check-cast v0, Lmiui/widget/NumberPicker;
+
+    if-eqz p1, :cond_1
+
+    const/4 v1, 0x1
+
+    :goto_0
+    invoke-virtual {v0, v1}, Lmiui/widget/NumberPicker;->setPositionState(I)V
+
+    :cond_0
+    return-void
+
+    :cond_1
+    const/4 v1, 0x3
+
+    goto :goto_0
+.end method
+
 .method private onTimeChanged()V
     .locals 3
 
@@ -1341,6 +1376,30 @@
 
 
 # virtual methods
+.method callOnTimeChanged()V
+    .locals 0
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_CLASS:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    invoke-direct {p0}, Landroid/widget/TimePicker;->onTimeChanged()V
+
+    return-void
+.end method
+
+.method callUpdateInputState()V
+    .locals 0
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    invoke-direct {p0}, Landroid/widget/TimePicker;->updateInputState()V
+
+    return-void
+.end method
+
 .method public dispatchPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 1
     .parameter "event"
@@ -1884,6 +1943,9 @@
 .method public setIs24HourView(Ljava/lang/Boolean;)V
     .locals 3
     .parameter "is24HourView"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
 
     .prologue
     .line 497
@@ -1906,6 +1968,12 @@
     move-result v1
 
     iput-boolean v1, p0, Landroid/widget/TimePicker;->mIs24HourView:Z
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v1
+
+    invoke-direct {p0, v1}, Landroid/widget/TimePicker;->changePositionState(Z)V
 
     .line 502
     invoke-virtual {p0}, Landroid/widget/TimePicker;->getCurrentHour()Ljava/lang/Integer;

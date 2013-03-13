@@ -6,7 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/internal/widget/LockSettingsService$DatabaseHelper;
+        Lcom/android/internal/widget/LockSettingsService$DatabaseHelper;,
+        Lcom/android/internal/widget/LockSettingsService$Injector;
     }
 .end annotation
 
@@ -1210,6 +1211,10 @@
     .locals 9
     .parameter "hash"
     .parameter "userId"
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->CHANGE_CODE:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/os/RemoteException;
@@ -1273,7 +1278,11 @@
     .restart local v3       #raf:Ljava/io/RandomAccessFile;
     .restart local v4       #stored:[B
     :cond_0
-    invoke-static {v4, p1}, Ljava/util/Arrays;->equals([B[B)Z
+    invoke-static {v4, p1}, Lcom/android/internal/widget/LockSettingsService$Injector;->passwordToHash([B[B)[B
+
+    move-result-object v6
+
+    invoke-static {v4, v6}, Ljava/util/Arrays;->equals([B[B)Z
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
