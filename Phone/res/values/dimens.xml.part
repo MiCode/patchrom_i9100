@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="incall_vertical_sliding_panel_initial_height">200.0dip</dimen>
+</resources>

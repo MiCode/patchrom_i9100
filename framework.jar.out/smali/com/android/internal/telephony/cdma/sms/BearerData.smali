@@ -291,18 +291,6 @@
     .end annotation
 .end field
 
-#TODO added
-.field public serviceCategoryProgramResults:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/telephony/cdma/CdmaSmsCbProgramResults;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 .field public sessionId:I
 
 .field public sessionSeq:I

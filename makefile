@@ -1,25 +1,25 @@
 #
-# Makefile for gnote
+# Makefile for i9100
 #
 
 # The original zip file, MUST be specified by each product
 local-zip-file     := stockrom.zip
 
 # The output zip file of MIUI rom, the default is porting_miui.zip if not specified
-local-out-zip-file := MIUI_i9300.zip
+local-out-zip-file := MIUI_i9100.zip
 
 # the location for local-ota to save target-file
-local-previous-target-dir := ~/workspace/ota_base/i9300_4.1
+local-previous-target-dir := ~/workspace/ota_base/i9100_4.1
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := OriginalSettings Camera
+# local-modified-apps := OriginalSettings Camera
 
 local-modified-jars :=
 
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider Stk
 
-local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager MiuiSystemUI
+local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
 
 include phoneapps.mk
 
@@ -41,8 +41,8 @@ pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
-	cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
-	cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
+	#cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
+	#cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
 	rm -rf $(ZIP_DIR)/system/csc
 	rm -rf $(pre_install_data_packages)
 	for apk in $(ZIP_DIR)/data/media/preinstall_apps/*.apk; do\
