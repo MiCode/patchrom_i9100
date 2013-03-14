@@ -1292,13 +1292,13 @@
     .local v1, lp:Landroid/view/ViewGroup$LayoutParams;
     iget v3, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_2
 
     iget v3, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    if-nez v3, :cond_1
+    if-nez v3, :cond_3
 
-    :cond_0
+    :cond_2
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     #getter for: Lcom/android/internal/app/ResolverActivity;->mIconSize:I
@@ -1313,6 +1313,7 @@
     .line 760
     .end local v0           #icon:Landroid/widget/ImageView;
     .end local v1           #lp:Landroid/view/ViewGroup$LayoutParams;
+    :cond_3
     :goto_1
     iget-object v3, p0, Lcom/android/internal/app/ResolverActivity$ResolveListAdapter;->mList:Ljava/util/List;
 

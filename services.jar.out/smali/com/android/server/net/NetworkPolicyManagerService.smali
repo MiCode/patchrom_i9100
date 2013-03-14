@@ -1488,9 +1488,6 @@
     .line 746
     .restart local v14       #title:Ljava/lang/CharSequence;
     :goto_2
-    const/4 v1, 0x1
-
-    invoke-virtual {v8, v1}, Landroid/app/Notification$Builder;->setOngoing(Z)Landroid/app/Notification$Builder;
 
     .line 747
     const v1, 0x10806aa

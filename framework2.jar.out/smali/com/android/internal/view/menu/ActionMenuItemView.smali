@@ -1318,6 +1318,16 @@
     .parameter "heightMeasureSpec"
 
     .prologue
+
+    invoke-virtual/range {p0 .. p2}, Lcom/android/internal/view/menu/ActionMenuItemView;->miuiOnMeasure(II)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_ff
+
+    return-void
+
+    :cond_ff
     .line 360
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/view/menu/ActionMenuItemView;->getRootView()Landroid/view/View;
 

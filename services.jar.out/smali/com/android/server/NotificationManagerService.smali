@@ -5061,43 +5061,43 @@
     invoke-virtual {v5}, Lcom/android/server/NotificationManagerService$OverTurnPlayer;->register()V
 
     .line 1286
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/server/NotificationManagerService;->mNotificationPlayerBinder:Landroid/os/IBinder;
+    #iget-object v5, v0, Lcom/android/server/NotificationManagerService;->mNotificationPlayerBinder:Landroid/os/IBinder;
 
-    if-nez v5, :cond_13
+    #if-nez v5, :cond_13
 
-    .line 1287
-    new-instance v5, Lcom/android/server/NotificationManagerService$3;
+    #.line 1287
+    #new-instance v5, Lcom/android/server/NotificationManagerService$3;
 
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    invoke-direct {v5, v0}, Lcom/android/server/NotificationManagerService$3;-><init>(Lcom/android/server/NotificationManagerService;)V
+    #invoke-direct {v5, v0}, Lcom/android/server/NotificationManagerService$3;-><init>(Lcom/android/server/NotificationManagerService;)V
 
-    move-object/from16 v0, v31
+    #move-object/from16 v0, v31
 
-    invoke-interface {v0, v5}, Landroid/media/IRingtonePlayer;->setOnCompletionListener(Landroid/app/INotificationPlayerOnCompletionListener;)Landroid/os/IBinder;
+    #invoke-interface {v0, v5}, Landroid/media/IRingtonePlayer;->setOnCompletionListener(Landroid/app/INotificationPlayerOnCompletionListener;)Landroid/os/IBinder;
 
-    move-result-object v5
+    #move-result-object v5
 
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    iput-object v5, v0, Lcom/android/server/NotificationManagerService;->mNotificationPlayerBinder:Landroid/os/IBinder;
+    #iput-object v5, v0, Lcom/android/server/NotificationManagerService;->mNotificationPlayerBinder:Landroid/os/IBinder;
 
-    .line 1295
-    move-object/from16 v0, p0
+    #.line 1295
+    #move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/android/server/NotificationManagerService;->mNotificationPlayerBinder:Landroid/os/IBinder;
+    #iget-object v5, v0, Lcom/android/server/NotificationManagerService;->mNotificationPlayerBinder:Landroid/os/IBinder;
 
-    new-instance v6, Lcom/android/server/NotificationManagerService$4;
+    #new-instance v6, Lcom/android/server/NotificationManagerService$4;
 
-    move-object/from16 v0, p0
+    #move-object/from16 v0, p0
 
-    invoke-direct {v6, v0}, Lcom/android/server/NotificationManagerService$4;-><init>(Lcom/android/server/NotificationManagerService;)V
+    #invoke-direct {v6, v0}, Lcom/android/server/NotificationManagerService$4;-><init>(Lcom/android/server/NotificationManagerService;)V
 
-    const/4 v7, 0x0
+    #const/4 v7, 0x0
 
-    invoke-interface {v5, v6, v7}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
+    #invoke-interface {v5, v6, v7}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_5
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_0

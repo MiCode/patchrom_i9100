@@ -1080,6 +1080,17 @@
 
     .line 932
     :cond_13
+
+    iget-object v1, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    iget-object v2, p1, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v1, v2}, Lmiui/content/res/ExtraConfiguration;->diff(Lmiui/content/res/ExtraConfiguration;)I
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
     return v0
 .end method
 
@@ -1296,21 +1307,30 @@
 
     add-int v0, v1, v2
 
-    .line 1206
-    iget-object v1, p0, Landroid/content/res/Configuration;->centerBarRect:Landroid/graphics/Rect;
+    #.line 1206
+    #iget-object v1, p0, Landroid/content/res/Configuration;->centerBarRect:Landroid/graphics/Rect;
 
-    if-eqz v1, :cond_0
+    #if-eqz v1, :cond_0
 
-    .line 1208
-    mul-int/lit8 v1, v0, 0x1f
+    #.line 1208
+    #mul-int/lit8 v1, v0, 0x1f
 
-    iget-object v2, p0, Landroid/content/res/Configuration;->centerBarRect:Landroid/graphics/Rect;
+    #iget-object v2, p0, Landroid/content/res/Configuration;->centerBarRect:Landroid/graphics/Rect;
 
-    invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
+    #invoke-virtual {v2}, Landroid/graphics/Rect;->hashCode()I
 
-    move-result v2
+    #move-result v2
 
-    add-int v0, v1, v2
+    #add-int v0, v1, v2
+
+    iget-object v1, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v1}, Lmiui/content/res/ExtraConfiguration;->hashCode()I
+
+    move-result v1
+
+    #add-int/2addr v1, v0
+    add-int/2addr v0, v1
 
     .line 1214
     :cond_0
@@ -1622,6 +1642,10 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->arrange:I
 
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v0, p1}, Lmiui/content/res/ExtraConfiguration;->readFromParcel(Landroid/os/Parcel;)V
+
     .line 1071
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -1796,6 +1820,11 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->arrange:I
 
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    iget-object v1, p1, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v0, v1}, Lmiui/content/res/ExtraConfiguration;->setTo(Lmiui/content/res/ExtraConfiguration;)V
     .line 505
     iget-object v0, p1, Landroid/content/res/Configuration;->centerBarRect:Landroid/graphics/Rect;
 
@@ -1894,6 +1923,10 @@
     sget v0, Landroid/content/res/Configuration;->sArrangeMode:I
 
     iput v0, p0, Landroid/content/res/Configuration;->arrange:I
+
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v0}, Lmiui/content/res/ExtraConfiguration;->setToDefaults()V
 
     .line 673
     sget-object v0, Landroid/content/res/Configuration;->sDefaultCenterBarRect:Landroid/graphics/Rect;
@@ -2279,6 +2312,15 @@
 
     .line 641
     :cond_1
+
+    iget-object v1, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v1}, Lmiui/content/res/ExtraConfiguration;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     const/16 v1, 0x7d
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
@@ -3261,6 +3303,17 @@
 
     .line 809
     :cond_19
+
+    iget-object v1, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    iget-object v2, p1, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v1, v2}, Lmiui/content/res/ExtraConfiguration;->updateFrom(Lmiui/content/res/ExtraConfiguration;)I
+
+    move-result v1
+
+    or-int/2addr v0, v1
+
     iget-object v1, p1, Landroid/content/res/Configuration;->centerBarRect:Landroid/graphics/Rect;
 
     if-eqz v1, :cond_1a
@@ -3449,6 +3502,10 @@
     iget v0, p0, Landroid/content/res/Configuration;->arrange:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object v0, p0, Landroid/content/res/Configuration;->extraConfig:Lmiui/content/res/ExtraConfiguration;
+
+    invoke-virtual {v0, p1, p2}, Lmiui/content/res/ExtraConfiguration;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 1030
     iget-object v0, p0, Landroid/content/res/Configuration;->centerBarRect:Landroid/graphics/Rect;

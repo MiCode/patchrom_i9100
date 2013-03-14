@@ -4964,7 +4964,13 @@
     if-eqz v19, :cond_26
 
     .line 3045
-    const v10, 0x10900d4
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getContext()Landroid/content/Context;
+
+    move-result-object v19
+
+    invoke-static/range {v19 .. v19}, Lcom/android/internal/policy/impl/PhoneWindow$Injector;->getActionBarOverlayResourceId(Landroid/content/Context;)I
+
+    move-result v10
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8
@@ -4972,7 +4978,13 @@
     .line 3047
     .end local v10           #layoutResource:I
     :cond_26
-    const v10, 0x10900d3
+    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindow;->getContext()Landroid/content/Context;
+
+    move-result-object v19
+
+    invoke-static/range {v19 .. v19}, Lcom/android/internal/policy/impl/PhoneWindow$Injector;->getActionBarResourceId(Landroid/content/Context;)I
+
+    move-result v10
 
     .restart local v10       #layoutResource:I
     goto/16 :goto_8

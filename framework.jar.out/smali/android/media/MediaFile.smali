@@ -395,6 +395,8 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
+    :cond_miui_1
+
     .line 300
     invoke-static {}, Landroid/media/MediaFile;->isQCPEnabled()Z
 

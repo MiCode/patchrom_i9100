@@ -335,6 +335,11 @@
 
     iput v0, v1, Landroid/widget/NumberPicker;->mScrollState:I
 
+
+    move-object/from16 v1, p0
+
+    iput-boolean v0, v1, Landroid/widget/NumberPicker;->mIsV5:Z
+
     .line 555
     sget-object v17, Lcom/android/internal/R$styleable;->NumberPicker:[I
 

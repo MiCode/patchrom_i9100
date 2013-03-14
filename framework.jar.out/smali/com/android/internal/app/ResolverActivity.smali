@@ -510,7 +510,7 @@
     .prologue
     .line 138
     .local p5, rList:Ljava/util/List;,"Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
-    const v2, 0x103031e
+    const v2, 0x60d003e
 
     move-object/from16 v0, p0
 
@@ -556,14 +556,7 @@
 
     iput-boolean v0, v1, Lcom/android/internal/app/ResolverActivity;->mAlwaysUseOption:Z
 
-    .line 148
-    invoke-virtual/range {p0 .. p0}, Lcom/android/internal/app/ResolverActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x10e0035
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/app/ResolverActivity$Injector;->getMaxColumns(Lcom/android/internal/app/ResolverActivity;)I
 
     move-result v2
 
@@ -627,7 +620,7 @@
     if-lt v2, v3, :cond_3
 
     .line 160
-    const v2, 0x103031e
+    const v2, 0x60d003e
 
     move-object/from16 v0, p0
 
@@ -797,7 +790,7 @@
 
     .line 162
     :cond_3
-    const v2, 0x103031d
+    const v2, 0x60d003e
 
     move-object/from16 v0, p0
 
@@ -950,6 +943,12 @@
 
     .line 220
     if-eqz p6, :cond_7
+
+    invoke-static/range {p0 .. p0}, Lmiui/util/UiUtils;->isV5Ui(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
 
     .line 221
     const v2, 0x102029d

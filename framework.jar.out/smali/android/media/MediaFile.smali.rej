@@ -1,9 +1,0 @@
-diff a/framework.jar.out/smali/android/media/MediaFile.smali b/framework.jar.out/smali/android/media/MediaFile.smali	(rejected hunks)
-@@ -365,6 +376,7 @@
-     const v3, 0xb901
- 
-     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
-+    :cond_miui_1
- 
-     const-string v0, "QCP"
- 

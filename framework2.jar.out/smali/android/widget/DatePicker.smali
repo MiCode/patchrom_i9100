@@ -444,6 +444,16 @@
 
     .line 249
     .local v14, onChangeListener:Landroid/widget/NumberPicker$OnValueChangeListener;
+
+    new-instance v14, Landroid/widget/DatePicker$OnDateChangeListener;
+
+    .end local v14           #onChangeListener:Landroid/widget/NumberPicker$OnValueChangeListener;
+    move-object/from16 v0, p0
+
+    invoke-direct {v14, v0}, Landroid/widget/DatePicker$OnDateChangeListener;-><init>(Landroid/widget/DatePicker;)V
+
+    .restart local v14       #onChangeListener:Landroid/widget/NumberPicker$OnValueChangeListener;
+
     const v17, 0x102029f
 
     move-object/from16 v0, p0
