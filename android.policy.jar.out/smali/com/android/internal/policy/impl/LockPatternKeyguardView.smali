@@ -119,7 +119,7 @@
 
 .field private mStorageManager:Landroid/os/storage/StorageManager;
 
-.field private mSuppressBiometricUnlock:Z
+.field protected mSuppressBiometricUnlock:Z
 
 .field private mTransportControlView:Lcom/android/internal/widget/TransportControlView;
 
