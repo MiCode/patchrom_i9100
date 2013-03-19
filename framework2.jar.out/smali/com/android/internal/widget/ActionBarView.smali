@@ -1146,6 +1146,11 @@
 
     const/4 v9, 0x0
 
+    invoke-virtual {p0}, Lcom/android/internal/widget/ActionBarView;->miuiInitTitle()Z
+    move-result v7
+    if-nez v7, :cond_7
+
+
     .line 878
     iget-object v7, p0, Lcom/android/internal/widget/ActionBarView;->mTitleLayout:Landroid/view/ViewGroup;
 
@@ -5753,7 +5758,10 @@
     move v12, v9
 
     :goto_8
+    if-eqz v13, :cond_miui_1
     invoke-virtual {v13, v12}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_miui_1
 
     .line 695
     iget-boolean v12, p0, Lcom/android/internal/widget/ActionBarView;->mIsParentThemeDeviceDefault:Z
