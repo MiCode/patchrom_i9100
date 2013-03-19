@@ -13,38 +13,28 @@ private-phone-apps := ApplicationsProvider \
 					  Divx \
 					  EdmVpnServices \
 					  FaceLock \
-					  FactoryTest \
 					  FmRadio \
 					  KeyChain \
 					  LogsProvider \
 					  MediaUploader \
 					  MusicFX \
 					  MtpApplication \
-					  Nfc \
-					  NfcTest \
 					  OmaCP \
 					  PCWClientS \
 					  PRUI \
-					  PanningTryActually \
-					  Personalization \
 					  PhoneErrService \
 					  PopupuiReceiver \
 					  Preconfig \
 					  PreloadInstaller \
 					  SamsungTTS \
 					  SecMediaProvider \
-					  SecHTMLViewer \
-					  SecLiveWallpapersPicker \
 					  SecurityProvider \
-					  SelfTestMode \
 					  Stk \
 					  UserDictionaryProvider \
 					  VpnDialogs \
-					  VideoPlayer \
 					  WAPPushManager \
 					  WlanTest \
 					  minimode-res \
-					  serviceModeApp \
 					  wssyncmlnps
 
 private-lockscreen-apps := PickUpTutorial \
@@ -60,7 +50,6 @@ private-phone-apps2 :=  AllshareDMC \
 						CertInstaller \
 						ChromeBookmarksSyncAdapter \
 						ContextAwareService \
-						CWMManager \
 						DeepSea \
 						DirectShareManager \
 						DrmProvider \
@@ -77,7 +66,6 @@ private-phone-apps2 :=  AllshareDMC \
 						OmaCP \
 						OmaDrmPopup \
 						PackageInstaller \
-						PanningTryActually \
 						PCWClientS \
 						PhaseBeam \
 						PRUI \
