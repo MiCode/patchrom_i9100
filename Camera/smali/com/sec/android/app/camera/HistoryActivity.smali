@@ -545,9 +545,9 @@
     .local v0, intent:Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
-    const-string v2, "com.sec.android.gallery3d"
+    const-string v2, "com.miui.gallery"
 
-    const-string v3, "com.sec.android.gallery3d.app.Gallery"
+    const-string v3, "com.miui.gallery.app.Gallery"
 
     invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 

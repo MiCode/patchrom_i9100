@@ -5059,9 +5059,9 @@
 
     .line 707
     .local v0, intent:Landroid/content/Intent;
-    const-string v1, "com.sec.android.gallery3d"
+    const-string v1, "com.miui.gallery"
 
-    const-string v2, "com.sec.android.gallery3d.app.Gallery"
+    const-string v2, "com.miui.gallery.app.Gallery"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 

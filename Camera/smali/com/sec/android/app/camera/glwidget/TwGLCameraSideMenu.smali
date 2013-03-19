@@ -2273,7 +2273,7 @@
 
     .line 593
     .local v2, pm:Landroid/content/pm/PackageManager;
-    const-string v3, "com.sec.android.gallery3d"
+    const-string v3, "com.miui.gallery"
 
     invoke-virtual {v2, v3}, Landroid/content/pm/PackageManager;->getApplicationEnabledSetting(Ljava/lang/String;)I
 
@@ -2324,7 +2324,7 @@
     .line 599
     const-string v3, "app_package_name"
 
-    const-string v6, "com.sec.android.gallery3d"
+    const-string v6, "com.miui.gallery"
 
     invoke-virtual {v1, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
