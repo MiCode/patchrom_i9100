@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="maximum_user_dictionary_word_length">48</integer>
+</resources>

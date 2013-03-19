@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/led_indicator_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <CheckBoxPreference android:title="@string/led_indicator_charging" android:key="led_indicator_charging_key" android:summary="@string/led_indicator_charging_summary" />
+    <CheckBoxPreference android:title="@string/led_indicator_low_battery" android:key="led_indicator_low_battery_key" android:summary="@string/led_indicator_low_battery_summary" />
+    <CheckBoxPreference android:title="@string/led_indicator_notifications" android:key="led_indicator_missed_event_key" android:summary="@string/led_indicator_notifications_summary" />
+    <CheckBoxPreference android:title="@string/led_indicator_voice_recording" android:key="led_indicator_voice_recording_key" android:summary="@string/led_indicator_voice_recording_summary" android:dependency="led_indicator_missed_event_key" />
+    <CheckBoxPreference android:title="@string/led_indicator_incoming_notification" android:key="led_indicator_incoming_notification_key" android:summary="@string/led_indicator_incoming_notification_summary" />
+</PreferenceScreen>

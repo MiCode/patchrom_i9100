@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/air_motion_tutorial_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/air_glance_view" android:key="air_motion_glance_view" android:summary="@string/air_glance_view_descption" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/air_glance_view" />
+    </Preference>
+    <Preference android:title="@string/air_web_navigate" android:key="air_motion_web_navigate" android:summary="@string/air_web_navigate_descption" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/air_web_navigate" />
+    </Preference>
+    <Preference android:title="@string/air_note_swap_title" android:key="air_motion_note_swap" android:summary="@string/air_note_swap_descciption" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/air_note_swap_title" />
+    </Preference>
+    <Preference android:title="@string/air_scroll_title" android:key="air_motion_scroll" android:summary="@string/air_scroll_descripption" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/air_scroll_title" />
+    </Preference>
+    <Preference android:title="@string/air_item_move_title" android:key="air_motion_item_move" android:summary="@string/air_item_move_descption" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/air_item_move_title" />
+    </Preference>
+    <Preference android:title="@string/air_clip_title" android:key="air_motion_clip" android:summary="@string/air_clip_descption" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/air_clip_title" />
+    </Preference>
+    <Preference android:title="@string/air_call_accept" android:key="air_call_accept" android:summary="@string/air_call_accept_descption" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/air_call_accept" />
+    </Preference>
+</PreferenceScreen>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/hovering_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="@string/hovering_pointer" android:key="hovering_pointer" android:summary="@string/hovering_pointer_msg" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/hovering_information_preview" android:key="hovering_information_preview" android:summary="@string/hovering_intormation_preview_msg" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/hovering_icon_label" android:key="hovering_icon_label" android:summary="@string/hovering_icon_label_msg" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/hovering_list_scroll" android:key="hovering_list_scroll" android:summary="@string/hovering_list_scroll_msg" />
+</PreferenceScreen>

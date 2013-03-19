@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffd7d7d7" android:id="@id/bright_adjustment_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="20.0dip" android:text="@string/bright_adjustment_panel_title" android:layout_alignParentTop="true" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0dip" android:textColor="#ff898989" android:id="@id/bright_adjustment_header_summary" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/bright_adjustment_panel_summary" android:singleLine="false" android:layout_below="@id/bright_adjustment_header_title" />
+            <CheckBox android:id="@id/bright_adjust_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <View android:background="#ff464646" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffd7d7d7" android:id="@id/bright_adjustment_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="20.0dip" android:text="@string/set_quick_setting_button_title" android:layout_alignParentTop="true" />
+            <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="16.0dip" android:textColor="#ff898989" android:id="@id/bright_adjustment_header_summary" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/set_quick_setting_button_summary" android:singleLine="false" android:layout_below="@id/bright_adjustment_header_title" />
+        </LinearLayout>
+        <TextView android:textSize="16.0dip" android:textColor="#ffd2d2d2" android:gravity="center_vertical" android:orientation="vertical" android:id="@id/notificiation_category_name" android:background="@drawable/tw_list_section_divider_holo_dark" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="25.0dip" android:text="@string/notification_panel_title" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/main_layout2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="16.0dip" android:textColor="#ffd2d2d2" android:gravity="center_vertical" android:orientation="vertical" android:id="@id/category_name" android:background="@drawable/tw_list_section_divider_holo_dark" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="25.0dip" android:text="@string/availablebutton_category" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/main_layout3" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/main_layout4" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/air_turn_setting_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:persistent="false" android:title="@string/air_turn_single_photo_view_title" android:key="single_photo_view" android:summary="@string/air_turn_single_photo_view_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/air_turn_internet_window_title" android:key="internet_window" android:summary="@string/air_turn_internet_window_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/air_turn_now_playing_on_music_title" android:key="now_playing_on_music" android:summary="@string/air_turn_now_playing_on_music_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/air_turn_bgm_on_lock_screen_title" android:key="bgm_on_lock_screen" android:summary="@string/air_turn_bgm_on_lock_screen_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/air_turn_note_page_view_title" android:key="note_page_view" android:summary="@string/air_turn_note_page_view_summary" />
+</PreferenceScreen>

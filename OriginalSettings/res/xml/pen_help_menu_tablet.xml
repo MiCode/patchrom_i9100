@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/pen_help_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/pen_help_hovering" android:key="pen_help_hovering" android:fragment="com.android.settings.PenHelpFragment">
+        <extra android:name="pen_help_menu" android:value="hovering" />
+    </Preference>
+    <Preference android:title="@string/pen_help_gesture" android:key="pen_help_gesture" android:fragment="com.android.settings.PenHelpFragment">
+        <extra android:name="pen_help_menu" android:value="gesture" />
+    </Preference>
+    <Preference android:title="@string/pen_help_quick_command" android:key="pen_help_quick_command" android:fragment="com.android.settings.PenHelpFragment">
+        <extra android:name="pen_help_menu" android:value="quickcommand" />
+    </Preference>
+</PreferenceScreen>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="@string/alert_message" android:key="message_preference" android:summary="@string/default_sms_message" android:inputType="textCapSentences" />
+</PreferenceScreen>

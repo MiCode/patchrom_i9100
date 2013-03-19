@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="4.0dip" android:layout_height="94.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/cursor_panel_position" android:layout_width="6.0dip" android:layout_height="94.0dip" android:scaleType="fitXY"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

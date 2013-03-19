@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="#ffd7d7d7" android:gravity="top" android:id="@id/s_beam_explained" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="11.0dip" android:layout_marginRight="12.0dip" android:text="@string/s_beam_explained" />
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/s_beam_image" android:layout_width="288.0dip" android:layout_height="198.0dip" android:layout_marginTop="39.0dip" />
+    </LinearLayout>
+</ScrollView>

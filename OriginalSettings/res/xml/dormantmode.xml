@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:key="dormant_mode_help" />
+    <PreferenceCategory android:title="@string/features_category_title" android:key="feature_category">
+        <CheckBoxPreference android:title="@string/disable_incoming_calls_title" android:key="disable_incoming_calls" />
+        <CheckBoxPreference android:title="@string/disable_notifications_title" android:key="disable_notifications" />
+        <CheckBoxPreference android:title="@string/disable_alarm_and_timer_title" android:key="disable_alarm_and_timer" />
+        <CheckBoxPreference android:title="@string/disable_led_indicator_title" android:key="disable_led_indicator" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/set_time_category_title" android:key="set_time_category">
+        <CheckBoxPreference android:title="@string/always_title" android:key="always" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/allowed_contacts_title" android:key="allowed_contacts_category">
+        <ListPreference android:entries="@array/allow_list_entries" android:title="@string/allowed_contacts_title" android:key="allowed_contacts" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/allow_list_value" />
+        <Preference android:title="@string/allowed_list" android:key="allowed_list" android:fragment="com.android.settings.dormantmode.DormantModeCustomList" />
+    </PreferenceCategory>
+</PreferenceScreen>

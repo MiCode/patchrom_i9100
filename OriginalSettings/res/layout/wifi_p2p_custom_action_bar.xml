@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="48.0dip">
+        <View android:layout_gravity="center_vertical" android:background="?android:dividerVertical" android:layout_width="1.0dip" android:layout_height="29.0dip" />
+        <LinearLayout android:layout_gravity="center_vertical" android:id="@id/revert_menu_item" android:background="@drawable/tw_common_list_item_background" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?android:attr/actionBarStyle">
+            <ImageView android:description="@string/wifi_cancel" android:layout_gravity="center_vertical" android:id="@id/icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/header_btn_icon_cancel" android:adjustViewBounds="true" />
+            <TextView android:textSize="17.0dip" android:textColor="@color/action_bar_button_text_color" android:layout_gravity="center_vertical" android:id="@id/revert_menu_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:text="@string/wifi_cancel" />
+        </LinearLayout>
+        <View android:layout_gravity="center_vertical" android:background="?android:dividerVertical" android:layout_width="1.0dip" android:layout_height="29.0dip" />
+        <LinearLayout android:layout_gravity="center_vertical" android:id="@id/save_menu_item" android:background="@drawable/tw_common_list_item_background" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?android:attr/actionBarStyle">
+            <ImageView android:description="@string/motion_tutorial_done_btn" android:layout_gravity="center_vertical" android:id="@id/icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/header_btn_icon_check" android:adjustViewBounds="true" />
+            <TextView android:textSize="17.0dip" android:textColor="@color/action_bar_button_text_color" android:layout_gravity="center_vertical" android:id="@id/save_menu_text" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:text="@string/motion_tutorial_done_btn" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

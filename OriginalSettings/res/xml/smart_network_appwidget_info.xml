@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:minWidth="@dimen/appwidget_smart_network_min_width" android:minHeight="@dimen/appwidget_smart_network_min_height" android:updatePeriodMillis="0" android:initialLayout="@layout/smart_network_appwidget" android:previewImage="@drawable/appwidget_smart_network_preview"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/dualclock_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/set_home_city" android:key="homecity_timezone" android:summary="GMT-8:00" />
+</PreferenceScreen>

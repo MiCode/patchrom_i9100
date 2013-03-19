@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:touchwiz="http://schemas.android.com/apk/res/com.android.settings">
+    <com.sec.android.touchwiz.widget.TwTouchPunchView android:id="@id/guide_punch" android:layout_width="@dimen/guide_switcher_width" android:layout_height="@dimen/guide_switcher_height" android:layout_marginTop="@dimen/guide_wifi_switcher_step_1_port_margin_top" android:layout_marginRight="@dimen/guide_wifi_switcher_step_1_port_margin_right" android:layout_alignParentTop="true" android:layout_alignParentRight="true" touchwiz:punchshape="rectangle" touchwiz:punchshow="false" />
+    <ImageView android:id="@id/guide_hand_pointer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/guide_wifi_pointer_step_1_port_margin_top" android:layout_marginRight="@dimen/guide_wifi_pointer_step_1_port_margin_right" android:src="@drawable/step_by_step_hand_01_w" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/content_description_hand" />
+    <TextView android:id="@id/guide_bubble_summary" android:background="@drawable/step_bubble_02" android:layout_marginTop="@dimen/guide_arrow_up_bubble_margin_top" android:layout_marginRight="@dimen/guide_arrow_up_bubble_margin_pointer_right" android:text="@string/guide_tap_area" android:layout_below="@id/guide_hand_pointer" android:layout_alignRight="@id/guide_hand_pointer" style="@style/GuideArrowBubbleText.Up" />
+</RelativeLayout>

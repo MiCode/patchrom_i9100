@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@android:id/list" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <ImageView android:background="?android:dividerHorizontal" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <FrameLayout android:orientation="vertical" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@id/empty_screen_portrait" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="126.0dip" android:layout_height="126.0dip" android:layout_marginTop="140.0dip" android:src="@drawable/noitem_tethering" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="19.0dip" android:textColor="#ff6e6e6e" android:ellipsize="marquee" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/wifi_ap_no_devices" android:singleLine="true" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/empty_template_port" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="55.0dip" android:layout_weight="1.0">
+                <RelativeLayout android:id="@id/empty_template_port2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/emptyTemplateIcon_port" android:layout_width="65.0dip" android:layout_height="35.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/noitem_description" android:layout_alignParentTop="true" />
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0dip" android:textColor="#ff6e6e6e" android:ellipsize="marquee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/wifi_ap_allowed_list_empty" android:layout_toRightOf="@id/emptyTemplateIcon_port" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/empty_screen_landscape" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:layout_width="126.0dip" android:layout_height="126.0dip" android:layout_marginLeft="50.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="50.0dip" android:src="@drawable/noitem_tethering" />
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="19.0dip" android:textColor="#ff6e6e6e" android:ellipsize="marquee" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/wifi_ap_no_devices" android:singleLine="true" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/empty_template_land" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <RelativeLayout android:id="@id/empty_template_land2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="100.0dip" android:layout_marginRight="16.0dip">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/emptyTemplateIcon_land" android:layout_width="65.0dip" android:layout_height="35.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/noitem_description" android:layout_alignParentTop="true" />
+                    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0dip" android:textColor="#ff6e6e6e" android:ellipsize="marquee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="@string/wifi_ap_allowed_list_empty" android:layout_toRightOf="@id/emptyTemplateIcon_land" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

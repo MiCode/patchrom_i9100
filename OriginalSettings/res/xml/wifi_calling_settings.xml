@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.movial.ipphone.WifiCallSwitchPreference android:persistent="false" android:key="button_wifi_calling_key">
+        <intent android:targetPackage="com.movial.wificall" android:action="android.intent.action.MAIN" android:targetClass="com.movial.wificall.Settings" />
+    </com.movial.ipphone.WifiCallSwitchPreference>
+</PreferenceScreen>

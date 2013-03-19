@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/OnDeviceHelp_Preview" android:background="@drawable/screen_overlay_2sd_layer_camera" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="@drawable/bubble_type02_03" android:layout_width="wrap_content" android:layout_height="84.0dip" android:layout_marginLeft="54.0dip" android:layout_marginTop="184.0dip" android:layout_marginRight="252.0dip" android:layout_alignParentRight="true">
+            <TextView android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/finger_text1" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/on_device_help_focus" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/finger" android:background="@drawable/screen_overlay_gesture_09" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="112.0dip" android:layout_marginRight="52.0dip" android:layout_alignParentRight="true" />
+        <RelativeLayout android:background="@drawable/bubble_type02_04" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginLeft="40.0dip" android:layout_marginTop="0.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/popup1_text" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/on_device_help_self" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/bubble_type02_03" android:layout_width="wrap_content" android:layout_height="56.0dip" android:layout_marginTop="56.0dip" android:layout_marginRight="40.0dip" android:layout_alignParentRight="true">
+            <TextView android:textSize="18.0dip" android:textColor="@android:color/white" android:id="@id/popup2_text" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/on_device_help_camcorder" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/donot_show_bg03" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <CheckBox android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/white" android:id="@id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/do_not_ask_again" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Button android:textColor="#ff000000" android:id="@id/button" android:background="@drawable/ondevicehelp_button" android:layout_width="72.0dip" android:layout_height="40.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="4.0dip" android:text="@string/OK_STRING" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

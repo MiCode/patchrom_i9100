@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ff1b2a31" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:text="@string/pen_help_gesture_msg" style="@style/pen_help_title" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00e0" android:contentDescription="@null" />
+        <TextView android:id="@id/gestures_go_back_title" android:text="@string/pen_help_gesture_back_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_gesture_back_msg" style="@style/pen_help_msg" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00e1" android:contentDescription="@null" />
+        <TextView android:id="@id/gestures_open_menu_title" android:text="@string/pen_help_gesture_menu_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_gesture_menu_msg" style="@style/pen_help_msg" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00e2" android:contentDescription="@null" />
+        <TextView android:id="@id/gestures_open_quick_note_title" android:text="@string/pen_help_gesture_note_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_gesture_note_msg" style="@style/pen_help_msg" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00e3" android:contentDescription="@null" />
+        <TextView android:id="@id/gestures_open_quick_command_title" android:text="@string/pen_help_gesture_command_title" style="@style/pen_help_title" />
+        <TextView android:id="@id/gestures_open_quick_command_msg" android:text="@string/pen_help_gesture_command_msg" style="@style/pen_help_msg" />
+        <ImageView android:layout_gravity="center" android:id="@id/gestures_open_quick_command_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00e4" android:contentDescription="@null" />
+        <TextView android:id="@id/gestures_capture_screen_title" android:text="@string/pen_help_gesture_capture_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_gesture_capture_msg" style="@style/pen_help_msg" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00e5" android:contentDescription="@null" />
+        <TextView android:id="@id/gestures_cut_out_image_title" android:text="@string/pen_help_gesture_crop_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_gesture_crop_msg" style="@style/pen_help_msg" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/gesture_screen_crop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/gesture_screen_crop_play" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMY_00c8" android:layout_centerInParent="true" android:contentDescription="@null" />
+        </RelativeLayout>
+        <TextView android:id="@id/gestures_select_text_title" android:text="@string/pen_help_gesture_selection_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_gesture_selection_msg" style="@style/pen_help_msg" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip">
+            <ImageView android:id="@id/gesture_text_selection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/gesture_text_selection_play" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMY_00c8" android:layout_centerInParent="true" android:contentDescription="@null" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">비밀번호는 최소 %d개의 문자를 포함해야 합니다</item>
+        <item quantity="one">비밀번호는 최소 1개의 문자를 포함해야 합니다</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">비밀번호는 최소 %d개의 소문자를 포함해야 합니다</item>
+        <item quantity="one">비밀번호는 최소 1개의 소문자를 포함해야 합니다</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">비밀번호는 최소 %d개의 대문자를 포함해야 합니다</item>
+        <item quantity="one">비밀번호는 최소 1개의 대문자를 포함해야 합니다</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">비밀번호는 최소 %d개의 숫자를 포함해야 합니다</item>
+        <item quantity="one">비밀번호는 최소 1개의 숫자를 포함해야 합니다</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">비밀번호는 최소 %d개의 기호를 포함해야 합니다</item>
+        <item quantity="one">비밀번호는 최소 1개의 기호를 포함해야 합니다</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">비밀번호는 최소 %d개의 숫자나 기호를 포함해야 합니다</item>
+        <item quantity="one">비밀번호는 최소 1개 이상의 숫자 또는 기호를 포함해야 합니다</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d분</item>
+        <item quantity="one">1분</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d초</item>
+        <item quantity="one">1초</item>
+    </plurals>
+</resources>

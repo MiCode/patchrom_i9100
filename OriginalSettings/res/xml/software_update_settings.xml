@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/samsung_update" android:key="update" android:summary="@string/update_summary" />
+    <CheckBoxPreference android:title="@string/auto_update" android:key="auto_update" android:summary="@string/auto_update_summary" />
+    <CheckBoxPreference android:title="@string/wifi_only" android:key="wifi_only" android:summary="@string/wifi_only_summary" />
+</PreferenceScreen>

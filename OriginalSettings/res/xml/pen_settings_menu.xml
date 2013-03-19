@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/pen_settings_title" android:key="pen_settings_menu"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/pen_settings_general_section_title" android:key="pen_general_category" />
+    <ListPreference android:entries="@array/pen_hand_side_entries" android:title="@string/pen_hand_side_title" android:key="pen_hand_side" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/pen_hand_side_values" />
+    <PreferenceScreen android:title="@string/pen_detachment_sound_title" android:key="pen_deatachment_sound" android:summary="" android:widgetLayout="@layout/round_more_icon">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.SelectPenDetachNotiDialog" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:title="@string/pen_open_quick_note" android:key="open_quick_note" android:summary="@string/pen_open_quick_note_msg" />
+    <CheckBoxPreference android:title="@string/battery_saving_title" android:key="battery_saving" android:summary="@string/battery_saving_msg" />
+    <CheckBoxPreference android:title="@string/loss_prevention_alert_title" android:key="loss_prevention_alert" android:summary="@string/loss_prevention_alert_msg" />
+    <ListPreference android:persistent="false" android:title="@string/pen_application_title" android:key="application" android:widgetLayout="@layout/round_more_icon" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/pen_hovering" android:key="pen_hovering" android:summary="@string/pen_hovering_summary" android:defaultValue="false" />
+    <PreferenceCategory android:title="@string/pen_settings_hovering_section_title" android:key="pen_hover" />
+    <SwitchPreferenceScreen android:title="@string/hovering_title" android:key="pen_hovering_menu" android:summary="@string/hovering_msg" android:fragment="com.android.settings.PenHovering" />
+    <CheckBoxPreference android:title="@string/pen_hovering_sound_title" android:key="pen_hovering_sound" />
+    <PreferenceCategory android:title="@string/pen_settings_gesture_section_title" android:key="pen_gesture_category" />
+    <CheckBoxPreference android:title="@string/pen_gesture_guide_title" android:key="pen_gesture_guide" android:summary="@string/pen_gesture_guide_msg" />
+    <PreferenceScreen android:title="@string/pen_quick_command_title" android:key="pen_quick_command" android:summary="@string/pen_quick_command_msg">
+        <intent android:targetPackage="com.sec.android.gesturepad" android:action="android.intent.action.MAIN" android:targetClass="com.sec.android.gesturepad.GesturePadSettingListActivity" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="@string/pen_settings_s_pen_help_section_title" android:key="pen_help_category" />
+    <PreferenceScreen android:title="@string/pen_help_title" android:key="pen_help" android:fragment="com.android.settings.PenHelpMenu" />
+    <PreferenceScreen android:title="@string/pen_help_gesture" android:key="pen_help_gesture" android:summary="">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.PenHelpActivity">
+            <extra android:name="pen_help_menu" android:value="gesture" />
+        </intent>
+    </PreferenceScreen>
+</PreferenceScreen>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="editable_shortcut_helptext">Press and hold icon, then drag it to edit position of shortcuts</string>
+</resources>

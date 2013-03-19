@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wifiap_lan_settings" android:key="wifiap_lan_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/wifiap_local_settings" android:key="wifiap_lacal_settings">
+        <EditTextPreference android:gravity="right" android:singleLine="true" android:maxLength="15" android:title="@string/wifiap_local_ip_addrs" android:key="wifiap_local_ip_addrs" android:dialogTitle="@string/wifiap_local_ip_addrs" android:dialogMessage="@string/wifiap_ip_instruction" android:privateImeOptions="inputType=ipAddress" />
+        <EditTextPreference android:gravity="right" android:singleLine="true" android:maxLength="15" android:title="@string/wifiap_local_subnetmask" android:key="wifiap_local_subnetmask" android:dialogTitle="@string/wifiap_local_subnetmask" android:privateImeOptions="inputType=ipAddress" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/wifiap_dhcp_settings" android:key="wifiap_dhcp_settings">
+        <CheckBoxPreference android:title="@string/wifiap_dhcp_enable" android:key="wifiap_dhcp_enable" />
+        <EditTextPreference android:gravity="right" android:singleLine="true" android:maxLength="15" android:title="@string/wifiap_dhcp_start_ip" android:key="wifiap_dhcp_start_ip" android:dialogTitle="@string/wifiap_dhcp_start_ip" android:dialogMessage="@string/wifiap_ip_instruction" android:privateImeOptions="inputType=ipAddress" />
+        <EditTextPreference android:gravity="right" android:singleLine="true" android:maxLength="15" android:title="@string/wifiap_dhcp_end_ip" android:key="wifiap_dhcp_end_ip" android:dependency="wifiap_dhcp_enable" android:dialogTitle="@string/wifiap_dhcp_end_ip" android:dialogMessage="@string/wifiap_ip_instruction" android:privateImeOptions="inputType=ipAddress" />
+        <EditTextPreference android:gravity="right" android:singleLine="true" android:maxLength="4" android:title="@string/wifiap_dhcp_lease_time" android:key="wifiap_dhcp_lease_time" android:dependency="wifiap_dhcp_enable" android:dialogTitle="@string/wifiap_dhcp_lease_time" android:dialogMessage="@string/wifiap_leasetime_instruction" android:inputType="number" />
+        <EditTextPreference android:gravity="right" android:singleLine="true" android:maxLength="4" android:title="@string/wifiap_dhcp_max_user" android:key="wifiap_dhcp_max_user" android:dependency="wifiap_dhcp_enable" android:dialogTitle="@string/wifiap_dhcp_max_user" android:dialogMessage="@string/wifiap_maxuser_instruction" android:inputType="number" />
+    </PreferenceCategory>
+</PreferenceScreen>

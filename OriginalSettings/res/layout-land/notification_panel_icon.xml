@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/panel_icon" android:background="@drawable/APKTOOL_DUMMY_040c" android:layout_width="57.0dip" android:layout_height="85.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/panel_position" android:layout_width="57.0dip" android:layout_height="55.0dip" />
+    <TextView android:textSize="12.0dip" android:gravity="center" android:layout_gravity="fill" android:id="@id/panel_text" android:background="@drawable/zzz_null" android:layout_width="57.0dip" android:layout_height="30.0dip" android:singleLine="false" />
+</LinearLayout>

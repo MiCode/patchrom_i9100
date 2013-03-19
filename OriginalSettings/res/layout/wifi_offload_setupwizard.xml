@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:gravity="center_vertical" android:id="@id/heading" android:background="@drawable/tw_ab_transparent_dark_holo" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="28.0dip" android:text="@string/wifi_setup_screentitle" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_below="@id/heading">
+        <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:id="@id/textView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/wifi_setup_screentext1_scamera" />
+        <FrameLayout android:id="@id/wifi_picker_dialog_fragment_layout" android:layout_width="fill_parent" android:layout_height="280.0dip" android:layout_marginTop="11.0dip" />
+        <TextView android:textSize="17.0sp" android:textColor="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="11.0dip" android:text="@string/wifi_setup_screentext2" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/bottomButtonPanel" android:background="@drawable/tw_action_bar_bottom_bg" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="17.0sp" android:textColor="#ffffffff" android:ellipsize="marquee" android:gravity="center" android:id="@id/back" android:background="@drawable/button_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/wifi_setup_back" android:layout_weight="1.0" />
+        <LinearLayout android:id="@id/welcomedivider" android:background="@drawable/tw_soft_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <Button android:textSize="17.0sp" android:textColor="#ffffffff" android:ellipsize="marquee" android:gravity="center" android:id="@id/exit" android:background="@drawable/button_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/exit_setup" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

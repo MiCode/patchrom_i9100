@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="barge_in_commands">
+        <item>Smile</item>
+        <item>Cheese</item>
+        <item>Capture</item>
+        <item>Shoot</item>
+    </string-array>
+    <array name="sel_pic_items">
+        <item>@string/gallery</item>
+        <item>@string/take_photo</item>
+    </array>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/power_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/power_saving_mode_title" />
+    <ListPreference android:persistent="false" android:entries="@array/auto_power_off_entries" android:title="@string/auto_power_dialog_title" android:key="auto_power_off" android:entryValues="@array/auto_power_off_values" />
+    <SwitchPreferenceScreen android:title="@string/power_saving_mode_title" android:key="power_saving_mode" android:fragment="com.android.settings.powersavingmode.MenuPowerSavingModeSettings" />
+    <PreferenceCategory android:title="@string/power_on" />
+    <ListPreference android:persistent="false" android:title="@string/start_up_title" android:key="start_up" />
+    <CheckBoxPreference android:title="@string/fast_power_on_title" android:key="fast_power_on" android:summary="@string/fast_power_on_summary" />
+</PreferenceScreen>

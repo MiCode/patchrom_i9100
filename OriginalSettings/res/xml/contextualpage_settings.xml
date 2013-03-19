@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/page_buddy"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/page_buddy" />
+    <CheckBoxPreference android:title="@string/contextual_page_s_pen_page" android:key="contextual_page_s_pen" />
+    <CheckBoxPreference android:title="@string/contextual_page_earphone_page" android:key="contextual_page_earphone" />
+    <CheckBoxPreference android:title="@string/contextual_page_dock_page" android:key="contextual_page_dock" />
+    <CheckBoxPreference android:title="@string/contextual_page_car_cradle_page" android:key="contextual_page_car_cradle" />
+    <CheckBoxPreference android:title="@string/contextual_page_desk_cradle_page" android:key="contextual_page_desk_cradle" />
+    <CheckBoxPreference android:title="@string/contextual_page_roaming_page" android:key="contextual_page_roaming" />
+    <PreferenceCategory android:title="@string/page_buddy_help">
+        <Preference android:title="@string/page_buddy_help" android:key="page_buddy_help" android:fragment="com.android.settings.ContextualPageHelp" />
+    </PreferenceCategory>
+</PreferenceScreen>

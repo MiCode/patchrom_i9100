@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/button_bar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="0.0">
+        <Button android:id="@id/wifi_back_button" android:background="@drawable/button_selector_default" android:layout_width="168.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" android:text="@string/wifi_setup_back" android:layout_alignParentLeft="true" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <Button android:id="@id/wifi_skip_button" android:background="@drawable/button_selector_default" android:visibility="gone" android:layout_width="168.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" android:text="@string/wifi_setup_skip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+            <Button android:id="@id/wifi_next_button" android:background="@drawable/button_selector_next" android:layout_width="168.0dip" android:layout_height="40.0dip" android:layout_margin="8.0dip" android:text="@string/wifi_setup_next" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

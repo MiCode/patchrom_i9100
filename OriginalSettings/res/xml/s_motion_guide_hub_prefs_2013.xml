@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/motion_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/sensitivity_settings_title" android:key="sensitivity" android:widgetLayout="@layout/round_more_icon" />
+    <PreferenceCategory android:title="@string/learn_about_motions_title" android:key="learn_about_category" />
+</PreferenceScreen>

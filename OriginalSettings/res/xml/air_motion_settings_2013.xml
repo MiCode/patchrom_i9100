@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/air_motion_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:persistent="false" android:title="@string/air_motion_indicator_title" android:key="category_air_motion_indicator" />
+    <Preference android:title="@string/learn_about_air_motion_indicator" android:key="air_motion_indicator" />
+    <PreferenceCategory android:persistent="false" android:title="@string/air_motion_title" android:key="category_air_motion" />
+    <SwitchPreferenceScreen android:title="@string/air_glance_view" android:key="quick_glance" android:summary="@string/air_glance_view_descption" android:fragment="com.android.settings.motion2013.SMotionGuideHub">
+        <extra android:name="type" android:value="quick_glance" />
+        <extra android:name="hasAdvancedSettings" android:value="true" />
+    </SwitchPreferenceScreen>
+    <SwitchPreferenceScreen android:title="@string/air_scroll_title" android:key="air_scroll" android:summary="@string/air_scroll_descripption" android:fragment="com.android.settings.motion2013.SMotionGuideHub">
+        <extra android:name="type" android:value="air_scroll" />
+        <extra android:name="hasAdvancedSettings" android:value="true" />
+    </SwitchPreferenceScreen>
+    <SwitchPreferenceScreen android:title="@string/air_turn_title" android:key="air_turn" android:summary="@string/air_turn_descption" android:fragment="com.android.settings.motion2013.SMotionGuideHub">
+        <extra android:name="type" android:value="air_turn" />
+        <extra android:name="hasAdvancedSettings" android:value="true" />
+    </SwitchPreferenceScreen>
+    <SwitchPreferenceScreen android:title="@string/air_item_move_title" android:key="air_move" android:summary="@string/air_call_accept_descption" android:fragment="com.android.settings.motion2013.SMotionGuideHub">
+        <extra android:name="type" android:value="air_move" />
+    </SwitchPreferenceScreen>
+    <SwitchPreferenceScreen android:title="@string/air_clip_title" android:key="air_pin" android:summary="@string/air_clip_descption" android:fragment="com.android.settings.motion2013.SMotionGuideHub">
+        <extra android:name="type" android:value="air_pin" />
+    </SwitchPreferenceScreen>
+    <SwitchPreferenceScreen android:title="@string/air_call_accept" android:key="air_call_accept" android:summary="@string/air_call_accept_descption" android:fragment="com.android.settings.motion2013.SMotionGuideHub">
+        <extra android:name="type" android:value="air_call_accept" />
+    </SwitchPreferenceScreen>
+</PreferenceScreen>

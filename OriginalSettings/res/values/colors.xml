@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="wifi_connected_toast">#ff59d0f3</color>
+    <color name="wifi_ap_connected">#ff2fa6c9</color>
+    <color name="wifi_ap_connecting">#ffa3c1de</color>
+    <color name="memory_used">#ffff0000</color>
+    <color name="memory_avail">#ff333333</color>
+    <color name="memory_apps_usage">#ff77831a</color>
+    <color name="memory_downloads">#ff476093</color>
+    <color name="memory_dcim">#ff793a7f</color>
+    <color name="memory_music">#ff8e562a</color>
+    <color name="memory_misc">#ff7c3030</color>
+    <color name="crypt_keeper_clock_background">#ff9a9a9a</color>
+    <color name="crypt_keeper_clock_foreground">#ff666666</color>
+    <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
+    <color name="divider_color">#20ffffff</color>
+    <color name="title_color">@android:color/holo_blue_light</color>
+    <color name="setup_divider_color">#ff333333</color>
+    <color name="action_bar_button_text_color">#ffffffff</color>
+    <color name="setupwizard_divider_color">#ff000000</color>
+    <color name="guide_arrow_bubble_text_color">#ffebebeb</color>
+    <color name="empty_text_color">#ffd7d7d7</color>
+    <color name="appwidget_smart_network_text_color">#fff2f2f2</color>
+    <color name="airplane_status_on">#ff619800</color>
+    <color name="airplane_status_off">#ffffffff</color>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="34.0sp" android:paddingTop="5.0sp" android:paddingRight="34.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/allsahrecast_help_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dongle_connect_help" />
+        <com.android.settings.wfd.IndexedTextLayout android:id="@id/IndexedTextView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0sp" android:layout_marginBottom="0.0sp" />
+    </LinearLayout>
+</ScrollView>

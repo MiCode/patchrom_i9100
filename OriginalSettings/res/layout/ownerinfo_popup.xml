@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <EditText android:gravity="top" android:id="@id/owner_info_edit_text_popup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="20.0dip" android:hint="@string/owner_info_settings_edit_text_hint" android:maxLength="65" android:inputType="textCapSentences|textMultiLine" />
+        <CheckBox android:id="@id/show_owner_info_on_lockscreen_checkbox_popup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="20.0dip" android:text="@string/show_owner_info_on_lockscreen_label" />
+    </LinearLayout>
+</ScrollView>

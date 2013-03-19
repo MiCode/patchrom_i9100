@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:id="@id/accessibilityfragment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="55.0dip" android:layout_alignParentBottom="true" class="com.android.settings.AccessibilitySettings" />
+    <Button android:id="@id/next_btn" android:background="@drawable/button_selector_next" android:layout_width="150.0dip" android:layout_height="43.0dip" android:layout_marginRight="7.0dip" android:layout_marginBottom="6.0dip" android:text="@string/next_button_label" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

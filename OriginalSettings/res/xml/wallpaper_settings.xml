@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wallpaper"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceScreen android:title="@string/download_wallpapers" android:key="download_wallpaper" android:summary="">
+        <intent android:action="android.intent.action.VIEW" android:data="http://waprd.telstra.com/redirect?target=3glatestpics" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/home_screen" android:key="homescreen_wallpaper" android:summary="" />
+    <PreferenceScreen android:title="@string/lockscreen_wallpaper" android:key="lockscreen_wallpaper" android:summary="">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.LockScreenWallpaper" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/both_wallpaper" android:key="both_wallpaper" android:summary="">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.LockScreenWallpaper">
+            <extra android:name="both" android:value="1" />
+        </intent>
+    </PreferenceScreen>
+</PreferenceScreen>

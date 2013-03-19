@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/display_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/tts_general_section_title" android:key="general" />
+    <PreferenceScreen android:title="@string/wallpaper" android:key="wallpaper" android:fragment="com.android.settings.WallpaperSettings" />
+    <PreferenceScreen android:title="@string/led_indicator_settings" android:key="led_indicator_settings" android:fragment="com.android.settings.LedIndicatorSettings" />
+    <PreferenceScreen android:title="@string/notification_panel_title" android:key="notification_panel_edit">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.NotificationPanel" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:title="@string/multi_window_title" android:key="key_multi_window" />
+    <SwitchPreferenceScreen android:title="@string/page_buddy" android:key="contextualpage_settings" android:summary="@string/page_buddy_summary" android:fragment="com.android.settings.ContextualPageSettings" />
+    <PreferenceCategory android:title="@string/display_label" android:key="screen_category" />
+    <PreferenceScreen android:title="@string/screen_mode_setting" android:key="mode" android:summary="@string/screen_mode_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.ModePreview" />
+    </PreferenceScreen>
+    <com.android.settings.BrightnessPreference android:title="@string/brightness" android:key="brightness" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/brightness" />
+    <CheckBoxPreference android:title="@string/accelerometer_title_second" android:key="accelerometer_second" />
+    <CheckBoxPreference android:title="@string/accelerometer_title" android:key="accelerometer" />
+    <ListPreference android:persistent="false" android:entries="@array/screen_timeout_entries" android:title="@string/screen_timeout" android:key="screen_timeout" android:summary="@string/screen_timeout_summary" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/screen_timeout_values" />
+    <PreferenceScreen android:title="@string/screensaver_settings_title" android:key="screensaver" android:fragment="com.android.settings.DreamSettings" />
+    <PreferenceCategory android:title="@string/features_category_title" android:key="features_category" />
+    <CheckBoxPreference android:title="@string/intelligent_rotation_title" android:key="intelligent_rotation" android:summary="@string/intelligent_rotation_summary" />
+    <CheckBoxPreference android:title="@string/intelligent_sleep_title" android:key="intelligent_sleep" android:summary="@string/intelligent_sleep_summary" />
+    <PreferenceCategory android:title="@string/font" />
+    <com.android.settings.flipfont.FontListPreference android:title="@string/monotype_preference_title" android:key="MONOTYPE" android:summary="@string/monotype_preference_summary" android:widgetLayout="@layout/round_more_icon" />
+    <com.android.settings.FontSizeListPreference android:entries="@array/entries_font_size" android:title="@string/title_font_size" android:key="font_size" android:summary="@string/summary_font_size" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/dialog_title_font_size" android:entryValues="@array/entryvalues_font_size" />
+    <PreferenceCategory android:title="@string/more_settings" android:key="more_settings" />
+    <ListPreference android:persistent="false" android:entries="@array/quick_launch_entries" android:title="@string/quick_launch_title" android:key="quick_launch" android:summary="@string/screen_quick_launch_summary" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/quick_launch_values" />
+    <CheckBoxPreference android:title="@string/sub_lcd_auto_lock" android:key="sub_lcd_auto_lock" android:summary="@string/sub_lcd_auto_lock_summary" />
+    <CheckBoxPreference android:title="@string/key_night_mode" android:key="key_night_mode" />
+    <ListPreference android:persistent="false" android:entries="@array/key_backlight_entries" android:title="@string/key_backlight" android:key="key_backlight" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/key_backlight_values" />
+    <ListPreference android:persistent="false" android:entries="@array/touch_key_light_entries" android:title="@string/touch_key_light" android:key="touch_key_light" android:summary="@string/touch_key_light_summary" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/touch_key_light_values" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/display_battery_percentage" android:key="display_battery_level" android:summary="@string/display_battery_percentage_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/display_saving" android:key="power_saving_mode" android:summary="@string/display_saving_mode_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/notification_pulse_title" android:key="notification_pulse" />
+    <PreferenceScreen android:title="@string/a_sensor_title" android:key="a_sensor" android:summary="@string/a_sensor_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.ASensorSettings" />
+    </PreferenceScreen>
+</PreferenceScreen>

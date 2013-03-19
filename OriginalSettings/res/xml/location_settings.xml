@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/location_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/location_network_based" android:key="location_network" android:summary="@string/location_neighborhood_level" />
+    <CheckBoxPreference android:title="@string/location_gps" android:key="location_gps" android:summary="@string/location_street_level" />
+    <SwitchPreferenceScreen android:title="@string/location_logs" android:key="location_history" android:summary="@string/summary_location_logs" android:defaultValue="true">
+        <intent android:action="android.intent.action.LocationLog" />
+    </SwitchPreferenceScreen>
+    <CheckBoxPreference android:title="@string/assisted_gps" android:key="assisted_gps" android:summaryOn="@string/assisted_gps_enabled" android:summaryOff="@string/assisted_gps_disabled" />
+</PreferenceScreen>

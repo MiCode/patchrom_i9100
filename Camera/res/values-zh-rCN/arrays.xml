@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="barge_in_commands">
+        <item>微笑</item>
+        <item>奶酪</item>
+        <item>捕捉</item>
+        <item>拍摄</item>
+    </string-array>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="uspwidget_btn_img_width">40.0dip</dimen>
+    <dimen name="uspwidget_btn_img_height">40.0dip</dimen>
+    <dimen name="uspwidget_img_padding_top">6.0dip</dimen>
+    <dimen name="uspwidget_text_height">24.0dip</dimen>
+    <dimen name="uspwidget_text_size">10.0dip</dimen>
+    <dimen name="guide_switcher_width">98.0dip</dimen>
+    <dimen name="guide_switcher_port_margin_right">15.0dip</dimen>
+    <dimen name="guide_bt_switcher_step_1_port_margin_right">12.0dip</dimen>
+    <dimen name="guide_bt_switcher_step_1_port_margin_top">160.0dip</dimen>
+    <dimen name="guide_wifi_switcher_step_1_port_margin_right">12.0dip</dimen>
+    <dimen name="guide_wifi_switcher_step_1_port_margin_top">94.0dip</dimen>
+    <dimen name="guide_wifi_enable_pointer_land_margin_right">155.0dip</dimen>
+    <dimen name="guide_bt_pointer_step_1_port_margin_top">111.0dip</dimen>
+    <dimen name="guide_bt_pointer_step_1_port_margin_right">40.0dip</dimen>
+    <dimen name="guide_wifi_pointer_step_1_port_margin_top">58.0dip</dimen>
+    <dimen name="guide_wifi_pointer_step_1_port_margin_right">40.0dip</dimen>
+    <dimen name="guide_step_1_port_list_item_width">195.0dip</dimen>
+    <dimen name="guide_step_1_port_list_item_height">56.0dip</dimen>
+    <dimen name="guide_step_1_land_list_item_width">410.0dip</dimen>
+    <dimen name="guide_step_1_land_list_item_height">56.0dip</dimen>
+    <dimen name="guide_step_1_port_bt_list_item_margin_top">132.0dip</dimen>
+    <dimen name="guide_step_1_port_bt_pointer_margin_top">114.0dip</dimen>
+    <dimen name="guide_bottom_button_height_punch">44.0dip</dimen>
+    <dimen name="guide_bottom_buttons_height">44.0dip</dimen>
+    <dimen name="guide_bt_pointer_step_1_land_margin_bottom">72.0dip</dimen>
+    <dimen name="guide_step_1_land_bt_pointer_margin_bottom">80.0dip</dimen>
+</resources>

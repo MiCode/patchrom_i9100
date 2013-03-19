@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/user_details_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/user_information_heading" android:key="information_category">
+        <EditTextPreference android:persistent="false" android:title="@string/user_name_title" android:key="user_name" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/user_restrictions_heading" android:key="restrictions_category">
+        <CheckBoxPreference android:persistent="false" android:enabled="false" android:title="@string/user_market_requires_pin" android:key="market_requires_pin" />
+        <ListPreference android:persistent="false" android:enabled="false" android:entries="@array/user_content_ratings_entries" android:title="@string/user_max_content_rating" android:key="content_rating" android:entryValues="@array/user_content_ratings_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/user_system_apps_heading" android:key="system_apps_category" />
+    <PreferenceCategory android:title="@string/user_market_apps_heading" android:key="market_apps_category" />
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/tw_list_section_divider_holo_dark" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="22.0dip" android:textColor="#ffd7d7d7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wifitimer_starttime_title" android:layout_weight="0.9" />
+            <CheckBox android:id="@id/wifitimer_enable_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="12.0dip">
+            <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/worldclock_icon_time" />
+            <TextView android:textSize="22.0dip" android:textColor="#ffd7d7d7" android:id="@id/wifitimer_starttime" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TimePicker android:layout_gravity="center_horizontal" android:id="@id/wifitimer_start_tp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/tw_list_section_divider_holo_dark" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="22.0dip" android:textColor="#ffd7d7d7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/wifitimer_endtime_title" android:layout_weight="0.9" />
+            <CheckBox android:id="@id/wifitimer_enable_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="12.0dip">
+            <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/worldclock_icon_time" />
+            <TextView android:textSize="22.0dip" android:textColor="#ffd7d7d7" android:id="@id/wifitimer_endtime" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TimePicker android:layout_gravity="center_horizontal" android:id="@id/wifitimer_end_tp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

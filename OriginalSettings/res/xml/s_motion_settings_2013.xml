@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/s_motion_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreferenceScreen android:title="@string/air_motion_title" android:key="air_motion" android:summary="@string/air_motion_summary" android:fragment="com.android.settings.motion2013.AirMotionSettings" />
+    <SwitchPreferenceScreen android:title="@string/motion_title" android:key="motion" android:summary="@string/motion_summary" android:fragment="com.android.settings.motion2013.MotionSettings" />
+    <SwitchPreferenceScreen android:title="@string/surface_title" android:key="surface" android:summary="@string/surface_summary" android:fragment="com.android.settings.motion2013.HandMotionSettings" />
+</PreferenceScreen>

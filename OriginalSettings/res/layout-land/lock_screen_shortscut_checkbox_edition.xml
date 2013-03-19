@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textAppearance="?android:textAppearanceLarge" android:textColor="#ffd7d7d7" android:id="@id/shortcut_header_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="20.0dip" android:text="@string/lock_screen_shortcut_header_title" android:layout_alignParentTop="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0dip" android:textColor="#ff898989" android:id="@id/shortcut_header_summary" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/lock_screen_shortcut_header_summary" android:singleLine="false" android:layout_below="@id/shortcut_header_title" />
+        <CheckBox android:id="@id/icon_addition" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <View android:background="#ff464646" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:paddingLeft="100.0dip" android:paddingRight="100.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="120.0dip">
+                <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="20.0sp" android:textColor="#ffd7d7d7" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/lock_screen_shortcut_guide_title" />
+                <TextView android:textAppearance="?android:textAppearanceSmall" android:textSize="17.0dip" android:textColor="#ff808080" android:gravity="center" android:id="@id/guide_content_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="right" android:layout_gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <com.android.settings.lockscreenshortcut.DeleteView android:gravity="right" android:layout_gravity="right" android:id="@id/delete_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="center" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

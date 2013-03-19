@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/location_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/usb_connection_category" />
+    <CheckBoxPreference android:title="@string/usb_mtp_title" android:key="usb_mtp" android:summary="@string/usb_mtp_summary" />
+    <CheckBoxPreference android:title="@string/usb_ptp_title" android:key="usb_ptp" android:summary="@string/usb_ptp_summary" />
+</PreferenceScreen>

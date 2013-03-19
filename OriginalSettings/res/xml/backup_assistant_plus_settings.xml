@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:icon="@drawable/backup_assistant_icon" android:title="@string/bua_plus_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceScreen android:title="@string/bua_plus_contacts" android:key="bua_plus_contacts" android:summary="" />
+    <PreferenceScreen android:title="@string/bua_plus_media" android:key="bua_plus_media" android:summary="" />
+</PreferenceScreen>

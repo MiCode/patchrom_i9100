@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/p2p_nodevice" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/p2p_nodevice_padding" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight" />
+    <ImageView android:layout_gravity="center" android:id="@id/no_device_icon" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/noitem_wifidirect" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="19.0dip" android:textColor="#ff6e6e6e" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/no_device" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/file_share_not_available_message" />
+</LinearLayout>

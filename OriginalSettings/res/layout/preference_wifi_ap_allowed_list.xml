@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/wifi_ap_pref" android:background="?android:selectableItemBackground" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" android:layout_weight="1.0">
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="?android:textColorSecondary" android:id="@android:id/summary" android:paddingBottom="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="4" android:layout_below="@android:id/title" android:layout_alignLeft="@android:id/title" />
+        </RelativeLayout>
+        <ImageView android:layout_gravity="center_vertical" android:background="@drawable/tw_divider_vertical_holo_dark" android:layout_width="1.0dip" android:layout_height="28.0dip" />
+        <LinearLayout android:layout_gravity="center_vertical" android:id="@id/edit_menu_item" android:background="?android:selectableItemBackground" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?android:attr/actionBarStyle">
+            <ImageView android:description="@string/motion_tutorial_done_btn" android:layout_gravity="center_vertical" android:id="@id/button_edit" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_sysbar_quicksettings" android:adjustViewBounds="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

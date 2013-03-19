@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="16.0dip" android:text="@string/crypt_keeper_desc_dec" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/warning_low_charge_dec" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/crypt_keeper_low_charge_text" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/warning_unplugged_dec" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/crypt_keeper_unplugged_text" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/warning_low_password_quality_dec" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/encrypt_tablet_require_password" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/warning_sdcard_ongoing_enc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/sdcard_encrypt_disabled_ongoing_enc" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:id="@id/warning_sdcard_ongoing_dec" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/sdcard_encrypt_disabled_ongoing_dec" />
+        </LinearLayout>
+    </ScrollView>
+    <Button android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/initiate_decrypt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="@string/crypt_keeper_button_text_dec" />
+</LinearLayout>

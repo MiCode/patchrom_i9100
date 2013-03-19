@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sprint_4g_settings" android:key="sprint_4g_setting"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="@string/sprint_4g_network_provider" android:key="sprint_4g_network_provider" android:summary="Unknown" android:defaultValue="Unknown" style="?android:preferenceInformationStyle" />
+    <EditTextPreference android:title="@string/wifi_ip_address" android:key="sprint_4g_ip_address" android:summary="0.0.0.0" android:defaultValue="0.0.0.0" style="?android:preferenceInformationStyle" />
+</PreferenceScreen>

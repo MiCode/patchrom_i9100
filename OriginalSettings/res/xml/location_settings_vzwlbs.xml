@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/location_title" android:key="location_category">
+        <Preference android:title="@string/location_e911" android:key="location_e911" android:summary="@string/location_e911_description" style="?android:preferenceInformationStyle" />
+        <CheckBoxPreference android:title="@string/location_vzw" android:key="location_vzw" android:summary="@string/location_vzw_description" />
+        <CheckBoxPreference android:title="@string/location_3rdparty_gps" android:key="location_gps" android:summary="@string/location_3rdparty_gps_description" />
+        <CheckBoxPreference android:title="@string/location_3rdparty_network" android:key="location_network" android:summary="@string/location_3rdparty_network_description" />
+    </PreferenceCategory>
+</PreferenceScreen>

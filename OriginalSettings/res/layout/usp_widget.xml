@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/uspwidget_root_layout" android:background="@drawable/usp_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/btn_directcall" android:paddingTop="@dimen/uspwidget_img_padding_top" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/img_directcall" android:layout_width="@dimen/uspwidget_btn_img_width" android:layout_height="@dimen/uspwidget_btn_img_height" android:scaleType="fitXY" android:contentDescription="@string/pick_up_to_call_out_title" />
+        <TextView android:textSize="@dimen/uspwidget_text_size" android:textColor="#fff0f0f0" android:gravity="center" android:id="@id/text_directcall" android:layout_width="fill_parent" android:layout_height="@dimen/uspwidget_text_height" android:text="@string/pick_up_to_call_out_title" />
+        <include android:id="@id/ind_directcall" layout="@layout/usp_widget_indicator" />
+    </LinearLayout>
+    <ImageView android:background="@drawable/usp_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/btn_smartstay" android:paddingTop="@dimen/uspwidget_img_padding_top" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/img_smartstay" android:layout_width="@dimen/uspwidget_btn_img_width" android:layout_height="@dimen/uspwidget_btn_img_height" android:scaleType="fitXY" android:contentDescription="@string/intelligent_sleep_title" />
+        <TextView android:textSize="@dimen/uspwidget_text_size" android:textColor="#fff0f0f0" android:gravity="center" android:id="@id/text_smartstay" android:layout_width="fill_parent" android:layout_height="@dimen/uspwidget_text_height" android:text="@string/intelligent_sleep_title" />
+        <include android:id="@id/ind_smartstay" layout="@layout/usp_widget_indicator" />
+    </LinearLayout>
+    <ImageView android:background="@drawable/usp_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/btn_voicecmd" android:paddingTop="@dimen/uspwidget_img_padding_top" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/img_voicecmd" android:layout_width="@dimen/uspwidget_btn_img_width" android:layout_height="@dimen/uspwidget_btn_img_height" android:scaleType="fitXY" android:contentDescription="@string/voice_input_control_title" />
+        <TextView android:textSize="@dimen/uspwidget_text_size" android:textColor="#fff0f0f0" android:gravity="center" android:id="@id/text_voicecmd" android:layout_width="fill_parent" android:layout_height="@dimen/uspwidget_text_height" android:text="@string/voice_input_control_title" />
+        <include android:id="@id/ind_voicecmd" layout="@layout/usp_widget_indicator" />
+    </LinearLayout>
+    <ImageView android:background="@drawable/usp_divider" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@id/btn_sbeam" android:paddingTop="@dimen/uspwidget_img_padding_top" android:focusable="true" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/img_sbeam" android:layout_width="@dimen/uspwidget_btn_img_width" android:layout_height="@dimen/uspwidget_btn_img_height" android:scaleType="fitXY" android:contentDescription="@string/s_beam_label" />
+        <TextView android:textSize="@dimen/uspwidget_text_size" android:textColor="#fff0f0f0" android:gravity="center" android:id="@id/text_sbeam" android:layout_width="fill_parent" android:layout_height="@dimen/uspwidget_text_height" android:text="@string/s_beam_label" />
+        <include android:id="@id/ind_sbeam" layout="@layout/usp_widget_indicator" />
+    </LinearLayout>
+</LinearLayout>

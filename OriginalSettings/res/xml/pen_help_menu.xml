@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wallpaper"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceScreen android:title="@string/pen_help_hovering" android:key="pen_help_hovering" android:summary="">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.PenHelpActivity">
+            <extra android:name="pen_help_menu" android:value="hovering" />
+        </intent>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/pen_help_gesture" android:key="pen_help_gesture" android:summary="">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.PenHelpActivity">
+            <extra android:name="pen_help_menu" android:value="gesture" />
+        </intent>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/pen_help_quick_command" android:key="pen_help_quick_command" android:summary="">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.PenHelpActivity">
+            <extra android:name="pen_help_menu" android:value="quickcommand" />
+        </intent>
+    </PreferenceScreen>
+</PreferenceScreen>

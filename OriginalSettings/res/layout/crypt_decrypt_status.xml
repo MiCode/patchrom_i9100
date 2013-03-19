@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.internal.widget.DigitalClock android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-10.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="120.0sp" android:textColor="@color/crypt_keeper_clock_background" android:ellipsize="none" android:id="@android:id/timeDisplayBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:singleLine="true" />
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="120.0sp" android:textColor="@color/crypt_keeper_clock_foreground" android:ellipsize="none" android:id="@android:id/timeDisplayForeground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:singleLine="true" android:layout_alignLeft="@android:id/timeDisplayBackground" android:layout_alignTop="@android:id/timeDisplayBackground" />
+    </com.android.internal.widget.DigitalClock>
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="22.0sp" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/time" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="22.0sp" android:id="@id/status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/enter_password" android:drawableLeft="@android:drawable/ic_lock_idle_lock" />
+</LinearLayout>

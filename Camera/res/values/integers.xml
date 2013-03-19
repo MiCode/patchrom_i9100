@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="editableshortcut_num_of_vertical_line">3</integer>
+    <integer name="editableshortcut_num_of_horizontal_line">3</integer>
+    <integer name="baseindicator_battery_indicator_display_under">20</integer>
+    <integer name="baseindicator_remain_counter_display_under">20</integer>
+    <integer name="default_slider_number_of_gauge">9</integer>
+    <integer name="zoom_velocity">112</integer>
+    <integer name="block_pinch_zoom_velocity">50</integer>
+    <integer name="slidermenu_exposure_value_num_of_step">9</integer>
+    <integer name="slidermenu_zoom_num_of_step">31</integer>
+    <integer name="slidermenu_zoom_max_ratio">4</integer>
+    <integer name="iimage_thumbnail_target_size">320</integer>
+    <integer name="iimage_mini_thumb_target_size">96</integer>
+    <integer name="iimage_thumbnail_max_num_pixels">196608</integer>
+    <integer name="iimage_mini_thumb_max_num_pixels">16384</integer>
+    <integer name="guideline_width">2</integer>
+    <integer name="postview_blink_line_thick">7</integer>
+    <integer name="sharing_device_dialog_max_height">594</integer>
+</resources>

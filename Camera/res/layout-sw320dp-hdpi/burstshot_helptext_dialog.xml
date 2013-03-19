@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/ScrollView" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-30.0dip" android:layout_marginRight="10.0dip" android:layout_toRightOf="@id/img" android:layout_centerVertical="true">
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0dip" android:textColor="@android:color/white" android:id="@id/message" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="6.0dip" android:layout_marginRight="10.0dip" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0dip" android:textColor="@android:color/white" android:id="@id/message2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" />
+            <CheckBox android:textAppearance="?android:textAppearanceMedium" android:textSize="17.0dip" android:textColor="@android:color/white" android:id="@id/checkbox" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:text="@string/do_not_ask_again" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

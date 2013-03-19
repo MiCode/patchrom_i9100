@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/thumbnail" android:layout_width="188.0px" android:layout_height="128.0px" />
+    <LinearLayout android:orientation="vertical" android:id="@id/LinearLayout01" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="44.0px" android:id="@id/name" android:layout_width="450.0px" android:layout_height="wrap_content" android:layout_marginLeft="28.0px" android:layout_marginTop="10.0px" android:singleLine="true" />
+        <LinearLayout android:id="@id/LinearLayout02" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="28.0px" android:layout_marginTop="6.0dip">
+            <ImageView android:id="@id/send" android:layout_width="40.0px" android:layout_height="40.0px" android:src="@drawable/camera_shoot_share_history_02" />
+            <TextView android:textSize="28.0px" android:textColor="#ffb08544" android:gravity="center_vertical" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="32.0px" android:layout_marginLeft="9.0px" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

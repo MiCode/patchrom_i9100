@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/wifi_ap_settings_category" android:key="wifi_ap_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.SettingsSwitchPreference android:persistent="false" android:title="@string/wifi_tether_checkbox_text" android:key="enable_switch_wifi_ap" />
+    <PreferenceCategory android:title="@string/wifi_ap_connected_devices" android:key="wifi_ap_connected_devices" />
+    <PreferenceCategory android:title="@string/wifi_ap_howto" android:key="wifi_ap_howto_category" />
+    <Preference android:key="wifi_ap_howto" />
+    <Preference android:layout="@layout/wifi_ap_disabled_help" android:key="wifi_ap_disabled_help" />
+</PreferenceScreen>

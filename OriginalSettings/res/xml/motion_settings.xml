@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/motion_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:persistent="false" android:title="@string/air_motion_title" android:key="category_air_motion" />
+    <CheckBoxPreference android:title="@string/air_glance_view" android:key="air_motion_glance_view" android:summary="@string/air_glance_view_descption" />
+    <CheckBoxPreference android:title="@string/air_web_navigate" android:key="air_motion_web_navigate" android:summary="@string/air_web_navigate_descption" />
+    <CheckBoxPreference android:title="@string/air_note_swap_title" android:key="air_motion_note_swap" android:summary="@string/air_note_swap_descciption" />
+    <CheckBoxPreference android:title="@string/air_scroll_title" android:key="air_motion_scroll" android:summary="@string/air_scroll_descripption" />
+    <CheckBoxPreference android:title="@string/air_item_move_title" android:key="air_motion_item_move" android:summary="@string/air_item_move_descption" />
+    <CheckBoxPreference android:title="@string/air_clip_title" android:key="air_motion_clip" android:summary="@string/air_clip_descption" />
+    <CheckBoxPreference android:title="@string/air_call_accept" android:key="air_call_accept" android:summary="@string/air_call_accept_descption" />
+    <PreferenceCategory android:persistent="false" android:title="@string/air_motion_tutorial_title" android:key="category_air_motion_tutorial" />
+    <Preference android:persistent="false" android:title="@string/air_motion_tutorial_title" android:key="learn_about_air_motion" android:fragment="com.android.settings.motion.AirMotionTutorialSettings">
+        <extra android:name="type" android:value="1" />
+    </Preference>
+    <PreferenceCategory android:persistent="false" android:title="@string/motion_title" android:key="category_motion" />
+    <CheckBoxPreference android:title="@string/air_glance_view" android:key="glance_view" android:summary="@string/air_glance_view_descption" />
+    <CheckBoxPreference android:title="@string/pick_up_to_call_out_title" android:key="pick_up_to_call_out" android:summary="@string/pick_up_to_call_out_summary" />
+    <CheckBoxPreference android:title="@string/pick_up_title" android:key="pick_up" android:summary="@string/pick_up_summary" />
+    <CheckBoxPreference android:title="@string/double_tap_title" android:key="double_tap" android:summary="@string/double_tap_summary" />
+    <CheckBoxPreference android:title="@string/tilt_title" android:key="tilt" android:summary="@string/tilt_summary" />
+    <CheckBoxPreference android:title="@string/tilt_to_scroll_list_title" android:key="tilt_to_scroll_list" android:summary="@string/tilt_to_scroll_list_summary" />
+    <CheckBoxPreference android:title="@string/pan_title" android:key="pan" android:summary="@string/pan_summary" />
+    <CheckBoxPreference android:title="@string/pan_to_browse_image_title" android:key="pan_to_browse_image" android:summary="@string/pan_to_browse_image_summary" />
+    <CheckBoxPreference android:title="@string/shake_title" android:key="shake" android:summary="@string/shake_summary" />
+    <CheckBoxPreference android:title="@string/turn_over_title" android:key="turn_over" android:summary="@string/turn_over_summary" />
+    <PreferenceCategory android:persistent="false" android:title="@string/sensitivity_settings_and_motion_tutorial_title" android:key="category_motion_tutorial">
+        <Preference android:persistent="false" android:title="@string/glance_view_advanced_setting_title" android:key="glance_view_advanced_settings" android:fragment="com.android.settings.motion.MotionSensitivitySettings" />
+        <Preference android:persistent="false" android:title="@string/sensitivity_settings_title" android:key="sensitivity_settings" android:fragment="com.android.settings.motion.MotionSensitivitySettings" />
+        <Preference android:persistent="false" android:title="@string/learn_about_motions_title" android:key="learn_about_motions" android:fragment="com.android.settings.motion.MotionTutorialSettings">
+            <extra android:name="type" android:value="0" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/surface_title" android:key="category_surface" />
+    <CheckBoxPreference android:title="@string/palm_swipe_title" android:key="palm_swipe" android:summary="@string/palm_swipe_summary" />
+    <CheckBoxPreference android:title="@string/palm_touch_title" android:key="palm_touch" android:summary="@string/palm_touch_summary" />
+    <CheckBoxPreference android:title="@string/tap_and_twist_title" android:key="tap_and_twist" android:summary="@string/tap_and_twist_summary" />
+    <PreferenceCategory android:persistent="false" android:title="@string/surface_tutorial_settings_title" android:key="category_surface_tutorial">
+        <Preference android:persistent="false" android:title="@string/learn_about_surface_title" android:key="learn_about_surface" android:fragment="com.android.settings.motion.MotionTutorialSettings">
+            <extra android:name="type" android:value="1" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/wfd_animation_view" android:layout_width="310.0dip" android:layout_height="171.0dip" android:scaleType="fitXY" />
+    <TextView android:textSize="19.0sp" android:textColor="#ffc8c8c8" android:layout_gravity="top|center" android:id="@id/wfd_connecting_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="28.0dip" android:text="@string/wifi_p2p_connecting" android:singleLine="true" />
+</LinearLayout>

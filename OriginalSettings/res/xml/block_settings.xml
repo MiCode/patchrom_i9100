@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:persistent="false" android:title="@string/call_block_title" android:key="call_block">
+        <PreferenceScreen android:title="@string/call_block_mode" android:key="callblock_mode_preference" android:summary="@string/block_number" />
+        <PreferenceScreen android:title="@string/call_block_list" android:key="callblock_list_preference" android:summary="@string/call_block_list_summary">
+            <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.callsettings.AutoRejectList" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/voice_call_block_title" android:key="voice_call_block">
+        <PreferenceScreen android:title="@string/voice_call_block_mode" android:key="voice_callblock_mode_preference" android:summary="@string/block_number" />
+        <PreferenceScreen android:title="@string/voice_call_block_list" android:key="voice_callblock_list_preference" android:summary="@string/call_block_list_summary">
+            <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.callsettings.AutoRejectList" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/video_call_block_title" android:key="video_call_block">
+        <PreferenceScreen android:title="@string/video_call_block_mode" android:key="video_callblock_mode_preference" android:summary="@string/block_number" />
+        <PreferenceScreen android:title="@string/video_call_block_list" android:key="video_callblock_list_preference" android:summary="@string/call_block_list_summary">
+            <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.callsettings.AutoRejectVideoCallList" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/message_block_title" android:key="message_block">
+        <PreferenceScreen android:title="@string/message_block_mode" android:key="messageblock_mode_preference" android:summary="@string/block_number_and_phrases" />
+        <PreferenceScreen android:title="@string/message_block_list" android:key="messageblock_list_preference" android:summary="@string/message_block_list_summary">
+            <intent android:targetPackage="com.android.mms" android:action="android.intent.action.MAIN" android:targetClass="com.android.mms.spam.SetupSpamNumberList" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/message_block_phrase_list" android:key="messageblock_list_preference" android:summary="@string/message_block_phrase_list_summary">
+            <intent android:targetPackage="com.android.mms" android:action="android.intent.action.MAIN" android:targetClass="com.android.mms.spam.SetupSpamKeywordList" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

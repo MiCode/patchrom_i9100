@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:minWidth="75.0dip" android:minHeight="100.0px" android:initialLayout="@layout/drivingmode_widget" android:previewImage="@drawable/driving_widget_preview"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

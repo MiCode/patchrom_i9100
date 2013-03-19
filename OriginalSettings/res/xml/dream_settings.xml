@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/screensaver_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <com.android.settings.DreamComponentPreference android:persistent="false" android:title="@string/screensaver_component_title" android:key="screensaver_component" />
+    <com.android.settings.DreamTesterPreference android:persistent="false" android:title="@string/screensaver_test" android:key="test" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/screensaver_activate_on_dock_title" android:key="activate_on_dock" android:defaultValue="true" />
+</PreferenceScreen>

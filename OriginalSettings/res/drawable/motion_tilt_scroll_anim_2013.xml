@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="500" android:drawable="@drawable/motion_tilt_to_scroll_01" />
+    <item android:duration="500" android:drawable="@drawable/motion_tilt_to_scroll_02" />
+    <item android:duration="500" android:drawable="@drawable/motion_tilt_to_scroll_03" />
+    <item android:duration="500" android:drawable="@drawable/motion_tilt_to_scroll_04" />
+    <item android:duration="2000" android:drawable="@drawable/motion_tilt_to_scroll_05" />
+</animation-list>

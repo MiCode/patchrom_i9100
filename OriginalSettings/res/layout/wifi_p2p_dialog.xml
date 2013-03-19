@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="300.0sp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/wifi_p2p_device_info" style="?android:attr/textAppearanceSmall" />
+        <TextView android:id="@id/device_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="?android:attr/textAppearanceMedium" />
+        <TextView android:id="@id/device_address" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" style="?android:attr/textAppearanceMedium" />
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/wifi_p2p_wps_setup" style="?android:attr/textAppearanceSmall" />
+        <Spinner android:entries="@array/wifi_p2p_wps_setup" android:id="@id/wps_setup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:prompt="@string/wifi_p2p_wps_setup" />
+        <LinearLayout android:orientation="vertical" android:id="@id/wps_pin_entry" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:text="@string/wifi_p2p_wps_pin" style="@style/wifi_item_label" />
+            <EditText android:id="@id/wps_pin" android:singleLine="true" android:inputType="textPassword" style="@style/wifi_item_content" />
+        </LinearLayout>
+        <CheckBox android:id="@id/persist_network" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/wifi_p2p_persist_network" style="?android:attr/textAppearanceSmall" />
+    </LinearLayout>
+</ScrollView>

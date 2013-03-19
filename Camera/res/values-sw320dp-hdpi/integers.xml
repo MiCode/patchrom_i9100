@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="sharing_device_dialog_max_height">436</integer>
+    <integer name="sidemenu_left_num_of_item">4</integer>
+    <integer name="guideline_bottom_interval">0</integer>
+    <integer name="item_list_type_text_font_size">24</integer>
+    <integer name="item_editableshortcut_type_font_size">18</integer>
+    <integer name="datatext_font_size">24</integer>
+    <integer name="contextmenu_edit_font_size">22</integer>
+    <integer name="dialogpopup_message_font_size">27</integer>
+    <integer name="dialogpopup_button_font_size">24</integer>
+    <integer name="listtypemenu_title_font_size">20</integer>
+    <integer name="setting_title_font_size">20</integer>
+    <integer name="slidermenu_zoom_value_text_font_size">20</integer>
+    <integer name="list_type_text_font_size">22</integer>
+    <integer name="profile_menu_title_font_size">20</integer>
+    <integer name="profile_name_font_size">20</integer>
+    <integer name="sel_pic_title_font_size">20</integer>
+    <integer name="sel_pic_item_text_font_size">20</integer>
+    <integer name="baseindicator_text_size">20</integer>
+    <integer name="capture_progressbar_text_size">25</integer>
+    <integer name="capture_help_text_size">20</integer>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/glance_view_setting_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/glance_view_setting_guide_content" android:key="guide_text" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/glance_view_battery_charging_info" android:key="battery" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/glance_view_notification" android:key="notification" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/glance_view_missed_call" android:key="missed_call" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/glance_view_unread_message" android:key="unread_message" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/glance_view_now_playing_music" android:key="current_music" />
+</PreferenceScreen>

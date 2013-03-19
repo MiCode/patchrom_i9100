@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/wifi_picker_dialog_fragment_layout" android:layout_width="fill_parent" android:layout_height="356.0dip" />
+    <View android:background="@drawable/divider_horizontal_dark" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textSize="17.0sp" android:textStyle="bold" android:textColor="@drawable/tw_popup_button_text_holo_dark" android:id="@id/wifi_picker_dialog_cancel" android:background="@drawable/tw_popup_button_background" android:layout_width="fill_parent" android:layout_height="39.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="4.0dip" android:text="@string/cancel" />
+    </LinearLayout>
+</LinearLayout>

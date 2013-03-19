@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="#ff1b2a31" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:text="@string/pen_help_quickcmd_msg" style="@style/pen_help_title" />
+        <TextView android:id="@id/qcommand_open_title" android:text="@string/pen_help_quickcmd_call_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_quickcmd_call_msg" style="@style/pen_help_msg" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/quickcommand_call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/quickcommand_call_play" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMY_00c8" android:layout_centerInParent="true" android:contentDescription="@null" />
+        </RelativeLayout>
+        <TextView android:id="@id/qcommand_write_title" android:text="@string/pen_help_quickcmd_write_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_quickcmd_write_msg" style="@style/pen_help_msg" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00cd" android:contentDescription="@null" />
+        <TextView android:id="@id/qcommand_predefined_title" android:text="@string/pen_help_quickcmd_execute_predefined_title" style="@style/pen_help_title" />
+        <TextView android:id="@id/qcommand_predefined_msg1" android:text="@string/pen_help_quickcmd_execute_predefined_msg_a" style="@style/pen_help_msg" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/quickcommand_execute_a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/quickcommand_execute_a_play" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMY_00c8" android:layout_centerInParent="true" android:contentDescription="@null" />
+        </RelativeLayout>
+        <TextView android:id="@id/qcommand_predefined_msg2" android:text="@string/pen_help_quickcmd_execute_predefined_msg_b" style="@style/pen_help_msg" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/quickcommand_execute_b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/quickcommand_execute_b_play" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMY_00c8" android:layout_centerInParent="true" android:contentDescription="@null" />
+        </RelativeLayout>
+        <TextView android:id="@id/qcommand_inapp_title" android:text="@string/pen_help_quickcmd_execute_inapp_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_quickcmd_execute_inapp_msg1" style="@style/pen_help_msg" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/quickcommand_search_apps_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/quickcommand_search_apps_1_play" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMY_00c8" android:layout_centerInParent="true" android:contentDescription="@null" />
+        </RelativeLayout>
+        <TextView android:text="@string/pen_help_quickcmd_execute_inapp_msg2_new" style="@style/pen_help_msg" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/quickcommand_search_apps_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:contentDescription="@null" />
+            <ImageView android:id="@id/quickcommand_search_apps_2_play" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/APKTOOL_DUMMY_00c8" android:layout_centerInParent="true" android:contentDescription="@null" />
+        </RelativeLayout>
+        <TextView android:id="@id/qcommand_use_title" android:text="@string/pen_help_quickcmd_use_title" style="@style/pen_help_title" />
+        <TextView android:text="@string/pen_help_quickcmd_use_msg" style="@style/pen_help_msg" />
+        <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_00df" android:contentDescription="@null" />
+        <TextView android:id="@id/qcommand_add_title" android:text="@string/pen_help_quickcmd_add_title" style="@style/pen_help_title" />
+        <TextView android:id="@id/qcommand_add_msg1" android:text="@string/pen_help_quickcmd_add_msg1" style="@style/pen_help_msg" />
+        <TextView android:id="@id/qcommand_add_msg2" android:text="@string/pen_help_quickcmd_add_msg2" style="@style/pen_help_msg" />
+        <TextView android:id="@id/qcommand_add_msg3" android:text="@string/pen_help_quickcmd_add_msg3" style="@style/pen_help_msg" />
+        <TextView android:id="@id/qcommand_add_msg4" android:text="@string/pen_help_quickcmd_add_msg4" style="@style/pen_help_msg" />
+        <TextView android:id="@id/qcommand_delete_title" android:text="@string/pen_help_quickcmd_delete_title" style="@style/pen_help_title" />
+        <TextView android:id="@id/qcommand_delete_msg1" android:text="@string/pen_help_quickcmd_delete_msg1" style="@style/pen_help_msg" />
+        <TextView android:id="@id/qcommand_delete_msg2" android:text="@string/pen_help_quickcmd_delete_msg2" style="@style/pen_help_msg" />
+        <TextView android:id="@id/qcommand_delete_msg3" android:text="@string/pen_help_quickcmd_delete_msg3" style="@style/pen_help_msg" />
+        <TextView android:id="@id/qcommand_delete_msg4" android:text="@string/pen_help_quickcmd_delete_msg4" style="@style/pen_help_msg" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/lock_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/display_settings" />
+    <SwitchPreferenceScreen android:title="@string/lock_screen_shortcut_title" android:key="lock_screen_shortcut" android:summary="@string/lock_screen_shortcut_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.lockscreenshortcut.LockScreenShortcutSettings" />
+    </SwitchPreferenceScreen>
+    <SwitchPreferenceScreen android:title="@string/information_ticker" android:key="information_ticker" android:summary="@string/information_ticker_summary" android:fragment="com.android.settings.InformationTicker" />
+    <CheckBoxPreference android:title="@string/clock" android:key="clock" android:summary="@string/clock_summary" />
+    <SwitchPreferenceScreen android:title="@string/dualclock_settings_title" android:key="dualclock_settings" android:summary="@string/dualclock_settings_summary" android:dependency="clock" android:fragment="com.android.settings.dualclock.DualClockSetting" />
+    <SwitchPreferenceScreen android:title="@string/weather" android:key="weather" android:summary="@string/weather_summary" />
+    <CheckBoxPreference android:title="@string/ripple_effect" android:key="ripple_effect" android:summary="@string/ripple_effect_summary" />
+    <PreferenceScreen android:title="@string/ink_effect" android:key="ink_effect">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.InkeffectPreview" />
+    </PreferenceScreen>
+    <CheckBoxPreference android:title="@string/help_text_title" android:key="help_text" android:summary="@string/help_text_summary" />
+    <PreferenceCategory android:title="@string/features_category_title" android:key="feature_category" />
+    <SwitchPreferenceScreen android:title="@string/motion_camera_short_cut_title" android:key="camera_short_cut" android:summary="@string/motion_camera_short_cut_summary" android:fragment="com.android.settings.motion.MotionView">
+        <extra android:name="title" android:value="@string/motion_camera_short_cut_title" />
+        <extra android:name="sensitivity" android:value="false" />
+    </SwitchPreferenceScreen>
+    <CheckBoxPreference android:title="@string/samsung_unlock_option_say_your_wakeup_command_to_unlock_screen" android:key="say_your_wakeup" android:summary="@string/wakeup_in_lockscreen_summary" />
+    <PreferenceScreen android:title="@string/samsung_unlock_option_set_wakeup_command" android:key="set_wakeup_command">
+        <intent android:action="android.intent.action.VOICE_SETTING_SET_WAKEUP_COMMAND" />
+    </PreferenceScreen>
+</PreferenceScreen>

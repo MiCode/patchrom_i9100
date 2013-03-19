@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/information_ticker"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <ListPreference android:persistent="false" android:entries="@array/contents_type_entries" android:title="@string/contents_type" android:key="contents_type" android:summary="" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/contents_type_values" />
+    <ListPreference android:persistent="false" android:entries="@array/sliding_speed_entries" android:title="@string/sliding_speed" android:key="sliding_speed" android:summary="" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/sliding_speed_values" />
+    <PreferenceScreen android:title="@string/ticker_settings" android:key="ticker_settings" android:summary="@string/ticker_news_settings" />
+    <ListPreference android:persistent="false" android:entries="@array/facebook_auto_refresh_entries" android:title="@string/facebook_auto_refresh_title" android:key="facebook_auto_refresh" android:summary="" android:entryValues="@array/auto_refresh_values" />
+</PreferenceScreen>

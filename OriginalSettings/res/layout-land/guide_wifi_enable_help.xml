@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/guide_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:touchwiz="http://schemas.android.com/apk/res/com.android.settings">
+    <com.sec.android.touchwiz.widget.TwTouchPunchView android:id="@id/guide_punch" android:layout_width="@dimen/guide_switcher_width" android:layout_height="@dimen/guide_switcher_height" android:layout_marginTop="@dimen/guide_switcher_land_margin_top" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" touchwiz:punchshape="rectangle" touchwiz:punchshow="false" />
+    <TextView android:id="@id/guide_bubble_summary" android:background="@drawable/step_bubble_02" android:layout_marginTop="@dimen/guide_actionbar_bubble_margin_top" android:text="@string/guide_tap_area" android:layout_below="@id/guide_punch" android:layout_alignParentLeft="true" style="@style/GuideArrowBubbleText.Up" />
+</RelativeLayout>

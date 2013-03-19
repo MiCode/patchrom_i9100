@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="360.0dip" android:layout_height="360.0dip" android:layout_marginTop="74.0dip">
+        <com.android.settings.personalvibration.BackgroundView android:id="@id/background" android:layout_width="360.0dip" android:layout_height="360.0dip" />
+        <Button android:layout_gravity="center" android:id="@id/center_button" android:background="@drawable/play_button" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="100.0dip" />
+        <TextView android:textSize="35.0sp" android:textColor="#ffffffff" android:gravity="center" android:layout_gravity="center" android:id="@id/center_text" android:paddingLeft="50.0dip" android:paddingRight="50.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/tap_to_start" />
+    </FrameLayout>
+    <LinearLayout android:gravity="bottom" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/stop_button_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textAppearance="?android:actionMenuTextAppearance" android:textColor="?android:actionMenuTextColor" android:id="@id/stop_button" android:background="@drawable/action_bar_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/service_stop" android:layout_weight="2.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:id="@id/button_layout" android:background="@drawable/task_manager_header" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:textAppearance="?android:actionMenuTextAppearance" android:textColor="?android:actionMenuTextColor" android:id="@id/right_button" android:background="@drawable/action_bar_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+            <View android:layout_gravity="center" android:background="@drawable/btn_divider_line" android:layout_width="1.0dip" android:layout_height="29.0dip" />
+            <Button android:textAppearance="?android:actionMenuTextAppearance" android:textColor="?android:actionMenuTextColor" android:id="@id/left_button" android:background="@drawable/action_bar_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/menu_save" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/widget_4x4_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/widget_title_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="#ff223b4d" android:id="@id/widget_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="@string/favorite_settings" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_line_one" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_ringtone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_ringtone" android:background="@drawable/ic_settings_widget_ringtone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_ringtone" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/incoming_call_volume_title" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:background="#ff87939c" android:layout_width="1.0dip" android:layout_height="88.0dip" android:layout_marginTop="25.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_wallpaper" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_wallpaper" android:background="@drawable/ic_settings_widget_wallpaper" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_wallpaper" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/wallpapers" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:background="#ff87939c" android:layout_width="1.0dip" android:layout_height="88.0dip" android:layout_marginTop="25.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_volume" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_volume" android:background="@drawable/ic_settings_widget_sound" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_volume" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/all_volume_title" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_line_two" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_font_size" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_font_size" android:background="@drawable/ic_settings_widget_font_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_font_size" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/title_font_size" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:background="#ff87939c" android:layout_width="1.0dip" android:layout_height="88.0dip" android:layout_marginTop="35.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_data_usage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_data_usage" android:background="@drawable/ic_settings_widget_data_usage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_data_usage" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/data_usage_summary_title" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:background="#ff87939c" android:layout_width="1.0dip" android:layout_height="88.0dip" android:layout_marginTop="35.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_battery" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_battery" android:background="@drawable/ic_settings_widget_battery" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_battery" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/power_usage_summary_title" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/widget_line_three" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_brightness" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_brightness" android:background="@drawable/ic_settings_widget_display" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_brightness" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/brightness" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:background="#ff87939c" android:layout_width="1.0dip" android:layout_height="88.0dip" android:layout_marginTop="35.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_account_and_sync" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_account_and_sync" android:background="@drawable/ic_settings_widget_sync" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_account_and_sync" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/account_settings" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:background="#ff87939c" android:layout_width="1.0dip" android:layout_height="88.0dip" android:layout_marginTop="35.0dip" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/btn_settings" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="33.3">
+            <ImageView android:id="@id/img_settings" android:background="@drawable/ic_settings_widget_settings" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" />
+            <TextView android:textSize="16.0dip" android:textColor="#ff223b4d" android:id="@id/text_settings" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/settings_label" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

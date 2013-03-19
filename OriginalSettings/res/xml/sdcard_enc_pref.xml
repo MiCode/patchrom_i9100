@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sdcard_encrypt_settings" android:key="external_sd_enc_pref">
+        <CheckBoxPreference android:persistent="false" android:title="@string/sdcard_encrypt_title_setting" android:key="external_default" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/sdcard_encrypt_title_full_encryption" android:key="external_full" android:dependency="external_default" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/sdcard_encrypt_title_exclude_mm_files" android:key="external_file_exclude" android:dependency="external_default" />
+    </PreferenceCategory>
+</PreferenceScreen>

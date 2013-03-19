@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">密码必须至少包含%d个字母</item>
+        <item quantity="one">密码必须至少包含一个字母</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">密码必须至少包含%d个小写字母</item>
+        <item quantity="one">密码必须至少包含一个小写字母</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">密码必须至少包含%d个大写字母</item>
+        <item quantity="one">密码必须至少包含一个大写字母</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">密码必须至少包含%d个数字</item>
+        <item quantity="one">密码必须至少包含一个数字</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">密码必须至少包含%d个符号</item>
+        <item quantity="one">密码必须至少包含1个符号</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">密码必须至少包含%d个数字或符号</item>
+        <item quantity="one">密码必须至少包含1个数字或符号</item>
+    </plurals>
+    <plurals name="lock_timeout_minutes">
+        <item quantity="other">%d 分钟</item>
+        <item quantity="one">1 分钟</item>
+    </plurals>
+    <plurals name="lock_timeout_seconds">
+        <item quantity="other">%d秒</item>
+        <item quantity="one">1 秒</item>
+    </plurals>
+</resources>

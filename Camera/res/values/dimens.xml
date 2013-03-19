@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_slider_layout_width">194.66998dip</dimen>
+    <dimen name="default_slider_bar_margin_top">40.0dip</dimen>
+    <dimen name="default_slider_focus_bar_margin_top">32.0dip</dimen>
+    <dimen name="default_slider_image_width">3.0dip</dimen>
+    <dimen name="default_slider_image_height">12.0dip</dimen>
+    <dimen name="default_slider_focus_image_width">4.0dip</dimen>
+    <dimen name="default_slider_focus_image_height">28.0dip</dimen>
+    <dimen name="screen_full_width">533.2969dip</dimen>
+    <dimen name="screen_full_height">320.0dip</dimen>
+    <dimen name="af_touch_rect_width">150.0px</dimen>
+    <dimen name="af_touch_rect_height">97.0px</dimen>
+    <dimen name="af_focus_button_incr_val">170.0px</dimen>
+    <dimen name="snapbutton_width">108.0px</dimen>
+    <dimen name="snapbutton_pos_y">68.0px</dimen>
+    <dimen name="cafbutton_width">100.0px</dimen>
+    <dimen name="cafbutton_height">84.0px</dimen>
+    <dimen name="cafbutton_pos_y">580.0px</dimen>
+    <dimen name="camcorder_recording_menu_shift">0.0px</dimen>
+    <dimen name="camcorder_recording_bottom_menu_bar">0.0px</dimen>
+    <dimen name="stopbutton_pos_y">480.0px</dimen>
+    <dimen name="recording_icon_pos_x">0.0px</dimen>
+    <dimen name="recording_icon_pos_y">0.0px</dimen>
+    <dimen name="speed_indicator_width">270.0px</dimen>
+    <dimen name="speed_indicator_height">48.0px</dimen>
+    <dimen name="smileshot_help_text_width">700.0px</dimen>
+    <dimen name="smileshot_help_text_height">120.0px</dimen>
+    <dimen name="smileshot_blink_image_width">32.0px</dimen>
+    <dimen name="smileshot_blink_image_height">32.0px</dimen>
+    <dimen name="smileshot_rect_thickness">5.0px</dimen>
+    <dimen name="panoramashot_viewfinder_thickness">4.0px</dimen>
+    <dimen name="panoramashot_root_shift">0.0px</dimen>
+    <dimen name="list_pos_x">0.0px</dimen>
+    <dimen name="devicelist_menu_width">552.0px</dimen>
+    <dimen name="devicelist_menu_height">705.0px</dimen>
+    <dimen name="icon_image_pos_x">12.0px</dimen>
+    <dimen name="icon_image_pos_y">12.0px</dimen>
+    <dimen name="icon_image_width">80.0px</dimen>
+    <dimen name="icon_image_height">80.0px</dimen>
+    <dimen name="waiting_icon_image_pos_x">51.0px</dimen>
+    <dimen name="waiting_icon_image_pos_y">53.0px</dimen>
+    <dimen name="waiting_icon_image_width">24.0px</dimen>
+    <dimen name="waiting_icon_image_height">24.0px</dimen>
+    <dimen name="list_type_text_pos_x">102.0px</dimen>
+    <dimen name="list_type_text_pos_y">0.0px</dimen>
+    <dimen name="list_type_text_width">352.0px</dimen>
+    <dimen name="checkbox_x_offset_from_right">75.0px</dimen>
+    <dimen name="checkbox_pos_y">21.0px</dimen>
+    <dimen name="separator_height">2.0px</dimen>
+    <dimen name="separator_pos_x">0.0px</dimen>
+    <dimen name="duration">3000.0px</dimen>
+    <dimen name="repeat">50.0px</dimen>
+    <dimen name="sns_setting_menu_height">420.0px</dimen>
+    <dimen name="sns_image_icon_pos_x">295.0px</dimen>
+    <dimen name="sns_image_icon_pos_y">20.0px</dimen>
+    <dimen name="sns_set_list_type_text_pos_x">17.0px</dimen>
+    <dimen name="sns_set_list_type_text_width">505.0px</dimen>
+    <dimen name="profile_menu_width">700.0px</dimen>
+    <dimen name="profile_menu_height">400.0px</dimen>
+    <dimen name="profile_menu_title_height">108.0px</dimen>
+    <dimen name="profile_menu_title_left_padding">51.0px</dimen>
+    <dimen name="profile_menu_title_top_padding">14.0px</dimen>
+    <dimen name="profile_menu_title_icon_pos_x">22.0px</dimen>
+    <dimen name="profile_menu_title_icon_pos_y">23.0px</dimen>
+    <dimen name="profile_name_text_pos_x">172.0px</dimen>
+    <dimen name="profile_name_text_pos_y">162.0px</dimen>
+    <dimen name="profile_name_text_width">500.0px</dimen>
+    <dimen name="profile_name_text_height">84.0px</dimen>
+    <dimen name="profile_ok_btn_pos_x">25.0px</dimen>
+    <dimen name="profile_ok_btn_pos_y">280.0px</dimen>
+    <dimen name="profile_ok_btn_width">320.0px</dimen>
+    <dimen name="profile_ok_btn_height">78.0px</dimen>
+    <dimen name="profile_image_pos_x">46.0px</dimen>
+    <dimen name="profile_image_pos_y">146.0px</dimen>
+    <dimen name="profile_image_width">104.0px</dimen>
+    <dimen name="profile_image_height">104.0px</dimen>
+    <dimen name="profile_cancel_btn_pos_x">356.0px</dimen>
+    <dimen name="profile_cancel_btn_pos_y">280.0px</dimen>
+    <dimen name="profile_cancel_btn_width">320.0px</dimen>
+    <dimen name="profile_cancel_btn_height">78.0px</dimen>
+    <dimen name="sel_pic_menu_pos_x">248.0px</dimen>
+    <dimen name="sel_pic_menu_pos_y">107.0px</dimen>
+    <dimen name="sel_pic_menu_width">700.0px</dimen>
+    <dimen name="sel_pic_menu_height">506.0px</dimen>
+    <dimen name="sel_pic_title_height">108.0px</dimen>
+    <dimen name="sel_pic_title_left_padding">58.0px</dimen>
+    <dimen name="sel_pic_title_top_padding">12.0px</dimen>
+    <dimen name="sel_pic_list_pos_x">0.0px</dimen>
+    <dimen name="sel_pic_list_item_height">128.0px</dimen>
+    <dimen name="sel_pic_cancel_btn_pos_y">390.0px</dimen>
+    <dimen name="sel_pic_cancel_btn_pos_width">450.0px</dimen>
+    <dimen name="sel_pic_cancel_btn_pos_height">79.0px</dimen>
+    <dimen name="sel_pic_title_icon_pos_x">22.0px</dimen>
+    <dimen name="sel_pic_title_icon_pos_y">23.0px</dimen>
+    <dimen name="sel_pic_item_text_width">608.0px</dimen>
+    <dimen name="sel_pic_item_text_height">128.0px</dimen>
+    <dimen name="sel_pic_item_text_left_padding">42.0px</dimen>
+    <dimen name="sel_pic_item_list_width">700.0px</dimen>
+    <dimen name="effect_menu_width">404.0px</dimen>
+    <dimen name="list_with_ok_type_text_width">314.0px</dimen>
+    <dimen name="okbutton_offset_from_right">12.0px</dimen>
+    <dimen name="okbutton_width">168.0px</dimen>
+    <dimen name="okbutton_height">54.0px</dimen>
+    <dimen name="thumbnail_list_menu_width">226.0px</dimen>
+    <dimen name="thumbnail_list_item_width">180.0px</dimen>
+    <dimen name="thumbnail_list_item_height">180.0px</dimen>
+    <dimen name="thumbnail_type_button_width">134.0px</dimen>
+    <dimen name="thumbnail_type_button_height">180.0px</dimen>
+    <dimen name="thumbnail_type_button_margin_y">16.0px</dimen>
+    <dimen name="thumbnail_type_text_height">64.0px</dimen>
+    <dimen name="thumbnail_type_text_margin_y">154.0px</dimen>
+    <dimen name="editableshortcut_helptext_x_margin">20.0px</dimen>
+    <dimen name="camera_crop_outline_width">3.0px</dimen>
+    <dimen name="distance_swipe_to_go_gallery">200.0px</dimen>
+    <dimen name="velocity_swipe_to_go_gallery">250.0px</dimen>
+    <dimen name="app_defaultsize_w">650.0px</dimen>
+    <dimen name="app_defaultsize_h">420.0px</dimen>
+    <dimen name="app_minimumsize_w">650.0px</dimen>
+    <dimen name="app_minimumsize_h">420.0px</dimen>
+    <dimen name="sidemenu_item_hover_popup_offset_x">7.0dip</dimen>
+    <dimen name="sidemenu_item_hover_popup_offset_y">-8.0dip</dimen>
+    <dimen name="sidemenu_bottom_item_hover_popup_offset_y">20.0dip</dimen>
+    <item type="dimen" name="APKTOOL_DUMMY_025a">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_025b">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_025c">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_025d">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_025e">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_025f">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0260">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0261">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0262">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0263">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0264">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0265">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0266">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0267">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0268">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0269">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_026a">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_026b">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_026c">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_026d">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_026e">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_026f">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0270">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0271">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0272">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0273">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0274">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0275">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0276">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0277">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0278">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0279">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_027a">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_027b">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_027c">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_027d">false</item>
+</resources>

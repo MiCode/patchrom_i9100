@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:touchwiz="http://schemas.android.com/apk/res/com.android.settings">
+    <com.sec.android.touchwiz.widget.TwTouchPunchView android:id="@id/guide_punch" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/guide_actionbar_land_height" touchwiz:punchshape="rectangle" touchwiz:punchshow="false" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" layout="@layout/guide_dialog_bubble" />
+</RelativeLayout>

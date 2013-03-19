@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/sensitivity_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:persistent="false" android:title="@string/air_glance_view" android:key="glance_view" android:summary="@string/air_glance_view_descption" android:fragment="com.android.settings.motion.GlanceViewSettings" />
+    <PreferenceScreen android:title="@string/g_sensor_title" android:key="g_sensor" android:summary="@string/g_sensor_summary">
+        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.GSensorSettings" />
+    </PreferenceScreen>
+    <PreferenceCategory android:persistent="false" android:title="@string/sensitivity_settings_title" android:key="category_sensitivity_setting" />
+    <com.android.settings.motion.SensitivityPreference android:title="@string/tilt_title" android:key="tilt_sensitivity" android:summary="@string/tilt_summary" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/sensitivity_title" />
+    <com.android.settings.motion.SensitivityPreference android:title="@string/tilt_to_scroll_list_title" android:key="tilt_to_scroll_list_sensitivity" android:summary="@string/tilt_to_scroll_list_summary" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/sensitivity_title" />
+    <com.android.settings.motion.SensitivityPreference android:title="@string/pan_title" android:key="pan_sensitivity" android:summary="@string/pan_summary" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/sensitivity_title" />
+    <com.android.settings.motion.SensitivityPreference android:title="@string/pan_to_browse_image_title" android:key="pan_to_browse_image_sensitivity" android:summary="@string/pan_to_browse_image_summary" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/sensitivity_title" />
+</PreferenceScreen>

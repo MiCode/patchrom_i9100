@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="700.0px" android:layout_height="196.0px"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/photo" android:layout_width="104.0px" android:layout_height="104.0px" android:layout_marginLeft="46.0px" android:src="@drawable/camera_popup_thumb" />
+    <EditText android:layout_gravity="center_vertical" android:id="@id/name" android:layout_width="500.0px" android:layout_height="84.0px" android:layout_marginLeft="22.0px" android:text="@string/profile_user_default_name" android:inputType="textCapWords" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/system_update"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/update_prl" android:key="update_prl" />
+    <PreferenceScreen android:title="@string/update_profile" android:key="update_profile" />
+    <PreferenceScreen android:title="@string/update_samsung_software" android:key="update_samsung_software" />
+    <PreferenceScreen android:title="@string/update_firmware" android:key="update_firmware" />
+</PreferenceScreen>

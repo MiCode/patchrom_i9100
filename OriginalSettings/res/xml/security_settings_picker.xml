@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_none_title" android:key="unlock_set_none" android:summary="@string/unlock_set_unlock_none_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/motion_title" android:key="unlock_set_motion" android:summary="@string/unlock_set_unlock_none_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_biometric_weak_title" android:key="unlock_set_biometric_weak" android:summary="@string/unlock_set_unlock_biometric_weak_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_biometric_weak_with_voice_title" android:key="unlock_set_biometric_weak_with_voice" android:summary="@string/unlock_set_unlock_biometric_weak_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_signature_title" android:key="unlock_set_signature" android:summary="@string/unlock_set_unlock_signature_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_pattern_title" android:key="unlock_set_pattern" android:summary="@string/unlock_set_unlock_pattern_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_pin_title" android:key="unlock_set_pin" android:summary="@string/unlock_set_unlock_pin_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_password_title" android:key="unlock_set_password" android:summary="@string/unlock_set_unlock_password_summary" />
+    <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_off_title" android:key="unlock_set_off" android:summary="@string/unlock_set_unlock_off_summary" />
+</PreferenceScreen>

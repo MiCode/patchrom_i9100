@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/remote_controls_mbody"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.fmm.MultipleLineTitlePreference android:title="@string/remote_controls_message" android:selectable="false" android:key="remote_controls_message" />
+    <PreferenceCategory android:title="@string/account_registration" android:key="category_account" />
+    <Preference android:key="samsung_account" />
+    <Preference android:key="google_account" />
+    <PreferenceCategory android:title="@string/location_consent" android:key="category_location" />
+    <CheckBoxPreference android:title="@string/location_network_based" android:key="location_network" android:summaryOn="@string/location_neighborhood_level" android:summaryOff="@string/location_networks_disabled" />
+</PreferenceScreen>

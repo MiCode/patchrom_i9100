@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="500" android:drawable="@drawable/wifi_ap_error1_1" />
+    <item android:duration="500" android:drawable="@drawable/wifi_ap_error1_2" />
+    <item android:duration="500" android:drawable="@drawable/wifi_ap_error1_3" />
+    <item android:duration="1000" android:drawable="@drawable/wifi_ap_error1_4" />
+</animation-list>

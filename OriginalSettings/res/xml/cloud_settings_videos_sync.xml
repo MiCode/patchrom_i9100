@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:layout="@layout/empty_text_videos" android:selectable="false" android:key="videos_empty_text" />
+</PreferenceScreen>

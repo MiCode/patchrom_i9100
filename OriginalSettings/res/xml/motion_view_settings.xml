@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/tilt_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sensitivity_settings_title" android:key="sensitivity_category">
+        <com.android.settings.motion.SensitivityPreference android:title="@string/sensitivity_title" android:key="sensitivity" android:widgetLayout="@layout/round_more_icon" android:dialogTitle="@string/sensitivity_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/motion_tutorial_title" android:key="motion_tutorial_category">
+        <Preference android:title="@string/learn_about_tilt_title" android:key="tutorial" />
+    </PreferenceCategory>
+</PreferenceScreen>

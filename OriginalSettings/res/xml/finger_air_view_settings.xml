@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/motion_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/finger_air_view_highlight_title" android:key="highlight" android:summary="@string/finger_air_view_highlight_summary" />
+    <CheckBoxPreference android:title="@string/finger_air_view_magnifier_title" android:key="magnifier" android:summary="@string/finger_air_view_magnifier_summary" />
+    <CheckBoxPreference android:title="@string/finger_air_view_show_up_indicator_title" android:key="show_up_indicator" android:summary="@string/finger_air_view_show_up_indicator_summary" />
+    <CheckBoxPreference android:title="@string/finger_air_view_information_preview_title" android:key="information_preview" android:summary="@string/finger_air_view_information_preview_summary" />
+    <CheckBoxPreference android:title="@string/finger_air_view_full_text_title" android:key="full_text" android:summary="@string/finger_air_view_full_text_summary" />
+</PreferenceScreen>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider android:minWidth="110.0dip" android:minHeight="40.0dip" android:initialLayout="@layout/accessibility_widget" android:previewImage="@drawable/preview_mono_audio"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

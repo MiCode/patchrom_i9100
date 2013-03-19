@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="500" android:drawable="@drawable/APKTOOL_DUMMY_036f" />
+    <item android:duration="500" android:drawable="@drawable/APKTOOL_DUMMY_0370" />
+    <item android:duration="500" android:drawable="@drawable/APKTOOL_DUMMY_0371" />
+    <item android:duration="2000" android:drawable="@drawable/APKTOOL_DUMMY_0372" />
+</animation-list>

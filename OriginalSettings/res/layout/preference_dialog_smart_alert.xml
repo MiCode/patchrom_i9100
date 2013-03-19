@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:id="@id/smart_alert_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="7.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="7.0dip" android:text="@string/pick_up_tutorial_content" />
+        <ImageView android:layout_gravity="center" android:id="@id/img" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <CheckBox android:gravity="center" android:id="@id/do_not_show_again" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="20.0dip" android:text="@string/do_not_show_again" />
+    </LinearLayout>
+</ScrollView>

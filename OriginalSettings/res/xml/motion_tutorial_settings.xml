@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/motion_tutorial_settings_title" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/air_glance_view" android:key="glance_view" android:summary="@string/air_glance_view_descption" />
+    <Preference android:title="@string/pick_up_to_call_out_title" android:key="pick_up_to_call_out" android:summary="@string/pick_up_to_call_out_summary" />
+    <Preference android:title="@string/pick_up_title" android:key="pick_up" android:summary="@string/pick_up_summary" />
+    <Preference android:title="@string/double_tap_title" android:key="double_tap" android:summary="@string/double_tap_summary" />
+    <Preference android:title="@string/tilt_title" android:key="tilt" android:summary="@string/tilt_summary" />
+    <Preference android:title="@string/tilt_to_scroll_list_title" android:key="tilt_to_scroll_list" android:summary="@string/tilt_to_scroll_list_summary" />
+    <Preference android:title="@string/pan_title" android:key="pan" android:summary="@string/pan_summary" />
+    <Preference android:title="@string/pan_to_browse_image_title" android:key="pan_to_browse_image" android:summary="@string/pan_to_browse_image_summary" />
+    <Preference android:title="@string/shake_title" android:key="shake" android:summary="@string/shake_summary" />
+    <Preference android:title="@string/turn_over_title" android:key="turn_over" android:summary="@string/turn_over_summary" />
+    <Preference android:title="@string/palm_swipe_title" android:key="palm_swipe" android:summary="@string/palm_swipe_summary" />
+    <Preference android:title="@string/palm_touch_title" android:key="palm_touch" android:summary="@string/palm_touch_summary" />
+    <Preference android:title="@string/tap_and_twist_title" android:key="tap_and_twist" android:summary="@string/tap_and_twist_summary" />
+</PreferenceScreen>
