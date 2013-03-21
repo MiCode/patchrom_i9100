@@ -12,7 +12,7 @@ local-out-zip-file := MIUI_i9100.zip
 local-previous-target-dir := ~/workspace/ota_base/i9100_4.1
 
 # All apps from original ZIP, but has smali files chanded
-local-modified-apps := OriginalSettings Camera
+local-modified-apps := OriginalSettings Camera SecMediaProvider
 
 local-modified-jars :=
 
@@ -64,7 +64,7 @@ out/framework2.jar : out/framework.jar
 
 %.sign-plat : out/%
 #%.sign-plat : /home/gexudong/libra.jbmiui/out/target/product/maguro/system/app/%
-	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
+	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/media.x509.pem $(PORT_ROOT)/build/security/media.pk8  $< $<.signed
 	@echo push -- to --- phone
 	adb remount
 	adb push $<.signed /system/app/$*

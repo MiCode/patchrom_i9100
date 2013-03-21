@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">媒體</string>
+    <string name="app_label">媒體儲存空間</string>
+    <string name="upgrade_msg">正在升級媒體資料庫。</string>
+    <string name="artist_label">演出者</string>
+</resources>

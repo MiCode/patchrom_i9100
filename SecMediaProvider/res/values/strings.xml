@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">Media</string>
+    <string name="app_label">Media Storage</string>
+    <string name="upgrade_msg">Upgrading Media database.</string>
+    <string name="artist_label">Artist</string>
+    <string name="drm_licensed_message">Unable to set DRM protected content as ringtone or notification alert</string>
+</resources>

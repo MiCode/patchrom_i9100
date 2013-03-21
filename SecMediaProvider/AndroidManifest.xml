@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.media" android:versionCode="512" android:versionName="4.1.2-I9100ZSLSH" android:sharedUserLabel="@string/uid_label" package="com.android.providers.media"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_MTP" />
+    <uses-permission android:name="com.sec.factory.permission.KEYSTRING" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <application android:label="@string/app_label" android:process="android.process.media">
+        <uses-library android:name="sec_feature" />
+        <provider android:name="MediaProvider" android:multiprocess="false" android:authorities="media">
+            <grant-uri-permission android:pathPrefix="/external/" />
+            <path-permission android:readPermission="android.permission.READ_EXTERNAL_STORAGE" android:writePermission="android.permission.WRITE_EXTERNAL_STORAGE" android:pathPrefix="/external/" />
+        </provider>
+        <receiver android:name="MediaUpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="MediaScannerReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE" />
+                <data android:scheme="file" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MTP_FILE_SCAN" />
+            </intent-filter>
+        </receiver>
+        <service android:name="MediaScannerService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.IMediaScannerService" />
+            </intent-filter>
+        </service>
+        <receiver android:name="UsbReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+            </intent-filter>
+        </receiver>
+        <service android:name="MtpService" />
+        <activity android:theme="@style/RingtonePickerTheme" android:name="RingtonePickerActivity" android:excludeFromRecents="true" android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.RINGTONE_PICKER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="16" />
+</manifest>

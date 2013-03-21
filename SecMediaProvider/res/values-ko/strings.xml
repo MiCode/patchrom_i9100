@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="uid_label">미디어</string>
+    <string name="app_label">미디어 저장소</string>
+    <string name="upgrade_msg">미디어 데이터베이스 업그레이드 중</string>
+    <string name="artist_label">아티스트</string>
+</resources>
