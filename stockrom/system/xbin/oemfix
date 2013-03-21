@@ -1,0 +1,4 @@
+#!/system/bin/sh
+mkdir -p /data/system
+chgrp system /data/system
+chown system /data/system
