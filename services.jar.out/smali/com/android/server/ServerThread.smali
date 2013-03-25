@@ -149,6 +149,21 @@
     return-void
 .end method
 
+.method private addClipServiceExtra()V
+    .locals 2
+
+    .prologue
+    const-string v0, "miui.clipserviceext"
+
+    new-instance v1, Lcom/miui/server/ClipServiceExtra;
+
+    invoke-direct {v1}, Lcom/miui/server/ClipServiceExtra;-><init>()V
+
+    invoke-static {v0, v1}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    return-void
+.end method
+
 .method public run()V
     .locals 148
 
@@ -1448,6 +1463,8 @@
     invoke-direct {v9, v4}, Lcom/android/server/ClipboardService;-><init>(Landroid/content/Context;)V
 
     invoke-static {v3, v9}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/ServerThread;->addClipServiceExtra()V
     :try_end_20
     .catch Ljava/lang/Throwable; {:try_start_20 .. :try_end_20} :catch_f
 
