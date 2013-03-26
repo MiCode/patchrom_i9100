@@ -104,6 +104,12 @@
 
 .field mLocalAnimating:Z
 
+.field mMiuiHidden:Z
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_FIELD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+.end field
+
 .field mPendingDestroySurface:Landroid/view/Surface;
 
 .field final mPolicy:Landroid/view/WindowManagerPolicy;
@@ -4964,9 +4970,7 @@
 
     .line 1405
     :cond_1
-    iget-object v3, p0, Lcom/android/server/wm/WindowStateAnimator;->mSurface:Landroid/view/Surface;
-
-    invoke-virtual {v3}, Landroid/view/Surface;->show()V
+    invoke-static {p0}, Lcom/android/server/wm/WindowStateAnimator$Injector;->showSurface(Lcom/android/server/wm/WindowStateAnimator;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
