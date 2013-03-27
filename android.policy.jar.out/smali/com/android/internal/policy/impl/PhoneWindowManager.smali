@@ -6851,11 +6851,6 @@
 
     .line 2410
     :cond_1
-    const/16 v3, 0xbb6
-
-    if-eq v1, v3, :cond_0
-
-    .line 2415
     sget v3, Lcom/android/internal/policy/impl/MultiWindowReflector$LayoutParams;->TYPE_MULTI_WINDOW_CONTROL_BAR:I
 
     if-eq v1, v3, :cond_0
@@ -18912,17 +18907,8 @@
 
     const/16 v3, 0x7db
 
-    if-eq v2, v3, :cond_10
-
-    move-object/from16 v0, p2
-
-    iget v2, v0, Landroid/view/WindowManager$LayoutParams;->type:I
-
-    const/16 v3, 0xbb6
-
     if-ne v2, v3, :cond_11
 
-    :cond_10
     invoke-interface/range {p1 .. p1}, Landroid/view/WindowManagerPolicy$WindowState;->getGivenInsetsPendingLw()Z
 
     move-result v2
