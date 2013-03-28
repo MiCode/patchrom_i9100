@@ -5545,7 +5545,7 @@
 
     .line 1402
     :cond_5
-    new-instance v1, Lcom/android/internal/policy/impl/PasswordUnlockScreen;
+    new-instance v1, Lcom/android/internal/policy/impl/MiuiPasswordUnlockScreen;
 
     .end local v1           #unlockView:Landroid/view/View;
     iget-object v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mContext:Landroid/content/Context;
@@ -5560,9 +5560,17 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v3 .. v8}, Lcom/android/internal/policy/impl/PasswordUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;)V
+    invoke-direct/range {v3 .. v8}, Lcom/android/internal/policy/impl/MiuiPasswordUnlockScreen;-><init>(Landroid/content/Context;Landroid/content/res/Configuration;Lcom/android/internal/widget/LockPatternUtils;Lcom/android/internal/policy/impl/KeyguardUpdateMonitor;Lcom/android/internal/policy/impl/KeyguardScreenCallback;)V
 
     .restart local v1       #unlockView:Landroid/view/View;
+    move-object v3, v1
+
+    check-cast v3, Lcom/android/internal/policy/impl/MiuiPasswordUnlockScreen;
+
+    iget-boolean v4, p0, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->mEnableFallback:Z
+
+    invoke-virtual {v3, v4}, Lcom/android/internal/policy/impl/MiuiPasswordUnlockScreen;->setEnableFallback(Z)V
+
     goto/16 :goto_0
 
     .line 1409
