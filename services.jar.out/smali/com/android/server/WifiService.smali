@@ -3517,10 +3517,11 @@
 
     move-result-object v5
 
-    iput-object v5, v4, Landroid/app/Notification;->deleteIntent:Landroid/app/PendingIntent;
+    #iput-object v5, v4, Landroid/app/Notification;->deleteIntent:Landroid/app/PendingIntent;
 
-    .line 3207
     .end local v0           #deleteIntent:Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/android/server/WifiService;->setPickWifiIntent()V
+
     :cond_3
     iget-object v4, p0, Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
 
@@ -9624,4 +9625,29 @@
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     throw v6
+.end method
+
+.method private setPickWifiIntent()V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lcom/android/server/WifiService;->mNotification:Landroid/app/Notification;
+
+    iget-object v1, p0, Lcom/android/server/WifiService;->mContext:Landroid/content/Context;
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v3, "android.net.wifi.PICK_WIFI_NETWORK"
+
+    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1, v4, v2, v4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v1
+
+    iput-object v1, v0, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
+
+    return-void
 .end method
