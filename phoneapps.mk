@@ -27,6 +27,7 @@ private-phone-apps := ApplicationsProvider \
 					  Preconfig \
 					  PreloadInstaller \
 					  SamsungTTS \
+					  SamsungIME \
 					  SecMediaProvider \
 					  SecurityProvider \
 					  Stk \
