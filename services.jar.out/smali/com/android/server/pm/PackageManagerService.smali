@@ -1301,24 +1301,14 @@
 
     .line 1304
     :goto_1
-    new-instance v2, Lcom/android/server/pm/MiuiInstaller;
+    new-instance v2, Lcom/android/server/pm/Installer;
 
-    invoke-direct {v2}, Lcom/android/server/pm/MiuiInstaller;-><init>()V
+    invoke-direct {v2}, Lcom/android/server/pm/Installer;-><init>()V
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
-    move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/android/server/pm/PackageManagerService;->mInstaller:Lcom/android/server/pm/Installer;
-
-    invoke-static {v2, v3}, Lcom/android/server/pm/PackageManagerService$Injector;->startMiuiShellService(Landroid/content/Context;Lcom/android/server/pm/Installer;)V
-
-    .line 1306
     const-string v2, "window"
 
     move-object/from16 v0, p1
