@@ -98,6 +98,29 @@
     return-object v0
 .end method
 
+.method private isForbidDoubleClick(Landroid/content/Intent;)Z
+    .locals 2
+    .parameter "intent"
+
+    .prologue
+    const/4 v1, 0x0
+
+    const-string v0, "forbid_double_click"
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return v1
+
+    :cond_0
+    const/4 v1, 0x1
+
+    goto :goto_0
+.end method
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
@@ -106,6 +129,15 @@
     .parameter
 
     .prologue
+    invoke-direct {p0, p2}, Lcom/sec/android/app/fm/MediaButtonReceiver;->isForbidDoubleClick(Landroid/content/Intent;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_miui_0
+
+    return-void
+
+    :cond_miui_0
     const/4 v4, 0x2
 
     const/4 v6, 0x0
