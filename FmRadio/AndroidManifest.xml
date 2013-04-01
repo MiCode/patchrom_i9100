@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" package="com.sec.android.app.fm"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="16" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <permission android:name="com.sec.android.app.fm.BROADCAST_DETECT" />
+    <uses-permission android:name="com.sec.android.app.fm.BROADCAST_DETECT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <application android:theme="@android:style/Theme.DeviceDefault" android:label="@string/app_name" android:icon="@drawable/mainmenu_icon_fmradio" android:largeHeap="true">
+        <uses-library android:name="touchwiz" />
+        <uses-library android:name="secmediarecorder" />
+        <uses-library android:name="sec_feature" />
+        <activity android:theme="@android:style/Theme.DeviceDefault.NoActionBar" android:label="@string/app_name" android:name=".MainActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.fm.player" />
+                <action android:name="test.mode.radio.on.freq" />
+                <action android:name="test.mode.radio.off" />
+                <action android:name="test.mode.radio.freq" />
+                <action android:name="test.mode.radio.factoryrssi" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/allchannels" android:name="AllChannelActivity" android:launchMode="singleTop" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/delete" android:name="RemoveChannelActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/rename_channel" android:name="RenameChannelActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name="RenameActionActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/settings" android:name="SettingsActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <receiver android:name="AlarmReceiver" />
+        <activity android:label="@string/tags" android:name="TagsActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/recorded_files" android:name=".RecordedFileListActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/delete" android:name=".DeleteFileActivity" android:configChanges="locale|keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/rename" android:name=".RenameFileActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/recorded_files" android:name=".RecordedFileListPlayerActivity" android:configChanges="locale|keyboardHidden|orientation|screenSize|fontScale" />
+        <activity android:label="@string/delete" android:name=".DeleteFileListPlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:label="@string/rename" android:name=".RenameFileListPlayerActivity" android:configChanges="keyboardHidden|orientation|screenSize" />
+        <receiver android:name="LockScreenNotificationReceiver">
+            <intent-filter>
+                <action android:name="com.android.fm.player_lock.on" />
+                <action android:name="com.android.fm.player_lock.off" />
+                <action android:name="com.android.fm.player_lock.tune.next" />
+                <action android:name="com.android.fm.player_lock.tune.prev" />
+                <action android:name="com.android.fm.player_lock.info" />
+                <action android:name="com.android.fm.player_lock.tune.channel" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".NotificationService">
+            <intent-filter>
+                <action android:name="com.android.fm.notification.service" />
+            </intent-filter>
+        </service>
+        <service android:name=".listplayer.FMListPlayerService">
+            <intent-filter>
+                <action android:name="com.sec.android.fm.listplayer.service" />
+            </intent-filter>
+        </service>
+        <activity android:name=".ui.ActivityDialog" />
+        <activity android:name="HwTunningActivity" />
+        <activity android:name="RssiTestActivity" />
+        <activity android:name="IntennaTestActivity" />
+        <activity android:name="SoftmuteTestActivity" />
+        <activity android:name="VolumeSettingTestActivity" />
+        <activity android:name=".ui.MyProgressDialog" />
+        <receiver android:name="SecretCodeReceiver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SECRET_CODE" />
+                <data android:scheme="android_secret_code" android:host="0368" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="MediaButtonReceiver">
+            <intent-filter android:priority="-2000">
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="AutoResumeReceiver">
+            <intent-filter>
+                <action android:name="com.app.fm.auto.on" />
+                <action android:name="com.app.fm.auto.off" />
+                <action android:name="com.samsung.app.fmradio.PLAYBACK_VIEWER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BackupAndRestoreService">
+            <intent-filter>
+                <action android:name="com.sec.android.app.fm.BROADCAST_DETECT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:label="@string/app_name" android:name=".widget.FMRadioProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.sec.android.app.fm.widget.on" />
+                <action android:name="com.sec.android.app.fm.widget.off" />
+                <action android:name="com.sec.android.app.fm.widget.prev" />
+                <action android:name="com.sec.android.app.fm.widget.next" />
+                <action android:name="com.sec.android.app.fm.widget.fav0" />
+                <action android:name="com.sec.android.app.fm.widget.fav1" />
+                <action android:name="com.sec.android.app.fm.widget.fav2" />
+                <action android:name="com.sec.android.app.fm.widget.fav3" />
+                <action android:name="com.sec.android.app.fm.widget.fav4" />
+                <action android:name="com.sec.android.app.fm.widget.fav5" />
+                <action android:name="com.sec.android.app.fm.widget.fav6" />
+                <action android:name="com.sec.android.app.fm.widget.fav7" />
+                <action android:name="com.sec.android.app.fm.widget.fav8" />
+                <action android:name="com.sec.android.app.fm.widget.fav9" />
+                <action android:name="com.sec.android.app.fm.widget.fav10" />
+                <action android:name="com.sec.android.app.fm.widget.fav11" />
+                <action android:name="com.sec.android.app.fm.widget.frequency" />
+                <action android:name="com.android.fm.player_lock.status.off" />
+                <action android:name="com.sec.android.app.fm.widget.refresh" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/radioinfo" />
+            <meta-data android:name="com.sec.android.appwidget.widgetinfo" android:resource="@xml/radiocellsize" />
+        </receiver>
+        <receiver android:name="MonoAudioReceiver">
+            <intent-filter>
+                <action android:name="android.settings.MONO_AUDIO_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="android.nfc.disable_beam_default" android:value="true" />
+    </application>
+</manifest>

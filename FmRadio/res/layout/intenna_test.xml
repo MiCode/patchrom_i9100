@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_cur_freq" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/allchannels" android:layout_weight="1.0" />
+            <EditText android:id="@id/cur_freq" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_factory_rssi" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/RSSI" android:layout_weight="1.0" />
+            <EditText android:id="@id/factory_rssi" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_cur_rssi" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/RSSI" android:layout_weight="1.0" />
+            <EditText android:id="@id/cur_rssi" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="number" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:gravity="center" android:id="@id/apply_done" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <Button android:gravity="center" android:id="@id/cancel_done" android:layout_width="160.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="40.0sp" android:gravity="center" android:id="@id/text_intenna_test" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

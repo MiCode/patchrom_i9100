@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_1" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_2" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_3" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_4" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_5" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_6" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_6" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_7" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_7" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_8" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_8" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_9" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_9" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_10" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_10" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_11" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_11" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_12" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_12" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_13" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_13" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_14" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_14" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_fmvolume_15" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <EditText android:id="@id/fmvolume_15" android:layout_width="100.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:gravity="center" android:id="@id/apply_volumetable" android:layout_width="160.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <Button android:gravity="center" android:id="@id/load_volumetable" android:layout_width="160.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

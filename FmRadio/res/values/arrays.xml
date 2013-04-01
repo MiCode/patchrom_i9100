@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="auto_off_option">
+        <item>@string/setting_off</item>
+        <item>@string/setting_15min</item>
+        <item>@string/setting_30min</item>
+        <item>@string/setting_hour</item>
+        <item>@string/setting_2hour</item>
+    </array>
+    <array name="sound_settings_option">
+        <item>@string/setting_stereo</item>
+        <item>@string/setting_mono</item>
+    </array>
+    <string-array name="barge_in_commands">
+        <item>Next</item>
+        <item>Previous</item>
+        <item>Stop</item>
+        <item>Play</item>
+        <item>Volume Up</item>
+        <item>Volume Down</item>
+    </string-array>
+    <string-array name="supportCellSizeArray">
+        <item>4x1</item>
+        <item>4x2</item>
+        <item>4x3</item>
+        <item>4x4</item>
+    </string-array>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/tagsLayout" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="17.0dip" android:textColor="@color/tags_category_color" android:gravity="center_vertical" android:id="@id/nowBroadcasting" android:background="@drawable/tw_list_section_divider_holo_dark" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="28.0dip" android:text="@string/tags_now_broadcasting" />
+            <TextView android:textSize="22.0sp" android:textColor="@color/tags_item_title_color" android:gravity="center_vertical" android:id="@id/noInformation" android:paddingLeft="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="65.0dip" android:text="@string/tags_no_information" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/nowMusicLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="16.0dip" android:paddingRight="12.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="65.0dip" android:layout_weight="1.0">
+                    <TextView android:textSize="22.0sp" android:textColor="@color/tags_item_title_color" android:id="@id/nowTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <TextView android:textSize="17.0dip" android:textColor="@color/tags_item_info_color" android:id="@id/nowInfo" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ImageButton android:id="@id/nowLink" android:background="@drawable/tags_icon_link_bg" android:layout_width="50.0dip" android:layout_height="40.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/music_player_icon_buy" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/nowListLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ListView android:id="@id/nowList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/musicLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="17.0dip" android:textColor="@color/tags_category_color" android:gravity="center_vertical" android:id="@id/musicHistory" android:background="@drawable/tw_list_section_divider_holo_dark" android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="28.0dip" android:text="@string/tags_music_history" />
+            <LinearLayout android:orientation="vertical" android:id="@id/musicHistoryLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ListView android:id="@id/musicList" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

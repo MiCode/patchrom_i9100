@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:paddingBottom="39.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0dip" android:textColor="@color/no_item" android:gravity="center" android:paddingLeft="58.0dip" android:paddingRight="49.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="81.0dip" android:text="@string/toast_channel_empty" android:includeFontPadding="false" android:drawableTop="@drawable/no_stations" android:drawablePadding="13.0dip" />
+    <TextView android:textSize="18.0dip" android:textColor="@color/no_item" android:gravity="center_vertical" android:paddingLeft="12.0dip" android:paddingRight="15.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/no_stations_tap_button_to_scan" android:drawableLeft="@drawable/no_stations_scan" android:drawablePadding="12.0dip" />
+</LinearLayout>

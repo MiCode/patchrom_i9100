@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/tw_action_bar_icon_delete_holo_dark" android:id="@id/delete" android:title="@string/delete" />
+    <item android:icon="@drawable/tw_action_bar_icon_rename_holo_dark" android:id="@id/rename" android:title="@string/rename" />
+</menu>

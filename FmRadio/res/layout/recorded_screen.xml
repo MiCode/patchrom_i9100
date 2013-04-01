@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/select_all" android:background="@drawable/image_btn" android:paddingRight="0.0dip" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="56.0dip" android:minHeight="56.0dip">
+        <TextView android:textSize="22.0sp" android:textColor="@color/select_all" android:gravity="center_vertical" android:id="@id/textview_selectall" android:duplicateParentState="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:minHeight="56.0dip" android:text="@string/selectall" android:layout_weight="1.0" />
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/checkbox_select_all" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.0" />
+    </LinearLayout>
+    <ListView android:id="@id/recorded_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <FrameLayout android:layout_gravity="center" android:id="@android:id/empty" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

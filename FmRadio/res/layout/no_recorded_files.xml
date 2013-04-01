@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingBottom="39.0dip" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="19.0dip" android:textColor="@color/no_item" android:gravity="center" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="139.0dip" android:text="@string/no_recorded_files_msg" android:includeFontPadding="false" android:drawableTop="@drawable/no_recordedfiles" android:drawablePadding="13.0dip" />
+    <TextView android:textSize="17.0dip" android:textColor="@color/no_item" android:gravity="center_vertical" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="42.0dip" android:text="@string/no_recorded_files_guide" />
+</LinearLayout>

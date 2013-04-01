@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal_text_min_width">122.0dip</dimen>
+    <dimen name="huge_text_min_width">138.0dip</dimen>
+    <dimen name="frequency_dialer_circle_radius_offset">8.0dip</dimen>
+    <dimen name="frequency_dialer_center_offset_x">0.0dip</dimen>
+    <dimen name="frequency_dialer_center_offset_y">7.0dip</dimen>
+    <dimen name="frequency_dialer_focused_radius">34.0dip</dimen>
+    <dimen name="frequency_displaybar_circle_radius_offset">90.0dip</dimen>
+    <dimen name="frequency_displaybar_center_offset_x">0.0dip</dimen>
+    <dimen name="frequency_displaybar_center_offset_y">8.0dip</dimen>
+    <dimen name="favorites_scroll_view_max">982.0px</dimen>
+    <dimen name="quick_panel_controlbar_launch_image_width">62.0dip</dimen>
+    <dimen name="quick_panel_controlbar_layout_margin_left">17.5dip</dimen>
+    <dimen name="quick_panel_controlbar_rew_margin_left">0.0dip</dimen>
+    <dimen name="quick_panel_controlbar_ff_margin_right">0.0dip</dimen>
+    <dimen name="quick_panel_controlbar_description_margin_left">82.0dip</dimen>
+</resources>

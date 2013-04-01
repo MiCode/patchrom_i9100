@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="InCallTouchToggleButtonNoFrame">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">7.0dip</item>
+        <item name="android:layout_width">1.0dip</item>
+        <item name="android:layout_height">45.0dip</item>
+        <item name="android:layout_marginLeft">6.0dip</item>
+        <item name="android:layout_marginTop">0.0dip</item>
+        <item name="android:layout_marginRight">7.0dip</item>
+        <item name="android:layout_marginBottom">0.0dip</item>
+        <item name="android:shadowDx">-1.0</item>
+        <item name="android:shadowDy">-1.0</item>
+        <item name="android:shadowRadius">0.3</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="player_volume_seekbar" parent="@touchwiz:style/TwSeekBar">
+        <item name="touchwiz:twMax">15</item>
+        <item name="touchwiz:progress">12</item>
+        <item name="touchwiz:twBackgroundDrawable">@drawable/APKTOOL_DUMMY_011c</item>
+        <item name="touchwiz:twProgressDrawable">@drawable/APKTOOL_DUMMY_0118</item>
+        <item name="touchwiz:twIndicatorThickness">6.0dip</item>
+        <item name="touchwiz:twProgressOrientation">vertical</item>
+        <item name="touchwiz:twSeekBarThumb">@drawable/APKTOOL_DUMMY_00ab</item>
+        <item name="touchwiz:twSeekThumbFontSize">24.0sp</item>
+    </style>
+    <style name="player_seekbar">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">9.0dip</item>
+        <item name="android:progressDrawable">@drawable/APKTOOL_DUMMY_014f</item>
+        <item name="android:thumb">@drawable/APKTOOL_DUMMY_00b0</item>
+        <item name="android:thumbOffset">20.0dip</item>
+    </style>
+    <style name="TwProgressBar">
+        <item name="android:maxHeight">14.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/tw_progress_horizontal</item>
+        <item name="android:minHeight">14.0dip</item>
+    </style>
+    <style name="TwAbsSeekBar" parent="@style/TwProgressBar" />
+    <style name="TwSeekBar" parent="@style/TwAbsSeekBar">
+        <item name="android:focusable">true</item>
+        <item name="android:maxHeight">8.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/tw_progress_horizontal</item>
+        <item name="android:minHeight">8.0dip</item>
+        <item name="android:thumb">@drawable/tw_seek_thumb</item>
+        <item name="android:thumbOffset">0.0px</item>
+        <item name="twIndicatorThickness">14.0dip</item>
+        <item name="twSeekThumbFontColor">@color/tw_color140</item>
+        <item name="twSeekThumbFontSize">15.0sp</item>
+        <item name="twSeekThumbFontEnable">false</item>
+    </style>
+</resources>

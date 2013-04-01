@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="index" format="integer" />
+    <attr name="img_src" format="reference" />
+    <attr name="img_src2" format="reference" />
+    <attr name="img_del_src" format="reference" />
+    <attr name="img_background_src" format="reference" />
+    <attr name="frequency_location_y" format="integer" />
+    <attr name="station_location_y" format="integer" />
+    <attr name="del_location_x" format="integer" />
+    <attr name="frequency_text_size" format="dimension" />
+    <attr name="station_text_size" format="dimension" />
+    <attr name="frequencyPosition" format="integer" />
+    <attr name="frequencyMax" format="integer" />
+    <attr name="frequencyMin" format="integer" />
+    <attr name="backgroundImage" format="reference" />
+    <attr name="barImage" format="reference" />
+    <attr name="dialerPointPosition" format="integer" />
+    <attr name="twMinWidth" format="dimension" />
+    <attr name="twMaxWidth" format="dimension" />
+    <attr name="twMinHeight" format="dimension" />
+    <attr name="twMaxHeight" format="dimension" />
+    <attr name="twMax" format="integer" />
+    <attr name="progress" format="integer" />
+    <attr name="secondaryProgress" format="integer" />
+    <attr name="twBackgroundDrawable" format="reference" />
+    <attr name="twProgressDrawable" format="reference" />
+    <attr name="twSecondaryDrawable" format="reference" />
+    <attr name="twBackgroundColor" format="reference" />
+    <attr name="twProgressColor" format="reference" />
+    <attr name="twSecondaryColor" format="reference" />
+    <attr name="twIndicatorThickness" format="dimension" />
+    <attr name="twProgressOrientation">
+        <enum name="horizontal" value="0" />
+        <enum name="vertical" value="1" />
+    </attr>
+    <attr name="twSeekBarThumb" format="reference" />
+    <attr name="twSeekBarThumbOffset" format="dimension" />
+    <attr name="twSeekBarIncrement" format="integer" />
+    <attr name="twSeekBarDisableAlpha" format="float" />
+    <attr name="twSeekBarSeekable" format="boolean" />
+    <attr name="twSeekThumbFontColor" format="reference" />
+    <attr name="twSeekThumbFontSize" format="dimension" />
+    <attr name="twSeekThumbFontEnable" format="boolean" />
+    <attr name="twTabWidgetStyle" format="reference" />
+    <attr name="twRadioButtonStyle" format="reference" />
+    <attr name="twAlertDialogStyle" format="reference" />
+    <attr name="twSoftkeyItemStyle" format="reference" />
+    <attr name="twColorPickerStyle" format="reference" />
+    <attr name="twProgressBarStyle" format="reference" />
+    <attr name="twSeekBarStyle" format="reference" />
+</resources>

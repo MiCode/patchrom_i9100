@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/widget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/controller" android:background="@drawable/radio_bg" android:layout_width="fill_parent" android:layout_height="98.0dip">
+        <RelativeLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/ic_arrow_left" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_arrow_btn_prev" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/layout_frequency" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textSize="39.0dip" android:textColor="@android:color/white" android:ellipsize="none" android:id="@id/txt_frequency" android:paddingRight="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:includeFontPadding="false" android:shadowColor="@android:color/black" android:shadowDy="-1.0" android:layout_weight="1.0" />
+                <TextView android:textSize="18.0dip" android:textColor="@android:color/white" android:layout_gravity="top" android:id="@id/txt_mhz" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mhz" android:shadowColor="@android:color/black" android:shadowDy="-1.0" />
+            </LinearLayout>
+            <TextView android:textSize="15.0dip" android:textColor="@color/widget_sub_text_freq_normal" android:gravity="center" android:id="@id/txt_freq_name" android:layout_width="fill_parent" android:layout_height="39.0dip" android:layout_marginTop="-10.0dip" android:shadowColor="@color/widget_freq_name_text_shadow" android:shadowDy="-1.0" android:layout_below="@id/layout_frequency" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/ic_arrow_right" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_arrow_btn_next" android:scaleType="center" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:id="@id/ic_power_off" android:visibility="visible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/widget_power_off_btn" android:scaleType="fitXY" />
+            <ImageView android:id="@id/ic_power_on" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/widget_power_on_btn" android:scaleType="fitXY" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/controller">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="109.0dip">
+            <FrameLayout android:id="@id/widget_fav01" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav01_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav01_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav01_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav01_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav02" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav02_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav02_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav02_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav02_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav03" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav03_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav04_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav03_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav03_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav04" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav04_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav04_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav04_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav04_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <include layout="@layout/widget_horizontal_line" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="109.0dip">
+            <FrameLayout android:id="@id/widget_fav05" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav05_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav05_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav05_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav05_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav06" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav06_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav06_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav06_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav06_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav07" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav07_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav07_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav07_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav07_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav08" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav08_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav08_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav08_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav08_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <include layout="@layout/widget_horizontal_line" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="108.0dip">
+            <FrameLayout android:id="@id/widget_fav09" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav09_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav09_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav09_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav09_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav10" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav10_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav10_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav10_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav10_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav11" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav11_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav11_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav11_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav11_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+            <include layout="@layout/widget_vertical_line" />
+            <FrameLayout android:id="@id/widget_fav12" android:background="@drawable/favchannel_btn" android:layout_width="86.0dip" android:layout_height="fill_parent">
+                <ImageView android:layout_gravity="center" android:id="@id/widget_fav12_add" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fm_widget_bottom_add_btn" />
+                <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:orientation="vertical" android:id="@id/widget_fav12_linear" android:layout_width="fill_parent" android:layout_height="75.0dip">
+                    <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav12_FreqMHz" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                    <TextView android:textSize="12.0dip" android:textColor="@color/widget_text_freq_normal" android:gravity="center_horizontal" android:id="@id/widget_fav12_FreqName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="@color/widget_favorite_text_shadow" android:shadowDy="1.0" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

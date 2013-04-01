@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_rssi" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/RSSI" android:layout_weight="1.0" />
+            <EditText android:id="@id/rssi" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_snr" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/SNR" android:layout_weight="1.0" />
+            <EditText android:id="@id/snr" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_cnt" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/CNT" android:layout_weight="1.0" />
+            <EditText android:id="@id/cnt" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_rssi2" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_rssi_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/RSSI" android:layout_weight="1.0" />
+            <EditText android:id="@id/rssi_2" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_snr2" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_snr_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/SNR" android:layout_weight="1.0" />
+            <EditText android:id="@id/snr_2" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_cnt2" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_cnt_2" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/CNT" android:layout_weight="1.0" />
+            <EditText android:id="@id/cnt_2" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_af" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/AF_Threshold" android:layout_weight="1.0" />
+            <EditText android:id="@id/af_threshold" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_af_valid" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/AF_Valid_Threshold" android:layout_weight="1.0" />
+            <EditText android:id="@id/af_valid_threshold" android:layout_width="150.0dip" android:layout_height="fill_parent" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:gravity="center" android:id="@id/text_current" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/Current_Threshold" android:layout_weight="1.0" />
+            <EditText android:id="@id/current_threshold" android:focusable="false" android:layout_width="150.0dip" android:layout_height="fill_parent" android:editable="false" android:inputType="numberSigned" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:id="@id/okbtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <Button android:id="@id/cancelbtn" android:layout_width="160.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:id="@id/skiptedtunningvalue" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <Button android:id="@id/thailandapplybtn" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <Button android:id="@id/thailandcancelbtn" android:layout_width="160.0dip" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

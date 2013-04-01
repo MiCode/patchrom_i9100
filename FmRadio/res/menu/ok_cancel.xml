@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/APKTOOL_DUMMY_0085" android:id="@id/cancel" android:title="@string/cancel" android:showAsAction="ifRoom|withText" />
+    <item android:icon="@drawable/APKTOOL_DUMMY_0086" android:id="@id/ok" android:title="@string/done" android:showAsAction="ifRoom|withText" />
+</menu>

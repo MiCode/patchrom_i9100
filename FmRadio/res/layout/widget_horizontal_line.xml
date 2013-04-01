@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/fm_bottom_horizontal_line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

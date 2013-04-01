@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:title="@string/setting_storage" android:key="storage" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/setting_sationid" android:key="stationid" android:summary="@string/setting_stationid_summary" android:defaultValue="false" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/setting_backgroud_playing" android:key="backgroudplaying" android:defaultValue="true" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/setting_af" android:key="af" android:summary="@string/setting_af_summary" android:defaultValue="true" />
+    <ListPreference android:entries="@array/auto_off_option" android:title="@string/setting_autooff" android:key="autoonoff" android:entryValues="@array/auto_off_option" />
+</PreferenceScreen>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:touchwiz="http://schemas.android.com/apk/res/touchwiz">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="11.0dip">
+        <TextView android:textSize="22.0sp" android:textColor="@color/listview_item_title_color" android:ellipsize="marquee" android:id="@id/topLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="7.0dip" android:singleLine="true" android:layout_toLeftOf="@id/blank" android:layout_alignParentLeft="true" />
+        <View android:id="@id/blank" android:layout_width="85.0dip" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginBottom="11.0dip">
+        <TextView android:textSize="17.0dip" android:textColor="@color/listview_item_date_color" android:gravity="left" android:layout_gravity="center_vertical" android:id="@id/bottomLabel" android:layout_width="242.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="17.0dip" android:textColor="@color/listview_item_during_color" android:gravity="right" android:layout_gravity="center_vertical" android:id="@id/bottomRightLabel" android:layout_width="85.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

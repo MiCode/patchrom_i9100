@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/select_all" android:background="@drawable/image_btn" android:paddingLeft="12.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="56.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="22.0sp" android:textColor="#ffd2d2d2" android:gravity="center_vertical" android:id="@id/selectall_itemview_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/selectall" android:singleLine="true" android:layout_weight="0.84" />
+    <CheckBox android:gravity="center" android:id="@id/selectall_itemview_checkbox" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

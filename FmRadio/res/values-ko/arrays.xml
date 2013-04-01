@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="barge_in_commands">
+        <item>다음</item>
+        <item>이전</item>
+        <item>중지</item>
+        <item>재생</item>
+        <item>소리 크게</item>
+        <item>소리 작게</item>
+    </string-array>
+</resources>

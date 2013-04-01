@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="APKTOOL_DUMMY_000f">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0010">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0011">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0012">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0013">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0014">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_0015">false</item>
+</resources>

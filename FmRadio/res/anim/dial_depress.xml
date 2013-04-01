@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="0" android:drawable="@drawable/bottom_480x480_10" />
+    <item android:duration="15" android:drawable="@drawable/bottom_480x480_12" />
+    <item android:duration="15" android:drawable="@drawable/bottom_480x480_14" />
+    <item android:duration="15" android:drawable="@drawable/bottom_480x480_16" />
+    <item android:duration="15" android:drawable="@drawable/bottom_480x480_18" />
+    <item android:duration="10" android:drawable="@drawable/bottom_480x480_20" />
+</animation-list>
