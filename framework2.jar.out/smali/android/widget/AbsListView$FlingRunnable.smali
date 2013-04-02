@@ -976,7 +976,7 @@
     .end local v9           #scrollY:I
     .end local v19           #currY:I
     :cond_11
-    invoke-virtual/range {p0 .. p0}, Landroid/widget/AbsListView$FlingRunnable;->endFling()V
+    invoke-direct/range {p0 .. p0}, Landroid/widget/AbsListView$FlingRunnable;->endFling2()V
 
     goto/16 :goto_0
 
@@ -1311,4 +1311,30 @@
 
     :cond_0
     return v0
+.end method
+
+.method private endFling2()V
+    .locals 1
+    .annotation build Landroid/annotation/MiuiHook;
+        value = .enum Landroid/annotation/MiuiHook$MiuiHookType;->NEW_METHOD:Landroid/annotation/MiuiHook$MiuiHookType;
+    .end annotation
+
+    .prologue
+    iget-object v0, p0, Landroid/widget/AbsListView$FlingRunnable;->this$0:Landroid/widget/AbsListView;
+
+    invoke-virtual {v0}, Landroid/widget/AbsListView;->getScrollY()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Landroid/widget/AbsListView$FlingRunnable;->startSpringback()V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/widget/AbsListView$FlingRunnable;->endFling()V
+
+    goto :goto_0
 .end method
