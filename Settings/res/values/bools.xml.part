@@ -4,4 +4,5 @@
     <bool name="has_led">true</bool>
     <bool name="mass_storage_enable">false</bool>
     <bool name="has_volume_wake">false</bool>
+	<bool name="emulated_available_internal_memroy">false</bool>
 </resources>
