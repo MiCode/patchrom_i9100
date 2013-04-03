@@ -18550,42 +18550,11 @@
     .end local v24           #i:I
     .end local v49           #renamed:Ljava/lang/String;
     :cond_19
-
-    move-object/from16 v0, p1
-
-    iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+    move-object/from16 v3, p1
 
     move-object/from16 v0, v45
 
-    iget v10, v0, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
-
-    const/high16 v11, -0x8000
-
-    and-int/2addr v10, v11
-
-    or-int/2addr v4, v10
-
-    iput v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    move-object/from16 v0, p1
-
-    iget-object v3, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
-
-    iget v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
-
-    move-object/from16 v0, v45
-
-    iget v10, v0, Lcom/android/server/pm/PackageSetting;->pkgFlags:I
-
-    const/high16 v11, 0x4000
-
-    and-int/2addr v10, v11
-
-    or-int/2addr v4, v10
-
-    iput v4, v3, Landroid/content/pm/ApplicationInfo;->flags:I
+    invoke-static {v3, v0}, Lcom/android/server/pm/PackageManagerService$Injector;->addMiuiExtendFlags(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/PackageSetting;)V
 
     move-object/from16 v0, v45
 
@@ -45307,7 +45276,7 @@
     return-void
 
     :cond_1
-    invoke-static {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService$Injector;->setAccessControl(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)Z
+    invoke-static {p0, p1, p2, p3}, Lcom/android/server/pm/PackageManagerService$Injector;->setMiuiExtendFlags(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;II)Z
 
     move-result v0
 
