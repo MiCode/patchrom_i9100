@@ -19,7 +19,7 @@ local-modified-jars :=
 # All apks from MIUI
 local-miui-removed-apps := MediaProvider Stk
 
-local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager
+local-miui-modified-apps := MiuiHome Settings Phone Mms ThemeManager MiuiSystemUI
 
 # Config density for co-developers to use the aaps with HDPI or XHDPI resource,
 # Default configrations are HDPI for ics branch and XHDPI for jellybean branch
@@ -68,7 +68,7 @@ out/framework2.jar : out/framework.jar
 
 %.sign-plat : out/%
 #%.sign-plat : /home/gexudong/libra.jbmiui/out/target/product/maguro/system/app/%
-	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/media.x509.pem $(PORT_ROOT)/build/security/media.pk8  $< $<.signed
+	java -jar $(TOOL_DIR)/signapk.jar $(PORT_ROOT)/build/security/platform.x509.pem $(PORT_ROOT)/build/security/platform.pk8  $< $<.signed
 	@echo push -- to --- phone
 	adb remount
 	adb push $<.signed /system/app/$*
