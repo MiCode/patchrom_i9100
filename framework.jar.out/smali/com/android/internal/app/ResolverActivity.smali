@@ -752,11 +752,17 @@
 
     :cond_1
     :goto_3
+    iget-object v0, v10, Lcom/android/internal/app/AlertController$AlertParams;->mView:Landroid/view/View;
+
+    if-eqz v0, :cond_miui_00
 
     move-object/from16 v0, p0
+
     move/from16 v2, p6
 
     invoke-static {v0, v2}, Lcom/android/internal/app/ResolverActivity$Injector;->initialize(Lcom/android/internal/app/ResolverActivity;Z)V
+
+    :cond_miui_00
     return-void
 
     .end local v9           #am:Landroid/app/ActivityManager;
