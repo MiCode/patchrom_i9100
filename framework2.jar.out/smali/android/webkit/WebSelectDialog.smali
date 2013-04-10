@@ -536,7 +536,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_3
+    #if-eqz v6, :cond_3
 
     .line 214
     :try_start_0
