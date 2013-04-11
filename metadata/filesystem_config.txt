@@ -1801,4 +1801,4 @@ system/xbin/dexdump 0 2000 755
 system/xbin/insecure 0 2000 6755
 system/xbin/ntfs-3g 0 0 755
 system/xbin/oemfix 0 2000 6755
-system/xbin/shelld 0 2000 0755
+system/xbin/shelld 0 1000 6750
