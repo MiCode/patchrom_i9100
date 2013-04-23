@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- alphabet fast indexer -->
+    <dimen name="alphabet_indexer_overlay_text_size">28dip</dimen>
+	<dimen name="alphabet_indexer_overlay_offset">20dip</dimen>
+    <dimen name="alphabet_indexer_text_size">10sp</dimen>
+
+    <dimen name="v5_action_bar_height">40dip</dimen>
+    <dimen name="miui_numeric_keyboard_row_height">100px</dimen>
+    <dimen name="miui_password_input_area_bg_bottom_offset">500px</dimen>
+
+    <!-- Height of Horizontal Progressbar -->
+    <dimen name="v5_horizontal_progress_bar_height">24dip</dimen>
+    <!-- Height of Small Horizontal Progressbar -->
+    <dimen name="v5_horizontal_progress_bar_small_height">12dip</dimen>
+    <!-- Height of Seekbar -->
+    <dimen name="v5_seekbar_height">32dip</dimen>
+    <!-- Height of SeekBar for MultiPositionBar -->
+    <dimen name="v5_multipositionbar_seekbar_height">10dip</dimen>
+
+    <!-- Height of large action bar -->
+    <dimen name="v5_action_bar_height_large">278dip</dimen>
+    <dimen name="miui_common_unlock_screen_top_margin">55dp</dimen>
+    <dimen name="miui_common_unlock_screen_info_text_top_margin">0dp</dimen>
+    <dimen name="miui_common_unlock_screen_info_text_padding">8dp</dimen>
+
+    <dimen name="v5_list_view_single_line_height">49dip</dimen>
+    <dimen name="v5_list_view_double_line_height">55dip</dimen>
+    <dimen name="v5_list_view_treble_line_height">63dip</dimen>
+
+</resources>
