@@ -5760,3 +5760,14 @@
 
     return-void
 .end method
+
+.method updateTargetPosition(IFFF)V
+    .locals 0
+    .parameter "i"
+    .parameter "centerX"
+    .parameter "centerY"
+    .parameter "angle"
+
+    .prologue
+    return-void
+.end method
