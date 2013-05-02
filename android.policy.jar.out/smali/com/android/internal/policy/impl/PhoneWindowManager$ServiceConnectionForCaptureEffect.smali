@@ -171,7 +171,7 @@
     iput v4, v2, Landroid/os/Message;->arg2:I
 
     :cond_2
-    iget-object v4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$11;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
+    iget-object v4, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$ServiceConnectionForCaptureEffect;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
     invoke-virtual {v4, v2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->onScreenShotMessageSend(Landroid/os/Message;)V
     :try_end_0
