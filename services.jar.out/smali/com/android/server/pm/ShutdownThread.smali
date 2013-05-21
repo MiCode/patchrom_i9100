@@ -2036,10 +2036,6 @@
 
     invoke-direct {v8, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v8, v6}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v8
-
     const v9, 0x1040013
 
     new-instance v10, Lcom/android/server/pm/ShutdownThread$2;
@@ -2120,6 +2116,8 @@
     .line 261
     :goto_5
     invoke-virtual {v2}, Landroid/app/AlertDialog;->show()V
+
+    invoke-static {v2}, Lcom/android/server/pm/ShutdownThread$Injector;->setDialogPositiveButtonText(Landroid/app/AlertDialog;)V
 
     goto/16 :goto_0
 
