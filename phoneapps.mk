@@ -30,6 +30,7 @@ private-phone-apps := ApplicationsProvider \
 					  SamsungIME \
 					  SecMediaProvider \
 					  SecurityProvider \
+					  SecLiveWallpapersPicker \
 					  Stk \
 					  UserDictionaryProvider \
 					  VpnDialogs \
