@@ -34,7 +34,6 @@ then
             rm -rf "$file"
     done
 
-	rm -rf "$BUILD_OUT/framework2/smali/com/google/android/mms"
-	cp -r "$BUILD_OUT/framework_miui/smali/com/google/android/mms" "$BUILD_OUT/framework2/smali/com/google/android"
+	cp -rf "$BUILD_OUT/framework_miui/smali/com/google/android/mms" "$BUILD_OUT/framework2/smali/com/google/android"
 	#mv "$BUILD_OUT/$SEP_FRAME/smali/miui/"  "$BUILD_OUT/framework2/smali/miui"
 fi
