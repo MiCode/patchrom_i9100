@@ -1,0 +1,119 @@
+.class public Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;
+.super Landroid/app/DialogFragment;
+.source "DataUsageSummary.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/sec_settings/DataUsageSummary;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "ConfirmAppRestrictFragment"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 2476
+    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
+
+    return-void
+.end method
+
+.method public static show(Lcom/android/sec_settings/DataUsageSummary;)V
+    .locals 3
+    .parameter "parent"
+
+    .prologue
+    .line 2478
+    invoke-virtual {p0}, Lcom/android/sec_settings/DataUsageSummary;->isAdded()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 2483
+    :goto_0
+    return-void
+
+    .line 2480
+    :cond_0
+    new-instance v0, Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;
+
+    invoke-direct {v0}, Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;-><init>()V
+
+    .line 2481
+    .local v0, dialog:Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p0, v1}, Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;->setTargetFragment(Landroid/app/Fragment;I)V
+
+    .line 2482
+    invoke-virtual {p0}, Lcom/android/sec_settings/DataUsageSummary;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object v1
+
+    const-string v2, "confirmAppRestrict"
+
+    invoke-virtual {v0, v1, v2}, Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    .locals 4
+    .parameter "savedInstanceState"
+
+    .prologue
+    .line 2487
+    invoke-virtual {p0}, Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    .line 2489
+    .local v1, context:Landroid/content/Context;
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 2490
+    .local v0, builder:Landroid/app/AlertDialog$Builder;
+    const v2, 0x7f090826
+
+    invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
+
+    .line 2491
+    const v2, 0x7f090827
+
+    invoke-virtual {v0, v2}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
+
+    .line 2493
+    const v2, 0x104000a
+
+    new-instance v3, Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment$1;
+
+    invoke-direct {v3, p0}, Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment$1;-><init>(Lcom/android/sec_settings/DataUsageSummary$ConfirmAppRestrictFragment;)V
+
+    invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 2502
+    const/high16 v2, 0x104
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 2504
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v2
+
+    return-object v2
+.end method

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:id="@id/allsharecast_help_scroll" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:orientation="horizontal" android:paddingTop="22.0px" android:paddingRight="2.0px" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <ImageView android:id="@id/allsahrecast_help_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0px" android:src="@drawable/APKTOOL_DUMMY_02a2" />
-        <com.android.settings.wfd.IndexedTextLayout android:id="@id/IndexedTextView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>

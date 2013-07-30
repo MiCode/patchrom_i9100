@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/testing"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/testing_phone_info">
+        <intent android:targetPackage="com.android.sec_settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.sec_settings.RadioInfo" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/testing_battery_info">
+        <intent android:targetPackage="com.android.sec_settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.sec_settings.BatteryInfo" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/testing_usage_stats">
+        <intent android:targetPackage="com.android.sec_settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.sec_settings.UsageStats" />
+    </PreferenceScreen>
+    <PreferenceScreen android:title="@string/testing_wifi_info">
+        <intent android:targetPackage="com.android.sec_settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.sec_settings.wifi.WifiInfo" />
+    </PreferenceScreen>
+</PreferenceScreen>

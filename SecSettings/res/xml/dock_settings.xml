@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/accessory" android:key="parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.sec_settings">
+    <PreferenceCategory android:title="@string/dock_settings" android:key="dock_settings" />
+    <PreferenceScreen android:title="@string/dock_audio_settings_title" android:key="dock_audio" android:summary="@string/dock_settings_summary" />
+    <CheckBoxPreference android:title="@string/dock_sounds_enable_title" android:key="dock_sounds" android:defaultValue="false" android:summaryOn="@string/dock_sounds_enable_summary_on" android:summaryOff="@string/dock_sounds_enable_summary_off" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/desk_cradle_title" android:key="cradle_enable" android:summary="@string/desk_cradle_summary" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/desk_home_screen_display" android:key="desk_home_screen_display" android:summary="@string/desk_home_screen_display_summary" />
+    <PreferenceCategory android:title="@string/cover" android:key="cover" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/automatic_unlock" android:key="automatic_unlock" android:summary="@string/automatic_unlock_summary" />
+    <PreferenceCategory android:title="@string/hdmi" android:key="hdmi" />
+    <ListPreference android:entries="@array/audio_output_entries" android:title="@string/audio_output" android:key="audio_output" android:widgetLayout="@layout/round_more_icon" android:entryValues="@array/audio_output_values" />
+    <PreferenceCategory android:title="@string/earset" android:key="earset" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/audio_applications" android:key="audio_applications" android:summary="@string/audio_applications_summary" />
+</PreferenceScreen>
