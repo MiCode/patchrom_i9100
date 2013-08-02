@@ -1049,7 +1049,7 @@
 
     .prologue
     .line 112
-    invoke-direct {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showTimeoutDialog()V
+    invoke-virtual {p0}, Lcom/android/internal/policy/impl/LockPatternKeyguardView;->showTimeoutDialog()V
 
     return-void
 .end method
