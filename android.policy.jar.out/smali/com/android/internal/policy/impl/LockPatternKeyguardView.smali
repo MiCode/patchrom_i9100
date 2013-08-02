@@ -4315,7 +4315,7 @@
     goto :goto_0
 .end method
 
-.method private showTimeoutDialog()V
+.method protected showTimeoutDialog()V
     .locals 8
 
     .prologue
