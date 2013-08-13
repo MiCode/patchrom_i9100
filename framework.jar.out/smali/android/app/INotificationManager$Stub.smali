@@ -46,6 +46,8 @@
 
 .field static final TRANSACTION_setNotificationsEnabledForPackage:I = 0x8
 
+.field static final TRANSACTION_areNotificationsEnabled:I = 0xb
+
 
 # direct methods
 .method public constructor <init>()V
@@ -528,46 +530,61 @@
 
     invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 172
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 174
     .restart local v1       #_arg0:Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 175
     .local v2, _arg1:I
     invoke-virtual {p0, v1, v2}, Landroid/app/INotificationManager$Stub;->getNotificationInfo(Ljava/lang/String;I)Landroid/app/NotificationInfo;
 
     move-result-object v6
 
-    .line 176
     .local v6, _result:Landroid/app/NotificationInfo;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 177
     if-eqz v6, :cond_4
 
-    .line 178
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 179
     invoke-virtual {v6, p3, v7}, Landroid/app/NotificationInfo;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
-    .line 182
     :cond_4
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 39
-    nop
+    :sswitch_b
+    const-string v0, "android.app.INotificationManager"
+
+    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .restart local v1       #_arg0:Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/app/INotificationManager$Stub;->areNotificationsEnabled(Ljava/lang/String;)Z
+
+    move-result v6
+
+    .restart local v6       #_result:Z
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    if-eqz v6, :cond_miui_0
+
+    move v2, v7
+
+    :cond_miui_0
+    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto/16 :goto_0
 
     :sswitch_data_0
     .sparse-switch
@@ -581,6 +598,7 @@
         0x8 -> :sswitch_8
         0x9 -> :sswitch_9
         0xa -> :sswitch_a
+        0xb -> :sswitch_b
         0x5f4e5446 -> :sswitch_0
     .end sparse-switch
 .end method
