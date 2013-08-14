@@ -561,9 +561,9 @@
     goto/16 :goto_0
 
     :sswitch_b
-    const-string v0, "android.app.INotificationManager"
+    const-string v8, "android.app.INotificationManager"
 
-    invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {p2, v8}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -579,10 +579,10 @@
 
     if-eqz v6, :cond_miui_0
 
-    move v2, v7
+    move v0, v7
 
     :cond_miui_0
-    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
