@@ -697,6 +697,18 @@
     return-void
 .end method
 
+.method public setUri(Landroid/net/Uri;Landroid/net/Uri;)V
+    .locals 0
+    .parameter "uri"
+    .parameter "defaultUri"
+
+    .prologue
+
+    invoke-virtual {p0, p1, p2}, Landroid/media/Ringtone;->setUriOrig(Landroid/net/Uri;Landroid/net/Uri;)Z
+
+    return-void
+.end method
+
 .method public setUriOrig(Landroid/net/Uri;)Z
     .locals 1
     .parameter "uri"
