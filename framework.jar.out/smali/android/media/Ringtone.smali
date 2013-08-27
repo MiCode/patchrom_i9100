@@ -789,17 +789,17 @@
 
     :cond_1
     :goto_1
-    iget-object v1, p0, Landroid/media/Ringtone;->mContext:Landroid/content/Context;
+    iget-object v3, p0, Landroid/media/Ringtone;->mContext:Landroid/content/Context;
 
-    iget-object v2, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
+    iget-object v4, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
 
-    iget v3, p0, Landroid/media/Ringtone;->mStreamType:I
+    iget v5, p0, Landroid/media/Ringtone;->mStreamType:I
 
-    invoke-static {v1, v2, p2, v3}, Landroid/media/Ringtone$Injector;->tryToGetEffectiveLocalPlayer(Landroid/content/Context;Landroid/media/MediaPlayer;Landroid/net/Uri;I)Landroid/media/MediaPlayer;
+    invoke-static {v3, v4, p2, v5}, Landroid/media/Ringtone$Injector;->tryToGetEffectiveLocalPlayer(Landroid/content/Context;Landroid/media/MediaPlayer;Landroid/net/Uri;I)Landroid/media/MediaPlayer;
 
-    move-result-object v1
+    move-result-object v3
 
-    iput-object v1, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
+    iput-object v3, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
 
     iget-object v3, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
 
