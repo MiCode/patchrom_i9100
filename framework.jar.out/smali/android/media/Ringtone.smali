@@ -698,8 +698,23 @@
 .end method
 
 .method public setUriOrig(Landroid/net/Uri;)Z
+    .locals 1
+    .parameter "uri"
+
+    .prologue
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Landroid/media/Ringtone;->setUriOrig(Landroid/net/Uri;Landroid/net/Uri;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public setUriOrig(Landroid/net/Uri;Landroid/net/Uri;)Z
     .locals 6
     .parameter "uri"
+    .parameter "defaultUri"
 
     .prologue
     .line 191
@@ -760,14 +775,24 @@
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 221
     :cond_1
     :goto_1
+    iget-object v1, p0, Landroid/media/Ringtone;->mContext:Landroid/content/Context;
+
+    iget-object v2, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
+
+    iget v3, p0, Landroid/media/Ringtone;->mStreamType:I
+
+    invoke-static {v1, v2, p2, v3}, Landroid/media/Ringtone$Injector;->tryToGetEffectiveLocalPlayer(Landroid/content/Context;Landroid/media/MediaPlayer;Landroid/net/Uri;I)Landroid/media/MediaPlayer;
+
+    move-result-object v1
+
+    iput-object v1, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
+
     iget-object v3, p0, Landroid/media/Ringtone;->mLocalPlayer:Landroid/media/MediaPlayer;
 
     if-eqz v3, :cond_2
 
-    .line 222
     const-string v3, "Ringtone"
 
     const-string v4, "Successfully created local player"
