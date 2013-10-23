@@ -37,3 +37,19 @@ then
 	cp -rf "$BUILD_OUT/framework_miui/smali/com/google/android/mms" "$BUILD_OUT/framework2/smali/com/google/android"
 	#mv "$BUILD_OUT/$SEP_FRAME/smali/miui/"  "$BUILD_OUT/framework2/smali/miui"
 fi
+
+if [ $2 = "$BUILD_OUT/android.policy" ]
+then
+    for file in overlay/android.policy/*.patch
+    do
+        cp $file out/
+        cd out
+        git.apply `basename $file`
+        cd ..
+        for file2 in `find $2 -name *.rej`
+        do
+            echo "$file2 fail"
+            exit 1
+        done
+    done
+fi

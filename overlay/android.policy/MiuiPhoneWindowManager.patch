@@ -1,0 +1,50 @@
+From 966c672451b721b742e19e1d04a96370068367f1 Mon Sep 17 00:00:00 2001
+From: mochangming <mochangming@xiaomi.com>
+Date: Wed, 23 Oct 2013 15:15:54 +0800
+Subject: [PATCH] MiuiPhoneWindowManager.patch
+
+---
+ .../policy/impl/MiuiPhoneWindowManager.smali       |   11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+
+--- a/android.policy/smali/com/android/internal/policy/impl/MiuiPhoneWindowManager.smali
++++ b/android.policy/smali/com/android/internal/policy/impl/MiuiPhoneWindowManager.smali
+@@ -587,13 +587,14 @@
+ 
+ 
+ # virtual methods
+-.method public animatingWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;)V
++.method public animatingWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;I)V
+     .locals 2
+     .parameter "win"
+     .parameter "attrs"
++    .parameter "windowMode"
+ 
+     .prologue
+-    invoke-super {p0, p1, p2}, Lcom/android/internal/policy/impl/PhoneWindowManager;->animatingWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;)V
++    invoke-super {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->animatingWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;I)V
+ 
+     iget v0, p0, Lcom/android/internal/policy/impl/MiuiPhoneWindowManager;->mWindowExtraFlag:I
+ 
+@@ -2307,14 +2308,16 @@
+     .end sparse-switch
+ .end method
+ 
+-.method public layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
++.method public layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;I)V
+     .locals 3
+     .parameter "win"
+     .parameter "attrs"
+     .parameter "attached"
++    .parameter "baseAttrs"
++    .parameter "windowMode"
+ 
+     .prologue
+-    invoke-super {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
++    invoke-super/range {p0 .. p5}, Lcom/android/internal/policy/impl/PhoneWindowManager;->layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;I)V
+ 
+     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+ 
+-- 
+1.7.9.5
+
