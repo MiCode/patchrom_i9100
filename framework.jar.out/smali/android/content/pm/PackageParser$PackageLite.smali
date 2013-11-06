@@ -53,7 +53,7 @@
 
     iput p3, p0, Landroid/content/pm/PackageParser$PackageLite;->installLocation:I
 
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    invoke-interface {p4}, Ljava/util/List;->size()I
 
     move-result v0
 
