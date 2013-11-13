@@ -1,0 +1,13 @@
+
+.method public getDataRoamingEnabled()Z
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/phone/PhoneInterfaceManager;->mPhone:Lcom/android/internal/telephony/Phone;
+
+    invoke-interface {v0}, Lcom/android/internal/telephony/Phone;->getDataRoamingEnabled()Z
+
+    move-result v0
+
+    return v0
+.end method
