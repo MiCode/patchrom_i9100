@@ -6447,13 +6447,13 @@
 
     .prologue
     # TODO should be SmsMessageBase, not SmsMessage
-    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SmsMessageBase;->recipientAddress:Lcom/android/internal/telephony/gsm/GsmSmsAddress;
+    iget-object v0, p0, Lcom/android/internal/telephony/SmsMessageBase;->recipientAddress:Lcom/android/internal/telephony/SmsAddress;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/android/internal/telephony/gsm/SmsMessageBase;->recipientAddress:Lcom/android/internal/telephony/gsm/GsmSmsAddress;
+    iget-object v0, p0, Lcom/android/internal/telephony/SmsMessageBase;->recipientAddress:Lcom/android/internal/telephony/SmsAddress;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/GsmSmsAddress;->getAddressString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/android/internal/telephony/SmsAddress;->getAddressString()Ljava/lang/String;
 
     move-result-object v0
 
