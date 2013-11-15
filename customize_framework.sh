@@ -17,7 +17,7 @@ then
     done
 
 	rm -rf "$BUILD_OUT/framework/smali/com/google/android/mms"
-
+	cp -f $1/smali/android/app/DownloadManager* $2/smali/android/app/
     # move some smali to create a separate $SEP_FRAME.jar
     # including: smali/miui smali/android/widget
 	#mkdir -p "$BUILD_OUT/$SEP_FRAME/smali"
