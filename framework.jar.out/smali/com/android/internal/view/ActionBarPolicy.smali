@@ -287,7 +287,10 @@
     .locals 1
 
     .prologue
-    .line 49
+    const/4 v0, 0x1
+    
+    return v0
+    
     iget-object v0, p0, Lcom/android/internal/view/ActionBarPolicy;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
