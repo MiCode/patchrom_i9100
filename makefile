@@ -56,6 +56,7 @@ local-pre-zip-misc:
 	more $(pre_install_data_packages) >> $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
 	rm -rf $(ZIP_DIR)/system/fonts/Miui-Bold.ttf
 	rm -rf $(ZIP_DIR)/system/fonts/Miui-Regular.ttf
+	rm -rf $(ZIP_DIR)/system/tts/*
 
 
 out/framework2.jar : out/framework.jar
