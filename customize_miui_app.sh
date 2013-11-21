@@ -34,7 +34,7 @@ if [ $1 = "ThemeManager" ];then
 fi
 
 if [ $1 = "MiuiHome" ];then
-    $XMLMERGYTOOL $1/res/values-xhdpi $2/res/values-xhdpi
+    $XMLMERGYTOOL $1/res/values $2/res/values
 fi
 
 if [ $1 = "MiuiSystemUI" ];then
