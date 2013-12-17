@@ -78,7 +78,7 @@
 
 .field private mIsHelpHubInstalled:Z
 
-.field mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+.field mKeyguardMediator:Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;
 
 .field private mLeftPadding:I
 

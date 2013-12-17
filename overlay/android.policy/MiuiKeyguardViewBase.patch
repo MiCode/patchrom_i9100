@@ -1,0 +1,34 @@
+From b284ebc2b2c6441f6301db1eaed314ba43b3ff6d Mon Sep 17 00:00:00 2001
+From: mochangming <mochangming@xiaomi.com>
+Date: Tue, 17 Dec 2013 21:23:11 +0800
+Subject: [PATCH] MiuiKeyguardViewBase.patch
+
+---
+ .../policy/impl/MiuiKeyguardViewBase.smali         |    7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+--- a/android.policy/smali/com/android/internal/policy/impl/MiuiKeyguardViewBase.smali
++++ b/android.policy/smali/com/android/internal/policy/impl/MiuiKeyguardViewBase.smali
+@@ -18,6 +18,8 @@
+ 
+ .field private mTelephonyManager:Landroid/telephony/TelephonyManager;
+ 
++.field private mLockScreenIsReady:Z
++
+ 
+ # direct methods
+ .method public constructor <init>(Landroid/content/Context;Lcom/android/internal/policy/impl/MiuiKeyguardViewCallback;)V
+@@ -42,6 +44,10 @@
+ 
+     invoke-virtual {p0}, Lcom/android/internal/policy/impl/MiuiKeyguardViewBase;->resetBackground()V
+ 
++    const/4 v0, 0x1
++
++    iput-boolean v0, p0, Lcom/android/internal/policy/impl/MiuiKeyguardViewBase;->mLockScreenIsReady:Z
++
+     return-void
+ .end method
+ 
+-- 
+1.7.9.5
+

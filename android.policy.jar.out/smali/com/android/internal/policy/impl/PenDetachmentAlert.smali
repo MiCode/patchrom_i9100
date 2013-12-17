@@ -38,7 +38,7 @@
 
 .field private mIsScreenOn:Z
 
-.field mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+.field mKeyguardMediator:Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;
 
 .field private mListenerRegistered:Z
 
@@ -68,7 +68,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;Lcom/android/internal/policy/impl/KeyguardViewMediator;)V
+.method public constructor <init>(Landroid/content/Context;Landroid/view/WindowManagerPolicy$WindowManagerFuncs;Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;)V
     .locals 4
     .parameter "context"
     .parameter "windowManagerFuncs"
@@ -126,7 +126,7 @@
     iput-object p2, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
 
     .line 136
-    iput-object p3, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    iput-object p3, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->mKeyguardMediator:Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;
 
     .line 137
     iput v2, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->previousStepCount:I
@@ -810,9 +810,9 @@
 
     .prologue
     .line 290
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->mKeyguardMediator:Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;
 
-    invoke-virtual {v1}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->isShowingAndNotHidden()Z
+    invoke-virtual {v1}, Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;->isShowingAndNotHidden()Z
 
     move-result v0
 
@@ -894,11 +894,11 @@
     if-eqz v0, :cond_3
 
     .line 314
-    iget-object v1, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    iget-object v1, p0, Lcom/android/internal/policy/impl/PenDetachmentAlert;->mKeyguardMediator:Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;
 
     const/16 v2, 0x3a98
 
-    invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->pokeWakelock(I)V
+    invoke-virtual {v1, v2}, Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;->pokeWakelock(I)V
 
     .line 316
     :cond_3

@@ -44,13 +44,13 @@
     .line 6891
     iget-object v0, p0, Lcom/android/internal/policy/impl/PhoneWindowManager$31;->this$0:Lcom/android/internal/policy/impl/PhoneWindowManager;
 
-    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/KeyguardViewMediator;
+    iget-object v0, v0, Lcom/android/internal/policy/impl/PhoneWindowManager;->mKeyguardMediator:Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/KeyguardViewMediator;->keyguardDone(ZZ)V
+    invoke-virtual {v0, v1, v2}, Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;->keyguardDone(ZZ)V
 
     .line 6892
     return-void

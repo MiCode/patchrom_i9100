@@ -7,6 +7,18 @@ BUILD_OUT=out
 
 SEP_FRAME="framework2.jar.out"
 
+function appendSmaliPart() {
+    cd overlay
+    for file in `find $1/smali -name *.part`
+    do
+        filepath=`dirname $file`
+        filename=`basename $file .part`
+        dstfile="../out/$filepath/$filename"
+        cat $file >> $dstfile
+    done
+    cd ..
+}
+
 if [ $2 = "$BUILD_OUT/framework" ]
 then
     # remove all files at out/framework those exist in framework2.jar.out
@@ -40,6 +52,8 @@ fi
 
 if [ $2 = "$BUILD_OUT/android.policy" ]
 then
+	appendSmaliPart "android.policy"
+
     for file in overlay/android.policy/*.patch
     do
         cp $file out/

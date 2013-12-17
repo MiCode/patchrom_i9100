@@ -1,0 +1,36 @@
+
+.method public isWakeKeyWhenKeyguardHiding(IZ)Z
+    .locals 1
+    .parameter "keyCode"
+    .parameter "isDocked"
+
+    .prologue
+    invoke-direct {p0, p1, p2}, Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;->isWakeKeyWhenKeyguardShowing(IZ)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isKeyguardReady()Z
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/MiuiKeyguardViewManager;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/internal/policy/impl/MiuiKeyguardViewMediator;->mKeyguardViewManager:Lcom/android/internal/policy/impl/MiuiKeyguardViewManager;
+
+    invoke-virtual {v0}, Lcom/android/internal/policy/impl/MiuiKeyguardViewManager;->isKeyguardReady()Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method

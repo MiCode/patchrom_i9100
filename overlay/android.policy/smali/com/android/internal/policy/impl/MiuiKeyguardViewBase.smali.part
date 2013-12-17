@@ -1,0 +1,9 @@
+
+.method public isKeyguardReady()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Lcom/android/internal/policy/impl/MiuiKeyguardViewBase;->mLockScreenIsReady:Z
+
+    return v0
+.end method
