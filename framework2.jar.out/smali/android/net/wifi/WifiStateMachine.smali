@@ -5714,27 +5714,26 @@
 
     const/4 v3, 0x0
 
-    .line 2862
     const-string v1, "IP configuration failed"
 
     invoke-direct {p0, v1}, Landroid/net/wifi/WifiStateMachine;->loge(Ljava/lang/String;)V
 
-    .line 2864
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/net/wifi/WifiInfo;->setInetAddress(Ljava/net/InetAddress;)V
 
-    .line 2865
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v1, v3}, Landroid/net/wifi/WifiInfo;->setMeteredHint(Z)V
 
-    .line 2870
+    iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
+
+    invoke-virtual {v1, v3}, Landroid/net/wifi/WifiInfo;->setVendorInfo(Ljava/lang/String;)V
+
     sget v0, Landroid/net/wifi/WifiStateMachine;->DEFAULT_MAX_DHCP_RETRIES:I
 
-    .line 2871
     .local v0, maxRetries:I
     sget-boolean v1, Landroid/net/wifi/WifiStateMachine;->DBG:Z
 
@@ -5894,57 +5893,51 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2745
     :goto_0
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v1, v4}, Landroid/net/wifi/WifiInfo;->setInetAddress(Ljava/net/InetAddress;)V
 
-    .line 2746
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v1, v4}, Landroid/net/wifi/WifiInfo;->setBSSID(Ljava/lang/String;)V
 
-    .line 2747
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v1, v4}, Landroid/net/wifi/WifiInfo;->setSSID(Ljava/lang/String;)V
 
-    .line 2748
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v1, v5}, Landroid/net/wifi/WifiInfo;->setNetworkId(I)V
 
-    .line 2749
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     const/16 v2, -0xc8
 
     invoke-virtual {v1, v2}, Landroid/net/wifi/WifiInfo;->setRssi(I)V
 
-    .line 2750
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v1, v5}, Landroid/net/wifi/WifiInfo;->setLinkSpeed(I)V
 
-    .line 2751
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/net/wifi/WifiInfo;->setMeteredHint(Z)V
 
-    .line 2754
+    iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
+
+    invoke-virtual {v1, v2}, Landroid/net/wifi/WifiInfo;->setVendorInfo(Ljava/lang/String;)V
+
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
 
     invoke-virtual {v1, v5}, Landroid/net/wifi/WifiInfo;->setFrequency(I)V
 
-    .line 2758
     sget-object v1, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     invoke-direct {p0, v1}, Landroid/net/wifi/WifiStateMachine;->setNetworkDetailedState(Landroid/net/NetworkInfo$DetailedState;)V
 
-    .line 2759
     iget-object v1, p0, Landroid/net/wifi/WifiStateMachine;->mWifiConfigStore:Landroid/net/wifi/WifiConfigStore;
 
     iget v2, p0, Landroid/net/wifi/WifiStateMachine;->mLastNetworkId:I
@@ -6080,6 +6073,12 @@
     move-result v3
 
     invoke-virtual {v2, v3}, Landroid/net/wifi/WifiInfo;->setMeteredHint(Z)V
+
+    iget-object v2, p0, Landroid/net/wifi/WifiStateMachine;->mWifiInfo:Landroid/net/wifi/WifiInfo;
+
+    iget-object v3, p1, Landroid/net/DhcpInfoInternal;->vendorInfo:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Landroid/net/wifi/WifiInfo;->setVendorInfo(Ljava/lang/String;)V
 
     .line 2827
     invoke-direct {p0}, Landroid/net/wifi/WifiStateMachine;->getNetworkDetailedState()Landroid/net/NetworkInfo$DetailedState;
