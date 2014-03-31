@@ -1,0 +1,31 @@
+From 455f20a0d97d1552bbc26afdd94060c2603fff5a Mon Sep 17 00:00:00 2001
+From: mochangming <mochangming@xiaomi.com>
+Date: Mon, 31 Mar 2014 20:48:56 +0800
+Subject: [PATCH] BaseMiuiPhoneWindowManager.patch
+
+---
+ .../policy/impl/BaseMiuiPhoneWindowManager.smali   |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+--- a/android.policy/smali/com/android/internal/policy/impl/BaseMiuiPhoneWindowManager.smali
++++ b/android.policy/smali/com/android/internal/policy/impl/BaseMiuiPhoneWindowManager.smali
+@@ -2131,14 +2131,14 @@
+     goto :goto_0
+ .end method
+ 
+-.method public layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
++.method public layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;I)V
+     .locals 3
+     .parameter "win"
+     .parameter "attrs"
+     .parameter "attached"
+ 
+     .prologue
+-    invoke-super {p0, p1, p2, p3}, Lcom/android/internal/policy/impl/PhoneWindowManager;->layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;)V
++    invoke-super/range {p0 .. p5}, Lcom/android/internal/policy/impl/PhoneWindowManager;->layoutWindowLw(Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;Landroid/view/WindowManagerPolicy$WindowState;Landroid/view/WindowManager$LayoutParams;I)V
+ 
+     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
+ 
+-- 
+1.7.9.5
+
