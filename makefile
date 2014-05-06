@@ -41,19 +41,22 @@ include $(PORT_BUILD)/porting.mk
 
 # To define any local-target
 updater := $(ZIP_DIR)/META-INF/com/google/android/updater-script
-pre_install_data_packages := $(TMP_DIR)/pre_install_apk_pkgname.txt
 local-pre-zip-misc:
 	cp other/spn-conf.xml $(ZIP_DIR)/system/etc/spn-conf.xml
 	cp other/build.prop $(ZIP_DIR)/system/build.prop
 	#cp stockrom/system/app/FFFFFFFF000000000000000000000001.drbin $(ZIP_DIR)/system/app
 	#cp -r stockrom/system/app/mcRegistry $(ZIP_DIR)/system/app
 	rm -rf $(ZIP_DIR)/system/csc
-	rm -rf $(pre_install_data_packages)
-	for apk in $(ZIP_DIR)/data/media/preinstall_apps/*.apk; do\
-		$(AAPT) d --values resources $$apk | grep 'id=127 packageCount' | sed -e "s/^.*name=//" >> $(pre_install_data_packages);\
+	rm -f $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
+	for apk in $(ZIP_DIR)/data/miui/preinstall_apps/*.apk; do \
+		$(AAPT) d --values resources $$apk | grep 'id=127 packageCount' | sed -e "s/^.*name=//" >> $(ZIP_DIR)/system/etc/enforcecopyinglibpackages_tmp.txt; \
 	done
-	more $(pre_install_data_packages) | wc -l > $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
-	more $(pre_install_data_packages) >> $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
+	for apk in $(ZIP_DIR)/data/miui/cust/preinstall_apps/*.apk; do \
+		$(AAPT) d --values resources $$apk | grep 'id=127 packageCount' | sed -e "s/^.*name=//" >> $(ZIP_DIR)/system/etc/enforcecopyinglibpackages_tmp.txt; \
+	done
+	cat $(ZIP_DIR)/system/etc/enforcecopyinglibpackages_tmp.txt | wc -l > $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
+	cat $(ZIP_DIR)/system/etc/enforcecopyinglibpackages_tmp.txt >> $(ZIP_DIR)/system/etc/enforcecopyinglibpackages.txt
+	rm -f $(ZIP_DIR)/system/etc/enforcecopyinglibpackages_tmp.txt
 	rm -rf $(ZIP_DIR)/system/fonts/Miui-Bold.ttf
 	rm -rf $(ZIP_DIR)/system/fonts/Miui-Regular.ttf
 	rm -rf $(ZIP_DIR)/system/tts/*
