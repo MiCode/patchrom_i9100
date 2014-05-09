@@ -60,6 +60,7 @@ local-pre-zip-misc:
 	rm -rf $(ZIP_DIR)/system/fonts/Miui-Bold.ttf
 	rm -rf $(ZIP_DIR)/system/fonts/Miui-Regular.ttf
 	rm -rf $(ZIP_DIR)/system/tts/*
+	rm -rf $(ZIP_DIR)/system/lib/libpolaris*
 
 
 out/framework2.jar : out/framework.jar
